@@ -1,0 +1,21 @@
+{
+  "name": "e-biblia",
+  "version": "1.1.0",
+  "private": true,
+  "description": "E-Biblia – Étude Biblique Moderne & Assistant IA",
+  "scripts": {
+    "prepare:bible-data": "node scripts/prepare-bible-data.js",
+    "postinstall": "npm run prepare:bible-data",
+    "sync": "npm run prepare:bible-data && npx cap sync android",
+    "open:android": "npm run prepare:bible-data && npx cap open android",
+    "build:android": "npm run prepare:bible-data && npx cap sync android && cd android && ./gradlew assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/core": "8.5.2",
+    "@capacitor/android": "8.5.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.2",
+    "@capacitor/assets": "3.0.5"
+  }
+}
