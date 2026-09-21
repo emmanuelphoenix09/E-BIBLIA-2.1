@@ -1,0 +1,3786 @@
+{
+  "abbreviation": "Prov",
+  "name": "Proverbes",
+  "order": 20,
+  "chapters": [
+    {
+      "chapter": 1,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Proverbes de Salomon, fils de David et roi d’Israël."
+        },
+        {
+          "verse": 2,
+          "text": "Ces proverbes apprennent à l’homme à se conduire avec sagesse et à accepter les recommandations. Ils lui donnent à comprendre des paroles pleines de sens."
+        },
+        {
+          "verse": 3,
+          "text": "Ils enseignent à vivre de façon intelligente, en ayant un comportement juste, équitable et droit."
+        },
+        {
+          "verse": 4,
+          "text": "Ils donnent des exemples de bon sens aux ignorants, des connaissances et des sujets de réflexion aux jeunes gens."
+        },
+        {
+          "verse": 5,
+          "text": "Même les sages les consulteront avec profit, même les intelligents y trouveront des directives."
+        },
+        {
+          "verse": 6,
+          "text": "Ils pourront comprendre le sens caché de certains proverbes et les propos énigmatiques de ceux qui enseignent la sagesse."
+        },
+        {
+          "verse": 7,
+          "text": "Reconnaître l’autorité du Seigneur est l’a b c de la sagesse. Seuls les imbéciles méprisent les enseignements et les avertissements des sages."
+        },
+        {
+          "verse": 8,
+          "text": "Mon fils, écoute les avertissements de ton père, ne repousse pas les conseils de ta mère."
+        },
+        {
+          "verse": 9,
+          "text": "Ils seront comme une parure gracieuse sur ta tête ou un collier autour de ton cou."
+        },
+        {
+          "verse": 10,
+          "text": "Mon fils, si de mauvais garçons essaient de t’entraîner au mal, n’accepte pas."
+        },
+        {
+          "verse": 11,
+          "text": "Ils pourraient te dire: «Viens avec nous! Allons guetter le passage des gens pour les tuer. Attaquons par surprise même ceux qui ne nous ont rien fait."
+        },
+        {
+          "verse": 12,
+          "text": "Prenons-les bien vivants pour les détruire et les envoyer d’un seul coup dans la tombe comme si nous étions la mort elle-même."
+        },
+        {
+          "verse": 13,
+          "text": "Emparons-nous de toutes sortes d’objets précieux pour en remplir nos maisons."
+        },
+        {
+          "verse": 14,
+          "text": "Viens, tu en auras ta part, nous ferons bourse commune!»"
+        },
+        {
+          "verse": 15,
+          "text": "Mon fils, ne va pas avec des gens pareils. Éloigne-toi de leur chemin."
+        },
+        {
+          "verse": 16,
+          "text": "Ils courent faire le mal, ils sont pressés de verser le sang."
+        },
+        {
+          "verse": 17,
+          "text": "Lorsque l’oiseau voit le chasseur, il est inutile que celui-ci pose un piège pour le capturer."
+        },
+        {
+          "verse": 18,
+          "text": "Mais eux, ils se tendent un piège à eux-mêmes, leurs complots se retournent contre eux."
+        },
+        {
+          "verse": 19,
+          "text": "En effet, tel est le sort de ceux qui pratiquent le vol: la vie des voleurs leur sera volée."
+        },
+        {
+          "verse": 20,
+          "text": "La Sagesse crie dans les rues, elle élève la voix sur les places publiques,"
+        },
+        {
+          "verse": 21,
+          "text": "lance un appel aux carrefours les plus fréquentés, proclame son message aux portes de la ville."
+        },
+        {
+          "verse": 22,
+          "text": "«Vous, les ignorants, s’écrie-t-elle, combien de temps vous plairez-vous dans votre ignorance? Vous, les insolents, combien de temps vous moquerez-vous de moi? Vous, les sots, combien de temps refuserez-vous de comprendre?"
+        },
+        {
+          "verse": 23,
+          "text": "Écoutez mes avertissements. Alors je répandrai sur vous mon esprit et vous éclairerai de mes conseils."
+        },
+        {
+          "verse": 24,
+          "text": "Mais je vous appelle et vous refusez mon invitation; je vous tends la main et personne n’y fait attention."
+        },
+        {
+          "verse": 25,
+          "text": "Vous rejetez tous mes conseils et vous n’acceptez pas mes avertissements."
+        },
+        {
+          "verse": 26,
+          "text": "C’est pourquoi, lorsque vous serez dans le malheur, je rirai de vous à mon tour; je me moquerai lorsque la peur vous saisira."
+        },
+        {
+          "verse": 27,
+          "text": "Car, un jour, vous serez pris dans le malheur comme dans un ouragan, et dans la peur comme dans une tempête; l’angoisse et la détresse vous accableront."
+        },
+        {
+          "verse": 28,
+          "text": "Alors vous m’appellerez à l’aide mais je ne vous répondrai pas, vous me chercherez mais vous ne me trouverez pas."
+        },
+        {
+          "verse": 29,
+          "text": "Il en sera ainsi parce que vous avez refusé les leçons de l’expérience et que vous n’avez pas voulu reconnaître l’autorité du Seigneur,"
+        },
+        {
+          "verse": 30,
+          "text": "parce que vous n’avez pas accepté mes conseils et que vous avez méprisé tous mes avertissements."
+        },
+        {
+          "verse": 31,
+          "text": "Vous récolterez les fruits de votre conduite, vous serez écœurés par vos propres machinations."
+        },
+        {
+          "verse": 32,
+          "text": "Car le refus de la sagesse cause la perte des ignorants et l’insouciance détruit les sots."
+        },
+        {
+          "verse": 33,
+          "text": "Par contre, celui qui m’écoute vivra en toute sécurité, sans avoir à craindre le malheur.»"
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Mon fils, reçois favorablement ce que je t’enseigne, retiens bien ce que je te dis de faire."
+        },
+        {
+          "verse": 2,
+          "text": "Écoute les leçons de la sagesse, efforce-toi de les comprendre."
+        },
+        {
+          "verse": 3,
+          "text": "A l’intelligence demande son aide, appelle la raison à ton secours."
+        },
+        {
+          "verse": 4,
+          "text": "Cherche-les comme de l’argent, comme un trésor caché."
+        },
+        {
+          "verse": 5,
+          "text": "Alors tu découvriras comment respecter l’autorité du Seigneur, tu réussiras à connaître Dieu."
+        },
+        {
+          "verse": 6,
+          "text": "C’est le Seigneur qui donne la sagesse, la connaissance et la raison viennent de lui."
+        },
+        {
+          "verse": 7,
+          "text": "Il aide les hommes droits. Comme un bouclier il protège ceux qui vivent dans l’intégrité."
+        },
+        {
+          "verse": 8,
+          "text": "Il secourt ceux qui se comportent équitablement avec les autres. Il garde ceux qui lui sont dévoués."
+        },
+        {
+          "verse": 9,
+          "text": "Si tu m’écoutes, tu découvriras qu’un comportement juste, équitable et droit est le chemin du bonheur."
+        },
+        {
+          "verse": 10,
+          "text": "La sagesse entrera dans ton cœur, la connaissance te donnera de la joie,"
+        },
+        {
+          "verse": 11,
+          "text": "la réflexion te gardera de l’erreur et la raison veillera sur toi."
+        },
+        {
+          "verse": 12,
+          "text": "Elles t’empêcheront de mal agir, elles te préserveront des hommes aux paroles mensongères"
+        },
+        {
+          "verse": 13,
+          "text": "et de ceux qui abandonnent le droit chemin pour s’engager sur des voies obscures."
+        },
+        {
+          "verse": 14,
+          "text": "Ils s’amusent à mal faire, ils prennent plaisir à la méchanceté."
+        },
+        {
+          "verse": 15,
+          "text": "Leur comportement est tortueux, leur façon de faire pleine de détours."
+        },
+        {
+          "verse": 16,
+          "text": "De cette manière tu éviteras d’être séduit par une femme qui n’est pas la tienne, une étrangère aux paroles flatteuses"
+        },
+        {
+          "verse": 17,
+          "text": "qui a abandonné son premier compagnon et oublié l’alliance conclue avec son Dieu."
+        },
+        {
+          "verse": 18,
+          "text": "Son comportement la fait sombrer vers la mort, sa conduite l’entraîne chez ceux qui ne sont plus."
+        },
+        {
+          "verse": 19,
+          "text": "Celui qui va chez elle n’en revient pas, il ne retrouve pas le chemin de la vie."
+        },
+        {
+          "verse": 20,
+          "text": "Choisis donc la conduite des bons, imite le comportement des justes."
+        },
+        {
+          "verse": 21,
+          "text": "Car les gens loyaux et intègres habiteront dans ce pays et pourront y rester."
+        },
+        {
+          "verse": 22,
+          "text": "Les gens mauvais et déloyaux devront le quitter, ils en seront expulsés."
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Mon fils, n’oublie pas mon enseignement, garde en ton cœur mes recommandations."
+        },
+        {
+          "verse": 2,
+          "text": "Grâce à mes conseils, tu connaîtras le bien-être et une vie longue et heureuse."
+        },
+        {
+          "verse": 3,
+          "text": "Pratique toujours la bonté et la fidélité; conserve-les comme une parure autour de ton cou, grave-les dans ton cœur."
+        },
+        {
+          "verse": 4,
+          "text": "Alors Dieu et les hommes t’aimeront et apprécieront ton bon sens."
+        },
+        {
+          "verse": 5,
+          "text": "Ne te fie pas à ta propre intelligence, mais place toute ta confiance dans le Seigneur."
+        },
+        {
+          "verse": 6,
+          "text": "Appuie-toi sur lui dans tout ce que tu entreprends et il guidera tes pas."
+        },
+        {
+          "verse": 7,
+          "text": "Ne te fie pas à ton propre jugement, mais soumets-toi au Seigneur et détourne-toi du mal."
+        },
+        {
+          "verse": 8,
+          "text": "Ce sera le remède à tous tes troubles, l’apaisement de tes maux."
+        },
+        {
+          "verse": 9,
+          "text": "Honore le Seigneur en lui offrant une part de tes revenus, donne-lui le meilleur de tes récoltes."
+        },
+        {
+          "verse": 10,
+          "text": "Alors tes greniers seront remplis de blé et tes tonneaux déborderont de vin."
+        },
+        {
+          "verse": 11,
+          "text": "Accepte, mon fils, que le Seigneur soit ton éducateur et ne dédaigne pas ses reproches."
+        },
+        {
+          "verse": 12,
+          "text": "Car le Seigneur réprimande celui qu’il aime tout comme un père réprimande le fils qu’il chérit."
+        },
+        {
+          "verse": 13,
+          "text": "Heureux l’homme qui trouve la sagesse et découvre la raison."
+        },
+        {
+          "verse": 14,
+          "text": "Les profits de l’argent, la richesse de l’or, n’offrent pas autant d’avantages."
+        },
+        {
+          "verse": 15,
+          "text": "La sagesse a plus de valeur que des perles précieuses. On ne peut rien désirer de meilleur."
+        },
+        {
+          "verse": 16,
+          "text": "Elle aide l’homme à vivre longtemps, elle lui procure prospérité et honneur."
+        },
+        {
+          "verse": 17,
+          "text": "Elle le dirige sur des chemins agréables où il avance en toute sécurité."
+        },
+        {
+          "verse": 18,
+          "text": "C’est un arbre de vie pour ceux qui la pratiquent, ceux qui s’y attachent sont heureux."
+        },
+        {
+          "verse": 19,
+          "text": "Par sa sagesse le Seigneur a fondé la terre, il a fixé le ciel par son intelligence."
+        },
+        {
+          "verse": 20,
+          "text": "Par sa science les eaux d’en bas ont jailli sur le sol et les nuages ont déversé la pluie."
+        },
+        {
+          "verse": 21,
+          "text": "Mon fils, que le discernement et la réflexion te guident, ne t’en détourne jamais."
+        },
+        {
+          "verse": 22,
+          "text": "Ils te feront vivre d’une vie véritable et belle."
+        },
+        {
+          "verse": 23,
+          "text": "Tu pourras avancer avec assurance, aucun obstacle ne te fera tomber."
+        },
+        {
+          "verse": 24,
+          "text": "Le soir tu te coucheras sans peur et la nuit ton sommeil sera paisible."
+        },
+        {
+          "verse": 25,
+          "text": "Tu n’auras à craindre ni terreurs soudaines, ni attaques de la part des méchants."
+        },
+        {
+          "verse": 26,
+          "text": "Car le Seigneur te gardera en sécurité, il écartera tout piège de tes pas."
+        },
+        {
+          "verse": 27,
+          "text": "Chaque fois que tu en as la possibilité, n’hésite pas à faire du bien à ceux qui en ont besoin."
+        },
+        {
+          "verse": 28,
+          "text": "Ne dis pas à ton prochain de revenir le lendemain, lorsque tu peux lui donner immédiatement ce qu’il demande."
+        },
+        {
+          "verse": 29,
+          "text": "Ne projette pas de faire du mal à ton ami alors qu’il vit près de toi avec confiance."
+        },
+        {
+          "verse": 30,
+          "text": "Ne te querelle pas sans motif avec quelqu’un qui ne t’a rien fait."
+        },
+        {
+          "verse": 31,
+          "text": "N’envie pas les gens violents et n’imite pas leur conduite."
+        },
+        {
+          "verse": 32,
+          "text": "Car le Seigneur déteste ceux qui se détournent de lui, mais il donne son amitié aux hommes droits."
+        },
+        {
+          "verse": 33,
+          "text": "Le Seigneur maudit la maison des méchants alors qu’il bénit la demeure des justes."
+        },
+        {
+          "verse": 34,
+          "text": "Il se moque de ceux qui se moquent de lui, mais il traite les humbles avec bonté."
+        },
+        {
+          "verse": 35,
+          "text": "La part réservée aux sages, c’est l’honneur, celle des sots la honte."
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Écoutez, fils, les avertissements d’un père. Soyez attentifs et vous apprendrez à être intelligents."
+        },
+        {
+          "verse": 2,
+          "text": "Je vous transmets des connaissances sûres, ne rejetez pas ce que je vous enseigne."
+        },
+        {
+          "verse": 3,
+          "text": "Moi aussi, j’ai eu un père pour m’éduquer, j’ai été tendrement aimé par ma mère."
+        },
+        {
+          "verse": 4,
+          "text": "Mon père m’enseignait ainsi: «Retiens bien mes paroles, observe les règles que je te donne et tu vivras."
+        },
+        {
+          "verse": 5,
+          "text": "Acquiers la sagesse et l’intelligence, et ne les oublie plus. Ne néglige aucune parole de ma bouche."
+        },
+        {
+          "verse": 6,
+          "text": "Ne délaisse pas la sagesse et elle t’aidera, aime-la et elle veillera sur toi."
+        },
+        {
+          "verse": 7,
+          "text": "Pour devenir un sage, commence par acquérir la sagesse; donne tout ce que tu possèdes pour acquérir l’intelligence."
+        },
+        {
+          "verse": 8,
+          "text": "Serre la sagesse contre toi, elle te rendra grand et noble si tu l’enlaces."
+        },
+        {
+          "verse": 9,
+          "text": "Elle sera pour toi comme une parure gracieuse, comme une couronne magnifique.»"
+        },
+        {
+          "verse": 10,
+          "text": "Écoute-moi, mon fils. Reçois favorablement ce que je t’enseigne et tu jouiras d’une longue vie."
+        },
+        {
+          "verse": 11,
+          "text": "Je t’apprends comment pratiquer la sagesse, je t’indique comment te conduire avec droiture."
+        },
+        {
+          "verse": 12,
+          "text": "Ainsi tu pourras avancer sans encombre dans la vie et prendre ton élan sans risquer de chute."
+        },
+        {
+          "verse": 13,
+          "text": "Ne renie jamais l’éducation que tu as reçue; c’est la base de ta vie: restes-y attaché."
+        },
+        {
+          "verse": 14,
+          "text": "N’imite pas la conduite des méchants, ne suis pas la route des malfaiteurs."
+        },
+        {
+          "verse": 15,
+          "text": "Laisse-la de côté, ne t’y engage pas. Évite-la et va plus loin."
+        },
+        {
+          "verse": 16,
+          "text": "En effet ces gens-là refusent de s’endormir avant d’avoir mal agi, le sommeil les fuit lorsqu’ils n’ont pas causé de tort."
+        },
+        {
+          "verse": 17,
+          "text": "Car ils se rassasient du mal et s’enivrent de violence."
+        },
+        {
+          "verse": 18,
+          "text": "La conduite des justes ressemble à la lumière de l’aurore, dont l’éclat augmente jusqu’à ce qu’il fasse plein jour."
+        },
+        {
+          "verse": 19,
+          "text": "Mais la conduite des méchants ressemble à la nuit noire. Ils ne peuvent pas voir les obstacles du chemin."
+        },
+        {
+          "verse": 20,
+          "text": "Mon fils, sois attentif à mes paroles, prête l’oreille à mes conseils."
+        },
+        {
+          "verse": 21,
+          "text": "Ne les laisse pas tomber dans l’oubli, mais garde-les au plus profond de ton cœur."
+        },
+        {
+          "verse": 22,
+          "text": "Ils apportent la vie et la santé à tous ceux qui les acceptent."
+        },
+        {
+          "verse": 23,
+          "text": "Avant tout, prends garde à ce que tu penses au fond de toi-même, car ta vie en dépend."
+        },
+        {
+          "verse": 24,
+          "text": "Ne laisse pas ta langue être fausse, ni tes lèvres prononcer des paroles trompeuses."
+        },
+        {
+          "verse": 25,
+          "text": "Que tes yeux fixent les gens bien en face, regarde droit devant toi avec franchise."
+        },
+        {
+          "verse": 26,
+          "text": "Réfléchis au chemin que tu vas prendre, engage tes pas dans une direction sûre."
+        },
+        {
+          "verse": 27,
+          "text": "Ne t’en écarte ni à droite ni à gauche. Tiens-toi éloigné du mal."
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Mon fils, prête une oreille attentive à mes paroles, pleines de sagesse et d’intelligence."
+        },
+        {
+          "verse": 2,
+          "text": "Alors tu profiteras de mes conseils et tu parleras en connaissance de cause."
+        },
+        {
+          "verse": 3,
+          "text": "Les sollicitations de la femme d’autrui sont sucrées comme le miel, onctueuses comme l’huile."
+        },
+        {
+          "verse": 4,
+          "text": "Mais à la fin celle-ci laisse le goût d’une plante amère, elle blesse comme une arme à double tranchant."
+        },
+        {
+          "verse": 5,
+          "text": "Sa conduite entraîne à la mort, ses pas mènent tout droit au tombeau."
+        },
+        {
+          "verse": 6,
+          "text": "Elle ne suit pas la route de la vie, elle se trompe de chemin sans le savoir."
+        },
+        {
+          "verse": 7,
+          "text": "Mon fils, écoute-moi donc, ne rejette pas mes conseils."
+        },
+        {
+          "verse": 8,
+          "text": "Tiens-toi éloigné d’une femme de ce genre et n’approche même pas du seuil de sa maison."
+        },
+        {
+          "verse": 9,
+          "text": "Ne te mets pas à la merci d’un autre homme, évite qu’un mari sans pitié ne ruine ta vie."
+        },
+        {
+          "verse": 10,
+          "text": "Sinon, des étrangers seront nourris par tes efforts, ton travail profitera à d’autres qu’à toi."
+        },
+        {
+          "verse": 11,
+          "text": "Et pour finir tu seras à bout de forces, tu te lamenteras comme une bête."
+        },
+        {
+          "verse": 12,
+          "text": "Tu diras: «Hélas, je n’ai pas aimé les avertissements, je n’ai pas voulu accepter les reproches."
+        },
+        {
+          "verse": 13,
+          "text": "Je n’ai pas écouté l’avis de mes maîtres, je n’ai pas prêté l’oreille à ceux qui m’enseignaient."
+        },
+        {
+          "verse": 14,
+          "text": "J’ai été au bord du pire des malheurs devant l’assemblée de mon peuple.»"
+        },
+        {
+          "verse": 15,
+          "text": "Ta femme est comme une source d’eau pure. Bois à cette source!"
+        },
+        {
+          "verse": 16,
+          "text": "Ne laisse pas son eau couler dans les rues et se disperser sur les places publiques."
+        },
+        {
+          "verse": 17,
+          "text": "Qu’elle soit pour toi seul! Ne la partage pas avec des étrangers."
+        },
+        {
+          "verse": 18,
+          "text": "Remplis-la de bonheur, trouve ta joie dans la compagne de ta jeunesse."
+        },
+        {
+          "verse": 19,
+          "text": "Ta femme est aimable, et gracieuse comme une gazelle. Que son corps te comble toujours de plaisir. Abandonne-toi sans cesse à son amour."
+        },
+        {
+          "verse": 20,
+          "text": "Mon fils, pourquoi t’abandonnerais-tu à la femme d’un autre? Pourquoi chercherais-tu le plaisir auprès d’une étrangère?"
+        },
+        {
+          "verse": 21,
+          "text": "Le Seigneur voit la conduite de tout homme. Il observe chacun de ses actes."
+        },
+        {
+          "verse": 22,
+          "text": "Les fautes emprisonnent celui qui les commet. Elles le tiennent captif à la manière d’un piège."
+        },
+        {
+          "verse": 23,
+          "text": "Celui qui ne sait pas se dominer cause sa propre mort. L’excès de sa bêtise lui fait perdre la tête."
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Mon fils, t’es-tu rendu responsable de la dette d’un ami en tapant dans la main d’un autre homme?"
+        },
+        {
+          "verse": 2,
+          "text": "T’es-tu engagé par tes paroles et lié par tes promesses à ce sujet?"
+        },
+        {
+          "verse": 3,
+          "text": "Si oui, tu te trouves au pouvoir du créancier et il faut t’en libérer. Va le voir, supplie-le, insiste pour te dégager."
+        },
+        {
+          "verse": 4,
+          "text": "Ne t’accorde aucun repos et ne ferme pas l’œil avant d’y être parvenu."
+        },
+        {
+          "verse": 5,
+          "text": "Rends-toi libre; imite la gazelle et l’oiseau qui réussissent à s’échapper du piège où ils ont été pris."
+        },
+        {
+          "verse": 6,
+          "text": "Toi qui es paresseux, va voir la fourmi. Observe son comportement et tires-en une leçon de sagesse."
+        },
+        {
+          "verse": 7,
+          "text": "La fourmi n’a ni surveillant, ni contremaître, ni patron."
+        },
+        {
+          "verse": 8,
+          "text": "Pourtant elle amasse de la nourriture pendant l’été, au temps de la récolte elle fait des provisions."
+        },
+        {
+          "verse": 9,
+          "text": "Et toi, paresseux, combien de temps resteras-tu couché? Quand cesseras-tu de dormir?"
+        },
+        {
+          "verse": 10,
+          "text": "Tu veux prendre un peu de sommeil et t’assoupir un petit moment, tu restes un peu étendu en te croisant les bras."
+        },
+        {
+          "verse": 11,
+          "text": "Pendant ce temps, la pauvreté te surprendra comme un rôdeur, et la misère comme un pillard."
+        },
+        {
+          "verse": 12,
+          "text": "Celui qui répand des paroles fausses est un vaurien, un homme immoral."
+        },
+        {
+          "verse": 13,
+          "text": "Il cligne de l’œil pour tromper les autres, il fait des appels du pied, des signes de la main."
+        },
+        {
+          "verse": 14,
+          "text": "Il n’a de goût que pour le mal. Il prépare sans cesse de mauvaises actions, il provoque les querelles."
+        },
+        {
+          "verse": 15,
+          "text": "C’est pourquoi, il sera ruiné d’un coup, abattu en un instant de manière irrémédiable."
+        },
+        {
+          "verse": 16,
+          "text": "Il y a six choses que le Seigneur déteste et ne supporte absolument pas: le regard orgueilleux, la bouche qui trompe, les mains qui font couler le sang innocent, l’esprit qui projette l’injustice, les pieds qui courent faire le mal, le faux témoin qui débite des mensonges. Mais il y en a aussi une septième: l’homme qui sème la discorde entre frères."
+        },
+        {
+          "verse": 20,
+          "text": "Mon fils, tiens compte des recommandations de ton père, ne rejette pas l’enseignement de ta mère."
+        },
+        {
+          "verse": 21,
+          "text": "Fixe-les pour toujours dans ton esprit; garde-les comme une parure autour de ton cou."
+        },
+        {
+          "verse": 22,
+          "text": "Ils te guideront dans tes allées et venues, ils te protégeront dans ton sommeil et dès ton réveil te porteront conseil."
+        },
+        {
+          "verse": 23,
+          "text": "Car les recommandations sont comme une lampe, l’enseignement est comme une lumière, les réprimandes et les avertissements nous maintiennent sur le chemin de la vie."
+        },
+        {
+          "verse": 24,
+          "text": "Ils te mettront en garde contre la femme qui se conduit mal, contre les paroles doucereuses de l’étrangère."
+        },
+        {
+          "verse": 25,
+          "text": "Ne désire pas une telle femme à cause de sa beauté, ne te laisse pas séduire par son regard ensorcelant."
+        },
+        {
+          "verse": 26,
+          "text": "En effet, pour une prostituée on renonce à un peu de pain, mais pour une femme mariée on risque sa vie entière."
+        },
+        {
+          "verse": 27,
+          "text": "Peut-on porter du feu dans une poche sans que tout le vêtement s’enflamme?"
+        },
+        {
+          "verse": 28,
+          "text": "Peut-on marcher sur des braises sans se brûler les pieds?"
+        },
+        {
+          "verse": 29,
+          "text": "Il en va de même pour celui qui s’approche de la femme de son prochain; celui qui la touche ne restera pas impuni."
+        },
+        {
+          "verse": 30,
+          "text": "On ne méprise pas un voleur quand il a dérobé pour calmer la faim de son estomac."
+        },
+        {
+          "verse": 31,
+          "text": "Mais une fois découvert, il doit rendre bien plus que ce qu’il a pris; il perd tout ce qu’il possède."
+        },
+        {
+          "verse": 32,
+          "text": "L’homme qui rend une femme adultère a la tête vide. En agissant ainsi, il cause sa propre perte."
+        },
+        {
+          "verse": 33,
+          "text": "Il récoltera des coups, il sera déshonoré, sa honte ne le quittera plus."
+        },
+        {
+          "verse": 34,
+          "text": "Car la jalousie rendra le mari furieux, et le jour venu celui-ci se vengera sans pitié."
+        },
+        {
+          "verse": 35,
+          "text": "Il n’acceptera aucune indemnité, il ne fléchira pas, même si on le couvre de cadeaux."
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Mon fils, n’oublie pas mes paroles, retiens bien ce que je te dis de faire."
+        },
+        {
+          "verse": 2,
+          "text": "Fais ce que je te recommande et tu vivras. Garde mon enseignement comme la prunelle de tes yeux."
+        },
+        {
+          "verse": 3,
+          "text": "Ne le laisse pas échapper de tes mains, grave-le dans ton esprit."
+        },
+        {
+          "verse": 4,
+          "text": "Considère la sagesse comme ta propre sœur et l’intelligence comme ton amie."
+        },
+        {
+          "verse": 5,
+          "text": "Elles te préserveront de la femme d’autrui, du langage séducteur de la femme étrangère."
+        },
+        {
+          "verse": 6,
+          "text": "Un jour, j’étais à la fenêtre de ma maison et je regardais au dehors."
+        },
+        {
+          "verse": 7,
+          "text": "Je vis des garçons inexpérimentés et je remarquai parmi eux un jeune homme à la tête vide."
+        },
+        {
+          "verse": 8,
+          "text": "Il passait dans la ruelle, près de l’endroit où vit l’une de ces femmes, et il prit le chemin de sa maison."
+        },
+        {
+          "verse": 9,
+          "text": "C’était à la tombée du jour, lorsque la nuit s’approche et que l’obscurité s’installe."
+        },
+        {
+          "verse": 10,
+          "text": "Voici que la femme vient à sa rencontre, vêtue comme une prostituée et la ruse au cœur."
+        },
+        {
+          "verse": 11,
+          "text": "Hardie et excitée, elle ne tient pas en place dans sa maison."
+        },
+        {
+          "verse": 12,
+          "text": "Dans la rue ou les lieux publics, partout elle cherche l’aventure."
+        },
+        {
+          "verse": 13,
+          "text": "Elle aborde le jeune homme, l’embrasse et lui dit d’un air effronté:"
+        },
+        {
+          "verse": 14,
+          "text": "«J’avais promis à Dieu des sacrifices de reconnaissance et aujourd’hui, je les ai offerts."
+        },
+        {
+          "verse": 15,
+          "text": "C’est pourquoi, je suis sortie à ta rencontre. Je voulais faire ta connaissance et je t’ai trouvé."
+        },
+        {
+          "verse": 16,
+          "text": "J’ai préparé mon lit avec des couvertures multicolores, des tissus en lin d’Égypte."
+        },
+        {
+          "verse": 17,
+          "text": "Je l’ai parfumé avec de la myrrhe, de l’aloès et de la cannelle."
+        },
+        {
+          "verse": 18,
+          "text": "Viens, enivrons-nous d’amour jusqu’au matin, jouissons ensemble du plaisir qu’il procure."
+        },
+        {
+          "verse": 19,
+          "text": "Mon mari n’est pas à la maison, il est parti en voyage au loin."
+        },
+        {
+          "verse": 20,
+          "text": "Il a emporté une bourse pleine d’argent et il ne reviendra qu’à la pleine lune.»"
+        },
+        {
+          "verse": 21,
+          "text": "Elle le persuade à force d’habileté, elle l’entraîne par ses paroles ensorcelantes."
+        },
+        {
+          "verse": 22,
+          "text": "Et voilà qu’il la suit comme un bœuf va à l’abattoir. Il se livre stupidement au châtiment, pieds et poings liés,"
+        },
+        {
+          "verse": 23,
+          "text": "jusqu’à ce qu’il soit blessé en plein cœur. Comme un oiseau qui se précipite dans le piège, il ne sait pas que sa vie est en danger."
+        },
+        {
+          "verse": 24,
+          "text": "Maintenant donc, fils, écoutez-moi et tenez compte de mes paroles."
+        },
+        {
+          "verse": 25,
+          "text": "Que votre cœur ne se laisse pas séduire par une femme de ce genre, ne vous égarez pas dans les chemins qu’elle prend."
+        },
+        {
+          "verse": 26,
+          "text": "Car elle en a blessé et ruiné beaucoup, même des hommes forts ont été ses victimes."
+        },
+        {
+          "verse": 27,
+          "text": "Aller chez elle, c’est s’avancer vers le monde des morts, c’est descendre la pente qui conduit à leur demeure."
+        }
+      ]
+    },
+    {
+      "chapter": 8,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "La Sagesse lance un appel, l’intelligence élève la voix. N’entendez-vous pas?"
+        },
+        {
+          "verse": 2,
+          "text": "Sur les hauteurs dominant la route, à la croisée des chemins, la Sagesse se tient debout."
+        },
+        {
+          "verse": 3,
+          "text": "Aux lieux de passage de la ville, à côté des portes d’entrée, voici ce qu’elle proclame:"
+        },
+        {
+          "verse": 4,
+          "text": "«C’est vous, les humains, que j’appelle. Je m’adresse à tout le monde."
+        },
+        {
+          "verse": 5,
+          "text": "Vous, les ignorants, apprenez à avoir du bon sens. Vous, les sots, apprenez à avoir de l’esprit."
+        },
+        {
+          "verse": 6,
+          "text": "Écoutez, j’ai à dire quelque chose d’important, c’est ouvertement que je vous parle."
+        },
+        {
+          "verse": 7,
+          "text": "En effet, mes lèvres annoncent la vérité, je déteste parler pour dire du mal."
+        },
+        {
+          "verse": 8,
+          "text": "Je ne prononce que des paroles justes, aucune n’est mensongère ou trompeuse."
+        },
+        {
+          "verse": 9,
+          "text": "L’homme intelligent les reconnaît exactes, ceux qui sont instruits les trouvent sûres."
+        },
+        {
+          "verse": 10,
+          "text": "Recherchez l’éducation que je donne plutôt que l’argent, la connaissance de préférence à l’or pur."
+        },
+        {
+          "verse": 11,
+          "text": "Car moi, la Sagesse, je vaux mieux que les perles. Aucun trésor n’a autant de valeur.»"
+        },
+        {
+          "verse": 12,
+          "text": "«Je suis la Sagesse, le bon sens m’accompagne. Je sais agir avec réflexion."
+        },
+        {
+          "verse": 13,
+          "text": "Être soumis au Seigneur, c’est détester le mal. Pour ma part, je déteste l’orgueil et l’arrogance, les mauvaises actions et les paroles trompeuses."
+        },
+        {
+          "verse": 14,
+          "text": "Conseiller et rendre prévoyant: voilà mon rôle. Je suis l’intelligence elle-même. C’est moi qui donne la puissance."
+        },
+        {
+          "verse": 15,
+          "text": "Grâce à mon aide les rois règnent, les magistrats rendent la justice."
+        },
+        {
+          "verse": 16,
+          "text": "Grâce à moi gouvernent les souverains, les notables et tous les chefs légitimes."
+        },
+        {
+          "verse": 17,
+          "text": "Ceux qui m’aiment, je les aime en retour. Ceux qui me cherchent sont sûrs de me trouver."
+        },
+        {
+          "verse": 18,
+          "text": "J’offre la richesse et l’honneur, des biens stables et une prospérité méritée."
+        },
+        {
+          "verse": 19,
+          "text": "Mes dons sont préférables à l’or le plus fin, leur profit est plus grand que l’argent le plus pur."
+        },
+        {
+          "verse": 20,
+          "text": "Je me trouve sur la route qui conduit à la justice, sur les chemins où l’on respecte le droit."
+        },
+        {
+          "verse": 21,
+          "text": "Là, j’assure des biens à ceux qui m’aiment, je remplis leurs maisons de trésors."
+        },
+        {
+          "verse": 22,
+          "text": "Le Seigneur m’a conçue il y a très longtemps, comme la première de ses œuvres, avant toutes les autres."
+        },
+        {
+          "verse": 23,
+          "text": "J’ai été établie dès le début des temps, avant même que le monde existe."
+        },
+        {
+          "verse": 24,
+          "text": "Quand je suis née, il n’y avait pas d’océans, pas de sources d’où les eaux jaillissent."
+        },
+        {
+          "verse": 25,
+          "text": "Avant la formation des montagnes, avant les collines, j’ai été enfantée."
+        },
+        {
+          "verse": 26,
+          "text": "Le Seigneur n’avait fait alors ni la terre ni les espaces, ni le premier grain de poussière du monde."
+        },
+        {
+          "verse": 27,
+          "text": "J’étais déjà là quand il fixa le ciel et traça l’horizon au-dessus de l’océan primitif."
+        },
+        {
+          "verse": 28,
+          "text": "Il plaça les nuages dans les hauteurs et donna leur force aux sources profondes."
+        },
+        {
+          "verse": 29,
+          "text": "Il imposa à la mer une limite que les eaux ne doivent pas franchir. Il posa les fondations de la terre."
+        },
+        {
+          "verse": 30,
+          "text": "Pendant ce temps, j’étais à ses côtés comme architecte. Jour après jour, je faisais sa joie, je jouais sans cesse en sa présence,"
+        },
+        {
+          "verse": 31,
+          "text": "sur le sol du monde créé par lui. Depuis lors, ma joie est d’être au milieu des humains.»"
+        },
+        {
+          "verse": 32,
+          "text": "«Et maintenant, mes fils, écoutez-moi, heureux serez-vous si vous suivez mes conseils."
+        },
+        {
+          "verse": 33,
+          "text": "Ne rejetez pas mes avertissements, tenez-en compte et vous deviendrez sages."
+        },
+        {
+          "verse": 34,
+          "text": "Heureux ceux qui m’écoutent, qui se tiennent chaque jour à ma porte et veillent à l’entrée de ma maison."
+        },
+        {
+          "verse": 35,
+          "text": "Celui qui me trouve, trouve la vie: le Seigneur lui donne son approbation."
+        },
+        {
+          "verse": 36,
+          "text": "Celui qui m’offense, se fait du tort à lui-même, qui me déteste, aime la mort.»"
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "La Sagesse a taillé sept colonnes et a construit sa maison."
+        },
+        {
+          "verse": 2,
+          "text": "Elle a fait abattre des bêtes, elle a préparé du vin, puis elle a dressé la table."
+        },
+        {
+          "verse": 3,
+          "text": "Elle a envoyé ses servantes lancer cette invitation à l’endroit le plus élevé de la ville:"
+        },
+        {
+          "verse": 4,
+          "text": "«Vous, les ignorants, accourez donc par ici.» Elle a fait dire à ceux qui ont la tête vide:"
+        },
+        {
+          "verse": 5,
+          "text": "«Venez vous nourrir à ma table et boire le vin que j’ai préparé."
+        },
+        {
+          "verse": 6,
+          "text": "Quittez la compagnie des ignorants et vous vivrez, prenez donc le chemin où se tient l’intelligence.»"
+        },
+        {
+          "verse": 7,
+          "text": "Qui réprimande un arrogant ne récolte que mépris, et qui blâme un méchant se fait insulter."
+        },
+        {
+          "verse": 8,
+          "text": "Ne critique pas l’orgueilleux, car il te haïrait, mais critique le sage et il t’aimera."
+        },
+        {
+          "verse": 9,
+          "text": "Ce que tu dis à un sage développe sa sagesse. Ce que tu transmets à un homme honnête augmente son savoir."
+        },
+        {
+          "verse": 10,
+          "text": "Reconnaître l’autorité du Seigneur est le commencement de la sagesse, connaître celui qui est saint procure l’intelligence."
+        },
+        {
+          "verse": 11,
+          "text": "Moi, la Sagesse, j’augmenterai le nombre de tes jours, je prolongerai la durée de ta vie."
+        },
+        {
+          "verse": 12,
+          "text": "Si tu deviens sage, c’est toi qui en profiteras. Si tu deviens orgueilleux, c’est toi qui en supporteras les conséquences."
+        },
+        {
+          "verse": 13,
+          "text": "La Sottise est comme une femme bruyante, ignorante et niaise."
+        },
+        {
+          "verse": 14,
+          "text": "Elle est assise à la porte de sa maison, sur les hauteurs de la ville."
+        },
+        {
+          "verse": 15,
+          "text": "De là, elle interpelle les passants qui vont droit devant eux:"
+        },
+        {
+          "verse": 16,
+          "text": "«Vous, les ignorants, faites un détour par ici.» Elle déclare à ceux qui ont la tête vide:"
+        },
+        {
+          "verse": 17,
+          "text": "«La boisson volée est agréable et la nourriture mangée en cachette délicieuse.»"
+        },
+        {
+          "verse": 18,
+          "text": "Ils ne savent pas qu’ils vont rejoindre ceux qui ne sont plus, que les invités de cette femme s’enfoncent dans le monde des morts."
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Proverbes de Salomon. Un fils sage fait la joie de ses parents, un sot fait le désespoir des siens."
+        },
+        {
+          "verse": 2,
+          "text": "Bien mal acquis ne profite jamais, seule une conduite juste préserve de la mort."
+        },
+        {
+          "verse": 3,
+          "text": "Le Seigneur ne laisse pas le juste avoir faim, mais il refuse au méchant ce qu’il convoite."
+        },
+        {
+          "verse": 4,
+          "text": "Des mains nonchalantes attirent la pauvreté, des mains actives procurent la richesse."
+        },
+        {
+          "verse": 5,
+          "text": "Qui amasse des provisions pendant l’été est un homme sensé, mais qui dort pendant la récolte mérite le mépris."
+        },
+        {
+          "verse": 6,
+          "text": "Les justes attirent sur eux le bonheur. Les méchants cachent la violence dans leurs paroles."
+        },
+        {
+          "verse": 7,
+          "text": "On se souvient avec reconnaissance d’un homme juste, mais on oublie jusqu’au nom des méchants."
+        },
+        {
+          "verse": 8,
+          "text": "Qui a l’esprit sage accepte de recevoir des directives. Celui qui parle à tort et à travers court à sa perte."
+        },
+        {
+          "verse": 9,
+          "text": "Vivre dans l’intégrité, c’est vivre dans la sécurité. L’homme à la conduite tortueuse sera démasqué."
+        },
+        {
+          "verse": 10,
+          "text": "Qui cache la vérité aux autres les fait souffrir, qui les reprend avec franchise leur apporte la paix."
+        },
+        {
+          "verse": 11,
+          "text": "Les paroles du juste sont source de vie. Les paroles des méchants cachent la violence."
+        },
+        {
+          "verse": 12,
+          "text": "La haine suscite des querelles, mais l’amour ne tient pas compte des offenses."
+        },
+        {
+          "verse": 13,
+          "text": "On reconnaît la sagesse dans les paroles de l’homme intelligent, on réserve les coups à celui qui a la tête vide."
+        },
+        {
+          "verse": 14,
+          "text": "Les sages amassent un trésor d’expérience, mais les paroles des imbéciles entraînent une ruine rapide."
+        },
+        {
+          "verse": 15,
+          "text": "La fortune du riche lui tient lieu de place forte. La misère du pauvre l’expose à la ruine."
+        },
+        {
+          "verse": 16,
+          "text": "Le travail d’un homme honnête lui permet de vivre. Le gain d’un homme malhonnête est voué à l’échec."
+        },
+        {
+          "verse": 17,
+          "text": "Qui tient compte des avertissements avance dans la vie, qui rejette les réprimandes s’égare."
+        },
+        {
+          "verse": 18,
+          "text": "Il est hypocrite de cacher sa haine, mais répandre une calomnie est stupide."
+        },
+        {
+          "verse": 19,
+          "text": "Qui parle trop cause forcément du tort. Il est plus prudent de savoir tenir sa langue."
+        },
+        {
+          "verse": 20,
+          "text": "Les paroles d’un homme juste valent l’argent le plus pur. Ce que pense un méchant ne vaut pas grand-chose."
+        },
+        {
+          "verse": 21,
+          "text": "Les paroles d’un homme juste profitent à beaucoup, tandis que les imbéciles meurent parce qu’ils ont la tête vide."
+        },
+        {
+          "verse": 22,
+          "text": "Seule la bénédiction du Seigneur donne la prospérité. Les efforts de l’homme n’y ajoutent rien."
+        },
+        {
+          "verse": 23,
+          "text": "La pratique du mal est un jeu pour le sot, celle de la sagesse un jeu pour l’homme intelligent."
+        },
+        {
+          "verse": 24,
+          "text": "Ce que les méchants redoutent leur arrive, ce que souhaitent les justes leur est accordé."
+        },
+        {
+          "verse": 25,
+          "text": "L’ouragan passe et le méchant n’est plus! Le juste tient toujours debout."
+        },
+        {
+          "verse": 26,
+          "text": "Le vinaigre irrite les dents et la fumée les yeux; de même le paresseux est une cause d’irritation pour son maître."
+        },
+        {
+          "verse": 27,
+          "text": "Reconnaître l’autorité du Seigneur permet de vivre longtemps, mais les pécheurs meurent prématurément."
+        },
+        {
+          "verse": 28,
+          "text": "L’espérance des justes leur procure la joie, les espoirs des méchants n’aboutissent à rien."
+        },
+        {
+          "verse": 29,
+          "text": "Les plans du Seigneur protègent les gens intègres comme une forteresse, mais ils détruisent ceux qui font le mal."
+        },
+        {
+          "verse": 30,
+          "text": "Rien ne fera jamais tomber un juste, mais les méchants ne pourront pas demeurer sur terre."
+        },
+        {
+          "verse": 31,
+          "text": "Des paroles sages sortent de la bouche du juste. Les menteurs méritent qu’on leur coupe la langue."
+        },
+        {
+          "verse": 32,
+          "text": "Quand le juste parle, c’est avec bienveillance, mais la malveillance sort de la bouche des méchants."
+        }
+      ]
+    },
+    {
+      "chapter": 11,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Le Seigneur déteste les balances faussées, mais il approuve l’utilisation de poids exacts."
+        },
+        {
+          "verse": 2,
+          "text": "A l’arrogance répond le mépris. Il est plus sage d’être modeste."
+        },
+        {
+          "verse": 3,
+          "text": "L’intégrité guide les hommes droits. L’amour du mal détruit les gens déloyaux."
+        },
+        {
+          "verse": 4,
+          "text": "Au jour du jugement la richesse est inutile, seule la pratique de la justice préserve de la mort."
+        },
+        {
+          "verse": 5,
+          "text": "L’intégrité du juste le met sur le droit chemin. Le méchant se perd à cause de sa méchanceté."
+        },
+        {
+          "verse": 6,
+          "text": "La justice de l’homme droit lui préserve la vie. Les gens déloyaux sont pris au piège de leurs propres désirs."
+        },
+        {
+          "verse": 7,
+          "text": "La mort du méchant anéantit tous ses espoirs, en particulier ceux qu’il plaçait en ses richesses."
+        },
+        {
+          "verse": 8,
+          "text": "L’homme juste échappe à l’inquiétude; le méchant y est livré à sa place."
+        },
+        {
+          "verse": 9,
+          "text": "L’homme de mauvaise foi détruit les autres par ses paroles, mais les justes sont préservés par leur expérience."
+        },
+        {
+          "verse": 10,
+          "text": "Les habitants d’une ville fêtent la réussite des justes et ils poussent des cris de joie à la mort des méchants."
+        },
+        {
+          "verse": 11,
+          "text": "Les hommes droits apportent la prospérité à leur ville, les méchants la ruinent par leurs paroles."
+        },
+        {
+          "verse": 12,
+          "text": "Qui parle des autres avec mépris a la tête vide, un homme intelligent préfère se taire."
+        },
+        {
+          "verse": 13,
+          "text": "Celui qui parle à tort et à travers trahit aussi les secrets. Un homme digne de confiance garde tout pour lui."
+        },
+        {
+          "verse": 14,
+          "text": "Un peuple périt quand il n’est pas dirigé; un grand nombre de conseillers assure la victoire."
+        },
+        {
+          "verse": 15,
+          "text": "Qui s’engage à payer les dettes d’autrui s’en trouvera mal; refuser de le faire est plus sûr."
+        },
+        {
+          "verse": 16,
+          "text": "Une jolie femme reçoit des hommages, un homme énergique acquiert la richesse."
+        },
+        {
+          "verse": 17,
+          "text": "La bonté fait du bien à celui qui l’exerce, mais la cruauté se retourne contre son auteur."
+        },
+        {
+          "verse": 18,
+          "text": "Le méchant réalise des profits incertains; celui qui propage la justice est sûr d’être récompensé."
+        },
+        {
+          "verse": 19,
+          "text": "Qui décide d’être juste vivra, mais celui qui opte pour le mal en mourra."
+        },
+        {
+          "verse": 20,
+          "text": "Le Seigneur déteste les gens rusés, il approuve ceux qui se conduisent avec intégrité."
+        },
+        {
+          "verse": 21,
+          "text": "A coup sûr l’homme mauvais n’évitera pas la punition, mais tous les justes y échapperont."
+        },
+        {
+          "verse": 22,
+          "text": "Un anneau d’or au nez d’un cochon: telle est la femme belle mais stupide."
+        },
+        {
+          "verse": 23,
+          "text": "L’unique désir des justes est de bien agir. Les souhaits des méchants n’attirent sur eux que la colère."
+        },
+        {
+          "verse": 24,
+          "text": "Certains donnent largement et accroissent leur fortune. D’autres épargnent plus qu’il n’est nécessaire et s’appauvrissent."
+        },
+        {
+          "verse": 25,
+          "text": "Une personne généreuse sera comblée de biens en retour, celui qui donne à boire sera désaltéré."
+        },
+        {
+          "verse": 26,
+          "text": "Le peuple maudit ceux qui stockent leur blé, mais il est reconnaissant à ceux qui le vendent."
+        },
+        {
+          "verse": 27,
+          "text": "On approuve celui qui cherche à bien agir, mais le malheur s’abat sur celui qui ne pense qu’à mal faire."
+        },
+        {
+          "verse": 28,
+          "text": "Celui qui se confie en ses richesses dépérit. Les justes prospèrent comme des arbres verdoyants."
+        },
+        {
+          "verse": 29,
+          "text": "Qui oriente mal sa maison l’expose au vent. L’imbécile s’expose à devenir l’esclave du sage."
+        },
+        {
+          "verse": 30,
+          "text": "Les actes du juste sont comme un arbre de vie. Le sage gagne les cœurs."
+        },
+        {
+          "verse": 31,
+          "text": "Le juste est récompensé sur la terre, on peut donc être certain que le méchant et le pécheur recevront ce qu’ils méritent."
+        }
+      ]
+    },
+    {
+      "chapter": 12,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Celui qui accepte les reproches aime s’instruire. Il est stupide de détester les critiques."
+        },
+        {
+          "verse": 2,
+          "text": "Le Seigneur approuve l’homme de bien, il condamne le maître en intrigues."
+        },
+        {
+          "verse": 3,
+          "text": "Personne n’affermit sa position par la méchanceté, mais rien ne fera tomber le juste."
+        },
+        {
+          "verse": 4,
+          "text": "Une femme vaillante fait la fierté de son mari. Une femme indigne est comme un cancer qui ronge les os."
+        },
+        {
+          "verse": 5,
+          "text": "Les justes ont toujours l’intention de respecter le droit, les méchants n’ont pas d’autre projet que la fraude."
+        },
+        {
+          "verse": 6,
+          "text": "Les paroles des méchants sont des pièges mortels. Ce que disent les hommes droits les préserve de la mort."
+        },
+        {
+          "verse": 7,
+          "text": "Lorsque les méchants sont détruits, plus rien d’eux n’existe, mais la famille des justes est fermement établie."
+        },
+        {
+          "verse": 8,
+          "text": "On chante les louanges de l’homme sensé, mais l’homme stupide est méprisé."
+        },
+        {
+          "verse": 9,
+          "text": "Mieux vaut être de condition modeste avec un seul serviteur que se donner de grands airs et manquer de pain."
+        },
+        {
+          "verse": 10,
+          "text": "Le juste prend en considération même les besoins de son bétail. Le méchant ne respire que cruauté."
+        },
+        {
+          "verse": 11,
+          "text": "Qui cultive son champ a du pain en abondance, mais celui qui cultive des illusions manque de bon sens."
+        },
+        {
+          "verse": 12,
+          "text": "Les méchants désirent des gains malhonnêtes, seule la persévérance des hommes justes est profitable."
+        },
+        {
+          "verse": 13,
+          "text": "L’homme mauvais est pris au piège de ses propos malfaisants, l’homme juste se tire de toute situation périlleuse."
+        },
+        {
+          "verse": 14,
+          "text": "On peut obtenir le succès par ses paroles, comme on s’assure un salaire par son travail."
+        },
+        {
+          "verse": 15,
+          "text": "L’imbécile estime toujours qu’il agit correctement, le sage accepte les conseils."
+        },
+        {
+          "verse": 16,
+          "text": "L’imbécile laisse paraître immédiatement sa colère, l’homme prudent cache son irritation."
+        },
+        {
+          "verse": 17,
+          "text": "Celui qui déclare la vérité favorise la justice, mais le faux témoin favorise l’erreur."
+        },
+        {
+          "verse": 18,
+          "text": "Qui bavarde à la légère blesse autant qu’une épée, les paroles des sages apportent la guérison."
+        },
+        {
+          "verse": 19,
+          "text": "Une affirmation vraie reste toujours valable, mais les mensonges ne tiennent qu’un instant."
+        },
+        {
+          "verse": 20,
+          "text": "Ceux qui projettent le mal ont le cœur plein de fausseté. Ceux qui conseillent le bien en retirent de la joie."
+        },
+        {
+          "verse": 21,
+          "text": "Aucun mal n’arrive aux hommes justes, mais les méchants sont accablés de malheurs."
+        },
+        {
+          "verse": 22,
+          "text": "Le Seigneur déteste les menteurs, il approuve ceux qui pratiquent la vérité."
+        },
+        {
+          "verse": 23,
+          "text": "L’homme avisé ne fait pas étalage de ses connaissances, les sots exhibent leur bêtise."
+        },
+        {
+          "verse": 24,
+          "text": "Des mains actives procurent le pouvoir, mais la nonchalance mène à l’esclavage."
+        },
+        {
+          "verse": 25,
+          "text": "Un cœur soucieux déprime un homme, une parole aimable le réconforte."
+        },
+        {
+          "verse": 26,
+          "text": "Le juste guide son compagnon dans la bonne direction, la conduite des méchants les égare."
+        },
+        {
+          "verse": 27,
+          "text": "Le chasseur nonchalant n’a pas de gibier à rôtir. Il est précieux pour un homme d’être actif."
+        },
+        {
+          "verse": 28,
+          "text": "La vie se trouve là où l’on pratique la justice. En suivant cette voie on ne rencontre pas la mort."
+        }
+      ]
+    },
+    {
+      "chapter": 13,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Un fils qui a de la sagesse tient compte des avertissements de son père, mais un fils insolent n’accepte aucun reproche."
+        },
+        {
+          "verse": 2,
+          "text": "L’homme de bien récolte le fruit de ce qu’il dit. Les gens déloyaux vivent de violence."
+        },
+        {
+          "verse": 3,
+          "text": "Celui qui surveille ses paroles met sa vie à l’abri; celui qui dit n’importe quoi s’expose à la ruine."
+        },
+        {
+          "verse": 4,
+          "text": "Il ne sert à rien pour un paresseux de convoiter quelque chose, mais un homme actif obtient ce qu’il désire."
+        },
+        {
+          "verse": 5,
+          "text": "Un homme juste déteste le mensonge, une personne malveillante déshonore les autres en les couvrant de boue."
+        },
+        {
+          "verse": 6,
+          "text": "L’honnêteté protège celui qui se conduit bien. Le mal entraîne la ruine de ceux qui le commettent."
+        },
+        {
+          "verse": 7,
+          "text": "Certains font semblant d’être riches alors qu’ils n’ont rien. D’autres font les pauvres et possèdent une fortune."
+        },
+        {
+          "verse": 8,
+          "text": "Parfois un riche doit payer pour sauver sa vie, mais le pauvre ne risque pas d’être menacé."
+        },
+        {
+          "verse": 9,
+          "text": "Le juste rayonne comme une lumière brillante, le méchant est comme une lampe qui s’éteint."
+        },
+        {
+          "verse": 10,
+          "text": "L’orgueil ne sert qu’à provoquer des querelles. Il est plus sage d’accepter les conseils."
+        },
+        {
+          "verse": 11,
+          "text": "La richesse trop vite acquise disparaît vite. Celle qu’on amasse petit à petit ne cesse de grandir."
+        },
+        {
+          "verse": 12,
+          "text": "L’espoir qui tarde à se réaliser chagrine le cœur, le désir comblé est comme un arbre de vie."
+        },
+        {
+          "verse": 13,
+          "text": "Celui qui méprise un avis risque de le payer cher. Celui qui respecte un ordre sera récompensé."
+        },
+        {
+          "verse": 14,
+          "text": "L’enseignement du sage est source de vie, il préserve des erreurs qui entraînent la mort."
+        },
+        {
+          "verse": 15,
+          "text": "Le bon sens procure du charme. Les gens déloyaux suivent une voie sans issue."
+        },
+        {
+          "verse": 16,
+          "text": "Un homme avisé réfléchit avant d’agir, mais les sots font étalage de leur bêtise."
+        },
+        {
+          "verse": 17,
+          "text": "Un mauvais messager est cause de malheur, un envoyé fidèle rétablit les situations."
+        },
+        {
+          "verse": 18,
+          "text": "Celui qui refuse d’être éduqué sera pauvre et méprisé, mais qui tient compte des critiques sera honoré."
+        },
+        {
+          "verse": 19,
+          "text": "Il est agréable de satisfaire un désir; c’est pourquoi les sots détestent renoncer au mal."
+        },
+        {
+          "verse": 20,
+          "text": "A fréquenter les sages, on gagne en sagesse, mais la compagnie des sots amène le malheur."
+        },
+        {
+          "verse": 21,
+          "text": "Le malheur s’acharne sur qui agit mal, alors que le bonheur récompense les gens honnêtes."
+        },
+        {
+          "verse": 22,
+          "text": "L’homme de bien laisse un héritage à ses descendants, mais la fortune du pécheur reviendra au juste."
+        },
+        {
+          "verse": 23,
+          "text": "Les pauvres tirent une nourriture abondante de leurs champs, mais certains dépérissent par manque d’équité."
+        },
+        {
+          "verse": 24,
+          "text": "Qui refuse de frapper son fils ne l’aime pas. Celui qui l’aime n’hésite pas à le punir."
+        },
+        {
+          "verse": 25,
+          "text": "Le juste mange à satiété, mais le ventre du méchant crie famine."
+        }
+      ]
+    },
+    {
+      "chapter": 14,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Une femme pleine de sagesse assure la solidité d’un foyer, mais une femme sotte le détruit de ses propres mains."
+        },
+        {
+          "verse": 2,
+          "text": "Qui mène une vie droite respecte le Seigneur. Celui qui se conduit de travers le méprise."
+        },
+        {
+          "verse": 3,
+          "text": "Dans la bouche de l’imbécile fleurit l’orgueil. Les paroles des sages assurent leur protection."
+        },
+        {
+          "verse": 4,
+          "text": "Là où il n’y a pas de bœufs de labour, le grenier est vide. Un bétail vigoureux procure des revenus importants."
+        },
+        {
+          "verse": 5,
+          "text": "Un témoin digne de confiance ne ment pas, un faux témoin débite des mensonges."
+        },
+        {
+          "verse": 6,
+          "text": "L’insolent s’efforce-t-il d’acquérir de la sagesse? C’est en vain. Mais celui qui réfléchit acquiert facilement du savoir-faire."
+        },
+        {
+          "verse": 7,
+          "text": "Fuis la présence du sot, car tu n’apprendrais rien dans ce qu’il dit."
+        },
+        {
+          "verse": 8,
+          "text": "L’homme prudent surveille sa conduite parce qu’il est sage. Les sots s’égarent à cause de leur bêtise."
+        },
+        {
+          "verse": 9,
+          "text": "Les imbéciles n’estiment pas nécessaire de réparer un tort, mais la bonne volonté règne entre les hommes droits."
+        },
+        {
+          "verse": 10,
+          "text": "Chacun est seul dans ses chagrins et ses joies, personne d’autre ne peut les partager."
+        },
+        {
+          "verse": 11,
+          "text": "La maison des méchants est destinée à la ruine, celle des hommes droits à la prospérité."
+        },
+        {
+          "verse": 12,
+          "text": "Il arrive qu’un homme estime sa conduite droite, alors que finalement elle le mène à la mort."
+        },
+        {
+          "verse": 13,
+          "text": "Le rire peut cacher la peine et la joie céder la place à la tristesse."
+        },
+        {
+          "verse": 14,
+          "text": "L’homme immoral subira les conséquences de ses actes. La situation de l’homme de bien est préférable."
+        },
+        {
+          "verse": 15,
+          "text": "L’ignorant croit tout ce qu’on lui dit, l’homme prudent regarde où il met les pieds."
+        },
+        {
+          "verse": 16,
+          "text": "Le sage a peur du mal et s’en détourne, mais le sot agit trop vite parce qu’il est sûr de lui."
+        },
+        {
+          "verse": 17,
+          "text": "Qui se met facilement en colère fait des bêtises, celui qui intrigue attire la haine."
+        },
+        {
+          "verse": 18,
+          "text": "La part des ignorants c’est la bêtise, l’honneur des gens avisés c’est le savoir."
+        },
+        {
+          "verse": 19,
+          "text": "Les hommes mauvais se sont inclinés devant les bons et les méchants attendent à la porte des justes."
+        },
+        {
+          "verse": 20,
+          "text": "Le pauvre est détesté même par ses compagnons, tandis que le riche a de nombreux amis."
+        },
+        {
+          "verse": 21,
+          "text": "Mépriser son prochain est un péché, mais heureux celui qui est bon avec les pauvres."
+        },
+        {
+          "verse": 22,
+          "text": "Les gens mal intentionnés font fausse route. Les gens bien intentionnés rencontrent la bonté et la fidélité."
+        },
+        {
+          "verse": 23,
+          "text": "Tout travail obtient un salaire, mais le bavardage ne conduit qu’à la pauvreté."
+        },
+        {
+          "verse": 24,
+          "text": "La richesse est la récompense des sages. Les sots ne sortent jamais de leur bêtise."
+        },
+        {
+          "verse": 25,
+          "text": "Un témoin digne de foi sauve des vies, mais celui qui débite des mensonges conduit à l’erreur."
+        },
+        {
+          "verse": 26,
+          "text": "Reconnaître l’autorité du Seigneur permet de vivre en toute sécurité, car il protège ses enfants."
+        },
+        {
+          "verse": 27,
+          "text": "Reconnaître l’autorité du Seigneur est source de vie; cela permet d’éviter des pièges mortels."
+        },
+        {
+          "verse": 28,
+          "text": "Un peuple nombreux fait la gloire d’un roi. S’il manque de sujets, c’est la fin de son pouvoir."
+        },
+        {
+          "verse": 29,
+          "text": "Qui reste calme fait preuve d’une grande intelligence, qui s’emporte montre sa bêtise."
+        },
+        {
+          "verse": 30,
+          "text": "La paix de l’esprit favorise la santé, mais la passion est un cancer qui ronge les os."
+        },
+        {
+          "verse": 31,
+          "text": "Qui opprime les indigents outrage celui qui les a faits. Seul l’honore celui qui leur porte secours."
+        },
+        {
+          "verse": 32,
+          "text": "Le mal que commet le méchant cause sa perte, mais le juste garde confiance même devant la mort."
+        },
+        {
+          "verse": 33,
+          "text": "Celui qui réfléchit possède la sagesse, mais peut-on la trouver parmi les sots?"
+        },
+        {
+          "verse": 34,
+          "text": "Pratiquer la justice fait la grandeur d’une nation, l’injustice fait la honte des peuples."
+        },
+        {
+          "verse": 35,
+          "text": "Le roi apprécie des ministres compétents, mais sa colère menace les indignes."
+        }
+      ]
+    },
+    {
+      "chapter": 15,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Une réponse aimable apaise la colère, mais une parole brutale l’excite."
+        },
+        {
+          "verse": 2,
+          "text": "Quand le sage parle, il donne envie de s’instruire, mais la bouche des sots répand la bêtise."
+        },
+        {
+          "verse": 3,
+          "text": "Le Seigneur dirige ses regards partout; il observe aussi bien les bons que les mauvais."
+        },
+        {
+          "verse": 4,
+          "text": "Une parole réconfortante est comme un arbre de vie, une parole cruelle est démoralisante."
+        },
+        {
+          "verse": 5,
+          "text": "L’imbécile méprise les avertissements de son père, qui accepte les réprimandes est avisé."
+        },
+        {
+          "verse": 6,
+          "text": "Le juste vit dans l’abondance. Les profits malhonnêtes attirent le malheur."
+        },
+        {
+          "verse": 7,
+          "text": "Les paroles des sages diffusent le savoir, tandis que la tête des sots ne vaut rien."
+        },
+        {
+          "verse": 8,
+          "text": "Le Seigneur déteste les sacrifices offerts par les méchants, mais il reçoit favorablement la prière des hommes droits."
+        },
+        {
+          "verse": 9,
+          "text": "Le Seigneur déteste la conduite des méchants, mais il aime ceux qui pratiquent la justice."
+        },
+        {
+          "verse": 10,
+          "text": "Celui qui s’écarte du bien sera sévèrement puni: refuser les avertissements conduit à la mort."
+        },
+        {
+          "verse": 11,
+          "text": "Le Seigneur sait ce qui se passe même au fond du monde des morts; à plus forte raison connaît-il toutes les pensées de l’homme."
+        },
+        {
+          "verse": 12,
+          "text": "L’arrogant n’aime pas les critiques; il ne consulte jamais les sages."
+        },
+        {
+          "verse": 13,
+          "text": "La joie au cœur égaie le visage, la peine provoque la mauvaise humeur."
+        },
+        {
+          "verse": 14,
+          "text": "Qui a l’esprit sage désire s’instruire, mais le sot n’avale que des bêtises."
+        },
+        {
+          "verse": 15,
+          "text": "Le malheureux vit sans cesse dans la peine. L’homme heureux vit dans une fête continuelle."
+        },
+        {
+          "verse": 16,
+          "text": "Mieux vaut avoir peu et être soumis au Seigneur que posséder beaucoup et vivre dans l’inquiétude."
+        },
+        {
+          "verse": 17,
+          "text": "Mieux vaut un plat de légumes préparé avec amour qu’une viande savoureuse assaisonnée de haine."
+        },
+        {
+          "verse": 18,
+          "text": "Un homme coléreux provoque des disputes, un homme patient les apaise."
+        },
+        {
+          "verse": 19,
+          "text": "Le sentier du paresseux est couvert de ronces. La route des hommes droits est bien dégagée."
+        },
+        {
+          "verse": 20,
+          "text": "Un fils sage fait la joie de ses parents. Le sot ne respecte pas les siens."
+        },
+        {
+          "verse": 21,
+          "text": "Celui qui a la tête vide se complaît dans sa bêtise, mais l’homme raisonnable va droit son chemin."
+        },
+        {
+          "verse": 22,
+          "text": "Quand on ne consulte personne, les projets échouent. Grâce à de nombreux conseils, ils se réalisent."
+        },
+        {
+          "verse": 23,
+          "text": "Il est agréable de savoir bien répondre; quel plaisir de dire la parole juste au moment voulu!"
+        },
+        {
+          "verse": 24,
+          "text": "L’homme sensé suit la route qui monte vers la vie, il évite celle qui descend vers la mort."
+        },
+        {
+          "verse": 25,
+          "text": "Le Seigneur détruit la maison de l’orgueilleux, mais il protège le terrain de la veuve."
+        },
+        {
+          "verse": 26,
+          "text": "Le Seigneur déteste les mauvaises intentions. Seules les paroles inspirées par la bonté sont irréprochables."
+        },
+        {
+          "verse": 27,
+          "text": "L’homme avide d’argent attire la ruine sur sa famille. Celui qui ne se laisse pas acheter jouira d’une longue vie."
+        },
+        {
+          "verse": 28,
+          "text": "Le juste réfléchit avant de répondre, mais le méchant s’empresse de répandre des calomnies."
+        },
+        {
+          "verse": 29,
+          "text": "Le Seigneur ne s’intéresse pas aux méchants, mais il écoute la prière des justes."
+        },
+        {
+          "verse": 30,
+          "text": "Un regard bienveillant donne de la joie et une bonne nouvelle ranime les forces."
+        },
+        {
+          "verse": 31,
+          "text": "Celui qui tend l’oreille à une critique salutaire a sa place parmi les sages."
+        },
+        {
+          "verse": 32,
+          "text": "Qui refuse d’être éduqué néglige sa propre vie, mais celui qui tient compte des réprimandes acquiert du caractère."
+        },
+        {
+          "verse": 33,
+          "text": "Reconnaître l’autorité du Seigneur est une école de sagesse. Avant d’accéder aux honneurs, il convient d’être humble."
+        }
+      ]
+    },
+    {
+      "chapter": 16,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Les hommes forment des projets, mais c’est le Seigneur qui a le dernier mot."
+        },
+        {
+          "verse": 2,
+          "text": "Chacun pense agir toujours correctement, mais le Seigneur examine le fond du cœur."
+        },
+        {
+          "verse": 3,
+          "text": "Expose ton activité au Seigneur et tu réaliseras tes projets."
+        },
+        {
+          "verse": 4,
+          "text": "Le Seigneur a tout fait dans une intention précise, même les méchants pour le jour de leur malheur."
+        },
+        {
+          "verse": 5,
+          "text": "Le Seigneur déteste les hommes orgueilleux; on peut être sûr qu’ils ne seront pas impunis."
+        },
+        {
+          "verse": 6,
+          "text": "Par la bonté et la fidélité on peut réparer un tort. En respectant le Seigneur on évite d’agir mal."
+        },
+        {
+          "verse": 7,
+          "text": "Lorsque le Seigneur approuve la conduite de quelqu’un, il réconcilie avec lui ses ennemis eux-mêmes."
+        },
+        {
+          "verse": 8,
+          "text": "Mieux vaut un maigre salaire gagné honnêtement que de gros revenus tirés d’affaires louches."
+        },
+        {
+          "verse": 9,
+          "text": "L’homme élabore des plans, le Seigneur en dirige la réalisation."
+        },
+        {
+          "verse": 10,
+          "text": "Le roi parle avec une autorité divine, il ne se trompe pas quand il prononce un jugement."
+        },
+        {
+          "verse": 11,
+          "text": "Le Seigneur veut que les balances soient justes, il fixe la valeur des poids."
+        },
+        {
+          "verse": 12,
+          "text": "Le roi déteste qu’on agisse mal, car seule la pratique de la justice maintient son pouvoir."
+        },
+        {
+          "verse": 13,
+          "text": "Le roi apprécie qu’on lui parle honnêtement, il aime ceux qui disent la vérité."
+        },
+        {
+          "verse": 14,
+          "text": "Un roi en colère peut envoyer quelqu’un à la mort. Un homme sage fait tout pour l’apaiser."
+        },
+        {
+          "verse": 15,
+          "text": "Un sourire sur le visage du roi est promesse de vie, sa bonté est comme une pluie rafraîchissante."
+        },
+        {
+          "verse": 16,
+          "text": "Mieux vaut acquérir la sagesse que de l’or, l’intelligence que de l’argent."
+        },
+        {
+          "verse": 17,
+          "text": "Les hommes droits se détournent du mal, car surveiller sa conduite, c’est veiller sur sa vie."
+        },
+        {
+          "verse": 18,
+          "text": "L’orgueil conduit à la faillite et l’arrogance à la ruine."
+        },
+        {
+          "verse": 19,
+          "text": "Mieux vaut vivre modestement avec des pauvres que partager un riche butin avec des gens orgueilleux."
+        },
+        {
+          "verse": 20,
+          "text": "Qui est habile en affaires s’en trouve bien, mais celui qui fait confiance au Seigneur connaît le bonheur."
+        },
+        {
+          "verse": 21,
+          "text": "Un homme à l’esprit sage est intelligent. Plus une parole est aimable, plus elle est convaincante."
+        },
+        {
+          "verse": 22,
+          "text": "Le bons sens procure la vie à ceux qui le possèdent. Les imbéciles sont punis par leur propre bêtise."
+        },
+        {
+          "verse": 23,
+          "text": "L’homme à l’esprit sage réfléchit avant de parler et rend ainsi ses paroles plus convaincantes."
+        },
+        {
+          "verse": 24,
+          "text": "Des paroles aimables sont pareilles au miel, qui est agréable au goût et bon pour la santé."
+        },
+        {
+          "verse": 25,
+          "text": "Il arrive qu’un homme estime sa conduite droite alors que finalement elle le mène à la mort."
+        },
+        {
+          "verse": 26,
+          "text": "La faim oblige le travailleur à se donner de la peine, son appétit l’y pousse."
+        },
+        {
+          "verse": 27,
+          "text": "Le vaurien projette le mal, sa langue est brûlante de méchanceté."
+        },
+        {
+          "verse": 28,
+          "text": "L’homme rusé provoque des disputes, et le calomniateur détruit l’amitié."
+        },
+        {
+          "verse": 29,
+          "text": "L’homme violent trompe les autres et les entraîne sur une mauvaise pente."
+        },
+        {
+          "verse": 30,
+          "text": "Celui qui ferme les yeux et serre les lèvres pour préparer un mauvais coup l’a déjà réalisé."
+        },
+        {
+          "verse": 31,
+          "text": "Les cheveux blancs sont une parure qui couronne celui qui a suivi les traces de la justice."
+        },
+        {
+          "verse": 32,
+          "text": "Le héros véritable est celui qui vainc sa colère. Il vaut mieux être maître de soi que maître d’une ville."
+        },
+        {
+          "verse": 33,
+          "text": "On jette les dés pour connaître l’avenir, mais c’est le Seigneur qui détermine la réponse."
+        }
+      ]
+    },
+    {
+      "chapter": 17,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Mieux vaut manger en paix un croûton de pain sec que participer à un banquet dans une maison où l’on se dispute."
+        },
+        {
+          "verse": 2,
+          "text": "Un serviteur compétent prendra la place du fils indigne et recevra une part de l’héritage familial."
+        },
+        {
+          "verse": 3,
+          "text": "L’or et l’argent sont testés par le feu, et c’est le Seigneur qui éprouve la valeur des hommes."
+        },
+        {
+          "verse": 4,
+          "text": "L’homme malintentionné prête l’oreille aux paroles malveillantes et le menteur écoute les mauvaises langues."
+        },
+        {
+          "verse": 5,
+          "text": "Qui se moque des pauvres outrage celui qui les a faits. Celui qui rit du malheur d’autrui ne sera pas impuni."
+        },
+        {
+          "verse": 6,
+          "text": "Les gens âgés sont fiers de leurs petits-enfants, et les enfants sont fiers de leurs parents."
+        },
+        {
+          "verse": 7,
+          "text": "Un langage distingué ne convient pas à un homme vulgaire, encore moins le mensonge à un dirigeant."
+        },
+        {
+          "verse": 8,
+          "text": "Certains pensent qu’offrir un cadeau porte bonheur et assure la réussite de toutes les entreprises."
+        },
+        {
+          "verse": 9,
+          "text": "Oublier un tort favorise l’amitié, mais en reparler sans cesse la rend impossible."
+        },
+        {
+          "verse": 10,
+          "text": "Un reproche a plus d’influence sur un homme intelligent que cent coups de bâton sur un sot."
+        },
+        {
+          "verse": 11,
+          "text": "Le méchant ne cherche qu’à nuire et déchaîne ainsi contre lui les forces du malheur."
+        },
+        {
+          "verse": 12,
+          "text": "Mieux vaut rencontrer une ourse privée de ses petits qu’un sot tout plein de sa bêtise."
+        },
+        {
+          "verse": 13,
+          "text": "Le malheur ne quitte pas la maison de l’homme qui rend le mal pour le bien."
+        },
+        {
+          "verse": 14,
+          "text": "Commencer une dispute c’est ouvrir une digue. Arrête-toi avant que la querelle ne se déchaîne."
+        },
+        {
+          "verse": 15,
+          "text": "Le Seigneur déteste autant celui qui déclare innocent un coupable que celui qui condamne un innocent."
+        },
+        {
+          "verse": 16,
+          "text": "A quoi peut servir l’argent dans la main d’un sot? A se procurer la sagesse? Mais il n’a pas de tête!"
+        },
+        {
+          "verse": 17,
+          "text": "Un ami montre son affection en toutes circonstances. Un frère est là pour partager les difficultés."
+        },
+        {
+          "verse": 18,
+          "text": "Seul un insensé se rend responsable de la dette d’autrui en tapant dans la main de quelqu’un."
+        },
+        {
+          "verse": 19,
+          "text": "Qui aime la querelle aime causer du tort. Qui fait l’important cherche sa ruine."
+        },
+        {
+          "verse": 20,
+          "text": "Qui a l’esprit rusé ne connaît pas le bonheur, et le malheur s’abat sur celui qui a une mauvaise langue."
+        },
+        {
+          "verse": 21,
+          "text": "Qui donne naissance à un sot n’a que du chagrin. Toute joie est refusée au père d’un homme stupide."
+        },
+        {
+          "verse": 22,
+          "text": "La bonne humeur favorise la guérison, mais la tristesse fait perdre toute vitalité."
+        },
+        {
+          "verse": 23,
+          "text": "Les gens malhonnêtes acceptent les cadeaux offerts pour dévier le cours de la justice."
+        },
+        {
+          "verse": 24,
+          "text": "L’homme intelligent ne perd jamais de vue ce qui est sage, mais les regards du sot se portent vers des buts inaccessibles."
+        },
+        {
+          "verse": 25,
+          "text": "Le sot donne du chagrin à son père et des regrets à celle qui l’a mis au monde."
+        },
+        {
+          "verse": 26,
+          "text": "Il n’est pas bien d’infliger une amende à un innocent et il est injuste de punir quelqu’un de respectable."
+        },
+        {
+          "verse": 27,
+          "text": "Quelqu’un d’expérimenté évite de trop parler et quelqu’un de raisonnable prend le temps de réfléchir."
+        },
+        {
+          "verse": 28,
+          "text": "Quand il se tait, même un imbécile paraît sage. Lorsque ses lèvres sont fermées on peut le croire intelligent."
+        }
+      ]
+    },
+    {
+      "chapter": 18,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Celui qui ne cherche que son intérêt s’isole des autres, il s’irrite quand on lui propose de l’aide."
+        },
+        {
+          "verse": 2,
+          "text": "Ce qui intéresse le sot n’est pas de comprendre, mais de faire étalage de son opinion."
+        },
+        {
+          "verse": 3,
+          "text": "La méchanceté amène avec elle le mépris, et la honte accompagne l’affront."
+        },
+        {
+          "verse": 4,
+          "text": "Les paroles de l’homme peuvent être profondes comme l’océan, vivifiantes comme un torrent et source de sagesse."
+        },
+        {
+          "verse": 5,
+          "text": "Il n’est pas bien de favoriser le coupable en refusant de faire justice à l’innocent."
+        },
+        {
+          "verse": 6,
+          "text": "Les paroles du sot entraînent des disputes, ce qu’il dit provoque la bagarre."
+        },
+        {
+          "verse": 7,
+          "text": "Quand le sot parle, il cause sa ruine; il est pris au piège de ses propres paroles."
+        },
+        {
+          "verse": 8,
+          "text": "Les calomnies sont comme des friandises, elles s’insinuent jusqu’au fond de soi-même."
+        },
+        {
+          "verse": 9,
+          "text": "Celui qui néglige sa besogne et celui qui la gâche sont de la même famille."
+        },
+        {
+          "verse": 10,
+          "text": "Le Seigneur est une forteresse. L’homme juste accourt près de lui et il est en sécurité."
+        },
+        {
+          "verse": 11,
+          "text": "La fortune du riche lui tient lieu de citadelle, dans son coffre-fort elle le protège comme un rempart élevé."
+        },
+        {
+          "verse": 12,
+          "text": "L’orgueil de l’homme le conduit à la faillite. Avant d’accéder aux honneurs, il convient d’être humble."
+        },
+        {
+          "verse": 13,
+          "text": "Qui répond avant d’avoir écouté montre sa bêtise et se couvre de ridicule."
+        },
+        {
+          "verse": 14,
+          "text": "La volonté de vivre soutient l’homme malade, mais qui peut rétablir une volonté défaillante?"
+        },
+        {
+          "verse": 15,
+          "text": "Celui qui réfléchit acquiert des connaissances, le sage cherche à entendre des paroles instructives."
+        },
+        {
+          "verse": 16,
+          "text": "Offrir un cadeau ouvre bien des portes et permet de rencontrer des gens haut placés."
+        },
+        {
+          "verse": 17,
+          "text": "Le premier à plaider une cause semble avoir raison jusqu’au moment où son adversaire le contredit."
+        },
+        {
+          "verse": 18,
+          "text": "Jeter les dés fait cesser les querelles et tranche le débat entre les plaideurs."
+        },
+        {
+          "verse": 19,
+          "text": "Un frère offensé est plus difficile à aborder qu’une forteresse. Les disputes sont aussi tenaces que les verrous d’un château."
+        },
+        {
+          "verse": 20,
+          "text": "Un homme peut assurer sa nourriture par ses paroles; ce qu’il dit lui permet de gagner sa vie."
+        },
+        {
+          "verse": 21,
+          "text": "Les paroles peuvent être source de vie ou de mort. Qui aime parler doit en accepter les conséquences."
+        },
+        {
+          "verse": 22,
+          "text": "Celui qui trouve une compagne, trouve le bonheur. Il a obtenu l’approbation du Seigneur."
+        },
+        {
+          "verse": 23,
+          "text": "Le pauvre parle en suppliant, le riche répond avec dureté."
+        },
+        {
+          "verse": 24,
+          "text": "Il y a des amis qui mènent au malheur. Un ami véritable est plus loyal qu’un frère."
+        }
+      ]
+    },
+    {
+      "chapter": 19,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Mieux vaut être pauvre et vivre dans l’intégrité qu’être sot et parler pour tromper."
+        },
+        {
+          "verse": 2,
+          "text": "Sans expérience l’enthousiasme n’est pas bon; à trop se hâter on commet des erreurs."
+        },
+        {
+          "verse": 3,
+          "text": "Tel homme se met bêtement dans une mauvaise situation et tourne sa colère contre le Seigneur!"
+        },
+        {
+          "verse": 4,
+          "text": "Un riche a sans cesse de nouveaux amis, un indigent risque de perdre le seul qui lui reste."
+        },
+        {
+          "verse": 5,
+          "text": "Le faux témoin ne reste pas impuni et le menteur n’échappe pas à la punition qu’il mérite."
+        },
+        {
+          "verse": 6,
+          "text": "Beaucoup de gens flattent en face l’homme important et tout le monde se prend d’amitié pour qui fait des cadeaux."
+        },
+        {
+          "verse": 7,
+          "text": "Le pauvre est détesté par ses propres frères, à plus forte raison ses amis l’abandonnent-ils. Lorsqu’il voudrait leur parler, ils ne sont plus là."
+        },
+        {
+          "verse": 8,
+          "text": "Apprendre à réfléchir, c’est agir pour son propre bien; s’appliquer à comprendre mène au bonheur."
+        },
+        {
+          "verse": 9,
+          "text": "Le faux témoin ne reste pas impuni et le menteur cause sa propre perte."
+        },
+        {
+          "verse": 10,
+          "text": "Il ne convient pas qu’un sot vive dans le luxe et encore moins qu’un esclave commande à des chefs."
+        },
+        {
+          "verse": 11,
+          "text": "Un homme sensé maîtrise sa colère, il met son point d’honneur à oublier les torts subis."
+        },
+        {
+          "verse": 12,
+          "text": "La colère du roi est redoutable comme le rugissement d’un lion, mais sa bonté est bienfaisante comme la rosée sur l’herbe."
+        },
+        {
+          "verse": 13,
+          "text": "Le sot fait le malheur de son père. La femme querelleuse est comme une gouttière qui coule sans cesse."
+        },
+        {
+          "verse": 14,
+          "text": "On peut hériter maison et argent de ses ancêtres, mais seul le Seigneur peut donner une femme sensée."
+        },
+        {
+          "verse": 15,
+          "text": "La paresse plonge dans l’inertie et la nonchalance ne nourrit pas son homme!"
+        },
+        {
+          "verse": 16,
+          "text": "Celui qui respecte les règles protège sa vie, celui qui ne surveille pas sa conduite mourra."
+        },
+        {
+          "verse": 17,
+          "text": "Donner aux pauvres revient à prêter au Seigneur, il récompensera cette générosité."
+        },
+        {
+          "verse": 18,
+          "text": "Corrige tes enfants tant que tu as l’espoir de les aider, mais ne t’emporte pas au point de vouloir leur mort."
+        },
+        {
+          "verse": 19,
+          "text": "L’homme violent mérite de payer une amende. Ne pas lui en infliger, c’est l’inciter à recommencer."
+        },
+        {
+          "verse": 20,
+          "text": "Écoute les conseils, laisse-toi éduquer: tu finiras par devenir un sage."
+        },
+        {
+          "verse": 21,
+          "text": "L’homme élabore de nombreux plans, mais seule la décision du Seigneur se réalise."
+        },
+        {
+          "verse": 22,
+          "text": "Ce qu’on attend d’un homme, c’est la bonté. Mieux vaut être pauvre que menteur."
+        },
+        {
+          "verse": 23,
+          "text": "Respecter le Seigneur conduit à la vie, une vie dans l’abondance et à l’abri du malheur."
+        },
+        {
+          "verse": 24,
+          "text": "Le paresseux plonge sa main dans le plat, mais il hésite à l’amener jusqu’à sa bouche."
+        },
+        {
+          "verse": 25,
+          "text": "Lorsqu’on frappe un insolent, l’imbécile peut devenir prudent. Lorsqu’un homme intelligent est critiqué, il comprend la leçon."
+        },
+        {
+          "verse": 26,
+          "text": "Qui est violent avec son père et chasse sa mère est un fils indigne, dont on rougit."
+        },
+        {
+          "verse": 27,
+          "text": "Mon fils, si tu cesses d’écouter les avertissements, tu tournes le dos aux leçons de l’expérience."
+        },
+        {
+          "verse": 28,
+          "text": "Un témoin malfaisant bafoue le droit. Les méchants ont le goût du mal."
+        },
+        {
+          "verse": 29,
+          "text": "Les insolents s’exposent à être punis et le sot s’expose à recevoir des coups."
+        }
+      ]
+    },
+    {
+      "chapter": 20,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Le vin rend insolent et les liqueurs fortes incitent au tapage. Qui se laisse enivrer ne peut devenir sage."
+        },
+        {
+          "verse": 2,
+          "text": "Un roi irrité est aussi redoutable qu’un lion rugissant. Qui excite la colère du roi met sa vie en danger."
+        },
+        {
+          "verse": 3,
+          "text": "Se retirer d’une dispute est un acte honorable. Seuls les imbéciles s’y entêtent."
+        },
+        {
+          "verse": 4,
+          "text": "Un paysan trop paresseux pour labourer à l’automne ne trouve rien à récolter à l’époque de la moisson."
+        },
+        {
+          "verse": 5,
+          "text": "Les pensées de l’homme sont cachées comme des eaux souterraines. Une personne intelligente sait les faire apparaître."
+        },
+        {
+          "verse": 6,
+          "text": "Beaucoup de gens se vantent de leur bonté, mais qui trouvera quelqu’un de vraiment sûr?"
+        },
+        {
+          "verse": 7,
+          "text": "Le juste mène une vie intègre, heureux les enfants qu’il laisse après lui!"
+        },
+        {
+          "verse": 8,
+          "text": "Lorsque le roi siège pour rendre la justice, il discerne le mal au premier coup d’œil."
+        },
+        {
+          "verse": 9,
+          "text": "Quelqu’un peut-il dire: «J’ai la conscience tranquille, je suis pur de tout péché»?"
+        },
+        {
+          "verse": 10,
+          "text": "Avoir deux poids, deux mesures, voilà qui est détestable aux yeux du Seigneur."
+        },
+        {
+          "verse": 11,
+          "text": "Même un enfant manifeste par ses actes si sa conduite est claire et droite."
+        },
+        {
+          "verse": 12,
+          "text": "Des yeux pour voir, des oreilles pour entendre sont l’œuvre du Seigneur."
+        },
+        {
+          "verse": 13,
+          "text": "Si tu aimes dormir, tu deviendras pauvre. Ouvre grands les yeux et tu mangeras à ta faim."
+        },
+        {
+          "verse": 14,
+          "text": "«Mauvaise affaire!» dit l’acheteur, mais, lorsqu’il s’en va, il se félicite de son succès."
+        },
+        {
+          "verse": 15,
+          "text": "L’or n’est pas rare et les perles abondent. Des paroles instructives sont un trésor bien plus précieux."
+        },
+        {
+          "verse": 16,
+          "text": "Si quelqu’un se porte garant auprès de toi de la dette d’un inconnu, exige son vêtement, s’il cautionne des étrangers, exige des gages."
+        },
+        {
+          "verse": 17,
+          "text": "Au premier abord la nourriture volée est un délice, mais ensuite c’est du gravier plein la bouche."
+        },
+        {
+          "verse": 18,
+          "text": "Grâce à de bons conseils on réalise ses projets. Ne pars pas en guerre sans en avoir délibéré."
+        },
+        {
+          "verse": 19,
+          "text": "Celui qui parle à tort et à travers trahit aussi les secrets. Évite donc les gens qui bavardent trop."
+        },
+        {
+          "verse": 20,
+          "text": "Si quelqu’un maudit son père ou sa mère, il verra sa vie s’éteindre comme une lampe dans les ténèbres."
+        },
+        {
+          "verse": 21,
+          "text": "Celui qui commence trop rapidement à amasser une fortune n’aura pas lieu de s’en féliciter par la suite."
+        },
+        {
+          "verse": 22,
+          "text": "Ne te propose pas de rendre le mal qu’on te fait. Place ta confiance dans le Seigneur, et il te tirera d’affaire."
+        },
+        {
+          "verse": 23,
+          "text": "Le Seigneur déteste les poids inexacts, il désapprouve l’emploi d’une balance fausse."
+        },
+        {
+          "verse": 24,
+          "text": "C’est le Seigneur qui dirige la vie des hommes. Comment un humain comprendrait-il où le mènent ses pas?"
+        },
+        {
+          "verse": 25,
+          "text": "Il est dangereux de dire à la légère: «Ceci est pour Dieu» et de lui faire des promesses avant d’avoir réfléchi."
+        },
+        {
+          "verse": 26,
+          "text": "Un roi sage disperse ceux qui agissent mal, il fait passer sur eux la roue du malheur."
+        },
+        {
+          "verse": 27,
+          "text": "La conscience est la lampe que le Seigneur donne à l’homme: elle éclaire les profondeurs de son être."
+        },
+        {
+          "verse": 28,
+          "text": "La bonté et la fidélité protègent le roi. C’est par la bonté qu’il affermit son pouvoir."
+        },
+        {
+          "verse": 29,
+          "text": "La vigueur fait la beauté de la jeunesse et les cheveux blancs la dignité de la vieillesse."
+        },
+        {
+          "verse": 30,
+          "text": "Des blessures douloureuses peuvent guérir de la méchanceté et les coups assagir le fond du cœur."
+        }
+      ]
+    },
+    {
+      "chapter": 21,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "L’esprit du roi est comme un ruisseau que la main du Seigneur dirige là où il veut."
+        },
+        {
+          "verse": 2,
+          "text": "Chacun pense agir toujours avec droiture, mais le Seigneur examine le fond du cœur."
+        },
+        {
+          "verse": 3,
+          "text": "Une conduite juste et équitable a plus de prix pour le Seigneur que des sacrifices."
+        },
+        {
+          "verse": 4,
+          "text": "Le regard hautain et l’esprit orgueilleux, voilà ce qui manifeste le péché des méchants."
+        },
+        {
+          "verse": 5,
+          "text": "Celui qui s’applique à élaborer des plans connaîtra l’abondance, celui qui agit précipitamment connaîtra la disette."
+        },
+        {
+          "verse": 6,
+          "text": "S’efforcer d’acquérir la richesse par le mensonge, c’est obtenir de la fumée de la part de gens qui cherchent la mort."
+        },
+        {
+          "verse": 7,
+          "text": "La violence des méchants les mène à leur perte, car ils refusent d’appliquer le droit."
+        },
+        {
+          "verse": 8,
+          "text": "Les criminels suivent des voies tortueuses, mais les honnêtes gens ont une conduite droite."
+        },
+        {
+          "verse": 9,
+          "text": "Mieux vaut vivre au coin d’un toit que partager sa maison avec une femme querelleuse."
+        },
+        {
+          "verse": 10,
+          "text": "De tout son être, l’homme malveillant désire faire du mal et il n’épargne même pas son ami."
+        },
+        {
+          "verse": 11,
+          "text": "La punition de l’insolent est une leçon de sagesse pour l’ignorant, tandis que le sage acquiert de l’expérience par l’enseignement qu’il reçoit."
+        },
+        {
+          "verse": 12,
+          "text": "Le juste suit de près ce qui se passe dans la maison des méchants, et il les précipite dans le malheur."
+        },
+        {
+          "verse": 13,
+          "text": "Qui fait la sourde oreille aux cris de l’indigent n’obtiendra pas de réponse quand il appellera au secours."
+        },
+        {
+          "verse": 14,
+          "text": "Pour calmer la colère ou même la violente fureur de quelqu’un, rien de tel qu’un cadeau discret, qu’un présent offert sous le manteau."
+        },
+        {
+          "verse": 15,
+          "text": "L’application du droit fait la joie de l’homme honnête et frappe d’épouvante le malfaiteur."
+        },
+        {
+          "verse": 16,
+          "text": "Un homme qui abandonne tout bon sens ira bientôt tenir compagnie à ceux qui ne sont plus."
+        },
+        {
+          "verse": 17,
+          "text": "Celui qui aime les plaisirs connaîtra le besoin; l’amateur de vin et de bonne chère ne deviendra jamais riche."
+        },
+        {
+          "verse": 18,
+          "text": "Les gens sans foi ni loi supporteront le malheur que les hommes honnêtes et droits n’auront pas à subir."
+        },
+        {
+          "verse": 19,
+          "text": "Mieux vaut vivre dans un coin désert qu’avec une femme querelleuse et irritable."
+        },
+        {
+          "verse": 20,
+          "text": "On trouve de précieuses réserves et des produits de luxe dans la demeure du sage, mais le sot dilapide ce qu’il a."
+        },
+        {
+          "verse": 21,
+          "text": "Celui qui cherche à être honnête et bon vivra longtemps, il sera traité avec justice et respect."
+        },
+        {
+          "verse": 22,
+          "text": "Le sage prend d’assaut une ville fortement défendue et abat les fortifications qui donnaient confiance à ses habitants."
+        },
+        {
+          "verse": 23,
+          "text": "Celui qui surveille tout ce qui sort de sa bouche s’évite bien des tourments."
+        },
+        {
+          "verse": 24,
+          "text": "Un homme dédaigneux et orgueilleux, voilà l’insolent, dans tout son comportement son orgueil se déchaîne."
+        },
+        {
+          "verse": 25,
+          "text": "Le paresseux meurt de ne pas pouvoir réaliser ses désirs, car ses mains refusent de travailler."
+        },
+        {
+          "verse": 26,
+          "text": "Il passe son temps à convoiter, alors que l’homme juste donne sans rien garder pour lui."
+        },
+        {
+          "verse": 27,
+          "text": "Les méchants rendent leurs sacrifices d’autant plus détestables qu’ils les offrent avec de mauvaises intentions."
+        },
+        {
+          "verse": 28,
+          "text": "Le témoignage d’un menteur sera condamné, l’homme qui sait écouter peut parler de façon décisive."
+        },
+        {
+          "verse": 29,
+          "text": "L’homme malfaisant prend un air hardi. Un homme droit est sûr de sa conduite."
+        },
+        {
+          "verse": 30,
+          "text": "Aucune sagesse, aucune intelligence, aucun avis ne tient devant le Seigneur."
+        },
+        {
+          "verse": 31,
+          "text": "On équipe des chevaux pour le jour du combat, mais c’est le Seigneur qui donne la victoire."
+        }
+      ]
+    },
+    {
+      "chapter": 22,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Une bonne réputation vaut mieux que de grandes richesses: l’estime des autres est préférable à l’or et à l’argent."
+        },
+        {
+          "verse": 2,
+          "text": "Le riche et le pauvre ont ceci de commun: le Seigneur a fait l’un aussi bien que l’autre."
+        },
+        {
+          "verse": 3,
+          "text": "Un homme prudent voit venir le malheur et se met à l’abri. Les ignorants y donnent tête baissée et le paient cher."
+        },
+        {
+          "verse": 4,
+          "text": "L’homme humble se soumet au Seigneur, il est récompensé par la prospérité, la considération et une longue vie."
+        },
+        {
+          "verse": 5,
+          "text": "Une conduite tortueuse comporte tant d’épines et de pièges qu’il faut s’en écarter si l’on tient à sa vie."
+        },
+        {
+          "verse": 6,
+          "text": "Donne de bonnes habitudes à l’enfant dès l’entrée de sa vie: il les conservera jusque dans sa vieillesse."
+        },
+        {
+          "verse": 7,
+          "text": "Le riche a les pauvres en son pouvoir. Ceux qui empruntent sont les esclaves de leurs créanciers."
+        },
+        {
+          "verse": 8,
+          "text": "Qui sème l’injustice récolte le malheur, car son pouvoir de faire violence sera brisé."
+        },
+        {
+          "verse": 9,
+          "text": "L’homme bienveillant sera béni parce qu’il partage sa nourriture avec l’indigent."
+        },
+        {
+          "verse": 10,
+          "text": "Chasse les insolents, et les disputes cesseront: ce sera la fin des querelles et des propos méprisants."
+        },
+        {
+          "verse": 11,
+          "text": "Celui qui aime les intentions pures et les paroles aimables gagne l’amitié du roi."
+        },
+        {
+          "verse": 12,
+          "text": "Le Seigneur protège la vraie connaissance et il démasque les paroles des gens de mauvaise foi."
+        },
+        {
+          "verse": 13,
+          "text": "Le paresseux déclare: «Il y a un lion dehors. Je pourrais être tué en pleine rue!»"
+        },
+        {
+          "verse": 14,
+          "text": "Les paroles séductrices des femmes infidèles constituent un piège redoutable où tombe celui que le Seigneur désapprouve."
+        },
+        {
+          "verse": 15,
+          "text": "Les enfants aiment ce qui est déraisonnable. Quelques bonnes corrections les guériront de cette tendance."
+        },
+        {
+          "verse": 16,
+          "text": "Celui qui opprime un indigent lui procure finalement un avantage. Celui qui donne à un riche ne fait que s’appauvrir lui-même."
+        },
+        {
+          "verse": 17,
+          "text": "Prête l’oreille et écoute les paroles des sages; ouvre ton esprit à l’expérience que je te transmets."
+        },
+        {
+          "verse": 18,
+          "text": "Tu seras heureux de les garder en mémoire et d’être toujours prêt à les citer."
+        },
+        {
+          "verse": 19,
+          "text": "Je désire que tu places ta confiance dans le Seigneur, c’est pourquoi je vais te les faire connaître à toi aussi aujourd’hui même."
+        },
+        {
+          "verse": 20,
+          "text": "J’ai écrit pour toi une trentaine de conseils et de réflexions."
+        },
+        {
+          "verse": 21,
+          "text": "Je veux te donner des informations réellement dignes de confiance. Si quelqu’un t’envoie chercher la vérité, tu pourras ainsi lui communiquer des informations sûres."
+        },
+        {
+          "verse": 22,
+          "text": "Ne profite pas de la faiblesse d’un indigent pour le dépouiller et n’accable pas au tribunal un homme sans défense."
+        },
+        {
+          "verse": 23,
+          "text": "En effet, le Seigneur défendra leur cause et privera de la vie ceux qui les auront privés de tout."
+        },
+        {
+          "verse": 24,
+          "text": "Ne te lie pas à quelqu’un d’irritable et fuis la compagnie de l’homme agressif."
+        },
+        {
+          "verse": 25,
+          "text": "Sinon, tu te mettras à imiter leur comportement et tu seras pris dans un engrenage fatal."
+        },
+        {
+          "verse": 26,
+          "text": "Ne te rends pas responsable des dettes d’autrui en tapant dans la main de quelqu’un."
+        },
+        {
+          "verse": 27,
+          "text": "Si tu n’as pas de quoi payer, on te retirera même ton propre lit."
+        },
+        {
+          "verse": 28,
+          "text": "Ne déplace pas les bornes que tes ancêtres ont posées pour marquer la limite des champs."
+        },
+        {
+          "verse": 29,
+          "text": "Regarde l’homme qui fait bien son métier: il pourra offrir ses services aux rois eux-mêmes au lieu de rester un obscur ouvrier."
+        }
+      ]
+    },
+    {
+      "chapter": 23,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Quand tu es assis à la table d’un homme important, considère bien qui tu as devant toi."
+        },
+        {
+          "verse": 2,
+          "text": "Réfrène ton appétit si tu es un glouton."
+        },
+        {
+          "verse": 3,
+          "text": "Ne convoite pas ses bons plats: c’est une nourriture décevante!"
+        },
+        {
+          "verse": 4,
+          "text": "Ne te fatigue pas à courir après la richesse: cesse même d’y penser."
+        },
+        {
+          "verse": 5,
+          "text": "L’argent disparaît avant qu’on ait eu le temps de bien le voir: on dirait qu’il se fabrique des ailes pour s’envoler au loin comme un aigle dans le ciel."
+        },
+        {
+          "verse": 6,
+          "text": "Ne partage pas le repas d’un homme malintentionné et ne convoite pas ses bons plats."
+        },
+        {
+          "verse": 7,
+          "text": "Car il ne pense pas ce qu’il dit. «Mange et bois», te dit-il, mais en réalité il ne te veut aucun bien."
+        },
+        {
+          "verse": 8,
+          "text": "Par la suite, tu vomiras ce que tu as mangé et tes paroles flatteuses n’auront servi à rien."
+        },
+        {
+          "verse": 9,
+          "text": "N’essaie pas de te faire écouter d’un sot: il ne reconnaîtra pas la valeur de tes paroles."
+        },
+        {
+          "verse": 10,
+          "text": "Ne déplace pas les bornes posées autrefois, et ne cherche pas à t’emparer du terrain des orphelins."
+        },
+        {
+          "verse": 11,
+          "text": "En effet, ils ont un défenseur puissant, et c’est lui qui soutiendra leur cause contre toi."
+        },
+        {
+          "verse": 12,
+          "text": "Ouvre ton esprit à l’éducation que tu reçois et tes oreilles aux leçons de l’expérience."
+        },
+        {
+          "verse": 13,
+          "text": "N’hésite pas à punir ton enfant. Quelques bonnes corrections ne le tueront pas."
+        },
+        {
+          "verse": 14,
+          "text": "En le frappant tu peux au contraire le préserver du monde des morts."
+        },
+        {
+          "verse": 15,
+          "text": "Mon fils, si ton cœur s’attache à la sagesse, j’en aurai une grande joie."
+        },
+        {
+          "verse": 16,
+          "text": "Je serai profondément heureux si tu parles avec droiture."
+        },
+        {
+          "verse": 17,
+          "text": "N’envie pas intérieurement les pécheurs, mais sois constamment soumis au Seigneur."
+        },
+        {
+          "verse": 18,
+          "text": "Alors tu auras un avenir, ton espérance ne sera pas déçue."
+        },
+        {
+          "verse": 19,
+          "text": "Toi, mon fils, écoute-moi et tu deviendras sage, tu iras droit ton chemin."
+        },
+        {
+          "verse": 20,
+          "text": "Ne fréquente pas les gens qui s’enivrent de vin et s’empiffrent de viande."
+        },
+        {
+          "verse": 21,
+          "text": "Car les buveurs et les gloutons seront réduits à la misère, à force d’indolence ils n’auront plus que des haillons à se mettre."
+        },
+        {
+          "verse": 22,
+          "text": "Écoute ton père, car tu lui dois la vie; ne méprise pas ta mère lorsqu’elle a vieilli."
+        },
+        {
+          "verse": 23,
+          "text": "Apprends à être véridique, sage, discipliné et intelligent, et ne gaspille pas ces qualités."
+        },
+        {
+          "verse": 24,
+          "text": "Le plus grand bonheur d’un père est d’avoir donné la vie à un homme juste et sage."
+        },
+        {
+          "verse": 25,
+          "text": "Donne cette joie à ton père et à ta mère, ce bonheur à celle qui t’a mis au monde."
+        },
+        {
+          "verse": 26,
+          "text": "Mon fils, fais-moi confiance, prends plaisir à suivre mon exemple."
+        },
+        {
+          "verse": 27,
+          "text": "Sache bien que la prostituée et la femme d’autrui sont aussi dangereuses qu’une fosse profonde, qu’un puits étroit."
+        },
+        {
+          "verse": 28,
+          "text": "Comme les brigands, elles se mettent aux aguets. On ne compte plus les hommes qu’elles ont rendus infidèles."
+        },
+        {
+          "verse": 29,
+          "text": "Pour qui s’écrie-t-on «malheur» et «hélas»? Qui se dispute sans cesse et se plaint sans arrêt? Qui reçoit des coups sans raison? Qui a la vue trouble?"
+        },
+        {
+          "verse": 30,
+          "text": "C’est l’homme qui s’attarde à boire du vin et essaie sans cesse de nouveaux mélanges d’alcool."
+        },
+        {
+          "verse": 31,
+          "text": "Ne sois pas tenté par la belle couleur du vin qui pétille dans la coupe. Il coule agréablement dans le gosier,"
+        },
+        {
+          "verse": 32,
+          "text": "mais finalement il est comme une morsure de serpent, comme le poison d’un reptile venimeux."
+        },
+        {
+          "verse": 33,
+          "text": "Tes yeux auront des visions, ton esprit et tes paroles deviendront confus."
+        },
+        {
+          "verse": 34,
+          "text": "Tu te croiras en pleine mer, balancé au sommet du mât d’un navire."
+        },
+        {
+          "verse": 35,
+          "text": "Tu te diras: «J’ai dû être blessé et battu sans avoir mal et sans m’en rendre compte. Pourvu que je me réveille bientôt pour redemander à boire!»"
+        }
+      ]
+    },
+    {
+      "chapter": 24,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "N’envie pas les gens malfaisants et ne recherche pas leur compagnie."
+        },
+        {
+          "verse": 2,
+          "text": "Ils ne pensent qu’à agir avec violence et ne parlent que du mal qu’ils vont faire."
+        },
+        {
+          "verse": 3,
+          "text": "Il faut de la sagesse pour construire une maison, de l’intelligence pour la rendre habitable."
+        },
+        {
+          "verse": 4,
+          "text": "Il faut du savoir-faire pour en remplir les pièces d’objets agréables et précieux."
+        },
+        {
+          "verse": 5,
+          "text": "La sagesse d’un homme fait sa force, l’expérience augmente son pouvoir."
+        },
+        {
+          "verse": 6,
+          "text": "Ne pars pas en guerre sans en avoir délibéré, car un grand nombre de conseillers assure la victoire."
+        },
+        {
+          "verse": 7,
+          "text": "Les données de la sagesse sont inaccessibles à l’imbécile. Qu’il ferme la bouche quand on discute des affaires publiques!"
+        },
+        {
+          "verse": 8,
+          "text": "Celui qui projette le mal a la réputation d’être maître en intrigues."
+        },
+        {
+          "verse": 9,
+          "text": "Les machinations d’un sot sont toujours coupables et celui qui se moque de tout se rend odieux."
+        },
+        {
+          "verse": 10,
+          "text": "Si tu perds courage au jour du péril, ton courage est bien faible!"
+        },
+        {
+          "verse": 11,
+          "text": "Efforce-toi de sauver les condamnés à mort, ceux que l’on traîne injustement au supplice."
+        },
+        {
+          "verse": 12,
+          "text": "Si tu dis: «Je n’étais pas au courant», celui qui examine le fond du cœur sait ce qu’il en est. Il t’observe, il connaît tout, il juge chacun selon ses actes."
+        },
+        {
+          "verse": 13,
+          "text": "Mange du miel, mon fils, car le miel fait du bien et le goût t’en sera agréable."
+        },
+        {
+          "verse": 14,
+          "text": "Mais rappelle-toi que la sagesse aussi est bonne pour ta vie. Si tu arrives à la pratiquer, tu auras un avenir, ton espérance ne sera pas déçue."
+        },
+        {
+          "verse": 15,
+          "text": "N’essaie pas, tel un malfaiteur, de t’approprier par la ruse la maison d’un honnête homme, ne le prive pas de son domicile."
+        },
+        {
+          "verse": 16,
+          "text": "Un honnête homme peut tomber très souvent sous les coups du sort, il s’en relève toujours; mais les malfaiteurs sont terrassés par l’adversité."
+        },
+        {
+          "verse": 17,
+          "text": "Ne te réjouis pas lorsque ton ennemi tombe, ne saute pas de joie lorsqu’il succombe sous le malheur."
+        },
+        {
+          "verse": 18,
+          "text": "Le Seigneur verrait cela d’un mauvais œil et il détournerait sa colère de ton ennemi."
+        },
+        {
+          "verse": 19,
+          "text": "Ne t’excite pas au sujet de ceux qui font le mal, et n’envie pas les méchants."
+        },
+        {
+          "verse": 20,
+          "text": "Ils n’ont aucun avenir, leur vie est comme une lampe qui s’éteint."
+        },
+        {
+          "verse": 21,
+          "text": "Mon fils, respecte le Seigneur et le roi. Ne t’associe pas à ceux qui veulent tout changer."
+        },
+        {
+          "verse": 22,
+          "text": "Car les novateurs peuvent être anéantis soudainement, et qui sait quel désastre le Seigneur et le roi peuvent susciter contre eux?"
+        },
+        {
+          "verse": 23,
+          "text": "Voici ce que des sages ont encore dit: Il n’est pas bien de juger avec parti pris."
+        },
+        {
+          "verse": 24,
+          "text": "Si un magistrat dit au coupable: «Tu es innocent», les foules et les peuples le poursuivent de leur haine."
+        },
+        {
+          "verse": 25,
+          "text": "Par contre, ceux qui condamnent le coupable s’en trouvent bien et sont récompensés par la reconnaissance de chacun."
+        },
+        {
+          "verse": 26,
+          "text": "Une réponse donnée avec franchise est une vraie preuve d’amitié."
+        },
+        {
+          "verse": 27,
+          "text": "N’envisage de bâtir une maison qu’après avoir terminé tes travaux au-dehors et préparé tes champs pour la récolte."
+        },
+        {
+          "verse": 28,
+          "text": "N’accuse pas ton voisin sans motif: voudrais-tu proférer un tel mensonge?"
+        },
+        {
+          "verse": 29,
+          "text": "Ne dis pas: «J’agirai avec lui comme il a agi avec moi, je lui rendrai la monnaie de sa pièce!»"
+        },
+        {
+          "verse": 30,
+          "text": "Un jour, je suis passé près du champ et de la vigne d’un homme paresseux et à la tête vide."
+        },
+        {
+          "verse": 31,
+          "text": "Des ronces et des mauvaises herbes poussaient partout, le mur de clôture était écroulé."
+        },
+        {
+          "verse": 32,
+          "text": "J’ai réfléchi à ce que j’avais vu et j’en ai tiré la leçon:"
+        },
+        {
+          "verse": 33,
+          "text": "tu dors un peu, tu t’assoupis un petit moment, tu restes étendu en te croisant les bras."
+        },
+        {
+          "verse": 34,
+          "text": "Pendant ce temps, la pauvreté arrive sur toi comme un rôdeur, la misère te surprend comme un pillard."
+        }
+      ]
+    },
+    {
+      "chapter": 25,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Voici d’autres proverbes de Salomon rassemblés par des hommes de l’entourage d’Ézékias, roi de Juda."
+        },
+        {
+          "verse": 2,
+          "text": "Nous honorons Dieu parce qu’il tient certaines choses cachées. Nous honorons les rois parce qu’ils examinent le fond des choses."
+        },
+        {
+          "verse": 3,
+          "text": "Nous ne savons pas jusqu’où s’élève le ciel ni jusqu’où va la profondeur de la terre. Nous ne connaissons pas davantage les pensées des rois."
+        },
+        {
+          "verse": 4,
+          "text": "Si l’on ôte ses impuretés à l’argent, l’orfèvre en tirera un objet d’art."
+        },
+        {
+          "verse": 5,
+          "text": "Si l’on ôte les gens malfaisants de l’entourage du roi, celui-ci affermira son pouvoir en pratiquant la justice."
+        },
+        {
+          "verse": 6,
+          "text": "Ne te mets pas en avant en présence du roi et ne t’attribue pas la place d’un grand personnage."
+        },
+        {
+          "verse": 7,
+          "text": "Il vaut mieux qu’on te dise: «Reçois une fonction plus haute», que si on te rabaissait en faveur d’un notable."
+        },
+        {
+          "verse": 8,
+          "text": "Ce que tu as vu, ne sois pas trop pressé de le rapporter au tribunal. Si la personne en cause prouve que tu as tort, que te restera-t-il à faire?"
+        },
+        {
+          "verse": 9,
+          "text": "Si tu as un différend avec ton voisin, règle-le avec lui, mais ne révèle pas ce qu’un autre a pu te confier."
+        },
+        {
+          "verse": 10,
+          "text": "Sinon, quelqu’un peut t’entendre, te le reprocher et tu ne pourras plus revenir sur ton indiscrétion."
+        },
+        {
+          "verse": 11,
+          "text": "Une parole bien tournée est aussi précieuse qu’un objet en or avec des motifs d’argent."
+        },
+        {
+          "verse": 12,
+          "text": "Un anneau ou un collier d’or fin: telle est la réprimande d’un sage pour celui qui l’écoute."
+        },
+        {
+          "verse": 13,
+          "text": "Dans la chaleur d’un jour de récolte, l’eau glacée est un réconfort. De même un messager fidèle à sa mission apporte du réconfort à son maître."
+        },
+        {
+          "verse": 14,
+          "text": "Des nuages et du vent qui n’amènent pas de pluie: tel est celui qui se vante d’un cadeau qu’il n’offrira pas."
+        },
+        {
+          "verse": 15,
+          "text": "Avec beaucoup de patience on persuade un juge; des paroles douces viennent à bout des résistances les plus solides."
+        },
+        {
+          "verse": 16,
+          "text": "Si tu trouves du miel, n’en mange pas trop, sinon tu en seras dégoûté au point de le vomir."
+        },
+        {
+          "verse": 17,
+          "text": "Ne rends pas trop souvent visite à ton voisin, sinon il sera lassé de toi au point de te haïr."
+        },
+        {
+          "verse": 18,
+          "text": "Une massue, une épée ou une flèche pointue: tel est celui qui porte un faux témoignage contre son prochain."
+        },
+        {
+          "verse": 19,
+          "text": "Faire confiance à un homme déloyal au moment du malheur, c’est comme manger sur une dent branlante ou s’appuyer sur un pied chancelant."
+        },
+        {
+          "verse": 20,
+          "text": "Chanter des chansons à un homme malheureux, c’est comme enlever son manteau par un jour de froid ou mettre du vinaigre sur une plaie."
+        },
+        {
+          "verse": 21,
+          "text": "Si ton ennemi a faim, donne-lui à manger; s’il a soif, donne-lui à boire."
+        },
+        {
+          "verse": 22,
+          "text": "En agissant ainsi, tu le mettras mal à l’aise, comme s’il avait des charbons brûlants sur sa tête. Et le Seigneur te récompensera."
+        },
+        {
+          "verse": 23,
+          "text": "Le vent du nord amène la pluie, et un langage dissimulateur entraîne la colère des autres."
+        },
+        {
+          "verse": 24,
+          "text": "Mieux vaut vivre au coin d’un toit que partager sa maison avec une femme querelleuse."
+        },
+        {
+          "verse": 25,
+          "text": "De l’eau fraîche pour un gosier desséché: telle est une bonne nouvelle qui vient d’un pays lointain."
+        },
+        {
+          "verse": 26,
+          "text": "Une source ou une fontaine dont l’eau a été polluée: tel est le juste qui se laisse influencer par un méchant."
+        },
+        {
+          "verse": 27,
+          "text": "Il n’est pas bon de manger trop de miel ni de rechercher trop d’honneurs."
+        },
+        {
+          "verse": 28,
+          "text": "Une ville sans défense devant une attaque: tel est l’homme qui ne contient pas sa colère."
+        }
+      ]
+    },
+    {
+      "chapter": 26,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Les honneurs attribués à un sot sont aussi déplacés que la neige en été et la pluie au moment de la récolte."
+        },
+        {
+          "verse": 2,
+          "text": "Comme le moineau et l’hirondelle qui volettent sans se poser, une malédiction non méritée n’atteint personne."
+        },
+        {
+          "verse": 3,
+          "text": "Le fouet est pour le cheval, la bride pour l’âne et les coups pour le dos des sots."
+        },
+        {
+          "verse": 4,
+          "text": "Ne réponds pas au sot en imitant sa bêtise, pour ne pas devenir toi-même semblable à lui."
+        },
+        {
+          "verse": 5,
+          "text": "Réponds au sot comme le mérite sa bêtise, pour qu’il ne s’imagine pas être un sage."
+        },
+        {
+          "verse": 6,
+          "text": "Celui qui confie des messages à un sot agit comme s’il coupait ses propres jambes, il s’expose aux pires déboires."
+        },
+        {
+          "verse": 7,
+          "text": "Les jambes d’un paralysé se dérobent sous lui; un proverbe dans la bouche des sots n’a pas plus de force."
+        },
+        {
+          "verse": 8,
+          "text": "Féliciter un sot, c’est comme attacher une pierre à une fronde."
+        },
+        {
+          "verse": 9,
+          "text": "Une épine brandie par un ivrogne: tel est un proverbe dans la bouche des sots."
+        },
+        {
+          "verse": 10,
+          "text": "Un chef qui embauche un sot ou n’importe quel passant fait du tort à tout le monde."
+        },
+        {
+          "verse": 11,
+          "text": "Le chien retourne à ce qu’il a vomi et le sot renouvelle ses bêtises."
+        },
+        {
+          "verse": 12,
+          "text": "Si tu rencontres quelqu’un qui se croit malin, sache qu’il y a plus à espérer d’un sot que de lui."
+        },
+        {
+          "verse": 13,
+          "text": "Le paresseux déclare: «Il y a un lion sur le chemin, un fauve au milieu de la rue.»"
+        },
+        {
+          "verse": 14,
+          "text": "La porte tourne sur ses gonds, le paresseux se retourne dans son lit."
+        },
+        {
+          "verse": 15,
+          "text": "Le paresseux plonge sa main dans le plat mais trouve trop fatigant de l’amener jusqu’à sa bouche."
+        },
+        {
+          "verse": 16,
+          "text": "Le paresseux se croit plus sage que sept hommes qui savent répondre avec intelligence."
+        },
+        {
+          "verse": 17,
+          "text": "Se mêler d’une dispute qui ne vous concerne pas, c’est vouloir attraper par les oreilles un chien qui passe."
+        },
+        {
+          "verse": 18,
+          "text": "Un fou qui lance autour de lui des tisons, des flèches, des projectiles meurtriers,"
+        },
+        {
+          "verse": 19,
+          "text": "tel est celui qui trompe autrui et lui dit ensuite: «C’était pour rire.»"
+        },
+        {
+          "verse": 20,
+          "text": "Quand il n’y a plus de bois, le feu s’éteint; quand il n’y a plus de mauvaise langue, la querelle cesse."
+        },
+        {
+          "verse": 21,
+          "text": "Le charbon entretient les braises, le bois entretient le feu et l’homme querelleur attise la dispute."
+        },
+        {
+          "verse": 22,
+          "text": "Les calomnies sont comme des friandises, elles s’insinuent jusqu’au fond de soi-même."
+        },
+        {
+          "verse": 23,
+          "text": "Des paroles chaleureuses qui cachent un esprit malveillant, c’est de l’argent impur plaqué sur de l’argile."
+        },
+        {
+          "verse": 24,
+          "text": "L’homme plein de haine donne le change par ses paroles, au-dedans de lui il prépare des tromperies."
+        },
+        {
+          "verse": 25,
+          "text": "Quand il parle aimablement, ne t’y fie pas, car il a l’esprit plein de pensées détestables."
+        },
+        {
+          "verse": 26,
+          "text": "Il est assez rusé pour dissimuler sa haine, mais tout le monde finit par découvrir sa méchanceté."
+        },
+        {
+          "verse": 27,
+          "text": "Qui creuse une fosse tombera dedans et la pierre reviendra sur celui qui la roule."
+        },
+        {
+          "verse": 28,
+          "text": "Blesser quelqu’un par des mensonges, c’est le haïr. Prononcer des paroles flatteuses entraîne la ruine."
+        }
+      ]
+    },
+    {
+      "chapter": 27,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Ne te vante pas de ce que sera demain, car tu ignores ce qui se produira aujourd’hui."
+        },
+        {
+          "verse": 2,
+          "text": "Laisse aux autres le soin de chanter tes louanges. Qu’un étranger le fasse plutôt que toi-même!"
+        },
+        {
+          "verse": 3,
+          "text": "Une pierre peut être lourde et du sable pesant, la rancune d’un imbécile pèse plus lourd encore."
+        },
+        {
+          "verse": 4,
+          "text": "La violence est brutale, la colère est un torrent déchaîné, mais devant la jalousie qui pourra résister?"
+        },
+        {
+          "verse": 5,
+          "text": "Mieux vaut une critique franche qu’une amitié qui ne se manifeste pas."
+        },
+        {
+          "verse": 6,
+          "text": "Les reproches d’un ami prouvent sa loyauté, les baisers d’un ennemi sont de trop."
+        },
+        {
+          "verse": 7,
+          "text": "Un homme rassasié va jusqu’à refuser du miel; un affamé trouve doux ce qui est amer."
+        },
+        {
+          "verse": 8,
+          "text": "L’homme qui erre loin de son pays est comme un oiseau errant loin de son nid."
+        },
+        {
+          "verse": 9,
+          "text": "Les produits de beauté et les parfums mettent le cœur en fête; la douceur de l’amitié est comme l’arôme le plus précieux."
+        },
+        {
+          "verse": 10,
+          "text": "N’abandonne pas tes amis ni les amis de ton père. Si tu es en difficulté, ne va pas chez ton frère, car un voisin proche vaut parfois mieux qu’un frère lointain."
+        },
+        {
+          "verse": 11,
+          "text": "Conduis-toi sagement, mon fils, j’en aurai le cœur rempli de joie et si quelqu’un me critique, je pourrai lui répondre."
+        },
+        {
+          "verse": 12,
+          "text": "Un homme prudent voit venir le malheur et se met à l’abri. Les ignorants y donnent tête baissée et le paient cher."
+        },
+        {
+          "verse": 13,
+          "text": "Si quelqu’un se porte garant auprès de toi de la dette d’un inconnu, exige son vêtement, s’il cautionne une étrangère, exige des gages."
+        },
+        {
+          "verse": 14,
+          "text": "Si quelqu’un salue bruyamment son voisin au point du jour, sa salutation sera considérée comme une insulte."
+        },
+        {
+          "verse": 15,
+          "text": "Une femme querelleuse est comme une gouttière qui coule sans cesse par un jour de pluie."
+        },
+        {
+          "verse": 16,
+          "text": "Vouloir l’arrêter, c’est comme vouloir retenir le vent ou chercher à saisir de l’huile avec la main."
+        },
+        {
+          "verse": 17,
+          "text": "Le fer aiguise le fer, le contact avec autrui affine l’esprit de l’homme."
+        },
+        {
+          "verse": 18,
+          "text": "Celui qui soigne un figuier en mangera les fruits. Celui qui prend soin de son maître en tirera honneur."
+        },
+        {
+          "verse": 19,
+          "text": "On trouve dans l’eau le reflet de son propre visage, on trouve chez les autres hommes le reflet de ses propres sentiments."
+        },
+        {
+          "verse": 20,
+          "text": "Le monde des morts et ses profondeurs n’ont jamais fini d’engloutir leurs proies, et l’être humain n’arrive jamais au bout de ses désirs."
+        },
+        {
+          "verse": 21,
+          "text": "L’or et l’argent sont testés par le feu, l’homme est jugé d’après sa réputation."
+        },
+        {
+          "verse": 22,
+          "text": "Même si l’on écrasait un imbécile avec un pilon, comme des graines dans un mortier, on n’arriverait jamais à le débarrasser de sa bêtise."
+        },
+        {
+          "verse": 23,
+          "text": "Sois bien au courant de l’état de ton bétail, prends grand soin de ton troupeau."
+        },
+        {
+          "verse": 24,
+          "text": "En effet, la richesse ne dure pas toujours: même les couronnes ne se transmettent pas indéfiniment."
+        },
+        {
+          "verse": 25,
+          "text": "Coupe l’herbe des champs et, pendant que l’herbe nouvelle pousse, ramasse le foin sur les montagnes."
+        },
+        {
+          "verse": 26,
+          "text": "Aie des moutons pour te confectionner des vêtements, des boucs pour pouvoir acheter un champ."
+        },
+        {
+          "verse": 27,
+          "text": "Le lait que tes chèvres donnent avec abondance, utilise-le pour te nourrir ainsi que ta famille et tes servantes."
+        }
+      ]
+    },
+    {
+      "chapter": 28,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Celui qui agit mal prend la fuite, même si personne ne le poursuit, mais le juste a autant d’assurance qu’un jeune lion."
+        },
+        {
+          "verse": 2,
+          "text": "Quand un peuple se révolte, les chefs se multiplient. Avec quelqu’un d’intelligent et d’instruit, la stabilité règne."
+        },
+        {
+          "verse": 3,
+          "text": "Un homme pauvre qui opprime des indigents ressemble à une pluie battante qui détruit les récoltes."
+        },
+        {
+          "verse": 4,
+          "text": "Ceux qui rejettent la loi félicitent les méchants, tandis que ceux qui l’observent les combattent."
+        },
+        {
+          "verse": 5,
+          "text": "Les gens malhonnêtes ne comprennent rien au droit, ceux qui cherchent à obéir au Seigneur comprennent tout."
+        },
+        {
+          "verse": 6,
+          "text": "Mieux vaut être pauvre et se conduire avec intégrité qu’être riche et avoir une conduite tortueuse."
+        },
+        {
+          "verse": 7,
+          "text": "Un fils intelligent obéit à la loi, celui qui a de mauvaises fréquentations fait la honte de son père."
+        },
+        {
+          "verse": 8,
+          "text": "Si quelqu’un s’enrichit en prêtant de l’argent à des taux excessifs, sa fortune reviendra à un homme généreux envers les indigents."
+        },
+        {
+          "verse": 9,
+          "text": "Si quelqu’un fait la sourde oreille aux exigences de la loi, même sa prière est désapprouvée."
+        },
+        {
+          "verse": 10,
+          "text": "Quiconque entraîne des hommes droits sur un mauvais chemin tombera dans ses propres pièges. Le bonheur est réservé aux gens intègres."
+        },
+        {
+          "verse": 11,
+          "text": "Le riche estime qu’il se conduit avec sagesse, mais un indigent peut le démasquer par son intelligence."
+        },
+        {
+          "verse": 12,
+          "text": "Quand des justes triomphent, l’honneur en rejaillit sur tous, mais si des méchants l’emportent, chacun se met à l’abri."
+        },
+        {
+          "verse": 13,
+          "text": "Rien ne réussit à celui qui cache ses fautes, mais celui qui les avoue et y renonce est pardonné."
+        },
+        {
+          "verse": 14,
+          "text": "Heureux l’homme qui vit dans la crainte de mal agir; l’homme obstiné connaîtra le malheur."
+        },
+        {
+          "verse": 15,
+          "text": "Un lion rugissant, un ours prêt à bondir: tel est le tyran qui domine sur un peuple de petites gens."
+        },
+        {
+          "verse": 16,
+          "text": "Un dirigeant dénué de raison commet de nombreuses injustices. Celui qui déteste les gains malhonnêtes vivra longtemps."
+        },
+        {
+          "verse": 17,
+          "text": "L’homme qui a un meurtre sur la conscience se précipite vers sa propre tombe: que personne ne l’en empêche!"
+        },
+        {
+          "verse": 18,
+          "text": "Quiconque suit une conduite droite sera en sécurité. L’hypocrite, qui mène une double vie, se perdra d’une façon ou d’une autre."
+        },
+        {
+          "verse": 19,
+          "text": "Celui qui cultive son champ a beaucoup de pain, celui qui cultive des illusions beaucoup de misère."
+        },
+        {
+          "verse": 20,
+          "text": "Un homme loyal sera comblé de bonheur, celui qui ne pense qu’à s’enrichir ne restera pas impuni."
+        },
+        {
+          "verse": 21,
+          "text": "Il n’est pas bien d’avoir du parti pris. Pourtant, certains commettent cette injustice en échange d’une bouchée de pain."
+        },
+        {
+          "verse": 22,
+          "text": "L’homme envieux se précipite sur la richesse sans se douter qu’il attire sur lui la misère."
+        },
+        {
+          "verse": 23,
+          "text": "Celui qui adresse des critiques reçoit finalement plus de reconnaissance que le flatteur."
+        },
+        {
+          "verse": 24,
+          "text": "Qui dépouille son père et sa mère en disant qu’il n’y a pas de mal à cela fait la paire avec le brigand."
+        },
+        {
+          "verse": 25,
+          "text": "Un homme avide provoque des querelles, mais celui qui se confie dans le Seigneur connaîtra la prospérité."
+        },
+        {
+          "verse": 26,
+          "text": "Il est insensé de se fier aux impulsions de son cœur, seul celui qui se conduit avec sagesse échappe au danger."
+        },
+        {
+          "verse": 27,
+          "text": "L’homme généreux envers les pauvres ne manquera jamais de rien, mais celui qui ferme les yeux sur leur misère sera maudit par beaucoup."
+        },
+        {
+          "verse": 28,
+          "text": "Quand les méchants l’emportent, chacun se met à l’abri. Lorsqu’ils sont renversés, beaucoup de justes se manifestent."
+        }
+      ]
+    },
+    {
+      "chapter": 29,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Qui refuse obstinément les critiques sera détruit soudain et de manière irrémédiable."
+        },
+        {
+          "verse": 2,
+          "text": "Lorsque les justes sont nombreux, le peuple est heureux, mais si un tyran a le pouvoir, le peuple gémit."
+        },
+        {
+          "verse": 3,
+          "text": "Celui qui aime la sagesse donne de la joie à son père. Qui fréquente les prostituées y laisse sa fortune."
+        },
+        {
+          "verse": 4,
+          "text": "Un roi assure la prospérité de son pays lorsqu’il respecte le droit, mais, s’il lève des impôts abusifs, il le ruine."
+        },
+        {
+          "verse": 5,
+          "text": "Qui flatte ses amis place un piège sur son propre chemin."
+        },
+        {
+          "verse": 6,
+          "text": "Les méchants sont prisonniers de leurs propres torts, alors que les justes débordent de joie."
+        },
+        {
+          "verse": 7,
+          "text": "Le juste sait reconnaître le droit des indigents, le méchant n’a pas cette intelligence."
+        },
+        {
+          "verse": 8,
+          "text": "Les frondeurs mettent une ville entière en effervescence, les sages apaisent la colère."
+        },
+        {
+          "verse": 9,
+          "text": "Si un sage est en procès avec un sot, qu’il choisisse de se fâcher ou de rire, il ne s’en sortira jamais."
+        },
+        {
+          "verse": 10,
+          "text": "Les hommes sanguinaires détestent les gens intègres, mais les hommes droits recherchent leur compagnie."
+        },
+        {
+          "verse": 11,
+          "text": "Le sot donne libre cours à sa mauvaise humeur, le sage retient et calme la sienne."
+        },
+        {
+          "verse": 12,
+          "text": "Lorsqu’un chef prête attention à des mensonges, tous ses subordonnés deviennent malhonnêtes."
+        },
+        {
+          "verse": 13,
+          "text": "Le pauvre et l’oppresseur ont un point commun: le Seigneur leur donne à tous deux des yeux pour voir."
+        },
+        {
+          "verse": 14,
+          "text": "Un roi qui juge les petites gens avec équité consolide à jamais son pouvoir."
+        },
+        {
+          "verse": 15,
+          "text": "Les punitions et les réprimandes donnent de la sagesse; un enfant livré à lui-même fait la honte de sa mère."
+        },
+        {
+          "verse": 16,
+          "text": "Plus il y a de gens malfaisants, plus il y a de crimes, mais les justes verront l’effondrement des méchants."
+        },
+        {
+          "verse": 17,
+          "text": "Eduque sévèrement ton fils, tu seras sans inquiétude à son sujet et il te procurera beaucoup de satisfactions."
+        },
+        {
+          "verse": 18,
+          "text": "Lorsqu’il n’y a plus de vision d’avenir, un peuple vit dans le désordre. Heureux alors est l’homme qui obéit à la loi."
+        },
+        {
+          "verse": 19,
+          "text": "Ce n’est pas avec des paroles qu’on peut corriger un serviteur, car, même s’il comprend ce qu’on lui dit, il n’obéira pas."
+        },
+        {
+          "verse": 20,
+          "text": "Si tu rencontres quelqu’un qui parle sans réfléchir, sache qu’il y a plus à espérer d’un sot que de lui."
+        },
+        {
+          "verse": 21,
+          "text": "Celui qui est trop indulgent avec un serviteur dès son jeune âge finira par le rendre indocile."
+        },
+        {
+          "verse": 22,
+          "text": "Un homme coléreux provoque des disputes, celui qui s’emporte facilement accumule les fautes."
+        },
+        {
+          "verse": 23,
+          "text": "L’orgueil conduit à l’humiliation. Pour accéder aux honneurs, il faut avoir l’esprit humble."
+        },
+        {
+          "verse": 24,
+          "text": "Le complice d’un voleur se fait du tort à lui-même: il connaît la malédiction qui le menace, mais il refuse de parler."
+        },
+        {
+          "verse": 25,
+          "text": "Il est dangereux d’avoir peur des hommes, mais celui qui se confie dans le Seigneur est en sécurité."
+        },
+        {
+          "verse": 26,
+          "text": "Beaucoup de gens recherchent l’approbation de leur chef, pourtant c’est le Seigneur qui juge chacun."
+        },
+        {
+          "verse": 27,
+          "text": "Les justes détestent les gens malhonnêtes, les méchants détestent la conduite des hommes droits."
+        }
+      ]
+    },
+    {
+      "chapter": 30,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Paroles solennelles d’Agour, fils de Yaqué. Voici ce que cet homme déclara à Itiel, Itiel et Oukal:"
+        },
+        {
+          "verse": 2,
+          "text": "«Oui, je suis trop stupide pour un homme, je n’ai même pas l’intelligence d’un être humain."
+        },
+        {
+          "verse": 3,
+          "text": "Je n’ai jamais acquis la sagesse, et je n’ai pas accès à la connaissance de celui qui est saint."
+        },
+        {
+          "verse": 4,
+          "text": "Qui est monté au ciel et en est revenu? Qui a recueilli le vent dans le creux de ses mains? Qui a enveloppé les eaux dans le pli de son vêtement? Qui a établi les limites de la terre? Quel est son nom? Quel est le nom de son fils? Dis-le-moi si tu le sais."
+        },
+        {
+          "verse": 5,
+          "text": "«Toutes les promesses de Dieu sont dignes de confiance. Il est un bouclier pour qui lui demande protection."
+        },
+        {
+          "verse": 6,
+          "text": "N’ajoute rien à ses paroles. Sinon, il te réprimandera et tu seras traité de menteur."
+        },
+        {
+          "verse": 7,
+          "text": "«Mon Dieu, je te demande deux faveurs. Accorde-les-moi jusqu’à la fin de ma vie."
+        },
+        {
+          "verse": 8,
+          "text": "Eloigne de moi maux et mensonges, et ne me laisse pas devenir trop pauvre ou trop riche. Donne-moi juste ce dont j’ai besoin pour vivre."
+        },
+        {
+          "verse": 9,
+          "text": "Si je possède trop, je risque de te trahir en disant: “A quoi le Seigneur sert-il?” Si j’ai trop peu, je risque de voler et de déshonorer ainsi mon Dieu."
+        },
+        {
+          "verse": 10,
+          "text": "«Ne calomnie pas un serviteur auprès de son maître. Sinon, il te maudira et tu paieras pour ta faute."
+        },
+        {
+          "verse": 11,
+          "text": "«Il y a des gens qui maudissent leur père et ne disent aucun bien de leur mère."
+        },
+        {
+          "verse": 12,
+          "text": "«Il y a des gens qui se croient purs alors qu’ils ne sont pas lavés de leurs souillures."
+        },
+        {
+          "verse": 13,
+          "text": "«Il y a des gens aux yeux pleins de mépris qui regardent tout le monde de haut."
+        },
+        {
+          "verse": 14,
+          "text": "«Il y a des gens dont les dents sont des épées, les crocs des couteaux. Ils sont prêts à retrancher les malheureux de la terre, les pauvres du milieu des hommes.»"
+        },
+        {
+          "verse": 15,
+          "text": "La sangsue a deux filles qui disent: «Donne, donne!» Il y a trois choses qui ne sont jamais satisfaites et ne disent jamais: «Cela suffit»: le monde des morts, la femme qui n’a pas d’enfant, le sol assoiffé de pluie, mais il y en a aussi une quatrième: le feu insatiable."
+        },
+        {
+          "verse": 17,
+          "text": "Si quelqu’un se moque de son père et néglige l’obéissance due à sa mère, les corbeaux du torrent lui crèveront les yeux et les aigles le dévoreront."
+        },
+        {
+          "verse": 18,
+          "text": "Il y a trois choses que je ne parviens pas à comprendre et qui me dépassent: le chemin de l’aigle dans le ciel, le chemin du serpent sur la pierre, le chemin du bateau en pleine mer, mais il y en a aussi une quatrième: le chemin d’un homme vers une femme."
+        },
+        {
+          "verse": 20,
+          "text": "Voici quelle est l’attitude de la femme adultère: «Je n’ai rien fait de mal», dit-elle, aussi tranquillement que si elle s’essuyait la bouche après avoir mangé."
+        },
+        {
+          "verse": 21,
+          "text": "Il y a trois choses qui mettent le monde sens dessus dessous et sont intolérables: un esclave qui devient roi, un homme de rien qui s’empiffre de nourriture, une femme odieuse qui se marie, mais il y en a aussi une quatrième: une servante qui supplante sa maîtresse."
+        },
+        {
+          "verse": 24,
+          "text": "Il existe sur la terre quatre espèces d’animaux fort petits, mais qui sont d’une sagesse étonnante:"
+        },
+        {
+          "verse": 25,
+          "text": "les fourmis, qui n’ont pas de force, mais amassent leur nourriture pendant l’été,"
+        },
+        {
+          "verse": 26,
+          "text": "les damans, qui sont faibles, mais se fabriquent des abris sûrs au milieu des rochers,"
+        },
+        {
+          "verse": 27,
+          "text": "les sauterelles, qui n’ont pas de roi, mais se déplacent en troupes ordonnées,"
+        },
+        {
+          "verse": 28,
+          "text": "les lézards, qui peuvent être attrapés avec la main, mais se faufilent jusque dans les palais des rois."
+        },
+        {
+          "verse": 29,
+          "text": "Il y a trois êtres vivants qui ont une démarche et une allure remarquables: le lion, le plus courageux des animaux, qui ne recule devant rien, le coq qui se dresse sur ses ergots, ou encore le bouc, mais il y en a aussi un quatrième: le roi qui s’avance à la tête de son armée."
+        },
+        {
+          "verse": 32,
+          "text": "Si tu as été assez stupide pour te vanter et qu’ensuite tu réfléchisses, retiens désormais ta langue!"
+        },
+        {
+          "verse": 33,
+          "text": "En effet, battre la crème produit du beurre, frapper sur le nez fait jaillir du sang et provoquer la colère suscite les disputes."
+        }
+      ]
+    },
+    {
+      "chapter": 31,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Voici les conseils que Lemouel, roi de Massa, a reçus de sa mère:"
+        },
+        {
+          "verse": 2,
+          "text": "«Écoute, mon fils, mon propre enfant, l’objet de mes vœux."
+        },
+        {
+          "verse": 3,
+          "text": "Ne gâche pas tes forces avec les femmes. Ne te laisse pas mener par celles qui perdent les rois."
+        },
+        {
+          "verse": 4,
+          "text": "Le vin, Lemouel, n’est pas bon pour les rois. Ce n’est pas à eux d’en boire, ni à ceux qui gouvernent de boire de l’alcool."
+        },
+        {
+          "verse": 5,
+          "text": "S’ils s’enivrent, ils oublieront d’appliquer les lois et trahiront les droits des pauvres gens."
+        },
+        {
+          "verse": 6,
+          "text": "Que l’on donne plutôt des boissons enivrantes à ceux qui vont mourir ou qui ont une vie misérable."
+        },
+        {
+          "verse": 7,
+          "text": "Car, en buvant, ils oublieront leur misère et leur tourment."
+        },
+        {
+          "verse": 8,
+          "text": "Mais toi, tu dois parler pour défendre ceux qui n’ont pas la parole et pour prendre le parti des laissés pour compte."
+        },
+        {
+          "verse": 9,
+          "text": "Parle en leur faveur: gouverne avec justice, défends la cause des pauvres et des malheureux.»"
+        },
+        {
+          "verse": 10,
+          "text": "Une femme vaillante est une véritable trouvaille! Elle a plus de valeur que des perles."
+        },
+        {
+          "verse": 11,
+          "text": "Son mari place sa confiance en elle, elle ne lui gaspille pas son bien."
+        },
+        {
+          "verse": 12,
+          "text": "Elle ne lui cause jamais de tort, mais elle lui donne du bonheur tous les jours de sa vie."
+        },
+        {
+          "verse": 13,
+          "text": "Elle se procure de la laine et du lin et travaille de ses mains avec ardeur."
+        },
+        {
+          "verse": 14,
+          "text": "Pareille aux navires marchands, elle amène de loin sa nourriture."
+        },
+        {
+          "verse": 15,
+          "text": "Elle se lève avant le jour, prépare le repas de sa famille et distribue à ses servantes leur travail."
+        },
+        {
+          "verse": 16,
+          "text": "Après avoir bien réfléchi, elle achète un champ et plante une vigne grâce à l’argent qu’elle a gagné."
+        },
+        {
+          "verse": 17,
+          "text": "Elle se met au travail avec énergie et ne laisse jamais ses bras inactifs."
+        },
+        {
+          "verse": 18,
+          "text": "Elle constate que ses affaires vont bien, elle travaille même la nuit à la lumière de sa lampe."
+        },
+        {
+          "verse": 19,
+          "text": "Ses mains s’activent à filer la laine, ses doigts à tisser des vêtements."
+        },
+        {
+          "verse": 20,
+          "text": "Elle tend une main secourable aux malheureux, elle est généreuse envers les pauvres."
+        },
+        {
+          "verse": 21,
+          "text": "Elle ne craint pas le froid pour les siens, car chacun dans sa maison a double vêtement."
+        },
+        {
+          "verse": 22,
+          "text": "Elle se fabrique des tapis et porte des habits raffinés en lin pourpre."
+        },
+        {
+          "verse": 23,
+          "text": "Son mari est un notable honorablement connu, il participe aux délibérations du conseil de la ville."
+        },
+        {
+          "verse": 24,
+          "text": "Elle confectionne des vêtements et les vend, elle livre des ceintures au marchand qui passe."
+        },
+        {
+          "verse": 25,
+          "text": "La force et la dignité sont sa parure, elle sourit en pensant à l’avenir."
+        },
+        {
+          "verse": 26,
+          "text": "Elle s’exprime avec sagesse, elle sait donner des conseils avec bonté."
+        },
+        {
+          "verse": 27,
+          "text": "Elle surveille tout ce qui se passe dans sa maison et refuse de rester inactive."
+        },
+        {
+          "verse": 28,
+          "text": "Ses enfants viennent la féliciter. Son mari chante ses louanges."
+        },
+        {
+          "verse": 29,
+          "text": "«Bien des femmes se montrent vaillantes, dit-il, mais toi, tu les surpasses toutes.»"
+        },
+        {
+          "verse": 30,
+          "text": "Le charme est trompeur, la beauté passagère, seule une femme soumise au Seigneur est digne d’éloge."
+        },
+        {
+          "verse": 31,
+          "text": "Que l’on récompense sa peine! Que l’on chante ses mérites sur les places publiques!"
+        }
+      ]
+    }
+  ]
+}
