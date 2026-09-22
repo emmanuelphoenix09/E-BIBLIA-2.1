@@ -1,0 +1,125 @@
+name: Build APK E-Biblia
+
+'on':
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-apk:
+    name: Construire E-Biblia APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code source
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Installer Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Installer les dépendances
+        run: npm install
+
+      - name: Copier les données bibliques dans www
+        run: |
+          rm -rf www/bible-data
+          cp -R bible-data www/bible-data
+          echo "Données bibliques copiées :"
+          du -sh www/bible-data
+
+      - name: Générer les icônes Android
+        run: npx capacitor-assets generate --android
+
+      - name: Synchroniser Capacitor avec Android
+        run: npx cap sync android
+
+      - name: Donner les permissions à Gradle
+        run: chmod +x android/gradlew
+
+      - name: Construire l'APK Debug
+        working-directory: android
+        run: ./gradlew assembleDebug
+
+      - name: Vérifier l'APK
+        run: |
+          ls -lh android/app/build/outputs/apk/debug/
+          test -f android/app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Publier l'APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: E-Biblia-APK
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: errorname: Build APK E-Biblia
+
+'on':
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-apk:
+    name: Construire E-Biblia APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code source
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Installer Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Installer les dépendances
+        run: npm install
+
+      - name: Copier les données bibliques dans www
+        run: |
+          rm -rf www/bible-data
+          cp -R bible-data www/bible-data
+          echo "Données bibliques copiées :"
+          du -sh www/bible-data
+
+      - name: Générer les icônes Android
+        run: npx capacitor-assets generate --android
+
+      - name: Synchroniser Capacitor avec Android
+        run: npx cap sync android
+
+      - name: Donner les permissions à Gradle
+        run: chmod +x android/gradlew
+
+      - name: Construire l'APK Debug
+        working-directory: android
+        run: ./gradlew assembleDebug
+
+      - name: Vérifier l'APK
+        run: |
+          ls -lh android/app/build/outputs/apk/debug/
+          test -f android/app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Publier l'APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: E-Biblia-APK
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
