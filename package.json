@@ -1,0 +1,12 @@
+{
+  "name": "e-biblia",
+  "version": "2.1.0",
+  "description": "Application E-Biblia",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
