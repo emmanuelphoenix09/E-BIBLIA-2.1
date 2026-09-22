@@ -1,0 +1,1177 @@
+{
+  "book": 15,
+  "book_name": "Esdras",
+  "abbr": "Ezra",
+  "chapters": [
+    {
+      "chapter": 1,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et la premiere annee de Cyrus, roi de Perse, afin que fut accomplie la parole de l'Eternel dite par la bouche de Jeremie, l'Eternel reveilla l'esprit de Cyrus, roi de Perse; et il fit une proclamation dans tout son royaume, et la publia aussi par ecrit, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Ainsi dit Cyrus, roi de Perse: L'Eternel, le Dieu des cieux, m'a donne tous les royaumes de la terre, et il m'a charge de lui batir une maison à Jerusalem, qui est en Juda."
+        },
+        {
+          "verse": 3,
+          "text": "Qui d'entre vous, quel qu'il soit, est de son peuple, -que son Dieu soit avec lui, et qu'il monte à Jerusalem, qui est en Juda, et qu'il batisse la maison de l'Eternel, le Dieu d'Israel (lui est Dieu), à Jerusalem."
+        },
+        {
+          "verse": 4,
+          "text": "Et celui qui est de reste, dans tous les lieux ou chacun sejourne, que les hommes du lieu lui viennent en aide, avec de l'argent, et avec de l'or, et avec des biens, et avec du betail, outre les offrandes volontaires pour la maison de Dieu qui est à Jerusalem."
+        },
+        {
+          "verse": 5,
+          "text": "Alors se leverent les chefs des peres de Juda et de Benjamin, et les sacrificateurs et les levites, tous ceux dont Dieu avait reveille l'esprit, afin de monter pour batir la maison de l'Eternel qui est à Jerusalem."
+        },
+        {
+          "verse": 6,
+          "text": "Et tous ceux qui les entouraient les aiderent avec des objets d'argent, avec de l'or, avec des biens, et avec du betail, et avec des choses precieuses, outre tout ce qu'on offrit volontairement."
+        },
+        {
+          "verse": 7,
+          "text": "Et le roi Cyrus fit sortir les ustensiles de la maison de l'Eternel, que Nebucadnetsar avait fait sortir de Jerusalem et qu'il avait mis dans la maison de son dieu."
+        },
+        {
+          "verse": 8,
+          "text": "Et Cyrus, roi de Perse, les fit sortir par Mithredath, le tresorier, qui les compta à Sheshbatsar, prince de Juda."
+        },
+        {
+          "verse": 9,
+          "text": "Et en voici le nombre: trente bassins d'or, mille bassins d'argent, vingt-neuf couteaux,"
+        },
+        {
+          "verse": 10,
+          "text": "trente coupes d'or, quatre cent dix coupes d'argent de second ordre, et mille autres ustensiles;"
+        },
+        {
+          "verse": 11,
+          "text": "tous les ustensiles d'or et d'argent etaient au nombre de cinq mille quatre cents. Sheshbatsar apporta le tout lorsqu'on fit monter de Babylone à Jerusalem ceux de la transportation."
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et voici ceux de la province qui remonterent de la captivite de ceux qui avaient ete transportes, lesquels Nebucadnetsar, roi de Babylone, avait transportes à Babylone, et qui retournerent à Jerusalem et en Juda, chacun à sa ville,"
+        },
+        {
+          "verse": 2,
+          "text": "lesquels vinrent avec Zorobabel, Jeshua, Nehemie, Seraia, Reelaia, Mardochee, Bilshan, Mispar, Bigvai, Rehum, et Baana. Nombre des hommes du peuple d'Israel:"
+        },
+        {
+          "verse": 3,
+          "text": "Les fils de Parhosh, deux mille cent soixante-douze;"
+        },
+        {
+          "verse": 4,
+          "text": "les fils de Shephatia, trois cent soixante-douze;"
+        },
+        {
+          "verse": 5,
+          "text": "les fils d'Arakh, sept cent soixante-quinze;"
+        },
+        {
+          "verse": 6,
+          "text": "les fils de Pakhath-Moab, des fils de Jeshua et de Joab, deux mille huit cents douze;"
+        },
+        {
+          "verse": 7,
+          "text": "les fils d'Elam, mille deux cent cinquante-quatre;"
+        },
+        {
+          "verse": 8,
+          "text": "les fils de Zatthu, neuf cent quarante-cinq;"
+        },
+        {
+          "verse": 9,
+          "text": "les fils de Zaccai, sept cent soixante;"
+        },
+        {
+          "verse": 10,
+          "text": "les fils de Bani, six cent quarante-deux;"
+        },
+        {
+          "verse": 11,
+          "text": "les fils de Bebai, six cent vingt-trois;"
+        },
+        {
+          "verse": 12,
+          "text": "les fils d'Azgad, mille deux cent vingt-deux;"
+        },
+        {
+          "verse": 13,
+          "text": "les fils d'Adonikam, six cent soixante-six;"
+        },
+        {
+          "verse": 14,
+          "text": "les fils de Bigvai, deux mille cinquante-six;"
+        },
+        {
+          "verse": 15,
+          "text": "les fils d'Adin, quatre cent cinquante-quatre;"
+        },
+        {
+          "verse": 16,
+          "text": "les fils d'Ater, de la famille d'Ezechias, quatre-vingt-dix-huit;"
+        },
+        {
+          "verse": 17,
+          "text": "les fils de Betsai, trois cent vingt-trois;"
+        },
+        {
+          "verse": 18,
+          "text": "les fils de Jora, cent douze;"
+        },
+        {
+          "verse": 19,
+          "text": "les fils de Hashum, deux cent vingt-trois;"
+        },
+        {
+          "verse": 20,
+          "text": "les fils de Guibbar, quatre-vingt-quinze;"
+        },
+        {
+          "verse": 21,
+          "text": "les fils de Bethlehem, cent vingt-trois,"
+        },
+        {
+          "verse": 22,
+          "text": "les hommes de Netopha, cinquante-six;"
+        },
+        {
+          "verse": 23,
+          "text": "les hommes d'Anathoth, cent vingt-huit;"
+        },
+        {
+          "verse": 24,
+          "text": "les fils d'Azmaveth, quarante-deux;"
+        },
+        {
+          "verse": 25,
+          "text": "les fils de Kiriath-Arim, de Kephira et de Beeroth, sept cent quarante-trois;"
+        },
+        {
+          "verse": 26,
+          "text": "les fils de Rama et de Gueba, six cent vingt et un;"
+        },
+        {
+          "verse": 27,
+          "text": "les hommes de Micmas, cent vingt-deux;"
+        },
+        {
+          "verse": 28,
+          "text": "les hommes de Bethel et d'Ai, deux cent vingt-trois;"
+        },
+        {
+          "verse": 29,
+          "text": "les fils de Nebo, cinquante-deux;"
+        },
+        {
+          "verse": 30,
+          "text": "les fils de Magbish, cent cinquante-six;"
+        },
+        {
+          "verse": 31,
+          "text": "les fils de l'autre Elam, mille deux cent cinquante-quatre;"
+        },
+        {
+          "verse": 32,
+          "text": "les fils de Harim, trois cent vingt;"
+        },
+        {
+          "verse": 33,
+          "text": "les fils de Lod, de Hadid et d'Ono, sept cent vingt-cinq;"
+        },
+        {
+          "verse": 34,
+          "text": "les fils de Jericho, trois cent quarante-cinq;"
+        },
+        {
+          "verse": 35,
+          "text": "les fils de Senaa, trois mille six cent trente."
+        },
+        {
+          "verse": 36,
+          "text": "Sacrificateurs: les fils de Jedahia, de la maison de Jeshua, neuf cent soixante-treize;"
+        },
+        {
+          "verse": 37,
+          "text": "les fils d'Immer, mille cinquante-deux;"
+        },
+        {
+          "verse": 38,
+          "text": "les fils de Pashkhur, mille deux cent quarante-sept;"
+        },
+        {
+          "verse": 39,
+          "text": "les fils de Harim, mille dix-sept."
+        },
+        {
+          "verse": 40,
+          "text": "Levites: les fils de Jeshua et de Kadmiel, d'entre les fils d'Hodavia, soixante-quatorze."
+        },
+        {
+          "verse": 41,
+          "text": "Chantres: les fils d'Asaph, cent vingt-huit."
+        },
+        {
+          "verse": 42,
+          "text": "Fils des portiers: les fils de Shallum, les fils d'Ater, les fils de Talmon, les fils d'Akkub, les fils de Hatita, les fils de Shobai, en tout cent trente-neuf."
+        },
+        {
+          "verse": 43,
+          "text": "Nethiniens: les fils de Tsikha, les fils de Hasupha, les fils de Tabbaoth,"
+        },
+        {
+          "verse": 44,
+          "text": "les fils de Keros, les fils de Siaha,"
+        },
+        {
+          "verse": 45,
+          "text": "les fils de Padon, les fils de Lebana, les fils de Hagaba,"
+        },
+        {
+          "verse": 46,
+          "text": "les fils d'Akkub, les fils de Hagab, les fils de Shamlai, les fils de Hanan,"
+        },
+        {
+          "verse": 47,
+          "text": "les fils de Guiddel, les fils de Gakhar,"
+        },
+        {
+          "verse": 48,
+          "text": "les fils de Reaia, les fils de Retsin, les fils de Nekoda, les fils de Gazzam,"
+        },
+        {
+          "verse": 49,
+          "text": "les fils d'Uzza, les fils de Paseakh, les fils de Besai,"
+        },
+        {
+          "verse": 50,
+          "text": "les fils d'Asna, les fils de Meuenim,"
+        },
+        {
+          "verse": 51,
+          "text": "les fils de Nephusim, les fils de Bakbuk, les fils de Hakupha, les fils de Harkhur,"
+        },
+        {
+          "verse": 52,
+          "text": "les fils de Batsluth, les fils de Mekhida, les fils de Harsha,"
+        },
+        {
+          "verse": 53,
+          "text": "les fils de Barkos, les fils de Sisera,"
+        },
+        {
+          "verse": 54,
+          "text": "les fils de Thamakh, les fils de Netsiakh, les fils de Hatipha."
+        },
+        {
+          "verse": 55,
+          "text": "Fils des serviteurs de Salomon: les fils de Sotai, les fils de Sophereth,"
+        },
+        {
+          "verse": 56,
+          "text": "les fils de Peruda, les fils de Jaala, les fils de Darkon, les fils de Guiddel,"
+        },
+        {
+          "verse": 57,
+          "text": "les fils de Shephatia, les fils de Hattil, les fils de Pokereth-Hatsebaim, les fils d'Ami."
+        },
+        {
+          "verse": 58,
+          "text": "Tous les Nethiniens et les fils des serviteurs de Salomon, trois cent quatre-vingt-douze."
+        },
+        {
+          "verse": 59,
+          "text": "Et voici ceux qui monterent de Thel-Melakh, de Thel-Harsha, de Kerub-Addan, d'Immer; mais ils ne purent pas montrer leurs maisons de peres et leur descendance, s'ils etaient d'Israel:"
+        },
+        {
+          "verse": 60,
+          "text": "les fils de Delaia, les fils de Tobija, les fils de Nekoda, six cent cinquante-deux; et des fils des sacrificateurs,"
+        },
+        {
+          "verse": 61,
+          "text": "les fils de Hobaia, les fils d'Hakkots, les fils de Barzillai, qui prit une femme d'entre les filles de Barzillai, le Galaadite, et fut appele de leur nom."
+        },
+        {
+          "verse": 62,
+          "text": "Ceux-ci chercherent leur inscription genealogique, mais elle ne se trouva pas; et ils furent exclus, comme profanes, de la sacrificature."
+        },
+        {
+          "verse": 63,
+          "text": "Et le Thirshatha leur dit qu'ils ne devaient point manger des choses tres-saintes, jusqu'à ce que fut suscite un sacrificateur avec les urim et les thummim."
+        },
+        {
+          "verse": 64,
+          "text": "Toute la congregation reunie etait de quarante-deux mille trois cent soixante personnes,"
+        },
+        {
+          "verse": 65,
+          "text": "sans compter leurs serviteurs et leurs servantes; ceux-ci etaient au nombre de sept mille trois cent trente-sept; et parmi eux, il y avait deux cents chanteurs et chanteuses."
+        },
+        {
+          "verse": 66,
+          "text": "Ils avaient sept cent trente-six chevaux, deux cent quarante-cinq mulets,"
+        },
+        {
+          "verse": 67,
+          "text": "quatre cent trente-cinq chameaux, et six mille sept cent vingt anes."
+        },
+        {
+          "verse": 68,
+          "text": "Et des chefs des peres, quand ils arriverent à la maison de l'Eternel qui est à Jerusalem, donnerent volontairement pour la maison de Dieu, pour la relever sur son emplacement;"
+        },
+        {
+          "verse": 69,
+          "text": "ils donnerent au tresor de l'oeuvre, selon leur pouvoir, soixante et un mille dariques d'or, et cinq mille mines d'argent, et cent tuniques de sacrificateurs."
+        },
+        {
+          "verse": 70,
+          "text": "Et les sacrificateurs, et les levites, et ceux du peuple, et les chantres, et les portiers, et les Nethiniens, habiterent dans leurs villes: tout Israel se trouva dans ses villes."
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et quand arriva le septieme mois, les fils d'Israel etant dans leurs villes, le peuple s'assembla comme un seul homme à Jerusalem."
+        },
+        {
+          "verse": 2,
+          "text": "Et Jeshua, fils de Jotsadak, et ses freres les sacrificateurs, et Zorobabel, fils de Shealthiel, et ses freres, se leverent et batirent l'autel du Dieu d'Israel, pour y offrir des holocaustes, selon ce qui est ecrit dans la loi de Moise, homme de Dieu."
+        },
+        {
+          "verse": 3,
+          "text": "Et ils etablirent l'autel sur son emplacement; car la terreur des peuples de ces contrees etait sur eux: et ils offrirent dessus des holocaustes à l'Eternel, les holocaustes du matin et du soir."
+        },
+        {
+          "verse": 4,
+          "text": "Et ils firent la fete des tabernacles selon ce qui est ecrit, et les holocaustes, jour par jour, selon leur nombre, selon l'ordonnance, le service de chaque jour en son jour,"
+        },
+        {
+          "verse": 5,
+          "text": "et apres cela l'holocauste continuel, et celui des nouvelles lunes et de tous les jours solennels de l'Eternel qui etaient sanctifies, et les holocaustes de tous ceux qui offraient une offrande volontaire à l'Eternel."
+        },
+        {
+          "verse": 6,
+          "text": "Depuis le premier jour du septieme mois ils commencerent à offrir des holocaustes à l'Eternel; mais les fondements du temple de l'Eternel n'etaient pas encore poses."
+        },
+        {
+          "verse": 7,
+          "text": "Et ils donnerent de l'argent aux tailleurs de pierres et aux charpentiers, et des vivres et des boissons et de l'huile aux Sidoniens et aux Tyriens, pour amener du Liban des bois de cedre à la mer de Japho, suivant l'autorisation qu'ils avaient de Cyrus, roi de Perse."
+        },
+        {
+          "verse": 8,
+          "text": "Et la seconde annee de leur arrivee à la maison de Dieu à Jerusalem, au second mois, Zorobabel, fils de Shealthiel, et Jeshua, fils de Jotsadak, et le reste de leurs freres, les sacrificateurs et les levites, et tous ceux qui etaient venus de la captivite à Jerusalem, commencerent; et ils etablirent les levites, depuis l'age de vingt ans et au-dessus, pour surveiller l'oeuvre de la maison de l'Eternel."
+        },
+        {
+          "verse": 9,
+          "text": "Alors Jeshua et ses fils et ses freres, Kadmiel et ses fils, les fils de Juda, se tinrent là comme un seul homme pour surveiller ceux qui faisaient l'ouvrage dans la maison de Dieu, et aussi les fils de Henadad, leurs fils et leurs freres, les levites."
+        },
+        {
+          "verse": 10,
+          "text": "Et lorsque ceux qui batissaient poserent les fondements du temple de l'Eternel, on fit assister les sacrificateurs revetus de leurs robes, avec des trompettes, et les levites, fils d'Asaph, avec des cymbales, pour louer l'Eternel selon les directions de David, roi d'Israel."
+        },
+        {
+          "verse": 11,
+          "text": "Et ils s'entre-repondaient en louant et en celebrant l'Eternel: Car il est bon, car sa bonte envers Israel demeure à toujours. Et tout le peuple poussa de grands cris, en louant l'Eternel, parce qu'on posait les fondements de la maison de l'Eternel."
+        },
+        {
+          "verse": 12,
+          "text": "Et beaucoup d'entre les sacrificateurs, et d'entre les levites, et d'entre les chefs des peres, les vieillards qui avaient vu la premiere maison, pleuraient à haute voix lorsque les fondements de cette maison furent poses devant leurs yeux, et beaucoup poussaient des cris de joie, en elevant leur voix;"
+        },
+        {
+          "verse": 13,
+          "text": "et le peuple ne pouvait distinguer entre le bruit des cris de joie et la voix du peuple qui pleurait; car le peuple poussait de grands cris, et le bruit s'entendait au loin."
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et les ennemis de Juda et de Benjamin entendirent que les fils de la transportation batissaient le temple de l'Eternel, le Dieu d'Israel;"
+        },
+        {
+          "verse": 2,
+          "text": "et ils s'approcherent de Zorobabel et des chefs des peres, et leur dirent: Nous batirons avec vous, car nous recherchons votre Dieu, comme vous, et nous lui offrons des sacrifices depuis les jours d'Esar-Haddon, roi d'Assyrie, qui nous a fait monter ici."
+        },
+        {
+          "verse": 3,
+          "text": "Et Zorobabel, et Jeshua, et le reste des chefs des peres d'Israel, leur dirent: Vous n'avez pas affaire avec nous pour batir une maison à notre Dieu, mais nous seuls, nous batirons à l'Eternel, le Dieu d'Israel, comme nous l'a commande le roi Cyrus, roi de Perse."
+        },
+        {
+          "verse": 4,
+          "text": "Alors le peuple du pays rendit laches les mains du peuple de Juda;"
+        },
+        {
+          "verse": 5,
+          "text": "et ils leur firent peur de batir, et ils soudoyerent contre eux des conseillers pour faire echouer leur plan, durant tous les jours de Cyrus, roi de Perse, et jusqu'au regne de Darius, roi de Perse."
+        },
+        {
+          "verse": 6,
+          "text": "Et sous le regne d'Assuerus, au commencement de son regne, ils ecrivirent une accusation contre les habitants de Juda et de Jerusalem."
+        },
+        {
+          "verse": 7,
+          "text": "Et aux jours d'Artaxerxes, Bishlam, Mithredath, Tabeel et le reste de ses collegues, ecrivirent à Artaxerxes, roi de Perse; et la lettre etait ecrite en ecriture syriaque et traduite en syriaque:"
+        },
+        {
+          "verse": 8,
+          "text": "Rehum, chancelier, et Shimshai, secretaire, ecrivirent une lettre contre Jerusalem au roi Artaxerxes, en ces termes."
+        },
+        {
+          "verse": 9,
+          "text": "Alors Rehum, chancelier, et Shimshai, secretaire, et le reste de leurs collegues, les Dinites, les Apharsathkites, les Tarpelites, les Apharsites, les Arkevites, les Babyloniens, les Susankites, les Dehaviens, les Elamites,"
+        },
+        {
+          "verse": 10,
+          "text": "et le reste des peuplades que le grand et noble Osnappar transporta et fit habiter dans les villes de Samarie et dans le reste du pays de ce cote du fleuve, etc..."
+        },
+        {
+          "verse": 11,
+          "text": "C'est ici la copie de la lettre qu'ils lui envoyerent: Au roi Artaxerxes: Tes serviteurs, les hommes de ce cote du fleuve, etc."
+        },
+        {
+          "verse": 12,
+          "text": "Que le roi sache que les Juifs qui sont montes de chez toi vers nous et sont venus à Jerusalem, batissent la ville rebelle et mechante, et que les murailles s'achevent, et qu'ils restaurent les fondements."
+        },
+        {
+          "verse": 13,
+          "text": "Que le roi sache donc que si cette ville est batie et que ses murailles s'achevent, ils ne payeront ni tribut, ni impot, ni peage, et, plus tard, cela portera prejudice aux rois."
+        },
+        {
+          "verse": 14,
+          "text": "Or comme nous mangeons le sel du palais, et qu'il n'etait pas convenable pour nous de voir qu'on faisait tort au roi, à cause de cela nous avons envoye et nous avons informe le roi,"
+        },
+        {
+          "verse": 15,
+          "text": "afin qu'on cherche dans le livre des annales de tes peres: et tu trouveras dans le livre des annales et tu sauras que cette ville est une ville rebelle, et qu'elle a porte prejudice aux rois et aux provinces, et que, des les jours anciens, on y a fait des seditions; c'est pourquoi cette ville a ete detruite."
+        },
+        {
+          "verse": 16,
+          "text": "Nous faisons savoir au roi que cette ville est rebatie et que ses murailles s'achevent, à cause de cela, tu n'auras plus de possession de ce cote du fleuve."
+        },
+        {
+          "verse": 17,
+          "text": "Le roi envoya un rescrit à Rehum, chancelier, et à Shimshai, secretaire, et au reste de leurs collegues qui habitaient à Samarie, et dans le reste du pays de l'autre cote du fleuve: Paix, etc."
+        },
+        {
+          "verse": 18,
+          "text": "La lettre que vous nous avez envoyee a ete lue exactement devant moi."
+        },
+        {
+          "verse": 19,
+          "text": "Et de par moi un ordre a ete donne, et on a cherche, et on a trouve que, des les jours anciens, cette ville s'est soulevee contre les rois, et qu'il s'y est fait des revoltes et des seditions,"
+        },
+        {
+          "verse": 20,
+          "text": "et qu'il y a eu sur Jerusalem de puissants rois qui ont regne sur tout ce qui est de l'autre cote du fleuve, et que le tribut, l'impot, et le peage leur ont ete payes."
+        },
+        {
+          "verse": 21,
+          "text": "Ainsi, donnez ordre de faire cesser ces hommes, et que cette ville ne soit pas batie, jusqu'à ce que l'ordre en soit donne de par moi."
+        },
+        {
+          "verse": 22,
+          "text": "Gardez-vous de manquer à faire cela: pourquoi le dommage augmenterait-il au prejudice des rois?"
+        },
+        {
+          "verse": 23,
+          "text": "Alors, aussitot que la copie de la lettre du roi Artaxerxes eut ete lue devant Rehum et Shimshai, le secretaire, et leurs collegues, ils allerent en hate à Jerusalem vers les Juifs, et les firent cesser par force et par puissance."
+        },
+        {
+          "verse": 24,
+          "text": "Alors le travail de la maison de Dieu qui est à Jerusalem cessa; et il fut arrete jusqu'à la seconde annee du regne de Darius, roi de Perse."
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et les prophetes, Aggee le prophete, et Zacharie, fils d'Iddo, prophetiserent aux Juifs qui etaient en Juda et à Jerusalem, au nom du Dieu d'Israel."
+        },
+        {
+          "verse": 2,
+          "text": "Alors Zorobabel, fils de Shealthiel, et Jeshua, fils de Jotsadak, se leverent et commencerent à batir la maison de Dieu qui est à Jerusalem, et avec eux, les prophetes de Dieu, qui les assistaient."
+        },
+        {
+          "verse": 3,
+          "text": "En ce temps-là, Thathnai, gouverneur de ce cote du fleuve, et Shethar-Boznai, et leurs collegues, vinrent vers eux, et leur parlerent ainsi: Qui vous a donne ordre de batir cette maison et d'achever cette muraille?"
+        },
+        {
+          "verse": 4,
+          "text": "Alors nous leur dimes quels etaient les noms des hommes qui batissaient cet edifice."
+        },
+        {
+          "verse": 5,
+          "text": "Et l'oeil de leur Dieu etait sur les anciens des Juifs; et ils ne les firent pas cesser jusqu'à ce que l'affaire parvint à Darius; et alors ils repondirent par lettre à ce sujet."
+        },
+        {
+          "verse": 6,
+          "text": "Copie de la lettre que Thathnai, gouverneur de ce cote du fleuve, et Shethar-Boznai et ses collegues les Apharsakites, qui etaient de ce cote du fleuve, envoyerent au roi Darius."
+        },
+        {
+          "verse": 7,
+          "text": "Ils lui envoyerent un rapport dans lequel il etait ainsi ecrit: Au roi Darius, toute paix!"
+        },
+        {
+          "verse": 8,
+          "text": "Qu'il soit connu du roi que nous sommes alles dans la province de Juda, à la maison du grand Dieu; et elle se batit avec de grandes pierres, et le bois se pose dans les murs; et cet ouvrage se poursuit avec zele et prospere dans leurs mains."
+        },
+        {
+          "verse": 9,
+          "text": "Alors nous avons interroge ces anciens, nous leur avons parle ainsi: Qui vous a donne ordre de batir cette maison et d'achever cette muraille?"
+        },
+        {
+          "verse": 10,
+          "text": "Et nous leur demandames aussi leurs noms pour te les faire savoir, afin de t'ecrire les noms des hommes qui sont les principaux parmi eux;"
+        },
+        {
+          "verse": 11,
+          "text": "et ils repondirent ainsi, disant: Nous sommes les serviteurs du Dieu des cieux et de la terre, et nous batissons la maison qui fut batie anciennement, il y a bien des annees; et un grand roi d'Israel l'a batie et achevee."
+        },
+        {
+          "verse": 12,
+          "text": "Mais quand nos peres provoquerent le Dieu des cieux, il les livra en la main de Nebucadnetsar, roi de Babylone, le Chaldeen, et il detruisit cette maison et transporta le peuple à Babylone."
+        },
+        {
+          "verse": 13,
+          "text": "Mais la premiere annee de Cyrus, roi de Babylone, le roi Cyrus donna ordre de batir cette maison de Dieu."
+        },
+        {
+          "verse": 14,
+          "text": "Et aussi les ustensiles d'or et d'argent de la maison de Dieu, que Nebucadnetsar a sortis du temple qui etait à Jerusalem et a emportes dans le temple de Babylone, le roi Cyrus les sortit du temple de Babylone, et les livra au nomme Sheshbatsar, qu'il avait fait gouverneur;"
+        },
+        {
+          "verse": 15,
+          "text": "et il lui dit: Prends ces ustensiles, va, place-les dans le temple qui est à Jerusalem, et qu'on batisse la maison de Dieu sur son emplacement."
+        },
+        {
+          "verse": 16,
+          "text": "Alors ce Sheshbatsar est venu et a pose les fondements de la maison de Dieu qui est à Jerusalem, et depuis lors jusqu'à present elle se batit; mais elle n'est pas achevee."
+        },
+        {
+          "verse": 17,
+          "text": "Et maintenant, s'il semble bon au roi, qu'on recherche dans la maison des tresors du roi, qui est là à Babylone, s'il est vrai que, de par le roi Cyrus, ordre a ete donne de batir cette maison de Dieu à Jerusalem; et que le roi nous envoie sa volonte sur cela."
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Alors le roi Darius donna ordre, et on chercha dans la maison des archives ou etaient deposes les tresors, à Babylone."
+        },
+        {
+          "verse": 2,
+          "text": "Et on trouva à Akhmetha, dans la capitale qui est dans la province de Medie, un rouleau, et, dedans, un memoire ainsi ecrit:"
+        },
+        {
+          "verse": 3,
+          "text": "La premiere annee du roi Cyrus, le roi Cyrus donna l'ordre, touchant la maison de Dieu à Jerusalem: Que la maison soit batie pour etre un lieu ou l'on offre des sacrifices, et que ses fondements soient solides. Sa hauteur sera de soixante coudees, sa largeur de soixante coudees,"
+        },
+        {
+          "verse": 4,
+          "text": "avec trois rangees de grandes pierres, et une rangee de bois neuf; et que les depenses soient payees par la maison du roi;"
+        },
+        {
+          "verse": 5,
+          "text": "et aussi que les ustensiles d'or et d'argent de la maison de Dieu, que Nebucadnetsar a sortis du temple de Jerusalem et a emportes à Babylone, soient rendus, et qu'on les porte au temple de Jerusalem, en leur lieu; et tu les placeras dans la maison de Dieu."
+        },
+        {
+          "verse": 6,
+          "text": "Ainsi, Thathnai, gouverneur de l'autre cote du fleuve, Shethar-Boznai, et leurs collegues, les Apharsakites, qui etes de l'autre cote du fleuve, tenez-vous loin de là;"
+        },
+        {
+          "verse": 7,
+          "text": "laissez se faire le travail de cette maison de Dieu. Que le gouverneur des Juifs et les anciens des Juifs batissent cette maison de Dieu sur son emplacement."
+        },
+        {
+          "verse": 8,
+          "text": "Et, de par moi, ordre est donne touchant ce que vous ferez à l'egard de ces anciens des Juifs pour la construction de cette maison de Dieu: Que, des biens du roi provenant du tribut de l'autre cote du fleuve, les depenses soient promptement payees à ces hommes, pour qu'ils ne soient pas interrompus;"
+        },
+        {
+          "verse": 9,
+          "text": "et que ce qui leur est necessaire, jeunes taureaux, et beliers, et agneaux, pour les holocaustes au Dieu des cieux, froment, sel, vin, et huile, selon l'ordre des sacrificateurs qui sont à Jerusalem, leur soit donne, jour par jour, sans manquer,"
+        },
+        {
+          "verse": 10,
+          "text": "afin qu'ils offrent de l'encens au Dieu des cieux et qu'ils prient pour la vie du roi et de ses fils."
+        },
+        {
+          "verse": 11,
+          "text": "Et de par moi ordre est donne, que si quelque homme change ce rescrit, un bois soit arrache de sa maison et dresse, et qu'il y soit attache, et que sa maison soit reduite en un tas de fumier à cause de cela."
+        },
+        {
+          "verse": 12,
+          "text": "Et que le Dieu qui y a fait demeurer son nom renverse tout roi et peuple qui etendrait sa main pour changer et pour detruire cette maison de Dieu qui est à Jerusalem. Moi, Darius, j'ai donne cet ordre; qu'il soit promptement execute."
+        },
+        {
+          "verse": 13,
+          "text": "Alors Thathnai, gouverneur de ce cote du fleuve, Shethar-Boznai, et leurs collegues, firent ainsi promptement, selon l'ordre que le roi Darius avait envoye."
+        },
+        {
+          "verse": 14,
+          "text": "Et les anciens des Juifs batirent et prospererent par la prophetie d'Aggee, le prophete, et de Zacharie, fils d'Iddo. Et ils batirent et acheverent, selon l'ordre du Dieu d'Israel et selon l'ordre de Cyrus, et de Darius, et d'Artaxerxes, roi de Perse."
+        },
+        {
+          "verse": 15,
+          "text": "Et cette maison fut achevee le troisieme jour du mois d'Adar: c'etait la sixieme annee du regne du roi Darius."
+        },
+        {
+          "verse": 16,
+          "text": "Et les fils d'Israel, les sacrificateurs et les levites, et le reste des fils de la transportation, celebrerent la dedicace de cette maison de Dieu avec joie;"
+        },
+        {
+          "verse": 17,
+          "text": "et ils offrirent pour la dedicace de cette maison de Dieu, cent taureaux, deux cents beliers, quatre cents agneaux, et, comme sacrifice pour le peche, pour tout Israel, douze boucs, selon le nombre des tribus d'Israel."
+        },
+        {
+          "verse": 18,
+          "text": "Et ils etablirent les sacrificateurs dans leurs classes, et les levites dans leurs divisions, pour le service de Dieu à Jerusalem, selon ce qui est ecrit au livre de Moise."
+        },
+        {
+          "verse": 19,
+          "text": "Et les fils de la transportation celebrerent la Paque le quatorzieme jour du premier mois;"
+        },
+        {
+          "verse": 20,
+          "text": "car les sacrificateurs et les levites s'etaient purifies comme un seul homme: ils etaient tous purs; et ils egorgerent la paque pour tous les fils de la transportation, et pour leurs freres les sacrificateurs, et pour eux-memes."
+        },
+        {
+          "verse": 21,
+          "text": "Et les fils d'Israel qui etaient de retour de la transportation, en mangerent, et, avec eux, tous ceux qui s'etaient separes de l'impurete des nations du pays pour rechercher l'Eternel, le Dieu d'Israel."
+        },
+        {
+          "verse": 22,
+          "text": "Et ils celebrerent la fete des pains sans levain pendant sept jours, avec joie; car l'Eternel les avait rendus joyeux, et il avait tourne vers eux le coeur du roi d'Assyrie, pour fortifier leurs mains dans l'oeuvre de la maison de Dieu, du Dieu d'Israel."
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et apres ces choses, sous le regne d'Artaxerxes, roi de Perse, Esdras, fils de Seraia, fils d'Azaria, fils de Hilkija,"
+        },
+        {
+          "verse": 2,
+          "text": "fils de Shallum, fils de Tsadok, fils d'Akhitub,"
+        },
+        {
+          "verse": 3,
+          "text": "fils d'Amaria, fils d'Azaria, fils de Meraioth,"
+        },
+        {
+          "verse": 4,
+          "text": "fils de Zerakhia, fils d'Uzzi, fils de Bukki,"
+        },
+        {
+          "verse": 5,
+          "text": "fils d'Abishua, fils de Phinees, fils d'Eleazar, fils d'Aaron, le chef des sacrificateurs,"
+        },
+        {
+          "verse": 6,
+          "text": "-cet Esdras monta de Babylone: il etait un scribe verse dans la loi de Moise qu'avait donnee l'Eternel, le Dieu d'Israel. Et le roi lui accorda toute sa requete, selon que la main de l'Eternel, son Dieu, etait sur lui."
+        },
+        {
+          "verse": 7,
+          "text": "(Et un certain nombre des fils d'Israel, et des sacrificateurs, et des levites, et des chantres, et des portiers, et des Nethiniens, monterent à Jerusalem, la septieme annee du roi Artaxerxes.)"
+        },
+        {
+          "verse": 8,
+          "text": "Et il arriva à Jerusalem, le cinquieme mois; c'etait la septieme annee du roi."
+        },
+        {
+          "verse": 9,
+          "text": "Car le premier jour du premier mois le projet de partir de Babylone fut arrete; et le premier jour du cinquieme mois il arriva à Jerusalem, selon que la bonne main de son Dieu etait sur lui."
+        },
+        {
+          "verse": 10,
+          "text": "Car Esdras avait dispose son coeur à rechercher la loi de l'Eternel, et à la faire, et à enseigner en Israel les statuts et les ordonnances."
+        },
+        {
+          "verse": 11,
+          "text": "Et c'est ici la copie de la lettre que le roi Artaxerxes donna à Esdras le sacrificateur, le scribe, scribe des paroles des commandements de l'Eternel et de ses statuts donnes à Israel:"
+        },
+        {
+          "verse": 12,
+          "text": "Artaxerxes, roi des rois, à Esdras, sacrificateur, scribe accompli de la loi du Dieu des cieux, etc."
+        },
+        {
+          "verse": 13,
+          "text": "De par moi ordre est donne que tous ceux du peuple d'Israel et de ses sacrificateurs et des levites, qui, dans mon royaume, sont disposes à aller à Jerusalem avec toi, y aillent;"
+        },
+        {
+          "verse": 14,
+          "text": "puisque tu es envoye par le roi et ses sept conseillers pour t'enquerir au sujet de Juda et de Jerusalem, selon la loi de ton Dieu, qui est dans ta main,"
+        },
+        {
+          "verse": 15,
+          "text": "et pour porter l'argent et l'or que le roi et ses conseillers ont librement offert au Dieu d'Israel, dont la demeure est à Jerusalem,"
+        },
+        {
+          "verse": 16,
+          "text": "ainsi que tout l'argent et l'or que tu trouveras dans toute la province de Babylone, avec l'offrande volontaire du peuple et des sacrificateurs qui offrent volontairement pour la maison de leur Dieu qui est à Jerusalem;"
+        },
+        {
+          "verse": 17,
+          "text": "tu acheteras donc promptement, avec cet argent, des boeufs, des beliers, des agneaux, et leurs offrandes de gateaux et leurs libations, et tu les offriras sur l'autel de la maison de votre Dieu, qui est à Jerusalem."
+        },
+        {
+          "verse": 18,
+          "text": "Et ce qu'il vous paraitra bon à toi et à tes freres de faire avec le reste de l'argent et de l'or, faites-le selon la volonte de votre Dieu."
+        },
+        {
+          "verse": 19,
+          "text": "Et les ustensiles qui te sont donnes pour le service de la maison de ton Dieu, remets-les devant le Dieu de Jerusalem."
+        },
+        {
+          "verse": 20,
+          "text": "Et le reste des choses necessaires pour la maison de ton Dieu que tu pourras avoir à donner, tu les donneras de la maison des tresors du roi."
+        },
+        {
+          "verse": 21,
+          "text": "Et de par moi, moi Artaxerxes, le roi, ordre est donne à tous les tresoriers de l'autre cote du fleuve, de faire promptement tout ce qu'Esdras, sacrificateur, scribe de la loi du Dieu des cieux, vous demandera,"
+        },
+        {
+          "verse": 22,
+          "text": "jusqu'à cent talents d'argent, et jusqu'à cent cors de froment, et jusqu'à cent baths de vin, et jusqu'à cent baths d'huile, et du sel, sans prescription de quantite:"
+        },
+        {
+          "verse": 23,
+          "text": "que tout ce qui est ordonne par le Dieu des cieux soit fait exactement pour la maison du Dieu des cieux; car pourquoi y aurait-il colere contre le royaume du roi et de ses fils?"
+        },
+        {
+          "verse": 24,
+          "text": "Et nous vous faisons savoir que sur tous les sacrificateurs et les levites, chantres, portiers, Nethiniens, et serviteurs de cette maison de Dieu, il ne peut etre leve aucun tribut, ni impot, ni peage."
+        },
+        {
+          "verse": 25,
+          "text": "Et toi, Esdras, selon la sagesse de ton Dieu, laquelle est en ta main, etablis des magistrats et des juges qui jugeront tout le peuple de l'autre cote du fleuve, tous ceux qui connaissent les lois de ton Dieu; et à celui qui ne les connait pas, faites-les connaitre;"
+        },
+        {
+          "verse": 26,
+          "text": "et quiconque ne pratique pas la loi de ton Dieu et la loi du roi, qu'il en soit fait justice promptement, ou par la mort, ou par l'exil, ou par la confiscation de ses biens, ou par l'emprisonnement."
+        },
+        {
+          "verse": 27,
+          "text": "Beni soit l'Eternel, le Dieu de nos peres, qui a mis de telles pensees dans le coeur du roi, d'orner la maison de l'Eternel qui est à Jerusalem,"
+        },
+        {
+          "verse": 28,
+          "text": "et qui a etendu sur moi sa bonte devant le roi, et ses conseillers, et tous les puissants princes du roi! Et moi, je fus fortifie selon que la main de l'Eternel, mon Dieu, etait sur moi, et je rassemblai d'Israel des chefs pour monter avec moi."
+        }
+      ]
+    },
+    {
+      "chapter": 8,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et voici les chefs des peres et la genealogie de ceux qui monterent avec moi de Babylone, sous le regne d'Artaxerxes: des fils de Phinees, Guershom;"
+        },
+        {
+          "verse": 2,
+          "text": "des fils d'Ithamar, Daniel; des fils de David, Hattush;"
+        },
+        {
+          "verse": 3,
+          "text": "des fils de Shecania, des fils de Parhosh, Zacharie, et avec lui, enregistres par genealogies, les males, cent cinquante:"
+        },
+        {
+          "verse": 4,
+          "text": "des fils de Pakhath-Moab, Elioenai, fils de Zerakhia, et avec lui deux cents hommes;"
+        },
+        {
+          "verse": 5,
+          "text": "des fils de Shecania, le fils de Jakhaziel, et avec lui trois cents hommes;"
+        },
+        {
+          "verse": 6,
+          "text": "et des fils d'Adin, Ebed, fils de Jonathan, et avec lui cinquante hommes;"
+        },
+        {
+          "verse": 7,
+          "text": "et des fils d'Elam, Esaie, fils d'Athalia, et avec lui soixante-dix hommes;"
+        },
+        {
+          "verse": 8,
+          "text": "et des fils de Shephatia, Zebadia, fils de Micael, et avec lui quatre-vingt hommes;"
+        },
+        {
+          "verse": 9,
+          "text": "et des fils de Joab, Abdias, fils de Jekhiel, et avec lui deux cent dix-huit hommes;"
+        },
+        {
+          "verse": 10,
+          "text": "et des fils de Shelomith, le fils de Josiphia, et avec lui cent soixante hommes;"
+        },
+        {
+          "verse": 11,
+          "text": "et des fils de Bebai, Zacharie, fils de Bebai, et avec lui vingt-huit hommes;"
+        },
+        {
+          "verse": 12,
+          "text": "et des fils d'Azgad, Jokhanan, fils d'Hakkatan, et avec lui cent dix hommes;"
+        },
+        {
+          "verse": 13,
+          "text": "et des fils d'Adonikam, les derniers, et ce sont ici leurs noms: Elipheleth, Jehiel, et Shemahia, et avec eux soixante hommes;"
+        },
+        {
+          "verse": 14,
+          "text": "et des fils de Bigvai, Uthai et Zabbud, et avec eux soixante-dix hommes."
+        },
+        {
+          "verse": 15,
+          "text": "Et je les rassemblai vers le fleuve qui s'en va vers Ahava, et nous campames là trois jours; et je considerai le peuple et les sacrificateurs, et je n'y trouvai aucun des fils de Levi."
+        },
+        {
+          "verse": 16,
+          "text": "Alors j'envoyai chercher Eliezer, Ariel, Shemahia, et Elnathan, et Jarib, et Elnathan, et Nathan, et Zacharie, et Meshullam, qui etaient des chefs, et Joiarib, et Elnathan, hommes intelligents;"
+        },
+        {
+          "verse": 17,
+          "text": "et je les envoyai à Iddo, qui etait chef dans la localite appelee Casiphia, et je mis dans leurs bouches des paroles pour les dire à Iddo et à ses freres, les Nethiniens, dans la localite appelee Casiphia, pour nous amener des serviteurs pour la maison de notre Dieu."
+        },
+        {
+          "verse": 18,
+          "text": "Et ils nous amenerent, selon que la bonne main de notre Dieu etait sur nous, un homme intelligent d'entre les fils de Makhli, fils de Levi, fils d'Israel, et Sherebia et ses fils et ses freres, au nombre de dix-huit;"
+        },
+        {
+          "verse": 19,
+          "text": "et Hashabia, et avec lui Esaie, d'entre les fils de Merari, ses freres et leurs fils, au nombre de vingt;"
+        },
+        {
+          "verse": 20,
+          "text": "et des Nethiniens, que David et les princes avaient donnes pour le service des levites, deux cent vingt Nethiniens, tous designes par leurs noms."
+        },
+        {
+          "verse": 21,
+          "text": "Et là, pres du fleuve Ahava, je publiai un jeune, pour nous humilier devant notre Dieu, pour lui demander le vrai chemin, pour nous et pour nos enfants, et pour tout notre avoir."
+        },
+        {
+          "verse": 22,
+          "text": "Car j'avais honte de demander au roi des forces et de la cavalerie pour nous aider en chemin contre l'ennemi; car nous avions parle au roi, en disant: La main de notre Dieu est en bien sur tous ceux qui le cherchent; et sa force et sa colere sont contre tous ceux qui l'abandonnent."
+        },
+        {
+          "verse": 23,
+          "text": "Et nous jeunames, et nous demandames cela à notre Dieu, et il nous exauça."
+        },
+        {
+          "verse": 24,
+          "text": "Et je separai douze des chefs des sacrificateurs, Sherebia, Hashabia, et dix de leurs freres avec eux,"
+        },
+        {
+          "verse": 25,
+          "text": "et je leur pesai l'argent et l'or, et les ustensiles, l'offrande pour la maison de notre Dieu, qu'avaient offerte le roi, et ses conseillers, et ses princes, et tout Israel qui se trouvait là."
+        },
+        {
+          "verse": 26,
+          "text": "Et je pesai en leurs mains six cent cinquante talents d'argent, et en ustensiles d'argent cent talents, et en or cent talents,"
+        },
+        {
+          "verse": 27,
+          "text": "et vingt coupes d'or valant mille dariques, et deux vases d'airain d'un beau brillant, precieux comme l'or."
+        },
+        {
+          "verse": 28,
+          "text": "Et je leur dis: Vous etes saints, consacres à l'Eternel, et les ustensiles sont saints, et l'argent et l'or sont une offrande volontaire à l'Eternel, le Dieu de vos peres."
+        },
+        {
+          "verse": 29,
+          "text": "Veillez, et gardez-les jusqu'à ce que vous les pesiez devant les chefs des sacrificateurs et des levites, et devant les chefs des peres d'Israel à Jerusalem, dans les chambres de la maison de l'Eternel."
+        },
+        {
+          "verse": 30,
+          "text": "Et les sacrificateurs et les levites reçurent au poids l'argent et l'or, et les ustensiles, pour les porter à Jerusalem, à la maison de notre Dieu."
+        },
+        {
+          "verse": 31,
+          "text": "Et nous partimes du fleuve Ahava le douzieme jour du premier mois, pour aller à Jerusalem. Et la main de notre Dieu fut sur nous, et il nous delivra de la main de l'ennemi et de toute embuche sur le chemin."
+        },
+        {
+          "verse": 32,
+          "text": "Et nous arrivames à Jerusalem, et nous demeurames là trois jours."
+        },
+        {
+          "verse": 33,
+          "text": "Et le quatrieme jour, l'argent et l'or et les ustensiles furent peses dans la maison de notre Dieu, entre les mains de Meremoth, fils d'Urie, le sacrificateur (et avec lui etait Eleazar, fils de Phinees, et avec eux Jozabad, fils de Jeshua, et Noadia, fils de Binnui, levites),"
+        },
+        {
+          "verse": 34,
+          "text": "selon le nombre et selon le poids du tout; et en meme temps tout le poids en fut inscrit."
+        },
+        {
+          "verse": 35,
+          "text": "Les fils de la transportation qui etaient revenus de la captivite presenterent des holocaustes au Dieu d'Israel, douze taureaux pour tout Israel, quatre-vingt-seize beliers, soixante-dix-sept agneaux, douze boucs en sacrifice pour le peche, le tout en holocauste à l'Eternel."
+        },
+        {
+          "verse": 36,
+          "text": "Et ils remirent les edits du roi aux satrapes du roi et aux gouverneurs de ce cote du fleuve, et ceux-ci donnerent leur appui au peuple et à la maison de Dieu."
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et quand ces choses furent terminees, les chefs s'approcherent de moi, en disant: Le peuple d'Israel, et les sacrificateurs et les levites, ne se sont pas separes des peuples des pays, quant à leurs abominations, savoir celles des Cananeens, des Hethiens, des Phereziens, des Jebusiens, des Ammonites, des Moabites, des Egyptiens, et des Amoreens,"
+        },
+        {
+          "verse": 2,
+          "text": "car ils ont pris de leurs filles pour eux et pour leurs fils, et ont mele la semence sainte avec les peuples des pays; et la main des chefs et des gouverneurs a ete la premiere dans ce peche."
+        },
+        {
+          "verse": 3,
+          "text": "Et quand j'entendis cela, je dechirai mon manteau et ma robe, et j'arrachai les cheveux de ma tete et ma barbe, et je m'assis desole;"
+        },
+        {
+          "verse": 4,
+          "text": "et vers moi s'assemblerent tous ceux qui tremblaient aux paroles du Dieu d'Israel, à cause du peche de ceux qui avaient ete transportes; et je restai assis, desole, jusqu'à l'offrande du soir."
+        },
+        {
+          "verse": 5,
+          "text": "Et lors de l'offrande du soir, je me levai de mon humiliation, et, mon manteau et ma robe dechires, je m'agenouillai, et j'etendis mes mains vers l'Eternel, mon Dieu,"
+        },
+        {
+          "verse": 6,
+          "text": "et je dis: Mon Dieu, je suis confus, et j'ai honte de lever ma face vers toi, o mon Dieu; car nos iniquites se sont multipliees par-dessus nos tetes, et notre coulpe a grandi jusqu'aux cieux."
+        },
+        {
+          "verse": 7,
+          "text": "Des les jours de nos peres jusqu'à ce jour, nous avons ete grandement coupables; et à cause de nos iniquites, nous, nos rois, nos sacrificateurs, nous avons ete livres en la main des rois des pays, à l'epee, à la captivite, et au pillage, et à la confusion de face, comme il parait aujourd'hui;"
+        },
+        {
+          "verse": 8,
+          "text": "et maintenant, pour un moment, nous est arrivee une faveur de la part de l'Eternel, notre Dieu, pour nous laisser des rechappes et pour nous donner un clou dans son saint lieu, afin que notre Dieu eclaire nos yeux et nous redonne un peu de vie dans notre servitude, car nous sommes serviteurs;"
+        },
+        {
+          "verse": 9,
+          "text": "mais, dans notre servitude, notre Dieu ne nous a pas abandonnes, et il a etendu sa bonte sur nous devant les rois de Perse, afin de nous redonner de la vie pour elever la maison de notre Dieu et pour restaurer ses ruines, et pour nous donner des murs en Juda et à Jerusalem."
+        },
+        {
+          "verse": 10,
+          "text": "Et maintenant, o notre Dieu, que dirons-nous apres cela? Car nous avons abandonne tes commandements,"
+        },
+        {
+          "verse": 11,
+          "text": "que tu as commandes par tes serviteurs les prophetes, en disant: Le pays dans lequel vous entrez pour le posseder, est un pays rendu impur par l'impurete des peuples des pays, par les abominations dont ils l'ont rempli d'un bout à l'autre par leurs souillures."
+        },
+        {
+          "verse": 12,
+          "text": "Et maintenant, ne donnez pas vos filles à leurs fils, et ne prenez pas leurs filles pour vos fils, et ne cherchez pas leur paix ou leur bien, à jamais, afin que vous soyez forts, et que vous mangiez les biens du pays, et que vous les laissiez en possession à vos fils à toujours."
+        },
+        {
+          "verse": 13,
+          "text": "Et apres tout ce qui nous est arrive à cause de nos mauvaises oeuvres et à cause de notre grand peche...; mais toi, notre Dieu, tu nous as moins punis que ne meritaient nos iniquites, et tu nous as donne une delivrance comme celle-ci;"
+        },
+        {
+          "verse": 14,
+          "text": "-est-ce que nous retournerions à enfreindre tes commandements et à nous allier par mariage avec les peuples qui font ces abominations? Ne serais-tu pas courrouce contre nous jusqu'à nous consumer, en sorte qu'il n'y aurait ni reste ni rechappes?"
+        },
+        {
+          "verse": 15,
+          "text": "Eternel, Dieu d'Israel, tu es juste, car nous sommes un reste de rechappes, comme il parait aujourd'hui. Nous voici devant toi dans notre culpabilite, car, à cause de cela, on ne peut se tenir devant toi."
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et comme Esdras priait et faisait sa confession, pleurant et se prosternant devant la maison de Dieu, il se rassembla vers lui, d'Israel, une tres-grande congregation d'hommes et de femmes et d'enfants, car le peuple pleurait beaucoup."
+        },
+        {
+          "verse": 2,
+          "text": "Et Shecania, fils de Jekhiel, des fils d'Elam, prit la parole et dit à Esdras: Nous avons ete infideles à notre Dieu, et nous avons pris des femmes etrangeres d'entre les peuples du pays. Mais maintenant, il y a esperance pour Israel à cet egard."
+        },
+        {
+          "verse": 3,
+          "text": "Et maintenant, faisons alliance avec notre Dieu pour renvoyer toutes les femmes et ceux qui sont nes d'elles, selon le conseil de mon seigneur et de ceux qui tremblent aux commandements de notre Dieu, et qu'il soit fait selon la loi."
+        },
+        {
+          "verse": 4,
+          "text": "Leve-toi, car la chose repose sur toi, et nous serons avec toi; sois fort et agis."
+        },
+        {
+          "verse": 5,
+          "text": "Et Esdras se leva, et il fit jurer aux chefs des sacrificateurs, des levites, et de tout Israel, d'agir selon cette parole; et ils jurerent."
+        },
+        {
+          "verse": 6,
+          "text": "Et Esdras se leva de devant la maison de Dieu, et alla dans la chambre de Jokhanan, fils d'Eliashib; et il entra là: il ne mangea point de pain et ne but point d'eau, car il menait deuil sur le peche de ceux qui avaient ete transportes."
+        },
+        {
+          "verse": 7,
+          "text": "Et on fit passer en Juda et à Jerusalem un appel à tous les fils de la transportation de se rassembler à Jerusalem,"
+        },
+        {
+          "verse": 8,
+          "text": "et pour que quiconque ne viendrait pas dans les trois jours selon le conseil des chefs et des anciens tous ses biens fussent confisques, et que lui-meme fut separe de la congregation de ceux qui avaient ete transportes."
+        },
+        {
+          "verse": 9,
+          "text": "Et tous les hommes de Juda et de Benjamin se rassemblerent à Jerusalem dans les trois jours: c'etait le neuvieme mois, le vingtieme jour du mois; et tout le peuple etait assis dans la place de la maison de Dieu, tremblant à cause de cette affaire et à cause des pluies."
+        },
+        {
+          "verse": 10,
+          "text": "Et Esdras, le sacrificateur, se leva et leur dit: Vous avez ete infideles, et vous avez pris des femmes etrangeres, pour ajouter à la coulpe d'Israel."
+        },
+        {
+          "verse": 11,
+          "text": "Et maintenant, faites confession à l'Eternel, le Dieu de vos peres, et faites ce qui lui est agreable, et separez-vous des peuples du pays et des femmes etrangeres."
+        },
+        {
+          "verse": 12,
+          "text": "Et toute la congregation repondit et dit à haute voix:"
+        },
+        {
+          "verse": 13,
+          "text": "Oui, à nous de faire selon tes paroles; mais le peuple est nombreux, et c'est la saison des pluies, et il n'y a pas moyen de se tenir dehors; et ce n'est pas l'oeuvre d'un jour ni de deux, car nous avons grandement peche dans cette affaire."
+        },
+        {
+          "verse": 14,
+          "text": "Que nos chefs donc, pendant cette affaire, se tiennent là pour toute la congregation, et que tous ceux qui, dans nos villes, ont pris des femmes etrangeres, viennent à des epoques determinees, et avec eux les anciens de chaque ville et ses juges, jusqu'à ce que l'ardeur de la colere de notre Dieu soit detournee de nous."
+        },
+        {
+          "verse": 15,
+          "text": "Seuls, Jonathan, fils d'Asçael, et Jakhzia, fils de Thikva, s'opposerent à cela; et Meshullam, et Shabthai, le levite, les appuyerent."
+        },
+        {
+          "verse": 16,
+          "text": "Et les fils de la transportation firent ainsi. Et Esdras, le sacrificateur, et des hommes qui etaient chefs des peres, furent separes selon leurs maisons de peres, et tous par leurs noms. Et ils s'assirent le premier jour du dixieme mois pour examiner l'affaire;"
+        },
+        {
+          "verse": 17,
+          "text": "et, le premier jour du premier mois, ils en eurent fini avec tous les hommes qui avaient pris des femmes etrangeres."
+        },
+        {
+          "verse": 18,
+          "text": "Et, parmi les fils des sacrificateurs, il s'en trouva qui avaient pris des femmes etrangeres: des fils de Jeshua, fils de Jotsadak, et de ses freres: Maasceia, et Eliezer, et Jarib, et Guedalia."
+        },
+        {
+          "verse": 19,
+          "text": "Et ils s'engagerent à renvoyer leurs femmes, et ils offrirent pour leur faute, un belier du troupeau comme offrande pour le delit."
+        },
+        {
+          "verse": 20,
+          "text": "Et des fils d'Immer: Hanani et Zebadia;"
+        },
+        {
+          "verse": 21,
+          "text": "et des fils de Harim, Maasceia, et Elie, et Shemahia, et Jekhiel, et Ozias;"
+        },
+        {
+          "verse": 22,
+          "text": "et des fils de Pashkhur, Elioenai, Maasceia, Ismael, Nethaneel, Jozabad, et Elhasça."
+        },
+        {
+          "verse": 23,
+          "text": "Et des levites: Jozabad, et Shimhi, et Kelaia (c'est Kelita), Pethakhia, Juda, et Eliezer. Et des chantres: Eliashib."
+        },
+        {
+          "verse": 24,
+          "text": "Et des portiers: Shallum, et Telem, et Uri."
+        },
+        {
+          "verse": 25,
+          "text": "Et de ceux d'Israel: des fils de Parhosh, Ramia et Jizzija, et Malkija, et Mijamin, et Eleazar, et Malkija, et Benaia;"
+        },
+        {
+          "verse": 26,
+          "text": "et des fils d'Elam, Matthania, Zacharie, et Jekhiel, et Abdi, et Jeremoth, et Elie;"
+        },
+        {
+          "verse": 27,
+          "text": "et des fils de Zatthu, Elioenai, Eliashib, Matthania, et Jeremoth, et Zabad, et Aziza;"
+        },
+        {
+          "verse": 28,
+          "text": "et des fils de Bebai, Jokhanan, Hanania, Zabbai, Athlai;"
+        },
+        {
+          "verse": 29,
+          "text": "et des fils de Bani, Meshullam, Malluc, et Adaia, Jashub, et Sheal, et Ramoth;"
+        },
+        {
+          "verse": 30,
+          "text": "et des fils de Pakhath-Moab, Adna, et Kelal, Benaia, Maasceia, Matthania, Betsaleel, et Binnui, et Manasse;"
+        },
+        {
+          "verse": 31,
+          "text": "et les fils de Harim, Eliezer, Jishija, Malkija,"
+        },
+        {
+          "verse": 32,
+          "text": "Shemahia, Simeon, Benjamin, Malluc, Shemaria;"
+        },
+        {
+          "verse": 33,
+          "text": "des fils de Hashum, Mathnai, Matthattha, Zabad, Elipheleth, Jeremai, Manasse, Shimhi;"
+        },
+        {
+          "verse": 34,
+          "text": "des fils de Bani, Maadai, Amram, et Uel,"
+        },
+        {
+          "verse": 35,
+          "text": "Benaia, Bedia, Keluhu,"
+        },
+        {
+          "verse": 36,
+          "text": "Vania, Meremoth, Eliashib,"
+        },
+        {
+          "verse": 37,
+          "text": "Matthania, Mathnai, et Jaasçai,"
+        },
+        {
+          "verse": 38,
+          "text": "et Bani, et Binnui, et Shimhi,"
+        },
+        {
+          "verse": 39,
+          "text": "et Shelemia, et Nathan, et Adaia,"
+        },
+        {
+          "verse": 40,
+          "text": "Macnadbai, Shashai, Sharai,"
+        },
+        {
+          "verse": 41,
+          "text": "Azareel, et Shelemia, Shemaria,"
+        },
+        {
+          "verse": 42,
+          "text": "Shallum, Amaria, Joseph;"
+        },
+        {
+          "verse": 43,
+          "text": "des fils de Nebo, Jehiel, Matthithia, Zabad, Zebina, Jaddai, et Joel, Benaia."
+        },
+        {
+          "verse": 44,
+          "text": "Tous ceux-ci avaient pris des femmes etrangeres, et il y en avait parmi eux dont les femmes avaient eu des enfants."
+        }
+      ]
+    }
+  ]
+}

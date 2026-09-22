@@ -1,0 +1,407 @@
+{
+  "book": 51,
+  "book_name": "Colossiens",
+  "abbr": "Col",
+  "chapters": [
+    {
+      "chapter": 1,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Paul, apotre du Christ Jesus par la volonte de Dieu, et Timothee, le frere,"
+        },
+        {
+          "verse": 2,
+          "text": "saints et fideles freres en Christ qui sont à Colasses: Grace et paix à vous, de la part de Dieu notre Pere et du Seigneur Jesus Christ!"
+        },
+        {
+          "verse": 3,
+          "text": "Nous rendons graces au Dieu et Pere de notre Seigneur Jesus Christ, priant toujours pour vous,"
+        },
+        {
+          "verse": 4,
+          "text": "ayant oui parler de votre foi dans le Christ Jesus et de l'amour que vous avez pour tous les saints,"
+        },
+        {
+          "verse": 5,
+          "text": "à cause de l'esperance qui vous est reservee dans les cieux et dont vous avez dejà oui parler dans la parole de la verite de l'evangile,"
+        },
+        {
+          "verse": 6,
+          "text": "qui est parvenu jusqu'à vous, comme aussi il l'est dans tous le monde, et qui porte du fruit et croit, comme aussi parmi vous, depuis le jour ou vous avez entendu et connu la grace de Dieu en verite,"
+        },
+        {
+          "verse": 7,
+          "text": "comme vous l'avez entendue d'Epaphras, notre bien-aime compagnon de service, qui est un fidele serviteur du Christ pour vous,"
+        },
+        {
+          "verse": 8,
+          "text": "qui nous a aussi fait connaitre votre amour dans l'Esprit."
+        },
+        {
+          "verse": 9,
+          "text": "C'est pourquoi nous aussi, depuis le jour ou nous en avons oui parler, nous ne cessons pas de prier et de demander pour vous que vous soyez remplis de la connaissance de sa volonte, en toute sagesse et intelligence spirituelle,"
+        },
+        {
+          "verse": 10,
+          "text": "pour marcher d'une maniere digne du Seigneur pour lui plaire à tous egards, portant du fruit en toute bonne oeuvre, et croissant par la connaissance de Dieu:"
+        },
+        {
+          "verse": 11,
+          "text": "etant fortifies en toute force, selon la puissance de sa gloire, pour toute patience et constance, avec joie,"
+        },
+        {
+          "verse": 12,
+          "text": "rendant graces au Pere qui nous a rendus capables de participer au lot des saints dans la lumiere;"
+        },
+        {
+          "verse": 13,
+          "text": "qui nous a delivres du pouvoir des tenebres, et nous a transportes dans le royaume du Fils de son amour,"
+        },
+        {
+          "verse": 14,
+          "text": "en qui nous avons la redemption, la remission des peches;"
+        },
+        {
+          "verse": 15,
+          "text": "qui est l' image du Dieu invisible, le premier-ne de toute la creation;"
+        },
+        {
+          "verse": 16,
+          "text": "car par lui ont ete crees toutes choses, les choses qui sont dans les cieux, et les choses qui sont sur la terre, les visibles et les invisibles, soit trones, ou seigneuries, ou principautes, ou autorites: toutes choses ont ete crees par lui et pour lui;"
+        },
+        {
+          "verse": 17,
+          "text": "et lui est avant toutes choses, et toutes choses subsistent par lui;"
+        },
+        {
+          "verse": 18,
+          "text": "et il est le chef du corps, de l'assemblee, lui qui est le commencement, le premier-ne d'entre les morts, afin qu'en toutes choses il tienne, lui, la premiere place;"
+        },
+        {
+          "verse": 19,
+          "text": "car, en lui, toute la plenitude s'est plue à habiter,"
+        },
+        {
+          "verse": 20,
+          "text": "et, par lui, à reconcilier toutes choses avec elle-meme, ayant fait la paix par le sang de sa croix, par lui, soit les choses qui sont sur la terre, soit les choses qui sont dans les cieux."
+        },
+        {
+          "verse": 21,
+          "text": "Et vous qui etiez autrefois etrangers et ennemis quant à votre entendement, dans les mauvaises oeuvres, il vous a toutefois maintenant reconcilies"
+        },
+        {
+          "verse": 22,
+          "text": "le corps de sa chair, par la mort, pour vous presenter saints et irreprochables et irreprehensibles devant lui,"
+        },
+        {
+          "verse": 23,
+          "text": "si du moins vous demeurez dans la foi, fondes et fermes, et ne vous laissant pas detourner de l'esperance de l'evangile que vous avez oui, lequel a ete preche dans toute la creation qui est sous le ciel, et duquel moi, Paul, je suis devenu serviteur."
+        },
+        {
+          "verse": 24,
+          "text": "Maintenant, je me rejouis dans les souffrances pour vous, et j'accomplis dans ma chair ce qui reste encore à souffrir des afflictions du Christ pour son corps qui est l'assemblee,"
+        },
+        {
+          "verse": 25,
+          "text": "de laquelle moi je suis devenu serviteur selon l'administration de Dieu qui m'a ete donnee envers vous, pour completer la parole de Dieu,"
+        },
+        {
+          "verse": 26,
+          "text": "savoir le mystere qui avait ete cache des les siecles et des les generations, mais qui a ete maintenant manifeste à ses saints,"
+        },
+        {
+          "verse": 27,
+          "text": "auxquels Dieu a voulu donner à connaitre quelles sont les richesses de la gloire de ce mystere parmi les nations, c'est-à-dire Christ en vous l'esperance de la gloire,"
+        },
+        {
+          "verse": 28,
+          "text": "lequel nous annonçons, exhortant tout homme et enseignant tout homme en toute sagesse, afin que nous presentions tout homme parfait en Christ:"
+        },
+        {
+          "verse": 29,
+          "text": "à quoi aussi je travaille, combattant selon son operation qui opere en moi avec puissance."
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Car je veux que vous sachiez quel combat j'ai pour vous et pour ceux qui sont à Laodicee, et tous ceux qui n'ont point vu mon visage en la chair,"
+        },
+        {
+          "verse": 2,
+          "text": "afin que leurs coeurs soient consoles, etant unis ensemble dans l'amour et pour toutes les richesses de la pleine certitude d'intelligence, pour la connaissance du mystere de Dieu,"
+        },
+        {
+          "verse": 3,
+          "text": "dans lequel sont caches tous les tresors de la sagesse et de la connaissance."
+        },
+        {
+          "verse": 4,
+          "text": "Or je dis ceci, afin que personne ne vous seduise par des discours specieux;"
+        },
+        {
+          "verse": 5,
+          "text": "car lors meme que je suis absent de corps, toutefois je suis avec vous en esprit, me rejouissant et voyant votre ordre, et la fermete de votre foi en Christ."
+        },
+        {
+          "verse": 6,
+          "text": "Comme donc vous avez reçu le Christ Jesus, le Seigneur,"
+        },
+        {
+          "verse": 7,
+          "text": "marchez en lui, enracines et edifies en lui, et affermis dans la foi, selon que vous avez ete enseignes, abondant en elle avec des actions de graces."
+        },
+        {
+          "verse": 8,
+          "text": "Prenez garde que personne ne fasse de vous sa proie par la philosophie et par de vaines deceptions, selon l'enseignement des hommes, selon les elements du monde, et non selon Christ;"
+        },
+        {
+          "verse": 9,
+          "text": "car en lui habite toute la plenitude de la deite corporellement;"
+        },
+        {
+          "verse": 10,
+          "text": "et vous etes accomplis en lui, qui est le chef de toute principaute et autorite,"
+        },
+        {
+          "verse": 11,
+          "text": "qui aussi vous avez ete circoncis d'une circoncision qui n'a pas ete faite de main, dans le depouillement du corps de la chair par la circoncision du Christ,"
+        },
+        {
+          "verse": 12,
+          "text": "etant ensevelis avec lui dans le bapteme, dans lequel aussi vous avez ete ressuscites ensemble par la foi en l'operation de Dieu qui l'a ressuscite d'entre les morts."
+        },
+        {
+          "verse": 13,
+          "text": "Et vous, lorsque vous etiez morts dans vos fautes et dans l'incirconcision de votre chair, il vous a vivifies ensemble avec lui, nous ayant pardonnes toutes nos fautes,"
+        },
+        {
+          "verse": 14,
+          "text": "ayant efface l'obligation qui etait contre nous, laquelle consistait en ordonnances et qui nous etait contraire, et il l'a otee en la clouant à la croix:"
+        },
+        {
+          "verse": 15,
+          "text": "ayant depouille les principautes et les autorites, il les a produites en public, triomphant d'elles en la croix."
+        },
+        {
+          "verse": 16,
+          "text": "Que personne donc ne vous juge en ce qui concerne le manger ou le boire, ou à propos d'un jour de fete ou de nouvelle lune, ou de sabbats,"
+        },
+        {
+          "verse": 17,
+          "text": "qui sont une ombre des choses à venir; mais le corps est du Christ."
+        },
+        {
+          "verse": 18,
+          "text": "Que personne ne vous frustre du prix du combat, faisant sa volonte propre dans l' humilite et dans le culte des anges, s'ingerant dans les choses qu'il n'a pas vues, enfle d'un vain orgueil par les pensees de sa chair,"
+        },
+        {
+          "verse": 19,
+          "text": "et ne tenant pas ferme le chef, duquel tout le corps, alimente et bien uni ensemble par des jointures et des liens, croit de l'accroissement de Dieu."
+        },
+        {
+          "verse": 20,
+          "text": "Si vous etes morts avec Christ aux elements du monde, pourquoi, comme si vous etiez encore en vie dans le monde, etablissez-vous des ordonnances,"
+        },
+        {
+          "verse": 21,
+          "text": "-ne prends pas, ne goute pas, ne touche pas!"
+        },
+        {
+          "verse": 22,
+          "text": "-(choses qui sont toutes destinees à perir par l'usage,) selon les commandements et les enseignements des hommes"
+        },
+        {
+          "verse": 23,
+          "text": "(qui ont bien une apparence de sagesse en devotion volontaire et en humilite, et en ce qu'elles n'epargnent pas le corps, ne lui rendant pas un certain honneur), pour la satisfaction de la chair?"
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Si donc vous avez ete ressuscites avec le Christ, cherchez les choses qui sont en haut, ou le Christ est assis à la droite de Dieu;"
+        },
+        {
+          "verse": 2,
+          "text": "pensez aux choses qui sont en haut, non pas à celles qui sont sur la terre;"
+        },
+        {
+          "verse": 3,
+          "text": "car vous etes morts, et votre vie est cachee avec le Christ en Dieu."
+        },
+        {
+          "verse": 4,
+          "text": "Quand le Christ qui est notre vie, sera manifeste, alors vous aussi, vous serez manifestes avec lui en gloire."
+        },
+        {
+          "verse": 5,
+          "text": "Mortifiez donc vos membres qui sont sur la terre, la fornication, l'impurete, les affections dereglees, la mauvaise convoitise, et la cupidite, qui est de l'idolatrie;"
+        },
+        {
+          "verse": 6,
+          "text": "à cause desquelles la colere de Dieu vient sur les fils de la desobeissance;"
+        },
+        {
+          "verse": 7,
+          "text": "parmi lesquels vous aussi vous avez marche autrefois, quand vous viviez dans ces choses."
+        },
+        {
+          "verse": 8,
+          "text": "Mais maintenant, renoncez vous aussi à toutes ces choses: colere, courroux, malice, injures, paroles honteuses venant de votre bouche."
+        },
+        {
+          "verse": 9,
+          "text": "Ne mentez point l'un à l'autre, ayant depouille le vieil homme avec ses actions"
+        },
+        {
+          "verse": 10,
+          "text": "ayant revetu le nouvel homme qui est renouvele en connaissance, selon l' image de celui qui l'a cree,"
+        },
+        {
+          "verse": 11,
+          "text": "ou il n'y a pas Grec et Juif, circoncision et incirconcision, barbare, Scythe, esclave, homme libre; mais ou Christ est tout et en tous."
+        },
+        {
+          "verse": 12,
+          "text": "Revetez-vous donc, comme des elus de Dieu, saints et bien-aimes, d'entrailles de misericorde, de bonte, d'humilite, de douceur, de longanimite,"
+        },
+        {
+          "verse": 13,
+          "text": "supportant l'un l'autre et vous pardonnant les uns aux autres, si l'un a un sujet de plainte contre un autre; comme aussi le Christ vous a pardonne, vous aussi faites de meme."
+        },
+        {
+          "verse": 14,
+          "text": "Et par-dessus toutes ces choses, revetez-vous de l'amour, qui est le lien de la perfection."
+        },
+        {
+          "verse": 15,
+          "text": "Et que la paix du Christ, à laquelle aussi vous avez ete appeles en un seul corps, preside dans vos coeurs; et soyez reconnaissants."
+        },
+        {
+          "verse": 16,
+          "text": "Que la parole du Christ habite en vous richement, -en toute sagesse vous enseignant et vous exhortant l'un l'autre, par des psaumes, des hymnes, des cantiques spirituels, chantant de vos coeurs à Dieu dans un esprit de grace."
+        },
+        {
+          "verse": 17,
+          "text": "Et quelque chose que vous fassiez, en parole ou en oeuvre, faites tout au nom du Seigneur Jesus, rendant graces par lui à Dieu le Pere."
+        },
+        {
+          "verse": 18,
+          "text": "Femmes, soyez soumises à vos maris, comme il convient dans le Seigneur."
+        },
+        {
+          "verse": 19,
+          "text": "Maris, aimez vos femmes et ne vous aigrissez pas contre elles."
+        },
+        {
+          "verse": 20,
+          "text": "Enfants, obeissez à vos parents en toutes choses, car cela est agreable dans le Seigneur."
+        },
+        {
+          "verse": 21,
+          "text": "Peres, n'irritez pas vos enfants, afin qu'ils ne soient pas decourages."
+        },
+        {
+          "verse": 22,
+          "text": "Esclaves, obeissez en toutes choses à vos maitres selon la chair, ne servant pas sous leurs yeux seulement, comme voulant plaire aux hommes, mais en simplicite de coeur, craignant le Seigneur."
+        },
+        {
+          "verse": 23,
+          "text": "Quoi que vous fassiez, faites-le de coeur, comme pour le Seigneur et non pour les hommes,"
+        },
+        {
+          "verse": 24,
+          "text": "sachant que du Seigneur vous recevrez la recompense de l'heritage: vous servez le Seigneur Christ."
+        },
+        {
+          "verse": 25,
+          "text": "Car celui qui agit injustement, recevra ce qu'il aura fait injustement; et il n'y a pas d'acception de personnes."
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Maitres, accordez à vos esclaves ce qui est juste et equitable, sachant que vous aussi vous avez un maitre dans les cieux."
+        },
+        {
+          "verse": 2,
+          "text": "Perseverez dans la priere, veillant en elle avec des actions de graces;"
+        },
+        {
+          "verse": 3,
+          "text": "priant en meme temps aussi pour nous, afin que Dieu nous ouvre une porte pour la parole, pour annoncer le mystere du Christ, mystere pour lequel aussi je suis lie,"
+        },
+        {
+          "verse": 4,
+          "text": "afin que je le manifeste comme je dois parler."
+        },
+        {
+          "verse": 5,
+          "text": "Marchez dans la sagesse envers ceux de dehors, saisissant l'occasion."
+        },
+        {
+          "verse": 6,
+          "text": "Que votre parole soit toujours dans un esprit de grace, assaisonnee de sel, afin que vous sachiez comment vous devez repondre à chacun."
+        },
+        {
+          "verse": 7,
+          "text": "Tychique, le bien-aime frere et fidele serviteur et compagnon de service dans le Seigneur, vous fera savoir tout ce qui me concerne:"
+        },
+        {
+          "verse": 8,
+          "text": "je l'ai envoye vers vous tout expres, afin qu'il connaisse l'etat de vos affaires, et qu'il console vos coeurs, avec Onesime,"
+        },
+        {
+          "verse": 9,
+          "text": "le fidele et bien-aime frere, qui est des votres. Ils vous informeront de toutes les choses d'ici."
+        },
+        {
+          "verse": 10,
+          "text": "Aristarque, mon compagnon de captivite, vous salue, et Marc, le neveu de Barnabas, touchant lequel vous avez reçu des ordres (s'il vient vers vous, recevez-le),"
+        },
+        {
+          "verse": 11,
+          "text": "et Jesus appele Juste, -qui sont de la circoncision. Ceux-ci sont les seuls compagnons d'oeuvre pour le royaume de Dieu qui aussi m'ont ete en consolation."
+        },
+        {
+          "verse": 12,
+          "text": "Epaphras qui est des votres, esclave du Christ Jesus, vous salue, combattant toujours pour vous par des prieres, afin que vous demeuriez parfaits et bien assures dans toute la volonte de Dieu;"
+        },
+        {
+          "verse": 13,
+          "text": "car je lui rends temoignage qu'il est dans un grand travail de coeur pour vous, et pour ceux qui sont à Laodicee, et pour ceux qui sont à Hierapolis."
+        },
+        {
+          "verse": 14,
+          "text": "Luc, le medecin bien-aime, vous salue, et Demas."
+        },
+        {
+          "verse": 15,
+          "text": "Saluez les freres qui sont à Laodicee, et Nymphas, et l'assemblee qui se reunit dans sa maison."
+        },
+        {
+          "verse": 16,
+          "text": "Et quand la lettre aura ete lue parmi vous, faites qu'elle soit lue aussi dans l'assemblee des Laodiceens, et vous aussi lisez celle qui viendra de Laodicee."
+        },
+        {
+          "verse": 17,
+          "text": "Et dites à Archippe: Prends garde au service que tu as reçu dans le Seigneur, afin que tu l'accomplisses."
+        },
+        {
+          "verse": 18,
+          "text": "La salutation, de la propre main de moi, Paul. -Souvenez-vous de mes liens. La grace soit avec vous!"
+        }
+      ]
+    }
+  ]
+}
