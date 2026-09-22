@@ -1,56 +1,64 @@
-name: Build APK E-Biblia
+name: Build Android APK
 
 on:
   push:
     branches:
       - main
+      - master
   workflow_dispatch:
 
 jobs:
-  build-apk:
-    name: Construire E-Biblia APK
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Récupérer le code source
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Installer Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
 
-      - name: Installer Java 21
+      - name: Setup Java JDK
         uses: actions/setup-java@v4
         with:
-          distribution: temurin
-          java-version: '21'
+          distribution: 'zulu'
+          java-version: '17'
 
-      - name: Installer les dépendances
-        run: npm install
-
-      - name: Vérifier Capacitor
-        run: npx cap doctor
-
-      - name: Synchroniser l'application avec Android
-        run: npx cap sync android
-
-      - name: Donner les permissions à Gradle
-        run: chmod +x android/gradlew
-
-      - name: Construire l'APK
-        working-directory: android
-        run: ./gradlew assembleDebug
-
-      - name: Vérifier que l'APK existe
+      - name: Préparation de la structure du projet
         run: |
-          ls -lh android/app/build/outputs/apk/debug/
-          test -f android/app/build/outputs/apk/debug/app-debug.apk
+          if [ -d "E-Biblia-GitHub-APK-ready" ]; then
+            echo "Sous-dossier E-Biblia-GitHub-APK-ready détecté. Déplacement des fichiers à la racine..."
+            cp -rn E-Biblia-GitHub-APK-ready/* . || true
+          fi
 
-      - name: Publier l'APK
+      - name: Installation des dépendances npm
+        run: |
+          npm install
+
+      - name: Synchronisation Capacitor (si présent)
+        run: |
+          if [ -f "capacitor.config.json" ] || [ -f "capacitor.config.ts" ]; then
+            npx cap sync android
+          else
+            echo "Information: Aucune configuration Capacitor détectée."
+          fi
+
+      - name: Compilation de l'APK Android
+        run: |
+          if [ -d "android" ]; then
+            cd android
+            chmod +x gradlew
+            ./gradlew assembleDebug
+          else
+            echo "Erreur: Le dossier 'android' est absent du projet. La compilation nécessite un projet Android configuré."
+            exit 1
+          fi
+
+      - name: Téléversement de l'APK généré
         uses: actions/upload-artifact@v4
+        if: success()
         with:
-          name: E-Biblia-APK
+          name: E-Biblia-APK-Debug
           path: android/app/build/outputs/apk/debug/app-debug.apk
-          if-no-files-found: error
