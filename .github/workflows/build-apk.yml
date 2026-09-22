@@ -40,7 +40,7 @@ jobs:
       - name: Synchronisation Capacitor (si présent)
         run: |
           if [ -f "capacitor.config.json" ] || [ -f "capacitor.config.ts" ]; then
-            npx cap sync android
+            npx --yes @capacitor/cli sync android
           else
             echo "Information: Aucune configuration Capacitor détectée."
           fi
