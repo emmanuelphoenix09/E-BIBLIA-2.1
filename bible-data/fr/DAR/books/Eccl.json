@@ -1,0 +1,955 @@
+{
+  "book": 21,
+  "book_name": "Ecclésiaste",
+  "abbr": "Eccl",
+  "chapters": [
+    {
+      "chapter": 1,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Les paroles du Predicateur, fils de David, roi à Jerusalem."
+        },
+        {
+          "verse": 2,
+          "text": "Vanite des vanites, dit le predicateur; vanite des vanites! Tout est vanite."
+        },
+        {
+          "verse": 3,
+          "text": "Quel profit a l'homme de tout son labeur dont il se tourmente sous le soleil?"
+        },
+        {
+          "verse": 4,
+          "text": "Une generation s'en va, et une generation vient; et la terre subsiste toujours."
+        },
+        {
+          "verse": 5,
+          "text": "Et le soleil se leve, et le soleil se couche, et il se hate vers son lieu ou il se leve."
+        },
+        {
+          "verse": 6,
+          "text": "Le vent va vers le midi, et il tourne vers le nord; il tourne et retourne; et le vent revient sur ses circuits."
+        },
+        {
+          "verse": 7,
+          "text": "Toutes les rivieres vont vers la mer, et la mer n'est pas remplie; au lieu ou les rivieres allaient, là elles vont de nouveau."
+        },
+        {
+          "verse": 8,
+          "text": "Toutes choses travaillent, l'homme ne peut le dire; l'oeil ne se rassasie pas de voir, et l'oreille ne se satisfait pas d'entendre."
+        },
+        {
+          "verse": 9,
+          "text": "Ce qui a ete, c'est ce qui sera; et ce qui a ete fait, c'est ce qui se fera; et il n'y a rien de nouveau sous le soleil."
+        },
+        {
+          "verse": 10,
+          "text": "Y a-t-il une chose dont on puisse dire: Regarde ceci, c'est nouveau? -Elle a ete dejà, dans les siecles qui furent avant nous."
+        },
+        {
+          "verse": 11,
+          "text": "Il n'y a pas de souvenir des choses qui ont precede; et de meme, de celles qui seront apres, il n'y a en aura pas de souvenir chez ceux qui vivront plus tard."
+        },
+        {
+          "verse": 12,
+          "text": "Moi, le predicateur, j'ai ete roi sur Israel à Jerusalem,"
+        },
+        {
+          "verse": 13,
+          "text": "et j'ai applique mon coeur à rechercher et à explorer par la sagesse tout ce qui se fait sous les cieux: c'est une occupation ingrate que Dieu a donnee aux fils des hommes afin qu'ils s'y fatiguent."
+        },
+        {
+          "verse": 14,
+          "text": "J'ai vu tous les travaux qui se font sous le soleil; et voici, tout est vanite et poursuite du vent."
+        },
+        {
+          "verse": 15,
+          "text": "Ce qui est tordu ne peut etre redresse, et ce qui manque ne peut etre compte."
+        },
+        {
+          "verse": 16,
+          "text": "J'ai parle en mon coeur, disant: Voici, je suis devenu grand et j'ai acquis de la sagesse plus que tous ceux qui ont ete avant moi sur Jerusalem, et mon coeur a vu beaucoup de sagesse et de connaissance;"
+        },
+        {
+          "verse": 17,
+          "text": "et j'ai applique mon coeur à la connaissance de la sagesse et à la connaissance des choses deraisonnables et de la folie. J'ai connu que cela aussi, c'est la poursuite du vent."
+        },
+        {
+          "verse": 18,
+          "text": "Car à beaucoup de sagesse, beaucoup de chagrin; et qui augmente la connaissance, augmente la douleur."
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "J'ai dit en mon coeur: Allons! je t'eprouverai par la joie: jouis donc du bien-etre."
+        },
+        {
+          "verse": 2,
+          "text": "Et voici, cela aussi est vanite. J'ai dit au rire: Tu es deraison; et à la joie: Que fait-elle?"
+        },
+        {
+          "verse": 3,
+          "text": "J'ai recherche en mon coeur de traiter ma chair avec du vin, tout en conduisant mon coeur par la sagesse, et de saisir la folie, jusqu'à ce que je visse quel serait, pour les fils des hommes, ce bien qu'ils feraient sous les cieux tous les jours de leur vie."
+        },
+        {
+          "verse": 4,
+          "text": "J'ai fait de grandes choses: je me suis bati des maisons, je me suis plante des vignes;"
+        },
+        {
+          "verse": 5,
+          "text": "je me suis fait des jardins et des parcs, et j'y ai plante des arbres à fruit de toute espece;"
+        },
+        {
+          "verse": 6,
+          "text": "je me suis fait des reservoirs d'eau pour en arroser la foret ou poussent les arbres."
+        },
+        {
+          "verse": 7,
+          "text": "J'ai acquis des serviteurs et des servantes, et j'en ai eu qui sont nes dans ma maison; j'ai eu aussi des troupeaux de gros et de menu betail, en grand nombre, plus que tous ceux qui ont ete avant moi à Jerusalem."
+        },
+        {
+          "verse": 8,
+          "text": "Je me suis aussi amasse de l'argent et de l'or, et les tresors des rois et des provinces; je me suis procure des chanteurs et des chanteuses, et les delices des fils des hommes, une femme et des concubines."
+        },
+        {
+          "verse": 9,
+          "text": "Et je suis devenu grand et je me suis accru plus que tous ceux qui ont ete avant moi à Jerusalem; et pourtant ma sagesse est demeuree avec moi."
+        },
+        {
+          "verse": 10,
+          "text": "Et quoi que mes yeux aient desire, je ne les en ai point prives; je n'ai refuse à mon coeur aucune joie, car mon coeur s'est rejoui de tout mon travail, et c'est là la part que j'ai eue de tout mon travail."
+        },
+        {
+          "verse": 11,
+          "text": "Et je me suis tourne vers toutes les oeuvres que mes mains avaient faites, et vers tout le travail dont je m'etais travaille pour les faire; et voici, tout etait vanite et poursuite du vent, et il n'y en avait aucun profit sous le soleil."
+        },
+        {
+          "verse": 12,
+          "text": "Et je me suis tourne pour voir la sagesse, et les choses deraisonnables et la folie; car que fera l'homme qui viendra apres le roi? -ce qui a ete dejà fait."
+        },
+        {
+          "verse": 13,
+          "text": "Et j'ai vu que la sagesse a un avantage sur la folie, comme la lumiere a un avantage sur les tenebres."
+        },
+        {
+          "verse": 14,
+          "text": "Le sage a ses yeux à sa tete, et le fou marche dans les tenebres; mais j'ai connu, moi aussi, qu'un meme sort les atteint tous."
+        },
+        {
+          "verse": 15,
+          "text": "Et j'ai dit en mon coeur: Le sort du fou m'atteint, moi aussi; et pourquoi alors ai-je ete si sage? Et j'ai dit en mon coeur que cela aussi est vanite."
+        },
+        {
+          "verse": 16,
+          "text": "Car jamais on ne se souviendra du sage, non plus que du fou, puisque dejà dans les jours qui viennent tout est oublie. Et comment le sage meurt-il comme le fou?"
+        },
+        {
+          "verse": 17,
+          "text": "Et j'ai hai la vie, parce que l'oeuvre qui se fait sous le soleil m'a ete à charge, car tout est vanite et poursuite du vent."
+        },
+        {
+          "verse": 18,
+          "text": "Et j'ai hai tout le travail auquel j'ai travaille sous le soleil, parce que je dois le laisser à l'homme qui sera apres moi."
+        },
+        {
+          "verse": 19,
+          "text": "Et qui sait s'il sera un sage ou un sot? Et il sera maitre de tout mon travail auquel j'ai travaille et dans lequel j'ai ete sage sous le soleil. Cela aussi est vanite."
+        },
+        {
+          "verse": 20,
+          "text": "Alors je me suis mis à faire desesperer mon coeur à l'egard de tout le travail dont je me suis travaille sous le soleil."
+        },
+        {
+          "verse": 21,
+          "text": "Car il y a tel homme qui a travaille avec sagesse, et avec connaissance, et avec droiture, et qui laisse ce qu'il a acquis à un homme qui n'y a pas travaille, pour etre son partage. Cela aussi est vanite et un grand mal."
+        },
+        {
+          "verse": 22,
+          "text": "Car qu'est-ce que l'homme a de tout son travail, et de la poursuite de son coeur, dont il s'est tourmente sous le soleil?"
+        },
+        {
+          "verse": 23,
+          "text": "Car tous ses jours sont douleur, et son occupation est chagrin; meme la nuit son coeur ne repose pas. Cela aussi est vanite."
+        },
+        {
+          "verse": 24,
+          "text": "Il n'y a rien de bon pour l'homme que de manger et de boire, et de faire jouir son ame du bien-etre dans son travail. Et j'ai vu que cela aussi vient de la main de Dieu."
+        },
+        {
+          "verse": 25,
+          "text": "Car qui peut manger, et qui peut jouir plus que moi?"
+        },
+        {
+          "verse": 26,
+          "text": "Car à l'homme qui est bon devant lui, Dieu donne sagesse et connaissance et joie; mais à celui qui peche, il donne l'occupation de rassembler et d'amasser, pour donner à celui qui est bon devant Dieu. Cela aussi est vanite et poursuite du vent."
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Il y a une saison pour tout, et il y a un temps pour toute affaire sous les cieux."
+        },
+        {
+          "verse": 2,
+          "text": "Il y a un temps de naitre, et un temps de mourir; un temps de planter, et un temps d'arracher ce qui est plante;"
+        },
+        {
+          "verse": 3,
+          "text": "un temps de tuer, et un temps de guerir; un temps de demolir, et un temps de batir;"
+        },
+        {
+          "verse": 4,
+          "text": "un temps de pleurer, et un temps de rire; un temps de se lamenter, et un temps de sauter de joie;"
+        },
+        {
+          "verse": 5,
+          "text": "un temps de jeter des pierres, et un temps d'amasser des pierres; un temps d'embrasser, et un temps de s'eloigner des embrassements;"
+        },
+        {
+          "verse": 6,
+          "text": "un temps de chercher, et un temps de perdre; un temps de garder, et un temps de jeter;"
+        },
+        {
+          "verse": 7,
+          "text": "un temps de dechirer, et un temps de coudre; un temps de se taire, et un temps de parler;"
+        },
+        {
+          "verse": 8,
+          "text": "un temps d'aimer, et un temps de hair; un temps de guerre, et un temps de paix."
+        },
+        {
+          "verse": 9,
+          "text": "Celui qui agit, quel profit a-t-il de ce à quoi il travaille?"
+        },
+        {
+          "verse": 10,
+          "text": "J'ai vu l'occupation que Dieu a donnee aux fils des hommes pour s'y fatiguer:"
+        },
+        {
+          "verse": 11,
+          "text": "il a fait toute chose belle en son temps; et il a mis le monde dans leur coeur, de sorte que l'homme ne peut comprendre, depuis le commencement jusqu'à la fin, l'oeuvre que Dieu a faite."
+        },
+        {
+          "verse": 12,
+          "text": "J'ai connu qu'il n'y a rien de bon pour eux, sauf de se rejouir et de se faire du bien pendant leur vie;"
+        },
+        {
+          "verse": 13,
+          "text": "et aussi que tout homme mange et boive, et qu'il jouisse du bien-etre dans tout son travail: cela, c'est un don de Dieu."
+        },
+        {
+          "verse": 14,
+          "text": "J'ai connu que tout ce que Dieu fait subsiste à toujours; il n'y a rien à y ajouter, ni rien à en retrancher; et Dieu le fait, afin que, devant lui, on craigne."
+        },
+        {
+          "verse": 15,
+          "text": "Ce qui est a dejà ete, et ce qui est à venir est dejà arrive, et Dieu ramene ce qui est passe."
+        },
+        {
+          "verse": 16,
+          "text": "Et j'ai encore vu sous le soleil que, dans le lieu du jugement, là il y avait la mechancete, et que, dans le lieu de la justice, là il y avait la mechancete."
+        },
+        {
+          "verse": 17,
+          "text": "J'ai dit en mon coeur: Dieu jugera le juste et le mechant; car il y a là un temps pour toute affaire et pour toute oeuvre."
+        },
+        {
+          "verse": 18,
+          "text": "J'ai dit en mon coeur: Quant aux fils des hommes il en est ainsi, pour que Dieu les eprouve, et qu'ils voient eux-memes qu'ils ne sont que des betes."
+        },
+        {
+          "verse": 19,
+          "text": "Car ce qui arrive aux fils des hommes et aussi ce qui arrive aux betes; il y a pour tous un meme sort: comme celle-ci meurt, ainsi meurt celui-là; et ils ont tous un meme souffle, et l'homme n'a point d'avantage sur la bete, car tout est vanite."
+        },
+        {
+          "verse": 20,
+          "text": "Tout va dans un meme lieu, tout est de poussiere, et tout retourne à la poussiere."
+        },
+        {
+          "verse": 21,
+          "text": "Qui est-ce qui connait l'esprit des fils des hommes? Celui-ci monte-t-il en haut, et l'esprit de la bete descend-il en bas dans la terre?"
+        },
+        {
+          "verse": 22,
+          "text": "Et j'ai vu qu'il n'y a rien de mieux que ceci: que l'homme se rejouisse dans ce qu'il fait, car c'est là sa part; car qui l'amenera pour voir ce qui sera apres lui?"
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et je me suis tourne, et j'ai regarde toutes les oppressions qui se font sous le soleil; et voici les larmes des opprimes, et il n'y a point pour eux de consolateur! Et la force est dans la main de leurs oppresseurs, et il n'y a point pour eux de consolateur!"
+        },
+        {
+          "verse": 2,
+          "text": "C'est pourquoi j'estime heureux les morts qui sont dejà morts, plutot que les vivants qui sont encore vivants,"
+        },
+        {
+          "verse": 3,
+          "text": "et plus heureux encore que tous les deux celui qui n'a pas encore ete, qui n'a pas vu le mauvais travail qui se fait sous le soleil."
+        },
+        {
+          "verse": 4,
+          "text": "Et j'ai vu tout le labeur et toute l'habilete dans le travail: que c'est une jalousie de l'un contre l'autre. Cela aussi est vanite et poursuite du vent."
+        },
+        {
+          "verse": 5,
+          "text": "Le sot se croise les mains, et mange sa propre chair."
+        },
+        {
+          "verse": 6,
+          "text": "Mieux vaut le creux de la main rempli, et le repos, que les deux mains pleines, avec le travail et la poursuite du vent."
+        },
+        {
+          "verse": 7,
+          "text": "Et je me tournai, et je vis la vanite sous le soleil:"
+        },
+        {
+          "verse": 8,
+          "text": "tel est seul sans qu'il y ait de second: il n'a pas non plus de fils ni de frere, et il n'y a pas de fin à tout son labeur; son oeil n'est pas non plus rassasie par la richesse, et il ne se dit pas: Pour qui donc est-ce que je me tourmente et que je prive mon ame de bonheur? Cela aussi est une vanite et une ingrate occupation."
+        },
+        {
+          "verse": 9,
+          "text": "deux valent mieux qu'un; car ils ont un bon salaire de leur travail."
+        },
+        {
+          "verse": 10,
+          "text": "Car, s'ils tombent, l'un relevera son compagnon; mais malheur à celui qui est seul, et qui tombe, et qui n'a pas de second pour le relever!"
+        },
+        {
+          "verse": 11,
+          "text": "De meme, si l'on couche à deux, on a de la chaleur; mais celui qui est seul, comment aura-t-il chaud?"
+        },
+        {
+          "verse": 12,
+          "text": "Et si quelqu'un a le dessus sur un seul, les deux lui tiendront tete; et la corde triple ne se rompt pas vite."
+        },
+        {
+          "verse": 13,
+          "text": "Mieux vaut un jeune garçon pauvre et sage, qu'un roi vieux et sot qui ne sait plus etre averti."
+        },
+        {
+          "verse": 14,
+          "text": "Car il est sorti de la maison des prisonniers pour regner, lors meme qu'il est ne pauvre dans son royaume."
+        },
+        {
+          "verse": 15,
+          "text": "J'ai vu tous les vivants qui marchent sous le soleil, avec le jeune garçon, le second, qui occupera sa place."
+        },
+        {
+          "verse": 16,
+          "text": "Il n'y a pas de fin à tout le peuple, à tous ceux qui ont ete devant eux; cependant ceux qui viendront apres ne se rejouiront point en lui. Car cela aussi est vanite et poursuite du vent."
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Prends garde à ton pied, quand tu vas dans la maison de Dieu, et approche-toi pour entendre, plutot que pour donner le sacrifice des sots; car ils ne savent pas qu'ils font mal."
+        },
+        {
+          "verse": 2,
+          "text": "Ne te presse point de ta bouche, et que ton coeur ne se hate point de proferer une parole devant Dieu; car Dieu est dans les cieux, et toi sur la terre: c'est pourquoi, que tes paroles soient peu nombreuses."
+        },
+        {
+          "verse": 3,
+          "text": "Car le songe vient de beaucoup d'occupations, et la voix du sot de beaucoup de paroles."
+        },
+        {
+          "verse": 4,
+          "text": "Quand tu auras voue un voeu à Dieu, ne tarde point à l'acquitter; car il ne prend pas plaisir aux sots: ce que tu auras voue, accomplis-le."
+        },
+        {
+          "verse": 5,
+          "text": "Mieux vaut que tu ne fasses point de voeu, que d'en faire un et de ne pas l'accomplir."
+        },
+        {
+          "verse": 6,
+          "text": "Ne permets pas à ta bouche de faire pecher ta chair, et ne dis point devant l'ange que c'est une erreur. Pourquoi Dieu se courroucerait-il à ta voix, et detruirait-il l'oeuvre de tes mains?"
+        },
+        {
+          "verse": 7,
+          "text": "Car dans la multitude des songes il y a des vanites, et aussi dans beaucoup de paroles; mais crains Dieu."
+        },
+        {
+          "verse": 8,
+          "text": "Si tu vois le pauvre opprime et le droit et la justice violentes dans un province, ne t'etonne pas de cela; car il y en a un qui est haut au-dessus des hauts, et qui prend garde, et il y en a de plus hauts qu'eux."
+        },
+        {
+          "verse": 9,
+          "text": "La terre est profitable à tous egards, le roi meme est asservi à la glebe."
+        },
+        {
+          "verse": 10,
+          "text": "Celui qui aime l'argent n'est point rassasie par l'argent, et celui qui aime les richesses ne l'est pas par le revenu. Cela aussi est vanite."
+        },
+        {
+          "verse": 11,
+          "text": "Avec l'augmentation des biens, ceux qui les mangent augmentent aussi; et quel profit en a le maitre, sauf qu'il les voit de ses yeux?"
+        },
+        {
+          "verse": 12,
+          "text": "Le sommeil est doux pour celui qui travaille, qu'il mange peu ou beaucoup; mais le rassasiement du riche ne le laisse pas dormir."
+        },
+        {
+          "verse": 13,
+          "text": "Il y a un mal douloureux que j'ai vu sous le soleil: les richesses sont conservees à leurs maitres pour leur detriment,"
+        },
+        {
+          "verse": 14,
+          "text": "-ou ces richesses perissent par quelque circonstance malheureuse, et il a engendre un fils, et il n'a rien en sa main."
+        },
+        {
+          "verse": 15,
+          "text": "Comme il est sorti du ventre de sa mere, il s'en retournera nu, s'en allant comme il est venu, et de son travail il n'emportera rien qu'il puisse prendre dans sa main."
+        },
+        {
+          "verse": 16,
+          "text": "Et cela aussi est un mal douloureux, que, tout comme il est venu, ainsi il s'en va; et quel profit a-t-il d'avoir travaille pour le vent?"
+        },
+        {
+          "verse": 17,
+          "text": "Il mange aussi tous les jours de sa vie dans les tenebres et se chagrine beaucoup, et est malade et irrite."
+        },
+        {
+          "verse": 18,
+          "text": "Voici ce que j'ai vu de bon et de beau: c'est de manger et de boire et de jouir du bien-etre dans tout le travail dont l'homme se tourmente sous le soleil tous les jours de sa vie, que Dieu lui a donnes; car c'est là sa part."
+        },
+        {
+          "verse": 19,
+          "text": "Et encore tout homme auquel Dieu donne de la richesse et des biens, et le pouvoir d'en manger et d'en prendre sa part, et de se rejouir en son travail,...c'est là un don de Dieu;"
+        },
+        {
+          "verse": 20,
+          "text": "car il ne se souviendra pas beaucoup des jours de sa vie; car Dieu lui a donne une reponse dans la joie de son coeur."
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Il y a un mal que j'ai vu sous le soleil, et qui est frequent parmi les hommes:"
+        },
+        {
+          "verse": 2,
+          "text": "il y a tel homme à qui Dieu donne de la richesse, et des biens, et de l'honneur, et il ne manque rien à son ame de tout ce qu'il desire; et Dieu ne lui a pas donne le pouvoir d'en manger, car un etranger s'en repait. Cela est une vanite et un mal douloureux."
+        },
+        {
+          "verse": 3,
+          "text": "Si un homme engendre cent fils, et qu'il vive beaucoup d'annees, et que les jours de ses annees soient en grand nombre, et que son ame ne soit pas rassasiee de bien, et aussi qu'il n'ait pas de sepulture, je dis que mieux vaut un avorton que lui;"
+        },
+        {
+          "verse": 4,
+          "text": "car celui-ci vient dans la vanite, et il s'en va dans les tenebres, et son nom est couvert de tenebres;"
+        },
+        {
+          "verse": 5,
+          "text": "et aussi il n'a pas vu et n'a pas connu le soleil: celui-ci a plus de repos que celui-là."
+        },
+        {
+          "verse": 6,
+          "text": "Et s'il vivait deux fois mille ans, il n'aura pas vu le bonheur: tous ne vont-ils pas en un meme lieu?"
+        },
+        {
+          "verse": 7,
+          "text": "Tout le travail de l'homme est pour sa bouche, et cependant son desir n'est pas satisfait."
+        },
+        {
+          "verse": 8,
+          "text": "Car quel avantage le sage a-t-il sur le sot? Quel avantage a l'afflige qui sait marcher devant les vivants?"
+        },
+        {
+          "verse": 9,
+          "text": "Mieux vaut la vue des yeux que le mouvement du desir. Cela aussi est vanite et poursuite du vent."
+        },
+        {
+          "verse": 10,
+          "text": "Ce qui existe a dejà ete appele de son nom; et on sait ce qu'est l'homme, et qu'il ne peut contester avec celui qui est plus fort que lui."
+        },
+        {
+          "verse": 11,
+          "text": "Car il y a beaucoup de choses qui multiplient la vanite: quel avantage en a l'homme?"
+        },
+        {
+          "verse": 12,
+          "text": "Car qui sait ce qui est bon pour l'homme dans la vie, tous les jours de la vie de sa vanite, qu'il passe comme une ombre? Et qui declarera à l'homme ce qui sera apres lui sous le soleil?"
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Mieux vaut une bonne renommee que le bon parfum, et le jour de la mort que le jour de la naissance."
+        },
+        {
+          "verse": 2,
+          "text": "Mieux vaut aller dans la maison de deuil, que d'aller dans la maison de festin, en ce que là est la fin de tout homme; et le vivant prend cela à coeur."
+        },
+        {
+          "verse": 3,
+          "text": "Mieux vaut le chagrin que le rire, car le coeur est rendu meilleur par la tristesse du visage."
+        },
+        {
+          "verse": 4,
+          "text": "Le coeur des sages est dans la maison de deuil, mais le coeur des sots, dans la maison de joie."
+        },
+        {
+          "verse": 5,
+          "text": "Mieux vaut ecouter la reprehension du sage, que d'ecouter la chanson des sots."
+        },
+        {
+          "verse": 6,
+          "text": "Car comme le bruit des epines sous la marmite, ainsi est le rire du sot. Cela aussi est vanite."
+        },
+        {
+          "verse": 7,
+          "text": "Certainement, l'oppression rend insense le sage, et le don ruine le coeur."
+        },
+        {
+          "verse": 8,
+          "text": "Mieux vaut la fin d'une chose que son commencement. Mieux vaut un esprit patient qu'un esprit hautain."
+        },
+        {
+          "verse": 9,
+          "text": "Ne te hate pas en ton esprit pour t'irriter, car l'irritation repose dans le sein des sots."
+        },
+        {
+          "verse": 10,
+          "text": "Ne dis pas: Comment se fait-il que les jours precedents ont ete meilleurs que ceux-ci? car ce n'est pas par sagesse que tu t'enquiers de cela."
+        },
+        {
+          "verse": 11,
+          "text": "La sagesse est aussi bonne qu'un heritage, et profitable pour ceux qui voient le soleil;"
+        },
+        {
+          "verse": 12,
+          "text": "car on est à l'ombre de la sagesse comme à l'ombre de l'argent; mais l'avantage de la connaissance, c'est que la sagesse fait vivre celui qui la possede."
+        },
+        {
+          "verse": 13,
+          "text": "Considere l'oeuvre de Dieu, car qui peut redresser ce qu'il a tordu?"
+        },
+        {
+          "verse": 14,
+          "text": "Au jour du bien-etre, jouis du bien-etre, et, au jour de l'adversite, prends garde; car Dieu a place l'un vis-à-vis de l'autre, afin que l'homme ne trouve rien de ce qui sera apres lui."
+        },
+        {
+          "verse": 15,
+          "text": "J'ai vu tout cela dans les jours de ma vanite: il y a tel juste qui perit par sa justice, et il y a tel mechant qui prolonge ses jours par son iniquite."
+        },
+        {
+          "verse": 16,
+          "text": "Ne sois pas juste à l'exces, et ne fais pas le sage outre mesure; pourquoi te detruirais-tu?"
+        },
+        {
+          "verse": 17,
+          "text": "Ne sois pas mechant à l'exces, et ne sois pas insense: pourquoi mourrais-tu avant ton temps?"
+        },
+        {
+          "verse": 18,
+          "text": "-Il est bon que tu saisisses ceci et que tu ne retires point ta main de cela; car qui craint Dieu sort de tout."
+        },
+        {
+          "verse": 19,
+          "text": "La sagesse fortifie le sage plus que dix hommes puissants qui sont dans la ville."
+        },
+        {
+          "verse": 20,
+          "text": "Certes, il n'y a pas d'homme juste sur la terre qui ait fait le bien et qui n'ait pas peche."
+        },
+        {
+          "verse": 21,
+          "text": "Aussi ne mets pas ton coeur à toutes les paroles qu'on dit, afin que tu n'entendes pas ton serviteur te maudissant."
+        },
+        {
+          "verse": 22,
+          "text": "Car aussi ton coeur sait que bien des fois, toi aussi, tu as maudit les autres."
+        },
+        {
+          "verse": 23,
+          "text": "J'ai eprouve tout cela par la sagesse; j'ai dit: je serai sage; mais elle etait loin de moi."
+        },
+        {
+          "verse": 24,
+          "text": "Ce qui a ete loin et tres profond, qui le trouvera?"
+        },
+        {
+          "verse": 25,
+          "text": "Je me suis mis, moi et mon coeur, à connaitre et à explorer et à rechercher la sagesse et l'intelligence, et à connaitre que la mechancete est sottise, et la folie, deraison;"
+        },
+        {
+          "verse": 26,
+          "text": "et j'ai trouve plus amere que la mort la femme dont le coeur est comme des filets et des rets, et dont les mains sont des chaines: celui qui est agreable à Dieu lui echappera, mais celui qui peche sera pris par elle."
+        },
+        {
+          "verse": 27,
+          "text": "Regarde ceci que j'ai trouve, dit le predicateur, en examinant les choses une à une pour en trouver la raison,"
+        },
+        {
+          "verse": 28,
+          "text": "ce que mon ame cherche encore et que je n'ai pas trouve: j'ai trouve un homme entre mille mais une femme entre elles toutes je ne l'ai pas trouvee."
+        },
+        {
+          "verse": 29,
+          "text": "Seulement voici, j'ai trouve que Dieu a fait l'homme droit; mais eux, ils ont cherche beaucoup de raisonnements."
+        }
+      ]
+    },
+    {
+      "chapter": 8,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Qui est comme le sage? et qui sait l'explication des choses? La sagesse d'un homme illumine son visage, et l'arrogance de son visage en est changee."
+        },
+        {
+          "verse": 2,
+          "text": "dis: Prends garde au commandement du roi, et cela à cause du serment fait à Dieu."
+        },
+        {
+          "verse": 3,
+          "text": "Ne te presse pas de t'en aller de devant lui; ne persevere point dans une chose mauvaise; car tout ce qu'il lui plait, il le fait;"
+        },
+        {
+          "verse": 4,
+          "text": "parce que la parole du roi est une puissance, et qui lui dira: Que fais-tu?"
+        },
+        {
+          "verse": 5,
+          "text": "Celui qui garde le commandement ne connaitra aucun mal; et le coeur du sage connait le temps et le jugement;"
+        },
+        {
+          "verse": 6,
+          "text": "car pour toute chose il y a un temps et un jugement. Car la misere de l'homme abonde sur lui;"
+        },
+        {
+          "verse": 7,
+          "text": "car il ne sait pas ce qui adviendra; car comment cela arrivera, qui le lui declarera?"
+        },
+        {
+          "verse": 8,
+          "text": "Il n'y a point d'homme qui ait pouvoir sur l'esprit pour emprisonner l'esprit, et il n'y a personne qui ait de la puissance sur le jour de la mort, et il n'y a point de dispense dans une telle guerre, et la mechancete ne delivrera pas ceux qui la pratiquent."
+        },
+        {
+          "verse": 9,
+          "text": "J'ai vu tout cela, et j'ai applique mon coeur à toute oeuvre qui se fait sous le soleil. Il est un temps ou des hommes dominent sur des hommes pour leur mal."
+        },
+        {
+          "verse": 10,
+          "text": "Et de meme j'ai vu des mechants enterres et s'en allant, mais ceux qui avaient bien fait s'en allaient du lieu saint, et etaient oublies dans la ville. Cela aussi est vanite."
+        },
+        {
+          "verse": 11,
+          "text": "Parce que la sentence contre les mauvaises oeuvres ne s'execute pas immediatement, à cause de cela le coeur des fils des hommes est au dedans d'eux plein d'envie de faire le mal."
+        },
+        {
+          "verse": 12,
+          "text": "Bien que le pecheur fasse le mal cent fois et prolonge ses jours, je sais cependant que tout ira bien pour ceux qui craignent Dieu, parce qu'ils craignent sa face;"
+        },
+        {
+          "verse": 13,
+          "text": "mais il n'y aura pas de bonheur pour le mechant, et il ne prolongera pas ses jours, comme l'ombre, parce qu'il ne craint pas la face de Dieu."
+        },
+        {
+          "verse": 14,
+          "text": "Il est encore une vanite qui a lieu sur la terre: c'est qu'il y a des justes auxquels il arrive selon l'oeuvre des mechants, et il y a des mechants auxquels il arrive selon l'oeuvre des justes. J'ai dit que cela aussi est vanite."
+        },
+        {
+          "verse": 15,
+          "text": "Et j'ai loue la joie, parce qu'il n'y a rien de bon pour l'homme, sous le soleil, que de manger et de boire et de se rejouir; et c'est ce qui lui demeurera de son travail durant les jours de sa vie que Dieu lui donne sous le soleil."
+        },
+        {
+          "verse": 16,
+          "text": "Lorsque j'ai applique mon coeur à connaitre la sagesse et à regarder les choses qui se font sur la terre (car il y a tel homme qui, ni jour ni nuit, ne voit le sommeil de ses yeux),"
+        },
+        {
+          "verse": 17,
+          "text": "alors j'ai vu que tout est l'oeuvre de Dieu, et que l'homme ne peut pas trouver l'oeuvre qui se fait sous le soleil: bien que l'homme se travaille pour la chercher, il ne la trouve point; et meme si le sage se propose de la connaitre, il ne peut la trouver."
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Car j'ai applique mon coeur à tout cela, et pour examiner tout cela, savoir que les justes et les sages, et leurs travaux, sont dans la main de Dieu: l'homme ne connait ni l'amour ni la haine. Tout est devant eux."
+        },
+        {
+          "verse": 2,
+          "text": "Tout arrive egalement à tous: un meme evenement au juste et au mechant, au bon et au pur, et à l'impur, à celui qui sacrifie et à celui qui ne sacrifie pas; comme l'homme de bien, ainsi le pecheur; celui qui jure, comme celui qui craint le serment."
+        },
+        {
+          "verse": 3,
+          "text": "C'est un mal dans tout ce qui se fait sous le soleil, qu'un meme evenement arrive à tous; et aussi le coeur des fils des hommes est plein de mal, et la folie est dans leur coeur pendant qu'ils vivent; et apres cela ils vont vers les morts."
+        },
+        {
+          "verse": 4,
+          "text": "Car pour celui qui est lie à tous les vivants il y a de l'espoir, car un chien vivant vaut mieux qu'un lion mort."
+        },
+        {
+          "verse": 5,
+          "text": "Car les vivants savent qu'ils mourront; mais les morts ne savent rien du tout; et il n'y a plus pour eux de salaire, car leur memoire est oubliee."
+        },
+        {
+          "verse": 6,
+          "text": "Leur amour aussi, et leur haine, et leur envie ont dejà peri, et ils n'ont plus de part à jamais dans tout ce qui se fait sous le soleil."
+        },
+        {
+          "verse": 7,
+          "text": "Va, mange ton pain avec joie, et bois ton vin d'un coeur heureux; car Dieu a dejà tes oeuvres pour agreables."
+        },
+        {
+          "verse": 8,
+          "text": "Qu'en tout temps tes vetements soient blancs, et que l'huile ne manque pas sur ta tete."
+        },
+        {
+          "verse": 9,
+          "text": "Jouis de la vie avec la femme que tu aimes, tous les jours de la vie de ta vanite, qui t'a ete donnee sous le soleil, tous les jours de ta vanite; car c'est là ta part dans la vie et dans ton travail auquel tu as travaille sous le soleil."
+        },
+        {
+          "verse": 10,
+          "text": "Tout ce que ta main trouve à faire, fais-le selon ton pouvoir; car il n'y a ni oeuvre, ni combinaison, ni connaissance, ni sagesse, dans le sheol, ou tu vas."
+        },
+        {
+          "verse": 11,
+          "text": "Je me suis tourne, et j'ai vu sous le soleil que la course n'est point aux agiles, ni la bataille aux hommes forts, ni le pain aux sages, ni les richesses aux intelligents, ni la faveur à ceux qui ont de la connaissance; car le temps et les circonstances les atteignent tous."
+        },
+        {
+          "verse": 12,
+          "text": "Car aussi l'homme ne connait pas son temps, comme les poissons qui sont pris dans le filet de malheur, et comme les oiseaux qui sont pris dans le piege: comme eux, les fils des hommes sont enlaces dans un temps mauvais, lorsqu'il tombe sur eux subitement."
+        },
+        {
+          "verse": 13,
+          "text": "J'ai vu aussi cette sagesse sous le soleil, et elle a ete grande pour moi:"
+        },
+        {
+          "verse": 14,
+          "text": "il y avait une petite ville, et peu d'hommes dedans; et un grand roi vint contre elle, et l'investit, et batit contre elle de grandes terrasses;"
+        },
+        {
+          "verse": 15,
+          "text": "or il s'y trouva un homme pauvre et sage, qui delivra la ville par sa sagesse; mais personne ne se souvint de cet homme pauvre."
+        },
+        {
+          "verse": 16,
+          "text": "Et j'ai dit: Mieux vaut la sagesse que la force; mais la sagesse du pauvre est meprisee, et ses paroles ne sont pas ecoutees."
+        },
+        {
+          "verse": 17,
+          "text": "Les paroles des sages sont ecoutees dans la tranquillite, plus que le cri de celui qui gouverne parmi les sots."
+        },
+        {
+          "verse": 18,
+          "text": "Mieux vaut la sagesse, que les instruments de guerre, et un seul pecheur detruit beaucoup de bien."
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Les mouches mortes font sentir mauvais, elles font fermenter l'huile du parfumeur; ainsi fait un peu de folie, à l'egard de celui qui est estime pour sa sagesse et sa gloire."
+        },
+        {
+          "verse": 2,
+          "text": "Le coeur du sage est à sa droite, et le coeur du sot, à sa gauche;"
+        },
+        {
+          "verse": 3,
+          "text": "et meme, quand l'insense marche dans le chemin, le sens lui manque, et il dit à chacun qu'il est un insense."
+        },
+        {
+          "verse": 4,
+          "text": "Si l'esprit du gouverneur s'eleve contre toi, ne quitte pas ta place; car la douceur apaise de grands peches."
+        },
+        {
+          "verse": 5,
+          "text": "Il est un mal que j'ai vu sous le soleil, comme une erreur provenant du gouverneur:"
+        },
+        {
+          "verse": 6,
+          "text": "le manque de sens est place dans de hautes dignites, et les riches sont assis dans une position basse."
+        },
+        {
+          "verse": 7,
+          "text": "J'ai vu des serviteurs sur des chevaux, et des princes marchant sur la terre comme des serviteurs."
+        },
+        {
+          "verse": 8,
+          "text": "Qui creuse une fosse y tombe; et qui renverse une cloture, un serpent le mord."
+        },
+        {
+          "verse": 9,
+          "text": "Qui remue des pierres en sera meurtri; qui fend du bois se met en danger."
+        },
+        {
+          "verse": 10,
+          "text": "Si le fer est emousse, et que celui qui l'emploie n'en aiguise pas le tranchant, il aura des efforts à faire; mais la sagesse est profitable pour amener le succes."
+        },
+        {
+          "verse": 11,
+          "text": "Si le serpent mord parce qu'il n'y a pas de charme, celui qui a une langue ne vaut pas mieux."
+        },
+        {
+          "verse": 12,
+          "text": "Les paroles de la bouche du sage sont pleines de grace, mais les levres d'un sot l'engloutissent."
+        },
+        {
+          "verse": 13,
+          "text": "Le commencement des paroles de sa bouche est folie, et la fin de son discours est un mauvais egarement."
+        },
+        {
+          "verse": 14,
+          "text": "Et l'insense multiplie les paroles: l'homme ne sait pas ce qui arrivera; et ce qui sera apres lui, qui le lui declarera?"
+        },
+        {
+          "verse": 15,
+          "text": "Le travail des sots les lasse, parce qu'ils ne savent pas aller à la ville."
+        },
+        {
+          "verse": 16,
+          "text": "à toi, terre qui as pour roi un jeune garçon, et dont les princes mangent des le matin!"
+        },
+        {
+          "verse": 17,
+          "text": "Bienheureuse toi, terre qui as pour roi le fils des nobles, et dont les princes mangent au temps convenable, pour reparer leurs forces, et non pour le plaisir de boire!"
+        },
+        {
+          "verse": 18,
+          "text": "A cause de la paresse, la charpente s'affaisse; et à cause des mains laches, la maison a des gouttieres."
+        },
+        {
+          "verse": 19,
+          "text": "On fait un repas pour s'egayer, et le vin rend la vie joyeuse; mais l'argent repond à tout."
+        },
+        {
+          "verse": 20,
+          "text": "Ne maudis pas le roi, meme dans ta pensee, et ne maudis pas le riche dans la chambre ou tu couches, car l'oiseau des cieux en emporterait la voix, et ce qui a des ailes en divulguerait les paroles."
+        }
+      ]
+    },
+    {
+      "chapter": 11,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Jette ton pain sur la face des eaux, car tu le trouveras apres bien des jours."
+        },
+        {
+          "verse": 2,
+          "text": "Donne une portion à sept, et meme à huit; car tu ne sais pas quel mal arrivera sur la terre."
+        },
+        {
+          "verse": 3,
+          "text": "Si les nuees sont pleines, elles verseront la pluie sur la terre; et si un arbre tombe, vers le midi ou vers le nord, à l'endroit ou l'arbre sera tombe, là il sera."
+        },
+        {
+          "verse": 4,
+          "text": "Celui qui observe le vent ne semera pas; et celui qui regarde les nuees ne moissonnera pas."
+        },
+        {
+          "verse": 5,
+          "text": "Comme tu ne sais point quel est le chemin de l'esprit, ni comment se forment les os dans le ventre de celle qui est enceinte, ainsi tu ne connais pas l'oeuvre de Dieu qui fait tout."
+        },
+        {
+          "verse": 6,
+          "text": "Le matin, seme ta semence, et, le soir, ne laisse pas reposer ta main; car tu ne sais pas ce qui reussira, ceci ou cela, ou si tous les deux seront egalement bons."
+        },
+        {
+          "verse": 7,
+          "text": "La lumiere est douce, et il est agreable pour les yeux de voir le soleil;"
+        },
+        {
+          "verse": 8,
+          "text": "mais si un homme vit beaucoup d'annees, et se rejouit en toutes, qu'il se souvienne aussi des jours de tenebres, car ils sont en grand nombre: tout ce qui arrive est vanite."
+        },
+        {
+          "verse": 9,
+          "text": "Rejouis-toi, jeune homme, dans ta jeunesse, et que ton coeur te rende heureux aux jours de ton adolescence, et marche dans les voies de ton coeur et selon les regards de tes yeux; mais sache que, pour toutes ces choses, Dieu t'amenera en jugement."
+        },
+        {
+          "verse": 10,
+          "text": "Ote de ton coeur le chagrin et fais passer le mal loin de ta chair; car le jeune age et l'aurore sont vanite."
+        }
+      ]
+    },
+    {
+      "chapter": 12,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et souviens-toi de ton Createur dans les jours de ta jeunesse, avant que soient venus les jours mauvais, et avant qu'arrivent les annees dont tu diras: Je n'y prends point de plaisir;"
+        },
+        {
+          "verse": 2,
+          "text": "avant que s'obscurcissent le soleil, et la lumiere, et la lune, et les etoiles, et que les nuages reviennent apres la pluie;"
+        },
+        {
+          "verse": 3,
+          "text": "au jour ou tremblent les gardiens de la maison, et ou se courbent les hommes forts, et ou choment celles qui moulent, parce qu'elles sont en petit nombre, et ou ceux qui regardent par les fenetres sont obscurcis,"
+        },
+        {
+          "verse": 4,
+          "text": "et ou les deux battants de la porte se ferment sur la rue; quand baisse le bruit de la meule, et qu'on se leve à la voix de l'oiseau, et que toutes les filles du chant faiblissent;"
+        },
+        {
+          "verse": 5,
+          "text": "quand aussi on craint ce qui est haut, et qu'on a peur sur le chemin, et quand l'amandier fleurit, et que la sauterelle devient pesante, et que la capre est sans effet; (car l'homme s'en va dans sa demeure des siecles, et ceux qui menent deuil parcourent les rues;)"
+        },
+        {
+          "verse": 6,
+          "text": "-avant que le cable d'argent se detache, que le vase d'or se rompe, que le seau se brise à la source, et que la roue se casse à la citerne;"
+        },
+        {
+          "verse": 7,
+          "text": "et que la poussiere retourne à la terre, comme elle y avait ete, et que l'esprit retourne à Dieu qui l'a donne."
+        },
+        {
+          "verse": 8,
+          "text": "Vanite des vanites, dit le predicateur; tout est vanite!"
+        },
+        {
+          "verse": 9,
+          "text": "Et de plus, parce que le predicateur etait sage, il a encore enseigne la connaissance au peuple; et il a pese et sonde, et mis en ordre beaucoup de proverbes."
+        },
+        {
+          "verse": 10,
+          "text": "Le predicateur s'est etudie à trouver des paroles agreables; et ce qui a ete ecrit est droit, des paroles de verite."
+        },
+        {
+          "verse": 11,
+          "text": "Les paroles des sages sont comme des aiguillons, et les recueils, comme des clous enfonces: ils sont donnes par un seul pasteur."
+        },
+        {
+          "verse": 12,
+          "text": "Et de plus, mon fils, laisse-toi instruire par eux: à faire beaucoup de livres, il n'y a point de fin, et beaucoup d'etude lasse la chair."
+        },
+        {
+          "verse": 13,
+          "text": "Ecoutons la fin de tout ce qui a ete dit: Crains Dieu, et garde ses commandements; car c'est là le tout de l'homme,"
+        },
+        {
+          "verse": 14,
+          "text": "car Dieu amenera toute oeuvre en jugement, avec tout ce qui est cache, soit bien, soit mal."
+        }
+      ]
+    }
+  ]
+}
