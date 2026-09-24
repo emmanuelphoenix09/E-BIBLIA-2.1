@@ -35,6 +35,16 @@ jobs:
       - name: Préparer les données bibliques
         run: npm run prepare:bible-data
 
+      - name: Préparer les ressources visuelles hors ligne
+        run: |
+          mkdir -p www/offline-assets/webfonts
+          curl -L --fail -o www/offline-assets/fontawesome.css https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
+          grep -oE '../webfonts/[^)]+' www/offline-assets/fontawesome.css | sed 's#../webfonts/##' | sort -u | while read f; do
+            curl -L --fail -o "www/offline-assets/webfonts/$f" "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/$f"
+          done
+          sed -i 's#../webfonts/#./webfonts/#g' www/offline-assets/fontawesome.css
+          curl -L --fail -o www/offline-assets/google-fonts.css 'https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap'
+
       - name: Vérifier le contenu web
         run: |
           test -f www/index.html
