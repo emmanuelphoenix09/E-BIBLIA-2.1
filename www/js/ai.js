@@ -1,4 +1,13 @@
-/* E-BIBLIA 3.0 — Moteur IA */
+/*
+ * E-BIBLIA 3.0 — Moteur IA de Léona
+ * ------------------------------------------------------------
+ * Ce fichier contient la logique de communication avec Gemini
+ * et le rendu des réponses de l'assistant.
+ *
+ * Pour modifier le comportement de Léona : modifiez ce fichier.
+ * Pour modifier son interface visuelle : modifiez css/ia.css.
+ * Pour modifier la structure HTML : modifiez ia.html.
+ */
 (function () {
   function escapeHtml(value) { const div=document.createElement("div"); div.textContent=value ?? ""; return div.innerHTML; }
 
@@ -16,7 +25,7 @@ async function askGemini(question = "") {
                 throw new Error("La configuration interne de l'Assistant IA est introuvable.");
             }
 
-            const biblicalContext = window.EBibliaReader.window.EBibliaReader.getSelectedVersesText();
+            const biblicalContext = window.EBibliaReader.getSelectedVersesText();
             const isInitialExplanation = !question.trim();
             const userRequest = isInitialExplanation
                 ? `Explique directement ce passage biblique dans son contexte. Commence par identifier le contexte immédiat du passage, puis présente son contexte historique et culturel lorsque pertinent, explique le sens du texte verset par verset ou par unités de pensée, les notions théologiques importantes et le message principal. Termine par quelques points d'application clairement distingués de ce que le texte dit réellement. Ne demande pas à l'utilisateur de formuler une question : cette réponse est l'explication initiale du passage.`
