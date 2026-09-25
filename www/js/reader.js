@@ -4,6 +4,7 @@
     if (!window.EBiblia) throw new Error("Le moteur E-BIBLIA n'est pas chargé.");
     return window.EBiblia;
   }
+
   window.EBibliaReader = {
     render: (...args) => api().renderBibleText(...args),
     getVerseText: (...args) => api().getVerseText(...args),
