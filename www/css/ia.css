@@ -1,0 +1,237 @@
+/*
+ * E-BIBLIA 3.0 — Interface de Léona
+ * ------------------------------------------------------------
+ * Ce fichier contient uniquement le style propre à la page IA.
+ * Pour modifier l'apparence de Léona, commencez ici.
+ * Le JavaScript de l'assistant reste dans js/ai.js.
+ */
+
+/* ===== Conteneur général de la page IA ===== */
+.leona-page {
+  min-height: 100dvh;
+  background: radial-gradient(circle at top, rgba(245, 158, 11, 0.08), transparent 42%),
+              #f8fafc;
+}
+
+.dark .leona-page {
+  background: radial-gradient(circle at top, rgba(245, 158, 11, 0.10), transparent 42%),
+              #030712;
+}
+
+/* ===== En-tête de Léona ===== */
+.leona-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+}
+
+.dark .leona-header {
+  background: rgba(17, 24, 39, 0.92);
+  border-color: rgba(75, 85, 99, 0.35);
+}
+
+.leona-header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 64px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.leona-back {
+  color: #b45309;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.leona-back:hover {
+  text-decoration: underline;
+}
+
+.dark .leona-back {
+  color: #fbbf24;
+}
+
+/* ===== Zone principale ===== */
+.leona-main {
+  width: min(960px, 100%);
+  margin: 0 auto;
+  padding: 28px 16px 40px;
+}
+
+.leona-card {
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+}
+
+.dark .leona-card {
+  border-color: rgba(75, 85, 99, 0.45);
+  background: rgba(17, 24, 39, 0.96);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+}
+
+/* ===== Présentation de Léona ===== */
+.leona-intro {
+  padding: 24px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.leona-avatar {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  box-shadow: 0 8px 22px rgba(245, 158, 11, 0.25);
+}
+
+.leona-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.leona-subtitle {
+  margin: 4px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.dark .leona-subtitle {
+  color: #9ca3af;
+}
+
+/* ===== Passage sélectionné ===== */
+.leona-reference {
+  margin: 20px 24px 0;
+  padding: 12px 14px;
+  border-left: 3px solid #f59e0b;
+  border-radius: 10px;
+  background: rgba(245, 158, 11, 0.08);
+  color: #92400e;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.dark .leona-reference {
+  background: rgba(245, 158, 11, 0.10);
+  color: #fcd34d;
+}
+
+/* ===== Zone de question ===== */
+.leona-question {
+  padding: 24px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.leona-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.leona-textarea {
+  width: 100%;
+  min-height: 110px;
+  resize: vertical;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  padding: 13px 14px;
+  outline: none;
+  background: #f9fafb;
+  color: #111827;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.leona-textarea:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.14);
+}
+
+.dark .leona-textarea {
+  border-color: #374151;
+  background: #111827;
+  color: #f9fafb;
+}
+
+/* ===== Bouton d'analyse ===== */
+.leona-submit {
+  width: 100%;
+  margin-top: 12px;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: #d97706;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .15s ease, background-color .15s ease, opacity .15s ease;
+}
+
+.leona-submit:hover {
+  background: #b45309;
+  transform: translateY(-1px);
+}
+
+.leona-submit:disabled {
+  opacity: .65;
+  cursor: wait;
+  transform: none;
+}
+
+/* ===== Résultat de Léona ===== */
+.leona-result {
+  min-height: 260px;
+  padding: 24px;
+  color: #1f2937;
+}
+
+.dark .leona-result {
+  color: #e5e7eb;
+}
+
+.leona-result h1,
+.leona-result h2,
+.leona-result h3 {
+  font-weight: 800;
+}
+
+.leona-result p {
+  line-height: 1.8;
+}
+
+@media (max-width: 640px) {
+  .leona-main {
+    padding: 12px 10px 28px;
+  }
+
+  .leona-card {
+    border-radius: 16px;
+  }
+
+  .leona-intro,
+  .leona-question,
+  .leona-result {
+    padding: 18px;
+  }
+
+  .leona-reference {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+}
