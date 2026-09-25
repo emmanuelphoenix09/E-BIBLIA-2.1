@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",()=>renderBookmarks());
+document.addEventListener("DOMContentLoaded",()=>window.EBiblia?.renderBookmarks());
