@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",()=>renderMarks());
+document.addEventListener("DOMContentLoaded",()=>window.EBiblia?.renderMarks());
