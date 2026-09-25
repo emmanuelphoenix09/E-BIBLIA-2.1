@@ -1317,9 +1317,5 @@ Object.assign(window.EBiblia, {
     openAppModal,
     getVerseText,
     toggleBookmark,
-    window.EBibliaReader.
-    window.EBibliaReader.
-    window.EBibliaReader.
-    window.EBibliaReader.
     renderBibleText
 });
