@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Léona — Assistant biblique IA — E-Biblia</title><link rel="stylesheet" href="./css/tailwind.css"><link rel="stylesheet" href="./offline-assets/fontawesome.css"><link rel="stylesheet" href="./offline-assets/google-fonts.css"><link rel="stylesheet" href="./css/main.css"></head><body data-page="ia" class="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100"><header class="sticky top-0 z-40 bg-white/95 dark:bg-gray-900/95 border-b border-gray-200 dark:border-gray-800"><div class="max-w-5xl mx-auto px-4 py-3 flex gap-3 items-center"><a href="./lecture.html" class="text-amber-600 font-semibold text-sm"><i class="fa-solid fa-arrow-left mr-1"></i> Retour</a><h1 class="font-brand font-bold text-lg">Léona — Assistant biblique IA</h1></div></header><main class="max-w-5xl mx-auto p-4 md:p-6"><div id="modal-ai" class="app-modal bg-black/50 backdrop-blur-sm z-50 ">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] flex flex-col overflow-hidden border border-gray-200 dark:border-gray-800">
+            <div class="p-4 border-b border-gray-200 dark:border-gray-800 flex justify-between items-center">
+                <div>
+                    <h3 class="font-brand font-bold text-lg">
+                        <i class="fa-solid fa-wand-magic-sparkles text-amber-500 mr-2"></i>Assistant biblique IA
+                    </h3>
+                    <p id="ai-modal-reference" class="text-[11px] text-gray-500 mt-1"></p>
+                </div>
+                
+            </div>
+            <div class="p-4 border-b border-gray-200 dark:border-gray-800">
+                <label class="block text-xs font-semibold mb-1">Votre demande</label>
+                <textarea id="ai-question" rows="3" class="input-app" placeholder="Posez votre question sur ce passage…"></textarea>
+                <button id="btn-ai-submit" class="mt-3 w-full bg-amber-600 hover:bg-amber-700 text-white rounded-lg py-2.5 text-sm font-semibold">
+                    <i class="fa-solid fa-paper-plane mr-2"></i>Analyser avec Gemini
+                </button>
+            </div>
+            <div id="ai-result" class="flex-1 overflow-y-auto p-4 text-sm leading-7 whitespace-pre-wrap text-gray-800 dark:text-gray-200">
+                <p class="text-gray-500 text-center py-8">L’explication du passage apparaîtra automatiquement ici.</p>
+            </div>
+        </div>
+    </div></main><script src="./js/config.js"></script><script src="./js/app.js"></script><script src="./js/pages/ia.js"></script></body></html>
