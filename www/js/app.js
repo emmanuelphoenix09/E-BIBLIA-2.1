@@ -1762,6 +1762,9 @@ verseEl.addEventListener("click", (event) => {
 /* E-BIBLIA 3.0 — Public application API for page modules */
 window.EBiblia = window.EBiblia || {};
 Object.assign(window.EBiblia, {
+    BIBLE_DATA,
+    LOCAL_BIBLE_VERSIONS,
+    FULL_BIBLE_BOOKS,
     state,
     appData,
     renderBookmarks,
