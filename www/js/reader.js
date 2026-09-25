@@ -6,36 +6,36 @@ function verseSelectionKey(book, chapter, verse, version) {
 
         function isVerseSelected(book, chapter, verse, version) {
             const key = verseSelectionKey(book, chapter, verse, version);
-            return window.EBiblia?.state.selectedVerses.some(x => verseSelectionKey(x.book, x.chapter, x.verse, x.version) === key);
+            return window.EBiblia.state.selectedVerses.some(x => verseSelectionKey(x.book, x.chapter, x.verse, x.version) === key);
         }
 
         function toggleVerseSelection(book, chapter, verse, version) {
             const key = verseSelectionKey(book, chapter, verse, version);
-            const idx = window.EBiblia?.state.selectedVerses.findIndex(x => verseSelectionKey(x.book, x.chapter, x.verse, x.version) === key);
+            const idx = window.EBiblia.state.selectedVerses.findIndex(x => verseSelectionKey(x.book, x.chapter, x.verse, x.version) === key);
             if (idx >= 0) {
-                window.EBiblia?.state.selectedVerses.splice(idx, 1);
+                window.EBiblia.state.selectedVerses.splice(idx, 1);
             } else {
-                window.EBiblia?.state.selectedVerses.push({
+                window.EBiblia.state.selectedVerses.push({
                     book, chapter, verse, version,
-                    text: window.EBiblia?.getVerseText(version, book, chapter, verse)
+                    text: window.EBiblia.getVerseText(version, book, chapter, verse)
                 });
             }
             updateVerseSelectionToolbar();
-            window.EBiblia?.renderBibleText();
+            window.EBiblia.renderBibleText();
             setTimeout(renderUnifiedSelectionActions, 0);
         }
 
         function clearVerseSelection() {
-            window.EBiblia?.state.selectedVerses = [];
+            window.EBiblia.state.selectedVerses = [];
             updateVerseSelectionToolbar();
-            window.EBiblia?.renderBibleText();
+            window.EBiblia.renderBibleText();
         }
 
         function getSelectedVersesText() {
-            return [...window.EBiblia?.state.selectedVerses]
+            return [...window.EBiblia.state.selectedVerses]
                 .sort((a,b) => Number(a.verse) - Number(b.verse))
                 .map(v => {
-                    const bookName = window.EBiblia?.BIBLE_DATA.books.find(b => b.id === v.book)?.name || v.book;
+                    const bookName = window.EBiblia.BIBLE_DATA.books.find(b => b.id === v.book)?.name || v.book;
                     return `${bookName} ${v.chapter}:${v.verse} (${window.EBibliaData.versionName(v.version)})\n${v.text}`;
                 }).join("\n\n");
         }
@@ -47,8 +47,8 @@ function verseSelectionKey(book, chapter, verse, version) {
             renderUnifiedSelectionActions();
         }
         async function shareSelectedVerses() {
-            if (!window.EBiblia?.state.selectedVerses.length) return;
-            const bookName = window.EBiblia?.BIBLE_DATA.books.find(b => b.id === window.EBiblia?.state.selectedVerses[0].book)?.name || window.EBiblia?.state.selectedVerses[0].book;
+            if (!window.EBiblia.state.selectedVerses.length) return;
+            const bookName = window.EBiblia.BIBLE_DATA.books.find(b => b.id === window.EBiblia.state.selectedVerses[0].book)?.name || window.EBiblia.state.selectedVerses[0].book;
             const text = `E-BIBLIA\n\n${getSelectedVersesText()}`;
 
             // On Android/modern browsers, navigator.share opens the system share sheet.
@@ -69,36 +69,36 @@ function verseSelectionKey(book, chapter, verse, version) {
             // Fallback for environments without Web Share API.
             try {
                 await navigator.clipboard.writeText(text);
-                window.EBiblia?.showToast("Versets copiés. Vous pouvez les coller dans l'application de partage de votre choix.");
+                window.EBiblia.showToast("Versets copiés. Vous pouvez les coller dans l'application de partage de votre choix.");
             } catch (e) {
                 window.prompt("Copiez ces versets :", text);
             }
         }
 
         function addSelectedToVerseNotes() {
-            if (!window.EBiblia?.state.selectedVerses.length) return;
+            if (!window.EBiblia.state.selectedVerses.length) return;
             window.EBibliaData.appData.verseNotes.push({
-                book: window.EBiblia?.state.selectedVerses[0].book,
-                chapter: window.EBiblia?.state.selectedVerses[0].chapter,
-                verse: window.EBiblia?.state.selectedVerses.map(v => v.verse).join(","),
-                version: window.EBiblia?.state.selectedVerses[0].version,
+                book: window.EBiblia.state.selectedVerses[0].book,
+                chapter: window.EBiblia.state.selectedVerses[0].chapter,
+                verse: window.EBiblia.state.selectedVerses.map(v => v.verse).join(","),
+                version: window.EBiblia.state.selectedVerses[0].version,
                 note: "",
                 text: getSelectedVersesText(),
-                selectedVerses: window.EBiblia?.state.selectedVerses.map(v => v.verse),
+                selectedVerses: window.EBiblia.state.selectedVerses.map(v => v.verse),
                 createdAt: new Date().toISOString()
             });
             window.EBibliaData.saveAppData();
             window.EBibliaData.renderVerseNotes();
-            window.EBiblia?.openAppModal("modal-verse-notes");
-            window.EBiblia?.showToast("Versets ajoutés aux notes.");
+            window.EBiblia.openAppModal("modal-verse-notes");
+            window.EBiblia.showToast("Versets ajoutés aux notes.");
         }
 
         function addSelectedToCult() {
-            if (!window.EBiblia?.state.selectedVerses.length) return;
-            const refs = [...window.EBiblia?.state.selectedVerses]
+            if (!window.EBiblia.state.selectedVerses.length) return;
+            const refs = [...window.EBiblia.state.selectedVerses]
                 .sort((a,b) => Number(a.verse) - Number(b.verse))
                 .map(v => {
-                    const n = window.EBiblia?.BIBLE_DATA.books.find(b => b.id === v.book)?.name || v.book;
+                    const n = window.EBiblia.BIBLE_DATA.books.find(b => b.id === v.book)?.name || v.book;
                     return `${n} ${v.chapter}:${v.verse}`;
                 }).join(", ");
             const existingDate = document.getElementById("cult-date");
@@ -111,18 +111,18 @@ function verseSelectionKey(book, chapter, verse, version) {
                     ? `${versesInput.value.trim()}, ${refs}`
                     : refs;
             }
-            window.EBiblia?.openAppModal("modal-cults");
-            window.EBiblia?.showToast("Versets ajoutés au culte. Complétez les informations puis enregistrez.");
+            window.EBiblia.openAppModal("modal-cults");
+            window.EBiblia.showToast("Versets ajoutés au culte. Complétez les informations puis enregistrez.");
         }
 
         // One compact action group for the whole current selection.
         function renderUnifiedSelectionActions() {
             document.querySelectorAll(".verse-inline-selection-actions").forEach(el => el.remove());
 
-            if (!window.EBiblia?.state.selectedVerses.length || window.EBiblia?.state.viewMode !== "single") return;
+            if (!window.EBiblia.state.selectedVerses.length || window.EBiblia.state.viewMode !== "single") return;
 
-            const selected = [...window.EBiblia?.state.selectedVerses]
-                .filter(v => v.book === window.EBiblia?.state.currentBook && Number(v.chapter) === Number(window.EBiblia?.state.currentChapter) && v.version === window.EBiblia?.state.version1)
+            const selected = [...window.EBiblia.state.selectedVerses]
+                .filter(v => v.book === window.EBiblia.state.currentBook && Number(v.chapter) === Number(window.EBiblia.state.currentChapter) && v.version === window.EBiblia.state.version1)
                 .sort((a, b) => Number(a.verse) - Number(b.verse));
 
             if (!selected.length) return;
@@ -166,20 +166,20 @@ function verseSelectionKey(book, chapter, verse, version) {
         }
 
         function bookmarkSelectedVerses() {
-            if (!window.EBiblia?.state.selectedVerses.length) return;
-            window.EBiblia?.state.selectedVerses.forEach(v => {
-                if (!window.EBiblia?.isVerseBookmarked(v.book, v.chapter, v.verse, v.version)) {
-                    window.EBiblia?.state.bookmarks.push(v);
+            if (!window.EBiblia.state.selectedVerses.length) return;
+            window.EBiblia.state.selectedVerses.forEach(v => {
+                if (!window.EBiblia.isVerseBookmarked(v.book, v.chapter, v.verse, v.version)) {
+                    window.EBiblia.state.bookmarks.push(v);
                 }
             });
-            localStorage.setItem("ebiblia_bookmarks", JSON.stringify(window.EBiblia?.state.bookmarks));
-            window.EBiblia?.renderBookmarks();
-            window.EBiblia?.showToast("Sélection enregistrée dans les favoris.");
+            localStorage.setItem("ebiblia_bookmarks", JSON.stringify(window.EBiblia.state.bookmarks));
+            window.EBiblia.renderBookmarks();
+            window.EBiblia.showToast("Sélection enregistrée dans les favoris.");
         }
 
         function highlightSelectedVerses() {
-            if (!window.EBiblia?.state.selectedVerses.length) return;
-            window.EBiblia?.state.selectedVerses.forEach(v => {
+            if (!window.EBiblia.state.selectedVerses.length) return;
+            window.EBiblia.state.selectedVerses.forEach(v => {
                 const existing = window.EBibliaData.appData.marks.findIndex(m =>
                     m.book === v.book && m.chapter === v.chapter && m.verse === v.verse && m.version === v.version
                 );
@@ -192,23 +192,23 @@ function verseSelectionKey(book, chapter, verse, version) {
             });
             window.EBibliaData.saveAppData();
             window.EBibliaData.renderMarks();
-            window.EBiblia?.renderBibleText();
-            window.EBiblia?.showToast("Sélection surlignée.");
+            window.EBiblia.renderBibleText();
+            window.EBiblia.showToast("Sélection surlignée.");
         }
 
         async function copySelectedVerses() {
-            if (!window.EBiblia?.state.selectedVerses.length) return;
+            if (!window.EBiblia.state.selectedVerses.length) return;
             const text = getSelectedVersesText();
             try {
                 await navigator.clipboard.writeText(text);
-                window.EBiblia?.showToast("Sélection copiée.");
+                window.EBiblia.showToast("Sélection copiée.");
             } catch (e) {
                 window.prompt("Copiez les versets :", text);
             }
         }
 
         async function openAIForSelection() {
-            if (!window.EBiblia?.state.selectedVerses.length) return;
+            if (!window.EBiblia.state.selectedVerses.length) return;
             const reference = getSelectedVersesText();
             const modalReference = document.getElementById("ai-modal-reference");
             const questionInput = document.getElementById("ai-question");
@@ -216,15 +216,15 @@ function verseSelectionKey(book, chapter, verse, version) {
             if (modalReference) modalReference.textContent = reference;
             if (questionInput) questionInput.value = "";
             if (result) result.innerHTML = `<div class="flex items-center justify-center gap-2 text-gray-500 py-8"><i class="fa-solid fa-spinner fa-spin"></i> L'IA étudie le passage dans son contexte…</div>`;
-            window.EBiblia?.openAppModal("modal-ai");
-            await window.EBiblia?.runGeminiAnalysis(true);
+            window.EBiblia.openAppModal("modal-ai");
+            await window.EBiblia.runGeminiAnalysis(true);
             setTimeout(() => questionInput?.focus(), 50);
         }
 
         
   window.EBibliaReader = {
-    render: (...args) => window.EBiblia?.renderBibleText(...args),
-    getVerseText: (...args) => window.EBiblia?.getVerseText(...args),
+    render: (...args) => window.EBiblia.renderBibleText(...args),
+    getVerseText: (...args) => window.EBiblia.getVerseText(...args),
     verseSelectionKey,
     isVerseSelected,
     toggleVerseSelection,
