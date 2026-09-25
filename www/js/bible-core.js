@@ -4,12 +4,12 @@ function cleanBookKey(value) {
             if (value === undefined || value === null) return null;
             if (typeof value === "number" || /^\d+$/.test(String(value).trim())) {
                 const n = Number(value);
-                return window.EBiblia.FULL_BIBLE_BOOKS[n - 1]?.[0] || null;
+                return window.EBiblia.window.EBiblia.FULL_BIBLE_BOOKS[n - 1]?.[0] || null;
             }
             const key = String(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "")
                 .toUpperCase().replace(/[^A-Z0-9]/g, "");
             if (BOOK_ALIASES[key]) return BOOK_ALIASES[key];
-            return window.EBiblia.FULL_BIBLE_BOOKS.find(b => b[0] === key)?.[0] || null;
+            return window.EBiblia.window.EBiblia.FULL_BIBLE_BOOKS.find(b => b[0] === key)?.[0] || null;
         }
 
 function addNormalizedVerse(store, version, book, chapter, verse, text) {
@@ -54,7 +54,7 @@ function extractBibleRecords(node, store, version, inheritedBook = null, inherit
         }
 
 function getVerseCount(version, book, chapter) {
-            const verses = window.EBiblia.BIBLE_DATA.textStore[version]?.[book]?.[chapter];
+            const verses = window.EBiblia.window.EBiblia.BIBLE_DATA.textStore[version]?.[book]?.[chapter];
             if (!verses) return 0;
             return Math.max(0, ...Object.keys(verses).map(Number).filter(Number.isFinite));
         }
@@ -62,7 +62,7 @@ function getVerseCount(version, book, chapter) {
 function loadBibleDataFromJSON() {
             const loadedStore = {};
             const loadedVersions = {};
-            const results = await Promise.all(Object.entries(window.EBiblia.LOCAL_BIBLE_VERSIONS).map(async ([code, meta]) => {
+            const results = await Promise.all(Object.entries(window.EBiblia.window.EBiblia.LOCAL_BIBLE_VERSIONS).map(async ([code, meta]) => {
                 try {
                     const response = await fetch(`./bible-data/fr/${meta.file}/${meta.file}.json`, { cache: "no-store" });
                     if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -81,15 +81,15 @@ function loadBibleDataFromJSON() {
                 }
             }));
 
-            window.EBiblia.BIBLE_DATA.textStore = loadedStore;
-            window.EBiblia.BIBLE_DATA.versions = loadedVersions;
+            window.EBiblia.window.EBiblia.BIBLE_DATA.textStore = loadedStore;
+            window.EBiblia.window.EBiblia.BIBLE_DATA.versions = loadedVersions;
 
             const bookIds = new Set();
             Object.values(loadedStore).forEach(version =>
                 Object.keys(version).forEach(bookId => bookIds.add(bookId))
             );
 
-            window.EBiblia.BIBLE_DATA.books = window.EBiblia.FULL_BIBLE_BOOKS
+            window.EBiblia.window.EBiblia.BIBLE_DATA.books = window.EBiblia.window.EBiblia.FULL_BIBLE_BOOKS
                 .filter(([id]) => bookIds.has(id))
                 .map(([id, name, testament]) => {
                     const chapters = Math.max(1, ...Object.values(loadedStore).flatMap(v =>
@@ -98,16 +98,16 @@ function loadBibleDataFromJSON() {
                     return { id, name, testament, chapters };
                 });
 
-            if (!window.EBiblia.BIBLE_DATA.books.length) {
+            if (!window.EBiblia.window.EBiblia.BIBLE_DATA.books.length) {
                 throw new Error("Aucun livre biblique n'a pu être chargé.");
             }
 
-            const firstAvailable = window.EBiblia.BIBLE_DATA.books[0].id;
-            if (!window.EBiblia.BIBLE_DATA.books.some(b => b.id === window.EBiblia.state.currentBook)) window.EBiblia.state.currentBook = firstAvailable;
+            const firstAvailable = window.EBiblia.window.EBiblia.BIBLE_DATA.books[0].id;
+            if (!window.EBiblia.window.EBiblia.BIBLE_DATA.books.some(b => b.id === window.EBiblia.window.EBiblia.state.currentBook)) window.EBiblia.window.EBiblia.state.currentBook = firstAvailable;
 
             const versionCodes = Object.keys(loadedVersions);
-            if (!versionCodes.includes(window.EBiblia.state.version1)) window.EBiblia.state.version1 = versionCodes[0] || "LSG";
-            if (!versionCodes.includes(window.EBiblia.state.version2)) window.EBiblia.state.version2 = versionCodes.find(v => v !== window.EBiblia.state.version1) || window.EBiblia.state.version1;
+            if (!versionCodes.includes(window.EBiblia.window.EBiblia.state.version1)) window.EBiblia.window.EBiblia.state.version1 = versionCodes[0] || "LSG";
+            if (!versionCodes.includes(window.EBiblia.window.EBiblia.state.version2)) window.EBiblia.window.EBiblia.state.version2 = versionCodes.find(v => v !== window.EBiblia.window.EBiblia.state.version1) || window.EBiblia.window.EBiblia.state.version1;
 
             const select1 = document.getElementById("select-version-1");
             const select2 = document.getElementById("select-version-2");
@@ -121,14 +121,14 @@ function loadBibleDataFromJSON() {
                     select.appendChild(option);
                 });
             });
-            select1.value = window.EBiblia.state.version1;
-            select2.value = window.EBiblia.state.version2;
+            select1.value = window.EBiblia.window.EBiblia.state.version1;
+            select2.value = window.EBiblia.window.EBiblia.state.version2;
 
             console.info("E-BIBLIA: données bibliques chargées", results);
         }
 
 function getVerseText(version, bookId, chapter, verse) {
-            const text = window.EBiblia.BIBLE_DATA.textStore?.[version]?.[bookId]?.[chapter]?.[verse];
+            const text = window.EBiblia.window.EBiblia.BIBLE_DATA.textStore?.[version]?.[bookId]?.[chapter]?.[verse];
             return text || "";
         }
 window.EBibliaBible={cleanBookKey,addNormalizedVerse,extractBibleRecords,getVerseCount,loadBibleDataFromJSON,getVerseText};
