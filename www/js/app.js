@@ -1182,3 +1182,144 @@ Object.assign(window.EBiblia, {
     toggleBookmark,
     renderBibleText
 });
+
+
+/* E-BIBLIA 3.0 — Contrôleurs des pages secondaires */
+/*
+ * Les petites actions propres aux pages secondaires restent regroupées
+ * ici pour éviter de multiplier les fichiers JavaScript.
+ *
+ * Pour modifier une page secondaire :
+ * - recherchez son nom dans ce bloc ;
+ * - modifiez uniquement son contrôleur.
+ * L'interface HTML reste dans le fichier .html correspondant.
+ */
+function initSecondaryPageControllers() {
+    const page = document.body?.dataset?.page || "";
+
+    if (page === "recherche") {
+        const input = document.getElementById("input-search");
+        document.getElementById("btn-execute-search")?.addEventListener("click", () => {
+            window.EBiblia?.executeSearch(input?.value || "");
+        });
+        input?.addEventListener("keyup", event => {
+            if (event.key === "Enter") window.EBiblia?.executeSearch(input.value || "");
+        });
+    }
+
+    if (page === "importer") {
+        document.getElementById("btn-process-import")?.addEventListener("click", () => {
+            window.EBiblia?.handleImportJSON();
+        });
+    }
+
+    if (page === "favoris") {
+        window.EBiblia?.renderBookmarks();
+    }
+
+    if (page === "notes") {
+        window.EBiblia?.renderVerseNotes();
+        document.getElementById("btn-save-verse-note")?.addEventListener("click", () => {
+            window.EBiblia?.saveVerseNote();
+        });
+    }
+
+    if (page === "passages") {
+        window.EBiblia?.renderMarks();
+    }
+
+    if (page === "cultes") {
+        window.EBiblia?.renderCults();
+        document.getElementById("btn-save-cult")?.addEventListener("click", () => {
+            const theme = document.getElementById("cult-theme")?.value.trim();
+            if (!theme) {
+                window.EBiblia?.showToast("Indiquez au moins le thème du culte.");
+                return;
+            }
+
+            window.EBiblia.appData.cults.push({
+                date: document.getElementById("cult-date")?.value,
+                theme,
+                preacher: document.getElementById("cult-preacher")?.value.trim(),
+                verses: document.getElementById("cult-verses")?.value.trim(),
+                notes: document.getElementById("cult-notes")?.value.trim(),
+                createdAt: new Date().toISOString()
+            });
+
+            window.EBiblia.saveAppData();
+            window.EBiblia.renderCults();
+        });
+    }
+
+    if (page === "bloc-notes") {
+        window.EBiblia?.renderNotebook();
+        document.getElementById("btn-save-notebook")?.addEventListener("click", () => {
+            const content = document.getElementById("notebook-content")?.value.trim();
+            if (!content) {
+                window.EBiblia?.showToast("Écrivez quelque chose dans le bloc-notes.");
+                return;
+            }
+
+            window.EBiblia.appData.notebook.push({
+                title: document.getElementById("notebook-title")?.value.trim(),
+                content,
+                createdAt: new Date().toISOString()
+            });
+
+            window.EBiblia.saveAppData();
+            window.EBiblia.renderNotebook();
+        });
+    }
+
+    if (page === "ia") {
+        // Léona possède sa propre interface HTML et son propre CSS.
+        window.EBiblia?.updateGeminiStatus();
+        document.getElementById("btn-ai-submit")?.addEventListener("click", () => {
+            window.EBiblia?.runGeminiAnalysis();
+        });
+    }
+
+    if (page === "parametres") {
+        document.getElementById("settings-theme-toggle")?.addEventListener("click", () => {
+            window.EBibliaCommon?.toggleTheme();
+        });
+
+        document.getElementById("settings-font-inc")?.addEventListener("click", () => {
+            window.EBibliaCommon?.changeFontSize(1);
+        });
+
+        document.getElementById("settings-font-dec")?.addEventListener("click", () => {
+            window.EBibliaCommon?.changeFontSize(-1);
+        });
+
+        document.getElementById("btn-reset-local-data")?.addEventListener("click", () => {
+            if (!confirm("Voulez-vous vraiment supprimer les favoris, marquages, notes, cultes et bloc-notes de cet appareil ?")) return;
+
+            ["ebiblia_bookmarks", "ebiblia_marks", "ebiblia_notes", "ebiblia_cults", "ebiblia_notebook"]
+                .forEach(key => localStorage.removeItem(key));
+
+            const api = window.EBiblia;
+            if (api?.state) api.state.bookmarks = [];
+
+            if (api?.appData) {
+                api.appData.marks = [];
+                api.appData.verseNotes = [];
+                api.appData.cults = [];
+                api.appData.notebook = [];
+            }
+
+            api?.renderBookmarks();
+            api?.renderMarks();
+            api?.renderVerseNotes();
+            api?.renderCults();
+            api?.renderNotebook();
+            api?.showToast("Données locales réinitialisées.");
+        });
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initSecondaryPageControllers);
+} else {
+    initSecondaryPageControllers();
+}
