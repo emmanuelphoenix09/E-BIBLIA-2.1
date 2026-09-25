@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",()=>{updateGeminiStatus();document.getElementById("btn-ai-submit")?.addEventListener("click",runGeminiAnalysis);});
+document.addEventListener("DOMContentLoaded",()=>{window.EBiblia?.updateGeminiStatus();document.getElementById("btn-ai-submit")?.addEventListener("click",()=>window.EBiblia?.runGeminiAnalysis());});
