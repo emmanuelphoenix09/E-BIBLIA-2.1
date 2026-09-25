@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{renderVerseNotes();document.getElementById("btn-save-verse-note")?.addEventListener("click",saveVerseNote);});
