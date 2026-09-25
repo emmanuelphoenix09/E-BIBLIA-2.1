@@ -155,15 +155,18 @@
         document.addEventListener("DOMContentLoaded", async () => {
             try {
                 await loadBibleDataFromJSON();
-                initBookSelectors();
-                initEventListeners();
-                renderBibleText();
-                renderBookmarks();
-                renderVerseNotes();
-                renderMarks();
-                renderCults();
-                renderNotebook();
-                initApplicationMenu();
+                const page = document.body?.dataset?.page || "reader";
+                if (page === "reader") {
+                    initBookSelectors();
+                    initEventListeners();
+                    renderBibleText();
+                    renderBookmarks();
+                    renderVerseNotes();
+                    renderMarks();
+                    renderCults();
+                    renderNotebook();
+                    initApplicationMenu();
+                }
                 updateGeminiStatus();
             } catch (error) {
                 console.error("E-BIBLIA: échec du chargement des données bibliques", error);
@@ -1392,27 +1395,13 @@ verseEl.addEventListener("click", (event) => {
         window.addEventListener("resize", syncMobileSidebarBackdrop);
 
         function initApplicationMenu() {
-            document.querySelectorAll("[data-app-action]").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const action = btn.dataset.appAction;
-                    closeMobileSidebar();
-
-                    if (action === "favorites") document.getElementById("modal-bookmarks").classList.remove("hidden");
-                    if (action === "verse-notes") { renderVerseNotes(); openAppModal("modal-verse-notes"); }
-                    if (action === "marks") { renderMarks(); openAppModal("modal-marks"); }
-                    if (action === "notebook") { renderNotebook(); openAppModal("modal-notebook"); }
-                    if (action === "cults") { renderCults(); openAppModal("modal-cults"); }
-                    if (action === "search") {
-                        document.getElementById("modal-search").classList.remove("hidden");
-                        document.getElementById("input-search").focus();
-                    }
-                    if (action === "import") document.getElementById("modal-import").classList.remove("hidden");
-                    if (action === "settings") openAppModal("modal-settings");
-                    if (action === "about") openAppModal("modal-about");
-                });
-            });
+            const routes = { favorites:"favoris.html", "verse-notes":"notes.html", marks:"passages.html", notebook:"bloc-notes.html", cults:"cultes.html", search:"recherche.html", import:"importer.html", settings:"parametres.html", about:"apropos.html" };
+            document.querySelectorAll("[data-app-action]").forEach(btn => btn.addEventListener("click", () => {
+                const action = btn.dataset.appAction;
+                closeMobileSidebar();
+                if (routes[action]) window.location.href = "./" + routes[action];
+            }));
         }
-
 
         function updateGeminiStatus() {
             const status = document.getElementById("gemini-status");
@@ -1761,6 +1750,7 @@ verseEl.addEventListener("click", (event) => {
             toast.className = "bg-gray-900 text-white dark:bg-white dark:text-gray-900 px-4 py-3 rounded-lg shadow-lg text-xs font-medium flex items-center space-x-2 transition transform translate-y-2 opacity-0";
             toast.innerHTML = `<i class="fa-solid fa-circle-info text-amber-500"></i><span>${message}</span>`;
             
+            if (!container) return;
             container.appendChild(toast);
 
             setTimeout(() => {
