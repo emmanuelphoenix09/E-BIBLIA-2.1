@@ -1170,6 +1170,7 @@ Object.assign(window.EBiblia, {
     BIBLE_DATA,
     LOCAL_BIBLE_VERSIONS,
     FULL_BIBLE_BOOKS,
+    BOOK_ALIASES,
     state,
     renderBookmarks,
     handleImportJSON,
