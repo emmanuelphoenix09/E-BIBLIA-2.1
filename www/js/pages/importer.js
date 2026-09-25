@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",()=>document.getElementById("btn-process-import")?.addEventListener("click",()=>window.EBiblia?.handleImportJSON()));
