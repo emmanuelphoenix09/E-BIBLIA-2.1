@@ -1778,6 +1778,7 @@ Object.assign(window.EBiblia, {
     saveAppData,
     handleImportJSON,
     runGeminiAnalysis,
+    updateGeminiStatus,
     executeSearch,
     showToast,
     getVerseText,
