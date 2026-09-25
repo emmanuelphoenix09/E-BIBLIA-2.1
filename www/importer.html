@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Importer une version biblique — E-Biblia</title><link rel="stylesheet" href="./css/tailwind.css"><link rel="stylesheet" href="./offline-assets/fontawesome.css"><link rel="stylesheet" href="./offline-assets/google-fonts.css"><link rel="stylesheet" href="./css/main.css"></head><body data-page="importer" class="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100"><header class="sticky top-0 z-40 bg-white/95 dark:bg-gray-900/95 border-b border-gray-200 dark:border-gray-800"><div class="max-w-5xl mx-auto px-4 py-3 flex gap-3 items-center"><a href="./lecture.html" class="text-amber-600 font-semibold text-sm"><i class="fa-solid fa-arrow-left mr-1"></i> Retour</a><h1 class="font-brand font-bold text-lg">Importer une version biblique</h1></div></header><main class="max-w-5xl mx-auto p-4 md:p-6"><div id="modal-import" class="bg-black/50 backdrop-blur-sm z-50 ">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl max-w-lg w-full p-6 border border-gray-200 dark:border-gray-800">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-brand font-bold text-lg text-gray-900 dark:text-white flex items-center">
+                    <i class="fa-solid fa-file-code text-amber-500 mr-2"></i> Importer un Fichier JSON
+                </h3>
+                
+            </div>
+            
+            <p class="text-xs text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                Chargez un fichier biblique au format JSON (comme <code class="bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-amber-600 font-mono">lsg.json</code>).
+            </p>
+
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold mb-1 text-gray-700 dark:text-gray-300">Code court de la version</label>
+                    <input type="text" id="import-version-code" placeholder="EX: LSG2026" class="w-full bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md px-3 py-2 text-sm text-gray-900 dark:text-white">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold mb-1 text-gray-700 dark:text-gray-300">Intitulé / Nom complet</label>
+                    <input type="text" id="import-version-title" placeholder="Louis Segond Révisée" class="w-full bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md px-3 py-2 text-sm text-gray-900 dark:text-white">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold mb-1 text-gray-700 dark:text-gray-300">Sélectionner le fichier .json</label>
+                    <input type="file" id="import-file-input" accept=".json" class="w-full text-xs text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-amber-50 file:text-amber-700 hover:file:bg-amber-100 dark:file:bg-gray-800 dark:file:text-amber-400 cursor-pointer">
+                </div>
+
+                <div class="pt-4 flex justify-end space-x-2">
+                    
+                    <button id="btn-process-import" class="px-4 py-2 text-xs font-medium rounded-md bg-amber-600 hover:bg-amber-700 text-white transition">Charger la version</button>
+                </div>
+            </div>
+        </div>
+    </div></main><script src="./js/config.js"></script><script src="./js/app.js"></script><script src="./js/pages/importer.js"></script></body></html>
