@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",()=>{window.EBiblia?.renderVerseNotes();document.getElementById("btn-save-verse-note")?.addEventListener("click",()=>window.EBiblia?.saveVerseNote());});
