@@ -161,10 +161,10 @@
                     initEventListeners();
                     renderBibleText();
                     renderBookmarks();
-                    renderVerseNotes();
-                    renderMarks();
-                    renderCults();
-                    renderNotebook();
+                    window.EBibliaData.renderVerseNotes();
+                    window.EBibliaData.renderMarks();
+                    window.EBibliaData.renderCults();
+                    window.EBibliaData.renderNotebook();
                     initApplicationMenu();
                 }
                 updateGeminiStatus();
@@ -466,7 +466,7 @@
 
         function addSelectedToVerseNotes() {
             if (!state.selectedVerses.length) return;
-            appData.verseNotes.push({
+            window.EBibliaData.appData.verseNotes.push({
                 book: state.selectedVerses[0].book,
                 chapter: state.selectedVerses[0].chapter,
                 verse: state.selectedVerses.map(v => v.verse).join(","),
@@ -476,8 +476,8 @@
                 selectedVerses: state.selectedVerses.map(v => v.verse),
                 createdAt: new Date().toISOString()
             });
-            saveAppData();
-            renderVerseNotes();
+            window.EBibliaData.saveAppData();
+            window.EBibliaData.renderVerseNotes();
             openAppModal("modal-verse-notes");
             showToast("Versets ajoutés aux notes.");
         }
@@ -569,18 +569,18 @@
         function highlightSelectedVerses() {
             if (!state.selectedVerses.length) return;
             state.selectedVerses.forEach(v => {
-                const existing = appData.marks.findIndex(m =>
+                const existing = window.EBibliaData.appData.marks.findIndex(m =>
                     m.book === v.book && m.chapter === v.chapter && m.verse === v.verse && m.version === v.version
                 );
                 if (existing < 0) {
-                    appData.marks.push({
+                    window.EBibliaData.appData.marks.push({
                         book: v.book, chapter: v.chapter, verse: v.verse,
                         version: v.version, text: v.text, createdAt: new Date().toISOString()
                     });
                 }
             });
-            saveAppData();
-            renderMarks();
+            window.EBibliaData.saveAppData();
+            window.EBibliaData.renderMarks();
             renderBibleText();
             showToast("Sélection surlignée.");
         }
@@ -1024,54 +1024,9 @@ verseEl.addEventListener("click", (event) => {
             document.querySelectorAll(".app-modal, #modal-search, #modal-import, #modal-bookmarks").forEach(m => m.classList.add("hidden"));
         }
 
-        function renderVerseNotes() {
-            const box = document.getElementById("verse-notes-list");
-            if (!box) return;
-            box.innerHTML = "";
-            if (!appData.verseNotes.length) {
-                box.innerHTML = `<p class="text-sm text-gray-500 text-center py-8">Aucune note de verset pour le moment.</p>`;
-                return;
-            }
-            [...appData.verseNotes].reverse().forEach((n, reverseIndex) => {
-                const realIndex = appData.verseNotes.length - 1 - reverseIndex;
-                const card = document.createElement("div");
-                card.className = "p-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700";
-                card.innerHTML = `
-                    <div class="flex justify-between gap-2">
-                        <div>
-                            <p class="font-semibold text-sm text-amber-700 dark:text-amber-400">${verseLabel(n)}</p>
-                            <p class="text-[11px] text-gray-500">${versionName(n.version)}</p>
-                        </div>
-                        <button class="text-red-500 text-xs" data-delete-note="${realIndex}" title="Supprimer"><i class="fa-solid fa-trash"></i></button>
-                    </div>
-                    <p class="text-sm mt-2 whitespace-pre-wrap">${escapeHtml(n.note)}</p>
-                    <p class="text-xs text-gray-500 mt-2">${escapeHtml(n.text || "")}</p>`;
-                box.appendChild(card);
-            });
-            box.querySelectorAll("[data-delete-note]").forEach(btn => btn.addEventListener("click", () => {
-                appData.verseNotes.splice(Number(btn.dataset.deleteNote), 1);
-                saveAppData();
-                renderVerseNotes();
-            }));
-        }
+        
 
-        function saveVerseNote() {
-            const note = document.getElementById("verse-note-input").value.trim();
-            if (!note) return showToast("Écrivez une note avant d'enregistrer.");
-            appData.verseNotes.push({
-                book: state.currentBook,
-                chapter: state.currentChapter,
-                verse: state._selectedVerse || 1,
-                version: state.version1,
-                note,
-                text: getVerseText(state.version1, state.currentBook, state.currentChapter, state._selectedVerse || 1),
-                createdAt: new Date().toISOString()
-            });
-            saveAppData();
-            document.getElementById("verse-note-input").value = "";
-            renderVerseNotes();
-            showToast("Note de verset enregistrée.");
-        }
+        
 
         function openVerseNoteForCurrentVerse(verse) {
             state._selectedVerse = Number(verse);
@@ -1081,94 +1036,11 @@ verseEl.addEventListener("click", (event) => {
             openAppModal("modal-verse-notes");
         }
 
-        function renderMarks() {
-            const box = document.getElementById("marks-list");
-            if (!box) return;
-            box.innerHTML = "";
-            if (!appData.marks.length) {
-                box.innerHTML = `<p class="text-sm text-gray-500 text-center py-8">Aucun passage marqué.</p>`;
-                return;
-            }
-            [...appData.marks].reverse().forEach((m, reverseIndex) => {
-                const realIndex = appData.marks.length - 1 - reverseIndex;
-                const card = document.createElement("div");
-                card.className = "p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800";
-                card.innerHTML = `
-                    <div class="flex justify-between gap-2">
-                        <div>
-                            <p class="font-semibold text-sm text-amber-700 dark:text-amber-400">${verseLabel(m)}</p>
-                            <p class="text-[11px] text-gray-500">${versionName(m.version)}</p>
-                        </div>
-                        <button class="text-red-500 text-xs" data-delete-mark="${realIndex}"><i class="fa-solid fa-trash"></i></button>
-                    </div>
-                    <p class="text-sm mt-2">${escapeHtml(m.text || "")}</p>`;
-                box.appendChild(card);
-            });
-            box.querySelectorAll("[data-delete-mark]").forEach(btn => btn.addEventListener("click", () => {
-                appData.marks.splice(Number(btn.dataset.deleteMark), 1);
-                saveAppData();
-                renderMarks();
-                renderBibleText();
-            }));
-        }
+        
 
-        function renderCults() {
-            const box = document.getElementById("cults-list");
-            if (!box) return;
-            box.innerHTML = "";
-            if (!appData.cults.length) {
-                box.innerHTML = `<p class="text-sm text-gray-500 text-center py-8">Aucun culte enregistré.</p>`;
-                return;
-            }
-            [...appData.cults].reverse().forEach((c, reverseIndex) => {
-                const realIndex = appData.cults.length - 1 - reverseIndex;
-                const card = document.createElement("div");
-                card.className = "p-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700";
-                card.innerHTML = `
-                    <div class="flex justify-between gap-2">
-                        <div>
-                            <p class="font-semibold text-sm">${escapeHtml(c.theme || "Culte")}</p>
-                            <p class="text-xs text-amber-700 dark:text-amber-400">${escapeHtml(c.date || "")} · ${escapeHtml(c.preacher || "Prédicateur non renseigné")}</p>
-                        </div>
-                        <button class="text-red-500 text-xs" data-delete-cult="${realIndex}"><i class="fa-solid fa-trash"></i></button>
-                    </div>
-                    <p class="text-xs mt-2"><strong>Versets :</strong> ${escapeHtml(c.verses || "—")}</p>
-                    <p class="text-sm mt-2 whitespace-pre-wrap">${escapeHtml(c.notes || "")}</p>`;
-                box.appendChild(card);
-            });
-            box.querySelectorAll("[data-delete-cult]").forEach(btn => btn.addEventListener("click", () => {
-                appData.cults.splice(Number(btn.dataset.deleteCult), 1);
-                saveAppData();
-                renderCults();
-            }));
-        }
+        
 
-        function renderNotebook() {
-            const box = document.getElementById("notebook-list");
-            if (!box) return;
-            box.innerHTML = "";
-            if (!appData.notebook.length) {
-                box.innerHTML = `<p class="text-sm text-gray-500 text-center py-8">Votre bloc-notes est vide.</p>`;
-                return;
-            }
-            [...appData.notebook].reverse().forEach((n, reverseIndex) => {
-                const realIndex = appData.notebook.length - 1 - reverseIndex;
-                const card = document.createElement("div");
-                card.className = "p-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700";
-                card.innerHTML = `
-                    <div class="flex justify-between gap-2">
-                        <p class="font-semibold text-sm">${escapeHtml(n.title || "Sans titre")}</p>
-                        <button class="text-red-500 text-xs" data-delete-notebook="${realIndex}"><i class="fa-solid fa-trash"></i></button>
-                    </div>
-                    <p class="text-sm mt-2 whitespace-pre-wrap">${escapeHtml(n.content || "")}</p>`;
-                box.appendChild(card);
-            });
-            box.querySelectorAll("[data-delete-notebook]").forEach(btn => btn.addEventListener("click", () => {
-                appData.notebook.splice(Number(btn.dataset.deleteNotebook), 1);
-                saveAppData();
-                renderNotebook();
-            }));
-        }
+        
 
         function escapeHtml(value) {
             return String(value ?? "").replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[ch]));
@@ -1524,12 +1396,12 @@ verseEl.addEventListener("click", (event) => {
                 closeMobileSidebar();
             });
 
-            document.getElementById("btn-save-verse-note")?.addEventListener("click", saveVerseNote);
+            document.getElementById("btn-save-verse-note")?.addEventListener("click", window.EBibliaData.saveVerseNote);
 
             document.getElementById("btn-save-cult")?.addEventListener("click", () => {
                 const theme = document.getElementById("cult-theme").value.trim();
                 if (!theme) return showToast("Indiquez au moins le thème du culte.");
-                appData.cults.push({
+                window.EBibliaData.appData.cults.push({
                     date: document.getElementById("cult-date").value,
                     theme,
                     preacher: document.getElementById("cult-preacher").value.trim(),
@@ -1537,9 +1409,9 @@ verseEl.addEventListener("click", (event) => {
                     notes: document.getElementById("cult-notes").value.trim(),
                     createdAt: new Date().toISOString()
                 });
-                saveAppData();
+                window.EBibliaData.saveAppData();
                 ["cult-theme","cult-preacher","cult-verses","cult-notes"].forEach(id => document.getElementById(id).value = "");
-                renderCults();
+                window.EBibliaData.renderCults();
                 showToast("Culte enregistré.");
             });
 
@@ -1547,11 +1419,11 @@ verseEl.addEventListener("click", (event) => {
                 const title = document.getElementById("notebook-title").value.trim();
                 const content = document.getElementById("notebook-content").value.trim();
                 if (!content) return showToast("Écrivez quelque chose dans le bloc-notes.");
-                appData.notebook.push({title, content, createdAt: new Date().toISOString()});
-                saveAppData();
+                window.EBibliaData.appData.notebook.push({title, content, createdAt: new Date().toISOString()});
+                window.EBibliaData.saveAppData();
                 document.getElementById("notebook-title").value = "";
                 document.getElementById("notebook-content").value = "";
-                renderNotebook();
+                window.EBibliaData.renderNotebook();
                 showToast("Note ajoutée au bloc-notes.");
             });
 
@@ -1574,15 +1446,15 @@ verseEl.addEventListener("click", (event) => {
                 localStorage.removeItem("ebiblia_cults");
                 localStorage.removeItem("ebiblia_notebook");
                 state.bookmarks = [];
-                appData.marks = [];
-                appData.verseNotes = [];
-                appData.cults = [];
-                appData.notebook = [];
+                window.EBibliaData.appData.marks = [];
+                window.EBibliaData.appData.verseNotes = [];
+                window.EBibliaData.appData.cults = [];
+                window.EBibliaData.appData.notebook = [];
                 renderBookmarks();
-                renderMarks();
-                renderVerseNotes();
-                renderCults();
-                renderNotebook();
+                window.EBibliaData.renderMarks();
+                window.EBibliaData.renderVerseNotes();
+                window.EBibliaData.renderCults();
+                window.EBibliaData.renderNotebook();
                 renderBibleText();
                 showToast("Données locales réinitialisées.");
             });
@@ -1657,19 +1529,14 @@ Object.assign(window.EBiblia, {
     LOCAL_BIBLE_VERSIONS,
     FULL_BIBLE_BOOKS,
     state,
-    appData,
+    window.EBibliaData.appData,
     renderBookmarks,
-    renderVerseNotes,
-    saveVerseNote,
-    renderMarks,
-    renderCults,
-    renderNotebook,
-    saveAppData,
     handleImportJSON,
     runGeminiAnalysis,
     updateGeminiStatus,
     executeSearch,
     showToast,
+    openAppModal,
     getVerseText,
     toggleBookmark,
     toggleMark,
