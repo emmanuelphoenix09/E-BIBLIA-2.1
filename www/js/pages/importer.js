@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>document.getElementById("btn-process-import")?.addEventListener("click",handleImportJSON));
