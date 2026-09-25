@@ -1762,3 +1762,30 @@ verseEl.addEventListener("click", (event) => {
                 setTimeout(() => toast.remove(), 300);
             }, 3000);
         }
+
+
+/* E-BIBLIA 3.0 — Public application API for page modules */
+window.EBiblia = window.EBiblia || {};
+Object.assign(window.EBiblia, {
+    state,
+    appData,
+    renderBookmarks,
+    renderVerseNotes,
+    saveVerseNote,
+    renderMarks,
+    renderCults,
+    renderNotebook,
+    saveAppData,
+    handleImportJSON,
+    runGeminiAnalysis,
+    executeSearch,
+    showToast,
+    getVerseText,
+    toggleBookmark,
+    toggleMark,
+    shareSelectedVerses,
+    addSelectedToVerseNotes,
+    addSelectedToCult,
+    clearVerseSelection,
+    renderBibleText
+});
