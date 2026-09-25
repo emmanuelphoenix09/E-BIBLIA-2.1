@@ -1,0 +1,192 @@
+/* Custom scrollbars */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #475569;
+        }
+        .verse-highlight {
+            background-color: rgba(212, 175, 55, 0.25);
+            border-left: 3px solid #d4af37;
+            padding-left: 0.5rem;
+            border-radius: 0.25rem;
+        }
+        .verse-active-sync {
+            background-color: rgba(59, 130, 246, 0.15);
+            outline: 1px dashed rgba(59, 130, 246, 0.4);
+            border-radius: 0.25rem;
+        }
+        .book-item-active {
+            background-color: rgba(212, 175, 55, 0.15);
+            color: #b89428;
+            font-weight: 700;
+        }
+    
+        .app-menu-item {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+            padding: .7rem .8rem;
+            border-radius: .7rem;
+            color: #374151;
+            font-size: .875rem;
+            font-weight: 600;
+            transition: .18s ease;
+            text-align: left;
+        }
+        .dark .app-menu-item { color: #d1d5db; }
+        .app-menu-item:hover {
+            background: rgba(245, 158, 11, .10);
+            color: #92400e;
+            transform: translateX(2px);
+        }
+        .dark .app-menu-item:hover {
+            background: rgba(245, 158, 11, .12);
+            color: #fbbf24;
+        }
+        .app-menu-icon {
+            width: 2rem;
+            height: 2rem;
+            min-width: 2rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: .55rem;
+            background: rgba(245, 158, 11, .12);
+            color: #b45309;
+        }
+        .dark .app-menu-icon { color: #fbbf24; background: rgba(245,158,11,.12); }
+
+
+        .input-app {
+            width: 100%;
+            background: #f9fafb;
+            border: 1px solid #d1d5db;
+            border-radius: .6rem;
+            padding: .65rem .8rem;
+            font-size: .875rem;
+            color: #111827;
+            outline: none;
+        }
+        .dark .input-app {
+            background: #1f2937;
+            border-color: #374151;
+            color: #f9fafb;
+        }
+        .input-app:focus { box-shadow: 0 0 0 2px rgba(245,158,11,.35); border-color: #f59e0b; }
+
+
+        .verse-inline-selection-actions { transition: opacity .15s ease; }
+        .verse-inline-selection-actions {
+            width: 100%;
+            margin: 2px 0 2px 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2px;
+        }
+        .verse-inline-selection-actions .selection-action-btn {
+            width: 28px;
+            height: 28px;
+            min-height: 28px;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 7px;
+            background: transparent;
+            color: #6b7280;
+            border: 0;
+            transition: background-color .15s ease, color .15s ease;
+        }
+        .verse-inline-selection-actions .selection-action-btn:hover {
+            background: rgba(212,175,55,.12);
+            color: #b89428;
+        }
+        .dark .verse-inline-selection-actions .selection-action-btn { color: #9ca3af; }
+        .dark .verse-inline-selection-actions .selection-action-btn:hover {
+            background: rgba(212,175,55,.14);
+            color: #f1c75b;
+        }
+        .verse-inline-selection-actions .selection-count {
+            font-size: 10px;
+            font-weight: 700;
+            color: #b89428;
+            margin-right: 2px;
+            user-select: none;
+        }
+        .verse-inline-selection-actions button { min-height: 34px; }
+
+
+        /* Écran de lancement E-Biblia — plein écran, adaptatif, 4 secondes. */
+        #ebiblia-splash {
+            position: fixed;
+            inset: 0;
+            z-index: 2147483647;
+            width: 100%;
+            height: 100%;
+            height: 100dvh;
+            background: #000;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            overflow: hidden;
+            will-change: opacity;
+        }
+        #ebiblia-splash.is-running {
+            animation: ebibliaSplashFade 4s ease-in-out forwards;
+        }
+        #ebiblia-splash .splash-content {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            opacity: 1;
+            transform: scale(1);
+            will-change: opacity, transform, filter;
+        }
+        #ebiblia-splash.is-running .splash-content {
+            animation: ebibliaLogoFusion 4s ease-in-out forwards;
+        }
+        #ebiblia-splash img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            max-height: none;
+            object-fit: cover;
+            object-position: center center;
+            margin: 0;
+            background: #000;
+        }
+        #ebiblia-splash .splash-author {
+            display: none;
+        }
+        @keyframes ebibliaSplashFade {
+            0% { opacity: 0; }
+            15% { opacity: 1; }
+            72% { opacity: 1; }
+            100% { opacity: 0; visibility: hidden; pointer-events: none; }
+        }
+        @keyframes ebibliaLogoFusion {
+            0% { opacity: 0; transform: scale(1.01); filter: blur(4px); }
+            15% { opacity: 1; transform: scale(1); filter: blur(0); }
+            72% { opacity: 1; transform: scale(1); filter: blur(0); }
+            100% { opacity: 0; transform: scale(1.015); filter: blur(2px); }
+        }
+        #ebiblia-splash.is-finished {
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+        }
