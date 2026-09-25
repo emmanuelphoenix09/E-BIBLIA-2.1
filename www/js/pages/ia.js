@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{updateGeminiStatus();document.getElementById("btn-ai-submit")?.addEventListener("click",runGeminiAnalysis);});
