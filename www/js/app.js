@@ -372,71 +372,8 @@
         }
 
         async function loadBibleDataFromJSON() {
-            const loadedStore = {};
-            const loadedVersions = {};
-            const results = await Promise.all(Object.entries(LOCAL_BIBLE_VERSIONS).map(async ([code, meta]) => {
-                try {
-                    const response = await fetch(`./bible-data/fr/${meta.file}/${meta.file}.json`, { cache: "no-store" });
-                    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                    const json = await response.json();
-                    const before = JSON.stringify(loadedStore[code] || {});
-                    loadedStore[code] = {};
-                    extractBibleRecords(json, loadedStore, code);
-                    const count = Object.values(loadedStore[code]).reduce((n, book) =>
-                        n + Object.values(book).reduce((m, chapter) => m + Object.keys(chapter).length, 0), 0);
-                    if (!count) throw new Error("Aucun verset reconnu dans le JSON");
-                    loadedVersions[code] = { name: meta.name, code };
-                    return { code, ok: true, count };
-                } catch (error) {
-                    console.warn(`E-BIBLIA: impossible de charger ${code}:`, error);
-                    return { code, ok: false, count: 0, error };
-                }
-            }));
-
-            BIBLE_DATA.textStore = loadedStore;
-            BIBLE_DATA.versions = loadedVersions;
-
-            const bookIds = new Set();
-            Object.values(loadedStore).forEach(version =>
-                Object.keys(version).forEach(bookId => bookIds.add(bookId))
-            );
-
-            BIBLE_DATA.books = FULL_BIBLE_BOOKS
-                .filter(([id]) => bookIds.has(id))
-                .map(([id, name, testament]) => {
-                    const chapters = Math.max(1, ...Object.values(loadedStore).flatMap(v =>
-                        Object.keys(v[id] || {}).map(Number).filter(Number.isFinite)
-                    ));
-                    return { id, name, testament, chapters };
-                });
-
-            if (!BIBLE_DATA.books.length) {
-                throw new Error("Aucun livre biblique n'a pu être chargé.");
-            }
-
-            const firstAvailable = BIBLE_DATA.books[0].id;
-            if (!BIBLE_DATA.books.some(b => b.id === state.currentBook)) state.currentBook = firstAvailable;
-
-            const versionCodes = Object.keys(loadedVersions);
-            if (!versionCodes.includes(state.version1)) state.version1 = versionCodes[0] || "LSG";
-            if (!versionCodes.includes(state.version2)) state.version2 = versionCodes.find(v => v !== state.version1) || state.version1;
-
-            const select1 = document.getElementById("select-version-1");
-            const select2 = document.getElementById("select-version-2");
-            [select1, select2].forEach(select => {
-                if (!select) return;
-                select.innerHTML = "";
-                versionCodes.forEach(code => {
-                    const option = document.createElement("option");
-                    option.value = code;
-                    option.textContent = loadedVersions[code].name;
-                    select.appendChild(option);
-                });
-            });
-            select1.value = state.version1;
-            select2.value = state.version2;
-
-            console.info("E-BIBLIA: données bibliques chargées", results);
+            if (!window.EBibliaBible?.loadBibleDataFromJSON) throw new Error("Le moteur biblique n'est pas chargé.");
+            return window.EBibliaBible.loadBibleDataFromJSON();
         }
 
         // ===== FIN CHARGEMENT DES BIBLES JSON =====
