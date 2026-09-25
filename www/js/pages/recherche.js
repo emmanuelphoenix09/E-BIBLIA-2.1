@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const i=document.getElementById("input-search");document.getElementById("btn-execute-search")?.addEventListener("click",()=>executeSearch(i?.value||""));i?.addEventListener("keyup",e=>{if(e.key==="Enter")executeSearch(i.value)});});
