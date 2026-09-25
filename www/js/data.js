@@ -1,4 +1,11 @@
-/* E-BIBLIA 3.0 — Données locales et fonctionnalités utilisateur */
+/*
+ * E-BIBLIA 3.0 — Données utilisateur
+ * ------------------------------------------------------------
+ * Favoris/surlignages, notes, cultes et bloc-notes sont stockés
+ * localement dans le navigateur.
+ *
+ * Pour modifier la structure des données utilisateur : utilisez ce fichier.
+ */
 (function () {
   const appData = {
     marks: JSON.parse(localStorage.getItem("ebiblia_marks") || "[]"),
