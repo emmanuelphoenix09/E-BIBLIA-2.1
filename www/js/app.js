@@ -425,7 +425,7 @@
                 .sort((a,b) => Number(a.verse) - Number(b.verse))
                 .map(v => {
                     const bookName = BIBLE_DATA.books.find(b => b.id === v.book)?.name || v.book;
-                    return `${bookName} ${v.chapter}:${v.verse} (${versionName(v.version)})\n${v.text}`;
+                    return `${bookName} ${v.chapter}:${v.verse} (${window.EBibliaData.versionName(v.version)})\n${v.text}`;
                 }).join("\n\n");
         }
         function updateInlineVerseActions() {
@@ -719,7 +719,7 @@ verseEl.addEventListener("click", (event) => {
                             <button onclick="toggleBookmark('${state.currentBook}', ${state.currentChapter}, ${v}, '${state.version1}')" class="p-1 text-xs ${isBookmarked ? 'text-amber-500' : 'text-gray-400 hover:text-amber-500'}" title="Favori">
                                 <i class="fa-${isBookmarked ? 'solid' : 'regular'} fa-bookmark"></i>
                             </button>
-                            <button onclick="toggleMark('${state.currentBook}', ${state.currentChapter}, ${v}, '${state.version1}')" class="p-1 text-xs ${isVerseMarked(state.currentBook, state.currentChapter, v, state.version1) ? 'text-orange-500' : 'text-gray-400 hover:text-orange-500'}" title="Marquer">
+                            <button onclick="window.EBibliaData.toggleMark('${state.currentBook}', ${state.currentChapter}, ${v}, '${state.version1}')" class="p-1 text-xs ${window.EBibliaData.isVerseMarked(state.currentBook, state.currentChapter, v, state.version1) ? 'text-orange-500' : 'text-gray-400 hover:text-orange-500'}" title="Marquer">
                                 <i class="fa-solid fa-highlighter"></i>
                             </button>
                             <button onclick="openVerseNoteForCurrentVerse(${v})" class="p-1 text-xs text-gray-400 hover:text-amber-600" title="Ajouter une note">
@@ -1031,7 +1031,7 @@ verseEl.addEventListener("click", (event) => {
         function openVerseNoteForCurrentVerse(verse) {
             state._selectedVerse = Number(verse);
             const text = getVerseText(state.version1, state.currentBook, state.currentChapter, state._selectedVerse);
-            document.getElementById("verse-note-context").textContent = `${verseLabel({book: state.currentBook, chapter: state.currentChapter, verse: state._selectedVerse})} — ${versionName(state.version1)}`;
+            document.getElementById("verse-note-context").textContent = `${window.EBibliaData.verseLabel({book: state.currentBook, chapter: state.currentChapter, verse: state._selectedVerse})} — ${window.EBibliaData.versionName(state.version1)}`;
             document.getElementById("verse-note-input").value = "";
             openAppModal("modal-verse-notes");
         }
