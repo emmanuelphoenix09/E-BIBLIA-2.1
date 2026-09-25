@@ -1,4 +1,10 @@
-/* E-BIBLIA 3.0 — Shared UI utilities */
+/*
+ * E-BIBLIA 3.0 — Fonctions communes
+ * ------------------------------------------------------------
+ * Navigation, thème sombre et préférences communes à toutes les pages.
+ * Pour modifier les liens entre pages : modifiez l'objet routes.
+ * Pour modifier le thème ou la taille du texte : utilisez ce fichier.
+ */
 (function () {
   const THEME_KEY = "ebiblia_theme";
   const FONT_KEY = "ebiblia_font_size";
