@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",()=>{const i=document.getElementById("input-search");document.getElementById("btn-execute-search")?.addEventListener("click",()=>window.EBiblia?.executeSearch(i?.value||""));i?.addEventListener("keyup",e=>{if(e.key==="Enter")window.EBiblia?.executeSearch(i.value)});});
