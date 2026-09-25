@@ -1,4 +1,13 @@
-/* E-BIBLIA 3.0 — Moteur lecteur et sélection de versets */
+/*
+ * E-BIBLIA 3.0 — Fonctions de lecture et sélection
+ * ------------------------------------------------------------
+ * Ce fichier gère la sélection de versets et les actions liées
+ * aux versets sélectionnés.
+ *
+ * Pour modifier les actions "Favori", "Note", "Culte", "IA", etc. :
+ * recherchez les fonctions bookmarkSelectedVerses(), addSelectedToVerseNotes(),
+ * addSelectedToCult() et openAIForSelection().
+ */
 (function () {
 function verseSelectionKey(book, chapter, verse, version) {
             return `${version}|${book}|${chapter}|${verse}`;
