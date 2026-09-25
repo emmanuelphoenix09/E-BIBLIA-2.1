@@ -1173,7 +1173,6 @@ Object.assign(window.EBiblia, {
     state,
     renderBookmarks,
     handleImportJSON,
-    window.EBibliaAI.runGeminiAnalysis,
     updateGeminiStatus,
     executeSearch,
     showToast,
