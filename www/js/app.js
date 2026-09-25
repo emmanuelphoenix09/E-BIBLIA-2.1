@@ -1395,12 +1395,7 @@ verseEl.addEventListener("click", (event) => {
         window.addEventListener("resize", syncMobileSidebarBackdrop);
 
         function initApplicationMenu() {
-            const routes = { favorites:"favoris.html", "verse-notes":"notes.html", marks:"passages.html", notebook:"bloc-notes.html", cults:"cultes.html", search:"recherche.html", import:"importer.html", settings:"parametres.html", about:"apropos.html" };
-            document.querySelectorAll("[data-app-action]").forEach(btn => btn.addEventListener("click", () => {
-                const action = btn.dataset.appAction;
-                closeMobileSidebar();
-                if (routes[action]) window.location.href = "./" + routes[action];
-            }));
+            if (window.EBibliaCommon?.bindNavigation) window.EBibliaCommon.bindNavigation();
         }
 
         function updateGeminiStatus() {
