@@ -92,7 +92,24 @@ body{background:var(--reader-bg);color:var(--reader-text)}
 #ebiblia-bottom-nav i{font-size:16px}
 html:not(.dark) #ebiblia-bottom-nav{border-color:#EDE3CC!important}
 @media(min-width:768px){#ebiblia-bottom-nav{width:min(70vw,680px)!important}}
-</style></head>
+</style><style id="eb-design-polish">
+/* E-BIBLIA — finition de la fiche de design */
+body[data-page="reader"], body:has(.eb-reader-shell){background:#0A0A0A}
+.eb-reader-shell{min-width:0}
+.eb-reader-header{background:rgba(10,10,10,.92);border-color:#2C2C2E!important}
+.dark .eb-reader-header{background:rgba(10,10,10,.94)}
+.eb-reference-title{letter-spacing:-.025em}
+.eb-reference-version{color:#A1A1AA}
+.eb-chapter-btn{background:#1C1C1E;border:1px solid #2C2C2E;color:#FFF}
+.eb-chapter-btn:hover{background:#2C2C2E}
+.eb-reader-scroll{scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
+.eb-bible-column{max-width:760px;margin:0 auto;padding:22px 18px 120px}
+@media(max-width:640px){
+  .eb-bible-column{padding:18px 14px 120px}
+  .eb-reader-header{padding-top:10px;padding-bottom:10px}
+}
+</style>
+</head>
 
 <body data-page="reader" class="bg-gray-50 dark:bg-biblia-parchmentDark text-gray-900 dark:text-gray-100 font-sans h-full flex flex-col transition-colors duration-200 selection:bg-amber-200 dark:selection:bg-amber-900">
 
