@@ -16,7 +16,8 @@
     ai: "ia.html",
     settings: "parametres.html",
     about: "apropos.html",
-    menu: "menu.html"
+    menu: "menu.html",
+    compare: "comparer-versions.html"
   };
 
   function applyTheme() {
