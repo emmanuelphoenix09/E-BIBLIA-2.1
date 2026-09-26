@@ -144,7 +144,9 @@ async function runGeminiAnalysis(initialExplanation = false) {
                 return;
             }
 
-            result.innerHTML = `<div class="flex items-center justify-center gap-2 text-gray-500 py-8"><i class="fa-solid fa-spinner fa-spin"></i> ${initialExplanation ? "Explication du passage en cours…" : "Recherche de la réponse…"}</div>`;
+            if (leonaOrbState === "listening") stopLeonaListening();
+            setLeonaOrbState("speaking");
+            result.innerHTML = `<div class="leona-empty-result"><span class="leona-mini-orb leona-mini-orb-large" aria-hidden="true"></span><p>${initialExplanation ? "Léona étudie le passage…" : "Léona prépare sa réponse…"}</p></div>`;
             if (button) button.disabled = true;
             try {
                 const answer = await askGemini(question);
@@ -153,6 +155,7 @@ async function runGeminiAnalysis(initialExplanation = false) {
                 result.innerHTML = `<div class="text-red-600 dark:text-red-400">${escapeHtml(error.message)}</div>`;
             } finally {
                 if (button) button.disabled = false;
+                if (leonaOrbState === "speaking") setLeonaOrbState("rest");
             }
         }
 
