@@ -176,6 +176,7 @@ async function runGeminiAnalysis(initialExplanation = false) {
       leonaOrbState = state;
       const status = document.getElementById("leona-status");
       const label = document.getElementById("leona-status-text");
+      const micButton = document.getElementById("leona-mic-button");
       if (status) status.dataset.state = state;
       if (label) {
           label.textContent = state === "listening"
@@ -183,6 +184,16 @@ async function runGeminiAnalysis(initialExplanation = false) {
               : state === "speaking"
                   ? "Léona parle..."
                   : "En repos";
+      }
+      if (status) status.setAttribute("aria-live", "polite");
+      if (micButton) {
+          const listening = state === "listening";
+          micButton.setAttribute("aria-pressed", String(listening));
+          micButton.setAttribute("aria-label", listening ? "Arrêter le microphone" : "Activer le microphone");
+          const icon = micButton.querySelector("i");
+          const text = micButton.querySelector("span");
+          if (icon) icon.className = listening ? "fa-solid fa-stop" : "fa-solid fa-microphone";
+          if (text) text.textContent = listening ? "Arrêter" : "Écouter";
       }
   }
 
