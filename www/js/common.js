@@ -16,7 +16,7 @@
   };
   function applyTheme() {
     const saved = localStorage.getItem(THEME_KEY);
-    const dark = saved === "dark" || (saved !== "light" && window.matchMedia?.("(prefers-color-scheme: dark)").matches);
+    const dark = saved !== "light";
     document.documentElement.classList.toggle("dark", !!dark);
   }
   function toggleTheme() {
