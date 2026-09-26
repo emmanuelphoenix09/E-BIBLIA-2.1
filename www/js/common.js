@@ -15,7 +15,8 @@
     import: "importer.html",
     ai: "ia.html",
     settings: "parametres.html",
-    about: "apropos.html"
+    about: "apropos.html",
+    menu: "menu.html"
   };
 
   function applyTheme() {
@@ -77,11 +78,8 @@
     const menu = document.createElement("button");
     menu.type = "button";
     menu.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i><span>Menu</span>';
-    menu.addEventListener("click", () => {
-      const sidebar = document.getElementById("sidebar-nav");
-      if (sidebar) sidebar.classList.toggle("-translate-x-full");
-      else navigate("settings");
-    });
+    menu.classList.toggle("is-active", page === "menu");
+    menu.addEventListener("click", () => navigate("menu"));
     nav.appendChild(menu);
     document.body.appendChild(nav);
   }
