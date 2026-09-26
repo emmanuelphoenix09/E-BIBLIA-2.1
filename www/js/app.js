@@ -312,76 +312,31 @@
             "3JO":"3JO","3JEAN":"3JO","JUD":"JUD","JUDE":"JUD","REV":"REV","APOCALYPSE":"REV"
         };
 
-        function cleanBookKey(value) {
-            if (value === undefined || value === null) return null;
-            if (typeof value === "number" || /^\d+$/.test(String(value).trim())) {
-                const n = Number(value);
-                return FULL_BIBLE_BOOKS[n - 1]?.[0] || null;
+        // ===== Accès au moteur biblique =====
+        /*
+         * Le traitement des fichiers JSON est centralisé dans bible-core.js.
+         * app.js ne garde ici que de petits relais pour le moteur principal.
+         *
+         * Pour modifier le chargement, la normalisation ou la lecture des
+         * versets, modifier : www/js/bible-core.js
+         */
+
+        async function loadBibleDataFromJSON() {
+            if (!window.EBibliaBible?.loadBibleDataFromJSON) {
+                throw new Error("Le moteur biblique n'est pas chargé.");
             }
-            const key = String(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-                .toUpperCase().replace(/[^A-Z0-9]/g, "");
-            if (BOOK_ALIASES[key]) return BOOK_ALIASES[key];
-            return FULL_BIBLE_BOOKS.find(b => b[0] === key)?.[0] || null;
-        }
-
-        function addNormalizedVerse(store, version, book, chapter, verse, text) {
-            const bookId = cleanBookKey(book);
-            const ch = Number(chapter);
-            const vs = Number(verse);
-            if (!bookId || !Number.isFinite(ch) || !Number.isFinite(vs) || typeof text !== "string") return;
-            if (!store[version]) store[version] = {};
-            if (!store[version][bookId]) store[version][bookId] = {};
-            if (!store[version][bookId][ch]) store[version][bookId][ch] = {};
-            store[version][bookId][ch][vs] = text.trim();
-        }
-
-        function extractBibleRecords(node, store, version, inheritedBook = null, inheritedChapter = null) {
-            if (Array.isArray(node)) {
-                node.forEach(item => extractBibleRecords(item, store, version, inheritedBook, inheritedChapter));
-                return;
-            }
-            if (!node || typeof node !== "object") return;
-
-            const book = node.book ?? node.book_id ?? node.bookId ?? node.book_name ?? node.bookName ??
-                         node.book_abbr ?? node.abbreviation ?? node.osis ?? inheritedBook;
-            const chapter = node.chapter ?? node.chapter_number ?? node.chapterNumber ?? inheritedChapter;
-            const verse = node.verse ?? node.verse_number ?? node.verseNumber ?? node.verseId;
-            const text = node.text ?? node.verse_text ?? node.verseText ?? node.content;
-
-            if (text !== undefined && verse !== undefined) {
-                addNormalizedVerse(store, version, book, chapter, verse, String(text));
-            }
-
-            Object.entries(node).forEach(([key, value]) => {
-                if (["text","verse_text","verseText","content"].includes(key)) return;
-                let nextBook = book;
-                let nextChapter = chapter;
-                const possibleBook = cleanBookKey(key);
-                if (possibleBook) nextBook = possibleBook;
-                if (/^\d+$/.test(key) && nextBook && value && typeof value === "object") {
-                    if (!verse && chapter === inheritedChapter) nextChapter = Number(key);
-                }
-                extractBibleRecords(value, store, version, nextBook, nextChapter);
-            });
+            return window.EBibliaBible.loadBibleDataFromJSON();
         }
 
         function getVerseCount(version, book, chapter) {
-            const verses = BIBLE_DATA.textStore[version]?.[book]?.[chapter];
-            if (!verses) return 0;
-            return Math.max(0, ...Object.keys(verses).map(Number).filter(Number.isFinite));
-        }
-
-        async function loadBibleDataFromJSON() {
-            if (!window.EBibliaBible?.loadBibleDataFromJSON) throw new Error("Le moteur biblique n'est pas chargé.");
-            return window.EBibliaBible.loadBibleDataFromJSON();
+            return window.EBibliaBible?.getVerseCount(version, book, chapter) || 0;
         }
 
         // ===== FIN CHARGEMENT DES BIBLES JSON =====
 
-        // Helper to retrieve verse text from the loaded JSON data.
+        // Relais vers bible-core.js pour conserver l'API historique de app.js.
         function getVerseText(version, bookId, chapter, verse) {
-            const text = BIBLE_DATA.textStore?.[version]?.[bookId]?.[chapter]?.[verse];
-            return text || "";
+            return window.EBibliaBible?.getVerseText(version, bookId, chapter, verse) || "";
         }
 
 
