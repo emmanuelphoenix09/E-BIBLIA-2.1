@@ -67,7 +67,7 @@ body{margin:0;background:var(--cmp-bg);color:var(--cmp-text)}
 </section>
 
 <div class="cmp-actions">
-<button id="cmp-add-version" class="cmp-add" type="button"><i class="fa-solid fa-plus"></i> AJOUTER UNE VERSION</button>
+
 <button id="cmp-leona" class="cmp-leona" type="button"><i class="fa-solid fa-sparkles"></i> DEMANDER À LÉONA</button>
 </div>
 
@@ -174,11 +174,7 @@ document.getElementById("cmp-chapter").addEventListener("change",e=>{state.chapt
 document.getElementById("cmp-refresh").addEventListener("click",render);
 document.getElementById("cmp-prev").addEventListener("click",()=>{if(state.chapter>1){state.chapter--;updateChapters();render()}});
 document.getElementById("cmp-next").addEventListener("click",()=>{const b=BOOKS.find(x=>x[0]===state.book);if(b&&state.chapter<b[2]){state.chapter++;updateChapters();render()}});
-document.getElementById("cmp-add-version").addEventListener("click",()=>{
- const next=Object.keys(VERSIONS).find(v=>!state.versions.includes(v));
- if(!next){alert("Toutes les versions françaises disponibles sont déjà affichées.");return}
- state.versions.push(next);render();
-});
+
 document.getElementById("cmp-leona").addEventListener("click",()=>{
  window.location.href="./ia.html?book="+encodeURIComponent(state.book)+"&chapter="+state.chapter;
 });
