@@ -220,7 +220,7 @@ html:not(.dark) .ebiblia-bottom-nav { background:rgba(240,240,240,.94); }
 .ebiblia-bottom-nav button,.ebiblia-bottom-nav a { min-width:0; min-height:52px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; border:0; border-radius:16px; background:transparent; color:var(--eb-secondary); text-decoration:none; font-size:10px; font-weight:600; }
 .ebiblia-bottom-nav .is-active { background:var(--eb-active-bg); color:var(--eb-active-text); }
 .ebiblia-bottom-nav i { font-size:17px; }
-body:not([data-page="ia"]) main { padding-bottom:82px; }
+body:not([data-page="ia"]) { padding-bottom:90px; }
 body[data-page="ia"] { padding-bottom:0!important; }
 @media (min-width:768px) { .ebiblia-bottom-nav { left:50%; right:auto; width:min(560px,calc(100% - 32px)); transform:translateX(-50%); } }
 @media (max-width:420px) { .ebiblia-bottom-nav { left:8px; right:8px; bottom:max(6px,env(safe-area-inset-bottom)); } .ebiblia-bottom-nav button,.ebiblia-bottom-nav a { min-height:48px; font-size:9px; } }
