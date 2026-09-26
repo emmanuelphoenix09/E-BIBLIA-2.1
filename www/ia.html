@@ -34,7 +34,7 @@
     <main class="leona-main">
       <section class="leona-hero" aria-labelledby="leona-title">
         <div class="leona-heading">
-          <div class="leona-status" id="leona-status" data-state="rest">
+          <div class="leona-status" id="leona-status" data-state="rest" aria-live="polite">
             <span class="leona-status-dot"></span>
             <span id="leona-status-text">En repos</span>
           </div>
@@ -56,7 +56,7 @@
         </div>
 
         <div class="leona-controls">
-          <button id="leona-mic-button" class="leona-control leona-control-secondary" type="button">
+          <button id="leona-mic-button" class="leona-control leona-control-secondary" type="button" aria-pressed="false" aria-label="Activer le microphone">
             <i class="fa-solid fa-microphone"></i>
             <span>Écouter</span>
           </button>
