@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0A0A0A">
+  <title>Menu — E-BIBLIA</title>
+  <link rel="stylesheet" href="./css/tailwind.css">
+  <link rel="stylesheet" href="./offline-assets/fontawesome.css">
+  <link rel="stylesheet" href="./offline-assets/google-fonts.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <style>
+    .eb-menu-page{min-height:100dvh;background:var(--eb-bg);color:var(--eb-text);padding:24px 16px 112px}
+    .eb-menu-wrap{width:100%;max-width:620px;margin:0 auto}
+    .eb-menu-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
+    .eb-menu-title{margin:0;font-size:clamp(28px,7vw,34px);font-weight:800;letter-spacing:-.03em}
+    .eb-menu-sub{margin:5px 0 0;color:var(--eb-secondary);font-size:13px}
+    .eb-menu-close{width:42px;height:42px;border:0;border-radius:50%;display:grid;place-items:center;background:var(--eb-card);color:var(--eb-text);text-decoration:none}
+    .eb-menu-section{margin-top:22px}
+    .eb-menu-section-title{margin:0 0 8px;padding-left:4px;color:var(--eb-secondary);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    .eb-menu-list{background:var(--eb-card);border-radius:20px;overflow:hidden}
+    .eb-menu-row{width:100%;min-height:58px;padding:0 17px;display:flex;align-items:center;gap:13px;background:transparent;border:0;border-bottom:1px solid var(--eb-divider);color:var(--eb-text);text-decoration:none;text-align:left;font:inherit;cursor:pointer}
+    .eb-menu-row:last-child{border-bottom:0}
+    .eb-menu-row:hover{background:color-mix(in srgb,var(--eb-accent) 7%,transparent)}
+    .eb-menu-icon{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto;background:color-mix(in srgb,var(--eb-accent) 13%,transparent);color:var(--eb-accent)}
+    .eb-menu-row span:nth-child(2){flex:1;font-size:15px;font-weight:600}
+    .eb-menu-arrow{color:var(--eb-secondary);font-size:11px}
+    .eb-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;background:var(--eb-card);border-radius:20px;padding:10px}
+    .eb-stat{padding:14px 8px;text-align:center;border-radius:14px;background:color-mix(in srgb,var(--eb-bg) 45%,var(--eb-card))}
+    .eb-stat strong{display:block;font-size:20px;font-weight:800}
+    .eb-stat small{display:block;margin-top:3px;color:var(--eb-secondary);font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+    .eb-donation{margin-top:14px;width:100%;min-height:52px;border:0;border-radius:999px;background:var(--eb-accent);color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:9px;font-weight:800;font-size:14px}
+    html:not(.dark) .eb-menu-row:hover{background:rgba(240,167,10,.09)}
+    @media(max-width:420px){.eb-menu-page{padding-left:12px;padding-right:12px}.eb-menu-list,.eb-stats{border-radius:18px}.eb-menu-row{min-height:56px;padding:0 14px}}
+  </style>
+</head>
+<body data-page="menu" class="min-h-full">
+  <main class="eb-menu-page">
+    <div class="eb-menu-wrap">
+      <header class="eb-menu-head">
+        <div>
+          <h1 class="eb-menu-title">Menu</h1>
+          <p class="eb-menu-sub">Votre espace E-BIBLIA</p>
+        </div>
+        <a href="./accueil.html" class="eb-menu-close" aria-label="Retour à l'accueil">
+          <i class="fa-solid fa-xmark"></i>
+        </a>
+      </header>
+
+      <section class="eb-menu-section" aria-label="Compte et bibliothèque">
+        <div class="eb-menu-list">
+          <a class="eb-menu-row" href="./parametres.html">
+            <span class="eb-menu-icon"><i class="fa-solid fa-user"></i></span><span>Profil</span><i class="fa-solid fa-chevron-right eb-menu-arrow"></i>
+          </a>
+          <a class="eb-menu-row" href="./notes.html">
+            <span class="eb-menu-icon"><i class="fa-solid fa-note-sticky"></i></span><span>Notes</span><i class="fa-solid fa-chevron-right eb-menu-arrow"></i>
+          </a>
+          <a class="eb-menu-row" href="./passages.html">
+            <span class="eb-menu-icon"><i class="fa-solid fa-highlighter"></i></span><span>Surbrillances</span><i class="fa-solid fa-chevron-right eb-menu-arrow"></i>
+          </a>
+          <a class="eb-menu-row" href="./favoris.html">
+            <span class="eb-menu-icon"><i class="fa-solid fa-bookmark"></i></span><span>Versets</span><i class="fa-solid fa-chevron-right eb-menu-arrow"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="eb-menu-section" aria-label="Contenus">
+        <div class="eb-menu-list">
+          <button class="eb-menu-row" type="button" data-coming="Images">
+            <span class="eb-menu-icon"><i class="fa-solid fa-image"></i></span><span>Images</span><i class="fa-solid fa-chevron-right eb-menu-arrow"></i>
+          </button>
+          <button class="eb-menu-row" type="button" data-coming="Vidéos">
+            <span class="eb-menu-icon"><i class="fa-solid fa-video"></i></span><span>Vidéos</span><i class="fa-solid fa-chevron-right eb-menu-arrow"></i>
+          </button>
+          <button class="eb-menu-row" type="button" data-coming="Événements">
+            <span class="eb-menu-icon"><i class="fa-solid fa-calendar-days"></i></span><span>Événements</span><i class="fa-solid fa-chevron-right eb-menu-arrow"></i>
+          </button>
+          <button class="eb-menu-row" type="button" data-coming="Prière">
+            <span class="eb-menu-icon"><i class="fa-solid fa-hands-praying"></i></span><span>Prière</span><i class="fa-solid fa-chevron-right eb-menu-arrow"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="eb-menu-section" aria-labelledby="stats-title">
+        <h2 id="stats-title" class="eb-menu-section-title">Statistiques</h2>
+        <div class="eb-stats">
+          <div class="eb-stat"><strong id="stat-favorites">0</strong><small>Versets</small></div>
+          <div class="eb-stat"><strong id="stat-notes">0</strong><small>Notes</small></div>
+          <div class="eb-stat"><strong id="stat-marks">0</strong><small>Marqués</small></div>
+        </div>
+      </section>
+
+      <section class="eb-menu-section" aria-label="Application">
+        <div class="eb-menu-list">
+          <a class="eb-menu-row" href="./parametres.html">
+            <span class="eb-menu-icon"><i class="fa-solid fa-gear"></i></span><span>Paramètres</span><i class="fa-solid fa-chevron-right eb-menu-arrow"></i>
+          </a>
+          <a class="eb-menu-row" href="./apropos.html">
+            <span class="eb-menu-icon"><i class="fa-solid fa-circle-info"></i></span><span>À propos</span><i class="fa-solid fa-chevron-right eb-menu-arrow"></i>
+          </a>
+        </div>
+        <a class="eb-donation" href="#" id="btn-donation">
+          <i class="fa-solid fa-heart"></i> Faire un don
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <script src="./js/common.js"></script>
+  <script>
+    (function(){
+      const keys = {
+        favorites: ["ebiblia_favorites","favorites","bibleFavorites"],
+        notes: ["ebiblia_notes","verseNotes","notes"],
+        marks: ["ebiblia_marks","marks","highlights"]
+      };
+      function count(keysList){
+        for(const key of keysList){
+          try{
+            const value = JSON.parse(localStorage.getItem(key));
+            if(Array.isArray(value)) return value.length;
+            if(value && typeof value === "object") return Object.keys(value).length;
+          }catch(e){}
+        }
+        return 0;
+      }
+      document.getElementById("stat-favorites").textContent=count(keys.favorites);
+      document.getElementById("stat-notes").textContent=count(keys.notes);
+      document.getElementById("stat-marks").textContent=count(keys.marks);
+      document.querySelectorAll("[data-coming]").forEach(btn=>{
+        btn.addEventListener("click",()=>{
+          const name=btn.dataset.coming;
+          alert(name+" sera disponible dans une prochaine version.");
+        });
+      });
+      document.getElementById("btn-donation").addEventListener("click",(e)=>{
+        e.preventDefault();
+        alert("La fonction de don sera disponible prochainement.");
+      });
+    })();
+  </script>
+</body>
+</html>
