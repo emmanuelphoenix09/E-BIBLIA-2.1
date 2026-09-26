@@ -1,105 +1,104 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Métadonnées de base de la page Léona. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Titre affiché par le navigateur / Android. -->
   <title>Léona — Assistant biblique IA — E-Biblia</title>
 
-  <!-- Ressources visuelles communes de l'application. -->
+  <!-- Ressources communes : la nouvelle identité neon reste limitée à Léona. -->
   <link rel="stylesheet" href="./css/tailwind.css">
   <link rel="stylesheet" href="./offline-assets/fontawesome.css">
   <link rel="stylesheet" href="./offline-assets/google-fonts.css">
   <link rel="stylesheet" href="./css/main.css">
-
-  <!-- CSS dédié à Léona : modifier ce fichier pour son apparence. -->
+  <!-- Style exclusivement dédié à Léona. -->
   <link rel="stylesheet" href="./css/ia.css">
 </head>
 
-<body data-page="ia" class="min-h-screen text-gray-900 dark:text-gray-100">
-  <!-- ==========================================================
-       INTERFACE DE LÉONA
-       Toute la structure visuelle de l'assistant se trouve ici.
-       Le fonctionnement reste dans js/ai.js et js/pages/ia.js.
-       ========================================================== -->
-
+<body data-page="ia" class="min-h-screen">
   <div class="leona-page">
-
-    <!-- En-tête indépendant de la page IA. -->
+    <!-- En-tête minimaliste de Léona. -->
     <header class="leona-header">
       <div class="leona-header-inner">
         <a href="./lecture.html" class="leona-back">
-          <i class="fa-solid fa-arrow-left mr-1"></i>
-          Retour à la lecture
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Lecture</span>
         </a>
 
-        <div class="ml-auto text-sm font-semibold">
-          Léona
+        <div class="leona-brand-mini">
+          <span class="leona-mini-orb" aria-hidden="true"></span>
+          <span>LÉONA</span>
         </div>
       </div>
     </header>
 
-    <!-- Contenu principal de l'assistant. -->
     <main class="leona-main">
-      <section class="leona-card">
-
-        <!-- Présentation de Léona. -->
-        <div class="leona-intro">
-          <div class="flex items-center gap-3">
-            <div class="leona-avatar">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-            </div>
-
-            <div>
-              <h1 class="leona-title">Léona</h1>
-              <p class="leona-subtitle">
-                Assistant d'étude biblique IA
-              </p>
-            </div>
+      <section class="leona-hero" aria-labelledby="leona-title">
+        <div class="leona-heading">
+          <div class="leona-status" id="leona-status" data-state="rest">
+            <span class="leona-status-dot"></span>
+            <span id="leona-status-text">En repos</span>
           </div>
+
+          <h1 id="leona-title" class="leona-title">
+            Votre <span>compagne d'étude biblique</span>
+          </h1>
+          <p class="leona-subtitle">
+            Interrogez le texte, demandez une explication ou laissez Léona vous guider dans le contexte du passage.
+          </p>
         </div>
 
-        <!-- Passage actuellement sélectionné. -->
+        <!-- Orbe central : son animation est pilotée par js/ai.js. -->
+        <div class="leona-orb-zone">
+          <button id="leona-orb-button" class="leona-orb-button" type="button" aria-label="Activer Léona">
+            <canvas id="leona-orb" class="leona-orb-canvas" aria-hidden="true"></canvas>
+            <span class="sr-only">Activer ou désactiver Léona</span>
+          </button>
+        </div>
+
+        <div class="leona-controls">
+          <button id="leona-mic-button" class="leona-control leona-control-secondary" type="button">
+            <i class="fa-solid fa-microphone"></i>
+            <span>Écouter</span>
+          </button>
+          <button id="btn-ai-submit" class="leona-control leona-control-primary" type="button">
+            <i class="fa-solid fa-sparkles"></i>
+            <span>Analyser le passage</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="leona-panel" aria-label="Étude biblique">
+        <div class="leona-panel-head">
+          <div>
+            <span class="leona-eyebrow">PASSAGE SÉLECTIONNÉ</span>
+            <h2>Votre question</h2>
+          </div>
+          <i class="fa-solid fa-book-open leona-panel-icon" aria-hidden="true"></i>
+        </div>
+
         <div id="ai-modal-reference" class="leona-reference">
           Aucun passage sélectionné pour le moment.
         </div>
 
-        <!-- Zone dans laquelle l'utilisateur pose sa question. -->
-        <div class="leona-question">
-          <label for="ai-question" class="leona-label">
-            Votre demande
-          </label>
+        <label for="ai-question" class="leona-label">Que souhaitez-vous comprendre ?</label>
+        <textarea
+          id="ai-question"
+          class="leona-textarea"
+          rows="3"
+          placeholder="Posez une question sur ce passage…"
+        ></textarea>
 
-          <textarea
-            id="ai-question"
-            class="leona-textarea"
-            rows="4"
-            placeholder="Posez votre question sur ce passage…"
-          ></textarea>
-
-          <button id="btn-ai-submit" class="leona-submit" type="button">
-            <i class="fa-solid fa-paper-plane mr-2"></i>
-            Analyser avec Léona
-          </button>
-        </div>
-
-        <!-- Réponse générée par Léona. -->
         <div id="ai-result" class="leona-result">
-          <p class="text-gray-500 dark:text-gray-400 text-center py-8">
-            L'explication du passage apparaîtra ici.
-          </p>
+          <div class="leona-empty-result">
+            <span class="leona-mini-orb leona-mini-orb-large" aria-hidden="true"></span>
+            <p>L'explication de Léona apparaîtra ici.</p>
+          </div>
         </div>
-
       </section>
     </main>
   </div>
 
-  <!-- ==========================================================
-       JAVASCRIPT
-       Les scripts communs restent séparés du HTML.
-       ========================================================== -->
+  <!-- Scripts séparés du HTML : aucun code métier inline. -->
   <script src="./js/common.js"></script>
   <script src="./js/config.js"></script>
   <script src="./js/bible-core.js"></script>
