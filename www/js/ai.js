@@ -346,6 +346,13 @@ async function runGeminiAnalysis(initialExplanation = false) {
       draw(0);
   }
 
+  // Initialisation après chargement du DOM pour que l'orbe soit autonome sur ia.html.
+  if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initLeonaOrb, { once: true });
+  } else {
+      initLeonaOrb();
+  }
+
   window.EBibliaAI = { getGeminiConfig, askGemini, renderAIResponse, runGeminiAnalysis };
   window.EBiblia = window.EBiblia || {};
   Object.assign(window.EBiblia, window.EBibliaAI);
