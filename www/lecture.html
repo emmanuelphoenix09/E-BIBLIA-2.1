@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Biblia 1.1.0 - Étude Biblique & Assistant IA</title>
+    <title>E-BIBLIA — Lecture de la Bible</title>
     <!-- Tailwind CSS local pour fonctionnement hors ligne -->
     <link rel="stylesheet" href="./css/tailwind.css">
     <!-- FontAwesome Icons local -->
@@ -20,7 +20,79 @@
          Attention : toute clé embarquée dans un HTML côté client reste récupérable
          par une personne ayant accès au code de l'application. -->
     
-</head>
+
+<style id="ebiblia-lecture-design">
+/* E-BIBLIA — Lecteur conforme à la fiche de design */
+:root{
+  --reader-bg:#0A0A0A;--reader-card:#1C1C1E;--reader-text:#FFFFFF;
+  --reader-secondary:#8E8E93;--reader-tertiary:#5A5A5C;--reader-divider:#2C2C2E;
+  --reader-accent:#FF6B35;
+}
+html:not(.dark){
+  --reader-bg:#FFF9EE;--reader-card:#FFFDF6;--reader-text:#173B8C;
+  --reader-secondary:#5B6B8C;--reader-tertiary:#A9B3C9;--reader-divider:#EDE3CC;
+  --reader-accent:#F0A70A;
+}
+body{background:var(--reader-bg);color:var(--reader-text)}
+.eb-reader-shell{background:var(--reader-bg)!important}
+.eb-reader-header{background:color-mix(in srgb,var(--reader-bg) 94%,transparent);border-color:var(--reader-divider)!important}
+.eb-reference-title{color:var(--reader-text)!important;letter-spacing:-.02em}
+.eb-reference-version{color:var(--reader-accent)!important}
+.eb-chapter-btn{width:40px;height:40px;background:var(--reader-card);color:var(--reader-text);border:1px solid var(--reader-divider)}
+.eb-chapter-btn:hover{background:color-mix(in srgb,var(--reader-accent) 12%,var(--reader-card))}
+.eb-reader-scroll{width:100%;max-width:none!important;padding:clamp(18px,3vw,30px) clamp(16px,2.4vw,28px) 120px!important;box-sizing:border-box}
+.eb-bible-column{width:100%;max-width:none!important;margin:0!important;font-family:Georgia,"Times New Roman",serif}
+.eb-bible-column>div{padding:8px 6px!important;border-radius:12px!important;color:var(--reader-text)}
+.eb-bible-column>div:hover{background:color-mix(in srgb,var(--reader-accent) 7%,transparent)!important}
+.eb-bible-column sup{color:var(--reader-accent)!important;font-size:.72em;line-height:1;font-weight:800}
+.eb-bible-column>div>span.flex-1{font-size:clamp(1rem,calc(.97rem + .22vw),1.2rem)!important;line-height:1.9!important}
+.eb-bible-column>div:has(.ring-2),.eb-bible-column>div.verse-selected{
+  background:color-mix(in srgb,var(--reader-accent) 18%,transparent)!important;
+  box-shadow:inset 3px 0 0 var(--reader-accent)!important;
+}
+.verse-inline-selection-actions{
+  position:sticky!important;z-index:30!important;
+  display:flex!important;align-items:center;gap:5px;flex-wrap:wrap;
+  width:fit-content;max-width:100%;margin:5px 0 10px auto!important;
+  padding:7px 9px!important;border-radius:999px!important;
+  background:var(--reader-card)!important;color:var(--reader-text)!important;
+  border:1px solid var(--reader-divider)!important;
+  box-shadow:0 10px 30px rgba(0,0,0,.28)!important;
+}
+.selection-count{font:700 11px/1 system-ui,sans-serif;color:var(--reader-accent);padding:0 5px}
+.selection-action-btn{
+  width:32px!important;height:32px!important;border:0!important;border-radius:50%!important;
+  display:grid!important;place-items:center!important;background:transparent!important;
+  color:var(--reader-text)!important;cursor:pointer!important;
+}
+.selection-action-btn:hover{background:color-mix(in srgb,var(--reader-accent) 16%,transparent)!important;color:var(--reader-accent)!important}
+.selection-action-btn[data-selection-action="clear"]{color:var(--reader-secondary)!important}
+@media(max-width:640px){
+  .eb-reader-header{padding-left:14px!important;padding-right:14px!important}
+  .eb-reference-title{font-size:20px!important}
+  .eb-reader-scroll{padding-left:16px!important;padding-right:16px!important}
+  .eb-bible-column>div>span.flex-1{font-size:clamp(1rem,4.4vw,1.08rem)!important;line-height:1.82!important}
+  .verse-inline-selection-actions{position:sticky!important;bottom:10px!important;margin:10px auto!important;width:100%!important;justify-content:center}
+  .selection-count{margin-right:auto}
+  .selection-action-btn{width:36px!important;height:36px!important}
+}
+/* Barre de navigation basse injectée par common.js */
+#ebiblia-bottom-nav{
+  position:fixed!important;left:50%!important;bottom:10px!important;transform:translateX(-50%)!important;
+  z-index:100!important;width:min(94vw,620px)!important;padding:6px!important;
+  display:grid!important;grid-template-columns:repeat(5,1fr)!important;gap:4px!important;
+  border-radius:22px!important;box-shadow:0 14px 40px rgba(0,0,0,.35)!important;
+  backdrop-filter:blur(18px);
+}
+#ebiblia-bottom-nav a,#ebiblia-bottom-nav button{
+  min-height:48px;border:0;background:transparent;border-radius:16px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  text-decoration:none;font:600 10px/1 system-ui,sans-serif;cursor:pointer;
+}
+#ebiblia-bottom-nav i{font-size:16px}
+html:not(.dark) #ebiblia-bottom-nav{border-color:#EDE3CC!important}
+@media(min-width:768px){#ebiblia-bottom-nav{width:min(70vw,680px)!important}}
+</style></head>
 
 <body data-page="reader" class="bg-gray-50 dark:bg-biblia-parchmentDark text-gray-900 dark:text-gray-100 font-sans h-full flex flex-col transition-colors duration-200 selection:bg-amber-200 dark:selection:bg-amber-900">
 
@@ -229,18 +301,18 @@
         </aside>
 
         <!-- Reading Area Workspace -->
-        <main class="flex-1 flex flex-col bg-biblia-parchment dark:bg-biblia-parchmentDark overflow-hidden relative">
+        <main class="flex-1 flex flex-col bg-biblia-parchment dark:bg-biblia-parchmentDark overflow-hidden relative eb-reader-shell">
             
             <!-- Chapter Title Banner -->
-            <div class="px-6 py-3 border-b border-gray-200/80 dark:border-gray-800/80 flex items-center justify-between bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm z-10">
+            <div class="eb-reader-header px-4 sm:px-5 py-3 border-b flex items-center justify-between backdrop-blur-sm z-10">
                 <div>
-                    <h1 id="current-reference-title" class="font-brand text-xl md:text-2xl font-bold text-gray-900 dark:text-white">Genèse 1</h1>
-                    <p id="current-reference-subtitle" class="text-xs text-amber-700 dark:text-amber-400 font-medium">Louis Segond (1910)</p>
+                    <h1 id="current-reference-title" class="eb-reference-title font-brand text-xl md:text-2xl font-bold">Genèse 1</h1>
+                    <p id="current-reference-subtitle" class="eb-reference-version text-xs font-medium">Louis Segond (1910)</p>
                 </div>
 
                 <!-- Navigation arrows -->
                 <div class="flex items-center space-x-2">
-                    <button id="btn-prev-chapter" class="p-2 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-amber-50 dark:hover:bg-gray-700 transition shadow-sm" title="Chapitre précédent">
+                    <button id="btn-prev-chapter" class="eb-chapter-btn p-2 rounded-full transition" title="Chapitre précédent">
                         <i class="fa-solid fa-chevron-left text-sm"></i>
                     </button>
                     <button id="btn-next-chapter" class="p-2 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-amber-50 dark:hover:bg-gray-700 transition shadow-sm" title="Chapitre suivant">
@@ -253,8 +325,8 @@
             <div id="reader-container" class="flex-1 overflow-hidden relative">
                 
                 <!-- Single Column View -->
-                <div id="view-single" class="h-full overflow-y-auto px-6 py-6 md:px-12 max-w-4xl mx-auto">
-                    <div id="text-column-single" class="font-reader leading-relaxed space-y-4 text-base md:text-lg">
+                <div id="view-single" class="h-full overflow-y-auto eb-reader-scroll">
+                    <div id="text-column-single" class="font-reader leading-relaxed space-y-4 text-base md:text-lg eb-bible-column">
                         <!-- Bible text rendered here -->
                     </div>
                 </div>
@@ -278,7 +350,7 @@
                 </div>
 
                 <!-- Interlinear (Verset par Verset) View -->
-                <div id="view-interlinear" class="hidden h-full overflow-y-auto px-6 py-6 md:px-12 max-w-4xl mx-auto">
+                <div id="view-interlinear" class="hidden h-full overflow-y-auto eb-reader-scroll">
                     <div id="text-column-interlinear" class="font-reader space-y-6">
                         <!-- Interlinear blocks rendered here -->
                     </div>
