@@ -93,21 +93,59 @@
     });
   }
 
+  /* E-BIBLIA — activation du mode hors connexion */
+  function registerOfflineMode() {
+    if (!("serviceWorker" in navigator)) return;
+    const isLocalFile = window.location.protocol === "file:";
+    if (isLocalFile) return;
+    navigator.serviceWorker.register("./service-worker.js", { scope: "./" })
+      .then(() => console.info("E-BIBLIA : mode hors connexion activé"))
+      .catch(error => console.warn("E-BIBLIA : service worker indisponible", error));
+  }
+
+  function updateOfflineStatus() {
+    const offline = navigator.onLine === false;
+    document.documentElement.classList.toggle("eb-offline", offline);
+    let badge = document.getElementById("ebiblia-offline-badge");
+    if (!badge) {
+      badge = document.createElement("div");
+      badge.id = "ebiblia-offline-badge";
+      badge.className = "eb-offline-badge";
+      badge.innerHTML = '<i class="fa-solid fa-wifi"></i><span>Mode hors connexion</span>';
+      document.body?.appendChild(badge);
+    }
+    badge.hidden = !offline;
+  }
+
   window.EBibliaCommon = {
     routes, applyTheme, toggleTheme, navigate, applyFontSize,
-    changeFontSize, bindNavigation, injectBottomNavigation
+    changeFontSize, bindNavigation, injectBottomNavigation, registerOfflineMode, updateOfflineStatus
   };
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {
       bindNavigation();
       injectBottomNavigation();
+      registerOfflineMode();
+      updateOfflineStatus();
     });
   } else {
     bindNavigation();
     injectBottomNavigation();
+    registerOfflineMode();
+    updateOfflineStatus();
   }
+
+  window.addEventListener("online", updateOfflineStatus);
+  window.addEventListener("offline", updateOfflineStatus);
 
   applyTheme();
   applyFontSize();
+})();
+
+/* E-BIBLIA — indicateur réseau discret */
+(function(){
+  const style = document.createElement("style");
+  style.textContent = ".eb-offline-badge{position:fixed;left:50%;bottom:76px;transform:translateX(-50%);z-index:9999;background:#111827;color:#fff;border-radius:999px;padding:8px 13px;font:600 11px/1.2 Inter,system-ui,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.2);display:flex;align-items:center;gap:7px}.eb-offline-badge i{font-size:10px}.eb-offline-badge[hidden]{display:none!important}";
+  document.head?.appendChild(style);
 })();
