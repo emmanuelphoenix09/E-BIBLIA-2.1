@@ -347,3 +347,22 @@
   .leona-control { flex: 1 1 150px; }
   .leona-title { font-size: 31px; }
 }
+
+
+/* Raffinement final — Léona : hiérarchie, responsive et profondeur */
+.leona-heading{position:relative}
+.leona-heading::after{content:"";display:block;width:72px;height:1px;margin:18px auto 0;background:linear-gradient(90deg,transparent,var(--leona-cyan),var(--leona-violet),transparent);opacity:.65}
+.leona-orb-zone{position:relative}
+.leona-orb-zone::before,.leona-orb-zone::after{content:"";position:absolute;inset:50% auto auto 50%;width:min(360px,88vw);height:min(360px,88vw);transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;border:1px solid rgba(0,240,255,.05)}
+.leona-orb-zone::after{width:min(430px,100vw);height:min(430px,100vw);border-color:rgba(168,85,247,.035)}
+.leona-control-primary:disabled{opacity:.55;cursor:wait;filter:saturate(.7)}
+.leona-panel{position:relative;overflow:hidden}
+.leona-panel::before{content:"";position:absolute;inset:-80px auto auto 55%;width:240px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(0,240,255,.08),transparent 70%);pointer-events:none}
+.leona-reference,.leona-textarea,.leona-result{position:relative;z-index:1}
+@media(max-width:640px){
+  .leona-header-inner{min-height:56px}
+  .leona-back span{display:none}
+  .leona-brand-mini{font-size:10px}
+  .leona-subtitle{font-size:13px}
+  .leona-orb-zone{margin-top:0}
+}
