@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0A0A">
+<title>Comparer les versions — E-BIBLIA</title>
+<link rel="stylesheet" href="./css/tailwind.css">
+<link rel="stylesheet" href="./offline-assets/fontawesome.css">
+<link rel="stylesheet" href="./offline-assets/google-fonts.css">
+<link rel="stylesheet" href="./css/main.css">
+<style>
+:root{--cmp-bg:#0A0A0A;--cmp-card:#1C1C1E;--cmp-text:#FFF;--cmp-sec:#8E8E93;--cmp-ter:#5A5A5C;--cmp-line:#2C2C2E;--cmp-accent:#FF6B35}
+html:not(.dark){--cmp-bg:#FFF9EE;--cmp-card:#FFFDF6;--cmp-text:#173B8C;--cmp-sec:#5B6B8C;--cmp-ter:#A9B3C9;--cmp-line:#EDE3CC;--cmp-accent:#F0A70A}
+body{margin:0;background:var(--cmp-bg);color:var(--cmp-text)}
+.cmp-page{min-height:100dvh;padding:18px 16px 112px;box-sizing:border-box}
+.cmp-wrap{width:100%;max-width:760px;margin:auto}
+.cmp-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.cmp-back,.cmp-sort{width:42px;height:42px;border:0;border-radius:50%;background:var(--cmp-card);color:var(--cmp-text);display:grid;place-items:center;text-decoration:none;flex:0 0 auto}
+.cmp-head-main{flex:1;min-width:0}
+.cmp-title{margin:0;font-size:clamp(20px,5vw,28px);font-weight:800;letter-spacing:-.025em}
+.cmp-sub{margin:4px 0 0;color:var(--cmp-sec);font-size:12px}
+.cmp-controls{display:grid;grid-template-columns:1fr auto;gap:9px;margin-bottom:18px}
+.cmp-select{min-width:0;height:46px;border:1px solid var(--cmp-line);border-radius:14px;background:var(--cmp-card);color:var(--cmp-text);padding:0 13px;font:600 13px system-ui,sans-serif;outline:none}
+.cmp-select:focus{border-color:var(--cmp-accent)}
+.cmp-chapter{width:112px}
+.cmp-list{display:flex;flex-direction:column;gap:12px}
+.cmp-version{padding:18px 18px 19px;background:var(--cmp-card);border-radius:20px}
+.cmp-version-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.cmp-version-code{display:flex;align-items:center;gap:9px;min-width:0}
+.cmp-code{font-size:12px;font-weight:900;letter-spacing:.12em;color:var(--cmp-accent)}
+.cmp-name{font-size:13px;color:var(--cmp-sec);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cmp-ref{font-size:14px;font-weight:800;margin-bottom:7px}
+.cmp-text{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(16px,4.4vw,18px);line-height:1.78;color:var(--cmp-text)}
+.cmp-empty{color:var(--cmp-ter);font-size:14px;line-height:1.6;margin:0}
+.cmp-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}
+.cmp-add{height:48px;border:1px solid var(--cmp-line);border-radius:999px;background:transparent;color:var(--cmp-text);font-weight:800;font-size:12px;letter-spacing:.04em}
+.cmp-add:hover{background:color-mix(in srgb,var(--cmp-accent) 8%,transparent)}
+.cmp-leona{height:48px;border:0;border-radius:999px;background:linear-gradient(90deg,#00f0ff,#a855f7);color:#05070f;font-weight:900;font-size:12px}
+.cmp-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:18px}
+.cmp-nav{height:44px;min-width:44px;border:1px solid var(--cmp-line);border-radius:999px;background:var(--cmp-card);color:var(--cmp-text)}
+.cmp-page-label{color:var(--cmp-sec);font-size:12px;font-weight:700}
+.cmp-loading,.cmp-error{padding:30px 18px;text-align:center;color:var(--cmp-sec);background:var(--cmp-card);border-radius:20px}
+.cmp-error{color:var(--cmp-accent)}
+@media(max-width:420px){.cmp-page{padding-left:12px;padding-right:12px}.cmp-version{border-radius:18px;padding:16px}.cmp-controls{grid-template-columns:1fr 92px}.cmp-chapter{width:100%}}
+</style>
+</head>
+<body data-page="compare" class="min-h-full">
+<main class="cmp-page">
+<div class="cmp-wrap">
+<header class="cmp-head">
+<a class="cmp-back" id="cmp-back" href="./lecture.html" aria-label="Retour à la Bible"><i class="fa-solid fa-arrow-left"></i></a>
+<div class="cmp-head-main">
+<h1 class="cmp-title">Comparer les versions</h1>
+<p class="cmp-sub" id="cmp-reference">Chargement du passage…</p>
+</div>
+<button class="cmp-sort" id="cmp-refresh" type="button" aria-label="Actualiser"><i class="fa-solid fa-arrows-rotate"></i></button>
+</header>
+
+<section class="cmp-controls" aria-label="Choisir le passage">
+<select id="cmp-book" class="cmp-select"></select>
+<select id="cmp-chapter" class="cmp-select cmp-chapter" aria-label="Chapitre"></select>
+</section>
+
+<section id="cmp-list" class="cmp-list" aria-live="polite">
+<div class="cmp-loading">Chargement des versions…</div>
+</section>
+
+<div class="cmp-actions">
+<button id="cmp-add-version" class="cmp-add" type="button"><i class="fa-solid fa-plus"></i> AJOUTER UNE VERSION</button>
+<button id="cmp-leona" class="cmp-leona" type="button"><i class="fa-solid fa-sparkles"></i> DEMANDER À LÉONA</button>
+</div>
+
+<div class="cmp-bottom">
+<button id="cmp-prev" class="cmp-nav" type="button" aria-label="Chapitre précédent"><i class="fa-solid fa-chevron-left"></i></button>
+<span class="cmp-page-label" id="cmp-page-label">Chapitre 1</span>
+<button id="cmp-next" class="cmp-nav" type="button" aria-label="Chapitre suivant"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+</div>
+</main>
+
+<script src="./js/common.js"></script>
+<script>
+(function(){
+const VERSIONS={
+ BFC:{name:"Bible en français courant",file:"BFC"},
+ DAR:{name:"Bible Darby",file:"DAR"},
+ LSG:{name:"Louis Segond (1910)",file:"LSG"},
+ MRT:{name:"Bible Martin",file:"MRT"},
+ OST:{name:"Ostervald",file:"OST"}
+};
+const BOOKS=[
+["GEN","Genèse",50],["EXO","Exode",40],["LEV","Lévitique",27],["NUM","Nombres",36],["DEU","Deutéronome",34],
+["JOS","Josué",24],["JDG","Juges",21],["RUT","Ruth",4],["1SA","1 Samuel",31],["2SA","2 Samuel",24],
+["1KI","1 Rois",22],["2KI","2 Rois",25],["1CH","1 Chroniques",29],["2CH","2 Chroniques",36],["EZR","Esdras",10],
+["NEH","Néhémie",13],["EST","Esther",10],["JOB","Job",42],["PSA","Psaumes",150],["PRO","Proverbes",31],
+["ECC","Ecclésiaste",12],["SNG","Cantique des cantiques",8],["ISA","Ésaïe",66],["JER","Jérémie",52],
+["LAM","Lamentations",5],["EZK","Ézéchiel",48],["DAN","Daniel",12],["HOS","Osée",14],["JOL","Joël",3],
+["AMO","Amos",9],["OBA","Abdias",1],["JON","Jonas",4],["MIC","Michée",7],["NAH","Nahum",3],
+["HAB","Habacuc",3],["ZEP","Sophonie",3],["HAG","Aggée",2],["ZEC","Zacharie",14],["MAL","Malachie",4],
+["MAT","Matthieu",28],["MRK","Marc",16],["LUK","Luc",24],["JHN","Jean",21],["ACT","Actes",28],
+["ROM","Romains",16],["1CO","1 Corinthiens",16],["2CO","2 Corinthiens",13],["GAL","Galates",6],["EPH","Éphésiens",6],
+["PHP","Philippiens",4],["COL","Colossiens",4],["1TH","1 Thessaloniciens",5],["2TH","2 Thessaloniciens",3],
+["1TI","1 Timothée",6],["2TI","2 Timothée",4],["TIT","Tite",3],["PHM","Philémon",1],["HEB","Hébreux",13],
+["JAS","Jacques",5],["1PE","1 Pierre",5],["2PE","2 Pierre",3],["1JN","1 Jean",5],["2JN","2 Jean",1],
+["3JN","3 Jean",1],["JUD","Jude",1],["REV","Apocalypse",22]
+];
+let state={book:"GEN",chapter:1,versions:["LSG","BFC","DAR"],data:{}};
+
+function esc(v){const d=document.createElement("div");d.textContent=v??"";return d.innerHTML}
+function cleanBook(v){
+ const key=String(v??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toUpperCase().replace(/[^A-Z0-9]/g,"");
+ const aliases={GEN:"GEN",GENESE:"GEN",EXODE:"EXO",EX:"EXO,HABACUC:"HAB",HAB:"HAB",PS:"PSA",PSAUMES:"PSA",MATTHIEU:"MAT",MARC:"MRK",LUC:"LUK",JEAN:"JHN",ACTES:"ACT"};
+ return aliases[key]||key;
+}
+function add(store,book,ch,vs,text){
+ if(cleanBook(book)!==state.book||Number(ch)!==state.chapter||!Number.isFinite(Number(vs))||typeof text!=="string")return;
+ store[Number(vs)]=text.trim();
+}
+function walk(node,store,inBook=null,inChapter=null){
+ if(Array.isArray(node)){node.forEach(x=>walk(x,store,inBook,inChapter));return}
+ if(!node||typeof node!=="object")return;
+ const book=node.book??node.book_id??node.bookId??node.book_name??node.bookName??node.book_abbr??node.abbreviation??node.osis??inBook;
+ const ch=node.chapter??node.chapter_number??node.chapterNumber??inChapter;
+ const vs=node.verse??node.verse_number??node.verseNumber??node.verseId;
+ const tx=node.text??node.verse_text??node.verseText??node.content;
+ if(tx!==undefined&&vs!==undefined)add(store,book,ch,vs,String(tx));
+ Object.entries(node).forEach(([k,val])=>{
+   if(["text","verse_text","verseText","content"].includes(k))return;
+   let nb=book,nc=ch;
+   const pb=cleanBook(k); if(BOOKS.some(b=>b[0]===pb))nb=pb;
+   if(/^\d+$/.test(k)&&nb&&val&&typeof val==="object"&&vs===undefined)nc=Number(k);
+   walk(val,store,nb,nc);
+ });
+}
+async function load(code){
+ const res=await fetch("./bible-data/fr/"+VERSIONS[code].file+"/"+VERSIONS[code].file+".json",{cache:"no-store"});
+ if(!res.ok)throw new Error("HTTP "+res.status);
+ const json=await res.json(), store={}; walk(json,store);
+ return store;
+}
+function populate(){
+ const bs=document.getElementById("cmp-book");
+ bs.innerHTML=BOOKS.map(b=>'<option value="'+b[0]+'">'+b[1]+"</option>").join("");
+ bs.value=state.book;
+ updateChapters();
+}
+function updateChapters(){
+ const b=BOOKS.find(x=>x[0]===state.book)||BOOKS[0], sel=document.getElementById("cmp-chapter");
+ sel.innerHTML=Array.from({length:b[2]},(_,i)=>'<option value="'+(i+1)+'">Chapitre '+(i+1)+"</option>").join("");
+ sel.value=String(state.chapter);
+}
+async function render(){
+ const list=document.getElementById("cmp-list");
+ list.innerHTML='<div class="cmp-loading">Chargement des versions…</div>';
+ document.getElementById("cmp-reference").textContent=(BOOKS.find(b=>b[0]===state.book)||BOOKS[0])[1]+" "+state.chapter;
+ document.getElementById("cmp-page-label").textContent="Chapitre "+state.chapter;
+ state.data={};
+ try{
+   await Promise.all(state.versions.map(async code=>{state.data[code]=await load(code)}));
+   list.innerHTML="";
+   state.versions.forEach(code=>{
+     const meta=VERSIONS[code], verses=state.data[code]||{}, nums=Object.keys(verses).map(Number).filter(Number.isFinite).sort((a,b)=>a-b);
+     const card=document.createElement("article");card.className="cmp-version";
+     const body=nums.length?nums.map(n=>'<span class="cmp-ref">'+n+".</span> "+esc(verses[n])).join(" "):'<p class="cmp-empty">Verset absent de cette version.</p>';
+     card.innerHTML='<div class="cmp-version-top"><div class="cmp-version-code"><span class="cmp-code">'+code+'</span><span class="cmp-name">'+esc(meta.name)+'</span></div><i class="fa-solid fa-book-open cmp-code"></i></div><p class="cmp-text">'+body+"</p>";
+     list.appendChild(card);
+   });
+   if(!list.children.length)list.innerHTML='<div class="cmp-loading">Aucun texte disponible pour ce passage.</div>';
+ }catch(e){list.innerHTML='<div class="cmp-error">Impossible de charger une des versions bibliques.</div>';console.error(e)}
+}
+document.getElementById("cmp-book").addEventListener("change",e=>{state.book=e.target.value;state.chapter=1;updateChapters();render()});
+document.getElementById("cmp-chapter").addEventListener("change",e=>{state.chapter=Number(e.target.value);render()});
+document.getElementById("cmp-refresh").addEventListener("click",render);
+document.getElementById("cmp-prev").addEventListener("click",()=>{if(state.chapter>1){state.chapter--;updateChapters();render()}});
+document.getElementById("cmp-next").addEventListener("click",()=>{const b=BOOKS.find(x=>x[0]===state.book);if(b&&state.chapter<b[2]){state.chapter++;updateChapters();render()}});
+document.getElementById("cmp-add-version").addEventListener("click",()=>{
+ const next=Object.keys(VERSIONS).find(v=>!state.versions.includes(v));
+ if(!next){alert("Toutes les versions françaises disponibles sont déjà affichées.");return}
+ state.versions.push(next);render();
+});
+document.getElementById("cmp-leona").addEventListener("click",()=>{
+ window.location.href="./ia.html?book="+encodeURIComponent(state.book)+"&chapter="+state.chapter;
+});
+const params=new URLSearchParams(location.search);
+if(params.get("book")&&BOOKS.some(b=>b[0]===params.get("book")))state.book=params.get("book");
+if(params.get("chapter")){const n=Number(params.get("chapter"));if(Number.isFinite(n)&&n>0)state.chapter=n}
+populate();render();
+})();
+</script>
+</body>
+</html>
