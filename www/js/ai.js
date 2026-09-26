@@ -156,6 +156,196 @@ async function runGeminiAnalysis(initialExplanation = false) {
             }
         }
 
+
+  // ============================================================
+  // ORBE VISUEL DE LÉONA
+  // ------------------------------------------------------------
+  // Cette partie pilote uniquement l'identité visuelle de l'orbe.
+  // Les appels Gemini et le rendu des réponses restent plus bas.
+  // ============================================================
+  let leonaOrbState = "rest";
+  let leonaOrbAnimation = null;
+  let leonaOrbStream = null;
+  let leonaOrbAudioContext = null;
+  let leonaOrbAnalyser = null;
+
+  function setLeonaOrbState(state) {
+      leonaOrbState = state;
+      const status = document.getElementById("leona-status");
+      const label = document.getElementById("leona-status-text");
+      if (status) status.dataset.state = state;
+      if (label) {
+          label.textContent = state === "listening"
+              ? "À l'écoute..."
+              : state === "speaking"
+                  ? "Léona parle..."
+                  : "En repos";
+      }
+  }
+
+  function stopLeonaListening() {
+      if (leonaOrbStream) {
+          leonaOrbStream.getTracks().forEach(track => track.stop());
+          leonaOrbStream = null;
+      }
+      if (leonaOrbAudioContext) {
+          leonaOrbAudioContext.close().catch(() => {});
+          leonaOrbAudioContext = null;
+      }
+      leonaOrbAnalyser = null;
+      setLeonaOrbState("rest");
+  }
+
+  async function toggleLeonaListening() {
+      if (leonaOrbState === "listening") {
+          stopLeonaListening();
+          return;
+      }
+
+      if (!navigator.mediaDevices?.getUserMedia) {
+          window.EBiblia?.showToast?.("Le microphone n'est pas disponible sur cet appareil.");
+          return;
+      }
+
+      try {
+          leonaOrbStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+          leonaOrbAudioContext = new (window.AudioContext || window.webkitAudioContext)();
+          const source = leonaOrbAudioContext.createMediaStreamSource(leonaOrbStream);
+          leonaOrbAnalyser = leonaOrbAudioContext.createAnalyser();
+          leonaOrbAnalyser.fftSize = 128;
+          source.connect(leonaOrbAnalyser);
+          setLeonaOrbState("listening");
+      } catch (error) {
+          stopLeonaListening();
+          window.EBiblia?.showToast?.("Accès au microphone refusé ou indisponible.");
+      }
+  }
+
+  function initLeonaOrb() {
+      const canvas = document.getElementById("leona-orb");
+      const orbButton = document.getElementById("leona-orb-button");
+      const micButton = document.getElementById("leona-mic-button");
+      if (!canvas || !orbButton) return;
+
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+
+      const resize = () => {
+          const rect = canvas.getBoundingClientRect();
+          const ratio = Math.min(window.devicePixelRatio || 1, 2);
+          canvas.width = Math.max(1, Math.floor(rect.width * ratio));
+          canvas.height = Math.max(1, Math.floor(rect.height * ratio));
+          ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      };
+      resize();
+      window.addEventListener("resize", resize);
+
+      const particles = [];
+      const random = (min, max) => Math.random() * (max - min) + min;
+
+      const spawnParticle = (cx, cy, intensity) => {
+          if (particles.length > 45 || Math.random() > intensity * .22) return;
+          const angle = random(0, Math.PI * 2);
+          const speed = random(.35, 1.6) * intensity;
+          particles.push({
+              x: cx, y: cy,
+              vx: Math.cos(angle) * speed,
+              vy: Math.sin(angle) * speed,
+              life: random(.25, .7),
+              maxLife: random(.25, .7),
+              size: random(1, 2.6),
+              hue: Math.random() > .5 ? "cyan" : "violet"
+          });
+      };
+
+      const draw = (time) => {
+          const w = canvas.clientWidth;
+          const h = canvas.clientHeight;
+          const cx = w / 2;
+          const cy = h / 2;
+          const t = time * .001;
+
+          let intensity = .14 + Math.sin(t * 1.7) * .035;
+          if (leonaOrbState === "speaking") intensity = .82 + (Math.sin(t * 7) + 1) * .09;
+          if (leonaOrbState === "listening" && leonaOrbAnalyser) {
+              const data = new Uint8Array(leonaOrbAnalyser.frequencyBinCount);
+              leonaOrbAnalyser.getByteFrequencyData(data);
+              const average = data.reduce((sum, value) => sum + value, 0) / Math.max(1, data.length);
+              intensity = Math.min(1, .18 + average / 115);
+          }
+
+          ctx.clearRect(0, 0, w, h);
+
+          const glow = ctx.createRadialGradient(cx, cy, 12, cx, cy, w * .47);
+          glow.addColorStop(0, leonaOrbState === "listening" ? "rgba(168,85,247,.18)" : "rgba(0,240,255,.15)");
+          glow.addColorStop(.48, "rgba(168,85,247,.07)");
+          glow.addColorStop(1, "rgba(0,0,0,0)");
+          ctx.fillStyle = glow;
+          ctx.fillRect(0, 0, w, h);
+
+          for (let ring = 0; ring < 3; ring++) {
+              ctx.beginPath();
+              const radius = w * (.19 + ring * .055);
+              for (let a = 0; a <= Math.PI * 2 + .05; a += .045) {
+                  const wave = Math.sin(a * (3 + ring) + t * (1.1 + ring * .25)) * (4 + intensity * 12) * (1 - ring * .16);
+                  const r = radius + wave;
+                  const x = cx + Math.cos(a) * r;
+                  const y = cy + Math.sin(a) * r;
+                  if (a === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+              }
+              ctx.closePath();
+              const violet = ring % 2 === 1 || leonaOrbState === "listening";
+              ctx.strokeStyle = violet ? "rgba(168,85,247,.72)" : "rgba(0,240,255,.78)";
+              ctx.lineWidth = 1.2 + intensity * 1.2;
+              ctx.shadowBlur = 10 + intensity * 12;
+              ctx.shadowColor = violet ? "#a855f7" : "#00f0ff";
+              ctx.stroke();
+          }
+          ctx.shadowBlur = 0;
+
+          const pulse = 1 + Math.sin(t * 2.2) * .025 + intensity * .055;
+          const sphere = ctx.createRadialGradient(cx - w*.055, cy - w*.06, 2, cx, cy, w*.20 * pulse);
+          sphere.addColorStop(0, "rgba(255,255,255,.98)");
+          sphere.addColorStop(.16, "rgba(0,240,255,.95)");
+          sphere.addColorStop(.56, "rgba(168,85,247,.82)");
+          sphere.addColorStop(1, "rgba(126,34,206,0)");
+          ctx.fillStyle = sphere;
+          ctx.beginPath();
+          ctx.arc(cx, cy, w*.20 * pulse, 0, Math.PI * 2);
+          ctx.fill();
+
+          if (intensity > .28) spawnParticle(cx, cy, intensity);
+          for (let i = particles.length - 1; i >= 0; i--) {
+              const p = particles[i];
+              p.x += p.vx;
+              p.y += p.vy;
+              p.life -= .016;
+              if (p.life <= 0) {
+                  particles.splice(i, 1);
+                  continue;
+              }
+              const alpha = p.life / p.maxLife;
+              ctx.fillStyle = p.hue === "cyan" ? `rgba(0,240,255,${alpha})` : `rgba(168,85,247,${alpha})`;
+              ctx.shadowBlur = 7;
+              ctx.shadowColor = p.hue === "cyan" ? "#00f0ff" : "#a855f7";
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+              ctx.fill();
+          }
+          ctx.shadowBlur = 0;
+
+          leonaOrbAnimation = requestAnimationFrame(draw);
+      };
+
+      orbButton.addEventListener("click", () => {
+          if (leonaOrbState === "listening") return;
+          setLeonaOrbState(leonaOrbState === "speaking" ? "rest" : "speaking");
+      });
+
+      micButton?.addEventListener("click", toggleLeonaListening);
+      draw(0);
+  }
+
   window.EBibliaAI = { getGeminiConfig, askGemini, renderAIResponse, runGeminiAnalysis };
   window.EBiblia = window.EBiblia || {};
   Object.assign(window.EBiblia, window.EBibliaAI);
