@@ -38,15 +38,15 @@
     if (window.EBiblia?.state) window.EBiblia.state.fontSize = next;
     return next;
   }
-  function bindNavigation() {
+  function injectBottomNavigation() {\n    if (document.body?.dataset?.page === "ia" || document.getElementById("ebiblia-bottom-nav")) return;\n    const page = document.body?.dataset?.page || "reader";\n    const nav = document.createElement("nav");\n    nav.id = "ebiblia-bottom-nav";\n    nav.className = "ebiblia-bottom-nav";\n    nav.setAttribute("aria-label", "Navigation principale");\n    const items = [\n      ["reader", "fa-house", "Accueil", "lecture.html"],\n      ["reader", "fa-book-open", "Bible", "lecture.html"],\n      ["plans", "fa-list-check", "Plans", "bloc-notes.html"],\n      ["ai", "fa-sparkles", "Léona", "ia.html"]\n    ];\n    items.forEach(([key, icon, label, href]) => {\n      const a = document.createElement("a");\n      a.href = "./" + href;\n      a.innerHTML = `<i class="fa-solid ${icon}" aria-hidden="true"></i><span>${label}</span>`;\n      if ((key === "reader" && page === "reader") || (key === "ai" && page === "ia")) a.classList.add("is-active");\n      nav.appendChild(a);\n    });\n    const menu = document.createElement("button");\n    menu.type = "button";\n    menu.innerHTML = `<i class="fa-solid fa-bars" aria-hidden="true"></i><span>Menu</span>`;\n    menu.addEventListener("click", () => {\n      const sidebar = document.getElementById("sidebar-nav");\n      if (sidebar) sidebar.classList.toggle("-translate-x-full");\n      else navigate("settings");\n    });\n    nav.appendChild(menu);\n    document.body.appendChild(nav);\n  }\n\n  function bindNavigation() {
     document.querySelectorAll("[data-app-action]").forEach(btn => {
       if (btn.dataset.ebibliaNavBound) return;
       btn.dataset.ebibliaNavBound = "1";
       btn.addEventListener("click", () => navigate(btn.dataset.appAction));
     });
   }
-  window.EBibliaCommon = { routes, applyTheme, toggleTheme, navigate, applyFontSize, changeFontSize, bindNavigation };
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", bindNavigation); else bindNavigation();
+  window.EBibliaCommon = { routes, applyTheme, toggleTheme, navigate, applyFontSize, changeFontSize, bindNavigation, injectBottomNavigation };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", () => { bindNavigation(); injectBottomNavigation(); }); else bindNavigation();
   applyTheme();
   applyFontSize();
 })();
