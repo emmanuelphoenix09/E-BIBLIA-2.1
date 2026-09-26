@@ -1,237 +1,349 @@
 /*
- * E-BIBLIA 3.0 — Interface de Léona
+ * E-BIBLIA 3.0 — LÉONA
  * ------------------------------------------------------------
- * Ce fichier contient uniquement le style propre à la page IA.
- * Pour modifier l'apparence de Léona, commencez ici.
- * Le JavaScript de l'assistant reste dans js/ai.js.
+ * Identité visuelle exclusivement réservée à l'assistant IA.
+ * Palette : cyan #00f0ff + violet #a855f7 sur fond #05070f.
+ * Structure HTML : www/ia.html
+ * Comportement de l'orbe : www/js/ai.js
  */
 
-/* ===== Conteneur général de la page IA ===== */
+:root {
+  --leona-bg: #05070f;
+  --leona-text: #e2e8f0;
+  --leona-muted: #94a3b8;
+  --leona-cyan: #00f0ff;
+  --leona-violet: #a855f7;
+  --leona-deep-violet: #7e22ce;
+  --leona-border: rgba(30, 41, 59, .8);
+}
+
 .leona-page {
   min-height: 100dvh;
-  background: radial-gradient(circle at top, rgba(245, 158, 11, 0.08), transparent 42%),
-              #f8fafc;
+  color: var(--leona-text);
+  background-color: var(--leona-bg);
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px),
+    radial-gradient(circle at 50% 34%, rgba(0,240,255,.08), transparent 25%),
+    radial-gradient(circle at 58% 42%, rgba(168,85,247,.08), transparent 30%);
+  background-size: 40px 40px, 40px 40px, auto, auto;
 }
 
-.dark .leona-page {
-  background: radial-gradient(circle at top, rgba(245, 158, 11, 0.10), transparent 42%),
-              #030712;
+.leona-page::before {
+  content: "";
+  position: fixed;
+  inset: 20% 15% auto;
+  height: 42vh;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(circle, rgba(0,240,255,.10), rgba(168,85,247,.08) 34%, transparent 70%);
+  filter: blur(38px);
 }
 
-/* ===== En-tête de Léona ===== */
 .leona-header {
   position: sticky;
   top: 0;
   z-index: 20;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.22);
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(14px);
-}
-
-.dark .leona-header {
-  background: rgba(17, 24, 39, 0.92);
-  border-color: rgba(75, 85, 99, 0.35);
+  border-bottom: 1px solid rgba(30,41,59,.8);
+  background: rgba(5,7,15,.72);
+  backdrop-filter: blur(18px);
 }
 
 .leona-header-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  min-height: 64px;
+  width: min(1080px, 100%);
+  min-height: 62px;
+  margin: auto;
   padding: 0 16px;
   display: flex;
   align-items: center;
-  gap: 14px;
+  justify-content: space-between;
 }
 
 .leona-back {
-  color: #b45309;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--leona-muted);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
+  transition: color .2s ease, transform .2s ease;
+}
+.leona-back:hover { color: var(--leona-cyan); transform: translateX(-2px); }
+
+.leona-brand-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #f8fafc;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .28em;
 }
 
-.leona-back:hover {
-  text-decoration: underline;
-}
-
-.dark .leona-back {
-  color: #fbbf24;
-}
-
-/* ===== Zone principale ===== */
-.leona-main {
-  width: min(960px, 100%);
-  margin: 0 auto;
-  padding: 28px 16px 40px;
-}
-
-.leona-card {
-  overflow: hidden;
-  border: 1px solid rgba(148, 163, 184, 0.22);
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
-}
-
-.dark .leona-card {
-  border-color: rgba(75, 85, 99, 0.45);
-  background: rgba(17, 24, 39, 0.96);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
-}
-
-/* ===== Présentation de Léona ===== */
-.leona-intro {
-  padding: 24px;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
-}
-
-.leona-avatar {
-  width: 48px;
-  height: 48px;
-  flex: 0 0 48px;
-  display: grid;
-  place-items: center;
+.leona-mini-orb {
+  width: 17px;
+  height: 17px;
+  display: inline-block;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f59e0b, #d97706);
-  color: white;
-  box-shadow: 0 8px 22px rgba(245, 158, 11, 0.25);
+  background: radial-gradient(circle at 36% 30%, #fff 0 7%, var(--leona-cyan) 23%, var(--leona-violet) 58%, var(--leona-deep-violet) 82%, transparent 100%);
+  box-shadow: 0 0 12px rgba(0,240,255,.7), 0 0 22px rgba(168,85,247,.45);
+}
+
+.leona-mini-orb-large {
+  width: 26px;
+  height: 26px;
+  margin-bottom: 8px;
+}
+
+.leona-main {
+  position: relative;
+  z-index: 1;
+  width: min(1080px, 100%);
+  margin: auto;
+  padding: 42px 16px 56px;
+}
+
+.leona-hero {
+  text-align: center;
+  padding: 8px 0 34px;
+}
+
+.leona-heading { max-width: 680px; margin: auto; }
+
+.leona-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 11px;
+  border: 1px solid rgba(0,240,255,.25);
+  border-radius: 999px;
+  background: rgba(0,240,255,.055);
+  color: var(--leona-cyan);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  transition: .25s ease;
+}
+
+.leona-status[data-state="speaking"] {
+  color: #67e8f9;
+  border-color: rgba(0,240,255,.55);
+  background: rgba(0,240,255,.09);
+}
+.leona-status[data-state="listening"] {
+  color: #d8b4fe;
+  border-color: rgba(168,85,247,.55);
+  background: rgba(168,85,247,.10);
+}
+
+.leona-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 9px currentColor;
+}
+.leona-status[data-state="speaking"] .leona-status-dot,
+.leona-status[data-state="listening"] .leona-status-dot {
+  animation: leona-dot-pulse 1s ease-in-out infinite;
+}
+
+@keyframes leona-dot-pulse {
+  50% { transform: scale(1.6); opacity: .55; }
 }
 
 .leona-title {
-  margin: 0;
-  font-size: 22px;
-  font-weight: 800;
+  margin: 18px 0 8px;
+  color: #f8fafc;
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -.035em;
+}
+.leona-title span {
+  background: linear-gradient(100deg, var(--leona-cyan), #22d3ee 45%, var(--leona-violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .leona-subtitle {
+  margin: auto;
+  max-width: 590px;
+  color: var(--leona-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.leona-orb-zone {
+  display: grid;
+  place-items: center;
+  min-height: 310px;
+  margin-top: 12px;
+}
+
+.leona-orb-button {
+  position: relative;
+  width: min(310px, 78vw);
+  height: min(310px, 78vw);
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  outline: none;
+  transition: transform .18s ease;
+}
+.leona-orb-button:active { transform: scale(.96); }
+.leona-orb-button:focus-visible { box-shadow: 0 0 0 2px var(--leona-cyan), 0 0 0 7px rgba(0,240,255,.14); }
+
+.leona-orb-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.leona-controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: -5px;
+}
+
+.leona-control {
+  min-height: 44px;
+  border-radius: 12px;
+  padding: 0 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid transparent;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .2s ease, opacity .2s ease;
+}
+.leona-control:active { transform: scale(.95); }
+.leona-control-primary {
+  background: linear-gradient(110deg, var(--leona-cyan), var(--leona-violet));
+  box-shadow: 0 8px 28px rgba(0,240,255,.16), 0 8px 28px rgba(168,85,247,.13);
+}
+.leona-control-primary:hover { box-shadow: 0 10px 34px rgba(0,240,255,.26), 0 10px 34px rgba(168,85,247,.20); }
+.leona-control-secondary {
+  background: rgba(15,23,42,.72);
+  border-color: rgba(71,85,105,.65);
+  color: #cbd5e1;
+}
+.leona-control-secondary:hover { border-color: rgba(0,240,255,.38); color: #f8fafc; }
+
+.leona-panel {
+  max-width: 820px;
+  margin: 12px auto 0;
+  padding: 22px;
+  border: 1px solid var(--leona-border);
+  border-radius: 26px;
+  background: rgba(15,23,42,.80);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 26px 80px rgba(0,0,0,.34);
+}
+
+.leona-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.leona-panel-head h2 {
   margin: 4px 0 0;
-  color: #6b7280;
-  font-size: 13px;
+  color: #f8fafc;
+  font-size: 17px;
+  font-weight: 700;
 }
-
-.dark .leona-subtitle {
-  color: #9ca3af;
+.leona-eyebrow {
+  color: var(--leona-cyan);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .2em;
 }
+.leona-panel-icon { color: #a78bfa; }
 
-/* ===== Passage sélectionné ===== */
 .leona-reference {
-  margin: 20px 24px 0;
+  margin-bottom: 17px;
   padding: 12px 14px;
-  border-left: 3px solid #f59e0b;
-  border-radius: 10px;
-  background: rgba(245, 158, 11, 0.08);
-  color: #92400e;
+  border: 1px solid rgba(0,240,255,.12);
+  border-left: 2px solid var(--leona-cyan);
+  border-radius: 12px;
+  background: rgba(2,6,23,.55);
+  color: #cbd5e1;
   font-size: 13px;
-  line-height: 1.6;
-}
-
-.dark .leona-reference {
-  background: rgba(245, 158, 11, 0.10);
-  color: #fcd34d;
-}
-
-/* ===== Zone de question ===== */
-.leona-question {
-  padding: 24px;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+  line-height: 1.65;
 }
 
 .leona-label {
   display: block;
-  margin-bottom: 8px;
-  font-size: 12px;
-  font-weight: 800;
+  margin-bottom: 7px;
+  color: #cbd5e1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .05em;
 }
 
 .leona-textarea {
   width: 100%;
-  min-height: 110px;
+  min-height: 100px;
   resize: vertical;
-  border: 1px solid #d1d5db;
+  box-sizing: border-box;
+  border: 1px solid rgba(51,65,85,.85);
   border-radius: 14px;
   padding: 13px 14px;
   outline: none;
-  background: #f9fafb;
-  color: #111827;
+  background: rgba(2,6,23,.64);
+  color: #f1f5f9;
+  font: inherit;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.65;
 }
-
+.leona-textarea::placeholder { color: #64748b; }
 .leona-textarea:focus {
-  border-color: #f59e0b;
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.14);
+  border-color: rgba(0,240,255,.58);
+  box-shadow: 0 0 0 3px rgba(0,240,255,.08), 0 0 30px rgba(168,85,247,.07);
 }
 
-.dark .leona-textarea {
-  border-color: #374151;
-  background: #111827;
-  color: #f9fafb;
-}
-
-/* ===== Bouton d'analyse ===== */
-.leona-submit {
-  width: 100%;
-  margin-top: 12px;
-  border: 0;
-  border-radius: 12px;
-  padding: 12px 16px;
-  background: #d97706;
-  color: white;
-  font-size: 14px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: transform .15s ease, background-color .15s ease, opacity .15s ease;
-}
-
-.leona-submit:hover {
-  background: #b45309;
-  transform: translateY(-1px);
-}
-
-.leona-submit:disabled {
-  opacity: .65;
-  cursor: wait;
-  transform: none;
-}
-
-/* ===== Résultat de Léona ===== */
 .leona-result {
-  min-height: 260px;
-  padding: 24px;
-  color: #1f2937;
+  min-height: 180px;
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid rgba(51,65,85,.55);
+  border-radius: 16px;
+  background: rgba(2,6,23,.38);
+  color: #dbeafe;
+}
+.leona-empty-result {
+  min-height: 145px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  color: #64748b;
+  text-align: center;
+  font-size: 13px;
 }
 
-.dark .leona-result {
-  color: #e5e7eb;
-}
+.leona-result h1, .leona-result h2, .leona-result h3 { color: #f8fafc; font-weight: 700; }
+.leona-result p { line-height: 1.8; }
+.leona-result code { color: #67e8f9; }
 
-.leona-result h1,
-.leona-result h2,
-.leona-result h3 {
-  font-weight: 800;
-}
-
-.leona-result p {
-  line-height: 1.8;
-}
+.leona-page .fa-spinner { color: var(--leona-cyan); }
 
 @media (max-width: 640px) {
-  .leona-main {
-    padding: 12px 10px 28px;
-  }
-
-  .leona-card {
-    border-radius: 16px;
-  }
-
-  .leona-intro,
-  .leona-question,
-  .leona-result {
-    padding: 18px;
-  }
-
-  .leona-reference {
-    margin-left: 18px;
-    margin-right: 18px;
-  }
+  .leona-main { padding: 28px 10px 40px; }
+  .leona-orb-zone { min-height: 270px; }
+  .leona-panel { border-radius: 20px; padding: 17px; }
+  .leona-control { flex: 1 1 150px; }
+  .leona-title { font-size: 31px; }
 }
