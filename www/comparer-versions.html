@@ -110,7 +110,7 @@ let state={book:"GEN",chapter:1,versions:["LSG","BFC","DAR"],data:{}};
 function esc(v){const d=document.createElement("div");d.textContent=v??"";return d.innerHTML}
 function cleanBook(v){
  const key=String(v??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toUpperCase().replace(/[^A-Z0-9]/g,"");
- const aliases={GEN:"GEN",GENESE:"GEN",EXODE:"EXO",EX:"EXO,HABACUC:"HAB",HAB:"HAB",PS:"PSA",PSAUMES:"PSA",MATTHIEU:"MAT",MARC:"MRK",LUC:"LUK",JEAN:"JHN",ACTES:"ACT"};
+ const aliases={GEN:"GEN",GENESE:"GEN",EXODE:"EXO",EX:"EXO",HABACUC:"HAB",HAB:"HAB",PS:"PSA",PSAUMES:"PSA",MATTHIEU:"MAT",MARC:"MRK",LUC:"LUK",JEAN:"JHN",ACTES:"ACT"};
  return aliases[key]||key;
 }
 function add(store,book,ch,vs,text){
