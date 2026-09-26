@@ -69,11 +69,14 @@ function getVerseCount(version, book, chapter) {
         }
 
 async function loadBibleDataFromJSON() {
+            // Les fichiers Bible sont embarqués dans l'application.
+            // Le cache navigateur/service worker permet aussi leur lecture hors connexion.
+
             const loadedStore = {};
             const loadedVersions = {};
             const results = await Promise.all(Object.entries(window.EBiblia.LOCAL_BIBLE_VERSIONS).map(async ([code, meta]) => {
                 try {
-                    const response = await fetch(`./bible-data/fr/${meta.file}/${meta.file}.json`, { cache: "no-store" });
+                    const response = await fetch(`./bible-data/fr/${meta.file}/${meta.file}.json`, { cache: "default" });
                     if (!response.ok) throw new Error(`HTTP ${response.status}`);
                     const json = await response.json();
                     const before = JSON.stringify(loadedStore[code] || {});
