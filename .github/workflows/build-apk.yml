@@ -122,8 +122,7 @@ jobs:
               if marker not in text:
                   raise SystemExit("Bloc android introuvable dans android/app/build.gradle")
 
-              text = text.replace(marker, signing + "
-" + marker, 1)
+              text = text.replace(marker, signing + "\\n" + marker, 1)
 
               if "signingConfig signingConfigs.release" not in text:
                   marker_build = "buildTypes {"
