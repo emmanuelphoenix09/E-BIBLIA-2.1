@@ -38,7 +38,15 @@
     if (window.EBiblia?.state) window.EBiblia.state.fontSize = next;
     return next;
   }
-  function bindNavigation() {\n    document.querySelectorAll("[data-app-action]").forEach(btn => {\n      if (btn.dataset.ebibliaNavBound) return;\n      btn.dataset.ebibliaNavBound = "1";\n      btn.addEventListener("click", () => navigate(btn.dataset.appAction));\n    });\n  }\n  window.EBibliaCommon = { routes, applyTheme, toggleTheme, navigate, applyFontSize, changeFontSize, bindNavigation };\n  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", bindNavigation); else bindNavigation();
+  function bindNavigation() {
+    document.querySelectorAll("[data-app-action]").forEach(btn => {
+      if (btn.dataset.ebibliaNavBound) return;
+      btn.dataset.ebibliaNavBound = "1";
+      btn.addEventListener("click", () => navigate(btn.dataset.appAction));
+    });
+  }
+  window.EBibliaCommon = { routes, applyTheme, toggleTheme, navigate, applyFontSize, changeFontSize, bindNavigation };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", bindNavigation); else bindNavigation();
   applyTheme();
   applyFontSize();
 })();
