@@ -190,6 +190,9 @@ html:not(.dark) #ebiblia-bottom-nav{border-color:#EDE3CC!important}
                 <button id="mode-interlinear" class="px-3 py-1.5 text-xs font-medium rounded-md text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
                     <i class="fa-solid fa-list-ol mr-1"></i> Verset / Verset
                 </button>
+                <button id="btn-compare-versions" class="px-3 py-1.5 text-xs font-medium rounded-md text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition" title="Comparer les versions">
+                    <i class="fa-solid fa-code-compare mr-1"></i> Comparer
+                </button>
             </div>
 
             <!-- Version Selectors -->
@@ -396,5 +399,14 @@ html:not(.dark) #ebiblia-bottom-nav{border-color:#EDE3CC!important}
     <div id="toast-container" class="fixed bottom-4 right-4 z-50 flex flex-col space-y-2"></div>
 
     
-<script src="./js/common.js"></script><script src="./js/config.js"></script><script src="./js/bible-core.js"></script><script src="./js/app.js"></script><script src="./js/data.js"></script><script src="./js/reader.js"></script><script src="./js/ai.js"></script></body>
+<script src="./js/common.js"></script><script src="./js/config.js"></script><script src="./js/bible-core.js"></script><script src="./js/app.js"></script><script src="./js/data.js"></script><script src="./js/reader.js"></script><script src="./js/ai.js"></script>
+<script>
+document.getElementById("btn-compare-versions")?.addEventListener("click",()=>{
+  const book=window.EBiblia?.state?.currentBook;
+  const chapter=window.EBiblia?.state?.currentChapter;
+  window.location.href=book&&chapter
+    ?"./comparer-versions.html?book="+encodeURIComponent(book)+"&chapter="+encodeURIComponent(chapter)
+    :"./comparer-versions.html";
+});
+</script></body>
 </html>
