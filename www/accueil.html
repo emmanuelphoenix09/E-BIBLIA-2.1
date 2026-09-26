@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0A0A0A">
+  <title>Accueil — E-BIBLIA</title>
+  <link rel="stylesheet" href="./css/tailwind.css">
+  <link rel="stylesheet" href="./offline-assets/fontawesome.css">
+  <link rel="stylesheet" href="./offline-assets/google-fonts.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body data-page="home" class="min-h-full">
+  <main class="eb-home">
+    <header class="eb-home-header">
+      <div>
+        <p class="eb-eyebrow">E-BIBLIA</p>
+        <h1>Bonjour !</h1>
+        <p class="eb-muted">Prenez un moment pour lire, méditer et avancer dans votre étude.</p>
+      </div>
+      <div class="eb-home-actions">
+        <button class="eb-icon-btn" type="button" aria-label="Série">
+          <i class="fa-solid fa-fire"></i>
+          <span class="eb-streak">0</span>
+        </button>
+        <button class="eb-icon-btn" type="button" aria-label="Notifications">
+          <i class="fa-regular fa-bell"></i>
+        </button>
+      </div>
+    </header>
+
+    <section class="eb-card eb-day-verse">
+      <div class="eb-card-top">
+        <span class="eb-label">VERSET DU JOUR</span>
+        <i class="fa-solid fa-book-open"></i>
+      </div>
+      <h2>Votre lecture commence ici</h2>
+      <p class="eb-verse-placeholder">Ouvrez la Bible pour consulter le texte biblique et poursuivre votre étude.</p>
+      <a class="eb-primary-btn" href="./lecture.html">
+        <i class="fa-solid fa-book-open"></i> Ouvrir la Bible
+      </a>
+    </section>
+
+    <section class="eb-grid">
+      <a class="eb-card eb-quick" href="./lecture.html">
+        <span class="eb-badge"><i class="fa-solid fa-book-open"></i></span>
+        <div><strong>Lecture quotidienne</strong><small>Lire la Bible</small></div>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+      <a class="eb-card eb-quick" href="./plans.html">
+        <span class="eb-badge"><i class="fa-solid fa-list-check"></i></span>
+        <div><strong>Plans</strong><small>Organiser votre étude</small></div>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+    </section>
+  </main>
+
+  <script src="./js/common.js"></script>
+  <style>
+    .eb-home{min-height:100dvh;padding:clamp(24px,5vw,48px) clamp(16px,4vw,40px) 110px;max-width:1100px;margin:auto}
+    .eb-home-header{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:28px}
+    .eb-eyebrow,.eb-label{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--eb-accent)}
+    .eb-home h1{margin:6px 0 7px;font-size:clamp(28px,5vw,36px);font-weight:800}
+    .eb-muted{color:var(--eb-secondary);font-size:15px;line-height:1.6}
+    .eb-home-actions{display:flex;gap:8px}
+    .eb-icon-btn{width:44px;height:44px;border:0;border-radius:50%;background:var(--eb-card);color:var(--eb-text);display:flex;align-items:center;justify-content:center;gap:3px}
+    .eb-streak{font-size:10px;color:var(--eb-accent);font-weight:800}
+    .eb-card{background:var(--eb-card);border-radius:22px;padding:22px;text-decoration:none;color:var(--eb-text);box-sizing:border-box}
+    .eb-day-verse{min-height:260px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+    .eb-card-top{width:100%;display:flex;justify-content:space-between;color:var(--eb-accent);margin-bottom:16px}
+    .eb-day-verse h2{font-size:clamp(21px,4vw,28px);margin:0 0 10px;font-weight:800}
+    .eb-verse-placeholder{color:var(--eb-secondary);line-height:1.7;max-width:700px;margin:0 0 22px}
+    .eb-primary-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;background:var(--eb-accent);color:#fff;text-decoration:none;font-weight:800;font-size:13px}
+    .eb-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+    .eb-quick{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:13px;padding:16px}
+    .eb-quick strong,.eb-quick small{display:block}.eb-quick small{color:var(--eb-secondary);margin-top:3px;font-size:12px}
+    .eb-quick>i{color:var(--eb-secondary);font-size:12px}
+    .eb-badge{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--eb-accent) 14%,transparent);color:var(--eb-accent)}
+    @media(max-width:600px){.eb-home-header{flex-direction:column}.eb-home-actions{position:absolute;right:16px;top:20px}.eb-grid{grid-template-columns:1fr}.eb-card{border-radius:18px}}
+  </style>
+</body>
+</html>
