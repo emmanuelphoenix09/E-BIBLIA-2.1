@@ -1,0 +1,1495 @@
+{
+  "book": 27,
+  "book_name": "Daniel",
+  "abbr": "Dan",
+  "chapters": [
+    {
+      "chapter": 1,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "La troisieme annee du regne de Jehoiakim, roi de Juda, Nebucadnetsar, roi de Babylone, vint àààà Jerusalem et l'assiegea;"
+        },
+        {
+          "verse": 2,
+          "text": "et le Seigneur livra en sa main Jehoiakim, roi de Juda, et une partie des ustensiles de la maison de Dieu, et il les fit apporter dans le pays de Shinhar, dans la maison de son dieu: il fit porter les ustensiles dans la maison du tresor de son dieu."
+        },
+        {
+          "verse": 3,
+          "text": "Et le roi dit ààà Ashpenaz, chef de ses eunuques, d'amener d'entre les fils d'Israel, et de la semence royale et d'entre les nobles,"
+        },
+        {
+          "verse": 4,
+          "text": "des jeunes gens en qui il n'y eut aucun defaut, et beaux de visage, et instruits en toute sagesse, et possedant des connaissances, et entendus en science, et qui fussent capables de se tenir dans le palais du roi, -et de leur enseigner les lettres et la langue des Chaldeens."
+        },
+        {
+          "verse": 5,
+          "text": "Et le roi leur assigna, pour chaque jour, une portion fixe des mets delicats du roi et du vin qu'il buvait, pour les elever pendant trois ans, à la fin desquels ils se tiendraient devant le roi."
+        },
+        {
+          "verse": 6,
+          "text": "Et parmi eux il y avait, d'entre les fils de Juda, Daniel, Hanania, Mishael, et Azaria;"
+        },
+        {
+          "verse": 7,
+          "text": "et le prince des eunuques leur donna des noms: à Daniel il donna le nom de Belteshatsar, et à Hanania celui de Shadrac, et à Mishael celui de Meshac, et à Azaria celui d'Abed-Nego."
+        },
+        {
+          "verse": 8,
+          "text": "Et Daniel arreta dans son coeur qu'il ne se souillerait point par les mets delicats du roi et par le vin qu'il buvait; et il demanda au prince des eunuques de lui permettre de ne pas se souiller."
+        },
+        {
+          "verse": 9,
+          "text": "Et Dieu fit trouver à Daniel faveur et grace aupres du prince des eunuques."
+        },
+        {
+          "verse": 10,
+          "text": "Et le prince des eunuques dit à Daniel: Je crains le roi mon seigneur, qui a prescrit votre nourriture et votre boisson; car pourquoi verrait-il vos visages plus tristes que ceux des jeunes gens de votre age? Et vous exposeriez ma tete aupres du roi."
+        },
+        {
+          "verse": 11,
+          "text": "Et Daniel dit à l'intendant que le prince des eunuques avait etabli sur Daniel, Hanania, Mishael et Azaria:"
+        },
+        {
+          "verse": 12,
+          "text": "Eprouve, je te prie, tes serviteurs dix jours, et qu'on nous donne des legumes à manger, et de l'eau à boire;"
+        },
+        {
+          "verse": 13,
+          "text": "et on regardera, en ta presence, nos visages et le visage des jeunes gens qui mangent les mets delicats du roi; et tu agiras avec tes serviteurs d'apres ce que tu verras."
+        },
+        {
+          "verse": 14,
+          "text": "Et il les ecoutera dans cette affaire, et les mit à l'epreuve, dix jours;"
+        },
+        {
+          "verse": 15,
+          "text": "et, au bout de dix jours, leurs visages avaient meilleure apparence et etaient plus gras que ceux de tous les jeunes gens qui mangeaient les mets delicats du roi."
+        },
+        {
+          "verse": 16,
+          "text": "Alors l'intendant ota leurs mets delicats et le vin de leur boisson, et leur donna des legumes."
+        },
+        {
+          "verse": 17,
+          "text": "Et à ces jeunes gens, aux quatre, Dieu donna de la science et de l'instruction dans toutes les lettres et dans toute la sagesse; et Daniel avait de l'intelligence en toute vision et dans les songes."
+        },
+        {
+          "verse": 18,
+          "text": "Et, à la fin des jours ou le roi avait dit de les amener, le prince des eunuques les amena devant Nebucadnetsar;"
+        },
+        {
+          "verse": 19,
+          "text": "et le roi parla avec eux, et entre eux tous il n'en fut trouve aucun comme Daniel, Hanania, Mishael et Azaria; et ils se tinrent devant le roi."
+        },
+        {
+          "verse": 20,
+          "text": "Et dans toutes les choses qui reclamaient de la sagesse et de l'intelligence, au sujet desquelles le roi les interrogea, il les trouva dix fois superieurs à tous les devins et enchanteurs qui etaient dans tout son royaume."
+        },
+        {
+          "verse": 21,
+          "text": "Et Daniel fut là jusqu'à la premiere annee du roi Cyrus."
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et en la seconde annee du regne de Nebucadnetsar, Nebucadnetsar songea des songes, et son esprit fut agite, et son sommeil le quitta."
+        },
+        {
+          "verse": 2,
+          "text": "Et le roi commanda d'appeler les devins, et les enchanteurs, et les magiciens, et les Chaldeens, pour exposer au roi ses songes; et ils vinrent et se tinrent devant le roi."
+        },
+        {
+          "verse": 3,
+          "text": "Et le roi leur dit: J'ai songe un songe, et mon esprit est agite pour connaitre le songe."
+        },
+        {
+          "verse": 4,
+          "text": "Et les Chaldeens dirent au roi, en syriaque: O roi, vis à jamais! Dis le songe à tes serviteurs, et nous en indiquerons l'interpretation."
+        },
+        {
+          "verse": 5,
+          "text": "Le roi repondit et dit aux Chaldeens: La chose est par moi prononcee: si vous ne me faites pas connaitre le songe et son interpretation, vous serez mis en pieces, et vos maisons seront reduites en tas d'immondices;"
+        },
+        {
+          "verse": 6,
+          "text": "mais, si vous indiquez le songe et son interpretation, vous recevrez de ma part des dons, et des presents, et de grands honneurs. Indiquez-moi donc le songe et son interpretation."
+        },
+        {
+          "verse": 7,
+          "text": "Ils repondirent pour la seconde fois et dirent: Que le roi dise le songe à ses serviteurs, et nous en indiquerons l'interpretation."
+        },
+        {
+          "verse": 8,
+          "text": "Le roi repondit et dit: Je sais tres-certainement que vous voulez gagnez du temps, parce que vous voyez que la chose est par moi prononcee;"
+        },
+        {
+          "verse": 9,
+          "text": "or, si vous ne me faites pas connaitre le songe, il y a un seul et meme decret pour vous; car vous avez prepare une parole mensongere et perverse pour la dire devant moi, en attendant que le temps ait change. C'est pourquoi, dites-moi le songe, et je saurai que vous pouvez m'en indiquer l'interpretation."
+        },
+        {
+          "verse": 10,
+          "text": "Les Chaldeens repondirent devant le roi et dirent: Il n'existe pas un homme sur la terre qui puisse indiquer la chose que le roi demande; c'est pourquoi aucun roi, quelque grand et puissant qu'il fut, n'a demande chose pareille d'aucun devin, ou enchanteur, ou Chaldeen;"
+        },
+        {
+          "verse": 11,
+          "text": "et la chose que le roi demande est difficile, et il n'existe personne qui puisse l'indiquer devant le roi, excepte les dieux, dont la demeure n'est pas avec la chair."
+        },
+        {
+          "verse": 12,
+          "text": "A cause de cela, le roi s'irrita et se mit dans une tres-grande colere, et commanda de detruire tous les sages de Babylone."
+        },
+        {
+          "verse": 13,
+          "text": "Et un decret fut promulgue portant que les sages fussent tues; et on chercha Daniel et ses compagnons, pour les tuer."
+        },
+        {
+          "verse": 14,
+          "text": "Alors Daniel repondit avec prudence et avec sens à Arioc, chef des gardes du roi, qui etait sorti pour tuer les sages de Babylone;"
+        },
+        {
+          "verse": 15,
+          "text": "il repondit et dit à Arioc, le grand officier du roi: Pourquoi ce decret est-il si rigoureux de par le roi? Alors Arioc fit connaitre la chose à Daniel."
+        },
+        {
+          "verse": 16,
+          "text": "Et Daniel entra et demanda au roi de lui accorder du temps pour indiquer au roi l'interpretation."
+        },
+        {
+          "verse": 17,
+          "text": "Alors Daniel s'en alla à sa maison et fit connaitre la chose à Hanania, Mishael et Azaria, ses compagnons,"
+        },
+        {
+          "verse": 18,
+          "text": "pour implorer, de la part du Dieu des cieux, ses compassions au sujet de ce secret, afin que Daniel et ses compagnons ne fussent pas detruits avec le reste des sages de Babylone."
+        },
+        {
+          "verse": 19,
+          "text": "Alors le secret fut revele à Daniel dans une vision de la nuit. Alors Daniel benit le Dieu des cieux."
+        },
+        {
+          "verse": 20,
+          "text": "Daniel repondit et dit: Beni soit le nom de Dieu, d'eternite en eternite! car la sagesse et la puissance sont à lui,"
+        },
+        {
+          "verse": 21,
+          "text": "et c'est lui qui change les temps et les saisons, qui depose les rois et etablit les rois, qui donne la sagesse aux sages et la connaissance à ceux qui connaissent l'intelligence:"
+        },
+        {
+          "verse": 22,
+          "text": "c'est lui qui revele les choses profondes et secretes; il sait ce qui est dans les tenebres, et la lumiere demeure aupres de lui."
+        },
+        {
+          "verse": 23,
+          "text": "Toi, Dieu de mes peres, je te celebre et je te loue, parce que tu m'as donne sagesse et puissance, et que maintenant tu m'as fait connaitre ce que nous t'avons demande, nous ayant fait connaitre la chose que reclame le roi."
+        },
+        {
+          "verse": 24,
+          "text": "C'est pourquoi Daniel entra aupres d'Arioc, que le roi avait etabli pour detruire les sages de Babylone; il alla, et lui parla ainsi: Ne detruis pas les sages de Babylone; conduis-moi devant le roi, et j'indiquerai au roi l'interpretation."
+        },
+        {
+          "verse": 25,
+          "text": "Alors Arioc fit entrer Daniel en hate devant le roi, et lui parla ainsi: J'ai trouve un homme, des fils de la captivite de Juda, qui fera connaitre au roi l'interpretation."
+        },
+        {
+          "verse": 26,
+          "text": "Le roi repondit et dit à Daniel, dont le nom etait Belteshatsar: Peux-tu me faire connaitre le songe que j'ai vu et son interpretation?"
+        },
+        {
+          "verse": 27,
+          "text": "Daniel repondit devant le roi, et dit: Le secret que le roi demande, les sages, les enchanteurs, les devins, les augures, n'ont pu l'indiquer au roi;"
+        },
+        {
+          "verse": 28,
+          "text": "mais il y a un Dieu dans les cieux qui revele les secrets et fait savoir au roi Nebucadnetsar ce qui arrivera à la fin des jours. Ton songe et les visions de ta tete, sur ton lit, les voici:"
+        },
+        {
+          "verse": 29,
+          "text": "Toi, o roi,... tes pensees, sur ton lit, sont montees dans ton esprit, ce qui doit arriver ci-apres; et celui qui revele les secrets te fait savoir ce qui va arriver."
+        },
+        {
+          "verse": 30,
+          "text": "Et quant à moi, ce n'est pas par quelque sagesse qui soit en moi plus qu'en tous les vivants, que ce secret m'a ete revele: c'est afin que l'interpretation soit connue du roi, et que tu connaisses les pensees de ton coeur."
+        },
+        {
+          "verse": 31,
+          "text": "Toi, au roi, tu voyais, et voici une grande statue; cette statue etait grande, et sa splendeur, extraordinaire; elle se tint devant toi, et son aspect etait terrible."
+        },
+        {
+          "verse": 32,
+          "text": "La tete de cette statue etait d'or pur; sa poitrine et ses bras, d'argent; son ventre et ses cuisses, d'airain; ses jambes, de fer;"
+        },
+        {
+          "verse": 33,
+          "text": "ses pieds, en partie de fer et en partie d'argile."
+        },
+        {
+          "verse": 34,
+          "text": "Tu vis, jusqu'à ce qu'une pierre se detacha sans mains; et elle frappa la statue dans ses pieds de fer et d'argile, et les broya;"
+        },
+        {
+          "verse": 35,
+          "text": "alors furent broyes ensemble le fer, l'argile, l'airain, l'argent et l'or, et ils devinrent comme la balle de l'aire d'ete; et le vent les emporta, et il ne se trouva aucun lieu pour eux; et la pierre qui avait frappe la statue devint une grande montagne qui remplit toute la terre."
+        },
+        {
+          "verse": 36,
+          "text": "C'est là le songe, et nous en dirons l'interpretation devant le roi."
+        },
+        {
+          "verse": 37,
+          "text": "Toi, o roi, tu es le roi des rois, auquel le Dieu des cieux a donne le royaume, la puissance, et la force, et la gloire;"
+        },
+        {
+          "verse": 38,
+          "text": "et partout ou habitent les fils des hommes, les betes des champs et les oiseaux des cieux, il les a mis entre tes mains et t'a fait dominer sur eux tous. Toi, tu es cette tete d'or."
+        },
+        {
+          "verse": 39,
+          "text": "Et apres toi s'elevera un autre royaume, inferieur à toi; puis un troisieme et autre royaume, d'airain, qui dominera sur toute la terre."
+        },
+        {
+          "verse": 40,
+          "text": "Et le quatrieme royaume sera fort comme le fer. De meme que le fer broie et ecrase tout, et que le fer brise toutes ces choses, il broiera et brisera."
+        },
+        {
+          "verse": 41,
+          "text": "Et selon que tu as vu les pieds et les orteils en partie d'argile de potier et en partie de fer, le royaume sera divise; et il y aura en lui de la durete du fer, selon que tu as vu le fer mele avec de l'argile grasse;"
+        },
+        {
+          "verse": 42,
+          "text": "et quant à ce que les orteils des pieds etaient en partie de fer et en partie d'argile, le royaume sera en partie fort et sera en partie fragile."
+        },
+        {
+          "verse": 43,
+          "text": "Et selon que tu as vu le fer mele avec de l'argile grasse, ils se meleront à la semence des hommes, mais ils n'adhereront pas l'un à l'autre, de meme que le fer ne se mele pas avec l'argile."
+        },
+        {
+          "verse": 44,
+          "text": "Et dans les jours de ces rois, le Dieu des cieux etablira un royaume qui ne sera jamais detruit; et ce royaume ne passera point à un autre peuple; il broiera et detruira tous ces royaumes, mais lui, il subsistera à toujours."
+        },
+        {
+          "verse": 45,
+          "text": "Selon que tu as vu que, de la montagne, la pierre s'est detachee sans mains, et qu'elle a broye le fer, l'airain, l'argile, l'argent et l'or, le grand Dieu fait connaitre au roi ce qui arrivera ci-apres. Et le songe est certain, et son interpretation est sure."
+        },
+        {
+          "verse": 46,
+          "text": "Alors le roi Nebucadnetsar tomba sur sa face et se prosterna devant Daniel, et commanda de lui presenter une offrande et des parfums."
+        },
+        {
+          "verse": 47,
+          "text": "Le roi repondit et dit à Daniel: En verite, votre Dieu est le Dieu des dieux et le Seigneur des rois, et le revelateur des secrets, puisque tu as pu reveler ce secret."
+        },
+        {
+          "verse": 48,
+          "text": "Alors le roi eleva Daniel en dignite, et lui fit beaucoup de grands dons, et l'etablit gouverneur sur toute la province de Babylone, et grand intendant de tous les sages de Babylone."
+        },
+        {
+          "verse": 49,
+          "text": "Et Daniel fit une demande au roi, qui etablit Shadrac, Meshac et Abed-Nego sur les services de la province de Babylone. Et Daniel se tenait à la porte du roi."
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Nebucadnetsar, le roi, fit une statue d'or; sa hauteur etait de soixante coudees, sa largeur, de six coudees; il la dressa dans la plaine de Dura, dans la province de Babylone."
+        },
+        {
+          "verse": 2,
+          "text": "Et Nebucadnetsar, le roi, envoya un ordre pour assembler les satrapes, les prefets, les gouverneurs, les grands juges, les tresoriers, les conseillers, les legistes, et tous les magistrats des provinces, afin qu'ils vinssent pour la dedicace de la statue que Nebucadnetsar, le roi, avait dressee."
+        },
+        {
+          "verse": 3,
+          "text": "Alors s'assemblerent les satrapes, les prefets, les gouverneurs, les grands juges, les tresoriers, les conseillers, les legistes, et tous les magistrats des provinces, pour la dedicace de la statue que Nebucadnetsar, le roi, avait dressee; et ils se tinrent devant la statue que Nebucadnetsar avait dressee."
+        },
+        {
+          "verse": 4,
+          "text": "Et un heraut cria avec force: Il vous est ordonne, peuples, peuplades, et langues:"
+        },
+        {
+          "verse": 5,
+          "text": "Aussitot que vous entendrez le son du cor, de la flute, de la cithare, de la sambuque, du psalterion, de la musette, et toute espece de musique, vous vous prosternerez et vous adorerez la statue d'or que Nebucadnetsar, le roi, a dressee;"
+        },
+        {
+          "verse": 6,
+          "text": "et quiconque ne se prosternera pas et n'adorera pas, sera jete à l'heure meme au milieu d'une fournaise de feu ardent."
+        },
+        {
+          "verse": 7,
+          "text": "C'est pourquoi, au moment meme ou tous les peuples entendirent le son du cor, de la flute, de la cithare, de la sambuque, du psalterion, et toute espece de musique, tous les peuples, peuplades et langues, se prosternerent et adorerent la statue d'or que Nebucadnetsar, le roi, avait dressee."
+        },
+        {
+          "verse": 8,
+          "text": "A cause de cela, en ce meme moment, des hommes chaldeens s'approcherent et accuserent les Juifs."
+        },
+        {
+          "verse": 9,
+          "text": "Ils prirent la parole et dirent au roi Nebucadnetsar: O roi, vis à jamais!"
+        },
+        {
+          "verse": 10,
+          "text": "Toi, o roi, tu as donne ordre que tout homme qui entendrait le son du cor, de la flute, de la cithare, de la sambuque, du psalterion, de la musette, et toute espece de musique, se prosterne et adore la statue d'or,"
+        },
+        {
+          "verse": 11,
+          "text": "et que quiconque ne se prosternerait pas et n'adorerait pas, serait jete au milieu d'une fournaise de feu ardent."
+        },
+        {
+          "verse": 12,
+          "text": "Il y a des hommes juifs, que tu as etablis sur les services de la province de Babylone, Shadrac, Meshac et Abed-Nego: ces hommes ne tiennent pas compte de toi, o roi; ils ne servent pas tes dieux, et la statue d'or que tu as dressee ils ne l'adorent pas."
+        },
+        {
+          "verse": 13,
+          "text": "Alors Nebucadnetsar, en colere et en fureur, commanda d'amener Shadrac, Meshac et Abed-Nego; alors on amena ces hommes devant le roi."
+        },
+        {
+          "verse": 14,
+          "text": "Nebucadnetsar prit la parole et leur dit: Est-ce à dessein, Shadrac, Meshac, et Abed-Nego, que vous ne servez pas mon dieu, et que vous n'adorez pas la statue d'or que j'ai dressee?"
+        },
+        {
+          "verse": 15,
+          "text": "Maintenant, si, au moment ou vous entendrez le son du cor, de la flute, de la cithare, de la sambuque, du psalterion, de la musette, et toute espece de musique, vous etes prets à vous prosterner et à adorer la statue que j'ai faite...; mais si vous ne l'adorez pas, à l'instant meme vous serez jetes au milieu de la fournaise de feu ardent. Et qui est le Dieu qui vous delivrera de ma main?"
+        },
+        {
+          "verse": 16,
+          "text": "Shadrac, Meshac et Abed-Nego repondirent et dirent au roi: Nebucadnetsar, il n'est pas necessaire que nous te repondions sur ce sujet."
+        },
+        {
+          "verse": 17,
+          "text": "S'il en est comme tu dis, notre Dieu que nous servons peut nous delivrer de la fournaise de feu ardent, et il nous delivrera de ta main, o roi!"
+        },
+        {
+          "verse": 18,
+          "text": "Et sinon, sache, o roi, que nous ne servirons pas tes dieux, et que nous n'adorerons pas la statue d'or que tu as dressee."
+        },
+        {
+          "verse": 19,
+          "text": "Alors Nebucadnetsar fut rempli de fureur, et l'apparence de son visage fut changee envers Shadrac, Meshac et Abed-Nego. il prit la parole et commanda de chauffer la fournaise sept fois plus qu'on n'etait accoutume de la chauffer;"
+        },
+        {
+          "verse": 20,
+          "text": "et il commanda aux hommes les plus vaillants de son armee, de lier Shadrac, Meshac et Abed-Nego, et de les jeter dans la fournaise de feu ardent."
+        },
+        {
+          "verse": 21,
+          "text": "Alors ces hommes furent lies dans leurs caleçons, leurs tuniques, et leurs manteaux et leurs vetements, et jetes au milieu de la fournaise de feu ardent."
+        },
+        {
+          "verse": 22,
+          "text": "Parce que la parole du roi etait rigoureuse et la fournaise extremement chauffee, la flamme du feu tua ces hommes qui avaient fait monter Shadrac, Meshac et Abed-Nego;"
+        },
+        {
+          "verse": 23,
+          "text": "et ces trois hommes, Shadrac, Meshac, et Abed-Nego, tomberent lies au milieu de la fournaise de feu ardent."
+        },
+        {
+          "verse": 24,
+          "text": "Alors le roi Nebucadnetsar, consterne, se leva precipitamment et prit la parole et dit à ses conseillers: N'avons-nous pas jete au milieu du feu trois hommes lies? Ils repondirent et dirent au roi: Certainement, o roi!"
+        },
+        {
+          "verse": 25,
+          "text": "Il repondit et dit: Voici, je vois quatre hommes delies, se promenant au milieu du feu, et ils n'ont aucun mal; et l'aspect du quatrieme est semblable à un fils de Dieu."
+        },
+        {
+          "verse": 26,
+          "text": "Alors Nebucadnetsar s'approcha de l'ouverture de la fournaise de feu ardent; il prit la parole et dit: Shadrac, Mechac et Abed-Nego, serviteurs du Dieu Tres-haut, sortez et venez! Alors Shadrac, Mechac et Abed-Nego sortirent du milieu du feu."
+        },
+        {
+          "verse": 27,
+          "text": "Et les satrapes, les prefets, les gouverneurs, et les conseillers du roi, qui etaient assembles, virent ces hommes sur le corps desquels le feu n'avait eu aucune puissance: les cheveux de leur tete n'avaient pas ete brules, et leurs caleçons n'avaient pas change, et l'odeur du feu n'avait pas passe sur eux."
+        },
+        {
+          "verse": 28,
+          "text": "Nebucadnetsar prit la parole et dit: Beni soit le Dieu de Shadrac, de Meshac et d'Abed-Nego, qui a envoye son ange et a sauve ses serviteurs qui se sont confies en lui, et ont change la parole du roi, et ont livre leurs corps, afin de ne servir et n'adorer aucun autre dieu que leur Dieu."
+        },
+        {
+          "verse": 29,
+          "text": "Et de par moi l'ordre est donne qu'en tout peuple, peuplade, et langue, quiconque parlera mal du Dieu de Shadrac, de Meshac et d'Abed-Nego, sera mis en pieces, et sa maison sera reduite en un tas d'immondices, parce qu'il n'y a pas d'autre Dieu qui puisse sauver ainsi."
+        },
+        {
+          "verse": 30,
+          "text": "Alors le roi eleva Shadrac, Meshac et Abed-Nego dans la province de Babylone."
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Nebucadnetsar le roi, à tous les peuples, peuplades et langues, qui habitent sur toute la terre: Que votre paix soit multipliee!"
+        },
+        {
+          "verse": 2,
+          "text": "Il m'a semble bon de faire connaitre les signes et les prodiges que le Dieu Tres-haut a operes à mon egard."
+        },
+        {
+          "verse": 3,
+          "text": "Ses signes, combien ils sont grands! Et ses prodiges, combien ils sont puissants! Son royaume est un royaume eternel, et sa domination est de generation en generation."
+        },
+        {
+          "verse": 4,
+          "text": "Moi, Nebucadnetsar, j'etais en paix dans ma maison, et florissant dans mon palais."
+        },
+        {
+          "verse": 5,
+          "text": "Je vis un songe, et il m'effraya, et les pensees que j'avais sur mon lit, et les visions de ma tete, me troublerent."
+        },
+        {
+          "verse": 6,
+          "text": "Et de par moi fut donne un ordre qu'on amenat devant moi tous les sages de Babylone pour qu'ils me fissent connaitre l'interpretation du songe."
+        },
+        {
+          "verse": 7,
+          "text": "Alors vinrent les devins, les enchanteurs, les Chaldeens, et les augures; et je dis le songe devant eux, mais ils ne m'en firent pas connaitre l'interpretation;"
+        },
+        {
+          "verse": 8,
+          "text": "mais, à la fin, entra devant moi Daniel, dont le nom est Belteshatsar, selon le nom de mon dieu, et en qui est l'esprit des dieux saints; et je dis le songe devant lui."
+        },
+        {
+          "verse": 9,
+          "text": "Belteshatsar, chef des devins, puisque je sais que l'esprit des dieux saints est en toi, et qu'aucun secret ne t'embarrasse, dis-moi les visions du songe que j'ai vu, et son interpretation."
+        },
+        {
+          "verse": 10,
+          "text": "Or les visions de ma tete, sur mon lit, etaient celles-ci: je voyais, et voici, un arbre au milieu de la terre, et sa hauteur etait grande."
+        },
+        {
+          "verse": 11,
+          "text": "L'arbre crut et devint fort, et sa hauteur atteignit jusqu'aux bout de toute la terre."
+        },
+        {
+          "verse": 12,
+          "text": "Son feuillage etait beau et son fruit abondant, et en lui il y avait de la nourriture pour tous; sous son ombre se tenaient les betes des champs, et dans ses branches habitaient les oiseaux des cieux; et de lui toute chair se nourrissait."
+        },
+        {
+          "verse": 13,
+          "text": "Je voyais, dans les visions de ma tete, sur mon lit, et voici un veillant, un saint, descendit des cieux."
+        },
+        {
+          "verse": 14,
+          "text": "Il cria avec force, et dit ainsi: Abattez l'arbre et coupez ses branches, faites tomber son feuillage et dispersez son fruit; que les betes s'enfuient de dessous lui, et les oiseaux, de ses branches."
+        },
+        {
+          "verse": 15,
+          "text": "Toutefois, laissez dans la terre le tronc de ses racines, avec un lien de fer et d'airain autour de lui, dans l'herbe des champs; et qu'il soit baigne de la rosee des cieux, et qu'il ait, avec les betes, sa part à l'herbe de la terre;"
+        },
+        {
+          "verse": 16,
+          "text": "que son coeur d'homme soit change, et qu'un coeur de bete lui soit donne; et que sept temps passent sur lui."
+        },
+        {
+          "verse": 17,
+          "text": "Cette sentence est par le decret des veillants, et la chose, par la parole des saints, afin que les vivants sachent que le Tres-haut domine sur le royaume des hommes, et qu'il le donne à qui il veut, et y eleve le plus vil des hommes."
+        },
+        {
+          "verse": 18,
+          "text": "Ce songe, moi, le roi Nebucadnetsar, je l'ai vu; et toi, Belteshatsar, dis-en l'interpretation, puisque tous les sages de mon royaume n'ont pas pu me faire connaitre l'interpretation; mais toi, tu le peux, car l'esprit des dieux saints est en toi."
+        },
+        {
+          "verse": 19,
+          "text": "Alors Daniel, dont le nom est Belteshatsar, fut stupefie pour une heure environ, et ses pensees le troublerent. Le roi prit la parole et dit: Belteshatsar, que le songe et son interpretation ne te troublent pas. Belteshatsar repondit et dit: Mon seigneur! que le songe soit pour ceux qui te haissent, et son interpretation pour tes ennemis."
+        },
+        {
+          "verse": 20,
+          "text": "L'arbre que tu as vu, qui croissait et devenait fort, et dont la hauteur atteignait jusqu'aux cieux, et qu'on voyait de toute la terre,"
+        },
+        {
+          "verse": 21,
+          "text": "et dont le feuillage etait beau et le fruit abondant, et qui avait de la nourriture pour tous, sous lequel habitaient les betes des champs, et dans les branches duquel demeuraient les oiseaux des cieux:"
+        },
+        {
+          "verse": 22,
+          "text": "c'est toi, o roi, qui t'es agrandi et es devenu puissant; et ta grandeur s'est accrue et atteint jusqu'aux cieux, et ta domination, jusqu'au bout de la terre."
+        },
+        {
+          "verse": 23,
+          "text": "Et quant à ce que le roi a vu un veillant, un saint, descendre des cieux et dire: Abattez l'arbre et detruisez-le; toutefois laissez dans la terre le tronc de ses racines, avec un lien de fer et d'airain autour de lui, dans l'herbe des champs, et qu'il soit baigne de la rosee des cieux, et qu'il ait sa part avec les betes des champs jusqu'à ce que sept temps passent sur lui,"
+        },
+        {
+          "verse": 24,
+          "text": "-c'est ici l'interpretation, o roi, et la decision du Tres-haut, ce qui va arriver au roi, mon seigneur:"
+        },
+        {
+          "verse": 25,
+          "text": "On te chassera du milieu des hommes, et ta demeure sera avec les betes des champs, et on te fera manger l'herbe comme les boeufs, et tu seras baigne de la rosee des cieux, et sept temps passeront sur toi, jusqu'à ce que tu connaisses que le Tres-haut domine sur le royaume des hommes, et qu'il le donne à qui il veut."
+        },
+        {
+          "verse": 26,
+          "text": "Et quant à ce qu'on a dit de laisser le tronc des racines de l'arbre, ton royaume te demeurera, quand tu auras connu que les cieux dominent."
+        },
+        {
+          "verse": 27,
+          "text": "C'est pourquoi, o roi, que mon conseil te soit agreable; et romps avec tes peches par la justice, et avec ton iniquite, par la compassion envers les affliges, si ce peut etre un prolongement de ta paix."
+        },
+        {
+          "verse": 28,
+          "text": "Tout cela arrivera au roi Nebucadnetsar."
+        },
+        {
+          "verse": 29,
+          "text": "Au bout de douze mois, il se promenait sur le palais du royaume de Babylone."
+        },
+        {
+          "verse": 30,
+          "text": "Le roi prit la parole et dit: N'est-ce pas ici Babylone la grande, que j'ai batie pour etre la maison de mon royaume, par la puissance de ma force et pour la gloire de ma magnificence?"
+        },
+        {
+          "verse": 31,
+          "text": "La parole etait encore dans la bouche du roi, qu'une voix tomba des cieux: Roi Nebucadnetsar, il t'est dit: Le royaume s'en est alle d'avec toi;"
+        },
+        {
+          "verse": 32,
+          "text": "et on te chassera du milieu des hommes, et ta demeure sera avec les betes des champs; on te fera manger de l'herbe comme les boeufs, et sept temps passeront sur toi, jusqu'à ce que tu connaisses que le Tres-haut domine sur le royaume des hommes et qu'il le donne à qui il veut."
+        },
+        {
+          "verse": 33,
+          "text": "Au meme instant la parole s'accomplit sur Nebucadnetsar: il fut chasse du milieu des hommes, et il mangea de l'herbe comme les boeufs, et son corps fut baigne de la rosee des cieux, jusqu'à que ses cheveux fussent devenus longs comme les plumes de l'aigle, et ses ongles, comme ceux des oiseaux."
+        },
+        {
+          "verse": 34,
+          "text": "à la fin de ces jours, moi, Nebucadnetsar, j'elevai mes yeux vers les cieux, et mon intelligence me revint, et je benis le Tres-Haut, et je louai et magnifiai celui qui vit eternellement, duquel la domination est une domination eternelle, et dont le royaume est de generation en generation;"
+        },
+        {
+          "verse": 35,
+          "text": "et tous les habitants de la terre sont reputes comme neant, et il agit selon son bon plaisir dans l'armee des cieux et parmi les habitants de la terre; et il n'y a personne qui puisse arreter sa main et lui dire: Que fais-tu?"
+        },
+        {
+          "verse": 36,
+          "text": "Dans ce temps-là, mon intelligence me revint, et, pour la gloire de mon royaume, ma magnificence et ma splendeur me revinrent, et mes conseillers et mes grands me chercherent, et je fus retabli dans mon royaume, et ma grandeur fut extraordinairement augmentee."
+        },
+        {
+          "verse": 37,
+          "text": "Maintenant, moi, Nebucadnetsar, je loue et j'exalte et je magnifie le roi des cieux, dont toutes les oeuvres sont verite, et les voies, jugement, et qui est puissant pour abaisser ceux qui marchent avec orgueil."
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Le roi Belshatsar fit un grand festin à mille de ses grands, et but du vin devant les mille."
+        },
+        {
+          "verse": 2,
+          "text": "Belshatsar, comme il buvait le vin, commanda d'apporter les vases d'or et d'argent que son pere Nebucadnetsar avait tires du temple qui etait à Jerusalem, afin que le roi et ses grands, ses femmes et ses concubines, y bussent."
+        },
+        {
+          "verse": 3,
+          "text": "Alors on apporta les vases d'or qu'on avait tires du temple de la maison de Dieu, qui etait à Jerusalem; et le roi et ses grands, ses femmes et ses concubines, y burent."
+        },
+        {
+          "verse": 4,
+          "text": "Ils burent du vin, et il louerent les dieux d'or et d'argent, d'airain, de fer, de bois, et de pierre."
+        },
+        {
+          "verse": 5,
+          "text": "En ce meme moment, les doigt d'une main d'homme sortirent, et ecrivirent, vis-à-vis du chandelier, sur le platre de la muraille du palais du roi; et le roi vit l'extremite de la main qui ecrivait."
+        },
+        {
+          "verse": 6,
+          "text": "Alors le roi changea de couleur, et ses pensees le troublerent; et les liens de ses reins se delierent, et ses genoux se heurterent l'un contre l'autre."
+        },
+        {
+          "verse": 7,
+          "text": "Le roi cria avec force d'amener les enchanteurs, les Chaldeens et les augures. Le roi prit la parole et dit aux sages de Babylone: Quiconque lira cette ecriture et m'en indiquera l'interpretation sera revetu de pourpre, et aura une chaine d'or autour de son cou, et sera le troisieme gouverneur dans le royaume."
+        },
+        {
+          "verse": 8,
+          "text": "Alors arriverent tous les sages du roi, mais il ne purent lire l'ecriture ni faire connaitre au roi l'interpretation."
+        },
+        {
+          "verse": 9,
+          "text": "Alors le roi Belshatsar fut extremement trouble, et il changea de couleur; et ses grands furent bouleverses."
+        },
+        {
+          "verse": 10,
+          "text": "La reine, à cause des paroles du roi et de ses grands, entra dans la maison du festin. La reine prit la parole et dit: O roi, vis à jamais! Que tes pensees ne te troublent pas, et ne change pas de couleur:"
+        },
+        {
+          "verse": 11,
+          "text": "il y a un homme dans ton royaume, en qui est l'esprit des dieux saints; et, aux jours de ton pere, de la lumiere, et de l'intelligence, et une sagesse comme la sagesse des dieux, ont ete trouvees en lui; et le roi Nebucadnetsar, ton pere, -ton pere, o roi, l'a etabli chef des devins, des enchanteurs, des Chaldeens, des augures,"
+        },
+        {
+          "verse": 12,
+          "text": "parce qu'un esprit extraordinaire, et la connaissance et l'intelligence pour interpreter les songes et pour expliquer les enigmes et pour resoudre les problemes difficiles, ont ete trouves en lui, en Daniel, à qui le roi a donne le nom de Belteshatsar. Que Daniel soit donc appele, et il indiquera l'interpretation."
+        },
+        {
+          "verse": 13,
+          "text": "Alors Daniel fut introduit devant le roi. Le roi prit la parole et dit à Daniel: Es-tu ce Daniel, l'un des fils de la captivite de Juda, que le roi, mon pere, a amenes de Juda?"
+        },
+        {
+          "verse": 14,
+          "text": "Et j'ai entendu dire de toi que l'esprit des dieux est en toi, et que de la lumiere, et de l'intelligence, et une sagesse extraordinaire se trouvent en toi."
+        },
+        {
+          "verse": 15,
+          "text": "Et maintenant, les sages, les enchanteurs, ont ete amenes devant moi, afin qu'ils lussent cette ecriture et m'en fissent connaitre l'interpretation, et ils n'ont pu indiquer l'interpretation de la chose."
+        },
+        {
+          "verse": 16,
+          "text": "Et j'ai entendu dire de toi que tu peux donner des interpretations et resoudre les problemes difficiles. Maintenant, si tu peux lire l'ecriture et m'en faire connaitre l'interpretation, tu seras vetu de pourpre, et tu auras une chaine d'or autour de ton cou, et tu seras le troisieme gouverneur dans le royaume."
+        },
+        {
+          "verse": 17,
+          "text": "Alors Daniel repondit et dit devant le roi: Que tes presents te demeurent, et donne tes recompenses à un autre. Toutefois je lirai l'ecriture au roi, et je lui en ferai connaitre l'interpretation."
+        },
+        {
+          "verse": 18,
+          "text": "O roi, le Dieu Tres-haut donna à Nebucadnetsar, ton pere, le royaume, et la grandeur, et l'honneur, et la majeste;"
+        },
+        {
+          "verse": 19,
+          "text": "et, à cause de la grandeur qu'il lui donna, tous les peuples, les peuplades et les langues, tremblaient devant lui, et le craignaient; il tuait qui il voulait, et il conservait en vie qui il voulait; il exaltait qui il voulait, et il abaissait qui il voulait."
+        },
+        {
+          "verse": 20,
+          "text": "Mais quand son coeur s'eleva et que son esprit s'endurcit jusqu'à l'orgueil, il fut precipite du trone de son royaume, et sa dignite lui fut otee;"
+        },
+        {
+          "verse": 21,
+          "text": "et il fut chasse du milieu des fils des hommes, et son coeur fut rendu semblable à celui des betes, et sa demeure fut avec les anes sauvages; on le nourrit d'herbe comme les boeufs, et son corps fut baigne de la rosee des cieux, jusqu'à ce qu'il connut que le Dieu Tres-haut domine sur le royaume des hommes, et qu'il y etablit qui il veut."
+        },
+        {
+          "verse": 22,
+          "text": "Et toi, son fils Belshatsar, tu n'as pas humilie ton coeur, bien que tu aies su tout cela."
+        },
+        {
+          "verse": 23,
+          "text": "Mais tu t'es eleve contre le Seigneur des cieux; et on a apporte devant toi les vases de sa maison, et toi et tes grands, tes femmes et tes concubines, vous y avez bu du vin; et tu as loue les dieux d'argent et d'or, d'airain, de fer, de bois et de pierre, qui ne voient, et n'entendent, et ne comprennent point; et le Dieu en la main duquel est ton souffle, et à qui appartiennent toutes tes voies, tu ne l'as pas glorifie."
+        },
+        {
+          "verse": 24,
+          "text": "Alors a ete envoyee de sa part l'extremite de la main, et cette ecriture a ete tracee."
+        },
+        {
+          "verse": 25,
+          "text": "Et voici l'ecriture qui a ete tracee: MENE, MENE, THEKEL, UPHARSIN!"
+        },
+        {
+          "verse": 26,
+          "text": "Voici l'interpretation des paroles. MENE: Dieu a compte ton royaume, et y a mis fin."
+        },
+        {
+          "verse": 27,
+          "text": "THEKEL: Tu as ete pese à la balance, et tu as ete trouve manquant de poids."
+        },
+        {
+          "verse": 28,
+          "text": "PERES: Ton royaume est divise, et donne aux Medes et aux Perses."
+        },
+        {
+          "verse": 29,
+          "text": "Alors Belshatsar donna des ordres, et on vetit Daniel de pourpre, et on mit une chaine d'or à son cou, et on proclama qu'il serait le troisieme gouverneur dans le royaume."
+        },
+        {
+          "verse": 30,
+          "text": "En cette nuit-là, Belshatsar, roi des Chaldeens, fut tue."
+        },
+        {
+          "verse": 31,
+          "text": "Et Darius, le Mede, reçut le royaume, etant age d'environ soixante-deux ans."
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Il plut à Darius d'etablir sur le royaume cent vingt satrapes, pour qu'ils fussent dans tout le royaume;"
+        },
+        {
+          "verse": 2,
+          "text": "et au-dessus d'eux, trois presidents, dont Daniel etait l'un, pour que ces satrapes leur rendissent compte, et que le roi ne souffrit aucun dommage."
+        },
+        {
+          "verse": 3,
+          "text": "Et ce Daniel surpassa les presidents et les satrapes, parce qu'il y avait en lui un esprit extraordinaire; et le roi pensa à l'etablir sur tout le royaume."
+        },
+        {
+          "verse": 4,
+          "text": "Alors les presidents et les satrapes chercherent à trouver dans l'administration du royaume quelque sujet d'accusation contre Daniel; et ils ne pouvaient trouver aucun sujet d'accusation ni aucune faute, parce qu'il etait fidele; et aucun manquement ni aucune faute ne se trouva en lui."
+        },
+        {
+          "verse": 5,
+          "text": "Et ces hommes dirent: Nous ne trouverons dans ce Daniel aucun sujet d'accusation, à moins que nous n'en trouvions contre lui à cause de la loi de son Dieu."
+        },
+        {
+          "verse": 6,
+          "text": "Alors ces presidents et ces satrapes s'assemblerent en foule aupres du roi, et lui parlerent ainsi: Roi Darius, vis à jamais!"
+        },
+        {
+          "verse": 7,
+          "text": "Tous les presidents du royaume, les prefets et les satrapes, les conseillers et les gouverneurs, ont tenu conseil ensemble pour etablir un statut royal et mettre en vigueur une defense, portant que quiconque fera une demande à quelque dieu ou à quelque homme que ce soit, durant trente jours, excepte à toi, o roi, sera jete dans la fosse aux lions."
+        },
+        {
+          "verse": 8,
+          "text": "Maintenant, o roi, etablis la defense, et signe l'ecrit afin qu'il ne soit pas change, selon la loi des Medes et des Perses, qui ne peut etre abrogee."
+        },
+        {
+          "verse": 9,
+          "text": "A cause de cela, le roi Darius signa l'ecrit et la defense."
+        },
+        {
+          "verse": 10,
+          "text": "Or Daniel, quand il sut que l'ecrit etait signe, entra dans sa maison; et, ses fenetres etant ouvertes dans sa chambre haute, du cote de Jerusalem, il s'agenouillait sur ses genoux trois fois le jour, et priait, et rendait grace devant son Dieu, comme il avait fait auparavant."
+        },
+        {
+          "verse": 11,
+          "text": "Mais ces hommes s'assemblerent en foule et trouverent Daniel qui priait et presentait sa supplication devant son Dieu."
+        },
+        {
+          "verse": 12,
+          "text": "Alors ils s'approcherent et dirent devant le roi, touchant la defense du roi: N'as-tu pas signe une defense, portant que tout homme qui, durant trente jours, ferait une demande à quelque dieu ou à quelque homme que ce fut, excepte à toi, o roi, serait jete dans la fosse aux lions? Le roi repondit et dit: La chose est certaine, selon la loi des Medes et des Perses, qui ne peut etre abrogee."
+        },
+        {
+          "verse": 13,
+          "text": "Alors ils repondirent et dirent devant le roi: Daniel, qui est d'entre les fils de la captivite de Juda, ne tient pas compte de toi, o roi, ni de la defense que tu as signee, mais il fait sa requete trois fois par jour."
+        },
+        {
+          "verse": 14,
+          "text": "Alors le roi, quand il entendit ces paroles, en fut fort afflige, et il pensa avec sollicitude à Daniel afin de le sauver, et jusqu'au coucher du soleil il s'efforça de le delivrer."
+        },
+        {
+          "verse": 15,
+          "text": "Alors ces hommes s'assemblerent en foule aupres du roi, et dirent au roi: Sache, o roi, que c'est la loi des Medes et des Perses, qu'aucune defense ou statut que le roi a etabli, ne peut etre change."
+        },
+        {
+          "verse": 16,
+          "text": "Alors le roi donna des ordres, et on amena Daniel, et on le jeta dans la fosse aux lions. Le roi prit la parole et dit à Daniel: Ton Dieu que tu sers continuellement, lui, te sauvera."
+        },
+        {
+          "verse": 17,
+          "text": "Et une pierre fut apportee et mise sur l'ouverture de la fosse, et le roi la scella de son cachet et du cachet de ses grands, afin que l'intention à l'egard de Daniel ne fut pas changee."
+        },
+        {
+          "verse": 18,
+          "text": "Alors le roi s'en alla dans son palais, et il passa la nuit en jeunant, et ne voulut pas qu'on lui amenat des concubines; et son sommeil s'enfuit loin de lui."
+        },
+        {
+          "verse": 19,
+          "text": "Ensuite le roi se leva avec l'aurore, au point du jour, et s'en alla en hate à la fosse aux lions."
+        },
+        {
+          "verse": 20,
+          "text": "Et comme il approchait de la fosse, il cria à Daniel d'une voix triste. Le roi prit la parole et dit à Daniel: Daniel, serviteur du Dieu vivant, ton Dieu, que tu sers continuellement, a-t-il pu te delivrer des lions?"
+        },
+        {
+          "verse": 21,
+          "text": "Alors Daniel parla au roi: O roi, vis à jamais!"
+        },
+        {
+          "verse": 22,
+          "text": "Mon Dieu a envoye son ange et a ferme la gueule des lions, et ils ne m'ont fait aucun mal, parce que devant lui l'innocence s'est trouvee en moi, et devant toi non plus, o roi, je n'ai rien fait de mal."
+        },
+        {
+          "verse": 23,
+          "text": "Alors le roi fut tres-joyeux et dit qu'on tirat Daniel de la fosse, et Daniel fut tire de la fosse, et aucun mal ne fut trouve sur lui, parce qu'il s'etait confie en son Dieu."
+        },
+        {
+          "verse": 24,
+          "text": "Et le roi donna des ordres, et on amena ces hommes qui avaient accuse Daniel, et on les jeta dans la fosse aux lions, eux, leurs enfants et leurs femmes; et ils n'etaient pas parvenus au fond de la fosse, que dejà les lions se rendirent maitres d'eux et leur briserent tous les os."
+        },
+        {
+          "verse": 25,
+          "text": "Alors le roi Darius ecrivit: A tous les peuples, peuplades et langues, qui habitent sur toute la terre! Que votre paix soit multipliee!"
+        },
+        {
+          "verse": 26,
+          "text": "De par moi l'ordre est donne que, dans tous les gouvernements de mon royaume, on tremble devant le Dieu de Daniel et on le craigne; car il est le Dieu vivant, et il subsiste à jamais, et son royaume est un royaume qui ne sera pas detruit, et sa domination durera jusqu'à la fin."
+        },
+        {
+          "verse": 27,
+          "text": "Il sauve et il delivre, et il opere des signes et des prodiges dans les cieux et sur la terre: c'est lui qui a sauve Daniel de la puissance des lions."
+        },
+        {
+          "verse": 28,
+          "text": "Et ce Daniel prospera pendant le regne de Darius et pendant le regne de Cyrus, le Perse."
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "La premiere annee de Belshatsar, roi de Babylone, Daniel vit un songe, et des visions de sa tete, sur son lit. Alors il ecrivit le songe, et raconta la somme des choses."
+        },
+        {
+          "verse": 2,
+          "text": "Daniel prit la parole et dit: Je voyais dans ma vision de nuit, et voici, les quatre vents des cieux se dechainerent sur la grande mer."
+        },
+        {
+          "verse": 3,
+          "text": "Et quatre grandes betes monterent de la mer, differentes l'une de l'autre."
+        },
+        {
+          "verse": 4,
+          "text": "La premiere etait comme un lion, et elle avait des ailes d'aigle. Je vis jusqu'à ce que ses ailes furent arrachees, et qu'elle fut soulevee de terre, et mise debout sur ses pieds, comme un homme; et un coeur d'homme lui fut donne."
+        },
+        {
+          "verse": 5,
+          "text": "Et voici une autre, une seconde bete, semblable à un ours, et elle se dressait sur un cote. Et elle avait trois cotes dans sa gueule, entre ses dents; et on lui dit ainsi: Leve-toi, mange beaucoup de chair."
+        },
+        {
+          "verse": 6,
+          "text": "Apres cela, je vis, et en voici une autre, -comme un leopard; et elle avait quatre ailes d'oiseau sur son dos; et la bete avait quatre tetes; et la domination lui fut donnee."
+        },
+        {
+          "verse": 7,
+          "text": "Apres cela je vis dans les visions de la nuit, et voici une quatrieme bete, effrayante et terrible et extraordinairement puissante, et elle avait de grandes dents de fer: elle devorait et ecrasait; et ce qui restait, elle le foulait avec ses pieds. Et elle etait differente de toutes les betes qui etaient avant elle; et elle avait dix cornes."
+        },
+        {
+          "verse": 8,
+          "text": "Je considerais les cornes, et voici une autre corne, petite, monta au milieu d'elles, et trois des premieres furent arrachees devant elle. Et voici, il y avait à cette corne des yeux comme des yeux d'homme, et une bouche proferant de grandes choses."
+        },
+        {
+          "verse": 9,
+          "text": "Je vis jusqu'à ce que les trones furent places, et que l'Ancien des jours s'assit. Son vetement etait blanc comme la neige, et les cheveux de sa tete, comme de la laine pure; son trone etait des flammes de feu; les roues du trone, un feu brulant."
+        },
+        {
+          "verse": 10,
+          "text": "Un fleuve de feu coulait et sortait de devant lui. mille milliers le servaient, et des myriades de myriades se tenaient devant lui. Le jugement s'assit, et les livres furent ouverts."
+        },
+        {
+          "verse": 11,
+          "text": "Je vis alors, à cause de la voix des grandes paroles que la corne proferait, -je vis jusqu'à ce que la bete fut tuee; et son corps fut detruit et elle fut livree pour etre brulee au feu."
+        },
+        {
+          "verse": 12,
+          "text": "Quant aux autres betes, la domination leur fut otee; mais une prolongation de vie leur fut donnee, jusqu'à une saison et un temps."
+        },
+        {
+          "verse": 13,
+          "text": "Je voyais dans les visions de la nuit, et voici, quelqu'un comme un fils d'homme vint avec les nuees des cieux, et il avança jusqu'à l'Ancien des jours, et on le fit approcher de lui."
+        },
+        {
+          "verse": 14,
+          "text": "Et on lui donna la domination, et l'honneur, et la royaute, pour que tous les peuples, les peuplades et les langues, le servissent. Sa domination est une domination eternelle, qui ne passera pas, et son royaume, un royaume qui ne sera pas detruit."
+        },
+        {
+          "verse": 15,
+          "text": "Moi, Daniel, je fus trouble dans mon esprit au dedans de mon corps, et les visions de ma tete m'effrayerent."
+        },
+        {
+          "verse": 16,
+          "text": "Je m'approchai de l'un de ceux qui se tenaient là, et je lui demandai la verite touchant tout cela. Et il me la dit, et me fit savoir l'interpretation des choses:"
+        },
+        {
+          "verse": 17,
+          "text": "Ces grandes betes, qui sont quatre, sont quatre rois qui surgiront de la terre;"
+        },
+        {
+          "verse": 18,
+          "text": "et les saints des lieux tres-hauts recevront le royaume, et possederont le royaume à jamais, et aux siecles des siecles."
+        },
+        {
+          "verse": 19,
+          "text": "Alors je desirai de savoir la verite touchant la quatrieme bete, qui etait differente d'elles toutes, extraordinairement terrible: ses dents etaient de fer, et ses ongles, d'airain; elle devorait, ecrasait, et foulait avec ses pieds ce qui restait;..."
+        },
+        {
+          "verse": 20,
+          "text": "et touchant les dix cornes qui etaient sur sa tete, et touchant l'autre qui montait, et devant laquelle trois etaient tombees, cette corne qui avait des yeux, et une bouche proferant de grandes choses, et dont l'aspect etait plus grand que celui des autres."
+        },
+        {
+          "verse": 21,
+          "text": "Je regardais; et cette corne fit la guerre contre les saints, et prevalut contre eux,"
+        },
+        {
+          "verse": 22,
+          "text": "jusqu'à ce que l'Ancien des jours vint, et que le jugement fut donne aux saints des lieux tres-hauts, et que le temps arriva ou les saints possederent le royaume."
+        },
+        {
+          "verse": 23,
+          "text": "Il dit ainsi: La quatrieme bete sera un quatrieme royaume sur la terre, qui sera different de tous les royaumes, et devorera toute la terre, et la foulera aux pieds et l'ecrasera."
+        },
+        {
+          "verse": 24,
+          "text": "Et les dix cornes,... ce sont dix rois qui surgiront du royaume. Et un autre surgira apres eux; et il sera different des premiers; et il abattra trois rois."
+        },
+        {
+          "verse": 25,
+          "text": "Et il proferera des paroles contre le Tres-haut, et il consumera les saints des lieux tres-hauts, et il pensera changer les saisons et la loi, et elles seront livrees en sa main jusqu'à un temps et des temps et une moitie de temps."
+        },
+        {
+          "verse": 26,
+          "text": "Et le jugement s'assiera; et on lui otera la domination, pour la detruire et la faire perir jusqu'à la fin."
+        },
+        {
+          "verse": 27,
+          "text": "Et le royaume, et la domination, et la grandeur des royaumes sous tous les cieux, seront donnes au peuple des saints des lieux tres-hauts. Son royaume est un royaume eternel, et toutes les dominations le serviront et lui obeiront."
+        },
+        {
+          "verse": 28,
+          "text": "Jusqu'ici, la fin de la chose. Quant à moi, Daniel, mes pensees me troublerent beaucoup, et ma couleur fut changee en moi. Mais je gardai la chose dans mon coeur."
+        }
+      ]
+    },
+    {
+      "chapter": 8,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "La troisieme annee du regne de Belshatsar le roi, une vision m'apparut, à moi, Daniel, apres celle qui m'etait apparue au commencement."
+        },
+        {
+          "verse": 2,
+          "text": "Et je vis dans la vision; et il arriva, quand je vis, que j'etais à Suse, le palais, qui est dans la province d'Elam. Et je vis dans la vision, et j'etais pres du fleuve Ulai."
+        },
+        {
+          "verse": 3,
+          "text": "Et je levai les yeux, et je vis; et voici, un belier se tenait devant le fleuve, et il avait deux cornes; et les deux cornes etaient hautes, et l'une etait plus haute que l'autre, et la plus haute s'eleva la derniere."
+        },
+        {
+          "verse": 4,
+          "text": "Je vis le belier heurtant vers l'occident, et vers le nord, et vers le midi; et aucune bete ne pouvait tenir devant lui, et il n'y avait personne qui put delivrer de sa main; et il fit selon son gre, et devint grand."
+        },
+        {
+          "verse": 5,
+          "text": "Et je considerais, et voici, un bouc venant du couchant sur la face de toute la terre, et qui ne touchait pas la terre; et le bouc avait une corne de grande apparence entre ses yeux."
+        },
+        {
+          "verse": 6,
+          "text": "Et il vint jusqu'au belier qui avait les deux cornes, que j'avais vu se tenir devant le fleuve, et courut sur lui dans la fureur de sa force."
+        },
+        {
+          "verse": 7,
+          "text": "Et je le vis arriver tout pres du belier, et il s'exaspera contre lui et frappa le belier, et brisa ses deux cornes, et le belier fut sans force pour tenir devant lui: il le jeta par terre et le foula aux pieds, et il n'y eut personne qui put delivrer le belier de sa main."
+        },
+        {
+          "verse": 8,
+          "text": "Et le bouc devint tres-grand; et lorsqu'il fut devenu fort, la grande corne fut brisee, et quatre cornes de grande apparence s'eleverent à sa place, vers les quatre vents des cieux."
+        },
+        {
+          "verse": 9,
+          "text": "Et de l'une d'elles sortit une petite corne, et elle grandit extremement vers le midi, et vers le levant, et vers le pays de beaute."
+        },
+        {
+          "verse": 10,
+          "text": "Et elle grandit jusqu'à l'armee des cieux, et fit tomber à terre une partie de l'armee et des etoiles, et les foula aux pieds."
+        },
+        {
+          "verse": 11,
+          "text": "Et elle s'eleva jusqu'au chef de l'armee; et le sacrifice continuel fut ote à celui-ci, et le lieu de son sanctuaire fut renverse."
+        },
+        {
+          "verse": 12,
+          "text": "(Et un temps de detresse fut assigne au sacrifice continuel, pour cause de transgression.) Et elle jeta la verite par terre, et agit, et prospera."
+        },
+        {
+          "verse": 13,
+          "text": "Et j'entendis un saint qui parlait; et un autre saint dit au personnage qui parlait: Jusqu'ou va la vision du sacrifice continuel et de la transgression qui desole, pour livrer le lieu saint et l'armee pour etre foules aux pieds?"
+        },
+        {
+          "verse": 14,
+          "text": "Et il me dit: Jusqu'à deux mille trois cents soirs et matins; alors le lieu saint sera purifie."
+        },
+        {
+          "verse": 15,
+          "text": "Et il arriva que, lorsque moi, Daniel, j'eus vu la vision, j'en cherchai l'intelligence; et voici, comme l'apparence d'un homme se tint vis-à-vis de moi;"
+        },
+        {
+          "verse": 16,
+          "text": "et j'entendis la voix d'un homme au milieu de l'Ulai; et il cria et dit: Gabriel, fais comprendre à celui-ci la vision."
+        },
+        {
+          "verse": 17,
+          "text": "Et il vint pres du lieu ou j'etais, et quand il vint, je fus effraye et je tombai sur ma face; et il me dit: Comprends, fils d'homme, car la vision est pour le temps de la fin."
+        },
+        {
+          "verse": 18,
+          "text": "Or, comme il parlait avec moi, j'etais dans une profonde stupeur, ma face contre la terre; et il me toucha et me fit tenir debout à la place ou j'etais."
+        },
+        {
+          "verse": 19,
+          "text": "Et il dit: Voici, je te fais connaitre ce qui aura lieu à la fin de l'indignation; car à un temps determine sera la fin."
+        },
+        {
+          "verse": 20,
+          "text": "Le belier que tu as vu, qui avait deux cornes, ce sont les rois de Medie et de Perse."
+        },
+        {
+          "verse": 21,
+          "text": "Et le bouc velu, c'est le roi de Javan; et la grande corne qui etait entre ses yeux, c'est le premier roi;"
+        },
+        {
+          "verse": 22,
+          "text": "et qu'elle ait ete brisee et que quatre autres cornes se soient elevees à sa place, c'est que quatre royaumes s'eleveront de la nation, mais non avec sa puissance."
+        },
+        {
+          "verse": 23,
+          "text": "Et au dernier temps de leur royaume, quand les transgresseurs auront comble la mesure, il s'elevera un roi au visage audacieux, et entendant les enigmes;"
+        },
+        {
+          "verse": 24,
+          "text": "et sa puissance sera forte, mais non par sa propre puissance; et il detruira merveilleusement, et il prosperera et agira; et il detruira les hommes forts et le peuple des saints;"
+        },
+        {
+          "verse": 25,
+          "text": "et, par son intelligence, il fera prosperer la fraude dans sa main; et il s'elevera dans son coeur; et, par la prosperite il corrompra beaucoup de gens; et il se levera contre le prince des princes, mais il sera brise sans main."
+        },
+        {
+          "verse": 26,
+          "text": "Et la vision du soir et du matin, qui a ete dite, est verite. Et toi, serre la vision, car elle est pour beaucoup de jours."
+        },
+        {
+          "verse": 27,
+          "text": "Et moi, Daniel, je defaillis, et je fus malade quelques jours; puis je me levai, et je m'occupai des affaires du roi. Et je fus stupefie de la vision, mais personne ne la comprit."
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "La premiere annee de Darius, fils d'Assuerus, de la semence des Medes, qui fut fait roi sur le royaume des Chaldeens,"
+        },
+        {
+          "verse": 2,
+          "text": "la premiere annee de son regne, moi, Daniel, je compris par les livres que le nombre des annees touchant lequel la parole de l'Eternel vint à Jeremie le prophete, pour l'accomplissement des desolations de Jerusalem, etait de soixante-dix annees."
+        },
+        {
+          "verse": 3,
+          "text": "Et je tournai ma face vers le Seigneur Dieu, pour le rechercher par la priere et la supplication, dans le jeune, et le sac de la cendre."
+        },
+        {
+          "verse": 4,
+          "text": "Et je priai l'Eternel, mon Dieu, et je fis ma confession, et je dis: Je te supplie, Seigneur, le Dieu grand et terrible, qui gardes l'alliance et la bonte envers ceux qui t'aiment et qui gardent tes commandements!"
+        },
+        {
+          "verse": 5,
+          "text": "Nous avons peche, nous avons commis l'iniquite, nous avons agi mechamment, et nous nous sommes rebelles et nous nous sommes detournes de tes commandements et de tes ordonnances;"
+        },
+        {
+          "verse": 6,
+          "text": "et nous n'avons pas ecoute tes serviteurs les prophetes, qui parlaient en ton nom à nos rois, à nos princes, et à nos peres, et à tout le peuple du pays."
+        },
+        {
+          "verse": 7,
+          "text": "A toi, Seigneur, la justice, et à nous la confusion de face, comme elle est aujourd'hui, -aux hommes de Juda et aux habitants de Jerusalem et à tout Israel, à ceux qui sont pres et à ceux qui sont loin, dans tous les pays ou tu les as chasses, à cause de leurs infidelites par lesquelles ils ont ete infideles envers toi."
+        },
+        {
+          "verse": 8,
+          "text": "Seigneur, à nous la confusion de face, à nos rois, à nos princes, et à nos peres, parce que nous avons peche contre toi."
+        },
+        {
+          "verse": 9,
+          "text": "Au Seigneur notre Dieu sont les compassions et les pardons, car nous nous sommes rebelles contre lui,"
+        },
+        {
+          "verse": 10,
+          "text": "et nous n'avons pas ecoute la voix de l'Eternel, notre Dieu, pour marcher selon ses lois qu'il a mises devant nous par ses serviteurs les prophetes."
+        },
+        {
+          "verse": 11,
+          "text": "Et tout Israel a transgresse ta loi et s'est detourne en n'ecoutant pas ta voix. Alors ont ete verses sur nous l'execration et le serment qui sont ecrits dans la loi de Moise, serviteur de Dieu, parce que nous avons peche contre lui;"
+        },
+        {
+          "verse": 12,
+          "text": "et il a accompli ses paroles qu'il a prononcees contre nous et contre nos juges qui nous jugeaient, en faisant venir sur nous un mal si grand que rien ne s'est fait sous tous les cieux comme ce qui a ete fait à Jerusalem."
+        },
+        {
+          "verse": 13,
+          "text": "Selon qu'il est ecrit dans la loi de Moise, tout ce mal est venu sur nous; et nous n'avons pas implore l'Eternel, notre Dieu, afin de revenir de nos iniquites et de comprendre ta verite."
+        },
+        {
+          "verse": 14,
+          "text": "Et l'Eternel a veille sur le mal, et l'a fait venir sur nous; car l'Eternel, notre Dieu, est juste dans toutes les oeuvres qu'il a faites; et nous n'avons pas ecoute sa voix."
+        },
+        {
+          "verse": 15,
+          "text": "-Et maintenant, Seigneur, notre Dieu, toi qui as fait sortir ton peuple du pays d'Egypte à main forte, et qui t'es fait un nom, comme il parait aujourd'hui: nous avons peche, nous avons agi mechamment!"
+        },
+        {
+          "verse": 16,
+          "text": "Seigneur, selon toutes tes justices, que ta colere et ta fureur se detournent, je te prie, de ta ville de Jerusalem, ta sainte montagne. Car à cause des iniquites de nos peres, Jerusalem et ton peuple sont en opprobre à tous ceux qui nous entourent."
+        },
+        {
+          "verse": 17,
+          "text": "Et maintenant, ecoute, o notre Dieu, la priere de ton serviteur et ses supplications, et, pour l'amour du Seigneur, fais luire ta face sur ton sanctuaire desole."
+        },
+        {
+          "verse": 18,
+          "text": "Incline ton oreille, o mon Dieu, et ecoute; ouvre tes yeux, et vois nos desolations, et la ville qui est appelee de ton nom. Car ce n'est pas à cause de nos justices que nous presentons devant toi nos supplications, mais à cause de tes grandes compassions."
+        },
+        {
+          "verse": 19,
+          "text": "Seigneur, ecoute; Seigneur, pardonne; Seigneur, sois attentif et agis; ne tarde pas à cause de toi-meme, mon Dieu; car ta ville et ton peuple sont appeles de ton nom."
+        },
+        {
+          "verse": 20,
+          "text": "Et je parlais encore, et je priais et confessais mon peche et le peche de mon peuple Israel, et je presentais ma supplication devant l'Eternel, mon Dieu, pour la sainte montagne de mon Dieu, -je parlais encore en priant,"
+        },
+        {
+          "verse": 21,
+          "text": "et l'homme Gabriel que j'avais vu dans la vision au commencement, volant avec rapidite, me toucha vers le temps de l'offrande de gateau du soir."
+        },
+        {
+          "verse": 22,
+          "text": "Et il me fit comprendre, et me parla, et dit: Daniel, je suis maintenant sorti pour eclairer ton intelligence."
+        },
+        {
+          "verse": 23,
+          "text": "Au commencement de tes supplications la parole est sortie, et je suis venu pour te la declarer, car tu es un bien-aime. Comprends donc la parole, et sois intelligent dans la vision:"
+        },
+        {
+          "verse": 24,
+          "text": "soixante-dix semaines ont ete determinees sur ton peuple et sur ta sainte ville, pour clore la transgression, et pour en finir avec les peches, et pour faire propitiation pour l'iniquite, et pour introduire la justice des siecles, et pour sceller la vision et le prophete, et pour oindre le saint des saints."
+        },
+        {
+          "verse": 25,
+          "text": "Et sache, et comprends: Depuis la sortie de la parole pour retablir et rebatir Jerusalem, jusqu'au Messie, le prince, il y a sept semaines et soixante-deux semaines; la place et le fosse seront rebatis, et cela en des temps de trouble."
+        },
+        {
+          "verse": 26,
+          "text": "Et apres les soixante-deux semaines, le Messie sera retranche et n'aura rien; et le peuple du prince qui viendra detruira la ville et le lieu saint, et la fin en sera avec debordement; et jusqu'à la fin il y aura guerre, un decret de desolations."
+        },
+        {
+          "verse": 27,
+          "text": "Et il confirmera une alliance avec la multitude pour une semaine; et au milieu de la semaine il fera cesser le sacrifice et l'offrande; et à cause de la protection des abominations il y aura un desolateur, et jusqu'à ce que la consomption et ce qui est decrete soient verses sur la desolee."
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "La troisieme annee de Cyrus, roi de Perse, une chose fut revelee à Daniel qui est appele du nom de Belteshatsar; et la chose est vraie, mais le temps d'epreuve determine est long. Et il comprit la chose et eut l'intelligence de la vision."
+        },
+        {
+          "verse": 2,
+          "text": "En ces jours-là, moi Daniel, je menai deuil trois semaines entieres;"
+        },
+        {
+          "verse": 3,
+          "text": "je ne mangeai pas de pain agreable, et la chair et le vin n'entrerent pas dans ma bouche; et je ne m'oignis point, jusqu'à ce que trois semaines entieres fussent accomplies."
+        },
+        {
+          "verse": 4,
+          "text": "Et le vingt-quatrieme jour du premier mois, j'etais au bord du grand fleuve qui est le Hiddekel; et je levai les yeux, et je vis;"
+        },
+        {
+          "verse": 5,
+          "text": "et voici un homme vetu de lin, et ses reins etaient ceints d'or d'Uphaz;"
+        },
+        {
+          "verse": 6,
+          "text": "et son corps etait comme un chrysolithe, et son visage comme l'aspect de l'eclair, et ses yeux comme des flammes de feu, et ses bras et ses pieds comme l'apparence de l'airain poli, et la voix de ses paroles comme la voix d'une multitude."
+        },
+        {
+          "verse": 7,
+          "text": "Et moi, Daniel, je vis seul la vision, et les hommes qui etaient avec moi ne virent pas la vision, mais un grand tremblement tomba sur eux, et ils coururent pour se cacher."
+        },
+        {
+          "verse": 8,
+          "text": "Et moi je fus laisse seul, et je vis cette grande vision; et il ne resta aucune force en moi, et mon teint frais fut change en corruption, et je ne conservai aucune force."
+        },
+        {
+          "verse": 9,
+          "text": "Et j'entendis la voix de ses paroles; et, comme j'entendais la voix de ses paroles, je tombai dans une profonde stupeur sur ma face, et ma face contre terre."
+        },
+        {
+          "verse": 10,
+          "text": "Et voici, une main me toucha et me secoua, et me mit sur mes genoux et sur les paumes de mes mains."
+        },
+        {
+          "verse": 11,
+          "text": "Et il me dit: Daniel, homme bien-aime, comprends les paroles que je te dis, et tiens-toi debout à la place ou tu es; car je suis maintenant envoye vers toi. Et comme il parlait avec moi, disant cette parole, je me tins debout, tremblant."
+        },
+        {
+          "verse": 12,
+          "text": "Et il me dit: Ne crains pas, Daniel, car des le premier jour ou tu as applique ton coeur à comprendre et à t'humilier devant ton Dieu, tes paroles ont ete entendues, et moi, je suis venu à cause de tes paroles;"
+        },
+        {
+          "verse": 13,
+          "text": "mais le chef du royaume de Perse m'a resiste vingt et un jours, et voici, Micael, un des premiers chefs, vint à mon secours: et je restai là, aupres des rois de Perse."
+        },
+        {
+          "verse": 14,
+          "text": "Et je suis venu pour te faire comprendre ce qui arrivera à ton peuple à la fin des jours; car la vision est encore pour beaucoup de jours."
+        },
+        {
+          "verse": 15,
+          "text": "Et comme il parlait avec moi selon ces paroles, je tournai ma face vers la terre, et je devins muet."
+        },
+        {
+          "verse": 16,
+          "text": "Et voici, comme la ressemblance des fils des hommes toucha mes levres. Et j'ouvris ma bouche et je parlai, et je dis à celui qui se tenait devant moi: Mon seigneur, par la vision les douleurs m'ont saisi, et je n'ai conserve aucune force."
+        },
+        {
+          "verse": 17,
+          "text": "Et comment le serviteur de mon seigneur, que voici, parlerait-il avec mon seigneur, que voici? Car pour moi, des maintenant, aucune force ne subsiste en moi, et il ne reste plus en moi de souffle."
+        },
+        {
+          "verse": 18,
+          "text": "Et comme l'aspect d'un homme me toucha de nouveau, et me fortifia,"
+        },
+        {
+          "verse": 19,
+          "text": "et il dit: Ne crains pas, homme bien-aime; paix te soit! sois fort, oui, sois fort! Et comme il parlait avec moi, je pris des forces, et je dis: Que mon seigneur parle, car tu m'as fortifie."
+        },
+        {
+          "verse": 20,
+          "text": "Et il dit: Sais-tu pourquoi je suis venu vers toi? Et maintenant, je m'en retournerai pour combattre contre le chef de la Perse; et quand je sortirai, voici, le chef de Javan viendra."
+        },
+        {
+          "verse": 21,
+          "text": "Cependant je te declarerai ce qui est consigne dans l'ecrit de verite; et pas un seul ne tient ferme avec moi contre ceux-là, sinon Micael, votre chef."
+        }
+      ]
+    },
+    {
+      "chapter": 11,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et moi, dans la premiere annee de Darius, le Mede, je me tins là pour l'aider et le fortifier."
+        },
+        {
+          "verse": 2,
+          "text": "Et maintenant, je te declarerai la verite: Voici, il s'elevera encore trois rois en Perse; et le quatrieme deviendra riche de grandes richesses plus que tous, et quand il sera devenu fort par ses richesses, il excitera tout contre le royaume de Javan."
+        },
+        {
+          "verse": 3,
+          "text": "Et un roi vaillant se levera et exercera une grande domination, et il agira selon son bon plaisir."
+        },
+        {
+          "verse": 4,
+          "text": "Et quand il se sera leve, son royaume sera brise et sera divise vers les quatre vents des cieux, et ne passera pas à sa posterite, et ne sera pas selon la domination qu'il exerçait; car son royaume sera arrache, et sera à d'autres, outre ceux-là."
+        },
+        {
+          "verse": 5,
+          "text": "Et le roi du midi sera fort, et un de ses chefs; mais un autre sera plus fort que lui, et dominera; sa domination sera une grande domination."
+        },
+        {
+          "verse": 6,
+          "text": "Et au bout de plusieurs annees, ils s'uniront ensemble; et la fille du roi du midi viendra vers le roi du nord pour faire un arrangement droit; mais elle ne conservera pas la force de son bras; et il ne subsistera pas, ni son bras; et elle sera livree, elle, et ceux qui l'ont amenee, et celui qui l'a engendree, et celui qui lui aidait dans ces temps-là."
+        },
+        {
+          "verse": 7,
+          "text": "Mais d'un rejeton de ses racines se levera à sa place un homme, et il viendra à l'armee, et il entrera dans la forteresse du roi du nord; et il agira contre eux et se montrera puissant;"
+        },
+        {
+          "verse": 8,
+          "text": "et meme il emmenera captifs, en Egypte, leurs dieux et leurs princes, avec leurs objets precieux, l'argent et l'or; et il subsistera plus d'annees que le roi du nord."
+        },
+        {
+          "verse": 9,
+          "text": "Et celui-ci viendra dans le royaume du roi du midi et il retournera dans son pays."
+        },
+        {
+          "verse": 10,
+          "text": "Mais ses fils s'irriteront et rassembleront une multitude de forces nombreuses; et l'un d'eux viendra et inondera et passera outre; et il reviendra et poussera le combat jusqu'à sa forteresse."
+        },
+        {
+          "verse": 11,
+          "text": "Et le roi du midi s'exasperera, et sortira, et fera la guerre contre lui, contre le roi du nord; et celui-ci mettra sur pied une grande multitude, mais la multitude sera livree en sa main."
+        },
+        {
+          "verse": 12,
+          "text": "Et quand la multitude sera otee, son coeur s'exaltera, et il fera tomber des myriades; mais il ne prevaudra pas."
+        },
+        {
+          "verse": 13,
+          "text": "Et le roi du nord reviendra et mettra sur pied une multitude plus grande que la premiere; et au bout d'une periode d'annees, il s'avancera avec une armee nombreuse et de grandes richesses."
+        },
+        {
+          "verse": 14,
+          "text": "Et, dans ces temps-là, plusieurs se leveront contre le roi du midi, et les violents de ton peuple s'eleveront pour accomplir la vision; mais ils tomberont."
+        },
+        {
+          "verse": 15,
+          "text": "Et le roi du nord viendra, et il elevera une terrasse, et s'emparera de la ville forte; et les forces du midi ne tiendront pas, ni l'elite de son peuple; et il n'y aura pas de force en lui pour se maintenir."
+        },
+        {
+          "verse": 16,
+          "text": "Mais celui qui vient contre lui agira selon son gre, et il n'y aura personne qui lui resiste; et il se tiendra dans le pays de beaute, ayant la destruction dans sa main;"
+        },
+        {
+          "verse": 17,
+          "text": "et il dirigera sa face pour venir avec les forces de tout son royaume, et des hommes droits avec lui, et il agira; et il lui donnera la fille des femmes pour la pervertir; mais elle ne tiendra pas, et elle ne sera pas pour lui."
+        },
+        {
+          "verse": 18,
+          "text": "Et il tournera sa face vers les iles, et il en prendra beaucoup. Mais un chef mettra fin, pour lui, à son opprobre, et le fera retomber sur lui-meme, sans opprobre pour lui;"
+        },
+        {
+          "verse": 19,
+          "text": "et il tournera sa face vers les forteresses de son propre pays; et il bronchera et tombera, et ne sera pas trouve."
+        },
+        {
+          "verse": 20,
+          "text": "Puis il s'en elevera un à sa place qui fera passer l'exacteur par la gloire du royaume; mais en quelques jours il sera brise, non par colere, ni par guerre."
+        },
+        {
+          "verse": 21,
+          "text": "Et un homme meprise s'elevera à sa place, auquel on ne donnera pas l'honneur du royaume; mais il entrera paisiblement, et prendra possession du royaume par des flatteries;"
+        },
+        {
+          "verse": 22,
+          "text": "et les forces qui debordent seront debordees devant lui et seront brisees, et meme le prince de l'alliance."
+        },
+        {
+          "verse": 23,
+          "text": "Et des qu'il sera associe à lui, il agira avec fraude, et il montera, et sera fort avec peu de gens."
+        },
+        {
+          "verse": 24,
+          "text": "En pleine paix il entrera dans les lieux les plus riches de la province, et il fera ce que ses peres et les peres de ses peres n'ont pas fait; il leur distribuera du butin, et des depouilles, et des richesses, et il tramera ses desseins contre les places fortes, et cela pour un temps."
+        },
+        {
+          "verse": 25,
+          "text": "Et il reveillera sa puissance et son coeur contre le roi du midi, avec une grande armee. Et le roi du midi s'engagera dans la guerre avec une grande et tres-puissante armee. Mais il ne tiendra pas, car ils trameront leurs desseins contre lui;"
+        },
+        {
+          "verse": 26,
+          "text": "et ceux qui mangeaient ses mets delicats le briseront; et son armee se dissoudra, et beaucoup de gens tomberont tues."
+        },
+        {
+          "verse": 27,
+          "text": "Et ces deux rois auront à coeur de faire du mal, et diront des mensonges à une meme table; mais cela ne reussira pas, car la fin sera encore pour le temps determine."
+        },
+        {
+          "verse": 28,
+          "text": "Et il retournera dans son pays avec de grandes richesses, et son coeur sera contre la sainte alliance, et il agira, et retournera dans son pays."
+        },
+        {
+          "verse": 29,
+          "text": "Au temps determine il retournera et viendra dans le midi; mais il n'en sera pas la derniere fois comme la premiere;"
+        },
+        {
+          "verse": 30,
+          "text": "car les navires de Kittim viendront contre lui; et il sera decourage, et retournera et sera courrouce contre la sainte alliance, et il agira; et il retournera et portera son attention sur ceux qui abandonnent la sainte alliance."
+        },
+        {
+          "verse": 31,
+          "text": "Et des forces se tiendront là de sa part, et elles profaneront le sanctuaire de la forteresse, et oteront le sacrifice continuel, et elles placeront l'abomination qui cause la desolation."
+        },
+        {
+          "verse": 32,
+          "text": "Et, par de douces paroles, il entrainera à l'impiete ceux qui agissent mechamment à l'egard de l'alliance; mais le peuple qui connait son Dieu sera fort et agira."
+        },
+        {
+          "verse": 33,
+          "text": "Et les sages du peuple enseigneront la multitude; et ils tomberont par l'epee et par la flamme, par la captivite et par le pillage, plusieurs jours."
+        },
+        {
+          "verse": 34,
+          "text": "Et quand ils tomberont, ils seront secourus avec un peu de secours, et plusieurs se joindront à eux par des flatteries."
+        },
+        {
+          "verse": 35,
+          "text": "Et d'entre les sages il en tombera pour les eprouver ainsi, et pour les purifier, et pour les blanchir, jusqu'au temps de la fin; car ce sera encore pour le temps determine."
+        },
+        {
+          "verse": 36,
+          "text": "Et le roi agira selon son bon plaisir, et s'exaltera, et s'elevera contre tout *dieu, et proferera des choses impies contre le *Dieu des *dieux; et il prosperera jusqu'à ce que l'indignation soit accomplie; car ce qui est determine sera fait."
+        },
+        {
+          "verse": 37,
+          "text": "Et il n'aura point egard au Dieu de ses peres, et il n'aura point egard à l'objet du desir des femmes, ni à aucun dieu; car il s'agrandira au-dessus de tout;"
+        },
+        {
+          "verse": 38,
+          "text": "et, à sa place, il honorera le dieu des forteresses: avec de l'or, et avec de l'argent, et avec des pierres precieuses, et avec des choses desirables, il honorera un dieu que n'ont pas connu ses peres;"
+        },
+        {
+          "verse": 39,
+          "text": "et il agira dans les lieux forts des forteresses, avec un dieu etranger: à qui le reconnaitra il multipliera la gloire; et il les fera dominer sur la multitude et leur partagera le pays en recompense."
+        },
+        {
+          "verse": 40,
+          "text": "Et, au temps de la fin, le roi du midi heurtera contre lui, et le roi du nord fondra sur lui comme une tempete, avec des chars et des cavaliers, et avec beaucoup de navires, et entrera dans les pays et inondera et passera outre;"
+        },
+        {
+          "verse": 41,
+          "text": "et il viendra dans le pays de beaute, et plusieurs pays tomberont; mais ceux-ci echapperont de sa main: Edom, et Moab, et les principaux des fils d'Ammon."
+        },
+        {
+          "verse": 42,
+          "text": "Et il etendra sa main sur les pays, et le pays d'Egypte n'echappera pas."
+        },
+        {
+          "verse": 43,
+          "text": "Et il aura sous sa puissance les tresors d'or et d'argent, et toutes les choses desirables de l'Egypte; et les Libyens et les Ethiopiens suivront ses pas."
+        },
+        {
+          "verse": 44,
+          "text": "Mais des nouvelles de l'orient et du nord l'effrayeront, et il sortira en grande fureur pour exterminer et detruire entierement beaucoup de gens."
+        },
+        {
+          "verse": 45,
+          "text": "Et il plantera les tentes de son palais entre la mer et la montagne de sainte beaute; et il viendra à sa fin, et il n'y aura personne pour le secourir."
+        }
+      ]
+    },
+    {
+      "chapter": 12,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et en ce temps-là se levera Micael, le grand chef, qui tient pour les fils de ton peuple; et ce sera un temps de detresse tel, qu'il n'y en a pas eu depuis qu'il existe une nation jusqu'à ce temps-là. Et en ce temps-là ton peuple sera delivre: quiconque sera trouve ecrit dans le livre."
+        },
+        {
+          "verse": 2,
+          "text": "Et plusieurs qui dorment dans la poussiere de la terre se reveilleront, les uns pour la vie eternelle, et les autres pour l'opprobre, pour etre un objet d'horreur eternelle."
+        },
+        {
+          "verse": 3,
+          "text": "Et les sages brilleront comme la splendeur de l'etendue, et ceux qui ont enseigne la justice à la multitude, comme les etoiles, à toujours et à perpetuite."
+        },
+        {
+          "verse": 4,
+          "text": "Et toi, Daniel, cache les paroles et scelle le livre jusqu'au temps de la fin. Plusieurs courront çà et là; et la connaissance sera augmentee."
+        },
+        {
+          "verse": 5,
+          "text": "Et moi, Daniel, je regardai; et voici deux autres personnages qui se tenaient, l'un deçà, sur le bord du fleuve, et l'autre delà, sur le bord du fleuve."
+        },
+        {
+          "verse": 6,
+          "text": "Et il dit à l'homme vetu de lin qui etait au-dessus des eaux du fleuve: Jusques à quand la fin de ces merveilles?"
+        },
+        {
+          "verse": 7,
+          "text": "Et j'entendis l'homme vetu de lin qui etait au-dessus des eaux du fleuve; et il leva sa main droite et sa main gauche vers les cieux, et jura par celui qui vit eternellement que ce serait pour un temps determine, et des temps determines, et une moitie de temps; et lorsqu'il aura acheve de briser la force du peuple saint, toutes ces choses seront achevees."
+        },
+        {
+          "verse": 8,
+          "text": "Et moi, j'entendis, mais je ne compris pas. Et je dis: Mon seigneur, quelle sera l'issue de ces choses?"
+        },
+        {
+          "verse": 9,
+          "text": "Et il dit: Va, Daniel; car ces paroles sont cachees et scellees jusqu'au temps de la fin."
+        },
+        {
+          "verse": 10,
+          "text": "Plusieurs seront purifies et blanchis et affines; et les mechants agiront mechamment, et aucun des mechants ne comprendra; mais les sages comprendront."
+        },
+        {
+          "verse": 11,
+          "text": "Et depuis le temps ou le sacrifice continuel sera ote et ou l'abomination qui desole sera placee, il y aura mille deux cent quatre-vingt-dix jours."
+        },
+        {
+          "verse": 12,
+          "text": "Bienheureux celui qui attend et qui parvient à mille trois cent trente-cinq jours!"
+        },
+        {
+          "verse": 13,
+          "text": "Et toi, va jusqu'à la fin; et tu te reposeras, et tu te tiendras dans ton lot, à la fin des jours."
+        }
+      ]
+    }
+  ]
+}

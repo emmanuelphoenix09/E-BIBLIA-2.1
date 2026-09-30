@@ -1,0 +1,3578 @@
+{
+  "book": 3,
+  "book_name": "Lévitique",
+  "abbr": "Lev",
+  "chapters": [
+    {
+      "chapter": 1,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "l'Eternel appela Moise, et lui parla, de la tente d'assignation, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Parle aux fils d'Israel, et dis-leur: Quand un homme d'entre vous presentera une offrande à l'Eternel, vous presenterez votre offrande de betail, du gros ou du menu betail."
+        },
+        {
+          "verse": 3,
+          "text": "Si son offrande est un holocauste de gros betail, il la presentera, -un male sans defaut; il la presentera à l'entree de la tente d'assignation, pour etre agree devant l'Eternel."
+        },
+        {
+          "verse": 4,
+          "text": "Et il posera sa main sur la tete de l'holocauste, et il sera agree pour lui, pour faire propitiation pour lui."
+        },
+        {
+          "verse": 5,
+          "text": "Et il egorgera le jeune taureau devant l'Eternel; et les fils d'Aaron, les sacrificateurs, presenteront le sang, et ils feront aspersion du sang tout autour sur l'autel qui est à l'entree de la tente d'assignation;"
+        },
+        {
+          "verse": 6,
+          "text": "et il ecorchera l'holocauste et le coupera en morceaux."
+        },
+        {
+          "verse": 7,
+          "text": "Et les fils d'Aaron, le sacrificateur, mettront du feu sur l'autel, et arrangeront du bois sur le feu;"
+        },
+        {
+          "verse": 8,
+          "text": "et les fils d'Aaron, les sacrificateurs, arrangeront les morceaux, la tete et la graisse, sur le bois qui est sur le feu qui est sur l'autel."
+        },
+        {
+          "verse": 9,
+          "text": "Et il lavera avec de l'eau l'interieur et les jambes, et le sacrificateur fera fumer le tout sur l'autel; c'est un holocauste, un sacrifice par feu, une odeur agreable à l'Eternel."
+        },
+        {
+          "verse": 10,
+          "text": "Et si son offrande pour l'holocauste est de menu betail, d'entre les moutons ou d'entre les chevres, il la presentera, -un male sans defaut;"
+        },
+        {
+          "verse": 11,
+          "text": "et il l'egorgera à cote de l'autel, vers le nord, devant l'Eternel; et les fils d'Aaron, les sacrificateurs, feront aspersion du sang sur l'autel, tout autour;"
+        },
+        {
+          "verse": 12,
+          "text": "et il le coupera en morceaux, avec sa tete et sa graisse, et le sacrificateur les arrangera sur le bois qui est sur le feu qui est sur l'autel;"
+        },
+        {
+          "verse": 13,
+          "text": "et il lavera avec de l'eau l'interieur et les jambes; et le sacrificateur presentera le tout et le fera fumer sur l'autel: c'est un holocauste, un sacrifice par feu, une odeur agreable à l'Eternel."
+        },
+        {
+          "verse": 14,
+          "text": "Et si son offrande à l'Eternel est un holocauste d'oiseaux, il presentera son offrande de tourterelles ou de jeunes pigeons."
+        },
+        {
+          "verse": 15,
+          "text": "Et le sacrificateur l'apportera à l'autel, et lui detachera la tete avec l'ongle, et la fera fumer sur l'autel; et il en epreindra le sang contre la paroi de l'autel;"
+        },
+        {
+          "verse": 16,
+          "text": "et il otera son gesier avec son ordure, et les jettera à cote de l'autel, vers l'orient, au lieu ou sont les cendres;"
+        },
+        {
+          "verse": 17,
+          "text": "et il fendra l'oiseau entre les ailes, il ne le divisera pas; et le sacrificateur le fera fumer sur l'autel, sur le bois qui est sur le feu: c'est un holocauste, un sacrifice par feu, une odeur agreable à l'Eternel."
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et quand quelqu'un presentera en offrande une offrande de gateau à l'Eternel, son offrande sera de fleur de farine, et il versera de l'huile sur elle, et mettra de l'encens dessus;"
+        },
+        {
+          "verse": 2,
+          "text": "et il l'apportera aux fils d'Aaron, les sacrificateurs; et le sacrificateur prendra une pleine poignee de la fleur de farine et de l'huile, avec tout l'encens, et il en fera fumer le memorial sur l'autel: c'est un sacrifice par feu, une odeur agreable à l'Eternel;"
+        },
+        {
+          "verse": 3,
+          "text": "et le reste de l'offrande de gateau sera pour Aaron et pour ses fils: c'est une chose tres-sainte entre les sacrifices de l'Eternel faits par feu."
+        },
+        {
+          "verse": 4,
+          "text": "Et quand tu presenteras en offrande une offrande de gateau cuit au four, ce sera de la fleur de farine, des gateaux sans levain, petris à l'huile, et des galettes sans levain ointes d'huile."
+        },
+        {
+          "verse": 5,
+          "text": "Et si ton offrande est une offrande de gateau cuit sur la plaque, elle sera de fleur de farine petrie à l'huile, sans levain."
+        },
+        {
+          "verse": 6,
+          "text": "Tu la briseras en morceaux, et tu verseras de l'huile dessus: c'est une offrande de gateau."
+        },
+        {
+          "verse": 7,
+          "text": "Et si ton offrande est une offrande de gateau cuit dans la poele, elle sera faite de fleur de farine, avec de l'huile."
+        },
+        {
+          "verse": 8,
+          "text": "Et tu apporteras à l'Eternel l'offrande de gateau qui est faite de ces choses, et on la presentera au sacrificateur, et il l'apportera à l'autel."
+        },
+        {
+          "verse": 9,
+          "text": "Et le sacrificateur levera de l'offrande de gateau son memorial, et le fera fumer sur l'autel: c'est un sacrifice par feu, une odeur agreable à l'Eternel."
+        },
+        {
+          "verse": 10,
+          "text": "Et le reste de l'offrande de gateau sera pour Aaron et pour ses fils: c'est une chose tres-sainte entre les sacrifices de l'Eternel faits par feu."
+        },
+        {
+          "verse": 11,
+          "text": "Aucune offrande de gateau que vous presenterez à l'Eternel ne sera faite avec du levain; car du levain et du miel, vous n'en ferez point fumer comme sacrifice par feu à l'Eternel."
+        },
+        {
+          "verse": 12,
+          "text": "Pour l'offrande des premices, vous les presenterez à l'Eternel; mais ils ne seront point brules sur l'autel en odeur agreable."
+        },
+        {
+          "verse": 13,
+          "text": "Et toute offrande de ton offrande de gateau, tu la saleras de sel, et tu ne laisseras point manquer sur ton offrande de gateau le sel de l'alliance de ton Dieu; sur toutes tes offrandes tu presenteras du sel."
+        },
+        {
+          "verse": 14,
+          "text": "Et si tu presentes à l'Eternel une offrande de gateau des premiers fruits, tu presenteras, pour l'offrande de gateau de tes premiers fruits, des epis nouveaux rotis au feu, les grains broyes d'epis grenus;"
+        },
+        {
+          "verse": 15,
+          "text": "et tu mettras de l'huile dessus, et tu placeras de l'encens dessus: c'est une offrande de gateau."
+        },
+        {
+          "verse": 16,
+          "text": "Et le sacrificateur en fera fumer le memorial, une portion de ses grains broyes et de son huile, avec tout son encens: c'est un sacrifice par feu à l'Eternel."
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et si son offrande est un sacrifice de prosperites, si c'est du gros betail qu'il presente, soit male, soit femelle, il le presentera sans defaut devant l'Eternel;"
+        },
+        {
+          "verse": 2,
+          "text": "et il posera sa main sur la tete de son offrande, et il l'egorgera à l'entree de la tente d'assignation; et les fils d'Aaron, les sacrificateurs, feront aspersion du sang sur l'autel, tout autour."
+        },
+        {
+          "verse": 3,
+          "text": "Et il presentera, du sacrifice de prosperites, un sacrifice fait par feu à l'Eternel: la graisse qui couvre l'interieur, et toute la graisse qui est sur l'interieur,"
+        },
+        {
+          "verse": 4,
+          "text": "et les deux rognons, et la graisse qui est dessus, qui est sur les reins, et le reseau qui est sur le foie, qu'on otera jusque sur les rognons;"
+        },
+        {
+          "verse": 5,
+          "text": "et les fils d'Aaron feront fumer cela sur l'autel, sur l'holocauste qui est sur le bois qui est sur le feu: c'est un sacrifice par feu, une odeur agreable à l'Eternel."
+        },
+        {
+          "verse": 6,
+          "text": "Et si son offrande pour le sacrifice de prosperites à l'Eternel est de menu betail, male ou femelle, il le presentera sans defaut."
+        },
+        {
+          "verse": 7,
+          "text": "Si c'est un agneau qu'il presente pour son offrande, il le presentera devant l'Eternel;"
+        },
+        {
+          "verse": 8,
+          "text": "et il posera sa main sur la tete de son offrande, et il l'egorgera devant la tente d'assignation; et les fils d'Aaron feront aspersion du sang sur l'autel, tout autour."
+        },
+        {
+          "verse": 9,
+          "text": "Et il presentera, du sacrifice de prosperites, un sacrifice fait par feu à l'Eternel: sa graisse, la queue qu'on otera entiere jusque contre l'echine, et la graisse qui couvre l'interieur, et toute la graisse qui est sur l'interieur,"
+        },
+        {
+          "verse": 10,
+          "text": "et les deux rognons, et la graisse qui est dessus, qui est sur les reins, et le reseau qui est sur le foie, qu'on otera jusque sur les rognons;"
+        },
+        {
+          "verse": 11,
+          "text": "et le sacrificateur fera fumer cela sur l'autel: c'est un pain de sacrifice par feu à l'Eternel."
+        },
+        {
+          "verse": 12,
+          "text": "Et si son offrande est une chevre, il la presentera devant l'Eternel;"
+        },
+        {
+          "verse": 13,
+          "text": "et il posera sa main sur sa tete, et il l'egorgera devant la tente d'assignation; et les fils d'Aaron feront aspersion du sang sur l'autel, tout autour;"
+        },
+        {
+          "verse": 14,
+          "text": "et il en presentera son offrande, un sacrifice par feu à l'Eternel: la graisse qui couvre l'interieur, et toute la graisse qui est sur l'interieur,"
+        },
+        {
+          "verse": 15,
+          "text": "et les deux rognons, et la graisse qui est dessus, qui est sur les reins, et le reseau qui est sur le foie, qu'on otera jusque sur les rognons;"
+        },
+        {
+          "verse": 16,
+          "text": "et le sacrificateur les fera fumer sur l'autel: c'est un pain de sacrifice par feu, en odeur agreable. Toute graisse appartient à l'Eternel."
+        },
+        {
+          "verse": 17,
+          "text": "C'est un statut perpetuel, en vos generations, dans toutes vos habitations: vous ne mangerez aucune graisse ni aucun sang."
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Parle aux fils d'Israel, en disant: Si quelqu'un a peche par erreur contre quelqu'un des commandements de l'Eternel dans les choses qui ne doivent pas se faire, et a commis quelqu'une de ces choses:"
+        },
+        {
+          "verse": 3,
+          "text": "si c'est le sacrificateur oint qui a peche selon quelque faute du peuple, alors il presentera à l'Eternel, pour son peche qu'il aura commis, un jeune taureau sans defaut, en sacrifice pour le peche."
+        },
+        {
+          "verse": 4,
+          "text": "Et il amenera le taureau à l'entree de la tente d'assignation, devant l'Eternel; et il posera sa main sur la tete du taureau, et egorgera le taureau devant l'Eternel;"
+        },
+        {
+          "verse": 5,
+          "text": "et le sacrificateur oint prendra du sang du taureau, et il l'apportera dans la tente d'assignation;"
+        },
+        {
+          "verse": 6,
+          "text": "et le sacrificateur trempera son doigt dans le sang, et fera aspersion du sang sept fois, devant l'Eternel, par devant le voile du lieu saint;"
+        },
+        {
+          "verse": 7,
+          "text": "et le sacrificateur mettra du sang sur les cornes de l'autel de l'encens des drogues odoriferantes qui est dans la tente d'assignation, devant l'Eternel; et il versera tout le sang du taureau au pied de l'autel de l'holocauste qui est à l'entree de la tente d'assignation."
+        },
+        {
+          "verse": 8,
+          "text": "Et toute la graisse du taureau du sacrifice pour le peche, il la levera: la graisse qui couvre l'interieur, et toute la graisse qui est sur l'interieur,"
+        },
+        {
+          "verse": 9,
+          "text": "et les deux rognons, et la graisse qui est dessus, qui est sur les reins, et le reseau qui est sur le foie, qu'on otera jusque sur les rognons,"
+        },
+        {
+          "verse": 10,
+          "text": "comme on les leve du boeuf du sacrifice de prosperites: et le sacrificateur les fera fumer sur l'autel de l'holocauste."
+        },
+        {
+          "verse": 11,
+          "text": "Et la peau du taureau et toute sa chair, avec sa tete, et ses jambes, et son interieur, et sa fiente,"
+        },
+        {
+          "verse": 12,
+          "text": "tout le taureau, il l'emportera hors du camp, dans un lieu net, là ou l'on verse les cendres, et il le brulera sur du bois, au feu; il sera brule au lieu ou l'on verse les cendres."
+        },
+        {
+          "verse": 13,
+          "text": "Et si toute l'assemblee d'Israel a peche par erreur et que la chose soit restee cachee aux yeux de la congregation, et qu'ils aient fait, à l'egard de l'un de tous les commandements de l'Eternel, ce qui ne doit pas se faire, et se soient rendus coupables,"
+        },
+        {
+          "verse": 14,
+          "text": "et que le peche qu'ils ont commis contre le commandement vienne à etre connu, alors la congregation presentera un jeune taureau en sacrifice pour le peche, et on l'amenera devant le tente d'assignation;"
+        },
+        {
+          "verse": 15,
+          "text": "et les anciens de l'assemblee poseront leurs mains sur la tete du taureau, devant l'Eternel; et on egorgera le taureau devant l'Eternel."
+        },
+        {
+          "verse": 16,
+          "text": "Et le sacrificateur oint apportera du sang du taureau dans la tente d'assignation;"
+        },
+        {
+          "verse": 17,
+          "text": "et le sacrificateur trempera son doigt dans ce sang, et en fera aspersion, sept fois, devant l'Eternel, par devant le voile;"
+        },
+        {
+          "verse": 18,
+          "text": "et il mettra du sang sur les cornes de l'autel qui est devant l'Eternel, dans la tente d'assignation; et il versera tout le sang au pied de l'autel de l'holocauste qui est à l'entree de la tente d'assignation."
+        },
+        {
+          "verse": 19,
+          "text": "Et il levera toute la graisse, et la fera fumer sur l'autel:"
+        },
+        {
+          "verse": 20,
+          "text": "il fera du taureau comme il a fait du taureau pour le peche; il fera ainsi de lui. Et le sacrificateur fera propitiation pour eux, et il leur sera pardonne."
+        },
+        {
+          "verse": 21,
+          "text": "Et on emportera le taureau hors du camp, et on le brulera comme on a brule le premier taureau: c'est un sacrifice pour le peche pour la congregation."
+        },
+        {
+          "verse": 22,
+          "text": "Si un chef a peche, et a fait par erreur, à l'egard de l'un de tous les commandements de l'Eternel, son Dieu, ce qui ne doit pas se faire, et s'est rendu coupable,"
+        },
+        {
+          "verse": 23,
+          "text": "si on lui a fait connaitre son peche qu'il a commis, alors il amenera pour son offrande un bouc, un male sans defaut;"
+        },
+        {
+          "verse": 24,
+          "text": "et il posera sa main sur la tete du bouc, et il l'egorgera au lieu ou l'on egorge l'holocauste devant l'Eternel: c'est un sacrifice pour le peche."
+        },
+        {
+          "verse": 25,
+          "text": "Et le sacrificateur prendra avec son doigt du sang du sacrifice pour le peche, et le mettra sur les cornes de l'autel de l'holocauste, et il versera le sang au pied de l'autel de l'holocauste;"
+        },
+        {
+          "verse": 26,
+          "text": "et il fera fumer toute la graisse sur l'autel, comme la graisse du sacrifice de prosperites; et le sacrificateur fera propitiation pour lui pour le purifier de son peche, et il lui sera pardonne."
+        },
+        {
+          "verse": 27,
+          "text": "Et si quelqu'un du peuple du pays a peche par erreur, en faisant, à l'egard de l'un des commandements de l'Eternel, ce qui ne doit pas se faire, et s'est rendu coupable,"
+        },
+        {
+          "verse": 28,
+          "text": "si on lui a fait connaitre son peche qu'il a commis, alors il amenera son offrande, une chevre, une femelle sans defaut, pour son peche qu'il a commis;"
+        },
+        {
+          "verse": 29,
+          "text": "et il posera sa main sur la tete du sacrifice pour le peche, et egorgera le sacrifice pour le peche au lieu ou l'on egorge l'holocauste."
+        },
+        {
+          "verse": 30,
+          "text": "Et le sacrificateur prendra du sang de la chevre avec son doigt, et le mettra sur les cornes de l'autel de l'holocauste, et il versera tout le sang au pied de l'autel."
+        },
+        {
+          "verse": 31,
+          "text": "Et il otera toute la graisse, comme la graisse a ete otee de dessus le sacrifice de prosperites; et le sacrificateur la fera fumer sur l'autel, en odeur agreable à l'Eternel; et le sacrificateur fera propitiation pour lui, et il lui sera pardonne."
+        },
+        {
+          "verse": 32,
+          "text": "Et s'il amene un agneau pour son offrande de sacrifice pour le peche, ce sera une femelle sans defaut qu'il amenera;"
+        },
+        {
+          "verse": 33,
+          "text": "et il posera sa main sur la tete du sacrifice pour le peche, et l'egorgera en sacrifice pour le peche au lieu ou l'on egorge l'holocauste."
+        },
+        {
+          "verse": 34,
+          "text": "Et le sacrificateur prendra, avec son doigt, du sang du sacrifice pour le peche et le mettra sur les cornes de l'autel de l'holocauste, et il versera tout le sang au pied de l'autel."
+        },
+        {
+          "verse": 35,
+          "text": "Et il otera toute la graisse, comme la graisse de l'agneau a ete otee du sacrifice de prosperites; et le sacrificateur la fera fumer sur l'autel, sur les sacrifices de l'Eternel faits par feu; et le sacrificateur fera propitiation pour lui pour son peche qu'il a commis; et il lui sera pardonne."
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et si quelqu'un a peche en ce que, etant temoin et ayant entendu la voix d'adjuration, ayant vu ou su, il ne declare pas la chose, alors il portera son iniquite;"
+        },
+        {
+          "verse": 2,
+          "text": "ou si quelqu'un a touche une chose impure quelconque, soit le corps mort d'une bete sauvage impure, ou le corps mort d'une bete domestique impure, ou le corps mort d'un reptile impur, et que cela lui soit reste cache, alors il est impur et coupable;"
+        },
+        {
+          "verse": 3,
+          "text": "-ou s'il a touche l'impurete de l'homme, quelle que soit son impurete par laquelle il se rend impur, et que cela lui soit reste cache, quand il le sait, alors il est coupable;"
+        },
+        {
+          "verse": 4,
+          "text": "-ou si quelqu'un, parlant legerement de ses levres, a jure de faire du mal ou du bien, selon tout ce que l'homme profere legerement en jurant, et que cela lui soit reste cache, quand il le sait, alors il est coupable en l'un de ces points-là."
+        },
+        {
+          "verse": 5,
+          "text": "Et il arrivera, s'il est coupable en l'un de ces points-là, qu'il confessera ce en quoi il aura peche;"
+        },
+        {
+          "verse": 6,
+          "text": "et il amenera à l'Eternel son sacrifice pour le delit, pour son peche qu'il a commis, une femelle du menu betail, soit brebis, soit chevre, en sacrifice pour le peche; et le sacrificateur fera propitiation pour lui pour le purifier de son peche."
+        },
+        {
+          "verse": 7,
+          "text": "Et si ses moyens ne peuvent atteindre à un agneau, il apportera à l'Eternel, pour son delit qu'il a commis, deux tourterelles ou deux jeunes pigeons, l'un pour le sacrifice pour le peche, et l'autre pour l'holocauste."
+        },
+        {
+          "verse": 8,
+          "text": "Et il les apportera au sacrificateur, et le sacrificateur presentera celui qui est pour le sacrifice pour le peche, premierement, et lui detachera la tete avec l'ongle pres du cou, mais il ne le divisera pas;"
+        },
+        {
+          "verse": 9,
+          "text": "et il fera aspersion du sang du sacrifice pour le peche sur la paroi de l'autel, et le reste du sang, il l'epreindra au pied de l'autel: c'est un sacrifice pour le peche."
+        },
+        {
+          "verse": 10,
+          "text": "Et du second, il en fera un holocauste selon l'ordonnance. Et le sacrificateur fera propitiation pour lui pour le purifier de son peche qu'il a commis, et il lui sera pardonne."
+        },
+        {
+          "verse": 11,
+          "text": "Et si ses moyens ne peuvent atteindre à deux tourterelles ou à deux jeunes pigeons, alors celui qui a peche apportera pour son offrande la dixieme partie d'un epha de fleur de farine en sacrifice pour le peche; il ne mettra pas d'huile dessus, et il ne mettra pas d'encens dessus; car c'est un sacrifice pour le peche."
+        },
+        {
+          "verse": 12,
+          "text": "Et il l'apportera au sacrificateur, et le sacrificateur en prendra une pleine poignee pour memorial, et la fera fumer sur l'autel sur les sacrifices faits par feu à l'Eternel: c'est un sacrifice pour le peche."
+        },
+        {
+          "verse": 13,
+          "text": "Et le sacrificateur fera propitiation pour lui, pour son peche qu'il a commis en l'une de ces choses-là, et il lui sera pardonne: et le reste sera pour le sacrificateur, comme l'offrande de gateau."
+        },
+        {
+          "verse": 14,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 15,
+          "text": "Si quelqu'un a commis une infidelite et a peche par erreur dans les choses saintes de l'Eternel, il amenera son sacrifice pour le delit à l'Eternel, un belier sans defaut, pris du menu betail, selon ton estimation en sicles d'argent, selon le sicle du sanctuaire, en sacrifice pour le delit."
+        },
+        {
+          "verse": 16,
+          "text": "Et ce en quoi il a peche en prenant de la chose sainte, il le restituera, et y ajoutera par-dessus un cinquieme, et le donnera au sacrificateur; et le sacrificateur fera propitiation pour lui avec le belier du sacrifice pour le delit; et il lui sera pardonne."
+        },
+        {
+          "verse": 17,
+          "text": "Et si quelqu'un a peche, et a fait, à l'egard de l'un de tous les commandements de l'Eternel, ce qui ne doit pas se faire, et ne l'a pas su, il sera coupable, et portera son iniquite."
+        },
+        {
+          "verse": 18,
+          "text": "Et il amenera au sacrificateur un belier sans defaut, pris du menu betail, selon ton estimation, en sacrifice pour le delit; et le sacrificateur fera propitiation pour lui, pour son erreur qu'il a commise sans le savoir; et il lui sera pardonne."
+        },
+        {
+          "verse": 19,
+          "text": "C'est un sacrifice pour le delit; certainement il s'est rendu coupable envers l'Eternel."
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Si quelqu'un a peche et a commis une infidelite envers l'Eternel, et a menti à son prochain pour une chose qu'on lui a confiee, ou qu'on a deposee entre ses mains, ou qu'il a volee, ou extorquee à son prochain;"
+        },
+        {
+          "verse": 3,
+          "text": "ou s'il a trouve une chose perdue, et qu'il mente à ce sujet, et qu'il jure en mentant à l'egard de l'une de toutes les choses qu'un homme fait de maniere à pecher en les faisant;"
+        },
+        {
+          "verse": 4,
+          "text": "alors, s'il a peche et qu'il soit coupable, il arrivera qu'il rendra l'objet qu'il a vole, ou la chose qu'il a extorquee, ou le depot qui lui a ete confie, ou la chose perdue qu'il a trouvee,"
+        },
+        {
+          "verse": 5,
+          "text": "ou tout ce à l'egard de quoi il a jure en mentant; et il restituera le principal, et ajoutera un cinquieme par-dessus; il le donnera à celui à qui cela appartient, le jour de son sacrifice pour le delit."
+        },
+        {
+          "verse": 6,
+          "text": "Et il amenera, pour l'Eternel, au sacrificateur, son sacrifice pour le delit, un belier sans defaut, pris du menu betail, selon ton estimation, en sacrifice pour le delit."
+        },
+        {
+          "verse": 7,
+          "text": "Et le sacrificateur fera propitiation pour lui devant l'Eternel; et il lui sera pardonne, quelle que soit la faute qu'il ait faite en laquelle il s'est rendu coupable."
+        },
+        {
+          "verse": 8,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 9,
+          "text": "Commande à Aaron et à ses fils, en disant: C'est ici la loi de l'holocauste. C'est l'holocauste: il sera sur le foyer sur l'autel toute la nuit jusqu'au matin; et le feu de l'autel brulera sur lui."
+        },
+        {
+          "verse": 10,
+          "text": "Et le sacrificateur revetira sa tunique de lin, et mettra sur sa chair ses caleçons de lin, et il levera la cendre de l'holocauste que le feu a consume sur l'autel, et la mettra à cote de l'autel;"
+        },
+        {
+          "verse": 11,
+          "text": "et il otera ses vetements, et revetira d'autres vetements, et il emportera la cendre hors du camp en un lieu pur."
+        },
+        {
+          "verse": 12,
+          "text": "Et le feu qui est sur l'autel y brulera; on ne le laissera pas s'eteindre. Et le sacrificateur allumera du bois sur ce feu chaque matin, et y arrangera l'holocauste, et y fera fumer les graisses des sacrifices de prosperites."
+        },
+        {
+          "verse": 13,
+          "text": "Le feu brulera continuellement sur l'autel, on ne le laissera pas s'eteindre."
+        },
+        {
+          "verse": 14,
+          "text": "Et c'est ici la loi de l'offrande de gateau: l'un des fils d'Aaron la presentera devant l'Eternel, devant l'autel."
+        },
+        {
+          "verse": 15,
+          "text": "Et il levera une poignee de la fleur de farine du gateau et de son huile, et tout l'encens qui est sur le gateau, et il fera fumer cela sur l'autel, une odeur agreable, son memorial à l'Eternel."
+        },
+        {
+          "verse": 16,
+          "text": "Et ce qui en restera, Aaron et ses fils le mangeront; on le mangera sans levain, dans un lieu saint; ils le mangeront dans le parvis de la tente d'assignation."
+        },
+        {
+          "verse": 17,
+          "text": "On ne le cuira pas avec du levain. C'est leur portion, que je leur ai donnee de mes sacrifices faits par feu. C'est une chose tres-sainte, comme le sacrifice pour le peche et comme le sacrifice pour le delit."
+        },
+        {
+          "verse": 18,
+          "text": "Tout male d'entre les enfants d'Aaron en mangera; c'est un statut perpetuel en vos generations, leur part des sacrifices faits par feu à l'Eternel: quiconque les touchera sera saint."
+        },
+        {
+          "verse": 19,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 20,
+          "text": "C'est ici l'offrande d'Aaron et de ses fils, qu'ils presenteront à l'Eternel, le jour de son onction: un dixieme d'epha de fleur de farine, en offrande de gateau continuelle, une moitie le matin, et une moitie le soir."
+        },
+        {
+          "verse": 21,
+          "text": "Elle sera appretee sur une plaque avec de l'huile; tu l'apporteras melee avec de l'huile; tu presenteras les morceaux cuits du gateau en odeur agreable à l'Eternel."
+        },
+        {
+          "verse": 22,
+          "text": "Et le sacrificateur d'entre ses fils qui sera oint à sa place, fera cela; c'est un statut perpetuel: on le fera fumer tout entier à l'Eternel."
+        },
+        {
+          "verse": 23,
+          "text": "Et tout gateau de sacrificateur sera brule tout entier; il ne sera pas mange."
+        },
+        {
+          "verse": 24,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 25,
+          "text": "Parle à Aaron et à ses fils, en disant: C'est ici la loi du sacrifice pour le peche: au lieu ou l'holocauste sera egorge, le sacrifice pour le peche sera egorge devant l'Eternel: c'est une chose tres-sainte."
+        },
+        {
+          "verse": 26,
+          "text": "Le sacrificateur qui l'offre pour le peche le mangera; on le mangera dans un lieu saint, dans le parvis de la tente d'assignation."
+        },
+        {
+          "verse": 27,
+          "text": "Quiconque en touchera la chair sera saint; et s'il en rejaillit du sang sur un vetement, ce sur quoi le sang aura rejailli, tu le laveras dans un lieu saint;"
+        },
+        {
+          "verse": 28,
+          "text": "et le vase de terre dans lequel il a ete cuit sera casse; et s'il a ete cuit dans un vase d'airain, il sera ecure et lave dans l'eau."
+        },
+        {
+          "verse": 29,
+          "text": "Tout male d'entre les sacrificateurs en mangera: c'est une chose tres-sainte."
+        },
+        {
+          "verse": 30,
+          "text": "Nul sacrifice pour le peche dont le sang sera porte dans la tente d'assignation pour faire propitiation dans le lieu saint, ne sera mange; il sera brule au feu."
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et c'est ici la loi du sacrifice pour le delit; c'est une chose tres-sainte."
+        },
+        {
+          "verse": 2,
+          "text": "Au lieu ou l'on egorge l'holocauste, on egorgera le sacrifice pour le delit, et on fera aspersion de son sang sur l'autel, tout autour."
+        },
+        {
+          "verse": 3,
+          "text": "Et on en presentera toute la graisse, la queue, et la graisse qui couvre l'interieur,"
+        },
+        {
+          "verse": 4,
+          "text": "et les deux rognons et la graisse qui est dessus, qui est sur les reins, et le reseau qui est sur le foie, qu'on otera jusque sur les rognons."
+        },
+        {
+          "verse": 5,
+          "text": "Et le sacrificateur les fera fumer sur l'autel, comme sacrifice par feu à l'Eternel: c'est un sacrifice pour le delit."
+        },
+        {
+          "verse": 6,
+          "text": "Tout male d'entre les sacrificateurs en mangera; il sera mange dans un lieu saint: c'est une chose tres-sainte."
+        },
+        {
+          "verse": 7,
+          "text": "Comme le sacrifice pour le peche, ainsi est le sacrifice pour le delit; il y a une seule loi pour eux: il appartient au sacrificateur qui a fait propitiation par lui."
+        },
+        {
+          "verse": 8,
+          "text": "-Et quant au sacrificateur qui presentera l'holocauste de quelqu'un, la peau de l'holocauste qu'il aura presente sera pour le sacrificateur: elle lui appartient."
+        },
+        {
+          "verse": 9,
+          "text": "Et toute offrande de gateau qui sera cuit au four ou qui sera apprete dans la poele ou sur la plaque, sera pour le sacrificateur qui le presente: elle lui appartient."
+        },
+        {
+          "verse": 10,
+          "text": "Et toute offrande de gateau petri à l'huile et sec sera pour tous les fils d'Aaron, pour l'un comme pour l'autre."
+        },
+        {
+          "verse": 11,
+          "text": "Et c'est ici la loi du sacrifice de prosperites qu'on presentera à l'Eternel:"
+        },
+        {
+          "verse": 12,
+          "text": "si quelqu'un le presente comme action de graces, il presentera, avec le sacrifice d'action de graces, des gateaux sans levain petris à l'huile, et des galettes sans levain ointes d'huile, et de la fleur de farine melee avec de l'huile, en gateaux petris à l'huile."
+        },
+        {
+          "verse": 13,
+          "text": "Il presentera pour son offrande, avec les gateaux, du pain leve avec son sacrifice d'action de graces de prosperites;"
+        },
+        {
+          "verse": 14,
+          "text": "et de l'offrande entiere, il en presentera un en offrande elevee à l'Eternel: il sera pour le sacrificateur qui aura fait aspersion du sang du sacrifice de prosperites; il lui appartient."
+        },
+        {
+          "verse": 15,
+          "text": "Et la chair de son sacrifice d'action de graces de prosperites sera mangee le jour ou elle sera presentee; on n'en laissera rien jusqu'au matin."
+        },
+        {
+          "verse": 16,
+          "text": "Et si le sacrifice de son offrande est un voeu, ou une offrande volontaire, son sacrifice sera mange le jour ou il l'aura presente; et ce qui en restera sera mange le lendemain;"
+        },
+        {
+          "verse": 17,
+          "text": "et ce qui restera de la chair du sacrifice sera brule au feu le troisieme jour."
+        },
+        {
+          "verse": 18,
+          "text": "Et si quelqu'un mange de la chair de son sacrifice de prosperites le troisieme jour, le sacrifice ne sera pas agree; il ne sera pas impute à celui qui l'aura presente: ce sera une chose impure; et l'ame qui en mangera portera son iniquite."
+        },
+        {
+          "verse": 19,
+          "text": "Et la chair qui aura touche quelque chose d'impur ne sera point mangee: elle sera brulee au feu. Quand à la chair, quiconque est pur mangera la chair."
+        },
+        {
+          "verse": 20,
+          "text": "Et l'ame qui, ayant sur soi son impurete, mangera de la chair du sacrifice de prosperites qui appartient à l'Eternel, cette ame-là sera retranchee de ses peuples."
+        },
+        {
+          "verse": 21,
+          "text": "Et si une ame touche quoi que ce soit d'impur, impurete d'homme, ou bete impure, ou toute autre chose abominable et impure, et qu'elle mange de la chair du sacrifice de prosperites qui appartient à l'Eternel, cette ame-là sera retranchee de ses peuples."
+        },
+        {
+          "verse": 22,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 23,
+          "text": "Parle aux fils d'Israel, en disant: Vous ne mangerez aucune graisse de boeuf ou de mouton ou de chevre."
+        },
+        {
+          "verse": 24,
+          "text": "La graisse d'un corps mort ou la graisse d'une bete dechiree pourra etre employee à tout usage, mais vous n'en mangerez point;"
+        },
+        {
+          "verse": 25,
+          "text": "car quiconque mangera de la graisse d'une bete dont on presente à l'Eternel un sacrifice fait par feu, l'ame qui en aura mange sera retranchee de ses peuples."
+        },
+        {
+          "verse": 26,
+          "text": "Et vous ne mangerez aucun sang, dans aucune de vos habitations, soit d'oiseaux, soit de betail."
+        },
+        {
+          "verse": 27,
+          "text": "Toute ame qui aura mange de quelque sang que ce soit, cette ame-là sera retranchee de ses peuples."
+        },
+        {
+          "verse": 28,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 29,
+          "text": "Parle aux fils d'Israel, en disant: Celui qui presentera son sacrifice de prosperites à l'Eternel apportera à l'Eternel son offrande, prise de son sacrifice de prosperites."
+        },
+        {
+          "verse": 30,
+          "text": "Ses mains apporteront les sacrifices faits par feu à l'Eternel; il apportera la graisse avec la poitrine: la poitrine, pour la tournoyer comme offrande tournoyee devant l'Eternel."
+        },
+        {
+          "verse": 31,
+          "text": "Et le sacrificateur fera fumer la graisse sur l'autel; et la poitrine sera pour Aaron et pour ses fils."
+        },
+        {
+          "verse": 32,
+          "text": "Et vous donnerez au sacrificateur, comme offrande elevee, l'epaule droite de vos sacrifices de prosperites."
+        },
+        {
+          "verse": 33,
+          "text": "Celui des fils d'Aaron qui presentera le sang et la graisse des sacrifices de prosperites aura pour sa part l'epaule droite."
+        },
+        {
+          "verse": 34,
+          "text": "Car j'ai pris des fils d'Israel la poitrine tournoyee et l'epaule elevee de leurs sacrifices de prosperites, et je les ai donnees à Aaron, le sacrificateur, et à ses fils, par statut perpetuel, de la part des fils d'Israel."
+        },
+        {
+          "verse": 35,
+          "text": "C'est là le droit de l'onction d'Aaron et de l'onction de ses fils, dans les sacrifices de l'Eternel faits par feu, du jour qu'on les aura fait approcher pour exercer la sacrificature devant l'Eternel,"
+        },
+        {
+          "verse": 36,
+          "text": "ce que l'Eternel a commande de leur donner, de la part des fils d'Israel, du jour qu'il les aura oints; c'est un statut perpetuel en leurs generations."
+        },
+        {
+          "verse": 37,
+          "text": "Telle est la loi de l'holocauste, de l'offrande de gateau, et du sacrifice pour le peche, et du sacrifice pour le delit, et du sacrifice de consecration, et du sacrifice de prosperites,"
+        },
+        {
+          "verse": 38,
+          "text": "laquelle l'Eternel commanda à Moise sur la montagne de Sinai, le jour ou il commanda aux fils d'Israel de presenter leurs offrandes à l'Eternel, dans le desert de Sinai."
+        }
+      ]
+    },
+    {
+      "chapter": 8,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Prends Aaron et ses fils avec lui, et les vetements, et l'huile de l'onction, et le jeune taureau du sacrifice pour le peche, et les deux beliers, et la corbeille des pains sans levain;"
+        },
+        {
+          "verse": 3,
+          "text": "et convoque toute l'assemblee à l'entree de la tente d'assignation."
+        },
+        {
+          "verse": 4,
+          "text": "Et Moise fit comme l'Eternel lui avait commande, et l'assemblee fut convoquee à l'entree de la tente d'assignation."
+        },
+        {
+          "verse": 5,
+          "text": "Et Moise dit à l'assemblee: C'est ici ce que l'Eternel a commande de faire."
+        },
+        {
+          "verse": 6,
+          "text": "Et Moise fit approcher Aaron et ses fils, et les lava avec de l'eau;"
+        },
+        {
+          "verse": 7,
+          "text": "et il mit sur lui la tunique, et le ceignit avec la ceinture, et le revetit de la robe, et mit sur lui l'ephod, et le ceignit avec la ceinture de l'ephod, qu'il lia par elle sur lui;"
+        },
+        {
+          "verse": 8,
+          "text": "et il plaça sur lui le pectoral, et mit sur le pectoral les urim et les thummim;"
+        },
+        {
+          "verse": 9,
+          "text": "et il plaça la tiare sur sa tete, et, sur la tiare, sur le devant, il plaça la lame d'or, le saint diademe, comme l'Eternel l'avait commande à Moise."
+        },
+        {
+          "verse": 10,
+          "text": "Et Moise prit l'huile de l'onction, et oignit le tabernacle et toutes les choses qui y etaient, et les sanctifia;"
+        },
+        {
+          "verse": 11,
+          "text": "et il en fit aspersion sur l'autel sept fois, et il oignit l'autel, et tous ses ustensiles, et la cuve et son soubassement, pour les sanctifier;"
+        },
+        {
+          "verse": 12,
+          "text": "et il versa de l'huile de l'onction sur la tete d'Aaron, et l'oignit, pour le sanctifier."
+        },
+        {
+          "verse": 13,
+          "text": "Et Moise fit approcher les fils d'Aaron, et les revetit des tuniques, et les ceignit de la ceinture, et leur attacha les bonnets, comme l'Eternel l'avait commande à Moise."
+        },
+        {
+          "verse": 14,
+          "text": "Et il fit approcher le taureau du sacrifice pour le peche, et Aaron et ses fils poserent leurs mains sur la tete du taureau du sacrifice pour le peche;"
+        },
+        {
+          "verse": 15,
+          "text": "et on l'egorgea, et Moise prit le sang, et en mit avec son doigt sur les cornes de l'autel, tout autour, et il purifia l'autel; et il versa le sang au pied de l'autel et le sanctifia, faisant propitiation pour lui."
+        },
+        {
+          "verse": 16,
+          "text": "Et il prit toute la graisse qui etait sur l'interieur, et le reseau du foie, et les deux rognons, et leur graisse, et Moise les fit fumer sur l'autel."
+        },
+        {
+          "verse": 17,
+          "text": "Et le taureau, et sa peau, et sa chair, et sa fiente, il les brula au feu, hors du camp, comme l'Eternel l'avait commande à Moise."
+        },
+        {
+          "verse": 18,
+          "text": "Et il fit approcher le belier de l'holocauste, et Aaron et ses fils poserent leurs mains sur la tete du belier;"
+        },
+        {
+          "verse": 19,
+          "text": "et on l'egorgea, et Moise fit aspersion du sang sur l'autel, tout autour;"
+        },
+        {
+          "verse": 20,
+          "text": "on coupa le belier en morceaux, et Moise en fit fumer la tete, et les morceaux, et la graisse;"
+        },
+        {
+          "verse": 21,
+          "text": "et on lava avec de l'eau l'interieur et les jambes, et Moise fit fumer tout le belier sur l'autel: ce fut un holocauste en odeur agreable, ce fut un sacrifice par feu à l'Eternel, comme l'Eternel l'avait commande à Moise."
+        },
+        {
+          "verse": 22,
+          "text": "Et il fit approcher le second belier, le belier de consecration; et Aaron et ses fils poserent leurs mains sur la tete du belier;"
+        },
+        {
+          "verse": 23,
+          "text": "et on l'egorgea, et Moise prit de son sang, et le mit sur le lobe de l'oreille droite d'Aaron, et sur le pouce de sa main droite, et sur le gros orteil de son pied droit;"
+        },
+        {
+          "verse": 24,
+          "text": "et il fit approcher les fils d'Aaron, et Moise mit du sang sur le lobe de leur oreille droite, et sur le pouce de leur main droite, et sur le gros orteil de leur pied droit; et Moise fit aspersion du sang sur l'autel, tout autour."
+        },
+        {
+          "verse": 25,
+          "text": "Et il prit la graisse, et la queue, et toute la graisse qui etait sur l'interieur, et le reseau du foie, et les deux rognons et leur graisse, et l'epaule droite;"
+        },
+        {
+          "verse": 26,
+          "text": "et il prit, de la corbeille des pains sans levain qui etait devant l'Eternel, un gateau sans levain, et un gateau de pain à l'huile, et une galette, et les plaça sur les graisses et sur l'epaule droite;"
+        },
+        {
+          "verse": 27,
+          "text": "et il mit le tout sur les paumes des mains d'Aaron et sur les paumes des mains de ses fils, et les tournoya comme offrande tournoyee devant l'Eternel."
+        },
+        {
+          "verse": 28,
+          "text": "Et Moise les prit des paumes de leurs mains, et les fit fumer sur l'autel sur l'holocauste: ce fut un sacrifice de consecration, en odeur agreable; ce fut un sacrifice par feu à l'Eternel."
+        },
+        {
+          "verse": 29,
+          "text": "Et Moise prit la poitrine, et la tournoya comme offrande tournoyee devant l'Eternel; ce fut, -du belier de consecration, -la part de Moise, comme l'Eternel l'avait commande à Moise."
+        },
+        {
+          "verse": 30,
+          "text": "Et Moise prit de l'huile de l'onction et du sang qui etait sur l'autel, et il en fit aspersion sur Aaron, sur ses vetements, et sur ses fils et sur les vetements de ses fils avec lui: il sanctifia Aaron, ses vetements, et ses fils et les vetements de ses fils avec lui."
+        },
+        {
+          "verse": 31,
+          "text": "Et Moise dit à Aaron et à ses fils: Cuisez la chair à l'entree de la tente d'assignation, et vous la mangerez là, ainsi que le pain qui est dans la corbeille de consecration, comme j'ai commande, en disant: Aaron et ses fils les mangeront."
+        },
+        {
+          "verse": 32,
+          "text": "Et le reste de la chair et du pain, vous le brulerez au feu."
+        },
+        {
+          "verse": 33,
+          "text": "Et vous ne sortirez pas de l'entree de la tente d'assignation pendant sept jours, jusqu'au jour de l'accomplissement des jours de votre consecration; car on mettra sept jours à vous consacrer."
+        },
+        {
+          "verse": 34,
+          "text": "L'Eternel a commande de faire comme on a fait aujourd'hui, pour faire propitiation pour vous."
+        },
+        {
+          "verse": 35,
+          "text": "Et vous demeurerez pendant sept jours à l'entree de la tente d'assignation, jour et nuit, et vous garderez ce que l'Eternel vous a donne à garder, afin que vous ne mouriez pas; car il m'a ete ainsi commande."
+        },
+        {
+          "verse": 36,
+          "text": "Et Aaron et ses fils firent toutes les choses que l'Eternel avait commandees par Moise."
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et il arriva, le huitieme jour, que Moise appela Aaron et ses fils, et les anciens d'Israel;"
+        },
+        {
+          "verse": 2,
+          "text": "et il dit à Aaron: Prends un jeune veau pour le sacrifice pour le peche, et un belier pour l'holocauste, sans defaut, et presente-les devant l'Eternel."
+        },
+        {
+          "verse": 3,
+          "text": "Et tu parleras aux fils d'Israel, en disant: Prenez un bouc pour le sacrifice pour le peche; et un veau, et un agneau, ages d'un an, sans defaut, pour l'holocauste;"
+        },
+        {
+          "verse": 4,
+          "text": "et un taureau et un belier pour le sacrifice de prosperites, pour sacrifier devant l'Eternel, et une offrande de gateau petri à l'huile, car aujourd'hui l'Eternel vous apparaitra."
+        },
+        {
+          "verse": 5,
+          "text": "Et ils amenerent devant la tente d'assignation ce que Moise avait commande; et toute l'assemblee s'approcha, et ils se tinrent devant l'Eternel."
+        },
+        {
+          "verse": 6,
+          "text": "Et Moise dit: C'est ici ce que l'Eternel a commande; faites-le, et la gloire de l'Eternel vous apparaitra."
+        },
+        {
+          "verse": 7,
+          "text": "Et Moise dit à Aaron: Approche-toi de l'autel, et offre ton sacrifice pour le peche, et ton holocauste, et fais propitiation pour toi et pour le peuple; et offre l'offrande du peuple, et fais propitiation pour eux, comme l'Eternel a commande."
+        },
+        {
+          "verse": 8,
+          "text": "Et Aaron s'approcha de l'autel, et egorgea le veau du sacrifice pour le peche, qui etait pour lui;"
+        },
+        {
+          "verse": 9,
+          "text": "et les fils d'Aaron lui presenterent le sang, et il trempa son doigt dans le sang, et le mit sur les cornes de l'autel, et versa le sang au pied de l'autel."
+        },
+        {
+          "verse": 10,
+          "text": "Et il fit fumer sur l'autel la graisse, et les rognons, et le reseau pris du foie du sacrifice pour le peche, comme l'Eternel l'avait commande à Moise."
+        },
+        {
+          "verse": 11,
+          "text": "Et la chair et la peau, il les brula au feu, hors du camp."
+        },
+        {
+          "verse": 12,
+          "text": "Et il egorgea l'holocauste, et les fils d'Aaron lui presenterent le sang, et il en fit aspersion sur l'autel, tout autour."
+        },
+        {
+          "verse": 13,
+          "text": "Et ils lui presenterent l'holocauste coupe en morceaux, et la tete, et il les fit fumer sur l'autel;"
+        },
+        {
+          "verse": 14,
+          "text": "et il lava l'interieur et les jambes, et il les fit fumer sur l'holocauste sur l'autel."
+        },
+        {
+          "verse": 15,
+          "text": "-Et il presenta l'offrande du peuple: il prit le bouc du sacrifice pour le peche qui etait pour le peuple, et l'egorgea, et l'offrit pour le peche, comme precedemment le veau."
+        },
+        {
+          "verse": 16,
+          "text": "Et il presenta l'holocauste, et le fit selon l'ordonnance."
+        },
+        {
+          "verse": 17,
+          "text": "Et il presenta l'offrande de gateau, et il en remplit la paume de sa main et la fit fumer sur l'autel, outre l'holocauste du matin."
+        },
+        {
+          "verse": 18,
+          "text": "Et il egorgea le taureau et le belier du sacrifice de prosperites qui etait pour le peuple, et les fils d'Aaron lui presenterent le sang, et il en fit aspersion sur l'autel, tout autour."
+        },
+        {
+          "verse": 19,
+          "text": "Et ils presenterent les graisses du taureau et du belier, la queue, et ce qui couvre l'interieur, et les rognons, et le reseau du foie;"
+        },
+        {
+          "verse": 20,
+          "text": "et ils mirent les graisses sur les poitrines, et il fit fumer les graisses sur l'autel."
+        },
+        {
+          "verse": 21,
+          "text": "Et Aaron tournoya en offrande tournoyee devant l'Eternel les poitrines et l'epaule droite, comme Moise l'avait commande."
+        },
+        {
+          "verse": 22,
+          "text": "-Et Aaron eleva ses mains vers le peuple et les benit; et il descendit apres avoir offert le sacrifice pour le peche, et l'holocauste, et le sacrifice de prosperites."
+        },
+        {
+          "verse": 23,
+          "text": "Et Moise et Aaron entrerent dans la tente d'assignation; puis ils sortirent et benirent le peuple: et la gloire de l'Eternel apparut à tout le peuple;"
+        },
+        {
+          "verse": 24,
+          "text": "et le feu sortit de devant l'Eternel, et consuma sur l'autel l'holocauste et les graisses; et tout le peuple le vit, et ils pousserent des cris de joie, et tomberent sur leurs faces."
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et les fils d'Aaron, Nadab et Abihu, prirent chacun leur encensoir, et y mirent du feu, et placerent de l'encens dessus, et presenterent devant l'Eternel un feu etranger, ce qu'il ne leur avait pas commande."
+        },
+        {
+          "verse": 2,
+          "text": "Et le feu sortit de devant l'Eternel, et les devora, et ils moururent devant l'Eternel."
+        },
+        {
+          "verse": 3,
+          "text": "Et Moise dit à Aaron: C'est là ce que l'Eternel prononça, en disant: Je serai sanctifie en ceux qui s'approchent de moi, et devant tout le peuple je serai glorifie. Et Aaron se tut."
+        },
+        {
+          "verse": 4,
+          "text": "Et Moise appela Mishael et Eltsaphan, fils d'Uziel, oncle d'Aaron, et leur dit: Approchez-vous, emportez vos freres de devant le lieu saint, hors du camp."
+        },
+        {
+          "verse": 5,
+          "text": "Et ils s'approcherent, et les emporterent dans leurs tuniques hors du camp, comme Moise avait dit."
+        },
+        {
+          "verse": 6,
+          "text": "Et Moise dit à Aaron, et à Eleazar et à Ithamar, ses fils: Ne decouvrez pas vos tetes et ne dechirez pas vos vetements, afin que vous ne mouriez pas, et qu'il n'y ait pas de la colere contre toute l'assemblee; mais vos freres, toute la maison d'Israel, pleureront l'embrasement que l'Eternel a allume."
+        },
+        {
+          "verse": 7,
+          "text": "Et ne sortez pas de l'entree de la tente d'assignation, de peur que vous ne mouriez, car l'huile de l'onction de l'Eternel est sur vous. Et ils firent selon la parole de Moise."
+        },
+        {
+          "verse": 8,
+          "text": "Et l'Eternel parla à Aaron, disant:"
+        },
+        {
+          "verse": 9,
+          "text": "Vous ne boirez point de vin ni de boisson forte, toi et tes fils avec toi, quand vous entrerez dans la tente d'assignation, afin que vous ne mouriez pas. C'est un statut perpetuel, en vos generations,"
+        },
+        {
+          "verse": 10,
+          "text": "afin que vous discerniez entre ce qui est saint et ce qui est profane, et entre ce qui est impur et ce qui est pur,"
+        },
+        {
+          "verse": 11,
+          "text": "et afin que vous enseigniez aux fils d'Israel tous les statuts que l'Eternel leur a dits par Moise."
+        },
+        {
+          "verse": 12,
+          "text": "Et Moise dit à Aaron, et à Eleazar et à Ithamar, ses fils qui restaient: Prenez l'offrande de gateau, ce qui reste des sacrifices de l'Eternel faits par feu, et mangez-la en pains sans levain, à cote de l'autel; car c'est une chose tres-sainte."
+        },
+        {
+          "verse": 13,
+          "text": "Et vous la mangerez dans un lieu saint, parce que c'est là ta part et la part de tes fils dans les sacrifices de l'Eternel faits par feu; car il m'a ete ainsi commande."
+        },
+        {
+          "verse": 14,
+          "text": "Et vous mangerez la poitrine tournoyee et l'epaule elevee, dans un lieu pur, toi et tes fils et tes filles avec toi; car elles vous sont donnees comme ta part et la part de tes fils dans les sacrifices de prosperites des fils d'Israel."
+        },
+        {
+          "verse": 15,
+          "text": "Ils apporteront l'epaule elevee et la poitrine tournoyee (avec les sacrifices par feu, qui sont les graisses), pour les tournoyer comme offrande tournoyee devant l'Eternel; et cela t'appartiendra, et à tes fils avec toi, par statut perpetuel, comme l'Eternel l'a commande."
+        },
+        {
+          "verse": 16,
+          "text": "Et Moise chercha diligemment le bouc du sacrifice pour le peche; mais voici, il avait ete brule; et Moise se mit en colere contre Eleazar et Ithamar, les fils d'Aaron qui restaient, et il leur dit:"
+        },
+        {
+          "verse": 17,
+          "text": "Pourquoi n'avez-vous pas mange le sacrifice pour le peche dans un lieu saint? car c'est une chose tres-sainte; et Il vous l'a donne pour porter l'iniquite de l'assemblee, pour faire propitiation pour eux devant l'Eternel:"
+        },
+        {
+          "verse": 18,
+          "text": "voici, son sang n'a pas ete porte dans l'interieur du lieu saint; vous devez de toute maniere le manger dans le lieu saint, comme je l'ai commande."
+        },
+        {
+          "verse": 19,
+          "text": "Et Aaron dit à Moise: Voici, ils ont presente aujourd'hui leur sacrifice pour le peche et leur holocauste devant l'Eternel, et ces choses me sont arrivees; et si j'eusse mange aujourd'hui le sacrifice pour le peche, cela eut-il ete bon aux yeux de l'Eternel?"
+        },
+        {
+          "verse": 20,
+          "text": "Et Moise l'entendit, et cela fut bon à ses yeux."
+        }
+      ]
+    },
+    {
+      "chapter": 11,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise et à Aaron, leur disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Parlez aux fils d'Israel, en disant: Ce sont ici les animaux dont vous mangerez, d'entre toutes les betes qui sont sur la terre."
+        },
+        {
+          "verse": 3,
+          "text": "Vous mangerez, d'entre les betes qui ruminent, tout ce qui a l'ongle fendu et le pied completement divise."
+        },
+        {
+          "verse": 4,
+          "text": "Seulement de ceci vous ne mangerez pas, d'entre celles qui ruminent, et d'entre celles qui ont l'ongle fendu: le chameau, car il rumine, mais il n'a pas l'ongle fendu; il vous est impur:"
+        },
+        {
+          "verse": 5,
+          "text": "et le daman, car il rumine, mais il n'a pas l'ongle fendu; il vous est impur:"
+        },
+        {
+          "verse": 6,
+          "text": "et le lievre, car il rumine, mais il n'a pas l'ongle fendu; il vous est impur:"
+        },
+        {
+          "verse": 7,
+          "text": "et le porc, car il a l'ongle fendu et le pied completement divise, mais il ne rumine nullement; il vous est impur."
+        },
+        {
+          "verse": 8,
+          "text": "Vous ne mangerez pas de leur chair, et vous ne toucherez pas leur corps mort; ils vous sont impurs."
+        },
+        {
+          "verse": 9,
+          "text": "Vous mangerez de ceci, d'entre tout ce qui est dans les eaux: vous mangerez tout ce qui a des nageoires et des ecailles, dans les eaux, dans les mers et dans les rivieres."
+        },
+        {
+          "verse": 10,
+          "text": "Et tout ce qui n'a point de nageoires et d'ecailles, dans les mers et dans les rivieres, de tout ce qui fourmille dans les eaux et de tout etre vivant qui est dans les eaux, -vous sera une chose abominable."
+        },
+        {
+          "verse": 11,
+          "text": "Cela vous sera une chose abominable; vous ne mangerez pas de leur chair, et vous aurez en abomination leur corps mort."
+        },
+        {
+          "verse": 12,
+          "text": "Tout ce qui, dans les eaux, n'a point de nageoires et d'ecailles, vous sera une chose abominable."
+        },
+        {
+          "verse": 13,
+          "text": "Et d'entre les oiseaux, vous aurez ceux-ci en abomination; on n'en mangera point, ce sera une chose abominable: l'aigle, et l'orfraie,"
+        },
+        {
+          "verse": 14,
+          "text": "et l'aigle de mer, et le faucon, et le milan, selon son espece;"
+        },
+        {
+          "verse": 15,
+          "text": "tout corbeau, selon son espece;"
+        },
+        {
+          "verse": 16,
+          "text": "et l'autruche femelle, et l'autruche male, et la mouette, et l'epervier, selon son espece;"
+        },
+        {
+          "verse": 17,
+          "text": "et le hibou, et le plongeon, et l'ibis,"
+        },
+        {
+          "verse": 18,
+          "text": "et le cygne, et le pelican, et le vautour,"
+        },
+        {
+          "verse": 19,
+          "text": "et la cigogne, et le heron, selon son espece, et la huppe, et la chauve-souris."
+        },
+        {
+          "verse": 20,
+          "text": "Tout reptile volant qui marche sur quatre pieds, vous sera une chose abominable."
+        },
+        {
+          "verse": 21,
+          "text": "Seulement de ceci vous mangerez d'entre tous les reptiles volants qui marchent sur quatre pieds, ceux qui ont, au-dessus de leurs pieds, des jambes avec lesquelles ils sautent sur la terre."
+        },
+        {
+          "verse": 22,
+          "text": "Ce sont ici ceux d'entre eux dont vous mangerez: la sauterelle selon son espece, et le solham selon son espece, et le khargol selon son espece, et le khagab selon son espece."
+        },
+        {
+          "verse": 23,
+          "text": "Mais tout reptile volant qui a quatre pieds vous sera une chose abominable;"
+        },
+        {
+          "verse": 24,
+          "text": "et par eux vous vous rendrez impurs: quiconque touchera leur corps mort sera impur jusqu'au soir;"
+        },
+        {
+          "verse": 25,
+          "text": "et quiconque portera quelque chose de leur corps mort lavera ses vetements, et sera impur jusqu'au soir."
+        },
+        {
+          "verse": 26,
+          "text": "Toute bete qui a l'ongle fendu, mais qui n'a pas le pied completement divise et ne rumine pas, vous sera impure; quiconque les touchera sera impur."
+        },
+        {
+          "verse": 27,
+          "text": "Et tout ce qui marche sur ses pattes, parmi tous les animaux qui marchent sur quatre pieds, vous sera impur; quiconque touchera leur corps mort sera impur jusqu'au soir;"
+        },
+        {
+          "verse": 28,
+          "text": "et celui qui aura porte leur corps mort lavera ses vetements, et sera impur jusqu'au soir. Ils vous seront impurs."
+        },
+        {
+          "verse": 29,
+          "text": "Et ceci vous sera impur parmi les reptiles qui rampent sur la terre: la taupe, et la souris, et le lezard selon son espece;"
+        },
+        {
+          "verse": 30,
+          "text": "et le lezard gemissant, et le coakh, et le letaa, et la limace, et le cameleon."
+        },
+        {
+          "verse": 31,
+          "text": "Ceux-ci vous seront impurs parmi tous les reptiles; quiconque les touchera morts sera impur jusqu'au soir."
+        },
+        {
+          "verse": 32,
+          "text": "Et tout ce sur quoi il en tombera quand ils seront morts, sera impur: ustensile de bois, vetement, peau, ou sac, -tout objet qui sert à un usage quelconque, sera mis dans l'eau, et sera impur jusqu'au soir; alors il sera net;"
+        },
+        {
+          "verse": 33,
+          "text": "et tout vase de terre dans lequel il en tombe quelque chose,... tout ce qui est dedans, sera impur, et vous casserez le vase;"
+        },
+        {
+          "verse": 34,
+          "text": "et tout aliment qu'on mange, sur lequel il sera venu de cette eau, sera impur; et tout breuvage qu'on boit, dans quelque vase que ce soit, sera impur;"
+        },
+        {
+          "verse": 35,
+          "text": "et tout ce sur quoi tombe quelque chose de leur corps mort, sera impur; le four et le foyer seront detruits: ils sont impurs, et ils vous seront impurs;"
+        },
+        {
+          "verse": 36,
+          "text": "mais une fontaine ou un puits, un amas d'eaux, sera net. Mais celui qui touchera leur corps mort sera impur."
+        },
+        {
+          "verse": 37,
+          "text": "Et s'il tombe quelque chose de leur corps mort sur une semence qui se seme, elle sera pure;"
+        },
+        {
+          "verse": 38,
+          "text": "mais si on avait mis de l'eau sur la semence, et qu'il tombe sur elle quelque chose de leur corps mort, elle vous sera impure."
+        },
+        {
+          "verse": 39,
+          "text": "-Et s'il meurt une des betes qui vous servent d'aliment, celui qui en touchera le corps mort sera impur jusqu'au soir;"
+        },
+        {
+          "verse": 40,
+          "text": "et celui qui mangera de son corps mort lavera ses vetements, et sera impur jusqu'au soir; et celui qui portera son corps mort lavera ses vetements, et sera impur jusqu'au soir."
+        },
+        {
+          "verse": 41,
+          "text": "Et tout reptile qui rampe sur la terre sera une chose abominable; on n'en mangera pas."
+        },
+        {
+          "verse": 42,
+          "text": "De tout ce qui marche sur le ventre, et de tout ce qui marche sur quatre pieds, et de tout ce qui a beaucoup de pieds, parmi tous les reptiles qui rampent sur la terre, vous n'en mangerez pas; car c'est une chose abominable."
+        },
+        {
+          "verse": 43,
+          "text": "Ne rendez pas vos ames abominables par aucun reptile qui rampe, et ne vous rendez pas impurs par eux, de sorte que vous soyez impurs par eux."
+        },
+        {
+          "verse": 44,
+          "text": "Car je suis l'Eternel, votre Dieu: et vous vous sanctifierez, et vous serez saints, car je suis saint; et vous ne rendrez pas vos ames impures par aucun reptile qui se meut sur la terre."
+        },
+        {
+          "verse": 45,
+          "text": "Car je suis l'Eternel qui vous ai fait monter du pays d'Egypte, afin que je sois votre Dieu: et vous serez saints, car je suis saint."
+        },
+        {
+          "verse": 46,
+          "text": "Telle est la loi touchant les betes et les oiseaux, et tout etre vivant qui se meut dans les eaux, et tout etre qui rampe sur la terre;"
+        },
+        {
+          "verse": 47,
+          "text": "afin de discerner entre ce qui est impur et ce qui est pur, et entre l'animal qu'on mange et l'animal qu'on ne mangera pas."
+        }
+      ]
+    },
+    {
+      "chapter": 12,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Parle aux fils d'Israel, en disant: Si une femme conçoit et enfante un fils, elle sera impure sept jours; elle sera impure comme aux jours de l'impurete de ses mois."
+        },
+        {
+          "verse": 3,
+          "text": "Et au huitieme jour on circoncira la chair du prepuce de l' enfant."
+        },
+        {
+          "verse": 4,
+          "text": "Et elle demeurera trente trois jours dans le sang de sa purification; elle ne touchera aucune chose sainte, et ne viendra pas au sanctuaire, jusqu'à ce que les jours de sa purification soient accomplis."
+        },
+        {
+          "verse": 5,
+          "text": "Et si c'est une fille qu'elle enfante, elle sera impure deux semaines, comme dans sa separation, et elle demeurera soixante-six jours dans le sang de sa purification."
+        },
+        {
+          "verse": 6,
+          "text": "Et quand les jours de sa purification seront accomplis, pour un fils ou pour une fille, elle amenera au sacrificateur, à l'entree de la tente d'assignation, un agneau age d'un an pour l'holocauste, et un jeune pigeon ou une tourterelle pour sacrifice pour le peche;"
+        },
+        {
+          "verse": 7,
+          "text": "et il presentera ces choses devant l'Eternel, et fera propitiation pour elle, et elle sera purifiee du flux de son sang. Telle est la loi de celle qui enfante un fils ou une fille."
+        },
+        {
+          "verse": 8,
+          "text": "Et si ses moyens ne suffisent pas pour trouver un agneau, elle prendra deux tourterelles ou deux jeunes pigeons, l'un pour l'holocauste, et l'autre pour le sacrifice pour le peche; et le sacrificateur fera propitiation pour elle, et elle sera pure."
+        }
+      ]
+    },
+    {
+      "chapter": 13,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise et à Aaron, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Si un homme a dans la peau de sa chair une tumeur, ou une dartre, ou une tache blanchatre, et qu'elle soit devenue, dans la peau de sa chair, une plaie comme de lepre, on l'amenera à Aaron, le sacrificateur, ou à l'un de ses fils, les sacrificateurs;"
+        },
+        {
+          "verse": 3,
+          "text": "et le sacrificateur verra la plaie qui est dans la peau de sa chair; et si le poil dans la plaie est devenu blanc, et si la plaie parait plus enfoncee que la peau de sa chair, c'est une plaie de lepre; et le sacrificateur le verra, et le declarera impur."
+        },
+        {
+          "verse": 4,
+          "text": "Et si la tache dans la peau de sa chair est blanche, et si elle ne parait pas plus enfoncee que la peau, et si le poil n'est pas devenu blanc, le sacrificateur fera enfermer pendant sept jours celui qui a la plaie;"
+        },
+        {
+          "verse": 5,
+          "text": "et le sacrificateur le verra le septieme jour: et voici, la plaie est demeuree à ses yeux au meme etat, la plaie ne s'est pas etendue dans la peau; alors le sacrificateur le fera enfermer pendant sept autres jours."
+        },
+        {
+          "verse": 6,
+          "text": "Et le sacrificateur le verra pour la seconde fois, le septieme jour: et voici, la plaie s'efface, et la plaie ne s'est pas etendue dans la peau; alors le sacrificateur le declarera pur: c'est un dartre; et il lavera ses vetements, et sera pur."
+        },
+        {
+          "verse": 7,
+          "text": "Mais si la dartre s'est beaucoup etendue dans la peau, apres qu'il aura ete vu par le sacrificateur pour sa purification, il sera vu une seconde fois par le sacrificateur;"
+        },
+        {
+          "verse": 8,
+          "text": "et le sacrificateur le regardera: et voici, la dartre s'est etendue dans la peau; alors le sacrificateur le declarera impur: c'est une lepre."
+        },
+        {
+          "verse": 9,
+          "text": "S'il y a une plaie comme de lepre dans un homme, on l'amenera au sacrificateur,"
+        },
+        {
+          "verse": 10,
+          "text": "et le sacrificateur le verra: et voici, il y a une tumeur blanche dans la peau, et elle a fait devenir blanc le poil, et il y a une trace de chair vive dans la tumeur,"
+        },
+        {
+          "verse": 11,
+          "text": "-c'est une lepre inveteree dans la peau de sa chair; alors le sacrificateur le declarera impur; il ne le fera pas enfermer, car il est impur."
+        },
+        {
+          "verse": 12,
+          "text": "Et si la lepre fait eruption sur la peau, et que la lepre couvre toute la peau de celui qui a la plaie, de la tete aux pieds, autant qu'en pourra voir le sacrificateur,"
+        },
+        {
+          "verse": 13,
+          "text": "le sacrificateur le verra: et voici, la lepre a couvert toute sa chair; alors il declarera pur celui qui a la plaie: il est tout entier devenu blanc; il est pur."
+        },
+        {
+          "verse": 14,
+          "text": "Et le jour ou l'on verra en lui de la chair vive, il sera impur."
+        },
+        {
+          "verse": 15,
+          "text": "Et le sacrificateur regardera la chair vive, et le declarera impur: la chair vive est impure, c'est de la lepre."
+        },
+        {
+          "verse": 16,
+          "text": "Mais si la chair vive change et devient blanche, il viendra vers le sacrificateur;"
+        },
+        {
+          "verse": 17,
+          "text": "et le sacrificateur le verra: et voici, la plaie est devenue blanche; alors le sacrificateur declarera pur celui qui a la plaie: il est pur."
+        },
+        {
+          "verse": 18,
+          "text": "Et si la chair a eu dans sa peau un ulcere, et qu'il soit gueri,"
+        },
+        {
+          "verse": 19,
+          "text": "et qu'il y ait, à l'endroit de l'ulcere, une tumeur blanche, ou une tache blanche roussatre, l'homme se montrera au sacrificateur;"
+        },
+        {
+          "verse": 20,
+          "text": "et le sacrificateur la verra: et voici, elle parait plus enfoncee que la peau, et son poil est devenu blanc; alors le sacrificateur le declarera impur: c'est une plaie de lepre, elle a fait eruption dans l'ulcere."
+        },
+        {
+          "verse": 21,
+          "text": "Et si le sacrificateur la voit, et voici, il n'y a pas en elle de poil blanc, et elle n'est pas plus enfoncee que la peau, mais elle s'efface, le sacrificateur le fera enfermer pendant sept jours."
+        },
+        {
+          "verse": 22,
+          "text": "Et si elle s'est beaucoup etendue dans la peau, alors le sacrificateur le declarera impur: c'est une plaie."
+        },
+        {
+          "verse": 23,
+          "text": "Mais si la tache est demeuree à sa place au meme etat, et ne s'est pas etendue, c'est la cicatrice de l'ulcere: le sacrificateur le declarera pur."
+        },
+        {
+          "verse": 24,
+          "text": "Ou si la chair a dans sa peau une brulure de feu, et que la marque de la brulure soit une tache d'un blanc roussatre ou blanche, le sacrificateur la verra:"
+        },
+        {
+          "verse": 25,
+          "text": "et voici, le poil est devenu blanc dans la tache, et elle parait plus enfoncee que la peau, -c'est une lepre; elle a fait eruption dans la brulure; et le sacrificateur le declarera impur: c'est une plaie de lepre."
+        },
+        {
+          "verse": 26,
+          "text": "Et si le sacrificateur la voit, et voici, il n'y a pas de poil blanc dans la tache, et elle n'est pas plus enfoncee que la peau, et elle s'efface, le sacrificateur le fera enfermer pendant sept jours;"
+        },
+        {
+          "verse": 27,
+          "text": "et le sacrificateur le verra le septieme jour: -si la tache s'est beaucoup etendue dans la peau, alors le sacrificateur le declarera impur: c'est une plaie de lepre."
+        },
+        {
+          "verse": 28,
+          "text": "Mais si la tache est demeuree à sa place au meme etat, et ne s'est pas etendue dans la peau, et qu'elle s'efface, c'est une tumeur de la brulure, et le sacrificateur le declarera pur; car c'est la cicatrice de la brulure."
+        },
+        {
+          "verse": 29,
+          "text": "Et si un homme ou une femme a une plaie à la tete ou à la barbe, le sacrificateur verra la plaie:"
+        },
+        {
+          "verse": 30,
+          "text": "et voici, elle parait plus enfoncee que la peau, ayant en elle du poil jaunatre et fin, alors le sacrificateur le declarera impur: c'est la teigne, c'est une lepre de la tete ou de la barbe."
+        },
+        {
+          "verse": 31,
+          "text": "Et si le sacrificateur voit la plaie de la teigne, et voici, elle ne parait pas plus enfoncee que la peau, et elle n'a pas de poil noir, alors le sacrificateur fera enfermer pendant sept jours celui qui a la plaie de la teigne."
+        },
+        {
+          "verse": 32,
+          "text": "Et le sacrificateur verra la plaie le septieme jour: et voici, la teigne ne s'est pas etendue, et elle n'a pas de poil jaunatre, et la teigne ne parait pas plus enfoncee que la peau,"
+        },
+        {
+          "verse": 33,
+          "text": "alors l'homme se rasera, mais il ne rasera pas l'endroit de la teigne; et le sacrificateur fera enfermer pendant sept autres jours celui qui a la teigne."
+        },
+        {
+          "verse": 34,
+          "text": "Et le sacrificateur verra la teigne le septieme jour: et voici, la teigne ne s'est pas etendue dans la peau, et elle ne parait pas plus enfoncee que la peau, alors le sacrificateur le declarera pur; et l'homme lavera ses vetements, et il sera pur."
+        },
+        {
+          "verse": 35,
+          "text": "Et si la teigne s'est beaucoup etendue dans la peau, apres sa purification, le sacrificateur le verra;"
+        },
+        {
+          "verse": 36,
+          "text": "et si la teigne s'est etendue dans la peau, le sacrificateur ne cherchera pas de poil jaunatre: il est impur."
+        },
+        {
+          "verse": 37,
+          "text": "Et si la teigne est demeuree au meme etat, à ses yeux, et que du poil noir y ait pousse, la teigne est guerie: il est pur, et le sacrificateur le declarera pur."
+        },
+        {
+          "verse": 38,
+          "text": "Et si un homme ou une femme a dans la peau de sa chair des taches, des taches blanches,"
+        },
+        {
+          "verse": 39,
+          "text": "le sacrificateur le verra; et voici, dans la peau de leur chair, il y a des taches blanches, ternes, c'est une simple tache qui a fait eruption dans la peau: il est pur."
+        },
+        {
+          "verse": 40,
+          "text": "Et si un homme a perdu les cheveux de sa tete, il est chauve: il est pur;"
+        },
+        {
+          "verse": 41,
+          "text": "et s'il a perdu les cheveux de sa tete du cote du visage, il est chauve par devant: il est pur."
+        },
+        {
+          "verse": 42,
+          "text": "Et s'il y a, dans la partie chauve du haut ou de devant, une plaie blanche roussatre, c'est une lepre qui a fait eruption dans la partie chauve du haut ou de devant;"
+        },
+        {
+          "verse": 43,
+          "text": "et le sacrificateur le verra: et voici, la tumeur de la plaie est d'un blanc roussatre dans la partie chauve du haut ou de devant, comme une apparence de lepre dans la peau de la chair;"
+        },
+        {
+          "verse": 44,
+          "text": "c'est un homme lepreux, il est impur; le sacrificateur le declarera entierement impur: sa plaie est en sa tete."
+        },
+        {
+          "verse": 45,
+          "text": "Et le lepreux en qui sera la plaie aura ses vetements dechires et sa tete decouverte, et il se couvrira la barbe, et il criera: Impur! Impur!"
+        },
+        {
+          "verse": 46,
+          "text": "Tout le temps que la plaie sera en lui, il sera impur; il est impur; il habitera seul, son habitation sera hors du camp."
+        },
+        {
+          "verse": 47,
+          "text": "Et s'il y a une plaie de lepre en un vetement, en un vetement de laine ou en un vetement de lin,"
+        },
+        {
+          "verse": 48,
+          "text": "ou dans la chaine ou dans la trame du lin ou de la laine, ou dans une peau, ou dans quelque ouvrage fait de peau,"
+        },
+        {
+          "verse": 49,
+          "text": "et si la plaie est verdatre ou roussatre dans le vetement, ou dans la peau, ou dans la chaine, ou dans la trame, ou dans quelque objet fait de peau, c'est une plaie de lepre, et elle sera montree au sacrificateur."
+        },
+        {
+          "verse": 50,
+          "text": "Et le sacrificateur verra la plaie, et il fera enfermer pendant sept jours l'objet ou est la plaie;"
+        },
+        {
+          "verse": 51,
+          "text": "et le septieme jour, il verra la plaie; -si la plaie s'est etendue dans le vetement, soit dans la chaine, soit dans la trame, soit dans la peau, dans un ouvrage quelconque qui a ete fait de peau, la plaie est une lepre rongeante: la chose est impure."
+        },
+        {
+          "verse": 52,
+          "text": "Alors on brulera le vetement, ou la chaine, ou la trame de laine ou de lin, ou tout objet fait de peau dans lequel est la plaie; car c'est une lepre rongeante; la chose sera brulee au feu."
+        },
+        {
+          "verse": 53,
+          "text": "Et si le sacrificateur regarde, et voici, la plaie ne s'est pas etendue dans le vetement, ou dans la chaine, ou dans la trame, ou dans quelque objet fait de peau,"
+        },
+        {
+          "verse": 54,
+          "text": "alors le sacrificateur commandera qu'on lave l'objet ou est la plaie, et le fera enfermer pendant sept autres jours."
+        },
+        {
+          "verse": 55,
+          "text": "Et le sacrificateur verra, apres que la plaie aura ete lavee: et voici; la plaie n'a pas change d'aspect, et la plaie ne s'est pas etendue, -la chose est impure, tu la bruleras au feu; c'est une erosion à son envers ou à son endroit."
+        },
+        {
+          "verse": 56,
+          "text": "Et si le sacrificateur regarde, et voici, la plaie s'efface apres avoir ete lavee, alors on l'arrachera du vetement, ou de la peau, ou de la chaine, ou de la trame."
+        },
+        {
+          "verse": 57,
+          "text": "Et si elle parait encore dans le vetement, ou dans la chaine, ou dans la trame, ou dans quelque objet fait de peau, c'est une lepre qui fait eruption; tu bruleras au feu l'objet ou est la plaie."
+        },
+        {
+          "verse": 58,
+          "text": "Et le vetement, ou la chaine, ou la trame, ou tout objet fait de peau que tu auras lave, et d'ou la plaie s'est retiree, sera lave une seconde fois, et il sera pur."
+        },
+        {
+          "verse": 59,
+          "text": "Telle est la loi touchant la plaie de la lepre dans un vetement de laine ou de lin, ou dans la chaine ou dans la trame, ou dans quelque objet fait de peau, pour le purifier ou le declarer impur."
+        }
+      ]
+    },
+    {
+      "chapter": 14,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "C'est ici la loi du lepreux, au jour de sa purification:"
+        },
+        {
+          "verse": 3,
+          "text": "il sera amene au sacrificateur; et le sacrificateur sortira hors du camp; et le sacrificateur le verra: et voici, le lepreux est gueri de la plaie de la lepre;"
+        },
+        {
+          "verse": 4,
+          "text": "alors le sacrificateur commandera qu'on prenne, pour celui qui doit etre purifie, deux oiseaux vivants et purs, et du bois de cedre, et de l'ecarlate, et de l'hysope;"
+        },
+        {
+          "verse": 5,
+          "text": "et le sacrificateur commandera qu'on egorge l'un des oiseaux sur un vase de terre, sur de l'eau vive."
+        },
+        {
+          "verse": 6,
+          "text": "Quant à l'oiseau vivant, il le prendra, et le bois de cedre, et l'ecarlate, et l'hysope, et il les trempera, ainsi que l'oiseau vivant, dans le sang de l'oiseau egorge sur l'eau vive;"
+        },
+        {
+          "verse": 7,
+          "text": "et il fera aspersion, sept fois, sur celui qui doit etre purifie de la lepre, et il le purifiera; puis il lachera dans les champs l'oiseau vivant."
+        },
+        {
+          "verse": 8,
+          "text": "Et celui qui doit etre purifie lavera ses vetements et rasera tout son poil, et se lavera dans l'eau; et il sera pur. Et apres cela, il entrera dans le camp, et il habitera sept jours hors de sa tente."
+        },
+        {
+          "verse": 9,
+          "text": "Et il arrivera que, le septieme jour, il rasera tout son poil, sa tete et sa barbe et ses sourcils; il rasera tout son poil; et il lavera ses vetements, et il lavera sa chair dans l'eau, et il sera pur."
+        },
+        {
+          "verse": 10,
+          "text": "Et le huitieme jour, il prendra deux agneaux sans defaut, et une jeune brebis agee d'un an, sans defaut, et trois dixiemes de fleur de farine petrie à l'huile, en offrande de gateau, et un log d'huile."
+        },
+        {
+          "verse": 11,
+          "text": "Et le sacrificateur qui fait la purification placera l'homme qui doit etre purifie, et ces choses, devant l'Eternel, à l'entree de la tente d'assignation;"
+        },
+        {
+          "verse": 12,
+          "text": "et le sacrificateur prendra l'un des agneaux, et le presentera comme sacrifice pour le delit, avec le log d'huile, et les tournoiera en offrande tournoyee devant l'Eternel;"
+        },
+        {
+          "verse": 13,
+          "text": "puis il egorgera l'agneau au lieu ou l'on egorge le sacrifice pour le peche et l'holocauste, dans un lieu saint; car le sacrifice pour le delit est comme le sacrifice pour le peche, il appartient au sacrificateur: c'est une chose tres-sainte."
+        },
+        {
+          "verse": 14,
+          "text": "Et le sacrificateur prendra du sang du sacrifice pour le delit, et le sacrificateur le mettra sur le lobe de l'oreille droite de celui qui doit etre purifie, et sur le pouce de sa main droite, et sur le gros orteil de son pied droit."
+        },
+        {
+          "verse": 15,
+          "text": "Et le sacrificateur prendra du log d'huile, et en versera dans la paume de sa main gauche, à lui, le sacrificateur;"
+        },
+        {
+          "verse": 16,
+          "text": "et le sacrificateur trempera le doigt de sa main droite dans l'huile qui est dans sa paume gauche, et fera aspersion de l'huile avec son doigt, sept fois, devant l'Eternel."
+        },
+        {
+          "verse": 17,
+          "text": "Et du reste de l'huile qui sera dans sa paume, le sacrificateur en mettra sur le lobe de l'oreille droite de celui qui doit etre purifie, et sur le pouce de sa main droite, et sur le gros orteil de son pied droit, sur le sang du sacrifice pour le delit;"
+        },
+        {
+          "verse": 18,
+          "text": "et le reste de l'huile qui sera dans la paume du sacrificateur, il le mettra sur la tete de celui qui doit etre purifie; et le sacrificateur fera propitiation pour lui devant l'Eternel."
+        },
+        {
+          "verse": 19,
+          "text": "Et le sacrificateur offrira le sacrifice pour le peche, et fera propitiation pour celui qui doit etre purifie de son impurete; et apres, il egorgera l'holocauste."
+        },
+        {
+          "verse": 20,
+          "text": "Et le sacrificateur offrira l'holocauste et le gateau sur l'autel; et le sacrificateur fera propitiation pour celui qui doit etre purifie, et il sera pur."
+        },
+        {
+          "verse": 21,
+          "text": "Et s'il est pauvre, et que sa main ne puisse atteindre jusque-là, il prendra un agneau comme sacrifice pour le delit, pour offrande tournoyee, afin de faire propitiation pour lui, et un dixieme de fleur de farine petrie à l'huile, pour offrande de gateau, et un log d'huile,"
+        },
+        {
+          "verse": 22,
+          "text": "et deux tourterelles ou deux jeunes pigeons, selon ce que sa main pourra atteindre: l'un sera un sacrifice pour le peche, l'autre un holocauste."
+        },
+        {
+          "verse": 23,
+          "text": "Et le huitieme jour de sa purification, il les apportera au sacrificateur, à l'entree de la tente d'assignation, devant l'Eternel;"
+        },
+        {
+          "verse": 24,
+          "text": "et le sacrificateur prendra l'agneau du sacrifice pour le delit, et le log d'huile, et le sacrificateur les tournoiera en offrande tournoyee devant l'Eternel;"
+        },
+        {
+          "verse": 25,
+          "text": "et il egorgera l'agneau du sacrifice pour le delit; et le sacrificateur prendra du sang du sacrifice pour le delit, et le mettra sur le lobe de l'oreille droite de celui qui doit etre purifie, et sur le pouce de sa main droite, et sur le gros orteil de son pied droit."
+        },
+        {
+          "verse": 26,
+          "text": "Et le sacrificateur versera de l'huile dans la paume de sa main gauche, à lui, le sacrificateur;"
+        },
+        {
+          "verse": 27,
+          "text": "et avec le doigt de sa main droite, le sacrificateur fera aspersion de l'huile qui sera dans la paume de sa main gauche, sept fois, devant l'Eternel."
+        },
+        {
+          "verse": 28,
+          "text": "Et le sacrificateur mettra de l'huile qui sera dans sa paume, sur le lobe de l'oreille droite de celui qui doit etre purifie, et sur le pouce de sa main droite, et sur le gros orteil de son pied droit, sur l'endroit ou aura ete mis le sang du sacrifice pour le delit;"
+        },
+        {
+          "verse": 29,
+          "text": "et le reste de l'huile qui sera dans la paume du sacrificateur, il le mettra sur la tete de celui qui doit etre purifie, pour faire propitiation pour lui devant l'Eternel."
+        },
+        {
+          "verse": 30,
+          "text": "Et, de ce que sa main aura pu atteindre, il offrira l'une des tourterelles, ou l'un des jeunes pigeons:"
+        },
+        {
+          "verse": 31,
+          "text": "de ce que sa main aura pu atteindre, l'un sera un sacrifice pour le peche, l'autre un holocauste, avec l'offrande de gateau; et le sacrificateur fera propitiation pour celui qui doit etre purifie, devant l'Eternel."
+        },
+        {
+          "verse": 32,
+          "text": "-Telle est la loi touchant celui en qui il y a une plaie de lepre, et dont la main n'a pas su atteindre ce qui etait ordonne pour sa purification."
+        },
+        {
+          "verse": 33,
+          "text": "Et l'Eternel parla à Moise et à Aaron, disant:"
+        },
+        {
+          "verse": 34,
+          "text": "Quand vous serez entres dans le pays de Canaan, que je vous donne en possession, si je mets une plaie de lepre dans une maison du pays de votre possession,"
+        },
+        {
+          "verse": 35,
+          "text": "celui à qui sera la maison viendra et le fera savoir au sacrificateur, en disant: Il me semble voir comme une plaie dans ma maison;"
+        },
+        {
+          "verse": 36,
+          "text": "et le sacrificateur commandera qu'on vide la maison avant que le sacrificateur entre pour voir la plaie, afin que tout ce qui est dans la maison ne soit pas rendu impur; et apres cela, le sacrificateur entrera pour voir la maison."
+        },
+        {
+          "verse": 37,
+          "text": "Et il regardera la plaie: et voici, la plaie est dans les murs de la maison, des creux verdatres ou roussatres, et ils paraissent plus enfonces que la surface du mur;"
+        },
+        {
+          "verse": 38,
+          "text": "alors le sacrificateur sortira de la maison, à l'entree de la maison, et fera fermer la maison pendant sept jours."
+        },
+        {
+          "verse": 39,
+          "text": "Et le septieme jour, le sacrificateur retournera, et regardera: et voici, la plaie s'est etendue dans les murs de la maison;"
+        },
+        {
+          "verse": 40,
+          "text": "alors le sacrificateur commandera qu'on arrache les pierres dans lesquelles est la plaie, et qu'on les jette hors de la ville, dans un lieu impur."
+        },
+        {
+          "verse": 41,
+          "text": "Et il fera racler la maison au dedans, tout autour, et la poussiere qu'on aura raclee, on la versera hors de la ville, dans un lieu impur;"
+        },
+        {
+          "verse": 42,
+          "text": "et on prendra d'autres pierres, et on les mettra au lieu des premieres pierres, et on prendra d'autre enduit, et on enduira la maison."
+        },
+        {
+          "verse": 43,
+          "text": "Et si la plaie revient et fait eruption dans la maison apres qu'on aura arrache les pierres, et apres qu'on aura racle la maison, et apres qu'on l'aura enduite,"
+        },
+        {
+          "verse": 44,
+          "text": "le sacrificateur entrera et regardera: et voici, la plaie s'est etendue dans la maison, -c'est une lepre rongeante dans la maison: elle est impure."
+        },
+        {
+          "verse": 45,
+          "text": "Alors on demolira la maison, ses pierres et son bois, avec tout l'enduit de la maison, et on les transportera hors de la ville, dans un lieu impur."
+        },
+        {
+          "verse": 46,
+          "text": "Et celui qui sera entre dans la maison pendant tous les jours ou elle aura ete fermee, sera impur jusqu'au soir;"
+        },
+        {
+          "verse": 47,
+          "text": "et celui qui aura couche dans la maison lavera ses vetements; et celui qui aura mange dans la maison lavera ses vetements."
+        },
+        {
+          "verse": 48,
+          "text": "Mais si le sacrificateur entre, et regarde, et voici, la plaie ne s'est pas etendue dans la maison apres que la maison a ete enduite, le sacrificateur declarera la maison pure, car la plaie est guerie."
+        },
+        {
+          "verse": 49,
+          "text": "Et il prendra, pour purifier la maison, deux oiseaux, et du bois de cedre, et de l'ecarlate, et de l'hysope;"
+        },
+        {
+          "verse": 50,
+          "text": "et il egorgera l'un des oiseaux sur un vase de terre, sur de l'eau vive;"
+        },
+        {
+          "verse": 51,
+          "text": "et il prendra le bois de cedre, et l'hysope, et l'ecarlate, et l'oiseau vivant, et les trempera dans le sang de l'oiseau egorge, et dans l'eau vive; et il fera aspersion sur la maison, sept fois;"
+        },
+        {
+          "verse": 52,
+          "text": "et il purifiera la maison avec le sang de l'oiseau et avec l'eau vive, et avec l'oiseau vivant, et avec le bois de cedre, et avec l'hysope, et avec l'ecarlate;"
+        },
+        {
+          "verse": 53,
+          "text": "et il lachera l'oiseau vivant hors de la ville, dans les champs. Et il fera propitiation pour la maison, et elle sera pure."
+        },
+        {
+          "verse": 54,
+          "text": "Telle est la loi touchant toute la plaie de lepre, et la teigne,"
+        },
+        {
+          "verse": 55,
+          "text": "et touchant la lepre des vetements et des maisons,"
+        },
+        {
+          "verse": 56,
+          "text": "et les tumeurs, et les dartres, et les taches blanchatres,"
+        },
+        {
+          "verse": 57,
+          "text": "pour enseigner en quel temps il y a impurete et en quel temps il y a purete: telle est la loi de la lepre."
+        }
+      ]
+    },
+    {
+      "chapter": 15,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise et à Aaron, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Parlez aux fils d'Israel, et dites-leur: Tout homme qui a un flux decoulant de sa chair, -son flux le rend impur."
+        },
+        {
+          "verse": 3,
+          "text": "Et ceci sera son impurete, dans son flux: soit que sa chair laisse couler son flux, ou que sa chair retienne son flux, c'est son impurete."
+        },
+        {
+          "verse": 4,
+          "text": "Tout lit sur lequel aura couche celui qui est atteint d'un flux sera impur; et tout objet sur lequel il se sera assis sera impur."
+        },
+        {
+          "verse": 5,
+          "text": "Et l'homme qui aura touche son lit lavera ses vetements, et se lavera dans l'eau; et il sera impur jusqu'au soir."
+        },
+        {
+          "verse": 6,
+          "text": "Et celui qui s'assiera sur un objet sur lequel celui qui a le flux se sera assis, lavera ses vetements, et se lavera dans l'eau; et il sera impur jusqu'au soir."
+        },
+        {
+          "verse": 7,
+          "text": "Et celui qui touchera la chair de celui qui a le flux, lavera ses vetements, et se lavera dans l'eau; et il sera impur jusqu'au soir."
+        },
+        {
+          "verse": 8,
+          "text": "Et si celui qui a le flux crache sur un homme qui est pur, celui-ci lavera ses vetements, et se lavera dans l'eau; et il sera impur jusqu'au soir."
+        },
+        {
+          "verse": 9,
+          "text": "Tout char sur lequel sera monte celui qui a le flux sera impur."
+        },
+        {
+          "verse": 10,
+          "text": "Et quiconque touchera quelque chose qui aura ete sous lui, sera impur jusqu'au soir; et celui qui portera une de ces choses lavera ses vetements, et se lavera dans l'eau; et il sera impur jusqu'au soir."
+        },
+        {
+          "verse": 11,
+          "text": "Et quiconque aura ete touche par celui qui a le flux et qui n'aura pas lave ses mains dans l'eau, lavera ses vetements, et se lavera dans l'eau; et il sera impur jusqu'au soir."
+        },
+        {
+          "verse": 12,
+          "text": "Et les vases de terre que celui qui a le flux aura touches seront casses; et tout vase de bois sera lave dans l'eau."
+        },
+        {
+          "verse": 13,
+          "text": "Et lorsque celui qui a le flux sera purifie de son flux, il comptera sept jours pour sa purification; puis il lavera ses vetements, et il lavera sa chair dans l'eau vive; et il sera pur."
+        },
+        {
+          "verse": 14,
+          "text": "Et le huitieme jour, il prendra deux tourterelles, ou deux jeunes pigeons, et il viendra devant l'Eternel, à l'entree de la tente d'assignation, et les donnera au sacrificateur;"
+        },
+        {
+          "verse": 15,
+          "text": "et le sacrificateur les offrira, l'un en sacrifice pour le peche, et l'autre en holocauste; et le sacrificateur fera propitiation pour lui devant l'Eternel, à cause de son flux."
+        },
+        {
+          "verse": 16,
+          "text": "Et lorsque la semence sort d'un homme, il lavera dans l'eau toute sa chair; et il sera impur jusqu'au soir."
+        },
+        {
+          "verse": 17,
+          "text": "Et tout vetement ou toute peau sur lesquels il y aura de la semence, sera lave dans l'eau, et sera impur jusqu'au soir."
+        },
+        {
+          "verse": 18,
+          "text": "Et une femme avec laquelle un homme aura couche ayant commerce avec elle;.. ils se laveront dans l'eau, et seront impurs jusqu'au soir."
+        },
+        {
+          "verse": 19,
+          "text": "Et si une femme a un flux, et que son flux en sa chair soit du sang, elle sera dans sa separation sept jours, et quiconque la touchera sera impur jusqu'au soir."
+        },
+        {
+          "verse": 20,
+          "text": "Et toute chose sur laquelle elle aura couche durant sa separation sera impure; et toute chose sur laquelle elle aura ete assise sera impure;"
+        },
+        {
+          "verse": 21,
+          "text": "et quiconque touchera son lit lavera ses vetements, et se lavera dans l'eau; et il sera impur jusqu'au soir."
+        },
+        {
+          "verse": 22,
+          "text": "Et quiconque touchera un objet, quel qu'il soit, sur lequel elle se sera assise, lavera ses vetements, et se lavera dans l'eau; et il sera impur jusqu'au soir."
+        },
+        {
+          "verse": 23,
+          "text": "Et s'il y a quelque chose sur le lit, ou sur l'objet, quel qu'il soit, sur lequel elle se sera assise, quiconque l'aura touche sera impur jusqu'au soir."
+        },
+        {
+          "verse": 24,
+          "text": "Et si un homme a couche avec elle, et que son impurete soit sur lui, il sera impur sept jours; et tout lit sur lequel il se couchera sera impur."
+        },
+        {
+          "verse": 25,
+          "text": "Et lorsqu'une femme a un flux de sang qui coule plusieurs jours hors le temps de sa separation, ou lorsqu'elle a le flux au delà du temps de sa separation, tous les jours du flux de son impurete elle est impure, comme aux jours de sa separation."
+        },
+        {
+          "verse": 26,
+          "text": "Tout lit sur lequel elle couchera tous les jours de son flux sera pour elle comme le lit de sa separation; et tout objet sur lequel elle se sera assise sera impur, selon l'impurete de sa separation."
+        },
+        {
+          "verse": 27,
+          "text": "Et quiconque aura touche ces choses sera impur, et il lavera ses vetements, et se lavera dans l'eau; et il sera impur jusqu'au soir."
+        },
+        {
+          "verse": 28,
+          "text": "Et si elle est purifiee de son flux, elle comptera sept jours, et apres, elle sera pure;"
+        },
+        {
+          "verse": 29,
+          "text": "et le huitieme jour, elle prendra deux tourterelles ou deux jeunes pigeons, et les apportera au sacrificateur, à l'entree de la tente d'assignation."
+        },
+        {
+          "verse": 30,
+          "text": "Et le sacrificateur offrira l'un en sacrifice pour le peche, et l'autre en holocauste; et le sacrificateur fera propitiation pour elle devant l'Eternel, à cause du flux de son impurete."
+        },
+        {
+          "verse": 31,
+          "text": "Et vous separerez les fils d'Israel de leurs impuretes, et ils ne mourront pas dans leurs impuretes, en souillant mon tabernacle qui est au milieu d'eux."
+        },
+        {
+          "verse": 32,
+          "text": "Telle est la loi pour celui qui a un flux ou pour celui duquel sort de la semence qui le rend impur,"
+        },
+        {
+          "verse": 33,
+          "text": "et pour la femme qui souffre à cause de ses mois, pendant sa separation, et pour toute personne qui a un flux, soit homme, soit femme, et pour celui qui couche avec une femme impure."
+        }
+      ]
+    },
+    {
+      "chapter": 16,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise, apres la mort des deux fils d'Aaron, lorsque, s'etant approches de l'Eternel, ils moururent;"
+        },
+        {
+          "verse": 2,
+          "text": "et l'Eternel dit à Moise: Dis à Aaron, ton frere, qu'il n'entre pas en tout temps dans le lieu saint, au dedans du voile, devant le propitiatoire qui est sur l'arche, afin qu'il ne meure pas; car j'apparais dans la nuee sur le propitiatoire."
+        },
+        {
+          "verse": 3,
+          "text": "Aaron entrera de cette maniere dans le lieu saint: avec un jeune taureau pour sacrifice pour le peche, et un belier pour holocauste;"
+        },
+        {
+          "verse": 4,
+          "text": "il se revetira d'une sainte tunique de lin, et des caleçons de lin seront sur sa chair, et il se ceindra d'une ceinture de lin, et il s'enveloppera la tete d'une tiare de lin: ce sont de saints vetements; et il lavera sa chair dans l'eau; puis il s'en vetira."
+        },
+        {
+          "verse": 5,
+          "text": "Et il prendra de l'assemblee des fils d'Israel deux boucs pour un sacrifice pour le peche, et un belier pour un holocauste."
+        },
+        {
+          "verse": 6,
+          "text": "Et Aaron presentera le taureau du sacrifice pour le peche, qui est pour lui-meme, et fera propitiation pour lui-meme et pour sa maison."
+        },
+        {
+          "verse": 7,
+          "text": "Et il prendra les deux boucs, et les placera devant l'Eternel, à l'entree de la tente d'assignation."
+        },
+        {
+          "verse": 8,
+          "text": "Et Aaron jettera le sort sur les deux boucs, un sort pour l'Eternel et un sort pour azazel."
+        },
+        {
+          "verse": 9,
+          "text": "Et Aaron presentera le bouc sur lequel le sort sera tombe pour l'Eternel, et en fera un sacrifice pour le peche."
+        },
+        {
+          "verse": 10,
+          "text": "Et le bouc sur lequel le sort sera tombe pour azazel, sera place vivant devant l'Eternel, afin de faire propitiation sur lui, pour l'envoyer au desert pour etre azazel."
+        },
+        {
+          "verse": 11,
+          "text": "Et Aaron presentera le taureau du sacrifice pour le peche, qui est pour lui-meme, et fera propitiation pour lui-meme et pour sa maison; et il egorgera le taureau du sacrifice pour le peche, qui est pour lui-meme;"
+        },
+        {
+          "verse": 12,
+          "text": "puis il prendra plein un encensoir de charbons de feu, de dessus l'autel qui est devant l'Eternel, et plein ses paumes d'encens de drogues odoriferantes pulverisees, et il les apportera au dedans du voile;"
+        },
+        {
+          "verse": 13,
+          "text": "et il mettra l'encens sur le feu, devant l'Eternel, pour que la nuee de l'encens couvre le propitiatoire qui est sur le temoignage, afin qu'il ne meure pas."
+        },
+        {
+          "verse": 14,
+          "text": "Et il prendra du sang du taureau, et il en fera aspersion avec son doigt sur le devant du propitiatoire, vers l'orient; et il fera aspersion du sang avec son doigt, sept fois, devant le propitiatoire."
+        },
+        {
+          "verse": 15,
+          "text": "Et il egorgera le bouc du sacrifice pour le peche, qui est pour le peuple, et il apportera son sang au dedans du voile, et fera avec son sang, comme il a fait avec le sang du taureau: il en fera aspersion sur le propitiatoire et devant le propitiatoire."
+        },
+        {
+          "verse": 16,
+          "text": "Et il fera propitiation pour le lieu saint, le purifiant des impuretes des fils d'Israel et de leurs transgressions, selon tous leurs peches; et il fera de meme pour la tente d'assignation, qui demeure avec eux au milieu de leurs impuretes."
+        },
+        {
+          "verse": 17,
+          "text": "Et personne ne sera dans la tente d'assignation quand il y entrera pour faire propitiation dans le lieu saint, jusqu'à ce qu'il en sorte; et il fera propitiation pour lui-meme et pour sa maison, et pour toute la congregation d'Israel."
+        },
+        {
+          "verse": 18,
+          "text": "Et il sortira vers l'autel qui est devant l'Eternel, et fera propitiation pour lui; et il prendra du sang du taureau et du sang du bouc, et le mettra sur les cornes de l'autel, tout autour;"
+        },
+        {
+          "verse": 19,
+          "text": "et il fera sur lui aspersion du sang avec son doigt, sept fois, et il le purifiera, et le sanctifiera des impuretes des fils d'Israel."
+        },
+        {
+          "verse": 20,
+          "text": "Et quand il aura acheve de faire propitiation pour le lieu saint, et pour la tente d'assignation, et pour l'autel, il presentera le bouc vivant."
+        },
+        {
+          "verse": 21,
+          "text": "Et Aaron posera ses deux mains sur la tete du bouc vivant, et confessera sur lui toutes les iniquites des fils d'Israel et toutes leurs transgressions, selon tous leurs peches; il les mettra sur la tete du bouc, et l'enverra au desert par un homme qui se tiendra pret pour cela;"
+        },
+        {
+          "verse": 22,
+          "text": "et le bouc portera sur lui toutes leurs iniquites dans une terre inhabitee; et l'homme laissera aller le bouc dans le desert."
+        },
+        {
+          "verse": 23,
+          "text": "Et Aaron rentrera à la tente d'assignation, et quittera les vetements de lin dont il s'etait vetu quand il etait entre dans le lieu saint, et les deposera là;"
+        },
+        {
+          "verse": 24,
+          "text": "et il lavera sa chair dans l'eau dans un lieu saint, et se revetira de ses vetements; et il sortira, et il offrira son holocauste et l'holocauste du peuple, et fera propitiation pour lui-meme et pour le peuple."
+        },
+        {
+          "verse": 25,
+          "text": "Et il fera fumer sur l'autel la graisse du sacrifice pour le peche."
+        },
+        {
+          "verse": 26,
+          "text": "Et celui qui aura conduit le bouc pour etre azazel, lavera ses vetements, et lavera sa chair dans l'eau; et apres cela il rentrera dans le camp."
+        },
+        {
+          "verse": 27,
+          "text": "Et on transportera hors du camp le taureau du sacrifice pour le peche et le bouc du sacrifice pour le peche, desquels le sang aura ete porte dans le lieu saint pour faire propitiation, et on brulera au feu leur peau, et leur chair, et leur fiente."
+        },
+        {
+          "verse": 28,
+          "text": "Et celui qui les aura brulees lavera ses vetements, et lavera sa chair dans l'eau; et apres cela il rentrera dans le camp."
+        },
+        {
+          "verse": 29,
+          "text": "Et ceci sera pour vous un statut perpetuel: au septieme mois, le dixieme jour du mois, vous affligerez vos ames, et vous ne ferez aucune oeuvre, tant l'Israelite de naissance que l'etranger qui sejourne au milieu de vous;"
+        },
+        {
+          "verse": 30,
+          "text": "car, en ce jour-là, il sera fait propitiation pour vous, afin de vous purifier: et vous serez purs de tous vos peches devant l'Eternel."
+        },
+        {
+          "verse": 31,
+          "text": "Ce sera pour vous un sabbat de repos, et vous affligerez vos ames; c'est un statut perpetuel."
+        },
+        {
+          "verse": 32,
+          "text": "Et le sacrificateur qui aura ete oint et qui aura ete consacre pour exercer la sacrificature à la place de son pere, fera propitiation; et il revetira les vetements de lin, les saints vetements;"
+        },
+        {
+          "verse": 33,
+          "text": "et il fera propitiation pour le saint sanctuaire, et il fera propitiation pour la tente d'assignation et pour l'autel, et il fera propitiation pour les sacrificateurs et pour tout le peuple de la congregation."
+        },
+        {
+          "verse": 34,
+          "text": "Et ceci sera pour vous un statut perpetuel, afin de faire propitiation pour les fils d'Israel pour les purifier de tous leurs peches, une fois l'an. Et on fit comme l'Eternel avait commande à Moise."
+        }
+      ]
+    },
+    {
+      "chapter": 17,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Parle à Aaron et à ses fils, et à tous les fils d'Israel, et dis-leur: C'est ici ce que l'Eternel a commande, disant:"
+        },
+        {
+          "verse": 3,
+          "text": "Quiconque de la maison d'Israel aura egorge un boeuf ou un mouton ou une chevre, dans le camp, ou qui l'aura egorge hors du camp,"
+        },
+        {
+          "verse": 4,
+          "text": "et ne l'aura pas amene à l'entree de la tente d'assignation pour le presenter comme offrande à l'Eternel devant le tabernacle de l'Eternel, le sang sera impute à cet homme-là: il a verse du sang; cet homme-là sera retranche du milieu de son peuple;"
+        },
+        {
+          "verse": 5,
+          "text": "-afin que les fils d'Israel amenent leurs sacrifices qu'ils sacrifient dans les champs, qu'ils les amenent à l'Eternel, à l'entree de la tente d'assignation, vers le sacrificateur, et qu'ils les sacrifient en sacrifices de prosperites à l'Eternel."
+        },
+        {
+          "verse": 6,
+          "text": "Et le sacrificateur fera aspersion du sang sur l'autel de l'Eternel, à l'entree de la tente d'assignation, et en fera fumer la graisse en odeur agreable à l'Eternel;"
+        },
+        {
+          "verse": 7,
+          "text": "et ils ne sacrifieront plus leurs sacrifices aux demons apres lesquels ils se prostituent. Ceci sera pour eux un statut perpetuel, en leurs generations."
+        },
+        {
+          "verse": 8,
+          "text": "Et tu leur diras: Quiconque de la maison d'Israel, ou des etrangers qui sejournent au milieu d'eux, offrira un holocauste ou un sacrifice,"
+        },
+        {
+          "verse": 9,
+          "text": "et ne l'amenera pas à l'entree de la tente d'assignation pour le sacrifier à l'Eternel, cet homme-là sera retranche de ses peuples."
+        },
+        {
+          "verse": 10,
+          "text": "Et quiconque de la maison d'Israel ou des etrangers qui sejournent au milieu d'eux, aura mange de quelque sang que ce soit, je mettrai ma face contre celui qui aura mange du sang, et je le retrancherai du milieu de son peuple;"
+        },
+        {
+          "verse": 11,
+          "text": "car l'ame de la chair est dans le sang; et moi je vous l'ai donne sur l'autel, pour faire propitiation pour vos ames; car c'est le sang qui fait propitiation pour l'ame."
+        },
+        {
+          "verse": 12,
+          "text": "C'est pourquoi j'ai dit aux fils d'Israel: Personne d'entre vous ne mangera du sang, et l'etranger qui sejourne au milieu de vous ne mangera pas de sang."
+        },
+        {
+          "verse": 13,
+          "text": "Et quiconque des fils d'Israel et des etrangers qui sejournent au milieu d'eux prendra, à la chasse, une bete ou un oiseau qui se mange, en versera le sang et le recouvrira de poussiere;"
+        },
+        {
+          "verse": 14,
+          "text": "car, quant à la vie de toute chair, son sang est sa vie en elle; et j'ai dit aux fils d'Israel: Vous ne mangerez le sang d'aucune chair; car l'ame de toute chair est son sang; quiconque en mangera sera retranche."
+        },
+        {
+          "verse": 15,
+          "text": "Et toute personne, tant d'Israelite de naissance que l'etranger, qui mangera du corps d'une bete morte d'elle-meme ou dechiree, lavera ses vetements et se lavera dans l'eau, et sera impure jusqu'au soir: alors elle sera pure."
+        },
+        {
+          "verse": 16,
+          "text": "Et si elle ne lave pas ses vetements et ne lave pas sa chair, elle portera son iniquite."
+        }
+      ]
+    },
+    {
+      "chapter": 18,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Parle aux fils d'Israel, et dis-leur: Moi, je suis l'Eternel, votre Dieu."
+        },
+        {
+          "verse": 3,
+          "text": "Vous ne ferez pas ce qui se fait dans le pays d'Egypte ou vous avez habite, et vous ne ferez pas ce qui se fait dans le pays de Canaan ou je vous fais entrer, et vous ne marcherez pas selon leurs coutumes."
+        },
+        {
+          "verse": 4,
+          "text": "Vous pratiquerez mes ordonnances, et vous garderez mes statuts pour y marcher. Moi, je suis l'Eternel, votre Dieu."
+        },
+        {
+          "verse": 5,
+          "text": "Et vous garderez mes statuts et mes ordonnances, par lesquels, s'il les pratique, un homme vivra. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 6,
+          "text": "Nul homme ne s'approchera de sa proche parente, pour decouvrir sa nudite. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 7,
+          "text": "Tu ne decouvriras point la nudite de ton pere, ni la nudite de ta mere: c'est ta mere; tu ne decouvriras point sa nudite."
+        },
+        {
+          "verse": 8,
+          "text": "Tu ne decouvriras point la nudite de la femme de ton pere: c'est la nudite de ton pere."
+        },
+        {
+          "verse": 9,
+          "text": "La nudite de ta soeur, fille de ton pere ou fille de ta mere, nee dans la maison ou nee au dehors, -sa nudite, tu ne la decouvriras point."
+        },
+        {
+          "verse": 10,
+          "text": "La nudite de la fille de ton fils ou de la fille de ta fille, -sa nudite, tu ne la decouvriras point; car c'est ta nudite."
+        },
+        {
+          "verse": 11,
+          "text": "La nudite de la fille de la femme de ton pere, nee de ton pere, -c'est ta soeur: tu ne decouvriras point sa nudite."
+        },
+        {
+          "verse": 12,
+          "text": "Tu ne decouvriras point la nudite de la soeur de ton pere; elle est propre chair de ton pere."
+        },
+        {
+          "verse": 13,
+          "text": "Tu ne decouvriras point la nudite de la soeur de ta mere; car elle est propre chair de ta mere."
+        },
+        {
+          "verse": 14,
+          "text": "Tu ne decouvriras point la nudite du frere de ton pere; tu ne t'approcheras point de sa femme: elle est ta tante."
+        },
+        {
+          "verse": 15,
+          "text": "Tu ne decouvriras point la nudite de ta belle-fille: elle est la femme de ton fils; tu ne decouvriras point sa nudite."
+        },
+        {
+          "verse": 16,
+          "text": "Tu ne decouvriras point la nudite de la femme de ton frere; c'est la nudite de ton frere."
+        },
+        {
+          "verse": 17,
+          "text": "Tu ne decouvriras point la nudite d'une femme et de sa fille; tu ne prendras point la fille de son fils, ni la fille de sa fille, pour decouvrir sa nudite; elles sont sa propre chair: c'est un crime."
+        },
+        {
+          "verse": 18,
+          "text": "Et tu ne prendras point une femme aupres de sa soeur pour l'affliger en decouvrant sa nudite à cote d'elle, de son vivant."
+        },
+        {
+          "verse": 19,
+          "text": "Et tu ne t'approcheras point d'une femme durant la separation de son impurete, pour decouvrir sa nudite."
+        },
+        {
+          "verse": 20,
+          "text": "Et tu n'auras point commerce avec la femme de ton prochain, pour te rendre impur avec elle."
+        },
+        {
+          "verse": 21,
+          "text": "Et tu ne donneras point de tes enfants pour les faire passer par le feu à Moloc, et tu ne profaneras point le nom de ton Dieu. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 22,
+          "text": "Tu ne coucheras point avec un male, comme on couche avec une femme: c'est une abomination."
+        },
+        {
+          "verse": 23,
+          "text": "Tu ne coucheras point avec une bete pour te rendre impur avec elle; et une femme ne se tiendra pas devant une bete, pour se prostituer à elle: c'est une confusion."
+        },
+        {
+          "verse": 24,
+          "text": "Vous ne vous rendrez point impurs par aucune de ces choses, car c'est par toutes ces choses que les nations que je chasse devant vous se sont rendues impures;"
+        },
+        {
+          "verse": 25,
+          "text": "et le pays s'est rendu impur; et je punis sur lui son iniquite, et le pays vomit ses habitants."
+        },
+        {
+          "verse": 26,
+          "text": "Mais vous, vous garderez mes statuts et mes ordonnances, et vous ne ferez aucune de toutes ces abominations, ni l'Israelite de naissance, ni l'etranger qui sejourne au milieu de vous;"
+        },
+        {
+          "verse": 27,
+          "text": "car les hommes du pays, qui y ont ete avant vous, ont pratique toutes ces abominations, et le pays en a ete rendu impur;"
+        },
+        {
+          "verse": 28,
+          "text": "afin que le pays ne vous vomisse pas, quand vous l'aurez rendu impur, comme il a vomi la nation qui y a ete avant vous."
+        },
+        {
+          "verse": 29,
+          "text": "Car quiconque fera aucune de toutes ces abominations,... les ames qui les pratiqueront, seront retranchees du milieu de leur peuple."
+        },
+        {
+          "verse": 30,
+          "text": "Et vous garderez ce que j'ai ordonne de garder, en sorte que vous ne pratiquiez pas les coutumes abominables qui se sont pratiquees avant vous; et vous ne vous rendrez point impurs par elles. Moi, je suis l'Eternel, votre Dieu."
+        }
+      ]
+    },
+    {
+      "chapter": 19,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Parle à toute l'assemblee des fils d'Israel, et dis-leur: Vous serez saints, car moi, l'Eternel votre Dieu, je suis saint."
+        },
+        {
+          "verse": 3,
+          "text": "Vous craindrez chacun sa mere et son pere; et vous garderez mes sabbats. Moi, je suis l'Eternel, votre Dieu."
+        },
+        {
+          "verse": 4,
+          "text": "Vous ne vous tournerez point vers les idoles, et vous ne vous ferez point de dieux de fonte. Moi, je suis l'Eternel, votre Dieu."
+        },
+        {
+          "verse": 5,
+          "text": "Et si vous sacrifiez un sacrifice de prosperites à l'Eternel, vous le sacrifierez pour etre agrees."
+        },
+        {
+          "verse": 6,
+          "text": "Il sera mange le jour ou vous l'aurez sacrifie, et le lendemain; et ce qui restera le troisieme jour, sera brule au feu."
+        },
+        {
+          "verse": 7,
+          "text": "Et si on mange aucunement le troisieme jour, ce sera une chose impure; il ne sera point agree."
+        },
+        {
+          "verse": 8,
+          "text": "Et celui qui en mangera portera son iniquite, car il a profane ce qui est consacre à l'Eternel; et cette ame-là sera retranchee de ses peuples."
+        },
+        {
+          "verse": 9,
+          "text": "Et quand vous ferez la moisson de votre terre, tu n'acheveras pas de moissonner les coins de ton champ et tu ne glaneras pas la glanure de ta moisson."
+        },
+        {
+          "verse": 10,
+          "text": "Et tu ne ne grappilleras pas ta vigne, ni ne recueilleras les grains tombes de ta vigne; tu les laisseras pour le pauvre et pour l'etranger. Moi, je suis l'Eternel, votre Dieu."
+        },
+        {
+          "verse": 11,
+          "text": "Vous ne volerez pas, et vous ne vous tromperez pas l'un l'autre, et vous ne vous mentirez pas l'un à l'autre."
+        },
+        {
+          "verse": 12,
+          "text": "Et vous ne jurerez pas par mon nom, en mentant; et tu ne profaneras pas le nom de ton Dieu. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 13,
+          "text": "Tu n'opprimeras pas ton prochain, et tu ne le pilleras pas. Le salaire de ton homme à gages ne passera pas la nuit chez toi jusqu'au matin."
+        },
+        {
+          "verse": 14,
+          "text": "Tu ne maudiras pas le sourd, et tu ne mettras pas d'achoppement devant l'aveugle, mais tu craindras ton Dieu. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 15,
+          "text": "Vous ne ferez pas d'injustice dans le jugement: tu n'auras pas egard à la personne du pauvre, et tu n'honoreras pas la personne du riche; tu jugeras ton prochain avec justice."
+        },
+        {
+          "verse": 16,
+          "text": "Tu n'iras point ça et là medisant parmi ton peuple. Tu ne t'eleveras pas contre la vie de ton prochain. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 17,
+          "text": "Tu ne hairas point ton frere dans ton coeur. Tu ne manqueras pas à reprendre ton prochain, et tu ne porteras pas de peche à cause de lui."
+        },
+        {
+          "verse": 18,
+          "text": "Tu ne te vengeras pas, et tu ne garderas pas rancune aux fils de ton peuple; mais tu aimeras ton prochain comme toi-meme. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 19,
+          "text": "Vous garderez mes statuts. Tu n'accoupleras pas, parmi ton betail, deux especes differentes. Tu ne semeras pas ton champ de deux especes de semence; et tu ne mettras pas sur toi un vetement d'un tissu melange de deux especes de fil."
+        },
+        {
+          "verse": 20,
+          "text": "Et si un homme couche et a commerce avec une femme, et qu'elle soit servante, fiancee à un homme, et qu'elle n'ait aucunement ete rachetee ni mise en liberte, ils seront chaties; on ne les mettra pas à mort, car elle n'avait pas ete mise en liberte."
+        },
+        {
+          "verse": 21,
+          "text": "Et l'homme amenera à l'Eternel, à l'entree de la tente d'assignation, son sacrifice pour le delit, un belier en sacrifice pour le delit."
+        },
+        {
+          "verse": 22,
+          "text": "Et le sacrificateur fera propitiation pour lui devant l'Eternel, avec le belier du sacrifice pour le delit, à cause de son peche qu'il a commis; et son peche qu'il a commis lui sera pardonne."
+        },
+        {
+          "verse": 23,
+          "text": "Et quand vous serez entres dans le pays, et que vous y aurez plante toute sorte d'arbres dont on mange, vous en regardez le fruit comme incirconcis; il sera incirconcis pour vous pendant trois ans: on n'en mangera point."
+        },
+        {
+          "verse": 24,
+          "text": "Et la quatrieme annee tout leur fruit sera une chose sainte à la louange de l'Eternel."
+        },
+        {
+          "verse": 25,
+          "text": "Et la cinquieme annee vous mangerez leur fruit, afin qu'ils vous multiplient leur rapport. Moi, je suis l'Eternel, votre Dieu."
+        },
+        {
+          "verse": 26,
+          "text": "Vous ne mangerez rien avec le sang. -Vous ne pratiquerez ni enchantements, ni pronostics."
+        },
+        {
+          "verse": 27,
+          "text": "-Vous n'arrondirez point les coins de votre chevelure, et vous ne gaterez pas les coins de votre barbe."
+        },
+        {
+          "verse": 28,
+          "text": "Et vous ne ferez point d'incisions dans votre chair pour un mort, et vous ne vous ferez pas de tatouages. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 29,
+          "text": "-Tu ne profaneras point ta fille, pour la faire se prostituer, afin que le pays ne se prostitue pas et que le pays ne se remplisse pas d'infamie."
+        },
+        {
+          "verse": 30,
+          "text": "-Vous garderez mes sabbats, et vous revererez mon sanctuaire. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 31,
+          "text": "-Ne vous tournez pas vers ceux qui evoquent les esprits, ni vers les diseurs de bonne aventure; n'ayez pas recours à eux pour vous rendre impurs. Moi, je suis l'Eternel, votre Dieu."
+        },
+        {
+          "verse": 32,
+          "text": "Tu te leveras devant les cheveux blancs, et tu honoreras la personne du vieillard, et tu craindras ton Dieu. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 33,
+          "text": "Si quelque etranger sejourne avec toi dans votre pays, vous ne l'opprimerez pas."
+        },
+        {
+          "verse": 34,
+          "text": "L'etranger qui sejourne parmi vous sera pour vous comme l'Israelite de naissance, et tu l'aimeras comme toi-meme; car vous avez ete etrangers dans le pays d'Egypte. Moi, je suis l'Eternel, votre Dieu."
+        },
+        {
+          "verse": 35,
+          "text": "Et vous ne ferez pas d'injustice dans le jugement, ni dans la mesure de longueur, ni dans le poids, ni dans la mesure de capacite."
+        },
+        {
+          "verse": 36,
+          "text": "Vous aurez des balances justes, des poids justes, l'epha juste, et le hin juste. Moi, je suis l'Eternel, votre Dieu, qui vous ai fait sortir du pays d'Egypte."
+        },
+        {
+          "verse": 37,
+          "text": "Et vous garderez tous mes statuts et toutes mes ordonnances, et vous les ferez. Moi, je suis l'Eternel."
+        }
+      ]
+    },
+    {
+      "chapter": 20,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Tu diras aussi aux fils d'Israel: Quiconque d'entre les fils d'Israel, ou d'entre les etrangers qui sejournent en Israel, donnera de ses enfants à Moloc, sera certainement mis à mort; le peuple du pays le lapidera avec des pierres."
+        },
+        {
+          "verse": 3,
+          "text": "Et moi, je mettrai ma face contre cet homme-là, et je le retrancherai du milieu de son peuple parce qu'il a donne de ses enfants à Moloc, pour rendre impur mon sanctuaire et pour profaner mon saint nom."
+        },
+        {
+          "verse": 4,
+          "text": "Et si le peuple du pays ferme les yeux, en quelque maniere, sur cet homme, quand il donne de ses enfants à Moloc, pour ne pas le faire mourir,"
+        },
+        {
+          "verse": 5,
+          "text": "moi, je mettrai ma face contre cet homme et contre sa famille, et je le retrancherai du milieu de son peuple, lui et tous ceux qui se prostituent apres lui, se prostituant apres Moloc."
+        },
+        {
+          "verse": 6,
+          "text": "-Et l'ame qui se tournera vers ceux qui evoquent les esprits, et vers les diseurs de bonne aventure, se prostituant apres eux, je mettrai ma face contre cette ame-là, et je la retrancherai du milieu de son peuple."
+        },
+        {
+          "verse": 7,
+          "text": "Et vous vous sanctifierez et vous serez saints, car moi, je suis l'Eternel, votre Dieu."
+        },
+        {
+          "verse": 8,
+          "text": "Et vous garderez mes statuts, et vous les ferez. Moi, je suis l'Eternel qui vous sanctifie."
+        },
+        {
+          "verse": 9,
+          "text": "Tout homme qui maudira son pere et sa mere sera certainement mis à mort; il a maudit son pere et sa mere, son sang est sur lui."
+        },
+        {
+          "verse": 10,
+          "text": "Et un homme qui commet adultere avec la femme d'un autre, -qui commet adultere avec la femme de son prochain... l'homme et la femme adulteres seront certainement mis à mort."
+        },
+        {
+          "verse": 11,
+          "text": "Et l'homme qui couchera avec la femme de son pere, decouvre la nudite de son pere; ils seront certainement mis à mort, tous deux: leur sang est sur eux."
+        },
+        {
+          "verse": 12,
+          "text": "Et si un homme couche avec sa belle-fille, ils seront certainement mis à mort, tous deux; ils ont fait une confusion: leur sang est sur eux."
+        },
+        {
+          "verse": 13,
+          "text": "Et si un homme couche avec un male, comme on couche avec une femme, ils ont fait tous deux une chose abominable; ils seront certainement mis à mort: leur sang est sur eux."
+        },
+        {
+          "verse": 14,
+          "text": "Et si un homme prend une femme et sa mere, c'est une infamie; on les brulera au feu, lui et elles, et il n'y aura point d'infamie au milieu de vous."
+        },
+        {
+          "verse": 15,
+          "text": "Et si un homme couche avec une bete, il sera certainement mis à mort; et vous tuerez la bete."
+        },
+        {
+          "verse": 16,
+          "text": "Et si une femme s'approche d'une bete, quelle qu'elle soit, pour se prostituer à elle, tu tueras la femme et la bete; elles seront certainement mises à mort: leurs sang est sur elles."
+        },
+        {
+          "verse": 17,
+          "text": "Et si un homme prend sa soeur, fille de son pere, ou fille de sa mere, et voit sa nudite, et qu'elle voie sa nudite à lui, c'est une honte: ils seront retranches devant les yeux des fils de leur peuple; il a decouvert la nudite de sa soeur, il portera son iniquite."
+        },
+        {
+          "verse": 18,
+          "text": "Et si un homme couche avec une femme qui a son infirmite, et decouvre sa nudite, il met à decouvert son flux, et elle decouvre le flux de son sang: ils seront tous deux retranches du milieu de leur peuple."
+        },
+        {
+          "verse": 19,
+          "text": "Et tu ne decouvriras point la nudite de la soeur de ta mere, ni de la soeur de ton pere; car celui qui fait cela met à nu sa propre chair: ils porteront leur iniquite."
+        },
+        {
+          "verse": 20,
+          "text": "Et si un homme couche avec sa tante, il decouvre la nudite de son oncle; ils porteront leur peche: ils mourront sans enfants."
+        },
+        {
+          "verse": 21,
+          "text": "Et si un homme prend la femme de son frere, c'est une impurete; il decouvre la nudite de son frere: ils n'auront pas d'enfants."
+        },
+        {
+          "verse": 22,
+          "text": "Et vous garderez tous mes statuts et toutes mes ordonnances, et vous les ferez; afin que le pays ou je vous fais entrer pour y habiter ne vous vomisse pas."
+        },
+        {
+          "verse": 23,
+          "text": "Et vous ne marcherez point dans les statuts de la nation que je chasse devant vous; car ils ont fait toutes ces choses-là, et je les ai eus en abomination;"
+        },
+        {
+          "verse": 24,
+          "text": "et je vous ai dit: C'est vous qui possederez leur terre, et je vous la donnerai pour la posseder, un pays ruisselant de lait et de miel. Moi, je suis l'Eternel, votre Dieu, qui vous ai separes des peuples."
+        },
+        {
+          "verse": 25,
+          "text": "Et vous discernerez entre la bete pure et l'impure, et entre l'oiseau impur et le pur, et vous ne vous rendrez point abominables par des betes, ou par des oiseaux, ou par tout ce qui rampe sur la terre, que j'ai separe, le declarant impur."
+        },
+        {
+          "verse": 26,
+          "text": "Et vous me serez saints, car je suis saint, moi, l'Eternel; et je vous ai separes des peuples, pour etre à moi."
+        },
+        {
+          "verse": 27,
+          "text": "Et si un homme ou une femme sont evocateurs d'esprits, ou diseurs de bonne aventure, ils seront certainement mis à mort; on les lapidera avec des pierres: leur sang sera sur eux."
+        }
+      ]
+    },
+    {
+      "chapter": 21,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel dit à Moise: Parle aux sacrificateurs, fils d'Aaron, et dis-leur: Que le sacrificateur ne se rende pas impur parmi ses peuples pour un mort,"
+        },
+        {
+          "verse": 2,
+          "text": "excepte pour son proche parent, pour sa mere, et pour son pere, et pour son fils, et pour sa fille, et pour son frere;"
+        },
+        {
+          "verse": 3,
+          "text": "et pour sa soeur vierge qui lui est proche, et qui n'aura pas ete mariee, pour elle il se rendra impur."
+        },
+        {
+          "verse": 4,
+          "text": "Il ne se rendra pas impur comme chef parmi son peuple, pour se profaner."
+        },
+        {
+          "verse": 5,
+          "text": "Ils ne se feront point de place chauve sur leur tete, et ils ne raseront pas les coins de leur barbe ni ne se feront d'incisions dans leur chair."
+        },
+        {
+          "verse": 6,
+          "text": "Ils seront saints, consacres à leur Dieu, et ils ne profaneront pas le nom de leur Dieu, car ils presentent les sacrifices de l'Eternel faits par feu, le pain de leur Dieu; et ils seront saints."
+        },
+        {
+          "verse": 7,
+          "text": "Ils ne prendront point pour femme une prostituee ou une femme deshonoree; et ils ne prendront pas une femme repudiee par son mari, car le sacrificateur est saint, consacre à son Dieu."
+        },
+        {
+          "verse": 8,
+          "text": "Et tu le tiendras pour saint, car il presente le pain de ton Dieu. Il te sera saint, car je suis saint, moi, l'Eternel qui vous sanctifie."
+        },
+        {
+          "verse": 9,
+          "text": "Et si la fille d'un sacrificateur se profane en se prostituant, elle profane son pere; elle sera brulee au feu."
+        },
+        {
+          "verse": 10,
+          "text": "Et le grand sacrificateur d'entre ses freres, sur la tete duquel l'huile de l'onction aura ete versee et qui aura ete consacre pour revetir les saints vetements, ne decouvrira pas sa tete et ne dechirera pas ses vetements."
+        },
+        {
+          "verse": 11,
+          "text": "Il n'ira vers aucune personne morte; il ne se rendra impur ni pour son pere, ni pour sa mere;"
+        },
+        {
+          "verse": 12,
+          "text": "et il ne sortira pas du sanctuaire, et ne profanera pas le sanctuaire de son Dieu; car la consecration de l'huile de l'onction de son Dieu est sur lui. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 13,
+          "text": "Et il prendra pour femme une vierge."
+        },
+        {
+          "verse": 14,
+          "text": "Une veuve, ou une repudiee, ou une femme deshonoree, une prostituee, il ne les prendra point; mais il prendra pour femme une vierge d'entre ses peuples."
+        },
+        {
+          "verse": 15,
+          "text": "Et il ne profanera pas sa semence parmi ses peuples, car moi, je suis l'Eternel qui le sanctifie."
+        },
+        {
+          "verse": 16,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 17,
+          "text": "Parle à Aaron, en disant: Aucun homme de ta semence, en ses generations, qui a quelque defaut corporel, ne s'approchera pour presenter le pain de son Dieu;"
+        },
+        {
+          "verse": 18,
+          "text": "car quiconque a un defaut corporel ne s'approchera pas: l'homme aveugle, ou boiteux, ou camus, ou qui a l'un de ses membres plus long que l'autre;"
+        },
+        {
+          "verse": 19,
+          "text": "ou l'homme qui a une fracture au pied ou une fracture à la main;"
+        },
+        {
+          "verse": 20,
+          "text": "ou celui qui est bossu, ou grele, ou qui a une tache à l'oeil, ou qui a une gale, ou une dartre, ou qui a les testicules ecrases."
+        },
+        {
+          "verse": 21,
+          "text": "Nul homme de la semence d'Aaron, le sacrificateur, en qui il y aura quelque defaut corporel, ne s'approchera pour presenter les sacrifices de l'Eternel faits par feu; il y a en lui un defaut corporel: il ne s'approchera pas pour presenter le pain de son Dieu."
+        },
+        {
+          "verse": 22,
+          "text": "Il mangera du pain de son Dieu, des choses tres-saintes et des choses saintes;"
+        },
+        {
+          "verse": 23,
+          "text": "seulement il n'entrera pas vers le voile, et ne s'approchera pas de l'autel, car il y a en lui un defaut corporel, et il ne profanera pas mes sanctuaires; car moi, je suis l'Eternel qui les sanctifie."
+        },
+        {
+          "verse": 24,
+          "text": "Moise parla ainsi à Aaron et à ses fils, et à tous les fils d'Israel."
+        }
+      ]
+    },
+    {
+      "chapter": 22,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Parle à Aaron et à ses fils, afin qu'ils se separent des choses saintes des fils d'Israel, et qu'ils ne profanent pas mon saint nom dans les choses que ceux-ci me sanctifient. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 3,
+          "text": "Dis-leur: Tout homme de toute votre semence, en vos generations, qui, ayant son impurete sur lui, s'approchera des choses saintes que les fils d'Israel ont sanctifiees à l'Eternel, cette ame-là sera retranchee de devant moi. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 4,
+          "text": "Aucun homme de la semence d'Aaron, qui est lepreux ou qui a un flux, ne mangera des choses saintes, jusqu'à ce qu'il soit purifie; et celui qui aura touche quelqu'un qui est impur par un mort, ou celui de qui est sorti de la semence,"
+        },
+        {
+          "verse": 5,
+          "text": "ou celui qui a touche un reptile quelconque qui le rende impur, ou un homme qui le rende impur de quelque impurete dont il soit affecte,"
+        },
+        {
+          "verse": 6,
+          "text": "l'homme qui aura touche cela, sera impur jusqu'au soir, et ne mangera pas des choses saintes, s'il n'a pas lave sa chair dans l'eau;"
+        },
+        {
+          "verse": 7,
+          "text": "-et apres le coucher du soleil il sera pur; et ensuite, il mangera des choses saintes, car c'est son pain."
+        },
+        {
+          "verse": 8,
+          "text": "Aucun d'eux ne mangera d'une bete morte d'elle-meme ou dechiree, pour se rendre impur par elle. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 9,
+          "text": "Et ils garderont ce que j'ai ordonne de garder, afin qu'ils ne portent pas de peche sur eux, et qu'ils ne meurent pas, pour avoir profane mon ordonnance. Moi, je suis l'Eternel qui les sanctifie."
+        },
+        {
+          "verse": 10,
+          "text": "Et aucun etranger ne mangera de ce qui est saint; celui qui demeure chez un sacrificateur, et l'homme à gages, ne mangeront pas de ce qui est saint."
+        },
+        {
+          "verse": 11,
+          "text": "Mais si le sacrificateur a achete de son argent un esclave, celui-ci en mangera, ainsi que celui qui est ne dans sa maison: ceux-là mangeront de son pain."
+        },
+        {
+          "verse": 12,
+          "text": "Et une fille de sacrificateur, si elle est mariee à un etranger, ne mangera pas des offrandes elevees des choses saintes."
+        },
+        {
+          "verse": 13,
+          "text": "Mais si une fille de sacrificateur est veuve ou repudiee, et n'a pas d'enfants, et est retournee dans la maison de son pere, comme dans sa jeunesse, elle mangera du pain de son pere; mais aucun etranger n'en mangera."
+        },
+        {
+          "verse": 14,
+          "text": "Et si un homme, par ignorance, mange d'une chose sainte, il donnera au sacrificateur la chose sainte, et y ajoutera un cinquieme par-dessus."
+        },
+        {
+          "verse": 15,
+          "text": "Et on ne profanera pas les choses saintes des fils d'Israel, qu'ils offrent en offrande elevee à l'Eternel,"
+        },
+        {
+          "verse": 16,
+          "text": "et on ne leur fera pas porter l'iniquite du delit quand ils mangeront de leurs choses saintes, car moi je suis l'Eternel qui les sanctifie."
+        },
+        {
+          "verse": 17,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 18,
+          "text": "Parle à Aaron et à ses fils, et à tous les fils d'Israel, et dis-leur: Quiconque de la maison d'Israel ou de ceux qui sejournent en Israel, presentera son offrande, selon tous leurs voeux et selon toutes leurs offrandes volontaires qu'ils presentent en holocauste à l'Eternel,"
+        },
+        {
+          "verse": 19,
+          "text": "-pour etre agree, offrira un male sans tare, de gros betail, de moutons, ou de chevres."
+        },
+        {
+          "verse": 20,
+          "text": "Vous ne presenterez aucune chose qui ait quelque defaut corporel, car elle ne sera point agreee pour vous."
+        },
+        {
+          "verse": 21,
+          "text": "Et si un homme presente un sacrifice de prosperites à l'Eternel, pour s'acquitter d'un voeu, ou en offrande volontaire, soit de gros betail, soit de menu betail, son offrande sera sans tare, pour etre agreee; il n'y aura en elle aucun defaut corporel."
+        },
+        {
+          "verse": 22,
+          "text": "Vous ne presenterez point à l'Eternel ce qui est aveugle, ou qui a une fracture ou qui est mutile, ou qui a des ulceres, ou une gale, ou une dartre, et vous n'en ferez pas un sacrifice fait par feu sur l'autel, à l'Eternel."
+        },
+        {
+          "verse": 23,
+          "text": "Tu pourras faire un sacrifice volontaire d'un boeuf ou d'un agneau ayant quelque membre trop long ou trop court; mais pour un voeu, ils ne seront pas agrees."
+        },
+        {
+          "verse": 24,
+          "text": "Et vous ne presenterez pas à l'Eternel ce qui sera froisse, ou ecrase, ou arrache, ou coupe; vous ne ferez point cela dans votre pays."
+        },
+        {
+          "verse": 25,
+          "text": "Et de la main d'un etranger, vous ne presenterez aucune de ces choses comme le pain de votre Dieu; car leur corruption est en elles, il y a un defaut en elles: elles ne seront pas agreees pour vous."
+        },
+        {
+          "verse": 26,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 27,
+          "text": "Un veau, ou un agneau ou un chevreau, lorsqu'il sera ne, sera sept jours sous sa mere; et depuis le huitieme jour et apres, il sera agree pour l'offrande du sacrifice fait par feu à l'Eternel."
+        },
+        {
+          "verse": 28,
+          "text": "Et vous n'egorgerez pas la vache, ou la brebis, elle est son petit, en un meme jour."
+        },
+        {
+          "verse": 29,
+          "text": "Et si vous sacrifiez un sacrifice d'action de graces à l'Eternel, vous le sacrifierez pour etre agree pour vous."
+        },
+        {
+          "verse": 30,
+          "text": "Il sera mange le jour meme; vous n'en laisserez rien jusqu'au matin. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 31,
+          "text": "Et vous garderez mes commandements, et vous les ferez. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 32,
+          "text": "Et vous ne profanerez pas mon saint nom, mais je serai sanctifie au milieu des fils d'Israel: moi, je suis l'Eternel qui vous sanctifie et"
+        },
+        {
+          "verse": 33,
+          "text": "qui vous ai fait sortir du pays d'Egypte pour etre votre Dieu. Moi, je suis l'Eternel."
+        }
+      ]
+    },
+    {
+      "chapter": 23,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Parle aux fils d'Israel, et dis-leur: Les jours solennels de l'Eternel, que vous publierez, seront de saintes convocations. Ce sont ici mes jours solennels:"
+        },
+        {
+          "verse": 3,
+          "text": "six jours on travaillera; et le septieme jour est un sabbat de repos, une sainte convocation; vous ne ferez aucune oeuvre: c'est un sabbat consacre à l'Eternel dans toutes vos habitations."
+        },
+        {
+          "verse": 4,
+          "text": "Ce sont ici les jours solennels de l'Eternel, de saintes convocations, que vous publierez en leurs temps assignes."
+        },
+        {
+          "verse": 5,
+          "text": "Le premier mois, le quatorzieme jour du mois, entre les deux soirs, est la Paque à l'Eternel."
+        },
+        {
+          "verse": 6,
+          "text": "Et le quinzieme jour de ce mois, est la fete des pains sans levain à l'Eternel: sept jours, vous mangerez des pains sans levain."
+        },
+        {
+          "verse": 7,
+          "text": "Le premier jour, vous aurez une sainte convocation; vous ne ferez aucune oeuvre de service;"
+        },
+        {
+          "verse": 8,
+          "text": "et vous presenterez à l'Eternel, pendant sept jours, un sacrifice par feu: au septieme jour il y aura une sainte convocation; vous ne ferez aucune oeuvre de service."
+        },
+        {
+          "verse": 9,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 10,
+          "text": "Parle aux fils d'Israel, et dis-leur: Quand vous serez entres dans le pays que je vous donne et que vous en aurez fait la moisson, vous apporterez au sacrificateur une gerbe des premices de votre moisson;"
+        },
+        {
+          "verse": 11,
+          "text": "et il tournoiera la gerbe devant l'Eternel, pour que vous soyez agrees; le sacrificateur la tournoiera le lendemain du sabbat."
+        },
+        {
+          "verse": 12,
+          "text": "Et le jour ou vous ferez tournoyer la gerbe, vous offrirez un agneau sans defaut, age d'un an, en holocauste à l'Eternel;"
+        },
+        {
+          "verse": 13,
+          "text": "et pour son offrande de gateau, deux dixiemes de fleur de farine petrie à l'huile, un sacrifice par feu à l'Eternel, une odeur agreable; et sa libation sera du vin, le quart d'un hin."
+        },
+        {
+          "verse": 14,
+          "text": "Et vous ne mangerez ni pain, ni grain roti, ni grain en epi, jusqu'à ce meme jour, jusqu'à ce que vous ayez apporte l'offrande de votre Dieu. C'est un statut perpetuel, en vos generations, dans toutes vos habitations."
+        },
+        {
+          "verse": 15,
+          "text": "-Et vous compterez depuis le lendemain du sabbat, depuis le jour que vous aurez apporte la gerbe de l'offrande tournoyee, sept semaines; elles seront completes:"
+        },
+        {
+          "verse": 16,
+          "text": "vous compterez cinquante jours jusqu'au lendemain du septieme sabbat, et vous presenterez à l'Eternel une offrande de gateau nouvelle;"
+        },
+        {
+          "verse": 17,
+          "text": "vous apporterez de vos habitations deux pains, en offrande tournoyee; ils seront de deux dixiemes de fleur de farine; vous les cuirez avec du levain: ce sont les premiers fruits à l'Eternel."
+        },
+        {
+          "verse": 18,
+          "text": "Et vous presenterez avec le pain sept agneaux sans defaut, ages d'un an, et un jeune taureau, et deux beliers: ils seront un holocauste à l'Eternel, avec leur offrande de gateau et leurs libations, un sacrifice par feu, une odeur agreable à l'Eternel."
+        },
+        {
+          "verse": 19,
+          "text": "Et vous offrirez un bouc en sacrifice pour le peche, et deux agneaux ages d'un an en sacrifice de prosperites;"
+        },
+        {
+          "verse": 20,
+          "text": "et le sacrificateur les tournoiera avec le pain des premiers fruits, en offrande tournoyee devant l'Eternel, avec les deux agneaux: ils seront saints, consacres à l'Eternel pour le sacrificateur."
+        },
+        {
+          "verse": 21,
+          "text": "Et vous publierez une convocation en ce meme jour; ce sera pour vous une sainte convocation; vous ne ferez aucune oeuvre de service: c'est un statut perpetuel, dans toutes vos habitations, en vos generations."
+        },
+        {
+          "verse": 22,
+          "text": "-Et quand vous ferez la moisson de votre terre, tu n'acheveras pas de moissonner les coins de ton champ, et tu ne glaneras pas la glanure de ta moisson; tu les laisseras pour le pauvre et pour l'etranger. Moi, je suis l'Eternel, votre Dieu."
+        },
+        {
+          "verse": 23,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 24,
+          "text": "Parle aux fils d'Israel, en disant: Au septieme mois, le premier jour du mois, il y aura un repos pour vous, un memorial de jubilation, une sainte convocation;"
+        },
+        {
+          "verse": 25,
+          "text": "vous ne ferez aucune oeuvre de service, et vous presenterez à l'Eternel un sacrifice fait par feu."
+        },
+        {
+          "verse": 26,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 27,
+          "text": "De meme, le dixieme jour de ce septieme mois, c'est le jour des propitiations: ce sera pour vous une sainte convocation, et vous affligerez vos ames, et vous presenterez à l'Eternel un sacrifice fait par feu."
+        },
+        {
+          "verse": 28,
+          "text": "Et ce meme jour vous ne ferez aucune oeuvre, car c'est un jour de propitiation, pour faire propitiation pour vous, devant l'Eternel, votre Dieu."
+        },
+        {
+          "verse": 29,
+          "text": "Car toute ame qui ne s'affligera pas en ce meme jour, sera retranchee de ses peuples."
+        },
+        {
+          "verse": 30,
+          "text": "Et toute ame qui fera une oeuvre quelconque en ce meme jour, cette ame, je la ferai perir du milieu de son peuple."
+        },
+        {
+          "verse": 31,
+          "text": "Vous ne ferez aucune oeuvre: c'est un statut perpetuel, en vos generations, dans toutes vos habitations."
+        },
+        {
+          "verse": 32,
+          "text": "C'est un sabbat de repos pour vous, et vous affligerez vos ames. Le neuvieme jour du mois, au soir, d'un soir à l'autre soir, vous celebrerez votre sabbat."
+        },
+        {
+          "verse": 33,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 34,
+          "text": "Parle aux fils d'Israel, en disant: Le quinzieme jour de ce septieme mois, la fete des tabernacles se celebrera à l'Eternel pendant sept jours."
+        },
+        {
+          "verse": 35,
+          "text": "Le premier jour il y aura une sainte convocation; vous ne ferez aucune oeuvre de service."
+        },
+        {
+          "verse": 36,
+          "text": "Pendant sept jours vous presenterez à l'Eternel un sacrifice fait par feu; le huitieme jour, vous aurez une sainte convocation, et vous presenterez à l'Eternel un sacrifice fait par feu: c'est une assemblee solennelle; vous ne ferez aucune oeuvre de service."
+        },
+        {
+          "verse": 37,
+          "text": "Ce sont là les jours solennels de l'Eternel, que vous publierez, de saintes convocations, afin de presenter des sacrifices faits par feu à l'Eternel, des holocaustes, et des offrandes de gateau, des sacrifices, et des libations, chaque jour ce qui est etabli pour ce jour,"
+        },
+        {
+          "verse": 38,
+          "text": "outre les sabbats de l'Eternel, et outre vos dons, et outre tous vos voeux, et outre toutes vos offrandes volontaires que vous donnerez à l'Eternel."
+        },
+        {
+          "verse": 39,
+          "text": "Mais le quinzieme jour du septieme mois, quand vous aurez recueilli le rapport de la terre, vous celebrerez la fete de l'Eternel pendant sept jours: le premier jour il y aura repos, et le huitieme jour il y aura repos."
+        },
+        {
+          "verse": 40,
+          "text": "Et le premier jour vous prendrez du fruit de beaux arbres, des branches de palmiers, et des rameaux d'arbres touffus et de saules de riviere; et vous vous rejouirez devant l'Eternel, votre Dieu, pendant sept jours."
+        },
+        {
+          "verse": 41,
+          "text": "Et vous celebrerez la fete comme fete à l'Eternel, pendant sept jours chaque annee; c'est un statut perpetuel, en vos generations: vous la celebrerez le septieme mois."
+        },
+        {
+          "verse": 42,
+          "text": "Vous habiterez sept jours dans les tabernacles; tous les indigenes en Israel habiteront dans des tabernacles,"
+        },
+        {
+          "verse": 43,
+          "text": "afin que vos generations sachent que j'ai fait habiter les fils d'Israel dans des tabernacles, lorsque je les fis sortir du pays d'Egypte. Moi, je suis l'Eternel, votre Dieu."
+        },
+        {
+          "verse": 44,
+          "text": "Et Moise dit aux fils d'Israel les jours solennels de l'Eternel."
+        }
+      ]
+    },
+    {
+      "chapter": 24,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Commande aux fils d'Israel qu'ils t'apportent de l'huile d'olive pure, broyee, pour le luminaire, afin de faire bruler la lampe continuellement."
+        },
+        {
+          "verse": 3,
+          "text": "Aaron l'arrangera devant l'Eternel, continuellement, du soir au matin, en dehors du voile du temoignage, dans la tente d'assignation: c'est un statut perpetuel en vos generations;"
+        },
+        {
+          "verse": 4,
+          "text": "il arrangera les lampes sur le chandelier pur, devant l'Eternel, continuellement."
+        },
+        {
+          "verse": 5,
+          "text": "Et tu prendras de la fleur de farine, et tu en cuiras douze gateaux: chaque gateau sera de deux dixiemes;"
+        },
+        {
+          "verse": 6,
+          "text": "et tu les placeras en deux rangees, six par rangee, sur la table pure, devant l'Eternel,"
+        },
+        {
+          "verse": 7,
+          "text": "et tu mettras de l'encens pur sur chaque rangee; et ce sera un pain de memorial, un sacrifice par feu à l'Eternel."
+        },
+        {
+          "verse": 8,
+          "text": "Chaque jour de sabbat on les arrangera devant l'Eternel, continuellement, de la part des fils d'Israel: c'est une alliance perpetuelle."
+        },
+        {
+          "verse": 9,
+          "text": "Et cela appartiendra à Aaron et à ses fils, et ils le mangeront dans un lieu saint; car ce lui sera une chose tres-sainte d'entre les sacrifices de l'Eternel faits par feu: c'est un statut perpetuel."
+        },
+        {
+          "verse": 10,
+          "text": "Et le fils d'une femme israelite (mais il etait fils d'un homme egyptien), sortit parmi les fils d'Israel; et le fils de la femme israelite et un homme israelite se battirent dans le camp;"
+        },
+        {
+          "verse": 11,
+          "text": "et le fils de la femme israelite blasphema le Nom et le maudit; et on l'amena à Moise. Or le nom de sa mere etait Shelomith, fille de Dibri, de la tribu de Dan."
+        },
+        {
+          "verse": 12,
+          "text": "Et on le mit sous garde, afin de decider de son sort, selon la parole de l'Eternel."
+        },
+        {
+          "verse": 13,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 14,
+          "text": "Fais sortir hors du camp celui qui a maudit; et que tous ceux qui l'ont entendu posent leurs mains sur sa tete, et que toute l'assemblee le lapide."
+        },
+        {
+          "verse": 15,
+          "text": "Et tu parleras aux fils d'Israel, en disant: Tout homme qui aura maudit son Dieu, portera son peche;"
+        },
+        {
+          "verse": 16,
+          "text": "et celui qui blasphemera le nom de l'Eternel sera certainement mis à mort: toute l'assemblee ne manquera pas de le lapider; on mettra à mort tant l'etranger que l'Israelite de naissance, lorsqu'il aura blaspheme le Nom."
+        },
+        {
+          "verse": 17,
+          "text": "Et si quelqu'un a frappe à mort un homme, il sera certainement mis à mort."
+        },
+        {
+          "verse": 18,
+          "text": "Et celui qui aura frappe à mort une bete, fera compensation, vie pour vie."
+        },
+        {
+          "verse": 19,
+          "text": "Et si un homme a cause quelque mal corporel à son prochain, il lui sera fait comme il a fait:"
+        },
+        {
+          "verse": 20,
+          "text": "fracture pour fracture, oeil pour oeil, dent pour dent; selon le mal corporel qu'il aura cause à un homme, ainsi il lui sera fait."
+        },
+        {
+          "verse": 21,
+          "text": "Celui qui frappera à mort une bete, fera compensation pour elle, et celui qui aura frappe à mort un homme, sera mis à mort."
+        },
+        {
+          "verse": 22,
+          "text": "Il y aura une meme loi pour vous: il en sera de l'etranger comme de l'Israelite de naissance; car moi, je suis l'Eternel, votre Dieu."
+        },
+        {
+          "verse": 23,
+          "text": "Et Moise parla aux fils d'Israel, et ils firent sortir hors du camp celui qui avait maudit, et le lapiderent avec des pierres. Et les fils d'Israel firent comme l'Eternel avait commande à Moise."
+        }
+      ]
+    },
+    {
+      "chapter": 25,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise, sur la montagne de Sinai, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Parle aux fils d'Israel, et dis-leur: Quand vous serez entres dans le pays que je vous donne, le pays celebrera un sabbat à l'Eternel."
+        },
+        {
+          "verse": 3,
+          "text": "Pendant six ans tu semeras ton champ, et pendant six ans tu tailleras ta vigne, et tu en recueilleras le rapport;"
+        },
+        {
+          "verse": 4,
+          "text": "et la septieme annee, il y aura un sabbat de repos pour le pays, un sabbat consacre à l'Eternel: tu ne semeras pas ton champ, et tu ne tailleras pas ta vigne."
+        },
+        {
+          "verse": 5,
+          "text": "Tu ne moissonneras pas ce qui vient de soi-meme de ta moisson precedente, et tu ne vendangeras pas les grappes de ta vigne non taillee: ce sera une annee de repos pour le pays."
+        },
+        {
+          "verse": 6,
+          "text": "Et le sabbat du pays vous servira de nourriture, à toi, et à ton serviteur, et à ta servante, et à ton homme à gages et à ton hote qui sejournent chez toi,"
+        },
+        {
+          "verse": 7,
+          "text": "et à ton betail et aux animaux qui seront dans ton pays: tout son rapport servira de nourriture."
+        },
+        {
+          "verse": 8,
+          "text": "Et tu compteras sept sabbats d'annees, sept fois sept ans; et les jours de ces sept sabbats d'annees te feront quarante-neuf ans."
+        },
+        {
+          "verse": 9,
+          "text": "Et, au septieme mois, le dixieme jour du mois, tu feras passer le son bruyant de la trompette; le jour des propitiations, vous ferez passer la trompette par tout votre pays;"
+        },
+        {
+          "verse": 10,
+          "text": "et vous sanctifierez l'annee de l'an cinquantieme, et vous publierez la liberte dans le pays à tous ses habitants: ce sera pour vous un jubile; vous retournerez chacun dans sa possession, et vous retournerez chacun à sa famille."
+        },
+        {
+          "verse": 11,
+          "text": "Cette annee de l'an cinquantieme sera pour vous un jubile: vous ne semerez pas, et vous ne moissonnerez pas ce qui vient de soi-meme, et vous ne vendangerez pas la vigne non taillee;"
+        },
+        {
+          "verse": 12,
+          "text": "car c'est le Jubile: il vous sera saint; vous mangerez en l'y prenant ce que le champ rapportera."
+        },
+        {
+          "verse": 13,
+          "text": "En cette annee du Jubile, vous retournerez chacun dans sa possession."
+        },
+        {
+          "verse": 14,
+          "text": "Et si vous vendez quelque chose à votre prochain, ou si vous achetez de la main de votre prochain, que nul ne fasse tort à son frere."
+        },
+        {
+          "verse": 15,
+          "text": "Tu acheteras de ton prochain d'apres le nombre des annees depuis le Jubile; il te vendra d'apres le nombre des annees de rapport."
+        },
+        {
+          "verse": 16,
+          "text": "A proportion que le nombre des annees sera grand, tu augmenteras le prix; et à proportion que le nombre des annees sera petit, tu diminueras le prix, car c'est le nombre des recoltes qu'il te vend."
+        },
+        {
+          "verse": 17,
+          "text": "Et nul de vous ne fera tort à son prochain, et tu craindras ton Dieu, car moi, je suis l'Eternel, votre Dieu."
+        },
+        {
+          "verse": 18,
+          "text": "Et vous pratiquerez mes statuts, et vous garderez mes ordonnances, et vous les pratiquerez, et ainsi vous habiterez dans le pays en securite;"
+        },
+        {
+          "verse": 19,
+          "text": "et le pays vous donnera son fruit, et vous mangerez à rassasiement, et vous l'habiterez en securite."
+        },
+        {
+          "verse": 20,
+          "text": "Et si vous dites: Que mangerons-nous la septieme annee; voici, nous ne semons pas, et nous ne recueillons pas nos produits?"
+        },
+        {
+          "verse": 21,
+          "text": "je commanderai que ma benediction soit sur vous en la sixieme annee, et elle donnera le produit de trois ans."
+        },
+        {
+          "verse": 22,
+          "text": "Et vous semerez la huitieme annee et vous mangerez du vieux produit, jusqu'à la neuvieme annee; jusqu'à ce que son produit soit venu, vous mangerez le vieux."
+        },
+        {
+          "verse": 23,
+          "text": "Et le pays ne se vendra pas à perpetuite, car le pays est à moi; car vous, vous etes chez moi comme des etrangers et comme des hotes."
+        },
+        {
+          "verse": 24,
+          "text": "Et dans tout le pays de votre possession, vous donnerez le droit de rachat pour la terre."
+        },
+        {
+          "verse": 25,
+          "text": "Si ton frere est devenu pauvre, et vend une partie de sa possession, alors que celui qui a le droit de rachat, son plus proche parent, vienne et rachete la chose vendue par son frere."
+        },
+        {
+          "verse": 26,
+          "text": "Mais si un homme n'a personne qui ait le droit de rachat, et que sa main ait acquis et trouve suffisamment de quoi faire son rachat,"
+        },
+        {
+          "verse": 27,
+          "text": "il comptera les annees depuis sa vente, et restituera le surplus à celui à qui il avait vendu, et il retournera dans sa possession."
+        },
+        {
+          "verse": 28,
+          "text": "Et si sa main n'a pas trouve suffisamment de quoi lui rendre, la chose vendue restera en la main de celui qui l'aura achetee, jusqu'à l'annee du Jubile: la chose vendue sera liberee au Jubile, et le vendeur rentrera dans sa possession."
+        },
+        {
+          "verse": 29,
+          "text": "Et si quelqu'un a vendu une maison d'habitation dans une ville muree, il aura son droit de rachat jusqu'à la fin de l'annee de sa vente: son droit de rachat subsistera une annee entiere;"
+        },
+        {
+          "verse": 30,
+          "text": "mais si elle n'est pas rachetee avant que l'annee entiere soit accomplie, la maison qui est dans la ville muree restera definitivement à l'acheteur, en ses generations; elle ne sera pas liberee au Jubile."
+        },
+        {
+          "verse": 31,
+          "text": "Mais les maisons des villages qui n'ont pas de murs tout autour, seront considerees comme des champs du pays; il y aura droit de rachat pour elles, et elles seront liberees au Jubile."
+        },
+        {
+          "verse": 32,
+          "text": "Et quant aux villes des Levites et aux maisons des villes de leur possession, les Levites auront un droit perpetuel de rachat."
+        },
+        {
+          "verse": 33,
+          "text": "Et si quelqu'un a rachete d'un des Levites, la maison vendue dans la ville de sa possession sera liberee au Jubile; car les maisons des villes des Levites sont leur possession au milieu des fils d'Israel."
+        },
+        {
+          "verse": 34,
+          "text": "Et les champs des banlieues de leurs villes ne seront pas vendus, car c'est leur possession à perpetuite."
+        },
+        {
+          "verse": 35,
+          "text": "Et si ton frere est devenu pauvre, et que sa main devienne tremblante à cote de toi, tu le soutiendras, etranger ou hote, afin qu'il vive à cote de toi."
+        },
+        {
+          "verse": 36,
+          "text": "Tu ne prendras de lui ni interet ni usure; et tu craindras ton Dieu, afin que ton frere vive à cote de toi."
+        },
+        {
+          "verse": 37,
+          "text": "Tu ne lui donneras pas ton argent à interet, et tu ne lui donneras pas tes vivres à usure."
+        },
+        {
+          "verse": 38,
+          "text": "Moi, je suis l'Eternel, votre Dieu, qui vous ai fait sortir du pays d'Egypte pour vous donner le pays de Canaan, pour etre votre Dieu."
+        },
+        {
+          "verse": 39,
+          "text": "Et si ton frere est devenu pauvre à cote de toi, et qu'il se vende à toi, tu ne lui feras pas faire un service d'esclave;"
+        },
+        {
+          "verse": 40,
+          "text": "il sera avec toi comme un homme à gages et un hote; il te servira jusqu'à l'annee du Jubile:"
+        },
+        {
+          "verse": 41,
+          "text": "alors il sortira de chez toi, lui et ses fils avec lui, et il retournera à sa famille, et retournera dans la possession des peres."
+        },
+        {
+          "verse": 42,
+          "text": "Car ils sont mes serviteurs, que j'ai fait sortir du pays d'Egypte; ils ne seront pas vendus comme on vend les esclaves."
+        },
+        {
+          "verse": 43,
+          "text": "Tu ne domineras pas sur lui avec durete, et tu craindras ton Dieu."
+        },
+        {
+          "verse": 44,
+          "text": "Mais quant à ton serviteur et à ta servante qui seront à toi,... d'entre les nations qui vous environnent, de ceux-là, vous acheterez des serviteurs et des servantes."
+        },
+        {
+          "verse": 45,
+          "text": "Et vous en acheterez aussi des fils des etrangers qui sejournent chez vous, et de leurs familles qui sont avec vous, qu'ils engendreront dans votre pays; et ils seront votre possession."
+        },
+        {
+          "verse": 46,
+          "text": "Et vous les laisserez en heritage à vos fils apres vous, pour qu'ils en aient la possession; vous vous servirez d'eux à toujours; mais quant à vos freres, les fils d'Israel, un homme ne dominera pas avec durete sur son frere."
+        },
+        {
+          "verse": 47,
+          "text": "Et si un etranger ou un homme qui sejourne chez toi s'est enrichi, et que ton frere qui est à cote de lui soit devenu pauvre et se soit vendu à l'etranger qui sejourne chez toi, ou à un homme issu de la famille de l'etranger,"
+        },
+        {
+          "verse": 48,
+          "text": "-apres qu'il se sera vendu, il y aura pour lui droit de rachat; un de ses freres le rachetera;"
+        },
+        {
+          "verse": 49,
+          "text": "ou son oncle, ou le fils de son oncle le rachetera; ou quelque proche parent de sa famille le rachetera; ou si sa main y peut atteindre, il se rachetera lui-meme."
+        },
+        {
+          "verse": 50,
+          "text": "Et il comptera avec celui qui l'a achete, depuis l'annee qu'il s'est vendu à lui jusqu'à l'annee du Jubile; et l'argent de son prix sera à raison du nombre des annees; il sera chez son maitre selon les journees d'un homme à gages."
+        },
+        {
+          "verse": 51,
+          "text": "S'il y a encore beaucoup d'annees, il restituera le prix de son rachat à raison de celles-ci, sur le prix pour lequel il aura ete achete;"
+        },
+        {
+          "verse": 52,
+          "text": "et s'il reste peu d'annees jusqu'à l'annee du Jubile, il comptera avec lui; à raison du nombre des annees, il restituera le prix de son rachat."
+        },
+        {
+          "verse": 53,
+          "text": "Il sera chez lui comme un homme à gages, d'annee en annee; le maitre ne dominera pas sur lui avec durete devant tes yeux."
+        },
+        {
+          "verse": 54,
+          "text": "Et s'il n'est rachete par un de ces moyens, il sortira l'annee du Jubile, lui et ses fils avec lui."
+        },
+        {
+          "verse": 55,
+          "text": "Car les fils d'Israel me sont serviteurs; ils sont mes serviteurs que j'ai fait sortir du pays d'Egypte. Moi, je suis l'Eternel, votre Dieu."
+        }
+      ]
+    },
+    {
+      "chapter": 26,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Vous ne vous ferez pas d'idoles, et vous ne vous dresserez pas d'image taillee, ou de statue, et vous ne mettrez pas de pierre sculptee dans votre pays, pour vous prosterner devant elles; car moi, je suis l'Eternel, votre Dieu."
+        },
+        {
+          "verse": 2,
+          "text": "Vous garderez mes sabbats, et vous revererez mon sanctuaire. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 3,
+          "text": "Si vous marchez dans mes statuts, et si vous gardez mes commandements et les pratiquez,"
+        },
+        {
+          "verse": 4,
+          "text": "je vous donnerai vos pluies en leur temps, et la terre donnera son rapport, et l'arbre des champs donnera son fruit."
+        },
+        {
+          "verse": 5,
+          "text": "Le temps du foulage atteindra pour vous la vendange, et la vendange atteindra les semailles; et vous mangerez votre pain à rassasiement, et vous habiterez en securite dans votre pays."
+        },
+        {
+          "verse": 6,
+          "text": "Et je donnerai la paix dans le pays; et vous dormirez sans que personne vous epouvante; et je ferai disparaitre du pays les betes mauvaises, et l'epee ne passera pas par votre pays."
+        },
+        {
+          "verse": 7,
+          "text": "Et vous poursuivrez vos ennemis, et ils tomberont devant vous par l'epee."
+        },
+        {
+          "verse": 8,
+          "text": "Et cinq d'entre vous en poursuivront cent et cent d'entre vous en poursuivront dix mille, et vos ennemis tomberont devant vous par l'epee."
+        },
+        {
+          "verse": 9,
+          "text": "Et je me tournerai vers vous, et je vous ferai fructifier, et je vous multiplierai, et je mettrai à effet mon alliance avec vous."
+        },
+        {
+          "verse": 10,
+          "text": "Et vous mangerez de vieilles provisions, et vous sortirez le vieux de devant le nouveau."
+        },
+        {
+          "verse": 11,
+          "text": "Et je mettrai mon tabernacle au milieu de vous, et mon ame ne vous aura pas en horreur;"
+        },
+        {
+          "verse": 12,
+          "text": "et je marcherai au milieu de vous; et je serai votre Dieu, et vous serez mon peuple."
+        },
+        {
+          "verse": 13,
+          "text": "Moi, je suis l'Eternel, votre Dieu, qui vous ai fait sortir du pays d'Egypte, afin que vous ne fussiez pas leurs esclaves: j'ai brise les liens de votre joug, et je vous ai fait marcher la tete levee."
+        },
+        {
+          "verse": 14,
+          "text": "Mais si vous ne m'ecoutez pas, et si vous ne pratiquez pas tous ces commandements,"
+        },
+        {
+          "verse": 15,
+          "text": "et si vous meprisez mes statuts, et si votre ame a en horreur mes ordonnances, de sorte que vous ne pratiquiez pas tous mes commandements et que vous rompiez mon alliance,"
+        },
+        {
+          "verse": 16,
+          "text": "moi aussi, je vous ferai ceci: J'ordonnerai sur vous la frayeur, la consomption et la fievre qui consumeront vos yeux et feront defaillir votre ame; et vous semerez en vain votre semence, car vos ennemis la mangeront."
+        },
+        {
+          "verse": 17,
+          "text": "Et je tournerai ma face contre vous: vous serez battus devant vos ennemis; ceux qui vous haissent domineront sur vous; et vous fuirez sans que personne vous poursuive."
+        },
+        {
+          "verse": 18,
+          "text": "Et si, apres cela encore, vous ne m'ecoutez pas, je vous chatierai encore sept fois plus à cause de vos peches;"
+        },
+        {
+          "verse": 19,
+          "text": "et je briserai l'orgueil de votre force, et je ferai que votre ciel sera comme de fer, et votre terre comme d'airain."
+        },
+        {
+          "verse": 20,
+          "text": "Et vous depenserez votre force en vain, et votre terre ne donnera pas son rapport, et les arbres de la terre ne donneront pas leur fruit."
+        },
+        {
+          "verse": 21,
+          "text": "Et si vous marchez en opposition avec moi et que vous ne vouliez pas m'ecouter, je vous frapperai encore sept fois plus, selon vos peches;"
+        },
+        {
+          "verse": 22,
+          "text": "et j'enverrai contre vous les betes des champs, qui vous raviront vos enfants, et detruiront votre betail, et vous reduiront à un petit nombre; et vos chemins seront desoles."
+        },
+        {
+          "verse": 23,
+          "text": "Et si par ces choses-là vous ne recevez pas mon instruction, et que vous marchiez en opposition avec moi,"
+        },
+        {
+          "verse": 24,
+          "text": "je marcherai, moi aussi, en opposition avec vous, et je vous frapperai, moi aussi, sept fois plus, à cause de vos peches;"
+        },
+        {
+          "verse": 25,
+          "text": "et je ferai venir sur vous l'epee qui execute la vengeance de l'alliance; et quand vous serez rassembles dans vos villes, j'enverrai la peste au milieu de vous, et vous serez livres en la main de l'ennemi."
+        },
+        {
+          "verse": 26,
+          "text": "Quand je vous briserai le baton du pain, dix femmes cuiront votre pain dans un seul four et vous rendront votre pain au poids; et vous mangerez, et vous ne serez pas rassasies."
+        },
+        {
+          "verse": 27,
+          "text": "Et si avec cela vous ne m'ecoutez pas, et que vous marchiez en opposition avec moi,"
+        },
+        {
+          "verse": 28,
+          "text": "je marcherai aussi en opposition avec vous, avec fureur, et je vous chatierai, moi aussi, sept fois plus, à cause de vos peches;"
+        },
+        {
+          "verse": 29,
+          "text": "et vous mangerez la chair de vos fils, et vous mangerez la chair de vos filles;"
+        },
+        {
+          "verse": 30,
+          "text": "je detruirai vos hauts lieux, et j'abattrai vos colonnes consacrees au soleil, et je mettrai vos cadavres sur les cadavres de vos idoles, et mon ame vous aura en horreur."
+        },
+        {
+          "verse": 31,
+          "text": "Et je reduirai vos villes en deserts, et je desolerai vos sanctuaires, et je ne flairerai pas l'odeur agreable de vos parfums,"
+        },
+        {
+          "verse": 32,
+          "text": "et je desolerai le pays, et vos ennemis qui y habiteront en seront etonnes;"
+        },
+        {
+          "verse": 33,
+          "text": "et vous, je vous disperserai parmi les nations, et je tirerai l'epee apres vous, et votre pays sera mis en desolation, et vos villes seront un desert."
+        },
+        {
+          "verse": 34,
+          "text": "Alors le pays jouira de ses sabbats tous les jours de sa desolation: quand vous, vous serez dans le pays de vos ennemis; alors le pays se reposera, et jouira de ses sabbats."
+        },
+        {
+          "verse": 35,
+          "text": "Tous les jours qu'il sera desole, il se reposera, parce qu'il ne s'etait pas repose dans vos sabbats pendant que vous y habitiez."
+        },
+        {
+          "verse": 36,
+          "text": "Et quant à ceux qui demeureront de reste d'entre vous, je ferai venir la lachete dans leur coeur, dans les pays de leurs ennemis, et le bruit d'une feuille emportee par le vent les poursuivra, et ils fuiront comme on fuit l'epee, et tomberont sans que personne les poursuive;"
+        },
+        {
+          "verse": 37,
+          "text": "et ils trebucheront l'un par-dessus l'autre comme devant l'epee, sans que personne les poursuive; et vous ne pourrez pas tenir devant vos ennemis;"
+        },
+        {
+          "verse": 38,
+          "text": "et vous perirez parmi les nations, et le pays de vos ennemis vous devorera."
+        },
+        {
+          "verse": 39,
+          "text": "Et ceux qui demeureront de reste d'entre vous, se consumeront dans leur iniquite, dans les pays de vos ennemis; et ils se consumeront, dans les iniquites de leurs peres, avec eux."
+        },
+        {
+          "verse": 40,
+          "text": "Et ils confesseront leur iniquite et l'iniquite de leurs peres, selon leurs infidelites par lesquelles ils ont ete infideles envers moi, et aussi comment ils ont marche en opposition avec moi,"
+        },
+        {
+          "verse": 41,
+          "text": "en sorte que moi aussi, j'ai marche en opposition avec eux, et que je les ai amenes dans le pays de leurs ennemis. Si alors leur coeur incirconcis s'humilie et qu'alors ils acceptent la punition de leur iniquite,"
+        },
+        {
+          "verse": 42,
+          "text": "je me souviendrai de mon alliance avec Jacob, et aussi de mon alliance avec Isaac, et je me souviendrai aussi de mon alliance avec Abraham, et je me souviendrai de la terre:"
+        },
+        {
+          "verse": 43,
+          "text": "la terre aura ete abandonnee par eux, et elle aura joui de ses sabbats, dans sa desolation, eux n'y etant plus; et ils accepteront la punition de leur iniquite, parce que..., oui, parce qu'ils ont meprise mes ordonnances, et que leurs ames ont eu en horreur mes statuts."
+        },
+        {
+          "verse": 44,
+          "text": "Meme alors, quand ils seront dans le pays de leurs ennemis, je ne les mepriserai pas et je ne les aurai pas en horreur pour en finir avec eux, pour rompre mon alliance avec eux; car moi, je suis l'Eternel, leur Dieu;"
+        },
+        {
+          "verse": 45,
+          "text": "et je me souviendrai en leur faveur de l'alliance faite avec leurs ancetres, lesquels j'ai fait sortir du pays d'Egypte, sous les yeux des nations, pour etre leur Dieu. Moi, je suis l'Eternel."
+        },
+        {
+          "verse": 46,
+          "text": "Ce sont là les statuts, et les ordonnances, et les lois que l'Eternel etablit entre lui et les fils d'Israel, sur la montagne de Sinai, par Moise."
+        }
+      ]
+    },
+    {
+      "chapter": 27,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Et l'Eternel parla à Moise, disant:"
+        },
+        {
+          "verse": 2,
+          "text": "Parle aux fils d'Israel, et dis-leur: Si quelqu'un a mis à part quoi que ce soit par un voeu, les personnes seront à l'Eternel selon ton estimation."
+        },
+        {
+          "verse": 3,
+          "text": "Et ton estimation d'un male depuis l'age de vingt ans jusqu'à l'age de soixante ans, ton estimation sera de cinquante sicles d'argent, selon le sicle du sanctuaire;"
+        },
+        {
+          "verse": 4,
+          "text": "et si c'est une femme, ton estimation sera de trente sicles."
+        },
+        {
+          "verse": 5,
+          "text": "Et si c'est un male depuis l'age de cinq ans jusqu'à l'age de vingt ans, ton estimation sera de vingt sicles, et pour une femme, de dix sicles;"
+        },
+        {
+          "verse": 6,
+          "text": "et si c'est un male depuis l'age d'un mois jusqu'à l'age de cinq ans, ton estimation sera de cinq sicles d'argent, et ton estimation d'une fille sera de trois sicles d'argent."
+        },
+        {
+          "verse": 7,
+          "text": "Et si c'est un male de l'age de soixante ans et au-dessus, ton estimation sera de quinze sicles, et pour une femme, de dix sicles."
+        },
+        {
+          "verse": 8,
+          "text": "Et s'il est plus pauvre que ton estimation, on le fera se tenir devant le sacrificateur, et le sacrificateur en fera l'estimation: le sacrificateur en fera l'estimation à raison de ce que peut atteindre la main de celui qui a fait le voeu."
+        },
+        {
+          "verse": 9,
+          "text": "Et si c'est une des betes qu'on presente en offrande à l'Eternel, tout ce qu'on donnera à l'Eternel sera saint."
+        },
+        {
+          "verse": 10,
+          "text": "On ne la changera pas, et on ne la remplacera pas par une autre, une bonne par une mauvaise, ou une mauvaise par une bonne; et si l'on remplace, en quelque maniere que ce soit, une bete par une autre, celle-ci et celle qui la remplacera seront saintes."
+        },
+        {
+          "verse": 11,
+          "text": "Et si c'est quelque bete impure qu'on ne peut presenter en offrande à l'Eternel, on placera la bete devant le sacrificateur,"
+        },
+        {
+          "verse": 12,
+          "text": "et le sacrificateur en fera l'estimation, selon qu'elle sera bonne ou mauvaise; il en sera selon ton estimation, sacrificateur!"
+        },
+        {
+          "verse": 13,
+          "text": "Et si on veut la racheter, alors on ajoutera un cinquieme à ton estimation."
+        },
+        {
+          "verse": 14,
+          "text": "Et quand quelqu'un sanctifiera sa maison pour qu'elle soit sainte, consacree à l'Eternel, le sacrificateur en fera l'estimation, selon qu'elle sera bonne ou mauvaise; on s'en tiendra à l'estimation que le sacrificateur en fera."
+        },
+        {
+          "verse": 15,
+          "text": "Et si celui qui l'a sanctifiee rachete sa maison, il ajoutera le cinquieme de l'argent de ton estimation par-dessus, et elle lui appartiendra."
+        },
+        {
+          "verse": 16,
+          "text": "Et si quelqu'un sanctifie à l'Eternel une partie du champ de sa possession, ton estimation sera à raison de ce qu'on peut y semer: le khomer de semence d'orge à cinquante sicles d'argent."
+        },
+        {
+          "verse": 17,
+          "text": "S'il sanctifie son champ des l'annee du Jubile, on s'en tiendra à ton estimation."
+        },
+        {
+          "verse": 18,
+          "text": "Et si c'est apres le Jubile qu'il sanctifie son champ, le sacrificateur lui comptera l'argent à raison des annees qui restent jusqu'à l'annee du Jubile, et il sera fait une reduction sur ton estimation."
+        },
+        {
+          "verse": 19,
+          "text": "Et si celui qui a sanctifie le champ veut le racheter, il ajoutera le cinquieme de l'argent de ton estimation par-dessus, et il lui restera."
+        },
+        {
+          "verse": 20,
+          "text": "Et s'il ne rachete pas le champ ou qu'il vende le champ à un autre homme, il ne pourra plus etre rachete."
+        },
+        {
+          "verse": 21,
+          "text": "Et le champ, en etant libere au Jubile, sera saint, consacre à l'Eternel, comme un champ voue; la possession en sera au sacrificateur."
+        },
+        {
+          "verse": 22,
+          "text": "Et s'il sanctifie à l'Eternel un champ qu'il ait achete, qui ne soit pas des champs de sa possession,"
+        },
+        {
+          "verse": 23,
+          "text": "le sacrificateur lui comptera le montant de ton estimation jusqu'à l'annee du Jubile, et il donnera, ce jour-là, le montant de ton estimation, comme une chose sainte consacree à l'Eternel;"
+        },
+        {
+          "verse": 24,
+          "text": "dans l'annee du Jubile, le champ retournera à celui de qui il l'avait achete et à qui appartenait la possession de la terre."
+        },
+        {
+          "verse": 25,
+          "text": "Et toute estimation que tu auras faite sera selon le sicle du sanctuaire: le sicle sera de vingt gueras."
+        },
+        {
+          "verse": 26,
+          "text": "Seulement, le premier-ne d'entre les betes, qui est offert comme premices à l'Eternel, nul ne pourra le sanctifier: si c'est un boeuf ou un agneau, il est à l'Eternel."
+        },
+        {
+          "verse": 27,
+          "text": "Et s'il est des betes impures, on le rachetera selon ton estimation, et on ajoutera un cinquieme par-dessus; et si on ne le rachete pas, il sera vendu selon ton estimation."
+        },
+        {
+          "verse": 28,
+          "text": "Seulement, aucune chose vouee que quelqu'un aura vouee à l'Eternel, de tout ce qu'il a, soit homme, ou bete, ou champ de sa possession, ne se vendra ni ne se rachetera: toute chose vouee sera tres-sainte, consacree à l'Eternel."
+        },
+        {
+          "verse": 29,
+          "text": "Quiconque d'entre les hommes est voue à Dieu ne pourra etre rachete: il sera certainement mis à mort."
+        },
+        {
+          "verse": 30,
+          "text": "Et toute dime de la terre, de la semence de la terre, du fruit des arbres, est à l'Eternel: c'est une chose sainte consacree à l'Eternel."
+        },
+        {
+          "verse": 31,
+          "text": "Et si quelqu'un veut racheter quelque chose de sa dime, il y ajoutera un cinquieme par-dessus."
+        },
+        {
+          "verse": 32,
+          "text": "Quant à toute dime du gros et du menu betail, de tout ce qui passe sous la verge, la dime sera sainte, consacree à l'Eternel."
+        },
+        {
+          "verse": 33,
+          "text": "On ne distinguera pas entre le bon et le mauvais, et on ne le changera pas; et si on le change, la bete changee et celle qui la remplace seront saintes, elles ne seront pas rachetees."
+        },
+        {
+          "verse": 34,
+          "text": "Ce sont là les commandements que l'Eternel commanda à Moise pour les fils d'Israel, sur la montagne de Sinai."
+        }
+      ]
+    }
+  ]
+}

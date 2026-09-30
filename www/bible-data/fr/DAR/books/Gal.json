@@ -1,0 +1,633 @@
+{
+  "book": 48,
+  "book_name": "Galates",
+  "abbr": "Gal",
+  "chapters": [
+    {
+      "chapter": 1,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Paul, apotre, non de la part des hommes, ni par l'homme, mais par Jesus Christ, et Dieu le Pere qui l'a ressuscite d'entre les morts,"
+        },
+        {
+          "verse": 2,
+          "text": "et tous les freres qui sont avec moi, aux assemblees de la Galatie:"
+        },
+        {
+          "verse": 3,
+          "text": "Grace et paix à vous, de la part de Dieu le Pere et de notre Seigneur Jesus Christ,"
+        },
+        {
+          "verse": 4,
+          "text": "s'est donne lui-meme pour nos peches, en sorte qu'il nous retirat du present siecle mauvais, selon la volonte de notre Dieu et Pere,"
+        },
+        {
+          "verse": 5,
+          "text": "auquel soit la gloire aux siecles des siecles! Amen."
+        },
+        {
+          "verse": 6,
+          "text": "Je m'etonne de ce que vous passez si promptement de celui qui vous a appeles par la grace de Christ, à un evangile different, qui n'en est pas un autre;"
+        },
+        {
+          "verse": 7,
+          "text": "mais il y a des gens qui vous troublent, et qui veulent pervertir l'evangile du Christ."
+        },
+        {
+          "verse": 8,
+          "text": "Mais quand nous-memes, ou quand un ange venu du ciel vous evangeliserait outre ce que nous vous avons evangelise, qu'il soit anatheme."
+        },
+        {
+          "verse": 9,
+          "text": "Comme nous l'avons dejà dit, maintenant aussi je le dis encore: si quelqu'un vous evangelise outre ce que vous avez reçu, qu'il soit anatheme."
+        },
+        {
+          "verse": 10,
+          "text": "Car maintenant, est ce que je m'applique à satisfaire des hommes, ou Dieu? Ou est-ce que je cherche à complaire à des hommes? Si je complaisais encore à des hommes, je ne serais pas esclave de Christ."
+        },
+        {
+          "verse": 11,
+          "text": "Or je vous fais savoir, freres, que l'evangile qui a ete annonce par moi n'est pas selon l'homme."
+        },
+        {
+          "verse": 12,
+          "text": "Car moi, je ne l'ai pas reçu de l'homme non plus, ni appris, mais par la revelation de Jesus Christ."
+        },
+        {
+          "verse": 13,
+          "text": "Car vous avez oui dire quelle a ete autrefois ma conduite dans le judaisme, comment je persecutais outre mesure l'assemblee de Dieu et la devastais,"
+        },
+        {
+          "verse": 14,
+          "text": "comment j'avançais dans le judaisme plus que plusieurs de ceux de mon age dans ma nation, etant le plus ardent zelateur des traditions de mes peres."
+        },
+        {
+          "verse": 15,
+          "text": "Mais quand il plut à Dieu, qui m'a mis à part des le ventre de ma mere et qui m'a appele par sa grace,"
+        },
+        {
+          "verse": 16,
+          "text": "de reveler son Fils en moi, afin que je l'annonçasse parmi les nations, aussitot, je ne pris pas conseil de la chair ni du sang,"
+        },
+        {
+          "verse": 17,
+          "text": "ni ne montai à Jerusalem vers ceux qui etaient apotres avant moi, mais je m'en allai en Arabie, et je retournai de nouveau à Damas."
+        },
+        {
+          "verse": 18,
+          "text": "Puis, trois ans apres, je montai à Jerusalem pour faire la connaissance de Cephas, et je demeurai chez lui quinze jours;"
+        },
+        {
+          "verse": 19,
+          "text": "et je ne vis aucun autre des apotres, sinon Jacques le frere du Seigneur."
+        },
+        {
+          "verse": 20,
+          "text": "Or dans les choses que je vous ecris, voici, devant Dieu, je ne mens point."
+        },
+        {
+          "verse": 21,
+          "text": "Ensuite j'allai dans les pays de Syrie et de Cilicie."
+        },
+        {
+          "verse": 22,
+          "text": "Or j'etais inconnu de visage aux assemblees de la Judee qui sont en Christ,"
+        },
+        {
+          "verse": 23,
+          "text": "seulement elles entendaient dire: Celui qui nous persecutait autrefois, annonce maintenant la foi qu'il detruisait jadis;"
+        },
+        {
+          "verse": 24,
+          "text": "et elles glorifiaient Dieu à cause de moi."
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Ensuite, au bout de quatorze ans, je montai de nouveau à Jerusalem avec Barnabas, prenant aussi Tite avec moi."
+        },
+        {
+          "verse": 2,
+          "text": "Or j'y montai selon une revelation, et je leur exposai l'evangile que je preche parmi les nations, mais, dans le particulier, à ceux qui etaient consideres, de peur qu'en quelque maniere je ne courusse ou n'eusse couru en vain"
+        },
+        {
+          "verse": 3,
+          "text": "(cependant, meme Tite qui etait avec moi, quoiqu'il fut Grec, ne fut pas contraint à etre circoncis):"
+        },
+        {
+          "verse": 4,
+          "text": "et cela à cause des faux freres, furtivement introduits, qui s'etaient insinues pour epier la liberte que nous avons dans le Christ Jesus, afin de nous reduire à la servitude;"
+        },
+        {
+          "verse": 5,
+          "text": "auxquels nous n'avons pas cede par soumission, non pas meme un moment, afin que la verite de l'evangile demeurat avec vous."
+        },
+        {
+          "verse": 6,
+          "text": "Or, de ceux qui etaient consideres comme etant quelque chose..., quels qu'ils aient pu etre, cela ne m'importe en rien: Dieu n'a point egard à l'apparence de l'homme..., à moi, certes, ceux qui etaient consideres n'ont rien communique de plus;"
+        },
+        {
+          "verse": 7,
+          "text": "mais au contraire, ayant vu que l'evangile de l'incirconcision m'a ete confie, comme celui de la circoncision l'a ete à Pierre,"
+        },
+        {
+          "verse": 8,
+          "text": "(car celui qui a opere en Pierre pour l'apostolat de la circoncision a opere en moi aussi envers les nations,)"
+        },
+        {
+          "verse": 9,
+          "text": "et ayant reconnu la grace qui m'a ete donnee, Jacques, et Cephas, et Jean, qui etaient consideres comme etant des colonnes, me donnerent, à moi et à Barnabas, la main d'association, afin que nous allassions vers les nations, et eux vers la circoncision,"
+        },
+        {
+          "verse": 10,
+          "text": "voulant seulement que nous nous souvinssions des pauvres, ce qu'aussi je me suis applique à faire."
+        },
+        {
+          "verse": 11,
+          "text": "Mais quand Cephas vint à Antioche, je lui resistai en face, parce qu'il etait condamne."
+        },
+        {
+          "verse": 12,
+          "text": "Car, avant que quelques-uns fussent venus d'aupres de Jacques, il mangeait avec ceux des nations; mais quand ceux-là furent venus, il se retira et se separa lui-meme, craignant ceux de la circoncision;"
+        },
+        {
+          "verse": 13,
+          "text": "et les autres Juifs aussi userent de dissimulation avec lui, de sorte que Barnabas meme fut entraine avec eux par leur dissimulation."
+        },
+        {
+          "verse": 14,
+          "text": "Mais quand je vis qu'ils ne marchaient pas droit, selon la verite de l'evangile, je dis à Cephas devant tous: Si toi qui es juif, tu vis comme les nations et non pas comme les juifs, comment contrains-tu les nations à judaiser?"
+        },
+        {
+          "verse": 15,
+          "text": "Nous qui, de nature, sommes juifs et non point pecheurs d'entre les nations,"
+        },
+        {
+          "verse": 16,
+          "text": "sachant neanmoins que l'homme n'est pas justifie sur le principe des oeuvres de loi, ni autrement que par la foi en Jesus Christ, nous aussi, nous avons cru au Christ Jesus, afin que nous fussions justifies sur le principe de la foi en Christ et non pas sur le principe des oeuvres de loi: parce que sur le principe des oeuvres de loi nulle chair ne sera justifiee."
+        },
+        {
+          "verse": 17,
+          "text": "Or si, en cherchant à etre justifies en Christ, nous-memes aussi nous avons ete trouves pecheurs, Christ donc est ministre de peche?"
+        },
+        {
+          "verse": 18,
+          "text": "Qu'ainsi n'advienne! Car si ces memes choses que j'ai renversees, je les reedifie, je me constitue transgresseur moi-meme."
+        },
+        {
+          "verse": 19,
+          "text": "Car moi, par la loi, je suis mort à la loi, afin que je vive à Dieu."
+        },
+        {
+          "verse": 20,
+          "text": "Je suis crucifie avec Christ; et je ne vis plus, moi, mais Christ vit en moi; -et ce que je vis maintenant dans la chair, je le vis dans la foi, la foi au fils de Dieu, qui m'a aime et qui s'est livre lui-meme pour moi."
+        },
+        {
+          "verse": 21,
+          "text": "Je n'annule pas la grace de Dieu; car si la justice est par la loi, Christ est donc mort pour rien."
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "O Galates insenses, qui vous a ensorceles, vous devant les yeux de qui Jesus Christ a ete depeint, crucifie au milieu de vous?"
+        },
+        {
+          "verse": 2,
+          "text": "Je voudrais seulement apprendre ceci de vous: avez-vous reçu l'Esprit sur le principe des oeuvres de loi, ou de l'ouie de la foi?"
+        },
+        {
+          "verse": 3,
+          "text": "Etes-vous si insenses? Ayant commence par l'Esprit, acheveriez-vous maintenant par la chair?"
+        },
+        {
+          "verse": 4,
+          "text": "Avez-vous tant souffert en vain, si toutefois c'est en vain?"
+        },
+        {
+          "verse": 5,
+          "text": "Celui donc qui vous fournit l'Esprit et qui opere des miracles au milieu de vous, le fait-il sur le principe des oeuvres de loi, ou de l'ouie de la foi?"
+        },
+        {
+          "verse": 6,
+          "text": "comme Abraham a cru Dieu, et cela lui fut compte à justice."
+        },
+        {
+          "verse": 7,
+          "text": "Sachez donc que ceux qui sont sur le principe de la foi, ceux-là sont fils d'Abraham."
+        },
+        {
+          "verse": 8,
+          "text": "Or l'ecriture, prevoyant que Dieu justifierait les nations sur le principe de la foi, a d'avance annonce la bonne nouvelle à Abraham: En toi toutes les nations seront benies."
+        },
+        {
+          "verse": 9,
+          "text": "De sorte que ceux qui sont sur le principe de la foi sont benis avec le croyant Abraham."
+        },
+        {
+          "verse": 10,
+          "text": "Car tous ceux qui sont sur le principe des oeuvres de loi sont sous malediction; car il est ecrit: Maudit est quiconque ne persevere pas dans toutes les choses qui sont ecrites dans le livre de la loi pour les faire."
+        },
+        {
+          "verse": 11,
+          "text": "Or que par la loi personne ne soit justifie devant Dieu, cela est evident, parce que: Le juste vivra de foi."
+        },
+        {
+          "verse": 12,
+          "text": "Mais la loi n'est pas sur le principe de la foi, mais: Celui qui aura fait ces choses vivra par elles."
+        },
+        {
+          "verse": 13,
+          "text": "Christ nous a rachetes de la malediction de la loi, etant devenu malediction pour nous (car il est ecrit: Maudit est quiconque est pendu au bois),"
+        },
+        {
+          "verse": 14,
+          "text": "afin que la benediction d'Abraham parvint aux nations dans le Christ Jesus, afin que nous reçussions par la foi l'Esprit promis."
+        },
+        {
+          "verse": 15,
+          "text": "Freres, je parle selon l'homme: personne n'annule une alliance qui est confirmee, meme celle d'un homme, ni n'y ajoute."
+        },
+        {
+          "verse": 16,
+          "text": "Or c'est à Abraham que les promesses ont ete faites, et à sa semence. Il ne dit pas: et aux semences, comme parlant de plusieurs; mais comme parlant d'un seul: -et à ta semence, qui est Christ."
+        },
+        {
+          "verse": 17,
+          "text": "Or je dis ceci: que la loi, qui est survenue quatre cent trente ans apres, n'annule point une alliance anterieurement confirmee par Dieu, de maniere à rendre la promesse sans effet."
+        },
+        {
+          "verse": 18,
+          "text": "Car si l'heritage est sur le principe de loi, il n'est plus sur le principe de promesse; mais Dieu a fait le don à Abraham par promesse."
+        },
+        {
+          "verse": 19,
+          "text": "Pourquoi donc la loi? Elle a ete ajoutee à cause des transgressions, jusqu'à ce que vint la semence à laquelle la promesse est faite, ayant ete ordonnee par des anges, par la main d'un mediateur."
+        },
+        {
+          "verse": 20,
+          "text": "Or un mediateur n'est pas mediateur d'un seul, mais Dieu est un seul."
+        },
+        {
+          "verse": 21,
+          "text": "La loi est-elle donc contre les promesses de Dieu? Qu'ainsi n'advienne! Car s'il avait ete donne une loi qui eut le pouvoir de faire vivre, la justice serait en realite sur le principe de la loi."
+        },
+        {
+          "verse": 22,
+          "text": "Mais l'ecriture a renferme toutes choses sous le peche, afin que la promesse, sur le principe de la foi en Jesus Christ, fut donnee à ceux qui croient."
+        },
+        {
+          "verse": 23,
+          "text": "Or avant que la foi vint, nous etions gardes sous la loi, renfermes pour la foi qui devait etre revelee;"
+        },
+        {
+          "verse": 24,
+          "text": "de sorte que la loi a ete notre conducteur jusqu'à Christ, afin que nous fussions justifies sur le principe de la foi;"
+        },
+        {
+          "verse": 25,
+          "text": "mais, la foi etant venue, nous ne sommes plus sous un conducteur,"
+        },
+        {
+          "verse": 26,
+          "text": "car vous etes tous fils de Dieu par la foi dans le Christ Jesus."
+        },
+        {
+          "verse": 27,
+          "text": "Car vous tous qui avez ete baptises pour Christ, vous avez revetu Christ:"
+        },
+        {
+          "verse": 28,
+          "text": "il n'y a ni Juif, ni Grec; il n'y a ni esclave, ni homme libre; il n'y a ni male, ni femelle: car vous tous, vous etes un dans le Christ Jesus."
+        },
+        {
+          "verse": 29,
+          "text": "Or si vous etes de Christ, vous etes donc la semence d'Abraham, heritiers selon la promesse."
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Or je dis qu'aussi longtemps que l'heritier est en bas age, il ne differe en rien d'un esclave, quoiqu'il soit seigneur de tous;"
+        },
+        {
+          "verse": 2,
+          "text": "mais il est sous des tuteurs et des curateurs jusqu'à l'epoque fixee par le pere."
+        },
+        {
+          "verse": 3,
+          "text": "Ainsi aussi nous, lorsque nous etions en bas age, nous etions asservis sous les elements du monde;"
+        },
+        {
+          "verse": 4,
+          "text": "mais, quand l'accomplissement du temps est venu, Dieu a envoye son Fils ne de femme, ne sous la loi,"
+        },
+        {
+          "verse": 5,
+          "text": "afin qu'il rachetat ceux qui etaient sous la loi, afin que vous reçussions l'adoption."
+        },
+        {
+          "verse": 6,
+          "text": "Et, parce que vous etes fils, Dieu a envoye l'Esprit de son Fils dans nos coeurs, criant: Abba, Pere:"
+        },
+        {
+          "verse": 7,
+          "text": "de sorte que tu n'es plus esclave, mais fils: et, si fils, heritier aussi par Dieu."
+        },
+        {
+          "verse": 8,
+          "text": "Mais alors, ne connaissant pas Dieu, vous etiez asservis à ceux qui, par leur nature, ne sont pas dieux:"
+        },
+        {
+          "verse": 9,
+          "text": "mais maintenant, ayant connu Dieu, mais plutot ayant ete connus de Dieu, comment retournez-vous de nouveau aux faibles et miserables elements auxquels vous voulez encore derechef etre asservis?"
+        },
+        {
+          "verse": 10,
+          "text": "Vous observez des jours, et des mois, et des temps, et des annees."
+        },
+        {
+          "verse": 11,
+          "text": "Je crains quant à vous, que peut-etre je n'aie travaille en vain pour vous."
+        },
+        {
+          "verse": 12,
+          "text": "Soyez comme moi, car moi aussi je suis comme vous, freres; je vous en prie. Vous ne m'avez fait aucun tort;"
+        },
+        {
+          "verse": 13,
+          "text": "-et vous savez que dans l'infirmite de la chair je vous ai evangelise au commencement;"
+        },
+        {
+          "verse": 14,
+          "text": "et vous n'avez point meprise, ni rejete avec degout ma tentation qui etait en ma chair; mais vous m'avez reçu comme un ange de Dieu, comme le Christ Jesus."
+        },
+        {
+          "verse": 15,
+          "text": "etait donc votre bonheur? Car je vous rends temoignage que, si cela eut ete possible, arrachant vos propres yeux, vous me les eussiez donnes."
+        },
+        {
+          "verse": 16,
+          "text": "Je suis donc devenu votre ennemi en vous disant la verite?"
+        },
+        {
+          "verse": 17,
+          "text": "Ils ne sont pas zeles à votre egard comme il faut, mais ils veulent vous exclure, afin que vous soyez zeles à leur egard."
+        },
+        {
+          "verse": 18,
+          "text": "Mais il est bon d'etre toujours zele pour le bien, et de ne pas l'etre seulement quand je suis present avec vous."
+        },
+        {
+          "verse": 19,
+          "text": "Mes enfants, pour l'enfantement desquels je travaille de nouveau jusqu'à ce que Christ ait ete forme en vous,"
+        },
+        {
+          "verse": 20,
+          "text": "oui, je voudrais etre maintenant aupres de vous et changer de langage, car je suis en perplexite à votre sujet."
+        },
+        {
+          "verse": 21,
+          "text": "Dites-moi, vous qui voulez etre sous la loi, n'ecoutez-vous pas la loi?"
+        },
+        {
+          "verse": 22,
+          "text": "Car il est ecrit qu'Abraham a eu deux fils, l'un de la servante, et l'autre de la femme libre."
+        },
+        {
+          "verse": 23,
+          "text": "Mais celui qui naquit de la servante naquit selon la chair, et celui qui naquit de la femme libre naquit par la promesse."
+        },
+        {
+          "verse": 24,
+          "text": "Ces choses doivent etre prises dans un sens allegorique: car ce sont deux alliances, l'une du mont Sinai, enfantant pour la servitude, et c'est Agar."
+        },
+        {
+          "verse": 25,
+          "text": "Agar est le mont Sina, en Arabie, et correspond à la Jerusalem de maintenant, car elle est dans la servitude avec ses enfants."
+        },
+        {
+          "verse": 26,
+          "text": "Mais la Jerusalem d'en haut est la femme libre qui est notre mere."
+        },
+        {
+          "verse": 27,
+          "text": "Car il est ecrit: Rejouis-toi, sterile qui n'enfantes point; eclate de joie et pousse des cris, toi qui n'es point en travail d'enfant; car les enfants de la delaisse sont plus nombreux que les enfants de celle qui a un mari."
+        },
+        {
+          "verse": 28,
+          "text": "Or vous, freres, comme Isaac, vous etes enfants de promesse."
+        },
+        {
+          "verse": 29,
+          "text": "Mais, comme alors celui qui etait ne selon la chair persecutait celui qui etait ne selon l'Esprit, il en est de meme aussi maintenant."
+        },
+        {
+          "verse": 30,
+          "text": "Mais que dit l'ecriture? Chasse la servante et son fils, car le fils de la servante n'heritera point avec le fils de la femme libre."
+        },
+        {
+          "verse": 31,
+          "text": "Ainsi, freres, nous ne sommes pas enfants de la servante, mais de la femme libre."
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Christ nous a places dans la liberte en nous affranchissant; tenez-vous donc fermes, et ne soyez pas de nouveau retenus sous un joug de servitude."
+        },
+        {
+          "verse": 2,
+          "text": "Voici, moi Paul, je vous dis que si vous etes circoncis, Christ ne vous profitera de rien;"
+        },
+        {
+          "verse": 3,
+          "text": "et je proteste de nouveau à tout homme circoncis, qu'il est tenu d'accomplir toute la loi."
+        },
+        {
+          "verse": 4,
+          "text": "Vous vous etes separes de tout le benefice qu'il y a dans le Christ, vous tous qui vous justifiez par la loi; vous etes dechus de la grace."
+        },
+        {
+          "verse": 5,
+          "text": "Car nous, par l' Esprit, sur le principe de la foi, nous attendons l'esperance de la justice."
+        },
+        {
+          "verse": 6,
+          "text": "Car, dans le Christ Jesus, ni circoncision, ni incirconcision, n'ont de valeur, mais la foi operante par l' amour."
+        },
+        {
+          "verse": 7,
+          "text": "Vous couriez bien, qui est-ce qui vous a arretes pur que vous n'obeissiez pas à la verite?"
+        },
+        {
+          "verse": 8,
+          "text": "La persuasion ne vient pas de celui qui vous appelle."
+        },
+        {
+          "verse": 9,
+          "text": "Un peu de levain fait lever la pate tout entiere."
+        },
+        {
+          "verse": 10,
+          "text": "J'ai confiance à votre egard par le Seigneur, que vous n'aurez point d'autre sentiment; mais celui qui vous trouble, quel qu'il soit, en portera le jugement."
+        },
+        {
+          "verse": 11,
+          "text": "Mais moi, freres, si je preche encore la circoncision, pourquoi suis-je encore persecute? -alors le scandale de la croix est aneanti."
+        },
+        {
+          "verse": 12,
+          "text": "Je voudrais que ceux qui vous bouleversent se retranchassent meme."
+        },
+        {
+          "verse": 13,
+          "text": "Car vous, freres, vous avez ete appeles à la liberte; seulement n'usez pas de la liberte comme d'une occasion pour la chair, mais, par amour, servez-vous l'un l'autre;"
+        },
+        {
+          "verse": 14,
+          "text": "car toute la loi est accomplie dans une seule parole, dans celle-ci: Tu aimeras ton prochain comme toi-meme."
+        },
+        {
+          "verse": 15,
+          "text": "Mais si vous vous mordez et vous devorez l'un l'autre, prenez garde que vous ne soyez consumes l'un par l'autre."
+        },
+        {
+          "verse": 16,
+          "text": "Mais je dis: Marchez par l'Esprit, et vous n'accomplirez point la convoitise de la chair."
+        },
+        {
+          "verse": 17,
+          "text": "Car la chair convoite contre l'Esprit, et l'Esprit contre la chair; et ces choses sont opposees l'une à l'autre, afin que vous ne pratiquiez pas les choses que vous voudriez."
+        },
+        {
+          "verse": 18,
+          "text": "Mais si vous etes conduis par l' Esprit, vous n'etes pas sous la loi."
+        },
+        {
+          "verse": 19,
+          "text": "Or les oeuvres de la chair sont manifestes, lesquelles sont la fornication, l'impurete, l'impudicite,"
+        },
+        {
+          "verse": 20,
+          "text": "l'idolatrie, la magie, les inimities, les querelles, les jalousies, les coleres, les intrigues, les divisions,"
+        },
+        {
+          "verse": 21,
+          "text": "les sectes, les envies, les meurtres, les ivrogneries, les orgies, et les choses semblables à celles-là, au sujet desquelles je vous declare d'avance, comme aussi je l'ai dejà dit, que ceux qui commettent de telles choses n'heriteront pas du royaume de Dieu."
+        },
+        {
+          "verse": 22,
+          "text": "Mais le fruit de l'Esprit est l'amour, la joie, la paix, la longanimite, la bienveillance, la bonte,"
+        },
+        {
+          "verse": 23,
+          "text": "la fidelite, la douceur, la temperance: contre de telles choses, il n'y a pas de loi."
+        },
+        {
+          "verse": 24,
+          "text": "Or ceux qui sont du Christ ont crucifie la chair avec les passions et les convoitises."
+        },
+        {
+          "verse": 25,
+          "text": "Si nous vivons par l'Esprit, marchons aussi par l'Esprit."
+        },
+        {
+          "verse": 26,
+          "text": "Ne soyons pas desireux de vaine gloire, en nous provoquant les uns les autres et en nous portant envie les uns aux autres."
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "verses": [
+        {
+          "verse": 1,
+          "text": "Freres, quand meme un homme s'est laisse surprendre par quelque faute, vous qui etes spirituels, redressez un tel homme dans un esprit de douceur, prenant garde à toi-meme, de peur que toi aussi tu ne sois tente."
+        },
+        {
+          "verse": 2,
+          "text": "Portez les charges les uns des autres, et ainsi accomplissez la loi du Christ;"
+        },
+        {
+          "verse": 3,
+          "text": "car si, n'etant rien, quelqu'un pense etre quelque chose, il se seduit lui-meme;"
+        },
+        {
+          "verse": 4,
+          "text": "mais que chacun eprouve sa propre oeuvre, et alors il aura de quoi se glorifier, relativement à lui-meme seulement et non relativement à autrui:"
+        },
+        {
+          "verse": 5,
+          "text": "chacun portera son propre fardeau."
+        },
+        {
+          "verse": 6,
+          "text": "Que celui qui est enseigne dans la parole fasse participer à tous les biens temporels celui qui enseigne."
+        },
+        {
+          "verse": 7,
+          "text": "Ne soyez pas seduits; on ne se moque pas de Dieu; car ce qu'un homme seme, cela aussi il le moissonnera."
+        },
+        {
+          "verse": 8,
+          "text": "Car celui qui seme pour sa propre chair moissonnera de la chair la corruption; mais celui qui seme pour l'Esprit moissonnera de l'Esprit la vie eternelle."
+        },
+        {
+          "verse": 9,
+          "text": "Or ne nous lassons pas en faisant le bien, car, au temps propre, nous moissonnerons, si nous ne defaillons pas."
+        },
+        {
+          "verse": 10,
+          "text": "Ainsi donc, comme nous en avons l'occasion, faisons du bien à tous, mais surtout à ceux de la maison de la foi."
+        },
+        {
+          "verse": 11,
+          "text": "Vous voyez quelle longue lettre je vous ai ecrite de ma propre main."
+        },
+        {
+          "verse": 12,
+          "text": "Tous ceux qui veulent avoir une belle apparence dans la chair, ceux-là vous contraignent à etre circoncis, seulement afin qu'ils ne soient pas persecutes à cause de la croix de Christ."
+        },
+        {
+          "verse": 13,
+          "text": "Car ceux-là qui sont circoncis, eux-memes ne gardent pas la loi; mais ils veulent que vous soyez circoncis, afin de se glorifier dans votre chair."
+        },
+        {
+          "verse": 14,
+          "text": "Mais qu'il ne m'arrive pas à moi de me glorifier, sinon en la croix de notre Seigneur Jesus Christ, par laquelle le monde m'est crucifie, et moi au monde."
+        },
+        {
+          "verse": 15,
+          "text": "Car ni la circoncision, ni l'incirconcision ne sont rien, mais une nouvelle creation."
+        },
+        {
+          "verse": 16,
+          "text": "Et à l'egard de tous ceux qui marcheront selon cette regle, paix et misericorde sur eux et sur l'Israel de Dieu!"
+        },
+        {
+          "verse": 17,
+          "text": "Desormais que personne ne vienne me troubler, car moi je porte en mon corps les marques du Seigneur Jesus."
+        },
+        {
+          "verse": 18,
+          "text": "Que la grace de notre Seigneur Jesus Christ soit avec votre esprit, freres! Amen."
+        }
+      ]
+    }
+  ]
+}
