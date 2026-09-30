@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <radialGradient id="prayerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fdba74" />
+      <stop offset="40%" stop-color="#c2410c" />
+      <stop offset="80%" stop-color="#431407" />
+      <stop offset="100%" stop-color="#1c1917" />
+    </radialGradient>
+  </defs>
+  <rect width="120" height="120" rx="16" fill="url(#prayerGlow)" />
+  <g transform="translate(60, 60) scale(0.9) translate(-60, -60)">
+    <!-- Praying hands silhouette -->
+    <path d="M57 32 C57 30 63 30 63 32 L64 56 C68 54 73 57 74 61 L77 74 C78 79 74 86 68 89 L60 92 L52 89 C46 86 42 79 43 74 L46 61 C47 57 52 54 56 56 Z" fill="#fef3c7" opacity="0.9" />
+    <!-- Center divider line between hands -->
+    <line x1="60" y1="32" x2="60" y2="92" stroke="#b45309" stroke-width="1.5" />
+    <!-- Cuff / sleeves -->
+    <path d="M42 86 L36 104 L52 106 L55 90 Z" fill="#78350f" />
+    <path d="M78 86 L84 104 L68 106 L65 90 Z" fill="#78350f" />
+  </g>
+</svg>

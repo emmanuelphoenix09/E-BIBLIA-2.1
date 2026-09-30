@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <defs>
+    <radialGradient id="heartHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.25" />
+      <stop offset="60%" stop-color="#fb7185" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#fb7185" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185" />
+      <stop offset="50%" stop-color="#e11d48" />
+      <stop offset="100%" stop-color="#be123c" />
+    </linearGradient>
+    <filter id="heartShadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#e11d48" flood-opacity="0.4" />
+    </filter>
+  </defs>
+  <!-- Radiant halo -->
+  <circle cx="80" cy="80" r="75" fill="url(#heartHalo)" />
+  <circle cx="80" cy="80" r="55" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.4" />
+  <!-- Radiant rays -->
+  <g stroke="#fb7185" stroke-width="2" stroke-linecap="round" opacity="0.6">
+    <line x1="80" y1="12" x2="80" y2="20" />
+    <line x1="80" y1="140" x2="80" y2="148" />
+    <line x1="12" y1="80" x2="20" y2="80" />
+    <line x1="140" y1="80" x2="148" y2="80" />
+    <line x1="32" y1="32" x2="38" y2="38" />
+    <line x1="122" y1="122" x2="128" y2="128" />
+    <line x1="128" y1="32" x2="122" y2="38" />
+    <line x1="38" y1="122" x2="32" y2="128" />
+  </g>
+  <!-- Heart Shape -->
+  <path d="M80 115 C50 95 32 75 32 55 C32 40 44 28 58 28 C68 28 76 34 80 42 C84 34 92 28 102 28 C116 28 128 40 128 55 C128 75 110 95 80 115 Z"
+        fill="url(#heartGrad)" filter="url(#heartShadow)" />
+  <!-- Inner shine -->
+  <path d="M42 50 C42 42 48 36 56 35 C52 40 50 48 53 56 C50 54 42 53 42 50 Z" fill="#ffffff" opacity="0.5" />
+</svg>

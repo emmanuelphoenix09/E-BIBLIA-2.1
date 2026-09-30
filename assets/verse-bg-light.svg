@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="skyLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bae6fd" />
+      <stop offset="45%" stop-color="#e0f2fe" />
+      <stop offset="75%" stop-color="#fef3c7" />
+      <stop offset="100%" stop-color="#fed7aa" />
+    </linearGradient>
+    <radialGradient id="sunGlowLight" cx="80%" cy="25%" r="45%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.9" />
+      <stop offset="40%" stop-color="#f59e0b" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="mountLight1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+    <linearGradient id="mountLight2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="320" fill="url(#skyLight)" />
+  <rect width="600" height="320" fill="url(#sunGlowLight)" />
+  <circle cx="480" cy="80" r="30" fill="#fffbeb" opacity="0.9" filter="drop-shadow(0 0 10px #fde68a)" />
+  <!-- Mountain layer 1 -->
+  <path d="M-20 220 L110 135 L220 195 L350 115 L490 205 L620 125 L620 320 L-20 320 Z" fill="url(#mountLight1)" opacity="0.6" />
+  <!-- Mountain layer 2 -->
+  <path d="M-20 260 L90 185 L190 235 L320 165 L440 225 L560 170 L620 205 L620 320 L-20 320 Z" fill="url(#mountLight2)" opacity="0.45" />
+</svg>
