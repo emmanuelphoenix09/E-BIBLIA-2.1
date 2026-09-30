@@ -1,0 +1,1805 @@
+/* ==========================================================================
+   E-BIBLIA 3.0 — DESIGN SYSTEM OFFICIEL & STYLES COMPLETS
+   Conforme à la maquette officielle (21 pages, Dark/Light modes, 5 onglets)
+   ========================================================================== */
+
+/* -----------------------------
+   VARIABLES & PALETTES DE THÈME
+   ----------------------------- */
+:root {
+  /* Mode Sombre (par défaut dans la maquette) */
+  --eb-bg: #090a0f;
+  --eb-bg-alt: #10121a;
+  --eb-card: #151821;
+  --eb-card-inner: #1c202d;
+  --eb-border: #232735;
+  --eb-border-light: #2d3345;
+  
+  --eb-text: #ffffff;
+  --eb-text-secondary: #9095a5;
+  --eb-text-muted: #5e6477;
+  
+  --eb-accent: #2563eb;           /* Bleu roi de la maquette */
+  --eb-accent-yellow: #f5c400;
+  --eb-accent-hover: #1d4ed8;
+  --eb-accent-glow: rgba(37, 99, 235, 0.25);
+  
+  --eb-streak: #f97316;           /* Flamme orange */
+  --eb-notification: #ef4444;     /* Point rouge notification */
+  --eb-success: #10b981;
+  --eb-purple: #8b5cf6;
+  --eb-amber: #f59e0b;
+  
+  --eb-nav-bg: rgba(18, 20, 28, 0.94);
+  --eb-nav-border: #252a38;
+  --eb-nav-active: #ffffff;
+  --eb-nav-active-bg: #2563eb;
+  --eb-nav-inactive: #73788b;
+  
+  --eb-radius-sm: 10px;
+  --eb-radius-md: 14px;
+  --eb-radius-lg: 18px;
+  --eb-radius-xl: 22px;
+  --eb-radius-full: 9999px;
+  
+  --eb-font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+  --eb-font-reader: Georgia, "Merriweather", "Times New Roman", serif;
+  
+  --eb-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --eb-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --eb-shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* Mode Clair (Screens 8 à 14 & variantes claires) */
+html:not(.dark) {
+  --eb-bg: #ffffff;
+  --eb-bg-alt: #f6f8fc;
+  --eb-card: #ffffff;
+  --eb-card-inner: #fff9dc;
+  --eb-border: #d8e0ed;
+  --eb-border-light: #edf0f6;
+  
+  --eb-text: #102f63;
+  --eb-text-secondary: #5b6b8c;
+  --eb-text-muted: #91a0ba;
+  
+  --eb-accent: #1d4ed8;
+  --eb-accent-yellow: #eab900;
+  --eb-accent-hover: #173ea8;
+  --eb-accent-glow: rgba(29, 78, 216, 0.18);
+  
+  --eb-streak: #ea580c;
+  --eb-notification: #ef4444;
+  --eb-success: #059669;
+  --eb-purple: #7c3aed;
+  --eb-amber: #d97706;
+  
+  --eb-nav-bg: rgba(255, 255, 255, 0.95);
+  --eb-nav-border: #d8e0ed;
+  --eb-nav-active: #173ea8;
+  --eb-nav-active-bg: #fff4b8;
+  --eb-nav-inactive: #8291aa;
+  
+  --eb-shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.04);
+  --eb-shadow-md: 0 6px 18px rgba(0, 0, 0, 0.07);
+  --eb-shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* -----------------------------
+   RESET & DISPOSITION GLOBALE
+   ----------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--eb-bg);
+  color: var(--eb-text);
+  font-family: var(--eb-font-ui);
+  font-size: 15px;
+  line-height: 1.5;
+  overflow: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+  outline: none;
+  transition: transform 0.12s ease, opacity 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+input, textarea, select {
+  font-family: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Icônes SVG */
+.eb-icon {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  fill: currentColor;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* -----------------------------
+   CONTENEUR PRINCIPAL APPLI
+   ----------------------------- */
+#app-viewport {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  height: 100dvh;
+  margin: 0 auto;
+  background-color: var(--eb-bg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+
+@media (min-width: 481px) {
+  #app-viewport {
+    border-left: 1px solid var(--eb-border);
+    border-right: 1px solid var(--eb-border);
+  }
+}
+
+/* -----------------------------
+   CONTENEUR DES VUES (ÉCRANS)
+   ----------------------------- */
+#app-screens {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.eb-view {
+  position: absolute;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 16px 88px; /* espace pour la barre d'onglets */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.eb-view.is-active {
+  display: flex;
+}
+
+/* -----------------------------
+   NAVIGATION INFÉRIEURE (5 ONGLETS)
+   ----------------------------- */
+.eb-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  height: 70px;
+  padding: 8px 12px;
+  background: var(--eb-nav-bg);
+  border-top: 1px solid var(--eb-nav-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  z-index: 90;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.eb-tab-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 100%;
+  color: var(--eb-nav-inactive);
+  font-size: 10.5px;
+  font-weight: 600;
+  position: relative;
+  border-radius: var(--eb-radius-md);
+}
+
+.eb-tab-btn .eb-icon {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.eb-tab-btn.is-active {
+  color: var(--eb-nav-active);
+}
+
+html:not(.dark) .eb-tab-btn.is-active {
+  color: var(--eb-accent);
+}
+
+.eb-tab-btn.is-active .eb-icon {
+  transform: scale(1.08);
+}
+
+/* Indicateur de pastille active pour l'onglet */
+.eb-tab-indicator {
+  position: absolute;
+  top: 4px;
+  width: 24px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--eb-accent);
+  opacity: 0;
+  transform: scaleX(0.5);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.eb-tab-btn.is-active .eb-tab-indicator {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* -----------------------------
+   EN-TÊTE COMMUNS DES PAGES
+   ----------------------------- */
+.eb-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0 16px;
+  gap: 12px;
+}
+
+.eb-page-title {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--eb-text);
+  margin: 0;
+}
+
+.eb-header-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--eb-text);
+  position: relative;
+}
+
+.eb-header-btn:hover {
+  background: var(--eb-card-inner);
+}
+
+.eb-badge-dot {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--eb-notification);
+  box-shadow: 0 0 0 2px var(--eb-card);
+}
+
+.eb-back-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eb-back-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--eb-text);
+  margin-left: -6px;
+}
+
+.eb-back-btn:hover {
+  background: var(--eb-card);
+}
+
+/* -----------------------------
+   COMPOSANT : PILLS & TAGS
+   ----------------------------- */
+.eb-pills-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  margin-bottom: 16px;
+  scrollbar-width: none;
+}
+
+.eb-pills-row::-webkit-scrollbar {
+  display: none;
+}
+
+.eb-pill {
+  padding: 7px 16px;
+  border-radius: var(--eb-radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  color: var(--eb-text-secondary);
+  white-space: nowrap;
+}
+
+.eb-pill:hover {
+  color: var(--eb-text);
+}
+
+.eb-pill.is-active {
+  background: var(--eb-accent);
+  border-color: var(--eb-accent);
+  color: #ffffff;
+}
+
+/* -----------------------------
+   ÉCRAN 1 & 8 : ACCUEIL
+   ----------------------------- */
+.eb-home-header {
+  padding: 10px 0 18px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.eb-home-welcome h1 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 2px;
+}
+
+.eb-home-subtitle {
+  font-size: 13px;
+  color: var(--eb-text-secondary);
+}
+
+.eb-home-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eb-streak-pill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: var(--eb-radius-full);
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--eb-text);
+}
+
+.eb-streak-pill .eb-icon {
+  color: var(--eb-streak);
+  width: 15px;
+  height: 15px;
+}
+
+/* Carte Verset du jour (Photographique) */
+.eb-verse-card {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  border-radius: var(--eb-radius-xl);
+  overflow: hidden;
+  padding: 20px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  border: 1px solid var(--eb-border);
+  box-shadow: var(--eb-shadow-md);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Fonds photographiques pour Dark et Light */
+.dark .eb-verse-card,
+:root .eb-verse-card {
+  background-image: linear-gradient(180deg, rgba(10, 11, 15, 0.4) 0%, rgba(10, 11, 15, 0.85) 100%), url('../assets/verse-bg-dark.svg');
+}
+
+html:not(.dark) .eb-verse-card {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.88) 100%), url('../assets/verse-bg-light.svg');
+  border-color: #cbd5e1;
+}
+
+.eb-verse-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.eb-verse-badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ff9d79;
+}
+
+html:not(.dark) .eb-verse-badge {
+  color: #ea580c;
+}
+
+.eb-verse-ref {
+  font-size: 13px;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+html:not(.dark) .eb-verse-ref {
+  color: #1e293b;
+}
+
+.eb-verse-quote {
+  font-family: var(--eb-font-reader);
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+html:not(.dark) .eb-verse-quote {
+  color: #0f172a;
+  text-shadow: none;
+  font-weight: 600;
+}
+
+.eb-verse-social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 12px;
+  color: #cbd5e1;
+}
+
+html:not(.dark) .eb-verse-social {
+  color: #64748b;
+}
+
+.eb-social-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+}
+
+.eb-social-item .eb-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.eb-social-item:hover {
+  color: var(--eb-accent);
+}
+
+/* Section Pour aujourd'hui */
+.eb-section-title {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--eb-text);
+  letter-spacing: -0.02em;
+}
+
+.eb-today-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.eb-today-item {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-lg);
+  gap: 14px;
+  box-shadow: var(--eb-shadow-sm);
+}
+
+.eb-today-item:hover {
+  background: var(--eb-card-inner);
+  border-color: var(--eb-border-light);
+}
+
+.eb-item-icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--eb-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.eb-badge-blue {
+  background: #1e3a8a;
+  color: #60a5fa;
+}
+
+html:not(.dark) .eb-badge-blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.eb-badge-purple {
+  background: #3b0764;
+  color: #c084fc;
+}
+
+html:not(.dark) .eb-badge-purple {
+  background: #f3e8ff;
+  color: #9333ea;
+}
+
+.eb-item-icon-badge .eb-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.eb-today-info {
+  flex: 1;
+}
+
+.eb-today-info strong {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--eb-text);
+}
+
+.eb-today-info small {
+  font-size: 12px;
+  color: var(--eb-text-secondary);
+}
+
+.eb-chevron-icon {
+  color: var(--eb-text-muted);
+  width: 14px;
+  height: 14px;
+}
+
+/* -----------------------------
+   ÉCRAN 2 & 9 : BIBLE - LECTEUR
+   ----------------------------- */
+.eb-reader-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 12px;
+  border-bottom: 1px solid var(--eb-border);
+  margin-bottom: 16px;
+  background: var(--eb-bg);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.eb-book-picker-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--eb-text);
+  padding: 6px 10px;
+  border-radius: var(--eb-radius-md);
+}
+
+.eb-book-picker-btn:hover {
+  background: var(--eb-card);
+}
+
+.eb-reader-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eb-version-badge {
+  padding: 4px 10px;
+  border-radius: var(--eb-radius-full);
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--eb-accent);
+}
+
+.eb-reader-content {
+  font-family: var(--eb-font-reader);
+  font-size: 17.5px;
+  line-height: 1.85;
+  color: var(--eb-text);
+  padding: 8px 0 30px;
+}
+
+.eb-verse-row {
+  margin-bottom: 12px;
+  padding: 4px 8px;
+  border-radius: var(--eb-radius-sm);
+  cursor: pointer;
+  transition: background 0.15s ease;
+  position: relative;
+}
+
+.eb-verse-row:hover {
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.eb-verse-row.is-selected {
+  background: rgba(37, 99, 235, 0.18);
+  box-shadow: inset 3px 0 0 var(--eb-accent);
+}
+
+.eb-verse-num {
+  font-size: 0.75em;
+  font-weight: 800;
+  color: var(--eb-accent);
+  margin-right: 7px;
+  user-select: none;
+  font-family: var(--eb-font-ui);
+}
+
+/* Surlignages */
+.eb-verse-row.hl-orange { background: rgba(249, 115, 22, 0.22) !important; }
+.eb-verse-row.hl-purple { background: rgba(139, 92, 246, 0.22) !important; }
+.eb-verse-row.hl-green  { background: rgba(16, 185, 129, 0.22) !important; }
+.eb-verse-row.hl-yellow { background: rgba(234, 179, 8, 0.22) !important; }
+
+/* Barre d'action contextuelle du verset */
+.eb-verse-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-full);
+  box-shadow: var(--eb-shadow-lg);
+  position: sticky;
+  bottom: 84px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 95%;
+  z-index: 40;
+  animation: slideUp 0.18s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translate(-50%, 10px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.eb-toolbar-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--eb-text);
+}
+.eb-selection-count{font-size:11px;font-weight:800;color:var(--eb-accent);padding:0 4px;white-space:nowrap}
+
+.eb-toolbar-btn:hover {
+  background: var(--eb-card-inner);
+  color: var(--eb-accent);
+}
+
+
+.eb-hl-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.eb-hl-orange { background: #f97316; }
+.eb-hl-purple { background: #8b5cf6; }
+.eb-hl-green  { background: #10b981; }
+
+/* Pilule de navigation flottante au bas du lecteur */
+.eb-reader-nav-pill {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 18px;
+  border-radius: var(--eb-radius-full);
+  background: rgba(18, 20, 28, 0.9);
+  border: 1px solid var(--eb-border);
+  box-shadow: var(--eb-shadow-md);
+  backdrop-filter: blur(12px);
+  z-index: 30;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--eb-text);
+}
+
+html:not(.dark) .eb-reader-nav-pill {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--eb-shadow-sm);
+}
+
+.eb-nav-arrow {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eb-nav-arrow:hover {
+  background: var(--eb-card);
+  color: var(--eb-accent);
+}
+
+/* -----------------------------
+   ÉCRAN 3 & 10 : BIBLE - COMPARER
+   ----------------------------- */
+.eb-compare-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.eb-compare-card {
+  padding: 16px 18px;
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-lg);
+  box-shadow: var(--eb-shadow-sm);
+}
+
+.eb-compare-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.eb-version-tag {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(37, 99, 235, 0.16);
+  color: #3b82f6;
+  letter-spacing: 0.05em;
+}
+
+html:not(.dark) .eb-version-tag {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.eb-version-name {
+  font-size: 12.5px;
+  color: var(--eb-text-secondary);
+  font-weight: 500;
+}
+
+.eb-compare-ref {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--eb-text);
+  margin-bottom: 6px;
+}
+
+.eb-compare-text {
+  font-family: var(--eb-font-reader);
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--eb-text);
+}
+
+.eb-btn-add-version {
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--eb-radius-full);
+  background: var(--eb-accent);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 16px var(--eb-accent-glow);
+}
+
+.eb-btn-add-version:hover {
+  background: var(--eb-accent-hover);
+}
+
+/* -----------------------------
+   ÉCRAN 4 & 11 : PLANS DE LECTURE
+   ----------------------------- */
+.eb-plans-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.eb-plan-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-lg);
+  box-shadow: var(--eb-shadow-sm);
+  cursor: pointer;
+}
+
+.eb-plan-card:hover {
+  background: var(--eb-card-inner);
+  border-color: var(--eb-border-light);
+}
+
+.eb-plan-thumb {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--eb-radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--eb-border);
+}
+
+.eb-plan-details {
+  flex: 1;
+}
+
+.eb-plan-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--eb-text);
+  margin-bottom: 3px;
+}
+
+.eb-plan-meta {
+  font-size: 12px;
+  color: var(--eb-text-secondary);
+}
+
+/* -----------------------------
+   ÉCRAN 5 & 12 : LÉONA IA (STYLE CONSTANT)
+   Cosmique, néon, orbe interactif (inchangé en mode clair)
+   ----------------------------- */
+.eb-leona-view {
+  background: radial-gradient(circle at 50% 30%, #1e1338 0%, #0c0818 60%, #05030a 100%) !important;
+  color: #ffffff !important;
+  padding-bottom: 96px;
+}
+
+.eb-leona-header {
+  text-align: center;
+  padding: 16px 0 10px;
+}
+
+.eb-leona-title {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #a855f7 0%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2px;
+  filter: drop-shadow(0 2px 10px rgba(168, 85, 247, 0.4));
+}
+
+.eb-leona-sub {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.eb-orb-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 0 18px;
+  position: relative;
+}
+
+.eb-orb-canvas {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 25px rgba(56, 189, 248, 0.45));
+}
+
+.eb-leona-desc {
+  text-align: center;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #cbd5e1;
+  max-width: 320px;
+  margin: 0 auto 18px;
+}
+
+.eb-leona-suggestions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.eb-leona-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--eb-radius-full);
+  background: rgba(30, 27, 75, 0.6);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  font-size: 12px;
+  font-weight: 600;
+  color: #e2e8f0;
+  backdrop-filter: blur(10px);
+}
+
+.eb-leona-chip:hover {
+  background: rgba(168, 85, 247, 0.25);
+  border-color: #a855f7;
+  color: #ffffff;
+}
+
+.eb-leona-chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.eb-chat-msg {
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.eb-msg-user {
+  background: #3b0764;
+  color: #f3e8ff;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.eb-msg-leona {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #f8fafc;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.eb-leona-input-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 6px 6px 18px;
+  border-radius: var(--eb-radius-full);
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.eb-leona-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+}
+
+.eb-leona-input::placeholder {
+  color: #64748b;
+}
+
+.eb-leona-btn-send {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+}
+
+/* -----------------------------
+   ÉCRAN 6 & 13 : MENU
+   ----------------------------- */
+.eb-menu-list {
+  display: flex;
+  flex-direction: column;
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-xl);
+  overflow: hidden;
+  box-shadow: var(--eb-shadow-sm);
+  margin-bottom: 24px;
+}
+
+.eb-menu-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--eb-border);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.eb-menu-row:last-child {
+  border-bottom: none;
+}
+
+.eb-menu-row:hover {
+  background: var(--eb-card-inner);
+}
+
+.eb-menu-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--eb-text-secondary);
+}
+
+.eb-menu-label {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--eb-text);
+}
+
+/* -----------------------------
+   ÉCRAN 7 & 14 : RECHERCHE
+   ----------------------------- */
+.eb-search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: var(--eb-radius-full);
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  margin-bottom: 16px;
+  box-shadow: var(--eb-shadow-sm);
+}
+
+.eb-search-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--eb-text);
+  font-size: 14.5px;
+  outline: none;
+}
+
+.eb-search-box input::placeholder {
+  color: var(--eb-text-muted);
+}
+
+.eb-search-section-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--eb-text);
+  margin: 18px 0 10px;
+}
+
+.eb-recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.eb-recent-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: var(--eb-radius-md);
+  color: var(--eb-text-secondary);
+  font-size: 13.5px;
+  cursor: pointer;
+}
+
+.eb-recent-item:hover {
+  background: var(--eb-card);
+  color: var(--eb-text);
+}
+
+.eb-tags-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.eb-topic-tag {
+  padding: 8px 16px;
+  border-radius: var(--eb-radius-full);
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--eb-text);
+  cursor: pointer;
+}
+
+.eb-topic-tag:hover {
+  background: var(--eb-accent);
+  color: #ffffff;
+  border-color: var(--eb-accent);
+}
+
+/* -----------------------------
+   ÉCRAN 15 : NOTES
+   ----------------------------- */
+.eb-notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.eb-note-card {
+  padding: 16px 18px;
+  border-radius: var(--eb-radius-lg);
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  box-shadow: var(--eb-shadow-sm);
+}
+
+.eb-note-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.eb-note-ref {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--eb-text);
+}
+
+.eb-note-date {
+  font-size: 12px;
+  color: var(--eb-text-muted);
+}
+
+.eb-note-body {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--eb-text-secondary);
+}
+
+/* -----------------------------
+   ÉCRAN 16 : SURBRILLANCES
+   ----------------------------- */
+.eb-highlights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.eb-highlight-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-lg);
+  cursor: pointer;
+  box-shadow: var(--eb-shadow-sm);
+}
+
+.eb-hl-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.eb-hl-info {
+  flex: 1;
+}
+
+.eb-hl-ref {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--eb-text);
+  margin-bottom: 4px;
+}
+
+.eb-hl-text {
+  font-family: var(--eb-font-reader);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--eb-text-secondary);
+}
+
+/* -----------------------------
+   ÉCRAN 17 : VERSETS (FAVORIS)
+   ----------------------------- */
+.eb-verses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.eb-saved-verse-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-lg);
+  box-shadow: var(--eb-shadow-sm);
+}
+
+.eb-bookmark-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.15);
+  color: var(--eb-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* -----------------------------
+   ÉCRAN 18 : STATISTIQUES
+   ----------------------------- */
+.eb-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.eb-stat-box {
+  padding: 16px;
+  border-radius: var(--eb-radius-lg);
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eb-stat-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--eb-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eb-stat-num {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--eb-text);
+}
+
+.eb-stat-label {
+  font-size: 11.5px;
+  color: var(--eb-text-secondary);
+  font-weight: 500;
+}
+
+.eb-badges-section {
+  margin-top: 10px;
+}
+
+.eb-badges-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.eb-badge-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  padding: 12px 6px;
+  border-radius: var(--eb-radius-md);
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+}
+
+.eb-badge-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.eb-badge-name {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--eb-text-secondary);
+}
+
+.eb-btn-all-stats {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  text-align: center;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--eb-accent);
+}
+
+/* -----------------------------
+   ÉCRAN 19 : PARAMÈTRES
+   ----------------------------- */
+.eb-settings-list {
+  display: flex;
+  flex-direction: column;
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-xl);
+  overflow: hidden;
+  box-shadow: var(--eb-shadow-sm);
+}
+
+.eb-setting-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--eb-border);
+  cursor: pointer;
+}
+
+.eb-setting-row:last-child {
+  border-bottom: none;
+}
+
+.eb-setting-label {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--eb-text);
+}
+
+.eb-setting-value {
+  font-size: 13px;
+  color: var(--eb-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* -----------------------------
+   ÉCRAN 20 : PRIÈRE
+   ----------------------------- */
+.eb-prayers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.eb-prayer-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-lg);
+  box-shadow: var(--eb-shadow-sm);
+}
+
+.eb-prayer-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.eb-prayer-details {
+  flex: 1;
+}
+
+.eb-prayer-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--eb-text);
+  margin-bottom: 4px;
+}
+
+.eb-prayer-text {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--eb-text-secondary);
+}
+
+/* -----------------------------
+   ÉCRAN 21 : FAIRE UN DON
+   ----------------------------- */
+.eb-donate-view {
+  text-align: center;
+  padding: 30px 16px 80px;
+}
+
+.eb-donate-illustration {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.eb-donate-title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--eb-text);
+  margin-bottom: 10px;
+}
+
+.eb-donate-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--eb-text-secondary);
+  max-width: 320px;
+  margin: 0 auto 28px;
+}
+
+.eb-amounts-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.eb-amount-btn {
+  padding: 10px 18px;
+  border-radius: var(--eb-radius-md);
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--eb-text);
+}
+
+.eb-amount-btn.is-active,
+.eb-amount-btn:hover {
+  background: var(--eb-accent);
+  border-color: var(--eb-accent);
+  color: #ffffff;
+}
+
+.eb-btn-donate {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto 16px;
+  padding: 15px;
+  border-radius: var(--eb-radius-full);
+  background: var(--eb-accent);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 4px 20px var(--eb-accent-glow);
+}
+
+/* -----------------------------
+   MODALES & FEUILLES INFÉRIEURES
+   ----------------------------- */
+.eb-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  z-index: 120;
+  display: none;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.eb-modal-backdrop.is-open {
+  display: flex;
+}
+
+.eb-modal-sheet {
+  width: 100%;
+  max-width: 480px;
+  max-height: 85vh;
+  background: var(--eb-card);
+  border-top-left-radius: var(--eb-radius-xl);
+  border-top-right-radius: var(--eb-radius-xl);
+  border-top: 1px solid var(--eb-border);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+  animation: sheetUp 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes sheetUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.eb-sheet-handle {
+  width: 38px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--eb-border);
+  margin: 0 auto 16px;
+}
+
+.eb-sheet-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.eb-sheet-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--eb-text);
+}
+
+.eb-sheet-body {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 12px;
+}
+
+/* Grille de sélection de livre et chapitre */
+.eb-book-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.eb-book-chip {
+  padding: 10px 12px;
+  border-radius: var(--eb-radius-md);
+  background: var(--eb-card-inner);
+  border: 1px solid var(--eb-border);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.eb-book-chip.is-active {
+  background: var(--eb-accent);
+  color: #ffffff;
+  border-color: var(--eb-accent);
+}
+
+.eb-chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.eb-chapter-num {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--eb-radius-md);
+  background: var(--eb-card-inner);
+  border: 1px solid var(--eb-border);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.eb-chapter-num.is-active {
+  background: var(--eb-accent);
+  color: #ffffff;
+}
+
+/* -----------------------------
+   PAGE : À PROPOS DE L'AUTEUR
+   ----------------------------- */
+.eb-about-view {
+  padding: 10px 16px 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.eb-author-avatar-wrap {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, #d4af37, #fef08a, #996515);
+  box-shadow: 0 0 24px rgba(212, 175, 55, 0.35);
+  margin: 14px auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eb-author-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #111;
+  display: block;
+}
+
+.eb-author-name {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--eb-text);
+  margin-bottom: 4px;
+}
+
+.eb-author-role {
+  font-size: 13px;
+  color: var(--eb-text-secondary);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.eb-author-card {
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-xl);
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: var(--eb-shadow-sm);
+  text-align: left;
+}
+
+.eb-author-card p {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--eb-text);
+  opacity: 0.92;
+}
+
+.eb-whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 340px;
+  padding: 14px 20px;
+  border-radius: var(--eb-radius-full);
+  background: #0f3d2e;
+  border: 1px solid #14532d;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(15, 61, 46, 0.4);
+  margin-bottom: 16px;
+  transition: background 0.15s ease, transform 0.12s ease;
+}
+
+.eb-whatsapp-btn:hover {
+  background: #14533e;
+}
+
+.eb-whatsapp-btn .eb-icon {
+  width: 20px;
+  height: 20px;
+  color: #25d366;
+}
+
+.eb-app-version-tag {
+  font-size: 12px;
+  color: var(--eb-text-muted);
+  font-weight: 500;
+}
+
+/* Toast de notification */
+.eb-toast {
+  position: fixed;
+  bottom: 84px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111827;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: var(--eb-radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  z-index: 200;
+  display: none;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.eb-payment-card{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:14px 16px;border:1px solid var(--eb-border);border-radius:var(--eb-radius-md);background:var(--eb-card);color:var(--eb-text);text-align:left;text-decoration:none}.eb-payment-card strong{font-size:13px}.eb-payment-card span{color:var(--eb-text-secondary);font-size:12px}.eb-payment-card:hover{border-color:var(--eb-accent);background:var(--eb-card-inner)}
+body[data-page="apropos"]{background:var(--eb-bg)!important;color:var(--eb-text)!important;overflow:auto;padding-bottom:90px}body[data-page="apropos"]>header{background:var(--eb-bg)!important;border-color:var(--eb-border)!important;color:var(--eb-text)!important}body[data-page="apropos"] main{max-width:720px;margin:0 auto;padding:16px}body[data-page="apropos"] #modal-about{display:block!important;position:static!important;background:transparent!important;max-width:none;width:100%;padding:0}body[data-page="apropos"] #modal-about>div{max-width:none;width:100%;max-height:none;background:var(--eb-card)!important;border:1px solid var(--eb-border)!important;border-radius:var(--eb-radius-lg)!important;box-shadow:var(--eb-shadow-md)!important}body[data-page="apropos"] #modal-about .bg-gradient-to-r{background:linear-gradient(110deg,var(--eb-accent),var(--eb-accent-yellow),var(--eb-accent))!important}body[data-page="apropos"] #modal-about .text-amber-600{color:var(--eb-accent)!important}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, 8px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
