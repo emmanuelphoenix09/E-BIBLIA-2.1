@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#090a0f" />
+  <title>À propos - E-BIBLIA 3.0</title>
+  <script>
+    window.location.replace('./index.html#about');
+  </script>
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./offline-assets/google-fonts.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --eb-font-sans: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      --eb-font-reader: "Georgia", "Times New Roman", serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--eb-bg);
+      color: var(--eb-text);
+      font-family: var(--eb-font-sans);
+    }
+
+    body {
+      background: var(--eb-bg);
+      min-height: 100vh;
+    }
+
+    .about-shell {
+      max-width: 480px;
+      min-height: 100vh;
+      margin: 0 auto;
+      background: var(--eb-bg);
+      border-left: 1px solid var(--eb-border);
+      border-right: 1px solid var(--eb-border);
+    }
+
+    .about-page {
+      padding: 8px 16px 88px;
+    }
+
+    .about-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 16px 8px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+      background: rgba(10, 15, 26, 0.9);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(12px);
+    }
+
+    .about-back {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--eb-card);
+      border: 1px solid var(--eb-border);
+      color: var(--eb-text);
+      text-decoration: none;
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+
+    .about-title {
+      flex: 1;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin: 0;
+      color: var(--eb-text);
+      text-align: center;
+    }
+
+    .about-action {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--eb-card);
+      border: 1px solid var(--eb-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--eb-text);
+      font-size: 1rem;
+    }
+
+    .about-card {
+      background: linear-gradient(180deg, rgba(18, 24, 38, 0.94), rgba(11, 15, 24, 1));
+      border: 1px solid var(--eb-border);
+      border-radius: 22px;
+      box-shadow: var(--eb-shadow-sm);
+      overflow: hidden;
+      margin-top: 12px;
+    }
+
+    .about-banner {
+      background: linear-gradient(110deg, var(--eb-accent), var(--eb-accent-yellow), var(--eb-accent));
+      padding: 26px 20px 20px;
+      text-align: center;
+    }
+
+    .about-avatar-wrap {
+      width: 128px;
+      height: 128px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid rgba(255, 255, 255, 0.24);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+      background: #1f2937;
+    }
+
+    .about-avatar {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .about-app-name {
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: #fff7d6;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .about-body {
+      padding: 22px 18px 6px;
+    }
+
+    .about-name {
+      margin: 0 0 4px;
+      text-align: center;
+      font-size: clamp(1.35rem, 2vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--eb-text);
+    }
+
+    .about-role {
+      margin: 0 0 18px;
+      text-align: center;
+      color: var(--eb-text-secondary);
+      font-size: 0.92rem;
+    }
+
+    .about-body p {
+      margin: 0 0 16px;
+      color: var(--eb-text);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: calc(100% - 18px);
+      margin: 8px 9px 18px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #25d366, #1ebc5d);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.96rem;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.2);
+    }
+
+    .app-version {
+      margin: 0 0 12px;
+      text-align: center;
+      color: var(--eb-text-secondary);
+      font-size: 0.85rem;
+      padding-bottom: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="about-shell">
+    <header class="about-header">
+      <a href="./index.html#menu" class="about-back" aria-label="Retour au menu">&larr;</a>
+      <h1 class="about-title">À propos</h1>
+      <div class="about-action" aria-label="Options">⋮</div>
+    </header>
+
+    <main class="about-page">
+      <section class="about-card" aria-label="À propos de l'auteur">
+        <div class="about-banner">
+          <div class="about-avatar-wrap">
+            <img src="./assets/Photo.webp" alt="Photo de profil" class="about-avatar" />
+          </div>
+          <p class="about-app-name">E-BIBLIA 3.0</p>
+        </div>
+
+        <div class="about-body">
+          <h2 class="about-name">Emmanuel MBOUMBA PAKOU</h2>
+          <p class="about-role">Développeur &amp; Support Technique</p>
+
+          <p>
+            Passionné d'informatique et engagé dans la diffusion de la Parole de Dieu, je conçois des outils numériques modernes et accessibles pour accompagner chaque croyant dans son étude quotidienne des Saintes Écritures.
+          </p>
+          <p>
+            E-Biblia 3.0 représente l'aboutissement de cette vision : allier la performance technique, l'élégance d'un design sombre optimisé et la richesse spirituelle pour une expérience de lecture unique.
+          </p>
+        </div>
+
+        <a href="https://wa.me/24176542925?text=Bonjour%20Emmanuel%2C%20je%20souhaite%20vous%20contacter%20%C3%A0%20propos%20de%20E-Biblia%203.0" target="_blank" rel="noreferrer" class="whatsapp-btn">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Contacter via WhatsApp</span>
+        </a>
+
+        <div class="app-version">Version de l'application : 3.0.2</div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
