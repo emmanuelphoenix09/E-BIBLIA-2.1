@@ -302,7 +302,9 @@ async function runGeminiAnalysis(initialExplanation = false) {
           const cy = h / 2;
           const t = time * .001;
 
-          let intensity = .14 + Math.sin(t * 1.7) * .035;
+          // Au repos, l'orbe reste totalement immobile : un seul rendu est conservé.
+          // L'animation continue uniquement lorsque Léona travaille (réflexion) ou écoute.
+          let intensity = .14;
           if (leonaOrbState === "thinking") intensity = .82 + (Math.sin(t * 7) + 1) * .09;
           if (leonaOrbState === "listening" && leonaOrbAnalyser) {
               const data = new Uint8Array(leonaOrbAnalyser.frequencyBinCount);
@@ -371,8 +373,15 @@ async function runGeminiAnalysis(initialExplanation = false) {
           }
           ctx.shadowBlur = 0;
 
-          frameId = requestAnimationFrame(draw);
-          leonaOrbAnimation = frameId;
+          // En repos, ne pas relancer requestAnimationFrame : l'orbe reste parfaitement fixe.
+          // Pendant thinking/listening, la boucle est relancée pour animer l'orbe.
+          if (leonaOrbState === "thinking" || leonaOrbState === "listening") {
+              frameId = requestAnimationFrame(draw);
+              leonaOrbAnimation = frameId;
+          } else {
+              frameId = null;
+              leonaOrbAnimation = null;
+          }
       };
 
       orbButton.addEventListener("click", () => {
@@ -383,8 +392,8 @@ async function runGeminiAnalysis(initialExplanation = false) {
       micButton?.addEventListener("click", toggleLeonaListening);
       if (canvas.getBoundingClientRect().width > 0) {
           isVisible = true;
-          frameId = requestAnimationFrame(draw);
-          leonaOrbAnimation = frameId;
+          // Premier et unique rendu au repos : aucune animation en arrière-plan.
+          draw(0);
       }
   }
 
