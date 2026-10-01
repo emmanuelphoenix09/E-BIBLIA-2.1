@@ -366,3 +366,18 @@
   .leona-subtitle{font-size:13px}
   .leona-orb-zone{margin-top:0}
 }
+
+
+/* Léona — zone de saisie et orbe fixes à l'écran */
+.leona-page{position:relative;min-height:100dvh;overflow:hidden}
+.leona-main{height:100dvh;min-height:0;box-sizing:border-box;overflow-y:auto;padding-bottom:210px}
+.leona-orb-zone{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:10;width:min(310px,78vw);min-height:0;margin:0;pointer-events:none}
+.leona-orb-button{pointer-events:auto}
+.leona-panel{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:30;width:min(820px,calc(100% - 20px));max-height:42vh;overflow-y:auto;margin:0;box-sizing:border-box}
+.leona-panel .leona-result{max-height:22vh;overflow-y:auto}
+@media(max-width:640px){
+  .leona-main{padding-bottom:185px}
+  .leona-orb-zone{top:43%;width:min(250px,65vw)}
+  .leona-panel{bottom:10px;width:calc(100% - 14px);max-height:39vh;padding:14px;border-radius:18px}
+  .leona-textarea{min-height:76px;max-height:105px}
+}
