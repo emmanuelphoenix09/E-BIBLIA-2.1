@@ -1578,7 +1578,7 @@ verseEl.addEventListener("click", (event) => {
                     });
                     verseEl.innerHTML = `
                         <sup class="font-bold text-amber-600 dark:text-amber-400 text-xs select-none mt-1 mr-1">${v}</sup>
-                        <span class="flex-1 markable-verse" data-mark-style="${(appData.marks.find(m => m.book === state.currentBook && Number(m.chapter) === Number(state.currentChapter) && Number(m.verse) === Number(v) && m.version === state.version1)?.style) || ""}">${verseTxt}</span>
+                        <span class="flex-1 markable-verse ${(() => { const m = appData.marks.find(x => x.book === state.currentBook && Number(x.chapter) === Number(state.currentChapter) && Number(x.verse) === Number(v) && x.version === state.version1); return m?.style === "underline" ? "verse-underline" : m?.style === "underline-double" ? "verse-underline-double" : m ? "verse-highlight" : ""; })()}">${verseTxt}</span>
                         <div class="opacity-0 group-hover:opacity-100 flex items-center space-x-1 transition">
                             <button onclick="toggleBookmark('${state.currentBook}', ${state.currentChapter}, ${v}, '${state.version1}')" class="p-1 text-xs ${isBookmarked ? 'text-amber-500' : 'text-gray-400 hover:text-amber-500'}" title="Favori">
                                 <i class="fa-${isBookmarked ? 'solid' : 'regular'} fa-bookmark"></i>
