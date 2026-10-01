@@ -157,8 +157,8 @@ async function runGeminiAnalysis(initialExplanation = false) {
             }
 
             if (leonaOrbState === "listening") stopLeonaListening();
-            setLeonaOrbState("speaking");
-            result.innerHTML = `<div class="leona-empty-result"><span class="leona-mini-orb leona-mini-orb-large" aria-hidden="true"></span><p>${initialExplanation ? "Léona étudie le passage…" : "Léona prépare sa réponse…"}</p></div>`;
+            setLeonaOrbState("thinking");
+            result.innerHTML = `<div class="leona-empty-result"><span class="leona-mini-orb leona-mini-orb-large" aria-hidden="true"></span><p>${initialExplanation ? "Léona étudie le passage…" : "Léona réfléchit…"}</p></div>`;
             if (button) button.disabled = true;
             try {
                 const answer = await askGemini(question);
@@ -193,8 +193,8 @@ async function runGeminiAnalysis(initialExplanation = false) {
       if (label) {
           label.textContent = state === "listening"
               ? "À l'écoute..."
-              : state === "speaking"
-                  ? "Léona parle..."
+              : state === "thinking"
+                  ? "Léona réfléchit..."
                   : "En repos";
       }
       if (status) status.setAttribute("aria-live", "polite");
@@ -303,7 +303,7 @@ async function runGeminiAnalysis(initialExplanation = false) {
           const t = time * .001;
 
           let intensity = .14 + Math.sin(t * 1.7) * .035;
-          if (leonaOrbState === "speaking") intensity = .82 + (Math.sin(t * 7) + 1) * .09;
+          if (leonaOrbState === "thinking") intensity = .82 + (Math.sin(t * 7) + 1) * .09;
           if (leonaOrbState === "listening" && leonaOrbAnalyser) {
               const data = new Uint8Array(leonaOrbAnalyser.frequencyBinCount);
               leonaOrbAnalyser.getByteFrequencyData(data);
@@ -377,7 +377,7 @@ async function runGeminiAnalysis(initialExplanation = false) {
 
       orbButton.addEventListener("click", () => {
           if (leonaOrbState === "listening") return;
-          setLeonaOrbState(leonaOrbState === "speaking" ? "rest" : "speaking");
+          setLeonaOrbState("rest");
       });
 
       micButton?.addEventListener("click", toggleLeonaListening);
