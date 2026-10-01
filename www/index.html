@@ -53,6 +53,7 @@
     <symbol id="icon-download" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></symbol>
     <symbol id="icon-database" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm0 2c3.87 0 6 1.5 6 2s-2.13 2-6 2-6-1.5-6-2 2.13-2 6-2zm6 12c0 .5-2.13 2-6 2s-6-1.5-6-2v-2.23c1.61.78 3.73 1.23 6 1.23s4.39-.45 6-1.23V17zm0-4c0 .5-2.13 2-6 2s-6-1.5-6-2v-2.23c1.61.78 3.73 1.23 6 1.23s4.39-.45 6-1.23V13z"/></symbol>
     <symbol id="icon-info" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5.25 3.4 9.95 8 11 4.6-1.05 8-5.75 8-11V5l-8-3zm0 2.18 6 2.25V11c0 4.03-2.45 7.75-6 8.86C8.45 18.75 6 15.03 6 11V6.43l6-2.25zm-1 3.82h2v5h-2V8zm0 6h2v2h-2v-2z"/></symbol>
     <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></symbol>
     <symbol id="icon-xmark" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></symbol>
     <symbol id="icon-mic" viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></symbol>
@@ -585,7 +586,72 @@
             <span class="eb-setting-value"><strong id="setting-language-val">Français</strong> <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg></span>
           </div>
 
+          <div class="eb-setting-row" id="setting-privacy-row" data-navigate="privacy">
+            <svg class="eb-icon eb-menu-icon"><use href="#icon-shield"></use></svg>
+            <span class="eb-setting-label">Confidentialité</span>
+            <span class="eb-setting-value"><strong>Protection des données</strong> <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg></span>
+          </div>
 
+
+        </div>
+      </section>
+
+      <!-- ==========================================
+           ÉCRAN : CONFIDENTIALITÉ
+           ========================================== -->
+      <section id="view-privacy" class="eb-view">
+        <div class="eb-page-header">
+          <div class="eb-back-title">
+            <button class="eb-back-btn" data-back="settings"><svg class="eb-icon"><use href="#icon-arrow-left"></use></svg></button>
+            <h1 class="eb-page-title" style="font-size:20px;">Confidentialité</h1>
+          </div>
+        </div>
+
+        <div style="padding:0 14px 24px;">
+          <div class="eb-compare-card" style="padding:16px;margin-bottom:12px;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+              <svg class="eb-icon" style="color:var(--eb-accent);"><use href="#icon-shield"></use></svg>
+              <strong>Vos données vous appartiennent</strong>
+            </div>
+            <p style="margin:0;color:var(--eb-text-secondary);font-size:13px;line-height:1.55;">
+              E-BIBLIA applique par défaut une règle simple : aucune vente ni utilisation commerciale de vos données personnelles sans votre consentement explicite.
+              Les réglages ci-dessous sont enregistrés localement sur votre appareil.
+            </p>
+          </div>
+
+          <div class="eb-settings-list">
+            <div class="eb-setting-row" style="cursor:default;">
+              <div style="flex:1;">
+                <div class="eb-setting-label">Partage à des fins commerciales</div>
+                <small style="display:block;margin-top:4px;color:var(--eb-text-secondary);">Interdit par défaut. Doit être autorisé explicitement.</small>
+              </div>
+              <input id="privacy-commercial-consent" type="checkbox" aria-label="Autoriser le partage commercial des données" style="width:20px;height:20px;accent-color:var(--eb-accent);">
+            </div>
+
+            <div class="eb-setting-row" style="cursor:default;">
+              <div style="flex:1;">
+                <div class="eb-setting-label">Personnalisation</div>
+                <small style="display:block;margin-top:4px;color:var(--eb-text-secondary);">Autoriser l'utilisation des préférences locales pour personnaliser l'application.</small>
+              </div>
+              <input id="privacy-personalization" type="checkbox" aria-label="Autoriser la personnalisation" style="width:20px;height:20px;accent-color:var(--eb-accent);">
+            </div>
+
+            <div class="eb-setting-row" style="cursor:default;">
+              <div style="flex:1;">
+                <div class="eb-setting-label">Données locales</div>
+                <small style="display:block;margin-top:4px;color:var(--eb-text-secondary);">Notes, favoris, surlignages, prières et méditations restent stockés localement dans l'application.</small>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px;">
+            <button id="privacy-export-btn" class="eb-btn-add-version" style="width:100%;margin-bottom:8px;">Exporter mes données</button>
+            <button id="privacy-delete-btn" class="eb-btn-add-version" style="width:100%;border-color:#ef4444;color:#ef4444;">Supprimer mes données locales</button>
+          </div>
+
+          <p style="font-size:11px;color:var(--eb-text-secondary);line-height:1.5;margin:14px 4px 0;">
+            Le consentement commercial est désactivé par défaut. L'application ne doit considérer une donnée comme autorisée à la vente ou au partage commercial que si cette option a été activée volontairement par l'utilisateur.
+          </p>
         </div>
       </section>
 
