@@ -22,6 +22,8 @@
     plansFilter: 'all',
     prayerFilter: 'all',
     activeDonationAmount: '10 €',
+    // Carnet de méditations bibliques approfondies
+    meditations: [],
 
     // Livres bibliques complets (66 livres du canon biblique)
     books: [
@@ -162,6 +164,7 @@
   APP.highlights = getStored('ebiblia_highlights_v3', APP.sampleHighlights);
   APP.bookmarks = getStored('ebiblia_bookmarks_v3', APP.sampleBookmarks);
   APP.prayers = getStored('ebiblia_prayers_v3', APP.samplePrayers);
+  APP.meditations = getStored('ebiblia_meditations_v1', []);
 
   // -------------------------------------------------------------
   // GESTION DU THÈME (Dark / Light)
@@ -204,7 +207,7 @@
 
     // Mettre à jour la barre d'onglets (5 onglets principaux)
     // Pour toutes les sous-pages du Menu (about, settings, notes, etc.), Menu reste actif
-    const isMenuSubView = ['notes', 'marks', 'verses', 'images', 'videos', 'events', 'prayers', 'stats', 'settings', 'donate', 'profile', 'about'].includes(viewId);
+    const isMenuSubView = ['notes', 'meditation', 'marks', 'verses', 'images', 'videos', 'events', 'prayers', 'stats', 'settings', 'donate', 'profile', 'about'].includes(viewId);
     document.querySelectorAll('.eb-tab-btn').forEach(btn => {
       const tab = btn.dataset.tab;
       if (tab === 'menu' && isMenuSubView) {
@@ -225,6 +228,8 @@
       renderSearchView();
     } else if (viewId === 'notes') {
       renderNotesView();
+    } else if (viewId === 'meditation') {
+      renderMeditationView();
     } else if (viewId === 'marks') {
       renderHighlightsView();
     } else if (viewId === 'verses') {
@@ -879,6 +884,58 @@
   }
 
   // -------------------------------------------------------------
+  // VUE MÉDITATION — carnet biblique approfondi
+  // -------------------------------------------------------------
+  function formatMeditationDate(value) {
+    if (!value) return '';
+    try { return new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(value + 'T00:00:00')); }
+    catch (e) { return value; }
+  }
+
+  function openMeditationModal() {
+    const dateInput = document.getElementById('meditation-modal-date');
+    if (dateInput) dateInput.value = new Date().toISOString().slice(0, 10);
+    ['meditation-modal-theme','meditation-modal-author','meditation-modal-verses','meditation-modal-notes','meditation-modal-prayer'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.value = '';
+    });
+    openModal('modal-new-meditation');
+  }
+
+  function saveNewMeditation() {
+    const theme = document.getElementById('meditation-modal-theme')?.value.trim();
+    const author = document.getElementById('meditation-modal-author')?.value.trim();
+    const date = document.getElementById('meditation-modal-date')?.value;
+    const versesRaw = document.getElementById('meditation-modal-verses')?.value.trim();
+    const notes = document.getElementById('meditation-modal-notes')?.value.trim();
+    const prayer = document.getElementById('meditation-modal-prayer')?.value.trim();
+    if (!theme || !date || !notes) { showToast('Veuillez renseigner le thème, la date et vos notes.'); return; }
+    APP.meditations.unshift({ id: Date.now(), theme, author: author || 'Moi', date, verses: versesRaw ? versesRaw.split(/\\n+/).map(v => v.trim()).filter(Boolean) : [], notes, prayer });
+    setStored('ebiblia_meditations_v1', APP.meditations);
+    closeModal('modal-new-meditation');
+    showToast('Méditation enregistrée');
+    renderMeditationView();
+  }
+
+  function renderMeditationView() {
+    const list = document.getElementById('meditation-cards-list');
+    if (!list) return;
+    list.innerHTML = '';
+    if (!APP.meditations.length) {
+      list.innerHTML = '<div style="text-align:center;padding:40px;color:var(--eb-text-secondary);">Aucune méditation enregistrée. Appuyez sur + pour commencer.</div>';
+      return;
+    }
+    APP.meditations.forEach(m => {
+      const card = document.createElement('article'); card.className = 'eb-note-card';
+      const verses = m.verses?.length ? '<div style="margin-top:10px;color:var(--eb-accent);font-size:12px;font-weight:700;">VERSETS</div><div style="margin-top:5px;line-height:1.6;">' + m.verses.map(v => '<div>• ' + escapeHtml(v) + '</div>').join('') + '</div>' : '';
+      card.innerHTML = '<div class="eb-note-header"><span class="eb-note-ref">' + escapeHtml(m.theme) + '</span><span class="eb-note-date">' + escapeHtml(formatMeditationDate(m.date)) + '</span></div>' +
+        '<div style="font-size:12px;color:var(--eb-text-secondary);margin-bottom:8px;">Auteur : ' + escapeHtml(m.author) + '</div>' + verses +
+        '<div style="margin-top:12px;white-space:pre-wrap;line-height:1.65;">' + escapeHtml(m.notes) + '</div>' +
+        (m.prayer ? '<div style="margin-top:12px;padding:10px;border-left:3px solid var(--eb-accent);background:var(--eb-card-inner);border-radius:8px;white-space:pre-wrap;"><strong>Application / prière</strong><br>' + escapeHtml(m.prayer) + '</div>' : '');
+      list.appendChild(card);
+    });
+  }
+
+  // -------------------------------------------------------------
   // VUE SURBRILLANCES (Screen 16)
   // -------------------------------------------------------------
   function renderHighlightsView() {
@@ -1296,55 +1353,6 @@
   }
 
   // -------------------------------------------------------------
-  // PARAMÈTRES — ACTIONS RÉELLES DES LIGNES DE RÉGLAGES
-  // -------------------------------------------------------------
-  // Ces fonctions restent locales à l'application : aucune connexion Internet
-  // n'est nécessaire pour modifier et mémoriser les préférences.
-  function toggleLanguageSetting() {
-    // L'application est actuellement disponible en français. Le bouton répond
-    // donc proprement sans prétendre changer une langue qui n'existe pas encore.
-    showToast('Langue disponible : Français');
-  }
-
-  function toggleNotificationsSetting() {
-    const current = localStorage.getItem('ebiblia_notifications') !== 'off';
-    const next = !current;
-    localStorage.setItem('ebiblia_notifications', next ? 'on' : 'off');
-
-    const label = document.getElementById('setting-notifications-val');
-    if (label) label.textContent = next ? 'Activées' : 'Désactivées';
-    showToast(next ? 'Notifications activées' : 'Notifications désactivées');
-  }
-
-  function updateNotificationLabel() {
-    const label = document.getElementById('setting-notifications-val');
-    if (!label) return;
-    label.textContent = localStorage.getItem('ebiblia_notifications') === 'off' ? 'Désactivées' : 'Activées';
-  }
-
-  function showDownloadStatus() {
-    // Les données bibliques sont déjà embarquées dans le projet pour le mode hors ligne.
-    showToast('Les Bibles locales sont disponibles hors connexion');
-  }
-
-  function showStorageStatus() {
-    // Calcul approximatif de l'espace occupé par le stockage local de l'application.
-    let bytes = 0;
-    try {
-      for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i) || '';
-        const value = localStorage.getItem(key) || '';
-        bytes += (key.length + value.length) * 2;
-      }
-    } catch (e) {}
-
-    const size = bytes < 1024 ? bytes + ' o' : bytes < 1024 * 1024
-      ? (bytes / 1024).toFixed(1) + ' Ko'
-      : (bytes / (1024 * 1024)).toFixed(2) + ' Mo';
-    showToast('Stockage local utilisé : ' + size);
-  }
-
-  // -------------------------------------------------------------
   // INITIALISATION AU CHARGEMENT DU DOM
   // -------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', () => {
@@ -1387,12 +1395,9 @@
     document.getElementById('btn-toggle-theme')?.addEventListener('click', toggleTheme);
     document.getElementById('setting-theme-row')?.addEventListener('click', toggleTheme);
 
-    // 7. Paramètres : chaque ligne possède maintenant une action fonctionnelle.
-    document.getElementById('setting-language-row')?.addEventListener('click', toggleLanguageSetting);
-    document.getElementById('setting-notifications-row')?.addEventListener('click', toggleNotificationsSetting);
-    document.getElementById('setting-download-row')?.addEventListener('click', showDownloadStatus);
-    document.getElementById('setting-storage-row')?.addEventListener('click', showStorageStatus);
-    updateNotificationLabel();
+    // 7. Méditation : ouverture et enregistrement du carnet biblique.
+    document.getElementById('btn-new-meditation')?.addEventListener('click', openMeditationModal);
+    document.getElementById('btn-save-meditation')?.addEventListener('click', saveNewMeditation);
 
     // 8. Filtres des plans
     document.querySelectorAll('#plans-filter-pills .eb-pill').forEach(pill => {
