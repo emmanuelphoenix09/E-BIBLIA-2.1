@@ -584,44 +584,94 @@
     const data = await fetchVersionChapter(versionCode, bookId, chapter);
     if (!data) return null;
     const verseObj = data.find(v => Number(v.verse) === Number(verse));
-    return verseObj?.text ? String(verseObj.text).replace(/^[¶\s]+/, '') : null;
+    return verseObj?.text ? String(verseObj.text).replace(/^[¶\\s]+/, '') : null;
+  }
+
+  // Convertit une sélection comme "Jean 3:16, Jean 3:17, Jean 3:18"
+  // en références individuelles afin que TOUS les versets sélectionnés
+  // soient affichés dans la comparaison.
+  function parseCompareReferences(verseRef) {
+    const refs = Array.isArray(verseRef)
+      ? verseRef
+      : String(verseRef || '').split(/\\s*,\\s*/).filter(Boolean);
+
+    const parsed = [];
+    refs.forEach(ref => {
+      const p = parseVerseReference(String(ref).trim());
+      if (p && p.verse !== null && p.verse !== undefined) {
+        const key = `${p.bookId}|${p.chapter}|${p.verse}`;
+        if (!parsed.some(x => `${x.bookId}|${x.chapter}|${x.verse}` === key)) {
+          parsed.push(p);
+        }
+      }
+    });
+    return parsed;
   }
 
   async function renderCompareView(verseRef = 'Jean 3:16') {
     const list = document.getElementById('compare-cards-list');
     if (!list) return;
+
     list.innerHTML = '<div style="text-align:center;padding:24px;color:var(--eb-text-secondary);">Chargement des versions...</div>';
 
-    const parsedRef = parseVerseReference(verseRef) || {
-      bookId: APP.currentBook,
-      bookName: (APP.books.find(b => b.id === APP.currentBook)?.name || 'Genèse'),
-      chapter: APP.currentChapter,
-      verse: 1
-    };
+    // Récupérer la totalité de la sélection, pas uniquement le premier verset.
+    let refs = parseCompareReferences(verseRef);
+
+    // Si la sélection n'est pas passée dans l'URL, utiliser le verset courant.
+    if (!refs.length) {
+      refs = [{
+        bookId: APP.currentBook,
+        bookName: (APP.books.find(b => b.id === APP.currentBook)?.name || 'Genèse'),
+        chapter: APP.currentChapter,
+        verse: 1
+      }];
+    }
 
     const cards = [];
+
+    // Une carte par version, contenant TOUS les versets sélectionnés.
     for (const [code, meta] of Object.entries(APP.versions)) {
-      const text = await fetchVersionVerse(code, parsedRef.bookId, parsedRef.chapter, parsedRef.verse);
+      const verses = [];
+
+      for (const ref of refs) {
+        const text = await fetchVersionVerse(code, ref.bookId, ref.chapter, ref.verse);
+        verses.push({
+          ...ref,
+          text: text || 'Verset indisponible dans cette version locale.'
+        });
+      }
+
       cards.push({
         code,
         name: meta.name,
-        ref: `${parsedRef.bookName} ${parsedRef.chapter}:${parsedRef.verse}`,
-        text: text || 'Verset indisponible dans cette version locale.'
+        verses
       });
     }
 
     list.innerHTML = '';
+
     cards.forEach(item => {
       const card = document.createElement('div');
       card.className = 'eb-compare-card';
+
+      const versesHtml = item.verses.map(v => `
+        <div class="eb-compare-verse-block" style="padding:10px 0;border-bottom:1px solid var(--eb-border);">
+          <div class="eb-compare-ref">${escapeHtml(v.bookName)} ${v.chapter}:${v.verse}</div>
+          <p class="eb-compare-text" style="margin-bottom:0;">${escapeHtml(v.text)}</p>
+        </div>
+      `).join('');
+
       card.innerHTML = `
         <div class="eb-compare-top">
           <span class="eb-version-tag">${item.code}</span>
           <span class="eb-version-name">${item.name}</span>
         </div>
-        <div class="eb-compare-ref">${item.ref}</div>
-        <p class="eb-compare-text">${escapeHtml(item.text)}</p>
+        <div class="eb-compare-selected-count" style="font-size:12px;color:var(--eb-text-secondary);margin:6px 0 2px;">
+          ${item.verses.length} verset${item.verses.length > 1 ? 's' : ''} sélectionné${item.verses.length > 1 ? 's' : ''}
+        </div>
+        ${versesHtml}
       `;
+
       list.appendChild(card);
     });
   }
