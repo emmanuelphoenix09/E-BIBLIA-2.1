@@ -303,6 +303,11 @@
         </div>
 
         <nav class="eb-menu-list">
+          <div class="eb-menu-row" data-navigate="meditation">
+            <svg class="eb-icon eb-menu-icon"><use href="#icon-note-sticky"></use></svg>
+            <span class="eb-menu-label">Méditation</span>
+            <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg>
+          </div>
           <div class="eb-menu-row" data-navigate="notes">
             <svg class="eb-icon eb-menu-icon"><use href="#icon-note-sticky"></use></svg>
             <span class="eb-menu-label">Notes</span>
@@ -531,6 +536,26 @@
       </section>
 
       <!-- ==========================================
+           ÉCRAN : MÉDITATIONS
+           ========================================== -->
+      <section id="view-meditation" class="eb-view">
+        <div class="eb-page-header">
+          <div class="eb-back-title">
+            <button class="eb-back-btn" data-back="menu"><svg class="eb-icon"><use href="#icon-arrow-left"></use></svg></button>
+            <h1 class="eb-page-title" style="font-size:20px;">Méditation</h1>
+          </div>
+          <button class="eb-header-btn" id="btn-new-meditation" title="Nouvelle méditation"><svg class="eb-icon"><use href="#icon-plus"></use></svg></button>
+        </div>
+
+        <div class="eb-compare-card" style="padding:16px;margin-bottom:14px;">
+          <h2 style="font-size:17px;margin:0 0 6px;">Carnet de méditation</h2>
+          <p style="margin:0;color:var(--eb-text-secondary);font-size:13px;line-height:1.5;">Conservez vos études personnelles avec thème, auteur, date et références bibliques.</p>
+        </div>
+
+        <div id="meditation-cards-list" class="eb-notes-list"></div>
+      </section>
+
+      <!-- ==========================================
            ÉCRAN 19 : PARAMÈTRES
            ========================================== -->
       <section id="view-settings" class="eb-view">
@@ -555,25 +580,7 @@
             <span class="eb-setting-value"><strong id="setting-language-val">Français</strong> <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg></span>
           </div>
 
-          <div class="eb-setting-row" id="setting-notifications-row">
-            <svg class="eb-icon eb-menu-icon"><use href="#icon-bell"></use></svg>
-            <span class="eb-setting-label">Notifications</span>
-            <span class="eb-setting-value"><strong id="setting-notifications-val">Activées</strong> <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg></span>
-          </div>
 
-          <div class="eb-setting-row" id="setting-download-row">
-            <svg class="eb-icon eb-menu-icon"><use href="#icon-download"></use></svg>
-            <span class="eb-setting-label">Téléchargement</span>
-            <span class="eb-setting-value"><svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg></span>
-          </div>
-
-          <div class="eb-setting-row" id="setting-storage-row">
-            <svg class="eb-icon eb-menu-icon"><use href="#icon-database"></use></svg>
-            <span class="eb-setting-label">Stockage</span>
-            <span class="eb-setting-value"><svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg></span>
-          </div>
-
-          
         </div>
       </section>
 
@@ -778,6 +785,45 @@
         <button data-close-modal="modal-version-picker"><svg class="eb-icon"><use href="#icon-xmark"></use></svg></button>
       </div>
       <div id="modal-version-list" class="eb-sheet-body"></div>
+    </div>
+  </div>
+
+  <!-- Modale Nouvelle Méditation : fiche d'étude biblique approfondie -->
+  <div id="modal-new-meditation" class="eb-modal-backdrop">
+    <div class="eb-modal-sheet">
+      <div class="eb-sheet-handle"></div>
+      <div class="eb-sheet-head">
+        <h3 class="eb-sheet-title">Nouvelle méditation</h3>
+        <button data-close-modal="modal-new-meditation"><svg class="eb-icon"><use href="#icon-xmark"></use></svg></button>
+      </div>
+      <div class="eb-sheet-body">
+        <div style="margin-bottom:12px;">
+          <label style="display:block;font-size:12px;font-weight:700;margin-bottom:6px;color:var(--eb-text-secondary);">THÈME</label>
+          <input type="text" id="meditation-modal-theme" placeholder="Ex. La foi, la prière, le pardon..." style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid var(--eb-border);background:var(--eb-card-inner);color:var(--eb-text);">
+        </div>
+        <div style="margin-bottom:12px;">
+          <label style="display:block;font-size:12px;font-weight:700;margin-bottom:6px;color:var(--eb-text-secondary);">AUTEUR / PRÉDICATEUR</label>
+          <input type="text" id="meditation-modal-author" placeholder="Nom de l'auteur ou du prédicateur" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid var(--eb-border);background:var(--eb-card-inner);color:var(--eb-text);">
+        </div>
+        <div style="margin-bottom:12px;">
+          <label style="display:block;font-size:12px;font-weight:700;margin-bottom:6px;color:var(--eb-text-secondary);">DATE</label>
+          <input type="date" id="meditation-modal-date" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid var(--eb-border);background:var(--eb-card-inner);color:var(--eb-text);">
+        </div>
+        <div style="margin-bottom:12px;">
+          <label style="display:block;font-size:12px;font-weight:700;margin-bottom:6px;color:var(--eb-text-secondary);">VERSETS BIBLIQUES</label>
+          <textarea id="meditation-modal-verses" rows="3" placeholder="Ex. Jean 3:16&#10;Romains 8:28&#10;Psaumes 23:1" style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid var(--eb-border);background:var(--eb-card-inner);color:var(--eb-text);"></textarea>
+          <small style="display:block;margin-top:5px;color:var(--eb-text-secondary);">Une référence par ligne. Vous pouvez aussi écrire le texte ou vos observations à côté.</small>
+        </div>
+        <div style="margin-bottom:12px;">
+          <label style="display:block;font-size:12px;font-weight:700;margin-bottom:6px;color:var(--eb-text-secondary);">NOTES ET OBSERVATIONS</label>
+          <textarea id="meditation-modal-notes" rows="6" placeholder="Écrivez votre étude, vos observations, explications, questions, applications pratiques..." style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid var(--eb-border);background:var(--eb-card-inner);color:var(--eb-text);"></textarea>
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="display:block;font-size:12px;font-weight:700;margin-bottom:6px;color:var(--eb-text-secondary);">PRIÈRE / APPLICATION PERSONNELLE</label>
+          <textarea id="meditation-modal-prayer" rows="4" placeholder="Ce que je veux mettre en pratique ou présenter à Dieu..." style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid var(--eb-border);background:var(--eb-card-inner);color:var(--eb-text);"></textarea>
+        </div>
+        <button class="eb-btn-donate" id="btn-save-meditation" style="width:100%;margin:0;">Enregistrer la méditation</button>
+      </div>
     </div>
   </div>
 
