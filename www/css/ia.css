@@ -381,3 +381,61 @@
   .leona-panel{bottom:10px;width:calc(100% - 14px);max-height:39vh;padding:14px;border-radius:18px}
   .leona-textarea{min-height:76px;max-height:105px}
 }
+
+
+/* Léona — orbite fixe et toujours visible, animation uniquement pendant le travail */
+.leona-page{
+  position:relative;
+  min-height:100dvh;
+  overflow:hidden;
+}
+.leona-main{
+  height:100dvh;
+  min-height:0;
+  box-sizing:border-box;
+  overflow-y:auto;
+  padding-bottom:190px;
+}
+.leona-orb-zone{
+  position:fixed;
+  left:50%;
+  top:42%;
+  transform:translate(-50%,-50%);
+  z-index:10;
+  width:min(300px,72vw);
+  height:min(300px,72vw);
+  min-height:0;
+  margin:0;
+  pointer-events:none;
+}
+.leona-orb-button{
+  width:100%;
+  height:100%;
+  pointer-events:auto;
+}
+.leona-panel{
+  position:fixed;
+  left:50%;
+  bottom:max(10px, env(safe-area-inset-bottom));
+  transform:translateX(-50%);
+  z-index:30;
+  width:min(820px,calc(100% - 14px));
+  max-height:38dvh;
+  overflow-y:auto;
+  margin:0;
+  box-sizing:border-box;
+}
+.leona-panel .leona-result{
+  max-height:20dvh;
+  overflow-y:auto;
+}
+@media(max-width:640px){
+  .leona-orb-zone{
+    top:39%;
+    width:min(230px,58vw);
+    height:min(230px,58vw);
+  }
+  .leona-panel{
+    max-height:40dvh;
+  }
+}
