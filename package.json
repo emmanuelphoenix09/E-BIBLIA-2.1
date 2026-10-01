@@ -5,11 +5,12 @@
   "description": "E-Biblia – Étude Biblique Moderne & Assistant IA",
   "scripts": {
     "prepare:bible-data": "node scripts/prepare-bible-data.js",
-    "postinstall": "npm run prepare:bible-data && npm run build:css",
-    "sync": "npm run prepare:bible-data && npm run build:css && npx cap sync android",
+    "postinstall": "npm run prepare:bible-data && npm run prepare:splash && npm run build:css",
+    "sync": "npm run prepare:bible-data && npm run prepare:splash && npm run build:css && npx cap sync android",
     "open:android": "npm run prepare:bible-data && npm run build:css && npx cap open android",
     "build:android": "npm run prepare:bible-data && npm run build:css && npx cap sync android && cd android && ./gradlew assembleDebug",
-    "build:css": "tailwindcss -i ./styles/tailwind.css -o ./www/css/tailwind.css --minify"
+    "build:css": "tailwindcss -i ./styles/tailwind.css -o ./www/css/tailwind.css --minify",
+    "prepare:splash": "node scripts/prepare-splash.js"
   },
   "dependencies": {
     "@capacitor/core": "8.5.2",
