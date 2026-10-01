@@ -235,46 +235,16 @@
           <button class="eb-pill" data-filter="popular">Populaires</button>
         </nav>
 
-        <div class="eb-plans-list">
-          <!-- Carte 1 -->
-          <article class="eb-plan-card" data-tab="reader">
-            <img class="eb-plan-thumb" src="./assets/plan-30days.svg" alt="Plan 30 jours">
-            <div class="eb-plan-details">
-              <div class="eb-plan-title">Plan de lecture en 30 jours</div>
-              <div class="eb-plan-meta">30 jours • Vie spirituelle</div>
-            </div>
-            <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg>
-          </article>
-
-          <!-- Carte 2 -->
-          <article class="eb-plan-card" data-tab="reader">
-            <img class="eb-plan-thumb" src="./assets/plan-jesus.svg" alt="Découvrir Jésus">
-            <div class="eb-plan-details">
-              <div class="eb-plan-title">Découvrir Jésus</div>
-              <div class="eb-plan-meta">7 jours • Évangiles</div>
-            </div>
-            <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg>
-          </article>
-
-          <!-- Carte 3 -->
-          <article class="eb-plan-card" data-navigate="prayers">
-            <img class="eb-plan-thumb" src="./assets/plan-prayer.svg" alt="Prière quotidienne">
-            <div class="eb-plan-details">
-              <div class="eb-plan-title">Prière quotidienne</div>
-              <div class="eb-plan-meta">14 jours • Prière</div>
-            </div>
-            <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg>
-          </article>
-
-          <!-- Carte 4 -->
-          <article class="eb-plan-card" data-tab="reader">
-            <img class="eb-plan-thumb" src="./assets/plan-peace.svg" alt="La paix de Dieu">
-            <div class="eb-plan-details">
-              <div class="eb-plan-title">La paix de Dieu</div>
-              <div class="eb-plan-meta">7 jours • Vie chrétienne</div>
-            </div>
-            <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg>
-          </article>
+        <!-- Plans complets : chacun couvre les 66 livres et tous les versets de la Bible. -->
+        <div id="bible-reading-plans" class="eb-plans-list">
+          <div class="eb-plan-loading" id="plans-loading">Calcul des plans à partir de la Bible locale…</div>
+        </div>
+        <div id="plan-detail" class="eb-plan-detail" hidden>
+          <button class="eb-back-btn" id="plan-detail-back" type="button">
+            <svg class="eb-icon"><use href="#icon-arrow-left"></use></svg>
+            <span>Retour aux plans</span>
+          </button>
+          <div id="plan-detail-content"></div>
         </div>
       </section>
 
