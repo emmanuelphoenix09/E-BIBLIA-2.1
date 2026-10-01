@@ -268,9 +268,20 @@ async function runGeminiAnalysis(initialExplanation = false) {
 
       const particles = [];
       const random = (min, max) => Math.random() * (max - min) + min;
+      let frameId = null;
+      let isVisible = false;
+      const observer = new IntersectionObserver((entries) => {
+          isVisible = entries[0]?.isIntersecting === true;
+          if (isVisible && !frameId) frameId = requestAnimationFrame(draw);
+          if (!isVisible && frameId) {
+              cancelAnimationFrame(frameId);
+              frameId = null;
+          }
+      }, { threshold: 0.01 });
+      observer.observe(canvas);
 
       const spawnParticle = (cx, cy, intensity) => {
-          if (particles.length > 45 || Math.random() > intensity * .22) return;
+          if (particles.length > 24 || Math.random() > intensity * .18) return;
           const angle = random(0, Math.PI * 2);
           const speed = random(.35, 1.6) * intensity;
           particles.push({
@@ -360,7 +371,8 @@ async function runGeminiAnalysis(initialExplanation = false) {
           }
           ctx.shadowBlur = 0;
 
-          leonaOrbAnimation = requestAnimationFrame(draw);
+          frameId = requestAnimationFrame(draw);
+          leonaOrbAnimation = frameId;
       };
 
       orbButton.addEventListener("click", () => {
@@ -369,7 +381,11 @@ async function runGeminiAnalysis(initialExplanation = false) {
       });
 
       micButton?.addEventListener("click", toggleLeonaListening);
-      draw(0);
+      if (canvas.getBoundingClientRect().width > 0) {
+          isVisible = true;
+          frameId = requestAnimationFrame(draw);
+          leonaOrbAnimation = frameId;
+      }
   }
 
   // Initialisation après chargement du DOM pour que l'orbe soit autonome sur ia.html.
