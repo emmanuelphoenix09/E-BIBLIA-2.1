@@ -2,6 +2,7 @@
   "name": "e-biblia",
   "version": "1.1.0",
   "private": true,
+  "main": "electron/main.cjs",
   "description": "E-Biblia – Étude Biblique Moderne & Assistant IA",
   "scripts": {
     "prepare:bible-data": "node scripts/prepare-bible-data.js",
