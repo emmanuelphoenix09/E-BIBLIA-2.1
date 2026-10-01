@@ -22,6 +22,11 @@
     plansFilter: 'all',
     prayerFilter: 'all',
     activeDonationAmount: '10 €',
+    // Préférences de confidentialité : le partage commercial est interdit par défaut.
+    privacy: {
+      commercialConsent: localStorage.getItem('ebiblia_privacy_commercial') === 'true',
+      personalization: localStorage.getItem('ebiblia_privacy_personalization') !== 'false'
+    },
     // Carnet de méditations bibliques approfondies
     meditations: [],
 
@@ -188,6 +193,69 @@
   }
 
   // -------------------------------------------------------------
+  // CONFIDENTIALITÉ ET CONTRÔLE DES DONNÉES
+  // -------------------------------------------------------------
+  function savePrivacyPreferences() {
+    localStorage.setItem('ebiblia_privacy_commercial', String(APP.privacy.commercialConsent));
+    localStorage.setItem('ebiblia_privacy_personalization', String(APP.privacy.personalization));
+  }
+
+  function renderPrivacyView() {
+    const commercial = document.getElementById('privacy-commercial-consent');
+    const personalization = document.getElementById('privacy-personalization');
+    if (commercial) commercial.checked = APP.privacy.commercialConsent;
+    if (personalization) personalization.checked = APP.privacy.personalization;
+  }
+
+  // Autorisation explicite requise avant toute vente ou utilisation commerciale.
+  function isCommercialDataSharingAllowed() {
+    return APP.privacy.commercialConsent === true;
+  }
+
+  function exportLocalData() {
+    const data = {
+      exportedAt: new Date().toISOString(),
+      app: 'E-BIBLIA',
+      privacy: { ...APP.privacy },
+      notes: APP.notes,
+      highlights: APP.highlights,
+      bookmarks: APP.bookmarks,
+      prayers: APP.prayers,
+      meditations: APP.meditations
+    };
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'ebiblia-mes-donnees.json';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+    showToast('Vos données ont été préparées pour l’export.');
+  }
+
+  function deleteLocalData() {
+    const confirmed = window.confirm('Supprimer vos notes, favoris, surlignages, prières et méditations de cet appareil ?');
+    if (!confirmed) return;
+
+    ['ebiblia_notes_v3', 'ebiblia_highlights_v3', 'ebiblia_bookmarks_v3', 'ebiblia_prayers_v3', 'ebiblia_meditations_v1'].forEach(key => localStorage.removeItem(key));
+
+    APP.notes = [];
+    APP.highlights = [];
+    APP.bookmarks = [];
+    APP.prayers = [];
+    APP.meditations = [];
+
+    showToast('Vos données locales ont été supprimées.');
+    if (APP.currentView === 'notes') renderNotesView();
+    if (APP.currentView === 'marks') renderHighlightsView();
+    if (APP.currentView === 'verses') renderBookmarksView();
+    if (APP.currentView === 'prayers') renderPrayersView();
+    if (APP.currentView === 'meditation') renderMeditationView();
+  }
+
+  // -------------------------------------------------------------
   // ROUTEUR DE NAVIGATION (SPA)
   // -------------------------------------------------------------
   function showView(viewId, params = {}) {
@@ -207,7 +275,7 @@
 
     // Mettre à jour la barre d'onglets (5 onglets principaux)
     // Pour toutes les sous-pages du Menu (about, settings, notes, etc.), Menu reste actif
-    const isMenuSubView = ['notes', 'meditation', 'marks', 'verses', 'images', 'videos', 'events', 'prayers', 'stats', 'settings', 'donate', 'profile', 'about'].includes(viewId);
+    const isMenuSubView = ['notes', 'meditation', 'marks', 'verses', 'images', 'videos', 'events', 'prayers', 'stats', 'settings', 'privacy', 'donate', 'profile', 'about'].includes(viewId);
     document.querySelectorAll('.eb-tab-btn').forEach(btn => {
       const tab = btn.dataset.tab;
       if (tab === 'menu' && isMenuSubView) {
@@ -236,6 +304,8 @@
       renderBookmarksView();
     } else if (viewId === 'stats') {
       renderStatsView();
+    } else if (viewId === 'privacy') {
+      renderPrivacyView();
     } else if (viewId === 'prayers') {
       renderPrayersView();
     } else if (viewId === 'leona') {
