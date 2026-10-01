@@ -1701,6 +1701,195 @@
   }
 
   // -------------------------------------------------------------
+  // PLANS DE LECTURE — BIBLE ENTIÈRE
+  // Répartition réelle des 66 livres et de tous leurs versets.
+  // -------------------------------------------------------------
+  const FULL_BIBLE_PLAN_DURATIONS = [25, 30, 60, 90, 180, 365];
+
+  function getPlanStorageKey(days) {
+    return 'ebiblia_full_bible_plan_' + days;
+  }
+
+  function getPlanProgress(days) {
+    return getStored(getPlanStorageKey(days), { completedDays: [] });
+  }
+
+  function savePlanProgress(days, progress) {
+    setStored(getPlanStorageKey(days), progress);
+  }
+
+  function groupPlanChapters(chapters) {
+    const groups = [];
+    chapters.forEach(item => {
+      const last = groups[groups.length - 1];
+      if (last && last.book.id === item.book.id && last.end + 1 === item.chapter) {
+        last.end = item.chapter;
+        last.verses += item.verses;
+      } else {
+        groups.push({ book: item.book, start: item.chapter, end: item.chapter, verses: item.verses });
+      }
+    });
+    return groups;
+  }
+
+  function formatPlanReferences(chapters) {
+    return groupPlanChapters(chapters).map(group => {
+      const range = group.start === group.end ? String(group.start) : group.start + '–' + group.end;
+      return group.book.name + ' ' + range;
+    }).join(' · ');
+  }
+
+  async function buildFullBibleReadingPlan(days) {
+    const chapterList = [];
+    const results = await Promise.all(APP.books.map(async book => ({
+      book,
+      data: await fetchVersionBook('LSG', book.file)
+    })));
+
+    results.forEach(({ book, data }) => {
+      if (!data || !Array.isArray(data.chapters)) return;
+      data.chapters.forEach(chapter => {
+        const verses = Array.isArray(chapter.verses) ? chapter.verses.length : 0;
+        if (verses > 0) chapterList.push({ book, chapter: Number(chapter.chapter), verses });
+      });
+    });
+
+    if (!chapterList.length) throw new Error('Données bibliques locales indisponibles.');
+
+    const totalVerses = chapterList.reduce((sum, item) => sum + item.verses, 0);
+    const actualDays = Math.min(days, chapterList.length);
+    const dailyPlans = [];
+    let cursor = 0;
+    let consumedVerses = 0;
+
+    for (let day = 1; day <= actualDays; day++) {
+      const remainingDays = actualDays - day;
+      const targetEnd = Math.round((totalVerses * day) / actualDays);
+      const maxEnd = chapterList.length - remainingDays;
+      let bestEnd = cursor + 1;
+      let bestDistance = Infinity;
+      let running = consumedVerses;
+
+      for (let end = cursor + 1; end <= maxEnd; end++) {
+        running += chapterList[end - 1].verses;
+        const distance = Math.abs(running - targetEnd);
+        if (distance < bestDistance) {
+          bestDistance = distance;
+          bestEnd = end;
+        }
+        if (running > targetEnd && distance > bestDistance) break;
+      }
+
+      const dayChapters = chapterList.slice(cursor, bestEnd);
+      const dayVerses = dayChapters.reduce((sum, item) => sum + item.verses, 0);
+      dailyPlans.push({
+        day,
+        chapters: dayChapters,
+        verses: dayVerses,
+        references: formatPlanReferences(dayChapters)
+      });
+      cursor = bestEnd;
+      consumedVerses += dayVerses;
+    }
+
+    return { days: actualDays, totalVerses, totalChapters: chapterList.length, dailyPlans };
+  }
+
+  function renderReadingPlanCards() {
+    const container = document.getElementById('bible-reading-plans');
+    if (!container) return;
+    container.innerHTML = FULL_BIBLE_PLAN_DURATIONS.map(days => `
+      <article class="eb-plan-card eb-full-bible-plan-card" data-full-bible-plan="${days}">
+        <div class="eb-plan-duration">${days}</div>
+        <div class="eb-plan-details">
+          <div class="eb-plan-title">Lire toute la Bible en ${days} jours</div>
+          <div class="eb-plan-meta">66 livres • lecture intégrale • répartition par versets</div>
+        </div>
+        <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg>
+      </article>
+    `).join('');
+    container.querySelectorAll('[data-full-bible-plan]').forEach(card => {
+      card.addEventListener('click', () => openFullBiblePlan(Number(card.dataset.fullBiblePlan)));
+    });
+  }
+
+  async function openFullBiblePlan(days) {
+    const list = document.getElementById('bible-reading-plans');
+    const detail = document.getElementById('plan-detail');
+    const content = document.getElementById('plan-detail-content');
+    if (!list || !detail || !content) return;
+
+    list.hidden = true;
+    detail.hidden = false;
+    content.innerHTML = '<div class="eb-plan-loading">Calcul du plan complet à partir des 66 livres…</div>';
+
+    try {
+      const plan = await buildFullBibleReadingPlan(days);
+      const progress = getPlanProgress(days);
+      const completed = new Set(progress.completedDays || []);
+      const average = Math.round(plan.totalVerses / plan.days);
+
+      content.innerHTML = `
+        <div class="eb-plan-detail-header">
+          <div class="eb-plan-kicker">PLAN DE LECTURE INTÉGRALE</div>
+          <h2>Lire toute la Bible en ${plan.days} jours</h2>
+          <p>${plan.totalChapters} chapitres • ${plan.totalVerses.toLocaleString('fr-FR')} versets • environ ${average.toLocaleString('fr-FR')} versets/jour</p>
+        </div>
+        <div class="eb-plan-days-list">
+          ${plan.dailyPlans.map(day => `
+            <article class="eb-plan-day ${completed.has(day.day) ? 'is-completed' : ''}">
+              <div class="eb-plan-day-top">
+                <div><strong>Jour ${day.day}</strong><span>${day.verses} versets</span></div>
+                <button type="button" class="eb-plan-complete" data-plan-day="${day.day}" data-plan-days="${plan.days}">
+                  ${completed.has(day.day) ? 'Lu ✓' : 'Marquer comme lu'}
+                </button>
+              </div>
+              <div class="eb-plan-day-reading">${escapeHtml(day.references)}</div>
+              <button type="button" class="eb-plan-start" data-plan-start="${day.day}">
+                Commencer cette lecture
+                <svg class="eb-icon"><use href="#icon-chevron-right"></use></svg>
+              </button>
+            </article>
+          `).join('')}
+        </div>`;
+
+      content.querySelectorAll('.eb-plan-complete').forEach(button => {
+        button.addEventListener('click', () => {
+          const day = Number(button.dataset.planDay);
+          const stored = getPlanProgress(days);
+          const set = new Set(stored.completedDays || []);
+          if (set.has(day)) set.delete(day); else set.add(day);
+          stored.completedDays = Array.from(set).sort((a, b) => a - b);
+          savePlanProgress(days, stored);
+          openFullBiblePlan(days);
+        });
+      });
+
+      content.querySelectorAll('[data-plan-start]').forEach(button => {
+        button.addEventListener('click', () => {
+          const day = plan.dailyPlans[Number(button.dataset.planStart) - 1];
+          const first = day?.chapters?.[0];
+          if (!first) return;
+          APP.currentBook = first.book.id;
+          APP.currentChapter = first.chapter;
+          showView('reader');
+        });
+      });
+    } catch (error) {
+      content.innerHTML = '<div class="eb-plan-loading">Impossible de calculer le plan hors ligne. Vérifiez les données bibliques locales.</div>';
+      console.warn('Erreur de génération du plan biblique :', error);
+    }
+  }
+
+  function initFullBiblePlans() {
+    renderReadingPlanCards();
+    document.getElementById('plan-detail-back')?.addEventListener('click', () => {
+      document.getElementById('plan-detail').hidden = true;
+      document.getElementById('bible-reading-plans').hidden = false;
+    });
+  }
+
+  // -------------------------------------------------------------
   // INITIALISATION AU CHARGEMENT DU DOM
   // -------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', () => {
@@ -1762,7 +1951,8 @@
     document.getElementById('btn-new-meditation')?.addEventListener('click', openMeditationModal);
     document.getElementById('btn-save-meditation')?.addEventListener('click', saveNewMeditation);
 
-    // 8. Filtres des plans
+    // 8. Plans de lecture complets + filtres.
+    initFullBiblePlans();
     document.querySelectorAll('#plans-filter-pills .eb-pill').forEach(pill => {
       pill.addEventListener('click', () => {
         document.querySelectorAll('#plans-filter-pills .eb-pill').forEach(p => p.classList.remove('is-active'));
