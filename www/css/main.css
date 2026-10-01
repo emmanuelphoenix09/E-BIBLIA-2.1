@@ -699,20 +699,38 @@ html:not(.dark) .eb-badge-purple {
 .eb-verse-toolbar {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 12px;
+  gap: 8px;
+  padding: 10px 12px;
   background: var(--eb-card);
   border: 1px solid var(--eb-border);
-  border-radius: var(--eb-radius-full);
+  border-radius: var(--eb-radius-lg);
   box-shadow: var(--eb-shadow-lg);
   position: sticky;
   bottom: 84px;
   left: 50%;
   transform: translateX(-50%);
-  width: max-content;
-  max-width: 95%;
+  width: 100%;
+  max-width: none;
   z-index: 40;
   animation: slideUp 0.18s ease-out;
+}
+
+.eb-verse-toolbar .eb-toolbar-btn {
+  width: 48px;
+  height: 48px;
+  flex: 1 1 0;
+  min-width: 48px;
+  border-radius: 14px;
+}
+
+.eb-verse-toolbar .eb-toolbar-btn .eb-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.eb-verse-toolbar .eb-selection-count {
+  font-size: 13px;
+  padding: 0 8px;
 }
 
 @keyframes slideUp {
@@ -755,18 +773,29 @@ html:not(.dark) .eb-badge-purple {
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 10px 22px;
-  border-radius: var(--eb-radius-full);
-  background: rgba(18, 20, 28, 0.9);
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--eb-radius-lg);
+  background: rgba(18, 20, 28, 0.94);
   border: 1px solid var(--eb-border);
   box-shadow: var(--eb-shadow-md);
   backdrop-filter: blur(12px);
   z-index: 30;
-  font-size: 13.5px;
-  font-weight: 700;
+  width: 100%;
+  max-width: 480px;
+  font-size: 15px;
+  font-weight: 800;
   color: var(--eb-text);
 }
+.eb-reader-nav-pill #reader-bottom-reference {
+  flex: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 
 html:not(.dark) .eb-reader-nav-pill {
   background: rgba(255, 255, 255, 0.95);
@@ -774,12 +803,17 @@ html:not(.dark) .eb-reader-nav-pill {
 }
 
 .eb-nav-arrow {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.eb-nav-arrow .eb-icon {
+  width: 28px;
+  height: 28px;
 }
 
 .eb-nav-arrow:hover {
