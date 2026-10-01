@@ -34,19 +34,23 @@ async function askGemini(question = "") {
             }).join("\n\n");
             const isInitialExplanation = !question.trim() && Boolean(biblicalContext);
             const userRequest = isInitialExplanation
-                ? `Explique directement ce passage biblique dans son contexte. Commence par identifier le contexte immédiat du passage, puis présente son contexte historique et culturel lorsque pertinent, explique le sens du texte verset par verset ou par unités de pensée, les notions théologiques importantes et le message principal. Termine par quelques points d'application clairement distingués de ce que le texte dit réellement. Ne demande pas à l'utilisateur de formuler une question : cette réponse est l'explication initiale du passage.`
+                ? `Explique brièvement ce passage. Donne : 1) contexte immédiat, 2) sens principal, 3) une application. Reste concis et ne demande pas de question supplémentaire.`
                 : biblicalContext
-                    ? `Réponds précisément à la question de l'utilisateur en t'appuyant d'abord sur le passage sélectionné et son contexte. Si nécessaire, rappelle brièvement le contexte avant de répondre. Question : ${question}`
+                    ? `Réponds directement à la question en t'appuyant sur le passage sélectionné. Rappelle le contexte seulement si nécessaire. Question : ${question}`
                     : `Réponds précisément à la question de l'utilisateur. Aucun passage biblique n'est sélectionné; cite les références pertinentes et ne prétends pas t'appuyer sur un passage fourni. Question : ${question}`;
 
             const systemInstruction = {
                 parts: [{
-                    text: "Tu es l'assistant d'étude biblique E-Biblia. Réponds en français avec rigueur, nuance et clarté. Distingue le texte biblique, le contexte historique et culturel, les interprétations théologiques et les applications pratiques. N'invente pas de versets ni de citations. Lorsque le passage ne permet pas d'établir un point, indique-le clairement. IMPORTANT : utilise un formatage riche mais n'écris JAMAIS les marqueurs Markdown **, ***, __ ou * pour simuler le gras, l'italique ou le souligné. Utilise uniquement du texte normal avec des titres et des listes simples. E-Biblia transformera ensuite certains marqueurs internes si nécessaire."
+                    text: "Tu es Léona, l'assistant d'étude biblique de E-BIBLIA. Réponds en français, directement et avec rigueur. Sois concis : 2 à 5 phrases ou quelques puces courtes par défaut. N'ajoute du détail que si l'utilisateur le demande. Distingue clairement le texte biblique, le contexte et l'interprétation. N'invente ni verset ni citation. N'utilise jamais les marqueurs Markdown **, ***, __ ou * pour le gras/italique."
                 }]
             };
 
             const payload = {
                 systemInstruction,
+                generationConfig: {
+                    maxOutputTokens: 600,
+                    temperature: 0.25
+                },
                 contents: [{
                     role: "user",
                     parts: [{
