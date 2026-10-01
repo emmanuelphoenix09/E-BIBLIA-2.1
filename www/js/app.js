@@ -1296,6 +1296,55 @@
   }
 
   // -------------------------------------------------------------
+  // PARAMÈTRES — ACTIONS RÉELLES DES LIGNES DE RÉGLAGES
+  // -------------------------------------------------------------
+  // Ces fonctions restent locales à l'application : aucune connexion Internet
+  // n'est nécessaire pour modifier et mémoriser les préférences.
+  function toggleLanguageSetting() {
+    // L'application est actuellement disponible en français. Le bouton répond
+    // donc proprement sans prétendre changer une langue qui n'existe pas encore.
+    showToast('Langue disponible : Français');
+  }
+
+  function toggleNotificationsSetting() {
+    const current = localStorage.getItem('ebiblia_notifications') !== 'off';
+    const next = !current;
+    localStorage.setItem('ebiblia_notifications', next ? 'on' : 'off');
+
+    const label = document.getElementById('setting-notifications-val');
+    if (label) label.textContent = next ? 'Activées' : 'Désactivées';
+    showToast(next ? 'Notifications activées' : 'Notifications désactivées');
+  }
+
+  function updateNotificationLabel() {
+    const label = document.getElementById('setting-notifications-val');
+    if (!label) return;
+    label.textContent = localStorage.getItem('ebiblia_notifications') === 'off' ? 'Désactivées' : 'Activées';
+  }
+
+  function showDownloadStatus() {
+    // Les données bibliques sont déjà embarquées dans le projet pour le mode hors ligne.
+    showToast('Les Bibles locales sont disponibles hors connexion');
+  }
+
+  function showStorageStatus() {
+    // Calcul approximatif de l'espace occupé par le stockage local de l'application.
+    let bytes = 0;
+    try {
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i) || '';
+        const value = localStorage.getItem(key) || '';
+        bytes += (key.length + value.length) * 2;
+      }
+    } catch (e) {}
+
+    const size = bytes < 1024 ? bytes + ' o' : bytes < 1024 * 1024
+      ? (bytes / 1024).toFixed(1) + ' Ko'
+      : (bytes / (1024 * 1024)).toFixed(2) + ' Mo';
+    showToast('Stockage local utilisé : ' + size);
+  }
+
+  // -------------------------------------------------------------
   // INITIALISATION AU CHARGEMENT DU DOM
   // -------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', () => {
@@ -1338,7 +1387,14 @@
     document.getElementById('btn-toggle-theme')?.addEventListener('click', toggleTheme);
     document.getElementById('setting-theme-row')?.addEventListener('click', toggleTheme);
 
-    // 7. Filtres des plans
+    // 7. Paramètres : chaque ligne possède maintenant une action fonctionnelle.
+    document.getElementById('setting-language-row')?.addEventListener('click', toggleLanguageSetting);
+    document.getElementById('setting-notifications-row')?.addEventListener('click', toggleNotificationsSetting);
+    document.getElementById('setting-download-row')?.addEventListener('click', showDownloadStatus);
+    document.getElementById('setting-storage-row')?.addEventListener('click', showStorageStatus);
+    updateNotificationLabel();
+
+    // 8. Filtres des plans
     document.querySelectorAll('#plans-filter-pills .eb-pill').forEach(pill => {
       pill.addEventListener('click', () => {
         document.querySelectorAll('#plans-filter-pills .eb-pill').forEach(p => p.classList.remove('is-active'));
@@ -1347,7 +1403,7 @@
       });
     });
 
-    // 8. Filtres de prière
+    // 9. Filtres de prière
     document.querySelectorAll('#prayer-filter-pills .eb-pill').forEach(pill => {
       pill.addEventListener('click', () => {
         document.querySelectorAll('#prayer-filter-pills .eb-pill').forEach(p => p.classList.remove('is-active'));
@@ -1357,7 +1413,7 @@
       });
     });
 
-    // 9. Suggestions Léona IA
+    // 10. Suggestions Léona IA
     document.querySelectorAll('.eb-leona-chip').forEach(chip => {
       chip.addEventListener('click', () => {
         const text = chip.dataset.prompt || chip.textContent.trim();
@@ -1370,7 +1426,7 @@
       if (e.key === 'Enter') sendLeonaQuestion();
     });
 
-    // 10. Boutons de don
+    // 11. Boutons de don
     document.querySelectorAll('.eb-amount-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.eb-amount-btn').forEach(b => b.classList.remove('is-active'));
@@ -1383,11 +1439,11 @@
       showToast(`Merci pour votre soutien de ${APP.activeDonationAmount} à E-BIBLIA !`);
     });
 
-    // 11. Sauvegardes de modales
+    // 12. Sauvegardes de modales
     document.getElementById('btn-save-note-modal')?.addEventListener('click', saveNewNote);
     document.getElementById('btn-save-prayer-modal')?.addEventListener('click', saveNewPrayer);
 
-    // 12. Fermeture des modales
+    // 13. Fermeture des modales
     document.querySelectorAll('.eb-modal-backdrop').forEach(modal => {
       modal.addEventListener('click', (e) => {
         if (e.target === modal) modal.classList.remove('is-open');
@@ -1400,7 +1456,7 @@
       });
     });
 
-    // 13. Démarrage de l'application selon l'ancre URL ou par défaut Accueil
+    // 14. Démarrage de l'application selon l'ancre URL ou par défaut Accueil
     const initialView = window.location.hash.replace('#', '') || 'home';
     showView(initialView);
   });
