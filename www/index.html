@@ -541,6 +541,7 @@
           </div>
         </div>
 
+        <!-- Paramètres : chaque ligne est reliée à une action dans js/app.js. -->
         <div class="eb-settings-list">
           <div class="eb-setting-row" id="setting-theme-row">
             <svg class="eb-icon eb-menu-icon"><use href="#icon-palette"></use></svg>
@@ -548,13 +549,13 @@
             <span class="eb-setting-value"><strong id="setting-theme-val">Sombre (par défaut)</strong> <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg></span>
           </div>
 
-          <div class="eb-setting-row" onclick="showToast('Langue : Français (actif)')">
+          <div class="eb-setting-row" id="setting-language-row">
             <svg class="eb-icon eb-menu-icon"><use href="#icon-globe"></use></svg>
             <span class="eb-setting-label">Langue</span>
-            <span class="eb-setting-value">Français <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg></span>
+            <span class="eb-setting-value"><strong id="setting-language-val">Français</strong> <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg></span>
           </div>
 
-          <div class="eb-setting-row" onclick="showToast('Rappels quotidiens configurés à 08:00')">
+          <div class="eb-setting-row" id="setting-notifications-row">
             <svg class="eb-icon eb-menu-icon"><use href="#icon-bell"></use></svg>
             <span class="eb-setting-label">Notifications</span>
             <span class="eb-setting-value"><svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg></span>
@@ -566,7 +567,7 @@
             <span class="eb-setting-value"><svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg></span>
           </div>
 
-          <div class="eb-setting-row" onclick="showToast('Stockage local : 12.4 Mo utilisés')">
+          <div class="eb-setting-row" id="setting-storage-row">
             <svg class="eb-icon eb-menu-icon"><use href="#icon-database"></use></svg>
             <span class="eb-setting-label">Stockage</span>
             <span class="eb-setting-value"><svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg></span>
