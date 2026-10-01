@@ -34,21 +34,21 @@ async function askGemini(question = "") {
             }).join("\n\n");
             const isInitialExplanation = !question.trim() && Boolean(biblicalContext);
             const userRequest = isInitialExplanation
-                ? `Explique brièvement ce passage. Donne : 1) contexte immédiat, 2) sens principal, 3) une application. Reste concis et ne demande pas de question supplémentaire.`
+                ? `Explique ce passage en 120 mots maximum. Donne : 1) contexte immédiat, 2) sens principal, 3) une application. Reste concis et ne demande pas de question supplémentaire.`
                 : biblicalContext
                     ? `Réponds directement à la question en t'appuyant sur le passage sélectionné. Rappelle le contexte seulement si nécessaire. Question : ${question}`
                     : `Réponds précisément à la question de l'utilisateur. Aucun passage biblique n'est sélectionné; cite les références pertinentes et ne prétends pas t'appuyer sur un passage fourni. Question : ${question}`;
 
             const systemInstruction = {
                 parts: [{
-                    text: "Tu es Léona, l'assistant d'étude biblique de E-BIBLIA. Réponds en français, directement et avec rigueur. Sois concis : 2 à 5 phrases ou quelques puces courtes par défaut. N'ajoute du détail que si l'utilisateur le demande. Distingue clairement le texte biblique, le contexte et l'interprétation. N'invente ni verset ni citation. N'utilise jamais les marqueurs Markdown **, ***, __ ou * pour le gras/italique."
+                    text: "Tu es Léona, l'assistant d'étude biblique de E-BIBLIA. Réponds en français, directement et avec rigueur. Sois concis : 2 à 5 phrases ou quelques puces courtes, environ 120 mots maximum par défaut. N'ajoute du détail que si l'utilisateur le demande. Distingue clairement le texte biblique, le contexte et l'interprétation. N'invente ni verset ni citation. N'utilise jamais les marqueurs Markdown **, ***, __ ou * pour le gras/italique."
                 }]
             };
 
             const payload = {
                 systemInstruction,
                 generationConfig: {
-                    maxOutputTokens: 600,
+                    maxOutputTokens: 280,
                     temperature: 0.25
                 },
                 contents: [{
