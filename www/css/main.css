@@ -1803,3 +1803,23 @@ body[data-page="apropos"]{background:var(--eb-bg)!important;color:var(--eb-text)
   from { opacity: 0; transform: translate(-50%, 8px); }
   to { opacity: 1; transform: translate(-50%, 0); }
 }
+
+/* Fonctionnalités portées depuis main vers E-BIBLIA-3.0 */
+.eb-daily-card{margin:16px 0 0;border:1px solid rgba(217,119,6,.22);border-radius:var(--eb-radius-xl);background:var(--eb-card);box-shadow:0 8px 24px rgba(0,0,0,.08);overflow:hidden}
+.dark .eb-daily-card{border-color:rgba(251,191,36,.18);box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.eb-daily-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-bottom:1px solid var(--eb-border)}
+.eb-daily-title-wrap{display:flex;align-items:center;gap:10px;min-width:0}
+.eb-daily-title-wrap h2{margin:0;font-size:14px;font-weight:800;color:var(--eb-text)}
+.eb-daily-title-wrap p{margin:2px 0 0;font-size:10px;color:var(--eb-text-secondary)}
+.eb-daily-icon{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;border-radius:11px;background:rgba(168,85,247,.12);color:#a855f7}
+.eb-daily-status{font-size:10px;font-weight:700;color:var(--eb-text-secondary);white-space:nowrap}
+.eb-daily-body{padding:14px}.eb-daily-loading{font-size:13px;color:var(--eb-text-secondary)}
+.eb-daily-verse{border-left:3px solid #d4af37;padding-left:12px}
+.eb-daily-verse-ref{font-size:11px;font-weight:800;color:var(--eb-accent)}
+.eb-daily-verse-text{margin-top:4px;font-size:14px;line-height:1.6;color:var(--eb-text)}
+.eb-daily-section-label{margin:14px 0 5px;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--eb-accent)}
+.eb-daily-copy{margin:0;font-size:13px;line-height:1.65;color:var(--eb-text-secondary);white-space:pre-line}
+.eb-daily-offline{margin-top:10px;font-size:10px;color:var(--eb-text-muted)}
+.eb-verse-row.mark-underline{text-decoration-line:underline;text-decoration-thickness:2px;text-decoration-color:#d4af37;text-underline-offset:4px;background:rgba(212,175,55,.08);border-radius:.2rem}
+.eb-verse-row.mark-underline-double{text-decoration-line:underline;text-decoration-style:double;text-decoration-thickness:2px;text-decoration-color:#b45309;text-underline-offset:4px}
+#reader-verses-container .eb-verse-row{font-size:var(--eb-reader-font-size,17px);touch-action:pan-y}
