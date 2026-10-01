@@ -390,6 +390,13 @@
     if (versionBadge) versionBadge.textContent = APP.currentVersion;
 
     if (!container) return;
+
+    // Active le zoom tactile à deux doigts uniquement dans le lecteur Bible.
+    initReaderPinchZoom();
+    const savedReaderSize = Number(localStorage.getItem('ebiblia_reader_font_size')) || 17;
+    const readerSize = Math.min(30, Math.max(13, savedReaderSize));
+    document.documentElement.style.setProperty('--eb-reader-font-size', readerSize + 'px');
+
     container.innerHTML = '<div style="text-align:center;padding:30px;color:var(--eb-text-secondary);">Chargement des écritures...</div>';
 
     const verses = await fetchChapterData(APP.currentBook, APP.currentChapter);
@@ -432,12 +439,63 @@
   // Zoom tactile à deux doigts dans le lecteur biblique.
   let readerPinchStartDistance=null, readerPinchStartSize=null;
   function initReaderPinchZoom() {
-    const container=document.getElementById('reader-verses-container'); if(!container || container.dataset.pinchZoomBound) return;
-    container.dataset.pinchZoomBound='1';
-    const distance=t=>Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);
-    container.addEventListener('touchstart',e=>{if(e.touches.length===2){readerPinchStartDistance=distance(e.touches);readerPinchStartSize=Number(localStorage.getItem('ebiblia_reader_font_size'))||17;}},{passive:true});
-    container.addEventListener('touchmove',e=>{if(e.touches.length===2&&readerPinchStartDistance){const next=Math.min(30,Math.max(13,Math.round(readerPinchStartSize*(distance(e.touches)/readerPinchStartDistance))));document.documentElement.style.setProperty('--eb-reader-font-size',next+'px');e.preventDefault();}},{passive:false});
-    container.addEventListener('touchend',()=>{if(readerPinchStartDistance!==null){const value=parseInt(getComputedStyle(document.documentElement).getPropertyValue('--eb-reader-font-size'))||17;localStorage.setItem('ebiblia_reader_font_size',String(value));readerPinchStartDistance=null;readerPinchStartSize=null;}});
+    const container = document.getElementById('reader-verses-container');
+    if (!container || container.dataset.pinchZoomBound) return;
+
+    container.dataset.pinchZoomBound = '1';
+
+    const distance = touches =>
+      Math.hypot(
+        touches[0].clientX - touches[1].clientX,
+        touches[0].clientY - touches[1].clientY
+      );
+
+    const finishPinch = () => {
+      if (readerPinchStartDistance === null) return;
+
+      const value = parseInt(
+        getComputedStyle(document.documentElement)
+          .getPropertyValue('--eb-reader-font-size'),
+        10
+      ) || 17;
+
+      localStorage.setItem(
+        'ebiblia_reader_font_size',
+        String(Math.min(30, Math.max(13, value)))
+      );
+
+      readerPinchStartDistance = null;
+      readerPinchStartSize = null;
+    };
+
+    container.addEventListener('touchstart', event => {
+      if (event.touches.length !== 2) return;
+
+      readerPinchStartDistance = distance(event.touches);
+      readerPinchStartSize =
+        Number(localStorage.getItem('ebiblia_reader_font_size')) || 17;
+    }, { passive: true });
+
+    container.addEventListener('touchmove', event => {
+      if (event.touches.length !== 2 || readerPinchStartDistance === null) return;
+
+      const ratio = distance(event.touches) / readerPinchStartDistance;
+      const next = Math.min(
+        30,
+        Math.max(13, Math.round(readerPinchStartSize * ratio))
+      );
+
+      document.documentElement.style.setProperty(
+        '--eb-reader-font-size',
+        next + 'px'
+      );
+
+      // Empêche le navigateur de zoomer toute la page pendant le pincement.
+      event.preventDefault();
+    }, { passive: false });
+
+    container.addEventListener('touchend', finishPinch, { passive: true });
+    container.addEventListener('touchcancel', finishPinch, { passive: true });
   }
 
   // -------------------------------------------------------------
