@@ -430,9 +430,7 @@
       sendLeonaQuestion(`Peux-tu m'expliquer le sens et le contexte de ${ref} : "${text}" ?`);
     } else if (action === 'share') {
       const shareText = selected.map((item, index) => `${refs[index]} — "${item.text}"`).join('\n\n');
-      if (navigator.share) navigator.share({ title: 'E-BIBLIA', text: shareText }).catch(() => {});
-      else navigator.clipboard?.writeText(shareText);
-      showToast('Sélection prête à être partagée');
+      shareContent('E-BIBLIA', shareText);
     } else if (action === 'copy') {
       navigator.clipboard?.writeText(selected.map((item, index) => `${refs[index]} — "${item.text}"`).join('\n\n'));
       showToast(`${selected.length} verset${selected.length > 1 ? 's' : ''} copié${selected.length > 1 ? 's' : ''}`);
@@ -585,6 +583,81 @@
   // -------------------------------------------------------------
   // VUE COMPARER DES VERSIONS (Screen 3 & 10)
   // -------------------------------------------------------------
+  // -------------------------------------------------------------
+  // PARTAGE UNIFIÉ — partage natif Android/iOS + Web Share API
+  // -------------------------------------------------------------
+  async function shareContent(title, text, url = '') {
+    const payload = { title: title || 'E-BIBLIA', text: text || '' };
+    if (url) payload.url = url;
+
+    try {
+      if (window.Capacitor?.isPluginAvailable?.('Share') && window.Capacitor?.Plugins?.Share) {
+        await window.Capacitor.Plugins.Share.share(payload);
+        return true;
+      }
+      if (navigator.share) {
+        await navigator.share(payload);
+        return true;
+      }
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText([text, url].filter(Boolean).join('\n'));
+        showToast('Contenu copié : vous pouvez le partager depuis votre application de messagerie.');
+        return true;
+      }
+    } catch (error) {
+      if (error?.name !== 'AbortError' && error?.message !== 'Share canceled') {
+        console.warn('Partage indisponible :', error);
+      }
+    }
+    return false;
+  }
+
+  // -------------------------------------------------------------
+  // VERSET DU JOUR — chargé depuis bible-data, stable pour la journée
+  // -------------------------------------------------------------
+  function dailyVerseSeed(date = new Date()) {
+    const key = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+    let hash = 2166136261;
+    for (let i = 0; i < key.length; i++) {
+      hash ^= key.charCodeAt(i);
+      hash = Math.imul(hash, 16777619);
+    }
+    return hash >>> 0;
+  }
+
+  async function loadDailyVerse() {
+    const refEl = document.querySelector('#view-home .eb-verse-ref');
+    const quoteEl = document.querySelector('#view-home .eb-verse-quote');
+    const card = document.querySelector('#view-home .eb-verse-card');
+    if (!refEl || !quoteEl) return;
+
+    const seed = dailyVerseSeed();
+    const book = APP.books[seed % APP.books.length];
+    const chapter = (Math.floor(seed / APP.books.length) % book.chapters) + 1;
+    const version = APP.currentVersion || 'LSG';
+
+    let verses = await fetchVersionChapter(version, book.id, chapter);
+    if (!verses?.length && version !== 'LSG') {
+      verses = await fetchVersionChapter('LSG', book.id, chapter);
+    }
+    if (!verses?.length) return;
+
+    const verseIndex = Math.floor(seed / (APP.books.length * book.chapters)) % verses.length;
+    const verse = verses[verseIndex];
+    if (!verse?.text) return;
+
+    const cleanText = String(verse.text).replace(/<[^>]*>/g, '').trim();
+    const reference = book.name + ' ' + chapter + ':' + verse.verse;
+    refEl.textContent = reference;
+    quoteEl.textContent = '« ' + cleanText + ' »';
+
+    const shareButton = card?.querySelector('[data-share]');
+    if (shareButton) {
+      shareButton.dataset.shareTitle = 'Verset du jour — E-BIBLIA';
+      shareButton.dataset.shareText = reference + ' — "' + cleanText + '"';
+    }
+  }
+
   async function fetchVersionVerse(versionCode, bookId, chapter, verse) {
     const data = await fetchVersionChapter(versionCode, bookId, chapter);
     if (!data) return null;
@@ -1383,6 +1456,18 @@
       });
     });
 
+    // 4 bis. Partage : tous les boutons portant data-share utilisent
+    // la feuille de partage native de l'appareil lorsqu'elle est disponible.
+    document.addEventListener('click', (e) => {
+      const shareButton = e.target.closest('[data-share]');
+      if (!shareButton) return;
+      e.preventDefault();
+      e.stopPropagation();
+      const title = shareButton.dataset.shareTitle || 'E-BIBLIA';
+      const text = shareButton.dataset.shareText || '';
+      if (text) shareContent(title, text);
+    });
+
     // 5. Contrôles du lecteur biblique
     document.getElementById('reader-prev-btn')?.addEventListener('click', prevChapter);
     document.getElementById('reader-next-btn')?.addEventListener('click', nextChapter);
@@ -1464,6 +1549,7 @@
     // 14. Démarrage de l'application selon l'ancre URL ou par défaut Accueil
     const initialView = window.location.hash.replace('#', '') || 'home';
     showView(initialView);
+    loadDailyVerse();
   });
 
   // Exportation globale pour compatibilité
