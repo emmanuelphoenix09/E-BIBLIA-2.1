@@ -1823,3 +1823,61 @@ body[data-page="apropos"]{background:var(--eb-bg)!important;color:var(--eb-text)
 .eb-verse-row.mark-underline{text-decoration-line:underline;text-decoration-thickness:2px;text-decoration-color:#d4af37;text-underline-offset:4px;background:rgba(212,175,55,.08);border-radius:.2rem}
 .eb-verse-row.mark-underline-double{text-decoration-line:underline;text-decoration-style:double;text-decoration-thickness:2px;text-decoration-color:#b45309;text-underline-offset:4px}
 #reader-verses-container .eb-verse-row{font-size:var(--eb-reader-font-size,17px);touch-action:pan-y}
+
+
+/* Plans de lecture intégrale de la Bible */
+.eb-plan-loading {
+  padding: 18px;
+  text-align: center;
+  color: var(--eb-text-secondary);
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-lg);
+}
+.eb-full-bible-plan-card { cursor: pointer; }
+.eb-plan-duration {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  background: var(--eb-card-inner);
+  color: var(--eb-accent);
+  font-size: 17px;
+  font-weight: 800;
+}
+.eb-plan-detail { padding-bottom: 24px; }
+.eb-plan-detail-header {
+  margin: 14px 0;
+  padding: 18px;
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-lg);
+}
+.eb-plan-kicker { font-size: 11px; font-weight: 800; color: var(--eb-accent); letter-spacing: .08em; }
+.eb-plan-detail-header h2 { margin: 5px 0; font-size: 20px; }
+.eb-plan-detail-header p { margin: 6px 0 0; color: var(--eb-text-secondary); font-size: 13px; line-height: 1.5; }
+.eb-plan-days-list { display: flex; flex-direction: column; gap: 10px; }
+.eb-plan-day {
+  padding: 14px;
+  background: var(--eb-card);
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-lg);
+}
+.eb-plan-day.is-completed { border-color: var(--eb-accent); }
+.eb-plan-day-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.eb-plan-day-top strong { display: block; font-size: 15px; }
+.eb-plan-day-top span { display: block; margin-top: 3px; color: var(--eb-text-secondary); font-size: 12px; }
+.eb-plan-complete, .eb-plan-start {
+  border: 0;
+  border-radius: 12px;
+  padding: 9px 11px;
+  background: var(--eb-card-inner);
+  color: var(--eb-text);
+  font-size: 12px;
+  font-weight: 700;
+}
+.eb-plan-day-reading { margin: 12px 0; line-height: 1.55; font-size: 14px; color: var(--eb-text); }
+.eb-plan-start { width: 100%; display: flex; align-items: center; justify-content: center; gap: 6px; color: var(--eb-accent); }
