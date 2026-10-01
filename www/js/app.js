@@ -359,6 +359,75 @@
     }
   }
 
+  // -------------------------------------------------------------
+  // LECTURE LOCALE TTS — utilise la voix installée par défaut
+  // sur le téléphone, sans connexion Internet.
+  // -------------------------------------------------------------
+  let ttsPlaying = false;
+
+  function getReaderText() {
+    return Array.from(document.querySelectorAll('#reader-verses-container .eb-verse-row'))
+      .map(row => {
+        const num = row.querySelector('.eb-verse-num')?.textContent?.trim() || '';
+        const text = row.querySelector('span')?.textContent?.trim() || '';
+        return num ? num + '. ' + text : text;
+      })
+      .filter(Boolean)
+      .join(' ');
+  }
+
+  function stopBibleTTS() {
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    ttsPlaying = false;
+    const btn = document.getElementById('reader-tts-btn');
+    if (btn) {
+      btn.title = 'Lire le chapitre';
+      btn.setAttribute('aria-label', 'Lire le chapitre');
+      btn.innerHTML = '<svg class="eb-icon"><use href="#icon-play"></use></svg>';
+    }
+  }
+
+  function toggleBibleTTS() {
+    if (!('speechSynthesis' in window)) {
+      showToast('La lecture vocale TTS n’est pas disponible sur cet appareil.');
+      return;
+    }
+
+    if (ttsPlaying) {
+      stopBibleTTS();
+      return;
+    }
+
+    const text = getReaderText();
+    if (!text) {
+      showToast('Aucun texte biblique à lire.');
+      return;
+    }
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'fr-FR';
+    utterance.rate = 0.9;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+
+    utterance.onstart = () => {
+      ttsPlaying = true;
+      const btn = document.getElementById('reader-tts-btn');
+      if (btn) {
+        btn.title = 'Arrêter la lecture';
+        btn.setAttribute('aria-label', 'Arrêter la lecture');
+        btn.innerHTML = '<svg class="eb-icon"><use href="#icon-stop"></use></svg>';
+      }
+    };
+
+    utterance.onend = stopBibleTTS;
+    utterance.onerror = stopBibleTTS;
+
+    // Le moteur de synthèse vocale est celui fourni par Android/Chrome
+    // ou par le moteur TTS configuré par défaut sur le téléphone.
+    window.speechSynthesis.speak(utterance);
+  }
+
   function toggleVerseSelection(rowElement, verseNum, verseText) {
     const isSelected = rowElement.classList.contains('is-selected');
     const existingToolbar = document.getElementById('verse-floating-toolbar');
@@ -1475,6 +1544,7 @@
     document.getElementById('reader-pill-next')?.addEventListener('click', nextChapter);
     document.getElementById('reader-book-picker')?.addEventListener('click', openBookPicker);
     document.getElementById('reader-version-badge')?.addEventListener('click', openVersionPicker);
+    document.getElementById('reader-tts-btn')?.addEventListener('click', toggleBibleTTS);
 
     // 6. Basculeur de thème
     document.getElementById('btn-toggle-theme')?.addEventListener('click', toggleTheme);
