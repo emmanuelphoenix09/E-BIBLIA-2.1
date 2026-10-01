@@ -1,0 +1,21 @@
+name: E-BIBLIA JavaScript Syntax Check
+
+on:
+  push:
+    branches:
+      - E-BIBLIA-3.0
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Vérifier app.js
+        run: node --check www/js/app.js
+      - name: Vérifier ai.js
+        run: node --check www/js/ai.js
+      - name: Vérifier config.js
+        run: node --check www/js/config.js
