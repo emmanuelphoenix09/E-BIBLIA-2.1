@@ -439,3 +439,22 @@
     max-height:40dvh;
   }
 }
+
+
+/* Léona — composition fixe : l'orbe et la zone de saisie restent dans le champ de vision. */
+.leona-orb-zone{
+  top:30%;
+}
+.leona-panel{
+  bottom:max(10px, env(safe-area-inset-bottom));
+}
+@media(max-width:640px){
+  .leona-orb-zone{
+    top:27%;
+    width:min(220px,58vw);
+    height:min(220px,58vw);
+  }
+  .leona-panel{
+    max-height:40dvh;
+  }
+}
