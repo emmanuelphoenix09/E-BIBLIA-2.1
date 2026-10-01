@@ -1407,7 +1407,7 @@
     APP.meditations.unshift({ id: Date.now(), theme, author: author || 'Moi', date, verses: versesRaw ? versesRaw.split(/\\n+/).map(v => v.trim()).filter(Boolean) : [], notes, prayer });
     setStored('ebiblia_meditations_v1', APP.meditations);
     closeModal('modal-new-meditation');
-    showToast('Méditation enregistrée');
+    showToast('Note enregistrée');
     renderMeditationView();
   }
 
@@ -1416,7 +1416,7 @@
     if (!list) return;
     list.innerHTML = '';
     if (!APP.meditations.length) {
-      list.innerHTML = '<div style="text-align:center;padding:40px;color:var(--eb-text-secondary);">Aucune méditation enregistrée. Appuyez sur + pour commencer.</div>';
+      list.innerHTML = '<div style="text-align:center;padding:40px;color:var(--eb-text-secondary);">Aucune note enregistrée. Appuyez sur + pour commencer.</div>';
       return;
     }
     APP.meditations.forEach(m => {
