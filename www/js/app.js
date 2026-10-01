@@ -779,7 +779,7 @@
   function readDailyContent() {
     try { return JSON.parse(localStorage.getItem(DAILY_CONTENT_STORAGE_KEY) || 'null'); } catch(e) { return null; }
   }
-  function saveDailyContent(content) { try { localStorage.setItem(DAILY_CONTENT_STORAGE_KEY, JSON.stringify(content)); } catch(e) {}
+  function saveDailyContent(content) { try { localStorage.setItem(DAILY_CONTENT_STORAGE_KEY, JSON.stringify(content)); } catch(e) {} }
   function escapeDaily(value) { const d=document.createElement('div'); d.textContent=value == null ? '' : String(value); return d.innerHTML; }
   function renderDailyContent(content = readDailyContent()) {
     const body=document.getElementById('daily-content-body'), dateEl=document.getElementById('daily-content-date'), statusEl=document.getElementById('daily-content-status');
