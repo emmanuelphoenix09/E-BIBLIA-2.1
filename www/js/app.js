@@ -499,72 +499,159 @@
   }
 
   // -------------------------------------------------------------
-  // LECTURE LOCALE TTS — utilise la voix installée par défaut
-  // sur le téléphone, sans connexion Internet.
+  // LECTURE VOCALE — moteur TTS natif du téléphone
   // -------------------------------------------------------------
+  // Sur Android/Capacitor, on utilise le moteur Text-to-Speech natif.
+  // Cela permet à E-BIBLIA d'utiliser le moteur vocal configuré par
+  // défaut dans le téléphone, sans dépendre de speechSynthesis du WebView.
+  // Une petite file de versets évite aussi les limites sur les longs textes.
   let ttsPlaying = false;
+  let ttsSessionId = 0;
+  let ttsQueue = [];
+  let ttsIndex = 0;
 
-  function getReaderText() {
+  function getNativeTTS() {
+    return window.Capacitor?.Plugins?.TextToSpeech || null;
+  }
+
+  function updateTTSButton(playing) {
+    const btn = document.getElementById('reader-tts-btn');
+    if (!btn) return;
+
+    btn.title = playing ? 'Arrêter la lecture' : 'Lire le chapitre';
+    btn.setAttribute('aria-label', playing ? 'Arrêter la lecture' : 'Lire le chapitre');
+    btn.innerHTML = playing
+      ? '<svg class="eb-icon"><use href="#icon-stop"></use></svg>'
+      : '<svg class="eb-icon"><use href="#icon-play"></use></svg>';
+  }
+
+  function getReaderSpeechQueue() {
     return Array.from(document.querySelectorAll('#reader-verses-container .eb-verse-row'))
       .map(row => {
         const num = row.querySelector('.eb-verse-num')?.textContent?.trim() || '';
         const text = row.querySelector('span')?.textContent?.trim() || '';
         return num ? num + '. ' + text : text;
       })
-      .filter(Boolean)
-      .join(' ');
+      .filter(Boolean);
   }
 
   function stopBibleTTS() {
-    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    ttsSessionId++;
+    const nativeTTS = getNativeTTS();
+
+    if (nativeTTS) {
+      nativeTTS.stop().catch(() => {});
+    } else if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+
     ttsPlaying = false;
-    const btn = document.getElementById('reader-tts-btn');
-    if (btn) {
-      btn.title = 'Lire le chapitre';
-      btn.setAttribute('aria-label', 'Lire le chapitre');
-      btn.innerHTML = '<svg class="eb-icon"><use href="#icon-play"></use></svg>';
+    ttsQueue = [];
+    ttsIndex = 0;
+    updateTTSButton(false);
+  }
+
+  async function speakNextNativeVerse(sessionId) {
+    if (!ttsPlaying || sessionId !== ttsSessionId) return;
+
+    if (ttsIndex >= ttsQueue.length) {
+      stopBibleTTS();
+      return;
+    }
+
+    const nativeTTS = getNativeTTS();
+    if (!nativeTTS) {
+      stopBibleTTS();
+      return;
+    }
+
+    const text = ttsQueue[ttsIndex++];
+
+    try {
+      await nativeTTS.speak({
+        text,
+        lang: 'fr-FR',
+        rate: 0.9,
+        pitch: 1,
+        volume: 1,
+        queueStrategy: 0
+      });
+
+      if (ttsPlaying && sessionId === ttsSessionId) {
+        await speakNextNativeVerse(sessionId);
+      }
+    } catch (error) {
+      if (sessionId !== ttsSessionId) return;
+      stopBibleTTS();
+      showToast('La synthèse vocale du téléphone n’a pas pu lire ce passage.');
+      console.error('E-BIBLIA TTS natif:', error);
     }
   }
 
-  function toggleBibleTTS() {
-    if (!('speechSynthesis' in window)) {
-      showToast('La lecture vocale TTS n’est pas disponible sur cet appareil.');
-      return;
-    }
+  async function toggleBibleTTS() {
+    const nativeTTS = getNativeTTS();
 
     if (ttsPlaying) {
       stopBibleTTS();
       return;
     }
 
-    const text = getReaderText();
-    if (!text) {
+    const queue = getReaderSpeechQueue();
+    if (!queue.length) {
       showToast('Aucun texte biblique à lire.');
       return;
     }
 
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'fr-FR';
-    utterance.rate = 0.9;
-    utterance.pitch = 1;
-    utterance.volume = 1;
-
-    utterance.onstart = () => {
+    // Priorité absolue au moteur TTS natif du téléphone dans l'APK.
+    if (nativeTTS) {
+      ttsSessionId++;
+      const sessionId = ttsSessionId;
+      ttsQueue = queue;
+      ttsIndex = 0;
       ttsPlaying = true;
-      const btn = document.getElementById('reader-tts-btn');
-      if (btn) {
-        btn.title = 'Arrêter la lecture';
-        btn.setAttribute('aria-label', 'Arrêter la lecture');
-        btn.innerHTML = '<svg class="eb-icon"><use href="#icon-stop"></use></svg>';
-      }
-    };
+      updateTTSButton(true);
 
-    utterance.onend = stopBibleTTS;
-    utterance.onerror = stopBibleTTS;
+      // Arrête une éventuelle lecture native précédente avant de commencer.
+      try {
+        await nativeTTS.stop();
+      } catch (_) {}
 
-    // Le moteur de synthèse vocale est celui fourni par Android/Chrome
-    // ou par le moteur TTS configuré par défaut sur le téléphone.
-    window.speechSynthesis.speak(utterance);
+      await speakNextNativeVerse(sessionId);
+      return;
+    }
+
+    // Fallback uniquement pour la version Web/PWA.
+    if ('speechSynthesis' in window) {
+      ttsSessionId++;
+      const sessionId = ttsSessionId;
+      ttsQueue = queue;
+      ttsIndex = 0;
+      ttsPlaying = true;
+      updateTTSButton(true);
+
+      const speakWebNext = () => {
+        if (!ttsPlaying || sessionId !== ttsSessionId) return;
+        if (ttsIndex >= ttsQueue.length) {
+          stopBibleTTS();
+          return;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(ttsQueue[ttsIndex++]);
+        utterance.lang = 'fr-FR';
+        utterance.rate = 0.9;
+        utterance.pitch = 1;
+        utterance.volume = 1;
+        utterance.onend = speakWebNext;
+        utterance.onerror = () => stopBibleTTS();
+        window.speechSynthesis.speak(utterance);
+      };
+
+      window.speechSynthesis.cancel();
+      setTimeout(speakWebNext, 100);
+      return;
+    }
+
+    showToast('La synthèse vocale du téléphone est indisponible. Vérifiez qu’un moteur TTS est installé dans les réglages du téléphone.');
   }
 
   function toggleVerseSelection(rowElement, verseNum, verseText) {
