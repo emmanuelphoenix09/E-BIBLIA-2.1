@@ -596,6 +596,7 @@
       <button class="eb-toolbar-btn" data-action="underline" title="Souligner"><span style="font-weight:800;text-decoration:underline;">U</span></button>
       <button class="eb-toolbar-btn" data-action="underline-double" title="Double soulignement"><span style="font-weight:800;text-decoration:underline;text-decoration-style:double;">U</span></button>
       <button class="eb-toolbar-btn" data-action="note" title="Ajouter une note"><svg class="eb-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></button>
+      <button class="eb-toolbar-btn" data-action="existing-note" title="Ajouter à une note existante"><svg class="eb-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2z"/><path d="M12 10h9v2h-9z"/></svg></button>
       <button class="eb-toolbar-btn" data-action="bookmark" title="Sauvegarder"><svg class="eb-icon" viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg></button>
       <button class="eb-toolbar-btn" data-action="compare" title="Comparer"><svg class="eb-icon" viewBox="0 0 24 24"><path d="M10 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h5v2h2V1h-2v2zm0 15H5l5-6v6zm9-15h-5v2h5v13l-5-6v9h5c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg></button>
       <button class="eb-toolbar-btn" data-action="share" title="Partager"><svg class="eb-icon" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z"/></svg></button>
@@ -611,6 +612,63 @@
     });
 
     rowElement.appendChild(toolbar);
+  }
+
+  function openExistingNotePicker(ref, text) {
+    const existing = document.getElementById('modal-add-to-existing-note');
+    if (existing) existing.remove();
+
+    const modal = document.createElement('div');
+    modal.id = 'modal-add-to-existing-note';
+    modal.className = 'eb-modal-backdrop';
+    modal.innerHTML = `
+      <div class="eb-modal-sheet">
+        <div class="eb-sheet-handle"></div>
+        <div class="eb-sheet-head">
+          <h3 class="eb-sheet-title">Ajouter à une note</h3>
+          <button type="button" data-close-existing-note><svg class="eb-icon"><use href="#icon-xmark"></use></svg></button>
+        </div>
+        <div class="eb-sheet-body">
+          <p style="margin:0 0 12px;color:var(--eb-text-secondary);font-size:13px;">Choisissez la note dans laquelle ajouter le ou les versets sélectionnés.</p>
+          <div style="display:grid;gap:8px;">
+            ${APP.notes.length ? APP.notes.map(note => `
+              <button type="button" class="eb-menu-row" data-note-id="${note.id}" style="width:100%;text-align:left;border:1px solid var(--eb-border);">
+                <span style="display:flex;flex-direction:column;align-items:flex-start;gap:3px;min-width:0;">
+                  <strong>${escapeHtml(note.ref || 'Note sans référence')}</strong>
+                  <span style="font-size:12px;color:var(--eb-text-secondary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;">${escapeHtml(note.text || 'Note vide')}</span>
+                </span>
+                <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg>
+              </button>
+            `).join('') : '<p style="text-align:center;padding:20px;color:var(--eb-text-secondary);">Aucune note existante. Créez d’abord une note.</p>'}
+          </div>
+          <button type="button" class="eb-btn-donate" id="btn-cancel-existing-note" style="width:100%;margin-top:12px;">Annuler</button>
+        </div>
+      </div>`;
+    document.body.appendChild(modal);
+
+    const close = () => modal.remove();
+    modal.querySelector('[data-close-existing-note]')?.addEventListener('click', close);
+    modal.querySelector('#btn-cancel-existing-note')?.addEventListener('click', close);
+    modal.addEventListener('click', event => {
+      if (event.target === modal) close();
+    });
+
+    modal.querySelectorAll('[data-note-id]').forEach(button => {
+      button.addEventListener('click', () => {
+        const note = APP.notes.find(item => String(item.id) === String(button.dataset.noteId));
+        if (!note) return;
+        const addition = ref + '\\n« ' + text + ' »';
+        note.text = note.text ? note.text + '\\n\\n' + addition : addition;
+        const existingRefs = String(note.ref || '').trim();
+        if (!existingRefs.includes(ref)) {
+          note.ref = existingRefs ? existingRefs + ', ' + ref : ref;
+        }
+        setStored('ebiblia_notes_v3', APP.notes);
+        close();
+        showToast('Verset ajouté à la note');
+        if (APP.currentView === 'notes') renderNotesView();
+      });
+    });
   }
 
   function handleVerseAction(action) {
@@ -634,6 +692,8 @@
       renderBibleReader();
     } else if (action === 'note') {
       openNoteModal(ref, text);
+    } else if (action === 'existing-note') {
+      openExistingNotePicker(ref, text);
     } else if (action === 'bookmark') {
       selected.forEach((item, index) => APP.bookmarks.unshift({ id: Date.now() + index, ref: refs[index], text: item.text }));
       setStored('ebiblia_bookmarks_v3', APP.bookmarks);
