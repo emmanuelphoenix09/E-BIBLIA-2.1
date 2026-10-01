@@ -376,7 +376,13 @@
                     <span class="flex-1 text-left">Marquage</span>
                 </button>
 
-                <button data-app-action="notebook" class="app-menu-item">
+                
+                <button data-app-action="reading-plans" class="app-menu-item">
+                    <span class="app-menu-icon"><i class="fa-solid fa-calendar-days"></i></span>
+                    <span class="flex-1 text-left">Plans de lecture</span>
+                </button>
+
+<button data-app-action="notebook" class="app-menu-item">
                     <span class="app-menu-icon"><i class="fa-solid fa-book"></i></span>
                     <span class="flex-1 text-left">Bloc-notes</span>
                 </button>
@@ -629,6 +635,45 @@
                 <button id="btn-save-notebook" class="bg-amber-600 hover:bg-amber-700 text-white rounded-lg py-2.5 w-full text-sm font-semibold">Enregistrer dans le bloc-notes</button>
             </div>
             <div id="notebook-list" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
+        </div>
+    </div>
+
+
+    <!-- Reading Plans Modal -->
+    <div id="modal-reading-plans" class="app-modal fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-3 sm:p-4">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl max-w-3xl w-full max-h-[92vh] flex flex-col overflow-hidden border border-gray-200 dark:border-gray-800">
+            <div class="p-4 border-b border-gray-200 dark:border-gray-800 flex justify-between items-center">
+                <div>
+                    <h3 class="font-brand font-bold text-lg"><i class="fa-solid fa-calendar-days text-amber-500 mr-2"></i>Plans de lecture</h3>
+                    <p class="text-[11px] text-gray-500 dark:text-gray-400 mt-1">Plans complets : les 66 livres et les 1 189 chapitres sont répartis sur toute la durée choisie.</p>
+                </div>
+                <button class="btn-close-modal p-2 text-gray-400"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="p-4 border-b border-gray-200 dark:border-gray-800 space-y-3">
+                <div id="reading-plan-options" class="grid grid-cols-2 sm:grid-cols-3 gap-2"></div>
+                <div id="reading-plan-summary" class="rounded-lg bg-amber-50 dark:bg-amber-950/30 border border-amber-100 dark:border-amber-900 p-3 text-xs"></div>
+                <div class="flex flex-wrap gap-2">
+                    <button id="btn-reading-plan-start" class="flex-1 min-w-[150px] bg-amber-600 hover:bg-amber-700 text-white rounded-lg py-2.5 text-sm font-semibold">
+                        <i class="fa-solid fa-play mr-2"></i>Démarrer / continuer
+                    </button>
+                    <button id="btn-reading-plan-reset" class="px-4 py-2.5 rounded-lg border border-gray-200 dark:border-gray-700 text-xs font-semibold hover:bg-gray-50 dark:hover:bg-gray-800">
+                        Réinitialiser
+                    </button>
+                </div>
+            </div>
+
+            <div id="reading-plan-progress-wrap" class="px-4 pt-3">
+                <div class="flex justify-between text-[11px] text-gray-500 mb-1">
+                    <span id="reading-plan-progress-label">0 / 0 jours</span>
+                    <span id="reading-plan-progress-percent">0 %</span>
+                </div>
+                <div class="h-2 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
+                    <div id="reading-plan-progress-bar" class="h-full bg-amber-500 rounded-full transition-all" style="width:0%"></div>
+                </div>
+            </div>
+
+            <div id="reading-plan-days" class="flex-1 overflow-y-auto p-4 space-y-2"></div>
         </div>
     </div>
 
@@ -2132,6 +2177,222 @@ verseEl.addEventListener("click", (event) => {
 
         window.addEventListener("resize", syncMobileSidebarBackdrop);
 
+
+        // ============================
+        // Plans de lecture biblique
+        // ============================
+        const READING_PLAN_DURATIONS = [365, 180, 120, 90, 60, 30];
+        const READING_PLAN_STORAGE = "ebiblia_reading_plan_v1";
+        let readingPlanState = {
+            selectedDays: 365,
+            progress: {}
+        };
+
+        function getReadingPlanStorage() {
+            try {
+                const raw = localStorage.getItem(READING_PLAN_STORAGE);
+                if (!raw) return readingPlanState;
+                const parsed = JSON.parse(raw);
+                return {
+                    selectedDays: Number(parsed.selectedDays) || 365,
+                    progress: parsed.progress && typeof parsed.progress === "object" ? parsed.progress : {}
+                };
+            } catch (_) {
+                return readingPlanState;
+            }
+        }
+
+        function saveReadingPlanStorage() {
+            localStorage.setItem(READING_PLAN_STORAGE, JSON.stringify(readingPlanState));
+        }
+
+        function getCanonicalReadingPlan(days) {
+            const books = Array.isArray(BIBLE_DATA?.books) ? BIBLE_DATA.books : [];
+            const chapters = [];
+            books.forEach(book => {
+                const count = Number(book.chapters) || 0;
+                for (let chapter = 1; chapter <= count; chapter++) {
+                    chapters.push({
+                        bookId: book.id,
+                        bookName: book.name,
+                        chapter
+                    });
+                }
+            });
+
+            if (!chapters.length) return [];
+
+            // Répartition équilibrée : tous les chapitres sont utilisés une seule fois,
+            // sans inventer de passages et sans couper un chapitre entre deux jours.
+            const total = chapters.length;
+            const plan = [];
+            let cursor = 0;
+
+            for (let day = 1; day <= days; day++) {
+                const remainingDays = days - day + 1;
+                const remainingChapters = total - cursor;
+                const take = Math.max(1, Math.ceil(remainingChapters / remainingDays));
+                const start = cursor;
+                const end = Math.min(total, cursor + take);
+                const first = chapters[start];
+                const last = chapters[end - 1];
+
+                const sameBook = first.bookId === last.bookId;
+                const reference = sameBook
+                    ? `${first.bookName} ${first.chapter}${last.chapter !== first.chapter ? "–" + last.chapter : ""}`
+                    : `${first.bookName} ${first.chapter} – ${last.bookName} ${last.chapter}`;
+
+                plan.push({
+                    day,
+                    reference,
+                    chapters: end - start,
+                    first,
+                    last
+                });
+                cursor = end;
+            }
+
+            return plan;
+        }
+
+        function getReadingPlanTitle(days) {
+            const labels = {
+                365: "Bible complète en 1 an",
+                180: "Bible complète en 6 mois",
+                120: "Bible complète en 4 mois",
+                90: "Bible complète en 90 jours",
+                60: "Bible complète en 60 jours",
+                30: "Bible complète en 30 jours"
+            };
+            return labels[days] || `Bible complète en ${days} jours`;
+        }
+
+        function openReadingPlans() {
+            readingPlanState = getReadingPlanStorage();
+            if (!READING_PLAN_DURATIONS.includes(readingPlanState.selectedDays)) {
+                readingPlanState.selectedDays = 365;
+            }
+            renderReadingPlans();
+            openAppModal("modal-reading-plans");
+        }
+
+        function renderReadingPlans() {
+            const options = document.getElementById("reading-plan-options");
+            const summary = document.getElementById("reading-plan-summary");
+            const daysContainer = document.getElementById("reading-plan-days");
+            if (!options || !summary || !daysContainer) return;
+
+            const plans = READING_PLAN_DURATIONS.map(days => ({
+                days,
+                title: getReadingPlanTitle(days),
+                schedule: getCanonicalReadingPlan(days)
+            }));
+
+            options.innerHTML = plans.map(plan => {
+                const active = plan.days === readingPlanState.selectedDays;
+                return `
+                    <button data-reading-days="${plan.days}"
+                        class="text-left p-3 rounded-lg border transition ${active
+                            ? "border-amber-500 bg-amber-50 dark:bg-amber-950/30"
+                            : "border-gray-200 dark:border-gray-700 hover:border-amber-300 dark:hover:border-amber-700"}">
+                        <div class="font-bold text-sm">${plan.days} jours</div>
+                        <div class="text-[10px] text-gray-500 dark:text-gray-400 mt-1">${plan.title}</div>
+                    </button>`;
+            }).join("");
+
+            options.querySelectorAll("[data-reading-days]").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    readingPlanState.selectedDays = Number(btn.dataset.readingDays);
+                    saveReadingPlanStorage();
+                    renderReadingPlans();
+                });
+            });
+
+            const schedule = getCanonicalReadingPlan(readingPlanState.selectedDays);
+            const completed = schedule.filter(item => readingPlanState.progress[`${readingPlanState.selectedDays}-${item.day}`]).length;
+            const percent = schedule.length ? Math.round(completed / schedule.length * 100) : 0;
+
+            summary.innerHTML = `
+                <div class="font-bold text-gray-900 dark:text-white">${getReadingPlanTitle(readingPlanState.selectedDays)}</div>
+                <div class="mt-1 text-gray-600 dark:text-gray-400">
+                    ${schedule.length} jours • Bible entière • ordre de Genèse à Apocalypse • ${schedule.reduce((sum, item) => sum + item.chapters, 0)} chapitres
+                </div>
+                <div class="mt-1 text-gray-500 dark:text-gray-400">
+                    Chaque jour ouvre directement la première référence du jour dans le lecteur.
+                </div>`;
+
+            const label = document.getElementById("reading-plan-progress-label");
+            const percentEl = document.getElementById("reading-plan-progress-percent");
+            const bar = document.getElementById("reading-plan-progress-bar");
+            if (label) label.textContent = `${completed} / ${schedule.length} jours`;
+            if (percentEl) percentEl.textContent = `${percent} %`;
+            if (bar) bar.style.width = percent + "%";
+
+            daysContainer.innerHTML = schedule.map(item => {
+                const key = `${readingPlanState.selectedDays}-${item.day}`;
+                const done = !!readingPlanState.progress[key];
+                return `
+                    <div class="flex items-center gap-3 p-3 rounded-lg border ${done
+                        ? "border-green-200 bg-green-50 dark:border-green-900 dark:bg-green-950/20"
+                        : "border-gray-200 dark:border-gray-800"}">
+                        <button data-reading-day="${item.day}" class="w-9 h-9 shrink-0 rounded-full border flex items-center justify-center ${done
+                            ? "bg-green-600 border-green-600 text-white"
+                            : "border-gray-300 dark:border-gray-600 text-gray-500"}" title="${done ? "Marquer comme non lu" : "Marquer comme lu"}">
+                            <i class="fa-solid ${done ? "fa-check" : "fa-book-open"} text-xs"></i>
+                        </button>
+                        <button data-reading-open="${item.day}" class="flex-1 text-left min-w-0">
+                            <div class="text-[10px] uppercase tracking-wider font-bold text-gray-400">Jour ${item.day}</div>
+                            <div class="font-semibold text-sm ${done ? "text-green-700 dark:text-green-400" : "text-gray-900 dark:text-white"} truncate">${escapeHtml(item.reference)}</div>
+                            <div class="text-[10px] text-gray-500 dark:text-gray-400">${item.chapters} chapitre${item.chapters > 1 ? "s" : ""}</div>
+                        </button>
+                    </div>`;
+            }).join("");
+
+            daysContainer.querySelectorAll("[data-reading-day]").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const day = Number(btn.dataset.readingDay);
+                    const key = `${readingPlanState.selectedDays}-${day}`;
+                    if (readingPlanState.progress[key]) {
+                        delete readingPlanState.progress[key];
+                    } else {
+                        readingPlanState.progress[key] = true;
+                    }
+                    saveReadingPlanStorage();
+                    renderReadingPlans();
+                });
+            });
+
+            daysContainer.querySelectorAll("[data-reading-open]").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const day = Number(btn.dataset.readingOpen);
+                    const item = schedule[day - 1];
+                    if (!item) return;
+                    state.currentBook = item.first.bookId;
+                    state.currentChapter = item.first.chapter;
+                    updateChapterSelector();
+                    const bookSelect = document.getElementById("select-book");
+                    const chapterSelect = document.getElementById("select-chapter");
+                    if (bookSelect) bookSelect.value = state.currentBook;
+                    if (chapterSelect) chapterSelect.value = state.currentChapter;
+                    renderBibleText();
+                    closeAllModals();
+                    showToast(`Jour ${day} : ${item.reference}`);
+                });
+            });
+        }
+
+        function resetReadingPlanProgress() {
+            if (!confirm(`Réinitialiser la progression du plan « ${getReadingPlanTitle(readingPlanState.selectedDays) } » ?`)) return;
+            Object.keys(readingPlanState.progress).forEach(key => {
+                if (key.startsWith(readingPlanState.selectedDays + "-")) {
+                    delete readingPlanState.progress[key];
+                }
+            });
+            saveReadingPlanStorage();
+            renderReadingPlans();
+            showToast("Progression du plan réinitialisée.");
+        }
+
         function initApplicationMenu() {
             document.querySelectorAll("[data-app-action]").forEach(btn => {
                 btn.addEventListener("click", () => {
@@ -2143,6 +2404,7 @@ verseEl.addEventListener("click", (event) => {
                     if (action === "marks") { renderMarks(); openAppModal("modal-marks"); }
                     if (action === "notebook") { renderNotebook(); openAppModal("modal-notebook"); }
                     if (action === "cults") { renderCults(); openAppModal("modal-cults"); }
+                    if (action === "reading-plans") openReadingPlans();
                     if (action === "search") {
                         document.getElementById("modal-search").classList.remove("hidden");
                         document.getElementById("input-search").focus();
@@ -2389,6 +2651,21 @@ verseEl.addEventListener("click", (event) => {
             document.getElementById("btn-close-sidebar")?.addEventListener("click", () => {
                 closeMobileSidebar();
             });
+
+            document.getElementById("btn-reading-plan-start")?.addEventListener("click", () => {
+                const schedule = getCanonicalReadingPlan(readingPlanState.selectedDays);
+                const next = schedule.find(item => !readingPlanState.progress[`${readingPlanState.selectedDays}-${item.day}`]) || schedule[0];
+                if (!next) return;
+                state.currentBook = next.first.bookId;
+                state.currentChapter = next.first.chapter;
+                updateChapterSelector();
+                document.getElementById("select-book").value = state.currentBook;
+                document.getElementById("select-chapter").value = state.currentChapter;
+                renderBibleText();
+                closeAllModals();
+                showToast(`Reprise au jour ${next.day} : ${next.reference}`);
+            });
+            document.getElementById("btn-reading-plan-reset")?.addEventListener("click", resetReadingPlanProgress);
 
             document.getElementById("btn-save-verse-note")?.addEventListener("click", saveVerseNote);
 
