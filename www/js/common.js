@@ -22,7 +22,9 @@
 
   function applyTheme() {
     const saved = localStorage.getItem(THEME_KEY);
-    document.documentElement.classList.toggle("dark", saved !== "light");
+    if (saved === "dark" || saved === "light") { document.documentElement.classList.toggle("dark", saved === "dark"); return; }
+    const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches ?? true;
+    document.documentElement.classList.toggle("dark", prefersDark);
   }
 
   function injectAppIcon() {
