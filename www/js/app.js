@@ -1009,7 +1009,9 @@
     const books=APP.books.map(b=>b.id+'='+b.name).join(', ');
     const model=config.GEMINI_MODEL || 'gemini-3-flash-preview';
     const endpoint='https://generativelanguage.googleapis.com/v1beta/models/'+encodeURIComponent(model)+':generateContent?key='+encodeURIComponent(config.API_KEY);
-    const payload={systemInstruction:{parts:[{text:'Tu es le rédacteur quotidien de E-BIBLIA. Réponds en français, avec fidélité biblique et ton pastoral. Ne cite jamais un verset de mémoire. Choisis un livre de la liste et renvoie uniquement un JSON valide avec title, bookId, chapter, verse, meditation et prayer.'}]},contents:[{role:'user',parts:[{text:'Date locale: '+dailyDateKey()+'\nLivres disponibles: '+books+'\nChoisis un passage pertinent pour la méditation du jour.'}]}]};
+    const previous=readDailyContent();
+    const avoid=previous?.dateKey===dailyDateKey() ? previous.reference : '';
+    const payload={systemInstruction:{parts:[{text:'Tu es le rédacteur quotidien de E-BIBLIA. Réponds en français, avec fidélité biblique et ton pastoral. Ne cite jamais un verset de mémoire. Choisis un passage différent du contenu précédent quand une référence précédente est fournie. Renvoie uniquement un JSON valide avec title, bookId, chapter, verse, meditation et prayer.'}]},contents:[{role:'user',parts:[{text:'Date locale: '+dailyDateKey()+'\nLivres disponibles: '+books+'\nRéférence à éviter aujourd’hui: '+(avoid||'aucune')+'\nChoisis un passage pertinent et différent pour la méditation du jour.'}]}]};
     const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
     const data=await response.json(); if(!response.ok) throw new Error(data?.error?.message || ('Erreur Gemini ('+response.status+').'));
     const generated=parseDailyJson((data?.candidates?.[0]?.content?.parts||[]).map(p=>p.text||'').join(''));
