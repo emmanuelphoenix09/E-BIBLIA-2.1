@@ -1,0 +1,52 @@
+name: Construire E-BIBLIA Windows EXE
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - E-BIBLIA-3.0
+
+permissions:
+  contents: read
+
+jobs:
+  build-windows:
+    name: Build E-BIBLIA Windows x64
+    runs-on: windows-latest
+
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Installer les dépendances
+        run: npm install
+
+      - name: Préparer les données bibliques
+        run: npm run prepare:bible-data
+
+      - name: Préparer le CSS
+        run: npm run build:css
+
+      - name: Construire E-BIBLIA EXE
+        run: npm run build:windows
+
+      - name: Vérifier le EXE
+        shell: pwsh
+        run: |
+          $exe = Get-ChildItem -Path dist -Filter *.exe -Recurse | Select-Object -First 1
+          if (-not $exe) { throw "Aucun fichier EXE n'a été généré." }
+          Write-Host "EXE généré : $($exe.FullName)"
+          Write-Host "Taille : $([math]::Round($exe.Length / 1MB, 2)) MB"
+
+      - name: Publier E-BIBLIA Windows
+        uses: actions/upload-artifact@v4
+        with:
+          name: E-BIBLIA-Windows-EXE
+          path: dist/*.exe
+          if-no-files-found: error
