@@ -43,6 +43,15 @@
             color: #b89428;
             font-weight: 700;
         }
+
+        /* Zoom à deux doigts dans le lecteur biblique : le zoom agit sur le texte, pas sur toute l'application. */
+        #reader-container {
+            touch-action: pan-y;
+        }
+        #reader-container .font-reader {
+            transform-origin: top left;
+        }
+
     
         .app-menu-item {
             width: 100%;
@@ -253,10 +262,10 @@
 
                 <!-- Center Quick Reference Selector (Desktop) -->
                 <div class="hidden md:flex items-center space-x-2">
-                    <select id="select-book" class="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm rounded-lg border border-gray-300 dark:border-gray-700 px-3 py-2 font-medium focus:ring-2 focus:ring-amber-500 cursor-pointer">
+                    <select id="select-book" class="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-base rounded-xl border border-gray-300 dark:border-gray-700 px-4 py-2.5 font-semibold focus:ring-2 focus:ring-amber-500 cursor-pointer min-w-[170px]">
                         <!-- Book options dynamically loaded -->
                     </select>
-                    <select id="select-chapter" class="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm rounded-lg border border-gray-300 dark:border-gray-700 px-3 py-2 font-medium focus:ring-2 focus:ring-amber-500 w-20 cursor-pointer">
+                    <select id="select-chapter" class="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-base rounded-xl border border-gray-300 dark:border-gray-700 px-4 py-2.5 font-semibold focus:ring-2 focus:ring-amber-500 w-24 cursor-pointer">
                         <!-- Chapter options loaded -->
                     </select>
                 </div>
@@ -435,17 +444,17 @@
             <!-- Chapter Title Banner -->
             <div class="px-6 py-3 border-b border-gray-200/80 dark:border-gray-800/80 flex items-center justify-between bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm z-10">
                 <div>
-                    <h1 id="current-reference-title" class="font-brand text-xl md:text-2xl font-bold text-gray-900 dark:text-white">Genèse 1</h1>
-                    <p id="current-reference-subtitle" class="text-xs text-amber-700 dark:text-amber-400 font-medium">Louis Segond (1910)</p>
+                    <h1 id="current-reference-title" class="font-brand text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Genèse 1</h1>
+                    <p id="current-reference-subtitle" class="text-sm text-amber-700 dark:text-amber-400 font-semibold">Louis Segond (1910)</p>
                 </div>
 
                 <!-- Navigation arrows -->
                 <div class="flex items-center space-x-2">
-                    <button id="btn-prev-chapter" class="p-2 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-amber-50 dark:hover:bg-gray-700 transition shadow-sm" title="Chapitre précédent">
-                        <i class="fa-solid fa-chevron-left text-sm"></i>
+                    <button id="btn-prev-chapter" class="w-11 h-11 p-2 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-amber-50 dark:hover:bg-gray-700 transition shadow-sm" title="Chapitre précédent">
+                        <i class="fa-solid fa-chevron-left text-base"></i>
                     </button>
-                    <button id="btn-next-chapter" class="p-2 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-amber-50 dark:hover:bg-gray-700 transition shadow-sm" title="Chapitre suivant">
-                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                    <button id="btn-next-chapter" class="w-11 h-11 p-2 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-amber-50 dark:hover:bg-gray-700 transition shadow-sm" title="Chapitre suivant">
+                        <i class="fa-solid fa-chevron-right text-base"></i>
                     </button>
                 </div>
             </div>
@@ -718,12 +727,7 @@
                         <button id="settings-font-inc" class="flex-1 py-2 rounded-lg border text-sm">A+</button>
                     </div>
                 </div>
-                <div class="p-3 rounded-lg bg-gray-50 dark:bg-gray-800">
-                    <p class="font-semibold text-sm">Données locales</p>
-                    <p class="text-xs text-gray-500 mt-1 mb-3">Favoris, marquages, notes, cultes et bloc-notes sont stockés localement.</p>
-                    <button id="btn-reset-local-data" class="w-full py-2 rounded-lg border border-red-300 text-red-600 text-sm font-semibold">Réinitialiser mes données locales</button>
-                </div>
-            </div>
+</div>
         </div>
     </div>
 
@@ -2585,6 +2589,54 @@ verseEl.addEventListener("click", (event) => {
                 renderBibleText();
             });
 
+            // Zoom à deux doigts sur la page de lecture.
+            // Le pincement augmente/réduit la taille du texte biblique uniquement.
+            const readerContainer = document.getElementById("reader-container");
+            let pinchStartDistance = 0;
+            let pinchStartFontSize = state.fontSize;
+            let pinchLastFontSize = state.fontSize;
+            let pinchActive = false;
+
+            const getTouchDistance = (touches) => {
+                const dx = touches[0].clientX - touches[1].clientX;
+                const dy = touches[0].clientY - touches[1].clientY;
+                return Math.hypot(dx, dy);
+            };
+
+            readerContainer.addEventListener("touchstart", (event) => {
+                if (event.touches.length === 2) {
+                    pinchActive = true;
+                    pinchStartDistance = getTouchDistance(event.touches);
+                    pinchStartFontSize = state.fontSize;
+                    pinchLastFontSize = state.fontSize;
+                }
+            }, { passive: true });
+
+            readerContainer.addEventListener("touchmove", (event) => {
+                if (!pinchActive || event.touches.length !== 2 || !pinchStartDistance) return;
+                const distance = getTouchDistance(event.touches);
+                const scale = distance / pinchStartDistance;
+                const nextSize = Math.max(12, Math.min(36, Math.round(pinchStartFontSize * scale)));
+                if (nextSize !== pinchLastFontSize) {
+                    pinchLastFontSize = nextSize;
+                    state.fontSize = nextSize;
+                    renderBibleText();
+                }
+                event.preventDefault();
+            }, { passive: false });
+
+            readerContainer.addEventListener("touchend", (event) => {
+                if (event.touches.length < 2) {
+                    pinchActive = false;
+                    pinchStartDistance = 0;
+                }
+            }, { passive: true });
+
+            readerContainer.addEventListener("touchcancel", () => {
+                pinchActive = false;
+                pinchStartDistance = 0;
+            }, { passive: true });
+
             // Font Resizing
             document.getElementById("btn-font-inc").addEventListener("click", () => {
                 if (state.fontSize < 24) {
@@ -2706,27 +2758,6 @@ verseEl.addEventListener("click", (event) => {
             document.getElementById("settings-font-dec")?.addEventListener("click", () => {
                 document.getElementById("btn-font-dec").click();
             });
-            document.getElementById("btn-reset-local-data")?.addEventListener("click", () => {
-                if (!confirm("Voulez-vous vraiment supprimer les favoris, marquages, notes, cultes et bloc-notes de cet appareil ?")) return;
-                localStorage.removeItem("ebiblia_bookmarks");
-                localStorage.removeItem("ebiblia_marks");
-                localStorage.removeItem("ebiblia_notes");
-                localStorage.removeItem("ebiblia_cults");
-                localStorage.removeItem("ebiblia_notebook");
-                state.bookmarks = [];
-                appData.marks = [];
-                appData.verseNotes = [];
-                appData.cults = [];
-                appData.notebook = [];
-                renderBookmarks();
-                renderMarks();
-                renderVerseNotes();
-                renderCults();
-                renderNotebook();
-                renderBibleText();
-                showToast("Données locales réinitialisées.");
-            });
-
 
             document.getElementById("btn-share-selected")?.addEventListener("click", shareSelectedVerses);
             document.getElementById("btn-add-selected-note")?.addEventListener("click", addSelectedToVerseNotes);
