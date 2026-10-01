@@ -284,10 +284,7 @@
                         <button id="btn-font-inc" class="px-2 py-1 text-xs text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-bold" title="Agrandir la taille du texte">A+</button>
                     </div>
 
-                    <!-- Dark Mode Toggle -->
-                    <button id="btn-theme-toggle" class="p-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition" title="Changer de thème">
-                        <i id="theme-icon" class="fa-solid fa-moon text-lg"></i>
-                    </button>
+                    <!-- Le thème suit automatiquement le thème clair/sombre du téléphone. -->
                 </div>
             </div>
         </div>
@@ -710,9 +707,9 @@
                 <button class="btn-close-modal p-2 text-gray-400"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <div class="p-5 space-y-4">
-                <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50 dark:bg-gray-800">
-                    <div><p class="font-semibold text-sm">Mode nuit</p><p class="text-xs text-gray-500">Changer l'apparence de l'application.</p></div>
-                    <button id="settings-theme-toggle" class="px-3 py-2 rounded-lg bg-amber-600 text-white text-xs font-semibold">Changer</button>
+                <div class="p-3 rounded-lg bg-gray-50 dark:bg-gray-800">
+                    <p class="font-semibold text-sm">Thème automatique</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">E-Biblia suit automatiquement le thème clair ou sombre défini sur votre téléphone.</p>
                 </div>
                 <div class="p-3 rounded-lg bg-gray-50 dark:bg-gray-800">
                     <p class="font-semibold text-sm mb-2">Taille du texte biblique</p>
@@ -2456,16 +2453,19 @@ verseEl.addEventListener("click", (event) => {
 
         // UI Event Listeners Initialization
         function initEventListeners() {
-            // Dark Mode Toggle
-            document.getElementById("btn-theme-toggle").addEventListener("click", () => {
-                document.documentElement.classList.toggle("dark");
-                const icon = document.getElementById("theme-icon");
-                if (document.documentElement.classList.contains("dark")) {
-                    icon.className = "fa-solid fa-sun text-yellow-400 text-lg";
-                } else {
-                    icon.className = "fa-solid fa-moon text-lg";
-                }
-            });
+            // Thème automatique : E-Biblia suit le thème du système Android/téléphone.
+            const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+            function applySystemTheme() {
+                document.documentElement.classList.toggle("dark", systemTheme.matches);
+            }
+
+            applySystemTheme();
+            if (typeof systemTheme.addEventListener === "function") {
+                systemTheme.addEventListener("change", applySystemTheme);
+            } else if (typeof systemTheme.addListener === "function") {
+                systemTheme.addListener(applySystemTheme);
+            }
 
             // Sidebar Toggle
             document.getElementById("btn-toggle-sidebar").addEventListener("click", (event) => {
@@ -2700,9 +2700,6 @@ verseEl.addEventListener("click", (event) => {
 
             document.getElementById("btn-ai-submit")?.addEventListener("click", runGeminiAnalysis);
 
-            document.getElementById("settings-theme-toggle")?.addEventListener("click", () => {
-                document.getElementById("btn-theme-toggle").click();
-            });
             document.getElementById("settings-font-inc")?.addEventListener("click", () => {
                 document.getElementById("btn-font-inc").click();
             });
