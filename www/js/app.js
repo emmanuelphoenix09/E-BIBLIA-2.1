@@ -654,8 +654,8 @@
       const card = document.createElement('div');
       card.className = 'eb-compare-card';
 
-      const versesHtml = item.verses.map(v => `
-        <div class="eb-compare-verse-block" style="padding:10px 0;border-bottom:1px solid var(--eb-border);">
+      const versesHtml = item.verses.map((v, verseIndex) => `
+        <div class="eb-compare-verse-block" data-version="${escapeHtml(item.code)}" data-book="${escapeHtml(v.bookId)}" data-chapter="${v.chapter}" data-verse="${v.verse}" style="padding:10px 0;border-bottom:1px solid var(--eb-border);cursor:pointer;" title="Ouvrir ce verset dans cette version">
           <div class="eb-compare-ref">${escapeHtml(v.bookName)} ${v.chapter}:${v.verse}</div>
           <p class="eb-compare-text" style="margin-bottom:0;">${escapeHtml(v.text)}</p>
         </div>
@@ -673,6 +673,29 @@
       `;
 
       list.appendChild(card);
+
+      // Cliquer sur le texte d'un verset ouvre directement la Bible
+      // sur ce verset ET dans la version de la carte sélectionnée.
+      card.querySelectorAll('.eb-compare-verse-block').forEach(block => {
+        block.addEventListener('click', () => {
+          const version = block.dataset.version;
+          const book = block.dataset.book;
+          const chapter = Number(block.dataset.chapter);
+          const verse = Number(block.dataset.verse);
+
+          APP.currentVersion = version;
+          APP.currentBook = book;
+          APP.currentChapter = chapter;
+          APP.selectedVerses = [];
+          APP.selectedVerse = null;
+
+          showView('reader', {
+            book,
+            chapter,
+            verse
+          });
+        });
+      });
     });
   }
 
