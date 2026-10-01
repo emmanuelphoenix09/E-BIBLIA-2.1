@@ -9,7 +9,7 @@
 
   // Configuration et État Global
   const APP = {
-    theme: localStorage.getItem('ebiblia_theme') || 'dark', // 'dark' par défaut selon la maquette
+    theme: localStorage.getItem('ebiblia_theme') || ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'),
     currentView: 'home',
     currentBook: 'GEN',
     currentChapter: 1,
@@ -402,7 +402,7 @@
 
       // Vérifier si le verset est surligné
       const hl = APP.highlights.find(h => h.ref.startsWith(`${bookObj.name} ${APP.currentChapter}:${v.verse}`));
-      if (hl) row.classList.add('hl-' + hl.color);
+      if (hl) { if (hl.style === 'underline' || hl.style === 'underline-double') row.classList.add('mark-' + hl.style); else if (hl.color) row.classList.add('hl-' + hl.color); }
       if (APP.selectedVerses.some(selected => selected.verse === v.verse && selected.book === APP.currentBook && selected.chapter === APP.currentChapter)) row.classList.add('is-selected');
 
       // Nettoyer les symboles spéciaux au début (¶)
@@ -427,6 +427,17 @@
         }
       }, 150);
     }
+  }
+
+  // Zoom tactile à deux doigts dans le lecteur biblique.
+  let readerPinchStartDistance=null, readerPinchStartSize=null;
+  function initReaderPinchZoom() {
+    const container=document.getElementById('reader-verses-container'); if(!container || container.dataset.pinchZoomBound) return;
+    container.dataset.pinchZoomBound='1';
+    const distance=t=>Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);
+    container.addEventListener('touchstart',e=>{if(e.touches.length===2){readerPinchStartDistance=distance(e.touches);readerPinchStartSize=Number(localStorage.getItem('ebiblia_reader_font_size'))||17;}},{passive:true});
+    container.addEventListener('touchmove',e=>{if(e.touches.length===2&&readerPinchStartDistance){const next=Math.min(30,Math.max(13,Math.round(readerPinchStartSize*(distance(e.touches)/readerPinchStartDistance))));document.documentElement.style.setProperty('--eb-reader-font-size',next+'px');e.preventDefault();}},{passive:false});
+    container.addEventListener('touchend',()=>{if(readerPinchStartDistance!==null){const value=parseInt(getComputedStyle(document.documentElement).getPropertyValue('--eb-reader-font-size'))||17;localStorage.setItem('ebiblia_reader_font_size',String(value));readerPinchStartDistance=null;readerPinchStartSize=null;}});
   }
 
   // -------------------------------------------------------------
@@ -524,6 +535,8 @@
       <button class="eb-toolbar-btn" data-action="hl-orange" title="Surligner Orange"><span class="eb-hl-dot eb-hl-orange"></span></button>
       <button class="eb-toolbar-btn" data-action="hl-purple" title="Surligner Violet"><span class="eb-hl-dot eb-hl-purple"></span></button>
       <button class="eb-toolbar-btn" data-action="hl-green" title="Surligner Vert"><span class="eb-hl-dot eb-hl-green"></span></button>
+      <button class="eb-toolbar-btn" data-action="underline" title="Souligner"><span style="font-weight:800;text-decoration:underline;">U</span></button>
+      <button class="eb-toolbar-btn" data-action="underline-double" title="Double soulignement"><span style="font-weight:800;text-decoration:underline;text-decoration-style:double;">U</span></button>
       <button class="eb-toolbar-btn" data-action="note" title="Ajouter une note"><svg class="eb-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></button>
       <button class="eb-toolbar-btn" data-action="bookmark" title="Sauvegarder"><svg class="eb-icon" viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg></button>
       <button class="eb-toolbar-btn" data-action="compare" title="Comparer"><svg class="eb-icon" viewBox="0 0 24 24"><path d="M10 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h5v2h2V1h-2v2zm0 15H5l5-6v6zm9-15h-5v2h5v13l-5-6v9h5c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg></button>
@@ -555,6 +568,11 @@
       selected.forEach((item, index) => APP.highlights.unshift({ id: Date.now() + index, color, ref: refs[index], text: item.text }));
       setStored('ebiblia_highlights_v3', APP.highlights);
       showToast(`${selected.length} verset${selected.length > 1 ? 's' : ''} surligné${selected.length > 1 ? 's' : ''}`);
+      renderBibleReader();
+    } else if (action === 'underline' || action === 'underline-double') {
+      selected.forEach((item, index) => APP.highlights.unshift({ id: Date.now() + index, style: action, ref: refs[index], text: item.text }));
+      setStored('ebiblia_highlights_v3', APP.highlights);
+      showToast(action === 'underline' ? 'Soulignement appliqué.' : 'Double soulignement appliqué.');
       renderBibleReader();
     } else if (action === 'note') {
       openNoteModal(ref, text);
@@ -749,6 +767,66 @@
       }
     }
     return false;
+  }
+
+  // -------------------------------------------------------------
+  // CONTENU « POUR AUJOURD'HUI » — Gemini + cache local
+  // -------------------------------------------------------------
+  const DAILY_CONTENT_STORAGE_KEY = 'ebiblia_daily_content_v1';
+  function dailyDateKey(date = new Date()) {
+    return date.getFullYear() + '-' + String(date.getMonth()+1).padStart(2,'0') + '-' + String(date.getDate()).padStart(2,'0');
+  }
+  function readDailyContent() {
+    try { return JSON.parse(localStorage.getItem(DAILY_CONTENT_STORAGE_KEY) || 'null'); } catch(e) { return null; }
+  }
+  function saveDailyContent(content) { try { localStorage.setItem(DAILY_CONTENT_STORAGE_KEY, JSON.stringify(content)); } catch(e) {}
+  function escapeDaily(value) { const d=document.createElement('div'); d.textContent=value == null ? '' : String(value); return d.innerHTML; }
+  function renderDailyContent(content = readDailyContent()) {
+    const body=document.getElementById('daily-content-body'), dateEl=document.getElementById('daily-content-date'), statusEl=document.getElementById('daily-content-status');
+    if(!body || !dateEl || !statusEl) return;
+    if(!content || content.dateKey !== dailyDateKey()) {
+      dateEl.textContent=navigator.onLine ? 'Génération du contenu du jour…' : 'Hors connexion — aucun contenu du jour en cache';
+      statusEl.textContent=navigator.onLine ? 'Génération…' : 'Hors connexion';
+      body.innerHTML='<div class="eb-daily-loading">Préparation de votre méditation du jour…</div>'; return;
+    }
+    dateEl.textContent=content.dateKey;
+    statusEl.textContent=navigator.onLine ? 'Actualisé' : 'Hors connexion — contenu conservé';
+    body.innerHTML='<article class="eb-daily-verse"><div class="eb-daily-verse-ref">'+escapeDaily(content.reference)+'</div><div class="eb-daily-verse-text">« '+escapeDaily(content.verse)+' »</div><div class="eb-daily-offline">'+escapeDaily(content.versionName || 'Louis Segond 1910')+'</div></article><div class="eb-daily-section-label">Méditation</div><p class="eb-daily-copy">'+escapeDaily(content.meditation)+'</p><div class="eb-daily-section-label">Prière</div><p class="eb-daily-copy">'+escapeDaily(content.prayer)+'</p>';
+  }
+  function parseDailyJson(text) {
+    const cleaned=String(text||'').replace(/^\\`\\`\\`json\\s*/i,'').replace(/\\`\\`\\s*$/,'').trim();
+    const start=cleaned.indexOf('{'), end=cleaned.lastIndexOf('}');
+    if(start<0 || end<=start) throw new Error('Réponse Gemini non JSON.');
+    return JSON.parse(cleaned.slice(start,end+1));
+  }
+  async function generateDailyContentWithGemini() {
+    const config=window.EBIBLIA_CONFIG || {}; if(!config.API_KEY) throw new Error('Clé Gemini non configurée.'); if(!navigator.onLine) throw new Error('Connexion Internet indisponible.');
+    const books=APP.books.map(b=>b.id+'='+b.name).join(', ');
+    const model=config.GEMINI_MODEL || 'gemini-3-flash-preview';
+    const endpoint='https://generativelanguage.googleapis.com/v1beta/models/'+encodeURIComponent(model)+':generateContent?key='+encodeURIComponent(config.API_KEY);
+    const payload={systemInstruction:{parts:[{text:'Tu es le rédacteur quotidien de E-BIBLIA. Réponds en français, avec fidélité biblique et ton pastoral. Ne cite jamais un verset de mémoire. Choisis un livre de la liste et renvoie uniquement un JSON valide avec title, bookId, chapter, verse, meditation et prayer.'}]},contents:[{role:'user',parts:[{text:'Date locale: '+dailyDateKey()+'\nLivres disponibles: '+books+'\nChoisis un passage pertinent pour la méditation du jour.'}]}]};
+    const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    const data=await response.json(); if(!response.ok) throw new Error(data?.error?.message || ('Erreur Gemini ('+response.status+').'));
+    const generated=parseDailyJson((data?.candidates?.[0]?.content?.parts||[]).map(p=>p.text||'').join(''));
+    const book=APP.books.find(b=>b.id===generated.bookId), chapter=Number(generated.chapter), verseNumber=Number(generated.verse);
+    if(!book || !Number.isInteger(chapter) || !Number.isInteger(verseNumber) || chapter<1 || chapter>book.chapters || verseNumber<1) throw new Error('Référence quotidienne invalide.');
+    const verseObj=(await fetchVersionChapter('LSG',book.id,chapter)||[]).find(v=>Number(v.verse)===verseNumber);
+    if(!verseObj?.text) throw new Error('Verset non disponible dans la Bible locale.');
+    return {dateKey:dailyDateKey(),title:String(generated.title||'Méditation du jour'),reference:book.name+' '+chapter+':'+verseNumber,verse:String(verseObj.text).replace(/^[¶\s]+/,'').trim(),versionName:'Louis Segond 1910',meditation:String(generated.meditation||''),prayer:String(generated.prayer||'')};
+  }
+  let dailyContentInProgress=false, dailyContentTimer=null;
+  async function refreshDailyContent(force=false) {
+    const cached=readDailyContent();
+    if(!force && cached?.dateKey===dailyDateKey()){ renderDailyContent(cached); return; }
+    renderDailyContent(cached); if(dailyContentInProgress || !navigator.onLine) return; dailyContentInProgress=true;
+    try { const fresh=await generateDailyContentWithGemini(); saveDailyContent(fresh); renderDailyContent(fresh); }
+    catch(error) { console.warn('E-BIBLIA: contenu quotidien non actualisé:',error); if(cached) renderDailyContent(cached); }
+    finally { dailyContentInProgress=false; }
+  }
+  function scheduleDailyContent() {
+    if(dailyContentTimer) clearTimeout(dailyContentTimer);
+    const now=new Date(), next=new Date(now); next.setHours(24,0,2,0);
+    dailyContentTimer=setTimeout(async()=>{ await refreshDailyContent(true); scheduleDailyContent(); },Math.max(1000,next.getTime()-now.getTime()));
   }
 
   // -------------------------------------------------------------
@@ -1568,8 +1646,10 @@
   // INITIALISATION AU CHARGEMENT DU DOM
   // -------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', () => {
-    // 1. Appliquer le thème
+    // 1. Appliquer le thème : préférence explicite, sinon préférence du téléphone.
+    if (!localStorage.getItem('ebiblia_theme') && window.matchMedia) APP.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     applyTheme(APP.theme);
+    if (!localStorage.getItem('ebiblia_theme') && window.matchMedia) { const media=window.matchMedia('(prefers-color-scheme: dark)'); media.addEventListener?.('change', e => { if (!localStorage.getItem('ebiblia_theme')) applyTheme(e.matches ? 'dark' : 'light'); }); }
 
     // 2. Gestion des onglets principaux (5 onglets)
     document.querySelectorAll('[data-tab]').forEach(el => {
@@ -1690,6 +1770,9 @@
     const initialView = window.location.hash.replace('#', '') || 'home';
     showView(initialView);
     loadDailyVerse();
+    refreshDailyContent(false);
+    scheduleDailyContent();
+    window.addEventListener('online', () => refreshDailyContent(false));
   });
 
   // Exportation globale pour compatibilité
