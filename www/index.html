@@ -33,6 +33,8 @@
             padding-left: 0.5rem;
             border-radius: 0.25rem;
         }
+        .verse-underline { text-decoration-line: underline; text-decoration-thickness: 2px; text-decoration-color: #d4af37; text-underline-offset: 4px; background-color: rgba(212,175,55,.08); border-radius: .2rem; }
+        .verse-underline-double { text-decoration-line: underline; text-decoration-style: double; text-decoration-thickness: 2px; text-decoration-color: #b45309; text-underline-offset: 4px; }
         .verse-active-sync {
             background-color: rgba(59, 130, 246, 0.15);
             outline: 1px dashed rgba(59, 130, 246, 0.4);
@@ -383,14 +385,14 @@
                 </button>
 
                 
+                <button data-app-action="notebook" class="app-menu-item">
+                    <span class="app-menu-icon"><i class="fa-solid fa-church"></i></span>
+                    <span class="flex-1 text-left">Note du culte</span>
+                </button>
+
                 <button data-app-action="reading-plans" class="app-menu-item">
                     <span class="app-menu-icon"><i class="fa-solid fa-calendar-days"></i></span>
                     <span class="flex-1 text-left">Plans de lecture</span>
-                </button>
-
-<button data-app-action="notebook" class="app-menu-item">
-                    <span class="app-menu-icon"><i class="fa-solid fa-book"></i></span>
-                    <span class="flex-1 text-left">Bloc-notes</span>
                 </button>
 
                 <button data-app-action="cults" class="app-menu-item">
@@ -632,13 +634,18 @@
     <div id="modal-notebook" class="app-modal fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] flex flex-col overflow-hidden border border-gray-200 dark:border-gray-800">
             <div class="p-4 border-b border-gray-200 dark:border-gray-800 flex justify-between items-center">
-                <h3 class="font-brand font-bold text-lg"><i class="fa-solid fa-book text-amber-500 mr-2"></i>Bloc-notes</h3>
+                <h3 class="font-brand font-bold text-lg"><i class="fa-solid fa-church text-amber-500 mr-2"></i>Note du culte</h3>
                 <button class="btn-close-modal p-2 text-gray-400"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <div class="p-4 border-b border-gray-200 dark:border-gray-800 space-y-3">
-                <input id="notebook-title" placeholder="Titre de la note" class="input-app">
-                <textarea id="notebook-content" rows="5" class="input-app" placeholder="Écrivez ici vos idées, études, méditations..."></textarea>
-                <button id="btn-save-notebook" class="bg-amber-600 hover:bg-amber-700 text-white rounded-lg py-2.5 w-full text-sm font-semibold">Enregistrer dans le bloc-notes</button>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <input id="notebook-title" placeholder="Titre / thème du culte" class="input-app">
+                    <input id="notebook-date" type="date" class="input-app">
+                    <input id="notebook-preacher" placeholder="Prédicateur / Prédicatrice" class="input-app">
+                    <input id="notebook-verses" placeholder="Versets bibliques" class="input-app">
+                </div>
+                <textarea id="notebook-content" rows="5" class="input-app" placeholder="Notes et enseignements du culte..."></textarea>
+                <button id="btn-save-notebook" class="bg-amber-600 hover:bg-amber-700 text-white rounded-lg py-2.5 w-full text-sm font-semibold"><i class="fa-solid fa-floppy-disk mr-2"></i>Enregistrer la note du culte</button>
             </div>
             <div id="notebook-list" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
         </div>
@@ -1329,6 +1336,20 @@
             showToast("Versets ajoutés aux notes.");
         }
 
+        function addSelectedToCultNote() {
+            if (!state.selectedVerses.length) return;
+            const refs = [...state.selectedVerses].sort((a,b) => Number(a.verse) - Number(b.verse)).map(v => {
+                const n = BIBLE_DATA.books.find(b => b.id === v.book)?.name || v.book;
+                return `${n} ${v.chapter}:${v.verse}`;
+            }).join(", ");
+            const input = document.getElementById("notebook-verses");
+            if (input) input.value = input.value.trim() ? `${input.value.trim()}, ${refs}` : refs;
+            const date = document.getElementById("notebook-date");
+            if (date && !date.value) date.value = new Date().toISOString().slice(0,10);
+            openAppModal("modal-notebook");
+            showToast("Versets ajoutés à la note du culte.");
+        }
+
         function addSelectedToCult() {
             if (!state.selectedVerses.length) return;
             const refs = [...state.selectedVerses]
@@ -1372,10 +1393,12 @@
             actions.innerHTML = `
                 <span class="selection-count">${selected.length} sélectionné${selected.length > 1 ? "s" : ""}</span>
                 <button class="selection-action-btn" data-selection-action="share" title="Partager la sélection"><i class="fa-solid fa-share-nodes text-[11px]"></i></button>
-                <button class="selection-action-btn" data-selection-action="note" title="Ajouter aux notes"><i class="fa-solid fa-note-sticky text-[11px]"></i></button>
+                <button class="selection-action-btn" data-selection-action="cult-note" title="Ajouter à la note du culte"><i class="fa-solid fa-church text-[11px]"></i></button>
                 <button class="selection-action-btn" data-selection-action="cult" title="Ajouter à un culte"><i class="fa-solid fa-church text-[11px]"></i></button>
                 <button class="selection-action-btn" data-selection-action="favorite" title="Ajouter aux favoris"><i class="fa-solid fa-bookmark text-[11px]"></i></button>
                 <button class="selection-action-btn" data-selection-action="highlight" title="Surligner"><i class="fa-solid fa-highlighter text-[11px]"></i></button>
+                <button class="selection-action-btn" data-selection-action="underline" title="Souligner"><i class="fa-solid fa-underline text-[11px]"></i></button>
+                <button class="selection-action-btn" data-selection-action="underline-double" title="Souligner double"><i class="fa-solid fa-lines-leaning text-[11px]"></i></button>
                 <button class="selection-action-btn" data-selection-action="ai" title="Analyser avec l'IA"><i class="fa-solid fa-wand-magic-sparkles text-[11px]"></i></button>
                 <button class="selection-action-btn" data-selection-action="copy" title="Copier"><i class="fa-solid fa-copy text-[11px]"></i></button>
                 <button class="selection-action-btn" data-selection-action="clear" title="Annuler la sélection"><i class="fa-solid fa-xmark text-[11px]"></i></button>
@@ -1388,10 +1411,12 @@
 
                 const action = btn.dataset.selectionAction;
                 if (action === "share") await shareSelectedVerses();
-                if (action === "note") addSelectedToVerseNotes();
+                if (action === "cult-note") addSelectedToCultNote();
                 if (action === "cult") addSelectedToCult();
                 if (action === "favorite") bookmarkSelectedVerses();
-                if (action === "highlight") highlightSelectedVerses();
+                if (action === "highlight") highlightSelectedVerses("highlight");
+                if (action === "underline") highlightSelectedVerses("underline");
+                if (action === "underline-double") highlightSelectedVerses("underline-double");
                 if (action === "ai") openAIForSelection();
                 if (action === "copy") copySelectedVerses();
                 if (action === "clear") clearVerseSelection();
@@ -1413,23 +1438,15 @@
             showToast("Sélection enregistrée dans les favoris.");
         }
 
-        function highlightSelectedVerses() {
+        function highlightSelectedVerses(style = "highlight") {
             if (!state.selectedVerses.length) return;
             state.selectedVerses.forEach(v => {
-                const existing = appData.marks.findIndex(m =>
-                    m.book === v.book && m.chapter === v.chapter && m.verse === v.verse && m.version === v.version
-                );
-                if (existing < 0) {
-                    appData.marks.push({
-                        book: v.book, chapter: v.chapter, verse: v.verse,
-                        version: v.version, text: v.text, createdAt: new Date().toISOString()
-                    });
-                }
+                const existing = appData.marks.findIndex(m => m.book === v.book && m.chapter === v.chapter && m.verse === v.verse && m.version === v.version);
+                const mark = {book:v.book, chapter:v.chapter, verse:v.verse, version:v.version, text:v.text, style, createdAt:new Date().toISOString()};
+                if (existing < 0) appData.marks.push(mark); else appData.marks[existing] = {...appData.marks[existing], style};
             });
-            saveAppData();
-            renderMarks();
-            renderBibleText();
-            showToast("Sélection surlignée.");
+            saveAppData(); renderMarks(); renderBibleText();
+            showToast(style === "underline" ? "Sélection soulignée." : style === "underline-double" ? "Double soulignement appliqué." : "Sélection surlignée.");
         }
 
         async function copySelectedVerses() {
@@ -1561,7 +1578,7 @@ verseEl.addEventListener("click", (event) => {
                     });
                     verseEl.innerHTML = `
                         <sup class="font-bold text-amber-600 dark:text-amber-400 text-xs select-none mt-1 mr-1">${v}</sup>
-                        <span class="flex-1">${verseTxt}</span>
+                        <span class="flex-1 markable-verse" data-mark-style="${(appData.marks.find(m => m.book === state.currentBook && Number(m.chapter) === Number(state.currentChapter) && Number(m.verse) === Number(v) && m.version === state.version1)?.style) || ""}">${verseTxt}</span>
                         <div class="opacity-0 group-hover:opacity-100 flex items-center space-x-1 transition">
                             <button onclick="toggleBookmark('${state.currentBook}', ${state.currentChapter}, ${v}, '${state.version1}')" class="p-1 text-xs ${isBookmarked ? 'text-amber-500' : 'text-gray-400 hover:text-amber-500'}" title="Favori">
                                 <i class="fa-${isBookmarked ? 'solid' : 'regular'} fa-bookmark"></i>
@@ -1891,20 +1908,9 @@ verseEl.addEventListener("click", (event) => {
 
         function toggleMark(book, chapter, verse, version) {
             const idx = appData.marks.findIndex(m => m.book === book && Number(m.chapter) === Number(chapter) && Number(m.verse) === Number(verse) && m.version === version);
-            if (idx >= 0) {
-                appData.marks.splice(idx, 1);
-                showToast("Marquage retiré.");
-            } else {
-                appData.marks.push({
-                    book, chapter, verse, version,
-                    text: getVerseText(version, book, chapter, verse),
-                    createdAt: new Date().toISOString()
-                });
-                showToast("Passage marqué dans cette traduction.");
-            }
-            saveAppData();
-            renderBibleText();
-            renderMarks();
+            if (idx < 0) { appData.marks.push({book,chapter,verse,version,text:getVerseText(version,book,chapter,verse),style:"highlight",createdAt:new Date().toISOString()}); showToast("Passage surligné."); }
+            else { const current=appData.marks[idx].style||"highlight"; if(current==="highlight"){appData.marks[idx].style="underline";showToast("Passage souligné.");} else if(current==="underline"){appData.marks[idx].style="underline-double";showToast("Double soulignement appliqué.");} else {appData.marks.splice(idx,1);showToast("Marquage retiré.");} }
+            saveAppData(); renderBibleText(); renderMarks();
         }
 
         function openAppModal(id) {
@@ -2041,7 +2047,7 @@ verseEl.addEventListener("click", (event) => {
             if (!box) return;
             box.innerHTML = "";
             if (!appData.notebook.length) {
-                box.innerHTML = `<p class="text-sm text-gray-500 text-center py-8">Votre bloc-notes est vide.</p>`;
+                box.innerHTML = `<p class="text-sm text-gray-500 text-center py-8">Aucune note de culte pour le moment.</p>`;
                 return;
             }
             [...appData.notebook].reverse().forEach((n, reverseIndex) => {
@@ -2050,9 +2056,11 @@ verseEl.addEventListener("click", (event) => {
                 card.className = "p-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700";
                 card.innerHTML = `
                     <div class="flex justify-between gap-2">
-                        <p class="font-semibold text-sm">${escapeHtml(n.title || "Sans titre")}</p>
+                        <p class="font-semibold text-sm">${escapeHtml(n.title || "Culte sans titre")}</p>
                         <button class="text-red-500 text-xs" data-delete-notebook="${realIndex}"><i class="fa-solid fa-trash"></i></button>
                     </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">${escapeHtml(n.date || "")}${n.preacher ? ` · ${escapeHtml(n.preacher)}` : ""}</p>
+                    <p class="text-xs mt-2"><strong>Versets :</strong> ${escapeHtml(n.verses || "—")}</p>
                     <p class="text-sm mt-2 whitespace-pre-wrap">${escapeHtml(n.content || "")}</p>`;
                 box.appendChild(card);
             });
@@ -2740,14 +2748,16 @@ verseEl.addEventListener("click", (event) => {
 
             document.getElementById("btn-save-notebook")?.addEventListener("click", () => {
                 const title = document.getElementById("notebook-title").value.trim();
+                const date = document.getElementById("notebook-date").value;
+                const preacher = document.getElementById("notebook-preacher").value.trim();
+                const verses = document.getElementById("notebook-verses").value.trim();
                 const content = document.getElementById("notebook-content").value.trim();
-                if (!content) return showToast("Écrivez quelque chose dans le bloc-notes.");
-                appData.notebook.push({title, content, createdAt: new Date().toISOString()});
+                if (!title && !content && !verses) return showToast("Ajoutez au moins un thème, un verset ou une note.");
+                appData.notebook.push({title, date, preacher, verses, content, createdAt: new Date().toISOString()});
                 saveAppData();
-                document.getElementById("notebook-title").value = "";
-                document.getElementById("notebook-content").value = "";
+                ["notebook-title","notebook-date","notebook-preacher","notebook-verses","notebook-content"].forEach(id => document.getElementById(id).value = "");
                 renderNotebook();
-                showToast("Note ajoutée au bloc-notes.");
+                showToast("Note du culte enregistrée.");
             });
 
             document.getElementById("btn-ai-submit")?.addEventListener("click", runGeminiAnalysis);
