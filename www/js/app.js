@@ -1207,7 +1207,10 @@
   function parseCompareReferences(verseRef) {
     const refs = Array.isArray(verseRef)
       ? verseRef
-      : String(verseRef || '').split(/\\s*,\\s*/).filter(Boolean);
+      : String(verseRef || '')
+          .split(/\s*,\s*/)
+          .map(ref => ref.trim())
+          .filter(Boolean);
 
     const parsed = [];
     refs.forEach(ref => {
