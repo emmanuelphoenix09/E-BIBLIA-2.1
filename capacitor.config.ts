@@ -4,7 +4,16 @@ const config: CapacitorConfig = {
   appId: 'com.ebiblia.app',
   appName: 'E-Biblia',
   webDir: 'www',
-  bundledWebRuntime: false
+  bundledWebRuntime: false,
+  plugins: {
+    SplashScreen: {
+      launchAutoHide: false,
+      launchShowDuration: 0,
+      launchFadeOutDuration: 0,
+      showSpinner: false,
+      backgroundColor: '#000000'
+    }
+  }
 };
 
 export default config;
