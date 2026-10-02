@@ -13,7 +13,10 @@
   <link rel="stylesheet" href="./offline-assets/fontawesome.css">
   <link rel="stylesheet" href="./css/ia.css">
   <style id="ebiblia-splash-style">
-    html, body { margin:0; padding:0; width:100%; min-height:100%; }
+    html, body {
+      margin:0; padding:0; width:100%; min-height:100%;
+      background:#000 url('./assets/splash.png') center center / cover no-repeat;
+    }
     #ebiblia-splash {
       position:fixed; inset:0; z-index:999999;
       width:100vw; height:100dvh;
@@ -893,16 +896,46 @@
   <script src="./js/app.js"></script>
   <script src="./js/ai.js"></script>
 
-  <!-- E-BIBLIA : maintien du splash visuel pendant 2 secondes -->
+  <!-- E-BIBLIA : relais fluide entre le splash Android natif et le splash web -->
   <script>
-    window.addEventListener('load', function () {
-      setTimeout(function () {
-        const splash = document.getElementById('ebiblia-splash');
-        if (!splash) return;
-        splash.classList.add('hidden');
-        setTimeout(function () { splash.remove(); }, 150);
-      }, 2000);
-    });
+    (function () {
+      const splash = document.getElementById('ebiblia-splash');
+      const splashImage = splash?.querySelector('img');
+
+      function hideNativeSplash() {
+        try {
+          window.Capacitor?.Plugins?.SplashScreen?.hide?.();
+        } catch (_) {}
+      }
+
+      function revealApp() {
+        if (!splash) {
+          hideNativeSplash();
+          return;
+        }
+
+        // Deux frames garantissent que l'image est déjà peinte avant
+        // de retirer le splash natif, évitant le flash noir au démarrage.
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            hideNativeSplash();
+
+            // L'image reste brièvement visible puis disparaît sans écran noir.
+            setTimeout(() => {
+              splash.classList.add('hidden');
+              setTimeout(() => splash.remove(), 150);
+            }, 250);
+          });
+        });
+      }
+
+      if (splashImage?.complete) {
+        revealApp();
+      } else {
+        splashImage?.addEventListener('load', revealApp, { once: true });
+        window.addEventListener('load', revealApp, { once: true });
+      }
+    })();
   </script>
 </body>
 </html>
