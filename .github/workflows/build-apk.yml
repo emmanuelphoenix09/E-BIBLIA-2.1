@@ -80,6 +80,18 @@ jobs:
       - name: Générer le projet Android Capacitor
         run: npx cap add android
 
+      - name: Activer la rotation automatique et le mode paysage Android
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          p = Path('android/app/src/main/AndroidManifest.xml')
+          s = p.read_text()
+          s = re.sub(r'android:configChanges="[^"]*"', 'android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode|navigation|density"', s, count=1)
+          s = re.sub(r'(android:name="\.MainActivity"[^>]*?)(\s+android:exported=)', r'\1 android:screenOrientation="sensor"\2', s, count=1)
+          p.write_text(s)
+          PY
+          grep -n 'screenOrientation\|configChanges' android/app/src/main/AndroidManifest.xml
       - name: Générer les icônes et le splash Android
         run: |
           npx @capacitor/assets generate --android \
