@@ -1,6 +1,6 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
-const config: CapacitorConfig = {
+// La rotation d'écran est configurée dans le workflow Android au moment du build.\nconst config: CapacitorConfig = {
   appId: 'com.ebiblia.app',
   appName: 'E-Biblia',
   webDir: 'www',
