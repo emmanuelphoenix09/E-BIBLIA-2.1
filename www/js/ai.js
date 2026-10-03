@@ -132,9 +132,6 @@ async function askGemini(question = "", onUpdate = null, referencedVerses = []) 
                             // Évite de placer la clé dans l'URL de la requête.
                             headers["x-goog-api-key"] = provider.apiKey;
                         }
-                        if (isOpenRouter) {
-                            headers.Authorization = `Bearer ${provider.apiKey}`;
-                        }
                         const response = await fetch(endpoint, {
                             method: "POST",
                             headers,
