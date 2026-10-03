@@ -106,7 +106,7 @@ async function askGemini(question = "", onUpdate = null, referencedVerses = []) 
                         const isOpenRouter = provider.name === "OpenRouter";
                         const endpoint = isOpenRouter
                             ? "https://openrouter.ai/api/v1/chat/completions"
-                            : `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(provider.model)}:streamGenerateContent?alt=sse&key=${encodeURIComponent(provider.apiKey)}`;
+                            : `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(provider.model)}:streamGenerateContent?alt=sse`;
                         const requestPayload = isOpenRouter
                             ? {
                                 model: provider.model,
@@ -127,6 +127,13 @@ async function askGemini(question = "", onUpdate = null, referencedVerses = []) 
                             headers.Authorization = `Bearer ${provider.apiKey}`;
                             headers["HTTP-Referer"] = window.location.origin;
                             headers["X-Title"] = "E-BIBLIA";
+                        } else {
+                            // Gemini utilise désormais l'en-tête x-goog-api-key.
+                            // Évite de placer la clé dans l'URL de la requête.
+                            headers["x-goog-api-key"] = provider.apiKey;
+                        }
+                        if (isOpenRouter) {
+                            headers.Authorization = `Bearer ${provider.apiKey}`;
                         }
                         const response = await fetch(endpoint, {
                             method: "POST",
