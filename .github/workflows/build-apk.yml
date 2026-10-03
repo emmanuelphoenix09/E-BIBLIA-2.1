@@ -32,6 +32,24 @@ jobs:
       - name: Installer les dépendances
         run: npm install
 
+      - name: Configurer la clé Gemini depuis GitHub Secrets
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          test -n "$GEMINI_API_KEY" || { echo "Erreur : le secret GEMINI_API_KEY n'est pas configuré dans GitHub."; exit 1; }
+          node - <<'NODE'
+          const fs = require('fs');
+          const key = process.env.GEMINI_API_KEY;
+          const config = `// Généré automatiquement pendant le build — ne pas committer de clé.
+          window.EBIBLIA_CONFIG = {
+              API_KEY: ${JSON.stringify(key)},
+              GEMINI_API_KEYS: [${JSON.stringify(key)}],
+              GEMINI_MODEL: "gemini-3-flash-preview"
+          };
+          `;
+          fs.writeFileSync('www/js/config.js', config);
+          NODE
+
       - name: Préparer les données bibliques
         run: npm run prepare:bible-data
 
