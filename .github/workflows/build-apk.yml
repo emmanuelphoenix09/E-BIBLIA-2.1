@@ -32,30 +32,6 @@ jobs:
       - name: Installer les dépendances
         run: npm install
 
-      - name: Injecter les trois clés Gemini pour le build
-        env:
-          GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
-          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
-          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
-        run: |
-          test -n "$GEMINI_API_KEY_1" || { echo "Erreur : GEMINI_API_KEY_1 est manquant."; exit 1; }
-          test -n "$GEMINI_API_KEY_2" || { echo "Erreur : GEMINI_API_KEY_2 est manquant."; exit 1; }
-          test -n "$GEMINI_API_KEY_3" || { echo "Erreur : GEMINI_API_KEY_3 est manquant."; exit 1; }
-          node - <<'NODE'
-          const fs = require('fs');
-          const keys = [
-            process.env.GEMINI_API_KEY_1,
-            process.env.GEMINI_API_KEY_2,
-            process.env.GEMINI_API_KEY_3
-          ].filter(Boolean);
-          const config = '// Généré automatiquement pendant le build — ne pas committer de clé.\n' +
-            'window.EBIBLIA_CONFIG = {\n' +
-            '    API_KEY: ' + JSON.stringify(keys[0]) + ',\n' +
-            '    GEMINI_API_KEYS: ' + JSON.stringify(keys) + ',\n' +
-            '    GEMINI_MODEL: "gemini-3-flash-preview"\n' +
-            '};\n';
-          fs.writeFileSync('www/js/config.js', config);
-          NODE
       - name: Préparer les données bibliques
         run: npm run prepare:bible-data
 
