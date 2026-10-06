@@ -153,9 +153,6 @@
             <button class="eb-header-btn" id="reader-tts-btn" title="Lire le chapitre" aria-label="Lire le chapitre">
               <svg class="eb-icon"><use href="#icon-play"></use></svg>
             </button>
-            <button class="eb-header-btn" data-navigate="compare" title="Comparer les versions">
-              <svg class="eb-icon"><use href="#icon-dots-vertical"></use></svg>
-            </button>
           </div>
         </header>
 
@@ -226,48 +223,27 @@
            ÉCRAN 5 & 12 : LÉONA IA (STYLE CONSTANT)
            ========================================== -->
       <section id="view-leona" class="eb-view eb-leona-view">
-        <header class="eb-leona-header">
-          <h1 class="eb-leona-title">Léona</h1>
-          <p class="eb-leona-sub">Votre assistante biblique IA</p>
-        </header>
-
         <!-- Orbe cosmique néon animé sur Canvas -->
         <div class="eb-orb-zone">
           <canvas id="leona-orb-canvas" class="eb-orb-canvas"></canvas>
         </div>
 
-        <p class="eb-leona-desc">
-          Posez vos questions sur la Bible, demandez une explication, ou explorez un thème.
-        </p>
-
-        <!-- Suggestions de prompts -->
-        <div class="eb-leona-suggestions">
-          <button class="eb-leona-chip" data-prompt="Peux-tu m'expliquer le sens profond de Jean 3:16 ?">
-            <svg class="eb-icon"><use href="#icon-book-open"></use></svg>
-            <span>Étude de verset</span>
-          </button>
-          <button class="eb-leona-chip" data-prompt="Explique la doctrine de la grâce selon Paul.">
-            <svg class="eb-icon"><use href="#icon-sparkles"></use></svg>
-            <span>Théologie</span>
-          </button>
-          <button class="eb-leona-chip" data-prompt="Quels sont les versets bibliques réconfortants sur la paix ?">
-            <svg class="eb-icon"><use href="#icon-search"></use></svg>
-            <span>Recherche</span>
-          </button>
-        </div>
-
         <!-- Fil de discussion -->
         <div class="eb-leona-chat" id="leona-chat-messages">
-          <div class="eb-chat-msg eb-msg-leona">
-            Bonjour ! Je suis Léona. Comment puis-je vous accompagner dans votre méditation des Écritures aujourd'hui ?
-          </div>
+          <header class="eb-leona-header">
+            <h1 class="eb-leona-title">Léona</h1>
+            <p class="eb-leona-sub">Votre assistante biblique IA</p>
+          </header>
+          <p class="eb-leona-desc">
+            Posez vos questions sur la Bible, demandez une explication, ou explorez un thème.
+          </p>
         </div>
 
         <!-- Champ de saisie fixé -->
         <div class="eb-leona-input-bar">
           <input type="text" id="leona-input-text" class="eb-leona-input" placeholder="Écrivez votre message...">
-          <button class="eb-leona-btn-send" id="leona-send-btn">
-            <svg class="eb-icon"><use href="#icon-mic"></use></svg>
+          <button class="eb-leona-btn-send" id="leona-send-btn" type="button" title="Envoyer" aria-label="Envoyer">
+            <svg class="eb-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"/></svg>
           </button>
         </div>
       </section>
@@ -289,11 +265,6 @@
             <span class="eb-menu-label">Plans</span>
             <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg>
           </div>
-          <div class="eb-menu-row" data-navigate="notes">
-            <svg class="eb-icon eb-menu-icon"><use href="#icon-note-sticky"></use></svg>
-            <span class="eb-menu-label">Notes</span>
-            <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg>
-          </div>
           <div class="eb-menu-row" data-navigate="marks">
             <svg class="eb-icon eb-menu-icon"><use href="#icon-highlighter"></use></svg>
             <span class="eb-menu-label">Surbrillances</span>
@@ -304,19 +275,9 @@
             <span class="eb-menu-label">Versets</span>
             <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg>
           </div>
-          <div class="eb-menu-row" data-navigate="images">
-            <svg class="eb-icon eb-menu-icon"><use href="#icon-image"></use></svg>
-            <span class="eb-menu-label">Images</span>
-            <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg>
-          </div>
-          <div class="eb-menu-row" data-navigate="videos">
-            <svg class="eb-icon eb-menu-icon"><use href="#icon-video"></use></svg>
-            <span class="eb-menu-label">Vidéos</span>
-            <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg>
-          </div>
           <div class="eb-menu-row" data-navigate="events">
             <svg class="eb-icon eb-menu-icon"><use href="#icon-calendar"></use></svg>
-            <span class="eb-menu-label">Événements</span>
+            <span class="eb-menu-label">Calendrier</span>
             <svg class="eb-icon eb-chevron-icon"><use href="#icon-chevron-right"></use></svg>
           </div>
           <div class="eb-menu-row" data-navigate="prayers">
@@ -673,7 +634,7 @@
         </div>
       </section>
 
-      <!-- VUES SUPPLÉMENTAIRES DU MENU (Profil, Images, Vidéos, Événements) -->
+      <!-- Vue supplémentaire du menu : profil -->
       <section id="view-profile" class="eb-view">
         <div class="eb-page-header">
           <div class="eb-back-title">
@@ -692,49 +653,50 @@
         </div>
       </section>
 
-      <section id="view-images" class="eb-view">
-        <div class="eb-page-header">
-          <div class="eb-back-title">
-            <button class="eb-back-btn" data-back="menu"><svg class="eb-icon"><use href="#icon-arrow-left"></use></svg></button>
-            <h1 class="eb-page-title" style="font-size:20px;">Images</h1>
-          </div>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
-          <img src="./assets/verse-bg-dark.svg" style="border-radius:14px;border:1px solid var(--eb-border);width:100%;height:140px;object-fit:cover;">
-          <img src="./assets/verse-bg-light.svg" style="border-radius:14px;border:1px solid var(--eb-border);width:100%;height:140px;object-fit:cover;">
-          <img src="./assets/plan-peace.svg" style="border-radius:14px;border:1px solid var(--eb-border);width:100%;height:140px;object-fit:cover;">
-          <img src="./assets/plan-jesus.svg" style="border-radius:14px;border:1px solid var(--eb-border);width:100%;height:140px;object-fit:cover;">
-        </div>
-      </section>
-
-      <section id="view-videos" class="eb-view">
-        <div class="eb-page-header">
-          <div class="eb-back-title">
-            <button class="eb-back-btn" data-back="menu"><svg class="eb-icon"><use href="#icon-arrow-left"></use></svg></button>
-            <h1 class="eb-page-title" style="font-size:20px;">Vidéos</h1>
-          </div>
-        </div>
-        <div class="eb-compare-card" style="padding:16px;margin-bottom:10px;">
-          <div class="eb-compare-ref" style="color:var(--eb-accent);">Walkthrough de la Genèse</div>
-          <p class="eb-compare-text">Comprendre la structure narrative du premier livre de la Bible.</p>
-        </div>
-        <div class="eb-compare-card" style="padding:16px;">
-          <div class="eb-compare-ref" style="color:var(--eb-accent);">Les paraboles de Jésus</div>
-          <p class="eb-compare-text">Le royaume de Dieu expliqué à travers les récits des Évangiles.</p>
-        </div>
-      </section>
-
       <section id="view-events" class="eb-view">
         <div class="eb-page-header">
           <div class="eb-back-title">
             <button class="eb-back-btn" data-back="menu"><svg class="eb-icon"><use href="#icon-arrow-left"></use></svg></button>
-            <h1 class="eb-page-title" style="font-size:20px;">Événements</h1>
+            <h1 class="eb-page-title" style="font-size:20px;">Calendrier</h1>
           </div>
+          <button class="eb-header-btn" id="calendar-add-event-shortcut" title="Ajouter un événement" aria-label="Ajouter un événement"><svg class="eb-icon"><use href="#icon-plus"></use></svg></button>
         </div>
-        <div class="eb-compare-card" style="padding:16px;margin-bottom:10px;">
-          <div class="eb-compare-ref" style="color:var(--eb-accent);">Prière matinale en communion</div>
-          <p class="eb-compare-text">Tous les matins à 07:00 · Rassemblement en ligne.</p>
-        </div>
+
+        <section class="eb-calendar-card" aria-label="Calendrier mensuel">
+          <div class="eb-calendar-header">
+            <button type="button" class="eb-calendar-nav" id="calendar-prev-month" aria-label="Mois précédent"><svg class="eb-icon"><use href="#icon-chevron-left"></use></svg></button>
+            <h2 id="calendar-month-label" class="eb-calendar-month"></h2>
+            <button type="button" class="eb-calendar-nav" id="calendar-next-month" aria-label="Mois suivant"><svg class="eb-icon"><use href="#icon-chevron-right"></use></svg></button>
+          </div>
+          <div class="eb-calendar-grid eb-calendar-weekdays" aria-hidden="true">
+            <span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span>
+          </div>
+          <div class="eb-calendar-grid" id="calendar-days"></div>
+        </section>
+
+        <section class="eb-calendar-form eb-compare-card" aria-label="Ajouter un événement">
+          <h2 class="eb-section-title">Ajouter un événement</h2>
+          <label class="eb-calendar-field">Titre
+            <input id="calendar-event-title" type="text" maxlength="100" placeholder="Ex. Étude biblique">
+          </label>
+          <div class="eb-calendar-form-row">
+            <label class="eb-calendar-field">Date
+              <input id="calendar-event-date" type="date">
+            </label>
+            <label class="eb-calendar-field">Heure
+              <input id="calendar-event-time" type="time">
+            </label>
+          </div>
+          <label class="eb-calendar-field">Détails (facultatif)
+            <textarea id="calendar-event-details" rows="2" maxlength="500" placeholder="Lieu ou informations utiles"></textarea>
+          </label>
+          <button type="button" class="eb-btn-add-version" id="calendar-save-event">Enregistrer l’événement</button>
+        </section>
+
+        <section class="eb-calendar-events-section">
+          <h2 class="eb-section-title">Événements enregistrés</h2>
+          <div class="eb-calendar-events-list" id="calendar-events-list"></div>
+        </section>
       </section>
 
       <!-- ==========================================
@@ -746,7 +708,6 @@
             <button class="eb-back-btn" data-back="menu" aria-label="Retour au menu"><svg class="eb-icon"><use href="#icon-arrow-left"></use></svg></button>
             <h1 class="eb-page-title" style="font-size:20px;">À propos de l'auteur</h1>
           </div>
-          <button class="eb-header-btn" title="Options" onclick="showToast('E-BIBLIA 3.0.2')"><svg class="eb-icon"><use href="#icon-dots-vertical"></use></svg></button>
         </div>
 
         <div class="eb-about-view">
@@ -754,15 +715,19 @@
             <img class="eb-author-avatar" src="./assets/Photo.webp" alt="Emmanuel MBOUMBA PAKOU">
           </div>
           <h2 class="eb-author-name">Emmanuel MBOUMBA PAKOU</h2>
-          <div class="eb-author-role">Développeur &amp; Support Technique</div>
+          <div class="eb-author-role">Concepteur et développeur d’E-BIBLIA</div>
 
           <div class="eb-author-card">
-            <p style="margin-bottom:14px;">
-              E-BIBLIA est une application conçue pour faciliter l'accès aux Saintes Écritures, enrichir votre méditation quotidienne et encourager votre communion spirituelle.
-            </p>
-            <p>
-              Pour toute question, suggestion d'amélioration, signalement de bug ou demande de partenariat, vous pouvez me contacter directement via WhatsApp.
-            </p>
+            <p>E-BIBLIA est avant tout le fruit d’une vision : <strong>mettre la technologie au service de Dieu et de Sa Parole</strong>.</p>
+            <p>À une époque où le numérique occupe une place importante dans notre quotidien, j’ai voulu utiliser mes compétences en informatique pour créer un outil capable de rapprocher davantage les personnes de la Bible, de faciliter son étude et d’encourager chacun à prendre le temps de découvrir, de comprendre et de méditer les Saintes Écritures.</p>
+            <p>E-BIBLIA a ainsi été conçu comme une <strong>application d’étude biblique moderne</strong>, pensée pour réunir au même endroit la lecture de la Bible, les notes personnelles, les favoris, les plans de lecture et différents outils destinés à accompagner l’utilisateur dans son parcours biblique.</p>
+            <p>Le projet intègre également <strong>Léona</strong>, un assistant IA conçu pour accompagner l’étude biblique. Son rôle est d’aider l’utilisateur à explorer les Écritures, à approfondir certains passages et à trouver des pistes de réflexion, tout en gardant la Bible au centre de l’expérience.</p>
+            <p>Mon objectif avec E-BIBLIA n’est pas simplement de créer une application, mais de contribuer, à mon niveau, à une utilisation du numérique qui ait du sens : <strong>une technologie qui sert, qui édifie et qui peut encourager la recherche de Dieu et de Sa Parole.</strong></p>
+            <p>Cette application est aussi un projet en constante évolution. Les suggestions, remarques et retours des utilisateurs sont donc précieux pour continuer à l’améliorer, corriger ses imperfections et développer de nouvelles fonctionnalités utiles.</p>
+            <blockquote>
+              <p><strong>« Et quoi que vous fassiez, en parole ou en œuvre, faites tout au nom du Seigneur Jésus, en rendant par lui des actions de grâces à Dieu le Père. »</strong></p>
+              <cite><strong>Colossiens 3:17</strong></cite>
+            </blockquote>
           </div>
 
           <a class="eb-whatsapp-btn" href="https://wa.me/24176542925?text=Bonjour%20Emmanuel%2C%20je%20souhaite%20vous%20contacter%20%C3%A0%20propos%20de%20E-Biblia%203.0" target="_blank" rel="noopener noreferrer">
@@ -884,7 +849,7 @@
     <div class="eb-modal-sheet">
       <div class="eb-sheet-handle"></div>
       <div class="eb-sheet-head">
-        <h3 class="eb-sheet-title">Ajouter une note</h3>
+        <h3 class="eb-sheet-title" id="note-modal-title">Ajouter une note</h3>
         <button data-close-modal="modal-new-note"><svg class="eb-icon"><use href="#icon-xmark"></use></svg></button>
       </div>
       <div class="eb-sheet-body">

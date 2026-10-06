@@ -143,13 +143,11 @@ function verseSelectionKey(book, chapter, verse, version) {
             const actions = document.createElement("div");
             actions.className = "verse-inline-selection-actions";
             actions.innerHTML = `
-                <span class="selection-count">${selected.length} sélectionné${selected.length > 1 ? "s" : ""}</span>
                 <button class="selection-action-btn" data-selection-action="share" title="Partager la sélection"><i class="fa-solid fa-share-nodes text-[11px]"></i></button>
                 <button class="selection-action-btn" data-selection-action="compare" title="Comparer les versions"><i class="fa-solid fa-code-compare text-[11px]"></i></button>
                 <button class="selection-action-btn" data-selection-action="note" title="Ajouter aux notes"><i class="fa-solid fa-note-sticky text-[11px]"></i></button>
                 <button class="selection-action-btn" data-selection-action="cult" title="Ajouter à un culte"><i class="fa-solid fa-church text-[11px]"></i></button>
                 <button class="selection-action-btn" data-selection-action="favorite" title="Ajouter aux favoris"><i class="fa-solid fa-bookmark text-[11px]"></i></button>
-                <button class="selection-action-btn" data-selection-action="highlight" title="Surligner"><i class="fa-solid fa-highlighter text-[11px]"></i></button>
                 <button class="selection-action-btn" data-selection-action="ai" title="Analyser avec l'IA"><i class="fa-solid fa-wand-magic-sparkles text-[11px]"></i></button>
                 <button class="selection-action-btn" data-selection-action="copy" title="Copier"><i class="fa-solid fa-copy text-[11px]"></i></button>
                 <button class="selection-action-btn" data-selection-action="clear" title="Annuler la sélection"><i class="fa-solid fa-xmark text-[11px]"></i></button>
@@ -166,7 +164,6 @@ function verseSelectionKey(book, chapter, verse, version) {
                 if (action === "note") addSelectedToVerseNotes();
                 if (action === "cult") addSelectedToCult();
                 if (action === "favorite") bookmarkSelectedVerses();
-                if (action === "highlight") highlightSelectedVerses();
                 if (action === "ai") openAIForSelection();
                 if (action === "copy") copySelectedVerses();
                 if (action === "clear") clearVerseSelection();

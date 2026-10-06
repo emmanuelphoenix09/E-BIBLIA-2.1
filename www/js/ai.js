@@ -11,6 +11,21 @@
 (function () {
   function escapeHtml(value) { const div=document.createElement("div"); div.textContent=value ?? ""; return div.innerHTML; }
 
+function getGreetingResponse(question) {
+            const normalized = String(question || "").trim().toLocaleLowerCase("fr")
+                .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+                .replace(/[!?.,;:]+$/g, "").replace(/\s+/g, " ").trim();
+            const greeting = normalized.match(/^(bonjour(?: [a-z]+)?|bonsoir|salut|coucou|hello|hi|bonne (?:journee|matinee|soiree|nuit)|bien le bonjour|comment ca va|ca va(?: bien)?|comment vas-tu)(?: leona)?$/);
+            if (!greeting) return null;
+            if (greeting[1] === "bonsoir" || greeting[1] === "bonne soiree") return "Bonsoir !";
+            if (greeting[1] === "bonne nuit") return "Bonne nuit !";
+            if (greeting[1] === "bonne journee") return "Bonne journée !";
+            if (greeting[1] === "bonne matinee") return "Bonne matinée !";
+            if (greeting[1].startsWith("comment") || greeting[1].startsWith("ca va")) return "Je vais bien, merci !";
+            if (greeting[1] === "salut" || greeting[1] === "coucou" || greeting[1] === "hello" || greeting[1] === "hi") return "Salut !";
+            return "Bonjour !";
+        }
+
 function getGeminiConfig() {
             const injected = window.EBIBLIA_CONFIG || {};
             return {
@@ -19,55 +34,195 @@ function getGeminiConfig() {
             };
         }
 
-async function askGemini(question = "") {
-            const config = getGeminiConfig();
-            if (!config.apiKey) {
+function getAIProviders() {
+            const injected = window.EBIBLIA_CONFIG || {};
+            const geminiKeys = [
+                ...(Array.isArray(injected.GEMINI_API_KEYS) ? injected.GEMINI_API_KEYS : []),
+                injected.API_KEY
+            ].filter((key, index, keys) => typeof key === "string" && key.trim() && keys.indexOf(key) === index);
+            const providers = geminiKeys.map(apiKey => ({
+                name: "Gemini",
+                apiKey,
+                model: injected.GEMINI_MODEL || "gemini-3-flash-preview"
+            }));
+            if (injected.OPENROUTER_API_KEY) {
+                providers.push({
+                    name: "OpenRouter",
+                    apiKey: injected.OPENROUTER_API_KEY,
+                    model: injected.OPENROUTER_MODEL || "google/gemini-2.5-flash"
+                });
+            }
+            return providers;
+        }
+
+async function askGemini(question = "", onUpdate = null, referencedVerses = []) {
+            const providers = getAIProviders();
+            if (!providers.length) {
                 throw new Error("La configuration interne de l'Assistant IA est introuvable.");
             }
 
             const reader = window.EBibliaReader;
             const app = window.EBibliaApp || {};
             const selectedVerses = app.selectedVerses || [];
-            const biblicalContext = reader?.getSelectedVersesText?.() || selectedVerses.map(verse => {
+            const selectedContext = reader?.getSelectedVersesText?.() || selectedVerses.map(verse => {
                 const bookName = app.books?.find(book => book.id === verse.book)?.name || verse.book;
                 return `${bookName} ${verse.chapter}:${verse.verse}\n${verse.text || ""}`;
             }).join("\n\n");
+            const referenceContext = referencedVerses.map(verse => `${verse.reference}\n${verse.text}`).join("\n\n");
+            const biblicalContext = [selectedContext, referenceContext].filter(Boolean).join("\n\n");
             const isInitialExplanation = !question.trim() && Boolean(biblicalContext);
             const userRequest = isInitialExplanation
-                ? `Explique ce passage en 120 mots maximum. Donne : 1) contexte immédiat, 2) sens principal, 3) une application. Reste concis et ne demande pas de question supplémentaire.`
+                ? `Explique brièvement le sens du passage sélectionné, sans contexte historique ou culturel sauf si je le demande explicitement :\n${biblicalContext}`
                 : biblicalContext
-                    ? `Réponds directement à la question en t'appuyant sur le passage sélectionné. Rappelle le contexte seulement si nécessaire. Question : ${question}`
-                    : `Réponds précisément à la question de l'utilisateur. Aucun passage biblique n'est sélectionné; cite les références pertinentes et ne prétends pas t'appuyer sur un passage fourni. Question : ${question}`;
+                    ? `Réponds uniquement à la question posée, sans introduction, conclusion ni information non demandée. Ne donne pas le contexte sauf demande explicite. Passage fourni à utiliser seulement s'il est nécessaire pour répondre :\n${biblicalContext}\nQuestion : ${question}`
+                    : `Réponds précisément et uniquement à cette question, sans ajouter d'information non demandée. Question : ${question}`;
 
             const systemInstruction = {
                 parts: [{
-                    text: "Tu es Léona, l'assistant d'étude biblique de E-BIBLIA. Réponds en français, directement et avec rigueur. Sois concis : 2 à 5 phrases ou quelques puces courtes, environ 120 mots maximum par défaut. N'ajoute du détail que si l'utilisateur le demande. Distingue clairement le texte biblique, le contexte et l'interprétation. N'invente ni verset ni citation. N'utilise jamais les marqueurs Markdown **, ***, __ ou * pour le gras/italique."
+                    text: "Tu es Léona, l'assistante de E-BIBLIA. Réponds en français, précisément, clairement et de façon concise. Donne exactement les informations nécessaires pour répondre à la question, sans introduction, salutation, conclusion, commentaire personnel ni information supplémentaire. Ne fournis aucun contexte historique, culturel ou théologique, sauf si l'utilisateur le demande explicitement. Réponds à la question directe sans la reformuler. Si une précision est nécessaire, reste brève. N'invente ni verset, ni citation, ni fait. Tu réponds uniquement aux questions concernant la Bible, le Coran ou l'Église. Pour toute demande sans rapport avec ces sujets, réponds exactement : « Mon créateur, Emmanuel PAKOU, ne m'a pas entraînée pour répondre aux sujets hors biblique, coranique ou ecclésiastique. » N'ajoute rien à ce refus. N'utilise jamais les marqueurs Markdown **, ***, __ ou * pour le gras/italique."
                 }]
             };
 
+            const contents = [{
+                role: "user",
+                parts: [{ text: userRequest }]
+            }];
             const payload = {
                 systemInstruction,
                 generationConfig: {
-                    maxOutputTokens: 280,
+                    maxOutputTokens: 2048,
                     temperature: 0.25
                 },
-                contents: [{
-                    role: "user",
-                    parts: [{
-                        text: `Passage biblique sélectionné :\n${biblicalContext || "Aucun passage sélectionné."}\n\n${userRequest}`
-                    }]
-                }]
+                contents
             };
 
-            const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(config.model)}:generateContent?key=${encodeURIComponent(config.apiKey)}`;
-            const response = await fetch(endpoint, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(payload)
-            });
-            const data = await response.json();
-            if (!response.ok) throw new Error(data?.error?.message || `Erreur Gemini (${response.status}).`);
-            return (data?.candidates?.[0]?.content?.parts || []).map(part => part.text || "").join("").trim() || "Gemini n'a retourné aucun contenu.";
+            const providerErrors = [];
+            for (let providerIndex = 0; providerIndex < providers.length; providerIndex += 1) {
+                const provider = providers[providerIndex];
+                const answerParts = [];
+                const providerContents = [...contents];
+                try {
+                    for (let continuation = 0; continuation <= 3; continuation += 1) {
+                        const isOpenRouter = provider.name === "OpenRouter";
+                        const endpoint = isOpenRouter
+                            ? "https://openrouter.ai/api/v1/chat/completions"
+                            : `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(provider.model)}:streamGenerateContent?alt=sse&key=${encodeURIComponent(provider.apiKey)}`;
+                        const requestPayload = isOpenRouter
+                            ? {
+                                model: provider.model,
+                                stream: true,
+                                max_tokens: payload.generationConfig.maxOutputTokens,
+                                temperature: payload.generationConfig.temperature,
+                                messages: [
+                                    ...(payload.systemInstruction?.parts || []).map(part => ({ role: "system", content: part.text })),
+                                    ...providerContents.map(message => ({
+                                        role: message.role === "model" ? "assistant" : message.role,
+                                        content: (message.parts || []).map(part => part.text || "").join("")
+                                    }))
+                                ]
+                            }
+                            : payload;
+                        const headers = { "Content-Type": "application/json" };
+                        if (isOpenRouter) {
+                            headers.Authorization = `Bearer ${provider.apiKey}`;
+                            headers["HTTP-Referer"] = window.location.origin;
+                            headers["X-Title"] = "E-BIBLIA";
+                        }
+                        const response = await fetch(endpoint, {
+                            method: "POST",
+                            headers,
+                            body: JSON.stringify(requestPayload)
+                        });
+                        if (!response.ok) {
+                            let errorMessage = `Erreur ${provider.name} (${response.status}).`;
+                            try {
+                                const data = await response.json();
+                                errorMessage = data?.error?.message || errorMessage;
+                            } catch (error) {
+                                console.error(`Lecture de l’erreur ${provider.name}:`, error);
+                            }
+                            throw new Error(errorMessage);
+                        }
+                        if (!response.body?.getReader) throw new Error(`Le flux de réponse ${provider.name} n’est pas pris en charge par ce navigateur.`);
+
+                        const readerStream = response.body.getReader();
+                        const decoder = new TextDecoder();
+                        let buffer = "";
+                        let turnText = "";
+                        let finishReason = null;
+                        const processEvent = eventText => {
+                            const dataLines = eventText.split(/\r?\n/).filter(line => line.startsWith("data:"));
+                            if (!dataLines.length) return;
+                            const dataText = dataLines.map(line => line.slice(5).trim()).join("\n");
+                            if (!dataText || dataText === "[DONE]") return;
+                            let data;
+                            try {
+                                data = JSON.parse(dataText);
+                            } catch (error) {
+                                console.error(`Événement invalide dans le flux ${provider.name}:`, error);
+                                throw new Error(`${provider.name} a envoyé une partie de réponse invalide.`);
+                            }
+
+                            let chunk = "";
+                            if (isOpenRouter) {
+                                const delta = data?.choices?.[0]?.delta?.content;
+                                chunk = typeof delta === "string"
+                                    ? delta
+                                    : Array.isArray(delta) ? delta.map(part => part.text || "").join("") : "";
+                                finishReason = data?.choices?.[0]?.finish_reason || finishReason;
+                            } else {
+                                const candidate = data?.candidates?.[0];
+                                if (!candidate) return;
+                                chunk = (candidate.content?.parts || []).map(part => part.text || "").join("");
+                                finishReason = candidate.finishReason || finishReason;
+                            }
+                            if (chunk) {
+                                turnText += chunk;
+                                const previousTurns = answerParts.join("\n");
+                                onUpdate?.(previousTurns ? previousTurns + "\n" + turnText : turnText);
+                            }
+                        };
+
+                        while (true) {
+                            const { value, done } = await readerStream.read();
+                            buffer += decoder.decode(value || new Uint8Array(), { stream: !done });
+                            buffer = buffer.replace(/\r\n/g, "\n");
+                            let eventEnd = buffer.indexOf("\n\n");
+                            while (eventEnd !== -1) {
+                                processEvent(buffer.slice(0, eventEnd));
+                                buffer = buffer.slice(eventEnd + 2);
+                                eventEnd = buffer.indexOf("\n\n");
+                            }
+                            if (done) break;
+                        }
+                        if (buffer.trim()) processEvent(buffer);
+                        answerParts.push(turnText);
+
+                        if (finishReason === "STOP" || finishReason === "stop") {
+                            const answer = answerParts.join("\n").trim();
+                            if (!answer) throw new Error(`${provider.name} n’a retourné aucun contenu.`);
+                            return answer;
+                        }
+                        if (finishReason !== "MAX_TOKENS" && finishReason !== "length") {
+                            throw new Error(`${provider.name} a interrompu sa réponse avant de la terminer (${finishReason || "raison inconnue"}).`);
+                        }
+                        if (continuation === 3) {
+                            throw new Error("La réponse de Léona dépasse la limite de génération et n’a pas pu être complétée.");
+                        }
+                        if (!turnText) throw new Error(`${provider.name} a interrompu sa réponse sans fournir de contenu à continuer.`);
+                        providerContents.push(
+                            { role: "model", parts: [{ text: turnText }] },
+                            { role: "user", parts: [{ text: "Continue exactement là où tu t'es arrêté. Termine entièrement la réponse, sans répéter les parties déjà fournies." }] }
+                        );
+                    }
+                } catch (error) {
+                    providerErrors.push(`${provider.name}: ${error.message}`);
+                    console.warn(`Échec de ${provider.name}, essai du fournisseur suivant.`, error);
+                    if (providerIndex < providers.length - 1) onUpdate?.("");
+                }
+            }
+
+            throw new Error(`Aucun fournisseur IA n’a pu répondre. ${providerErrors.join(" | ")}`);
         }
 
 function renderAIResponse(markdown) {
@@ -404,7 +559,7 @@ async function runGeminiAnalysis(initialExplanation = false) {
       initLeonaOrb();
   }
 
-  window.EBibliaAI = { getGeminiConfig, askGemini, renderAIResponse, runGeminiAnalysis };
+  window.EBibliaAI = { getGeminiConfig, getGreetingResponse, askGemini, renderAIResponse, runGeminiAnalysis };
   window.EBiblia = window.EBiblia || {};
   Object.assign(window.EBiblia, window.EBibliaAI);
 })();

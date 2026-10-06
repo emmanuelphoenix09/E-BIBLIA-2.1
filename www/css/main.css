@@ -50,7 +50,8 @@
   --eb-shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
 }
 
-/* Mode Clair (Screens 8 à 14 & variantes claires) */
+/* Le thème clair remplace les variables globales : les composants gardent
+  les mêmes règles et changent d'apparence sans duplication. */
 html:not(.dark) {
   --eb-bg: #ffffff;
   --eb-bg-alt: #f6f8fc;
@@ -144,6 +145,7 @@ a {
 /* -----------------------------
    CONTENEUR PRINCIPAL APPLI
    ----------------------------- */
+/* Même sur grand écran, l'interface conserve son format mobile et se centre. */
 #app-viewport {
   position: relative;
   width: 100%;
@@ -168,6 +170,8 @@ a {
 /* -----------------------------
    CONTENEUR DES VUES (ÉCRANS)
    ----------------------------- */
+/* Les vues se superposent ; seule .is-active est affichée. Le padding bas
+  maintient le dernier contenu au-dessus de la navigation fixe. */
 #app-screens {
   position: relative;
   flex: 1;
@@ -193,6 +197,7 @@ a {
 /* -----------------------------
    NAVIGATION INFÉRIEURE (5 ONGLETS)
    ----------------------------- */
+/* La barre reste visible pendant le défilement des vues. */
 .eb-bottom-nav {
   position: fixed;
   bottom: 0;
@@ -699,38 +704,34 @@ html:not(.dark) .eb-badge-purple {
 .eb-verse-toolbar {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 12px;
+  gap: 2px;
+  padding: 4px 6px;
   background: var(--eb-card);
   border: 1px solid var(--eb-border);
-  border-radius: var(--eb-radius-lg);
+  border-radius: var(--eb-radius-md);
   box-shadow: var(--eb-shadow-lg);
-  position: sticky;
-  bottom: 84px;
+  position: fixed;
+  bottom: calc(136px + env(safe-area-inset-bottom));
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  max-width: none;
-  z-index: 40;
+  width: max-content;
+  max-width: calc(100vw - 24px);
+  overflow: hidden;
+  z-index: 95;
   animation: slideUp 0.18s ease-out;
 }
 
 .eb-verse-toolbar .eb-toolbar-btn {
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   flex: 1 1 0;
-  min-width: 48px;
-  border-radius: 14px;
+  min-width: 0;
+  border-radius: 10px;
 }
 
 .eb-verse-toolbar .eb-toolbar-btn .eb-icon {
-  width: 24px;
-  height: 24px;
-}
-
-.eb-verse-toolbar .eb-selection-count {
-  font-size: 13px;
-  padding: 0 8px;
+  width: 18px;
+  height: 18px;
 }
 
 @keyframes slideUp {
@@ -747,7 +748,12 @@ html:not(.dark) .eb-badge-purple {
   justify-content: center;
   color: var(--eb-text);
 }
-.eb-selection-count{font-size:11px;font-weight:800;color:var(--eb-accent);padding:0 4px;white-space:nowrap}
+
+.eb-toolbar-btn[data-action="existing-note"] {
+  color: var(--eb-accent);
+  background: var(--eb-accent-glow);
+  border: 1px solid var(--eb-border-light);
+}
 
 .eb-toolbar-btn:hover {
   background: var(--eb-card-inner);
@@ -774,9 +780,9 @@ html:not(.dark) .eb-badge-purple {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding: 10px 14px;
-  border-radius: var(--eb-radius-lg);
+  gap: 8px;
+  padding: 4px 10px;
+  border-radius: var(--eb-radius-md);
   background: rgba(18, 20, 28, 0.94);
   border: 1px solid var(--eb-border);
   box-shadow: var(--eb-shadow-md);
@@ -784,7 +790,7 @@ html:not(.dark) .eb-badge-purple {
   z-index: 30;
   width: 100%;
   max-width: 480px;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 800;
   color: var(--eb-text);
 }
@@ -803,17 +809,17 @@ html:not(.dark) .eb-reader-nav-pill {
 }
 
 .eb-nav-arrow {
-  width: 48px;
-  height: 48px;
-  flex: 0 0 48px;
-  border-radius: 14px;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border-radius: 11px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .eb-nav-arrow .eb-icon {
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
 }
 
 .eb-nav-arrow:hover {
@@ -956,14 +962,38 @@ html:not(.dark) .eb-version-tag {
    Cosmique, néon, orbe interactif (inchangé en mode clair)
    ----------------------------- */
 .eb-leona-view {
+  position: absolute;
+  inset: 0;
+  isolation: isolate;
+  overflow: hidden;
   background: radial-gradient(circle at 50% 30%, #1e1338 0%, #0c0818 60%, #05030a 100%) !important;
   color: #ffffff !important;
-  padding-bottom: 96px;
+  min-height: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.eb-view.eb-leona-view:not(.is-active) {
+  display: none;
+}
+
+.eb-view.eb-leona-view.is-active {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: 0;
+  padding: 0;
+}
+
+.eb-leona-view > :not(.eb-orb-zone) {
+  position: relative;
+  z-index: 1;
 }
 
 .eb-leona-header {
+  flex: 0 0 auto;
   text-align: center;
-  padding: 16px 0 10px;
+  padding: 12px 16px 8px;
 }
 
 .eb-leona-title {
@@ -983,11 +1013,30 @@ html:not(.dark) .eb-version-tag {
 }
 
 .eb-orb-zone {
+  position: fixed;
+  top: clamp(110px, 22vh, 190px);
+  left: 50%;
+  z-index: 0;
+  width: 170px;
+  height: 170px;
+  margin-left: -85px;
+  padding: 0;
+  opacity: 0.24;
+  pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 0 18px;
-  position: relative;
+  transition: opacity 0.2s ease;
+}
+
+.eb-orb-zone.is-active {
+  opacity: 0.62;
+  animation: leona-orb-float 2.4s ease-in-out infinite;
+}
+
+@keyframes leona-orb-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 .eb-orb-canvas {
@@ -1035,14 +1084,43 @@ html:not(.dark) .eb-version-tag {
 }
 
 .eb-leona-chat {
-  flex: 1;
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 16px;
+  margin: 0;
+  padding: 10px 16px 120px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  scroll-behavior: smooth;
+  pointer-events: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(168, 85, 247, 0.45) transparent;
+}
+
+.eb-leona-chat::-webkit-scrollbar {
+  width: 5px;
+}
+
+.eb-leona-chat::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.eb-leona-chat::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(168, 85, 247, 0.45);
 }
 
 .eb-chat-msg {
+  flex: 0 0 auto;
   padding: 12px 16px;
   border-radius: 16px;
   font-size: 14px;
@@ -1065,15 +1143,83 @@ html:not(.dark) .eb-version-tag {
   border-bottom-left-radius: 4px;
 }
 
+.eb-leona-progress {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.eb-leona-speak-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 6px 10px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: var(--eb-radius-full);
+  color: #bae6fd;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.eb-leona-speak-btn .eb-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.eb-leona-speak-btn:hover {
+  background: rgba(56, 189, 248, 0.12);
+}
+
+.eb-leona-passage-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.eb-leona-passage-btn {
+  padding: 7px 11px;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: var(--eb-radius-full);
+  color: #bae6fd;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.eb-leona-passage-btn:hover {
+  background: rgba(56, 189, 248, 0.12);
+}
+
 .eb-leona-input-bar {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: calc(76px + env(safe-area-inset-bottom));
+  min-width: 0;
+  z-index: 2;
   display: flex;
   align-items: center;
   gap: 10px;
+  min-height: 54px;
   padding: 6px 6px 6px 18px;
   border-radius: var(--eb-radius-full);
   background: rgba(15, 23, 42, 0.85);
   border: 1px solid rgba(168, 85, 247, 0.35);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.eb-leona-view::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 82px;
+  background: linear-gradient(to top, rgba(5, 3, 10, 0.98), rgba(5, 3, 10, 0));
+  content: "";
+  pointer-events: none;
 }
 
 .eb-leona-input {
@@ -1099,6 +1245,72 @@ html:not(.dark) .eb-version-tag {
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+}
+
+html:not(.dark) .eb-view.eb-leona-view {
+  background: radial-gradient(circle at 50% 30%, #f1eafe 0%, #f8faff 58%, #ffffff 100%) !important;
+  color: #172033 !important;
+}
+
+html:not(.dark) .eb-leona-sub,
+html:not(.dark) .eb-leona-desc,
+html:not(.dark) .eb-leona-progress {
+  color: #596579;
+}
+
+html:not(.dark) .eb-msg-user {
+  background: #e9ddff;
+  color: #38205c;
+}
+
+html:not(.dark) .eb-msg-leona {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(79, 70, 229, 0.2);
+  color: #172033;
+  box-shadow: 0 3px 14px rgba(35, 45, 75, 0.08);
+}
+
+html:not(.dark) .eb-leona-input-bar {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(124, 58, 237, 0.28);
+  box-shadow: 0 4px 20px rgba(35, 45, 75, 0.16);
+}
+
+html:not(.dark) .eb-leona-input {
+  color: #172033;
+}
+
+html:not(.dark) .eb-leona-input::placeholder {
+  color: #7b8495;
+}
+
+html:not(.dark) .eb-leona-view::after {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0));
+}
+
+@media (max-width: 480px) {
+  .eb-leona-header {
+    padding-top: 12px;
+  }
+
+  .eb-leona-chat {
+    gap: 10px;
+    padding-right: 12px;
+    padding-bottom: 115px;
+    padding-left: 12px;
+  }
+
+  .eb-chat-msg {
+    max-width: 92%;
+    padding: 11px 14px;
+    font-size: 13.5px;
+  }
+
+  .eb-leona-input-bar {
+    right: 8px;
+    left: 8px;
+    bottom: calc(74px + env(safe-area-inset-bottom));
+  }
 }
 
 /* -----------------------------
@@ -1266,6 +1478,27 @@ html:not(.dark) .eb-version-tag {
   font-size: 14px;
   line-height: 1.55;
   color: var(--eb-text-secondary);
+}
+
+.eb-note-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.eb-note-action {
+  padding: 6px 10px;
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-full);
+  color: var(--eb-text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.eb-note-action:hover {
+  color: var(--eb-accent);
+  border-color: var(--eb-accent);
 }
 
 /* -----------------------------
@@ -1776,6 +2009,38 @@ html:not(.dark) .eb-version-tag {
   opacity: 0.92;
 }
 
+.eb-author-card h3 {
+  margin-bottom: 12px;
+  color: var(--eb-text);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.eb-author-card p + p {
+  margin-top: 14px;
+}
+
+.eb-author-card blockquote {
+  margin: 18px 0;
+  padding: 14px 16px;
+  border-left: 3px solid var(--eb-accent);
+  border-radius: 0 var(--eb-radius-sm) var(--eb-radius-sm) 0;
+  background: var(--eb-bg-alt);
+}
+
+.eb-author-card blockquote p {
+  font-style: italic;
+}
+
+.eb-author-card blockquote cite {
+  display: block;
+  margin-top: 8px;
+  color: var(--eb-text-secondary);
+  font-size: 13px;
+  font-style: normal;
+  text-align: right;
+}
+
 .eb-whatsapp-btn {
   display: flex;
   align-items: center;
@@ -1812,6 +2077,9 @@ html:not(.dark) .eb-version-tag {
   font-weight: 500;
 }
 
+/* -----------------------------
+   TOAST & ACTIONS COMPLÉMENTAIRES
+   ----------------------------- */
 /* Toast de notification */
 .eb-toast {
   position: fixed;
@@ -1830,33 +2098,397 @@ html:not(.dark) .eb-version-tag {
   animation: fadeIn 0.2s ease-out;
 }
 
-.eb-payment-card{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:14px 16px;border:1px solid var(--eb-border);border-radius:var(--eb-radius-md);background:var(--eb-card);color:var(--eb-text);text-align:left;text-decoration:none}.eb-payment-card strong{font-size:13px}.eb-payment-card span{color:var(--eb-text-secondary);font-size:12px}.eb-payment-card:hover{border-color:var(--eb-accent);background:var(--eb-card-inner)}
-body[data-page="apropos"]{background:var(--eb-bg)!important;color:var(--eb-text)!important;overflow:auto;padding-bottom:90px}body[data-page="apropos"]>header{background:var(--eb-bg)!important;border-color:var(--eb-border)!important;color:var(--eb-text)!important}body[data-page="apropos"] main{max-width:720px;margin:0 auto;padding:16px}body[data-page="apropos"] #modal-about{display:block!important;position:static!important;background:transparent!important;max-width:none;width:100%;padding:0}body[data-page="apropos"] #modal-about>div{max-width:none;width:100%;max-height:none;background:var(--eb-card)!important;border:1px solid var(--eb-border)!important;border-radius:var(--eb-radius-lg)!important;box-shadow:var(--eb-shadow-md)!important}body[data-page="apropos"] #modal-about .bg-gradient-to-r{background:linear-gradient(110deg,var(--eb-accent),var(--eb-accent-yellow),var(--eb-accent))!important}body[data-page="apropos"] #modal-about .text-amber-600{color:var(--eb-accent)!important}
+/* Cartes de paiement & page À propos */
+.eb-payment-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-md);
+  background: var(--eb-card);
+  color: var(--eb-text);
+  text-align: left;
+  text-decoration: none;
+}
 
+.eb-payment-card strong {
+  font-size: 13px;
+}
+
+.eb-payment-card span {
+  color: var(--eb-text-secondary);
+  font-size: 12px;
+}
+
+.eb-payment-card:hover {
+  border-color: var(--eb-accent);
+  background: var(--eb-card-inner);
+}
+
+body[data-page="apropos"] {
+  background: var(--eb-bg) !important;
+  color: var(--eb-text) !important;
+  overflow: auto;
+  padding-bottom: 90px;
+}
+
+body[data-page="apropos"] > header {
+  background: var(--eb-bg) !important;
+  border-color: var(--eb-border) !important;
+  color: var(--eb-text) !important;
+}
+
+body[data-page="apropos"] main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+body[data-page="apropos"] #modal-about {
+  display: block !important;
+  position: static !important;
+  background: transparent !important;
+  max-width: none;
+  width: 100%;
+  padding: 0;
+}
+
+body[data-page="apropos"] #modal-about > div {
+  max-width: none;
+  width: 100%;
+  max-height: none;
+  background: var(--eb-card) !important;
+  border: 1px solid var(--eb-border) !important;
+  border-radius: var(--eb-radius-lg) !important;
+  box-shadow: var(--eb-shadow-md) !important;
+}
+
+body[data-page="apropos"] #modal-about .bg-gradient-to-r {
+  background: linear-gradient(110deg, var(--eb-accent), var(--eb-accent-yellow), var(--eb-accent)) !important;
+}
+
+body[data-page="apropos"] #modal-about .text-amber-600 {
+  color: var(--eb-accent) !important;
+}
+
+/* Animation d'apparition du toast */
 @keyframes fadeIn {
   from { opacity: 0; transform: translate(-50%, 8px); }
   to { opacity: 1; transform: translate(-50%, 0); }
 }
 
-/* Fonctionnalités portées depuis main vers E-BIBLIA-3.0 */
-.eb-daily-card{margin:16px 0 0;border:1px solid rgba(217,119,6,.22);border-radius:var(--eb-radius-xl);background:var(--eb-card);box-shadow:0 8px 24px rgba(0,0,0,.08);overflow:hidden}
-.dark .eb-daily-card{border-color:rgba(251,191,36,.18);box-shadow:0 8px 24px rgba(0,0,0,.18)}
-.eb-daily-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-bottom:1px solid var(--eb-border)}
-.eb-daily-title-wrap{display:flex;align-items:center;gap:10px;min-width:0}
-.eb-daily-title-wrap h2{margin:0;font-size:14px;font-weight:800;color:var(--eb-text)}
-.eb-daily-title-wrap p{margin:2px 0 0;font-size:10px;color:var(--eb-text-secondary)}
-.eb-daily-icon{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;border-radius:11px;background:rgba(168,85,247,.12);color:#a855f7}
-.eb-daily-status{font-size:10px;font-weight:700;color:var(--eb-text-secondary);white-space:nowrap}
-.eb-daily-body{padding:14px}.eb-daily-loading{font-size:13px;color:var(--eb-text-secondary)}
-.eb-daily-verse{border-left:3px solid #d4af37;padding-left:12px}
-.eb-daily-verse-ref{font-size:11px;font-weight:800;color:var(--eb-accent)}
-.eb-daily-verse-text{margin-top:4px;font-size:14px;line-height:1.6;color:var(--eb-text)}
-.eb-daily-section-label{margin:14px 0 5px;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--eb-accent)}
-.eb-daily-copy{margin:0;font-size:13px;line-height:1.65;color:var(--eb-text-secondary);white-space:pre-line}
-.eb-daily-offline{margin-top:10px;font-size:10px;color:var(--eb-text-muted)}
-.eb-verse-row.mark-underline{text-decoration-line:underline;text-decoration-thickness:2px;text-decoration-color:#d4af37;text-underline-offset:4px;background:rgba(212,175,55,.08);border-radius:.2rem}
-.eb-verse-row.mark-underline-double{text-decoration-line:underline;text-decoration-style:double;text-decoration-thickness:2px;text-decoration-color:#b45309;text-underline-offset:4px}
-#reader-verses-container .eb-verse-row{font-size:var(--eb-reader-font-size,17px);touch-action:pan-y}
+/* -----------------------------
+   FONCTIONNALITÉS PORTÉES DE MAIN
+   ----------------------------- */
+/* Carte du quotidien */
+.eb-daily-card {
+  margin: 16px 0 0;
+  border: 1px solid rgba(217,119,6,.22);
+  border-radius: var(--eb-radius-xl);
+  background: var(--eb-card);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  overflow: hidden;
+}
+
+.dark .eb-daily-card {
+  border-color: rgba(251,191,36,.18);
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+
+.eb-daily-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--eb-border);
+}
+
+.eb-daily-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.eb-daily-title-wrap h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--eb-text);
+}
+
+.eb-daily-title-wrap p {
+  margin: 2px 0 0;
+  font-size: 10px;
+  color: var(--eb-text-secondary);
+}
+
+.eb-daily-icon {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: rgba(168,85,247,.12);
+  color: #a855f7;
+}
+
+.eb-daily-status {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--eb-text-secondary);
+  white-space: nowrap;
+}
+
+.eb-daily-body {
+  padding: 14px;
+}
+
+.eb-daily-loading {
+  font-size: 13px;
+  color: var(--eb-text-secondary);
+}
+
+.eb-daily-verse {
+  border-left: 3px solid #d4af37;
+  padding-left: 12px;
+}
+
+.eb-daily-verse-ref {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--eb-accent);
+}
+
+.eb-daily-verse-text {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--eb-text);
+}
+
+.eb-daily-section-label {
+  margin: 14px 0 5px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--eb-accent);
+}
+
+.eb-daily-copy {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--eb-text-secondary);
+  white-space: pre-line;
+}
+
+.eb-daily-offline {
+  margin-top: 10px;
+  font-size: 10px;
+  color: var(--eb-text-muted);
+}
+
+#reader-verses-container .eb-verse-row {
+  font-size: var(--eb-reader-font-size,17px);
+  touch-action: pan-y;
+}
+
+/* Calendrier personnel */
+.eb-calendar-card,
+.eb-calendar-form {
+  margin: 0 0 16px;
+}
+
+.eb-calendar-card {
+  padding: 16px;
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-lg);
+  background: var(--eb-card);
+}
+
+.eb-calendar-header,
+.eb-calendar-event-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.eb-calendar-header {
+  margin-bottom: 14px;
+}
+
+.eb-calendar-month {
+  color: var(--eb-text);
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.eb-calendar-nav,
+.eb-calendar-day {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: var(--eb-text);
+}
+
+.eb-calendar-nav:hover,
+.eb-calendar-day:hover {
+  background: var(--eb-bg-alt);
+}
+
+.eb-calendar-nav .eb-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.eb-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  justify-items: center;
+  gap: 4px;
+}
+
+.eb-calendar-weekdays {
+  margin-bottom: 6px;
+  color: var(--eb-text-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.eb-calendar-day {
+  position: relative;
+  font-size: 13px;
+}
+
+.eb-calendar-day.is-today {
+  outline: 1px solid var(--eb-accent);
+}
+
+.eb-calendar-day.is-selected {
+  background: var(--eb-accent);
+  color: #fff;
+}
+
+.eb-calendar-day.has-events::after {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--eb-accent-yellow);
+  content: "";
+  transform: translateX(-50%);
+}
+
+.eb-calendar-day.is-selected.has-events::after {
+  background: #fff;
+}
+
+.eb-calendar-day-spacer {
+  width: 38px;
+  height: 38px;
+}
+
+.eb-calendar-form {
+  padding: 16px;
+}
+
+.eb-calendar-form .eb-section-title,
+.eb-calendar-events-section .eb-section-title {
+  margin-bottom: 12px;
+}
+
+.eb-calendar-field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+  color: var(--eb-text-secondary);
+  font-size: 13px;
+}
+
+.eb-calendar-field input,
+.eb-calendar-field textarea {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid var(--eb-border);
+  border-radius: var(--eb-radius-sm);
+  background: var(--eb-bg);
+  color: var(--eb-text);
+  font: inherit;
+}
+
+.eb-calendar-field textarea {
+  resize: vertical;
+}
+
+.eb-calendar-form-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+}
+
+.eb-calendar-form > .eb-btn-add-version {
+  width: 100%;
+}
+
+.eb-calendar-events-section {
+  padding: 0 0 24px;
+}
+
+.eb-calendar-events-list {
+  display: grid;
+  gap: 10px;
+}
+
+.eb-calendar-event {
+  padding: 14px;
+  border: 1px solid var(--eb-border);
+  border-left: 3px solid var(--eb-accent);
+  border-radius: var(--eb-radius-md);
+  background: var(--eb-card);
+}
+
+.eb-calendar-event-heading strong {
+  min-width: 0;
+  color: var(--eb-text);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.eb-calendar-event-heading span,
+.eb-calendar-event p,
+.eb-calendar-empty {
+  color: var(--eb-text-secondary);
+  font-size: 12px;
+}
+
+.eb-calendar-event-heading span {
+  flex: 0 0 auto;
+}
+
+.eb-calendar-event p {
+  margin-top: 8px;
+  white-space: pre-wrap;
+}
+
+.eb-calendar-delete {
+  margin-top: 10px;
+  color: #f87171;
+  font-size: 12px;
+}
 
 
 /* Plans de lecture intégrale de la Bible */

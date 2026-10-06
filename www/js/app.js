@@ -170,6 +170,18 @@
   APP.bookmarks = getStored('ebiblia_bookmarks_v3', APP.sampleBookmarks);
   APP.prayers = getStored('ebiblia_prayers_v3', APP.samplePrayers);
   APP.meditations = getStored('ebiblia_meditations_v1', []);
+  APP.events = getStored('ebiblia_events_v1', []);
+
+  const legacyUnderlineMarks = APP.highlights.filter(highlight => highlight.style === 'underline');
+  if (legacyUnderlineMarks.length) {
+    APP.highlights = APP.highlights
+      .filter(highlight => highlight.style !== 'underline')
+      .concat(legacyUnderlineMarks.map(highlight => ({ ...highlight, style: undefined, color: 'yellow' })));
+    APP.highlights.forEach(highlight => {
+      if (highlight.style === undefined) delete highlight.style;
+    });
+    setStored('ebiblia_highlights_v3', APP.highlights);
+  }
 
   // -------------------------------------------------------------
   // GESTION DU THÈME (Dark / Light)
@@ -221,7 +233,8 @@
       highlights: APP.highlights,
       bookmarks: APP.bookmarks,
       prayers: APP.prayers,
-      meditations: APP.meditations
+      meditations: APP.meditations,
+      events: APP.events
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json;charset=utf-8' });
     const url = URL.createObjectURL(blob);
@@ -236,16 +249,17 @@
   }
 
   function deleteLocalData() {
-    const confirmed = window.confirm('Supprimer vos notes, favoris, surlignages, prières et méditations de cet appareil ?');
+    const confirmed = window.confirm('Supprimer vos notes, favoris, surlignages, prières, méditations et événements de cet appareil ?');
     if (!confirmed) return;
 
-    ['ebiblia_notes_v3', 'ebiblia_highlights_v3', 'ebiblia_bookmarks_v3', 'ebiblia_prayers_v3', 'ebiblia_meditations_v1'].forEach(key => localStorage.removeItem(key));
+    ['ebiblia_notes_v3', 'ebiblia_highlights_v3', 'ebiblia_bookmarks_v3', 'ebiblia_prayers_v3', 'ebiblia_meditations_v1', 'ebiblia_events_v1'].forEach(key => localStorage.removeItem(key));
 
     APP.notes = [];
     APP.highlights = [];
     APP.bookmarks = [];
     APP.prayers = [];
     APP.meditations = [];
+    APP.events = [];
 
     showToast('Vos données locales ont été supprimées.');
     if (APP.currentView === 'notes') renderNotesView();
@@ -253,6 +267,7 @@
     if (APP.currentView === 'verses') renderBookmarksView();
     if (APP.currentView === 'prayers') renderPrayersView();
     if (APP.currentView === 'meditation') renderMeditationView();
+    if (APP.currentView === 'events') renderCalendarView();
   }
 
   // -------------------------------------------------------------
@@ -275,7 +290,7 @@
 
     // Mettre à jour la barre d'onglets (5 onglets principaux)
     // Pour toutes les sous-pages du Menu (about, settings, notes, etc.), Menu reste actif
-    const isMenuSubView = ['notes', 'meditation', 'marks', 'verses', 'images', 'videos', 'events', 'prayers', 'stats', 'settings', 'privacy', 'donate', 'profile', 'about'].includes(viewId);
+    const isMenuSubView = ['notes', 'meditation', 'marks', 'verses', 'events', 'prayers', 'stats', 'settings', 'privacy', 'donate', 'profile', 'about'].includes(viewId);
     document.querySelectorAll('.eb-tab-btn').forEach(btn => {
       const tab = btn.dataset.tab;
       if (tab === 'menu' && isMenuSubView) {
@@ -308,6 +323,8 @@
       renderPrivacyView();
     } else if (viewId === 'prayers') {
       renderPrayersView();
+    } else if (viewId === 'events') {
+      renderCalendarView();
     } else if (viewId === 'leona') {
       initLeonaOrb();
     }
@@ -408,8 +425,9 @@
       row.dataset.verse = v.verse;
 
       // Vérifier si le verset est surligné
-      const hl = APP.highlights.find(h => h.ref.startsWith(`${bookObj.name} ${APP.currentChapter}:${v.verse}`));
-      if (hl) { if (hl.style === 'underline' || hl.style === 'underline-double') row.classList.add('mark-' + hl.style); else if (hl.color) row.classList.add('hl-' + hl.color); }
+      const verseRef = `${bookObj.name} ${APP.currentChapter}:${v.verse}`;
+      const hl = APP.highlights.find(h => h.ref === verseRef);
+      if (hl?.color) row.classList.add('hl-' + hl.color);
       if (APP.selectedVerses.some(selected => selected.verse === v.verse && selected.book === APP.currentBook && selected.chapter === APP.currentChapter)) row.classList.add('is-selected');
 
       // Nettoyer les symboles spéciaux au début (¶)
@@ -666,24 +684,18 @@
     }
 
     APP.selectedVerse = APP.selectedVerses[0] || null;
-    if (!APP.selectedVerses.length) return;
     document.querySelectorAll('.eb-verse-row').forEach(row => {
       row.classList.toggle('is-selected', APP.selectedVerses.some(item => Number(item.verse) === Number(row.dataset.verse)));
     });
+    if (isSelected || !APP.selectedVerses.length) return;
 
     // Créer la barre d'action du verset
     const toolbar = document.createElement('div');
     toolbar.id = 'verse-floating-toolbar';
     toolbar.className = 'eb-verse-toolbar';
     toolbar.innerHTML = `
-      <span class="eb-selection-count">${APP.selectedVerses.length} sélectionné${APP.selectedVerses.length > 1 ? 's' : ''}</span>
-      <button class="eb-toolbar-btn" data-action="hl-orange" title="Surligner Orange"><span class="eb-hl-dot eb-hl-orange"></span></button>
-      <button class="eb-toolbar-btn" data-action="hl-purple" title="Surligner Violet"><span class="eb-hl-dot eb-hl-purple"></span></button>
-      <button class="eb-toolbar-btn" data-action="hl-green" title="Surligner Vert"><span class="eb-hl-dot eb-hl-green"></span></button>
-      <button class="eb-toolbar-btn" data-action="underline" title="Souligner"><span style="font-weight:800;text-decoration:underline;">U</span></button>
-      <button class="eb-toolbar-btn" data-action="underline-double" title="Double soulignement"><span style="font-weight:800;text-decoration:underline;text-decoration-style:double;">U</span></button>
-      <button class="eb-toolbar-btn" data-action="note" title="Ajouter une note"><svg class="eb-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></button>
-      <button class="eb-toolbar-btn" data-action="existing-note" title="Ajouter à une note existante"><svg class="eb-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2z"/><path d="M12 10h9v2h-9z"/></svg></button>
+      <button class="eb-toolbar-btn" data-action="existing-note" title="Ajouter à une note existante" aria-label="Ajouter à une note existante"><svg class="eb-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2z"/><path d="M12 10h9v2h-9z"/></svg></button>
+      <button class="eb-toolbar-btn" data-action="hl-yellow" title="Surligner en jaune" aria-label="Surligner en jaune"><svg class="eb-icon" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zm17.71-10.04a1 1 0 0 0 0-1.42l-2.5-2.5a1 1 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 2-1.66zM2 22h20v2H2z"/></svg></button>
       <button class="eb-toolbar-btn" data-action="bookmark" title="Sauvegarder"><svg class="eb-icon" viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg></button>
       <button class="eb-toolbar-btn" data-action="compare" title="Comparer"><svg class="eb-icon" viewBox="0 0 24 24"><path d="M10 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h5v2h2V1h-2v2zm0 15H5l5-6v6zm9-15h-5v2h5v13l-5-6v9h5c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg></button>
       <button class="eb-toolbar-btn" data-action="share" title="Partager"><svg class="eb-icon" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z"/></svg></button>
@@ -768,14 +780,13 @@
 
     if (action.startsWith('hl-')) {
       const color = action.replace('hl-', '');
-      selected.forEach((item, index) => APP.highlights.unshift({ id: Date.now() + index, color, ref: refs[index], text: item.text }));
+      selected.forEach((item, index) => {
+        const existing = APP.highlights.find(highlight => highlight.ref === refs[index] && highlight.color === color);
+        APP.highlights = APP.highlights.filter(highlight => highlight.ref !== refs[index]);
+        if (!existing) APP.highlights.unshift({ id: Date.now() + index, color, ref: refs[index], text: item.text });
+      });
       setStored('ebiblia_highlights_v3', APP.highlights);
-      showToast(`${selected.length} verset${selected.length > 1 ? 's' : ''} surligné${selected.length > 1 ? 's' : ''}`);
-      renderBibleReader();
-    } else if (action === 'underline' || action === 'underline-double') {
-      selected.forEach((item, index) => APP.highlights.unshift({ id: Date.now() + index, style: action, ref: refs[index], text: item.text }));
-      setStored('ebiblia_highlights_v3', APP.highlights);
-      showToast(action === 'underline' ? 'Soulignement appliqué.' : 'Double soulignement appliqué.');
+      showToast('Surbrillance mise à jour');
       renderBibleReader();
     } else if (action === 'note') {
       openNoteModal(ref, text);
@@ -942,6 +953,62 @@
     return null;
   }
 
+  async function findLocalVerseReferences(input) {
+    const text = String(input || '');
+    const matches = [];
+    const seen = new Set();
+    const referencePattern = /\d+\s*:\s*\d+/g;
+    const aliases = [...new Set([...Object.keys(BOOK_ALIASES), ...APP.books.map(book => book.name)])]
+      .sort((first, second) => second.length - first.length);
+
+    for (const referenceMatch of text.matchAll(referencePattern)) {
+      const startLimit = Math.max(0, referenceMatch.index - 80);
+      const prefix = text.slice(startLimit, referenceMatch.index);
+      let parsed = null;
+
+      for (const alias of aliases) {
+        const escapedAlias = alias.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+');
+        const aliasPattern = new RegExp(`(?:^|[^\\p{L}\\p{N}])(${escapedAlias})\\s*$`, 'iu');
+        const bookMatch = prefix.match(aliasPattern);
+        if (!bookMatch) continue;
+        const aliasKey = bookMatch[1].toLocaleLowerCase('fr');
+        const book = APP.books.find(item => item.id === BOOK_ALIASES[aliasKey])
+          || APP.books.find(item => item.name.toLocaleLowerCase('fr') === aliasKey);
+        const numbers = referenceMatch[0].match(/^(\d+)\s*:\s*(\d+)$/);
+        if (book && numbers) {
+          parsed = { bookId: book.id, bookName: book.name, chapter: Number(numbers[1]), verse: Number(numbers[2]) };
+        }
+        if (parsed) break;
+      }
+      if (!parsed) continue;
+
+      const key = `${parsed.bookId}:${parsed.chapter}:${parsed.verse}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+
+      const verses = await fetchChapterData(parsed.bookId, parsed.chapter);
+      const verse = verses.find(item => Number(item.verse) === parsed.verse);
+      if (!verse || String(verse.text || '').includes('Verset non disponible')) continue;
+      const book = APP.books.find(item => item.id === parsed.bookId);
+      matches.push({
+        bookId: parsed.bookId,
+        chapter: parsed.chapter,
+        verse: parsed.verse,
+        reference: `${book?.name || parsed.bookName} ${parsed.chapter}:${parsed.verse}`,
+        text: String(verse.text).replace(/^[¶\s]+/, '').trim()
+      });
+    }
+    return matches;
+  }
+
+  function openBiblePassage(bookId, chapter, verse) {
+    APP.currentBook = bookId;
+    APP.currentChapter = Number(chapter);
+    APP.selectedVerses = [];
+    APP.selectedVerse = null;
+    showView('reader', { book: bookId, chapter: Number(chapter), verse: Number(verse) });
+  }
+
   // -------------------------------------------------------------
   // VUE COMPARER DES VERSIONS (Screen 3 & 10)
   // -------------------------------------------------------------
@@ -1005,16 +1072,61 @@
     return JSON.parse(cleaned.slice(start,end+1));
   }
   async function generateDailyContentWithGemini() {
-    const config=window.EBIBLIA_CONFIG || {}; if(!config.API_KEY) throw new Error('Clé Gemini non configurée.'); if(!navigator.onLine) throw new Error('Connexion Internet indisponible.');
+    const config=window.EBIBLIA_CONFIG || {}; if(!config.API_KEY && !config.OPENROUTER_API_KEY) throw new Error('Clé IA non configurée.'); if(!navigator.onLine) throw new Error('Connexion Internet indisponible.');
     const books=APP.books.map(b=>b.id+'='+b.name).join(', ');
     const model=config.GEMINI_MODEL || 'gemini-3-flash-preview';
-    const endpoint='https://generativelanguage.googleapis.com/v1beta/models/'+encodeURIComponent(model)+':generateContent?key='+encodeURIComponent(config.API_KEY);
     const previous=readDailyContent();
     const avoid=previous?.dateKey===dailyDateKey() ? previous.reference : '';
     const payload={systemInstruction:{parts:[{text:'Tu es le rédacteur quotidien de E-BIBLIA. Réponds en français, avec fidélité biblique et ton pastoral. Ne cite jamais un verset de mémoire. Choisis un passage différent du contenu précédent quand une référence précédente est fournie. Renvoie uniquement un JSON valide avec title, bookId, chapter, verse, meditation et prayer.'}]},contents:[{role:'user',parts:[{text:'Date locale: '+dailyDateKey()+'\nLivres disponibles: '+books+'\nRéférence à éviter aujourd’hui: '+(avoid||'aucune')+'\nChoisis un passage pertinent et différent pour la méditation du jour.'}]}]};
-    const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-    const data=await response.json(); if(!response.ok) throw new Error(data?.error?.message || ('Erreur Gemini ('+response.status+').'));
-    const generated=parseDailyJson((data?.candidates?.[0]?.content?.parts||[]).map(p=>p.text||'').join(''));
+    const providers=[
+      ...(Array.isArray(config.GEMINI_API_KEYS) ? config.GEMINI_API_KEYS : []),
+      config.API_KEY
+    ].filter((key,index,keys)=>typeof key==='string' && key.trim() && keys.indexOf(key)===index)
+      .map(apiKey=>({name:'Gemini',apiKey}));
+    if(config.OPENROUTER_API_KEY) providers.push({name:'OpenRouter',apiKey:config.OPENROUTER_API_KEY});
+    const errors=[];
+    let generated;
+    for(const provider of providers) {
+      try {
+        const isOpenRouter=provider.name==='OpenRouter';
+        const providerEndpoint=isOpenRouter
+          ? 'https://openrouter.ai/api/v1/chat/completions'
+          : 'https://generativelanguage.googleapis.com/v1beta/models/'+encodeURIComponent(model)+':generateContent?key='+encodeURIComponent(provider.apiKey);
+        const response=await fetch(providerEndpoint,{
+          method:'POST',
+          headers:{
+            'Content-Type':'application/json',
+            ...(isOpenRouter?{
+              Authorization:'Bearer '+provider.apiKey,
+              'HTTP-Referer':window.location.origin,
+              'X-Title':'E-BIBLIA'
+            }:{})
+          },
+          body:JSON.stringify(isOpenRouter?{
+            model:config.OPENROUTER_MODEL || 'google/gemini-2.5-flash',
+            temperature:0.25,
+            messages:[
+              {role:'system',content:payload.systemInstruction.parts.map(part=>part.text).join('\n')},
+              ...payload.contents.map(message=>({
+                role:message.role==='model'?'assistant':message.role,
+                content:message.parts.map(part=>part.text||'').join('')
+              }))
+            ]
+          }:payload)
+        });
+        const data=await response.json();
+        if(!response.ok) throw new Error(data?.error?.message || ('Erreur '+provider.name+' ('+response.status+').'));
+        const responseText=isOpenRouter
+          ? data?.choices?.[0]?.message?.content
+          : (data?.candidates?.[0]?.content?.parts||[]).map(part=>part.text||'').join('');
+        generated=parseDailyJson(responseText);
+        break;
+      } catch(error) {
+        errors.push(provider.name+': '+error.message);
+        console.warn('Échec du fournisseur '+provider.name+' pour le contenu quotidien; essai du suivant.',error);
+      }
+    }
+    if(!generated) throw new Error('Aucun fournisseur IA n’a pu générer le contenu quotidien. '+errors.join(' | '));
     const book=APP.books.find(b=>b.id===generated.bookId), chapter=Number(generated.chapter), verseNumber=Number(generated.verse);
     if(!book || !Number.isInteger(chapter) || !Number.isInteger(verseNumber) || chapter<1 || chapter>book.chapters || verseNumber<1) throw new Error('Référence quotidienne invalide.');
     const verseObj=(await fetchVersionChapter('LSG',book.id,chapter)||[]).find(v=>Number(v.verse)===verseNumber);
@@ -1369,15 +1481,60 @@
     APP.notes.forEach(note => {
       const card = document.createElement('div');
       card.className = 'eb-note-card';
-      card.innerHTML = `
-        <div class="eb-note-header">
-          <span class="eb-note-ref">${note.ref}</span>
-          <span class="eb-note-date">${note.date}</span>
-        </div>
-        <p class="eb-note-body">${escapeHtml(note.text)}</p>
-      `;
+      const header = document.createElement('div');
+      header.className = 'eb-note-header';
+      const reference = document.createElement('span');
+      reference.className = 'eb-note-ref';
+      reference.textContent = note.ref || 'Note sans référence';
+      const date = document.createElement('span');
+      date.className = 'eb-note-date';
+      date.textContent = note.date || '';
+      header.append(reference, date);
+
+      const body = document.createElement('p');
+      body.className = 'eb-note-body';
+      body.textContent = note.text || '';
+
+      const actions = document.createElement('div');
+      actions.className = 'eb-note-actions';
+      [
+        { label: 'Modifier', action: () => openNoteModal(note.ref || '', note.text || '', note.id) },
+        { label: 'Dupliquer', action: () => duplicateNote(note) },
+        { label: 'Supprimer', action: () => deleteNote(note.id) }
+      ].forEach(({ label, action }) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'eb-note-action';
+        button.textContent = label;
+        button.addEventListener('click', action);
+        actions.appendChild(button);
+      });
+      card.append(header, body, actions);
       list.appendChild(card);
     });
+  }
+
+  function duplicateNote(note) {
+    let id = Date.now();
+    while (APP.notes.some(existing => String(existing.id) === String(id))) id += 1;
+    const today = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date());
+    APP.notes.unshift({ ...note, id, date: today });
+    setStored('ebiblia_notes_v3', APP.notes);
+    renderNotesView();
+    showToast('Note dupliquée');
+  }
+
+  function deleteNote(noteId) {
+    const noteIndex = APP.notes.findIndex(note => String(note.id) === String(noteId));
+    if (noteIndex < 0) {
+      showToast('Cette note est introuvable.');
+      return;
+    }
+    if (!window.confirm('Supprimer définitivement cette note ?')) return;
+    APP.notes.splice(noteIndex, 1);
+    setStored('ebiblia_notes_v3', APP.notes);
+    renderNotesView();
+    showToast('Note supprimée');
   }
 
   // -------------------------------------------------------------
@@ -1542,66 +1699,301 @@
   }
 
   // -------------------------------------------------------------
+  // CALENDRIER PERSONNEL
+  // -------------------------------------------------------------
+  const calendarToday = new Date();
+  let calendarMonth = new Date(calendarToday.getFullYear(), calendarToday.getMonth(), 1);
+  let calendarSelectedDate = [
+    calendarToday.getFullYear(),
+    String(calendarToday.getMonth() + 1).padStart(2, '0'),
+    String(calendarToday.getDate()).padStart(2, '0')
+  ].join('-');
+
+  function renderCalendarView() {
+    const monthLabel = document.getElementById('calendar-month-label');
+    const daysGrid = document.getElementById('calendar-days');
+    const eventsList = document.getElementById('calendar-events-list');
+    const dateInput = document.getElementById('calendar-event-date');
+    if (!monthLabel || !daysGrid || !eventsList || !dateInput) return;
+    if (!dateInput.value) dateInput.value = calendarSelectedDate;
+
+    monthLabel.textContent = new Intl.DateTimeFormat('fr-FR', { month: 'long', year: 'numeric' }).format(calendarMonth);
+    const firstWeekday = (new Date(calendarMonth.getFullYear(), calendarMonth.getMonth(), 1).getDay() + 6) % 7;
+    const daysInMonth = new Date(calendarMonth.getFullYear(), calendarMonth.getMonth() + 1, 0).getDate();
+    const todayKey = [
+      calendarToday.getFullYear(),
+      String(calendarToday.getMonth() + 1).padStart(2, '0'),
+      String(calendarToday.getDate()).padStart(2, '0')
+    ].join('-');
+    const dayButtons = [];
+
+    for (let index = 0; index < firstWeekday; index += 1) {
+      const spacer = document.createElement('span');
+      spacer.className = 'eb-calendar-day-spacer';
+      spacer.setAttribute('aria-hidden', 'true');
+      dayButtons.push(spacer);
+    }
+
+    for (let day = 1; day <= daysInMonth; day += 1) {
+      const dateKey = `${calendarMonth.getFullYear()}-${String(calendarMonth.getMonth() + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'eb-calendar-day';
+      button.textContent = String(day);
+      button.setAttribute('aria-label', new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(calendarMonth.getFullYear(), calendarMonth.getMonth(), day)));
+      button.classList.toggle('is-today', dateKey === todayKey);
+      button.classList.toggle('is-selected', dateKey === calendarSelectedDate);
+      button.classList.toggle('has-events', APP.events.some(event => event.date === dateKey));
+      button.addEventListener('click', () => {
+        calendarSelectedDate = dateKey;
+        dateInput.value = dateKey;
+        renderCalendarView();
+      });
+      dayButtons.push(button);
+    }
+    daysGrid.replaceChildren(...dayButtons);
+
+    eventsList.replaceChildren();
+    const sortedEvents = [...APP.events].sort((first, second) =>
+      `${first.date}T${first.time || '00:00'}`.localeCompare(`${second.date}T${second.time || '00:00'}`)
+    );
+    if (!sortedEvents.length) {
+      const empty = document.createElement('p');
+      empty.className = 'eb-calendar-empty';
+      empty.textContent = 'Aucun événement enregistré.';
+      eventsList.appendChild(empty);
+      return;
+    }
+
+    sortedEvents.forEach(event => {
+      const card = document.createElement('article');
+      card.className = 'eb-calendar-event';
+      const heading = document.createElement('div');
+      heading.className = 'eb-calendar-event-heading';
+      const title = document.createElement('strong');
+      title.textContent = event.title;
+      const when = document.createElement('span');
+      const [year, month, day] = event.date.split('-').map(Number);
+      when.textContent = `${new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(year, month - 1, day))}${event.time ? ` · ${event.time}` : ''}`;
+      heading.append(title, when);
+      card.appendChild(heading);
+      if (event.details) {
+        const details = document.createElement('p');
+        details.textContent = event.details;
+        card.appendChild(details);
+      }
+      const remove = document.createElement('button');
+      remove.type = 'button';
+      remove.className = 'eb-calendar-delete';
+      remove.textContent = 'Supprimer';
+      remove.setAttribute('aria-label', `Supprimer l’événement ${event.title}`);
+      remove.addEventListener('click', () => {
+        APP.events = APP.events.filter(item => String(item.id) !== String(event.id));
+        setStored('ebiblia_events_v1', APP.events);
+        renderCalendarView();
+        showToast('Événement supprimé');
+      });
+      card.appendChild(remove);
+      eventsList.appendChild(card);
+    });
+  }
+
+  function saveCalendarEvent() {
+    const titleInput = document.getElementById('calendar-event-title');
+    const dateInput = document.getElementById('calendar-event-date');
+    const timeInput = document.getElementById('calendar-event-time');
+    const detailsInput = document.getElementById('calendar-event-details');
+    const title = titleInput?.value.trim();
+    const date = dateInput?.value;
+    if (!title || !date) {
+      showToast('Indiquez un titre et une date pour l’événement.');
+      return;
+    }
+
+    APP.events.push({
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      title,
+      date,
+      time: timeInput?.value || '',
+      details: detailsInput?.value.trim() || ''
+    });
+    calendarSelectedDate = date;
+    const [year, month] = date.split('-').map(Number);
+    calendarMonth = new Date(year, month - 1, 1);
+    setStored('ebiblia_events_v1', APP.events);
+    if (titleInput) titleInput.value = '';
+    if (timeInput) timeInput.value = '';
+    if (detailsInput) detailsInput.value = '';
+    renderCalendarView();
+    showToast('Événement enregistré');
+  }
+
+  // -------------------------------------------------------------
   // LÉONA IA — ORBE NÉON ET CHAT (Screens 5 & 12)
   // -------------------------------------------------------------
   let orbCanvas, orbCtx, orbAnimId;
+  let orbIsActive = false;
+
+  function setLeonaOrbActive(active) {
+    orbIsActive = active;
+    document.querySelector('.eb-orb-zone')?.classList.toggle('is-active', active);
+    if (active && orbCanvas && !orbAnimId) {
+      orbAnimId = requestAnimationFrame(drawLeonaOrb);
+    } else if (!active && orbAnimId) {
+      cancelAnimationFrame(orbAnimId);
+      orbAnimId = null;
+    }
+  }
+
+  let orbTime = 0;
+  function drawLeonaOrb() {
+    orbAnimId = null;
+    if (!orbCtx || !orbCanvas) return;
+    orbTime += 0.035;
+    orbCtx.clearRect(0, 0, 170, 170);
+
+    const cx = 85;
+    const cy = 85;
+
+    const grad = orbCtx.createRadialGradient(cx, cy, 20, cx, cy, 80);
+    grad.addColorStop(0, 'rgba(168, 85, 247, 0.4)');
+    grad.addColorStop(0.5, 'rgba(56, 189, 248, 0.25)');
+    grad.addColorStop(1, 'rgba(15, 23, 42, 0)');
+    orbCtx.fillStyle = grad;
+    orbCtx.beginPath();
+    orbCtx.arc(cx, cy, 80, 0, Math.PI * 2);
+    orbCtx.fill();
+
+    for (let r = 0; r < 4; r++) {
+      orbCtx.beginPath();
+      const radius = 35 + r * 11 + Math.sin(orbTime * 3 + r) * (orbIsActive ? 3 : 0);
+      orbCtx.arc(cx, cy, radius, 0, Math.PI * 2);
+      orbCtx.strokeStyle = r % 2 === 0 ? 'rgba(56, 189, 248, 0.85)' : 'rgba(168, 85, 247, 0.85)';
+      orbCtx.lineWidth = 2;
+      orbCtx.shadowBlur = 12;
+      orbCtx.shadowColor = r % 2 === 0 ? '#38bdf8' : '#a855f7';
+      orbCtx.stroke();
+    }
+
+    orbCtx.beginPath();
+    orbCtx.moveTo(25, cy);
+    for (let x = 25; x <= 145; x += 4) {
+      const dist = Math.abs(x - cx);
+      const amplitude = Math.max(0, (60 - dist) / 60) * 14 * Math.sin(orbTime * 5 + x * 0.1);
+      orbCtx.lineTo(x, cy + (orbIsActive ? amplitude : 0));
+    }
+    orbCtx.strokeStyle = '#ffffff';
+    orbCtx.lineWidth = 2.5;
+    orbCtx.shadowBlur = 8;
+    orbCtx.shadowColor = '#ffffff';
+    orbCtx.stroke();
+
+    if (orbIsActive) orbAnimId = requestAnimationFrame(drawLeonaOrb);
+  }
+
   function initLeonaOrb() {
     orbCanvas = document.getElementById('leona-orb-canvas');
     if (!orbCanvas) return;
     orbCtx = orbCanvas.getContext('2d');
     orbCanvas.width = 170;
     orbCanvas.height = 170;
+    if (orbAnimId) cancelAnimationFrame(orbAnimId);
+    orbAnimId = null;
+    drawLeonaOrb();
+    if (orbIsActive) orbAnimId = requestAnimationFrame(drawLeonaOrb);
+  }
 
-    let t = 0;
-    cancelAnimationFrame(orbAnimId);
+  let leonaSpeechSession = 0;
+  let activeLeonaSpeechButton = null;
 
-    function draw() {
-      t += 0.035;
-      orbCtx.clearRect(0, 0, 170, 170);
-
-      const cx = 85;
-      const cy = 85;
-
-      // Halo externe violet-cyan
-      const grad = orbCtx.createRadialGradient(cx, cy, 20, cx, cy, 80);
-      grad.addColorStop(0, 'rgba(168, 85, 247, 0.4)');
-      grad.addColorStop(0.5, 'rgba(56, 189, 248, 0.25)');
-      grad.addColorStop(1, 'rgba(15, 23, 42, 0)');
-      orbCtx.fillStyle = grad;
-      orbCtx.beginPath();
-      orbCtx.arc(cx, cy, 80, 0, Math.PI * 2);
-      orbCtx.fill();
-
-      // Anneaux concentriques ondulants
-      for (let r = 0; r < 4; r++) {
-        orbCtx.beginPath();
-        const radius = 35 + r * 11 + Math.sin(t * 3 + r) * 3;
-        orbCtx.arc(cx, cy, radius, 0, Math.PI * 2);
-        orbCtx.strokeStyle = r % 2 === 0 ? 'rgba(56, 189, 248, 0.85)' : 'rgba(168, 85, 247, 0.85)';
-        orbCtx.lineWidth = 2;
-        orbCtx.shadowBlur = 12;
-        orbCtx.shadowColor = r % 2 === 0 ? '#38bdf8' : '#a855f7';
-        orbCtx.stroke();
+  function splitTextForSpeech(text, maxLength = 240) {
+    const sentences = text.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [text];
+    const chunks = [];
+    let current = '';
+    sentences.forEach(sentence => {
+      const trimmed = sentence.trim();
+      if (!trimmed) return;
+      if (current && current.length + trimmed.length + 1 > maxLength) {
+        chunks.push(current);
+        current = '';
       }
-
-      // Onde sonore horizontale pulsante
-      orbCtx.beginPath();
-      orbCtx.moveTo(25, cy);
-      for (let x = 25; x <= 145; x += 4) {
-        const dist = Math.abs(x - cx);
-        const amp = Math.max(0, (60 - dist) / 60) * 14 * Math.sin(t * 5 + x * 0.1);
-        orbCtx.lineTo(x, cy + amp);
+      if (trimmed.length <= maxLength) {
+        current = current ? current + ' ' + trimmed : trimmed;
+        return;
       }
-      orbCtx.strokeStyle = '#ffffff';
-      orbCtx.lineWidth = 2.5;
-      orbCtx.shadowBlur = 8;
-      orbCtx.shadowColor = '#ffffff';
-      orbCtx.stroke();
+      const words = trimmed.split(/\s+/);
+      words.forEach(word => {
+        if (current && current.length + word.length + 1 > maxLength) {
+          chunks.push(current);
+          current = '';
+        }
+        current = current ? current + ' ' + word : word;
+      });
+    });
+    if (current) chunks.push(current);
+    return chunks;
+  }
 
-      orbAnimId = requestAnimationFrame(draw);
+  function stopLeonaSpeech() {
+    leonaSpeechSession += 1;
+    const nativeTTS = getNativeTTS();
+    if (nativeTTS) nativeTTS.stop().catch(error => console.error('Arrêt de la voix de Léona:', error));
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    if (activeLeonaSpeechButton) {
+      activeLeonaSpeechButton.innerHTML = '<svg class="eb-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4.03v8.05A4.5 4.5 0 0 0 16.5 12zM14 3.23v2.06a7 7 0 0 1 0 13.42v2.06a9 9 0 0 0 0-17.54z"/></svg><span>Écouter</span>';
+      activeLeonaSpeechButton.setAttribute('aria-label', 'Écouter la réponse de Léona');
+      activeLeonaSpeechButton = null;
+    }
+    setLeonaOrbActive(false);
+  }
+
+  async function speakLeonaResponse(button, text) {
+    if (activeLeonaSpeechButton === button) {
+      stopLeonaSpeech();
+      return;
+    }
+    if (activeLeonaSpeechButton) stopLeonaSpeech();
+    if (!getNativeTTS() && !('speechSynthesis' in window)) {
+      showToast('La synthèse vocale n’est pas disponible sur cet appareil.');
+      return;
     }
 
-    draw();
+    const sessionId = leonaSpeechSession;
+    activeLeonaSpeechButton = button;
+    button.innerHTML = '<svg class="eb-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h12v12H6z"/></svg><span>Arrêter</span>';
+    button.setAttribute('aria-label', 'Arrêter la lecture de la réponse');
+    setLeonaOrbActive(true);
+    const chunks = splitTextForSpeech(text);
+
+    try {
+      const nativeTTS = getNativeTTS();
+      if (nativeTTS) {
+        for (const chunk of chunks) {
+          if (sessionId !== leonaSpeechSession) return;
+          await nativeTTS.speak({ text: chunk, lang: 'fr-FR', rate: 0.95, pitch: 1, volume: 1, queueStrategy: 0 });
+        }
+      } else {
+        for (const chunk of chunks) {
+          if (sessionId !== leonaSpeechSession) return;
+          await new Promise((resolve, reject) => {
+            const utterance = new SpeechSynthesisUtterance(chunk);
+            utterance.lang = 'fr-FR';
+            utterance.rate = 0.95;
+            utterance.pitch = 1;
+            utterance.onend = resolve;
+            utterance.onerror = event => reject(new Error(event.error || 'Erreur de synthèse vocale.'));
+            window.speechSynthesis.speak(utterance);
+          });
+        }
+      }
+    } catch (error) {
+      if (sessionId === leonaSpeechSession) {
+        showToast('La voix de Léona n’a pas pu lire cette réponse.');
+        console.error('Lecture vocale de Léona:', error);
+      }
+    } finally {
+      if (sessionId === leonaSpeechSession) stopLeonaSpeech();
+    }
   }
 
   async function sendLeonaQuestion(question) {
@@ -1609,31 +2001,108 @@
     const input = document.getElementById('leona-input-text');
     if (!question && input) question = input.value.trim();
     if (!question) return;
+    const scrollToLatest = () => {
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    };
 
+    stopLeonaSpeech();
     if (input) input.value = '';
 
-    // Message utilisateur
     const userMsg = document.createElement('div');
     userMsg.className = 'eb-chat-msg eb-msg-user';
     userMsg.textContent = question;
     chatContainer.appendChild(userMsg);
-    chatContainer.scrollTop = chatContainer.scrollHeight;
+    scrollToLatest();
 
-    // Indicateur de réponse
     const loadingMsg = document.createElement('div');
     loadingMsg.className = 'eb-chat-msg eb-msg-leona';
-    loadingMsg.textContent = 'Léona étudie votre question...';
     chatContainer.appendChild(loadingMsg);
-    chatContainer.scrollTop = chatContainer.scrollHeight;
+    scrollToLatest(true);
 
-    try {
-      if (!window.EBibliaAI?.askGemini) throw new Error('Le moteur Gemini n’est pas chargé.');
-      const answer = await window.EBibliaAI.askGemini(question);
-      loadingMsg.innerHTML = window.EBibliaAI.renderAIResponse(answer);
-    } catch (error) {
-      loadingMsg.textContent = `Léona n’a pas pu joindre Gemini : ${error.message}`;
+    const greeting = window.EBibliaAI?.getGreetingResponse(question);
+    if (greeting) {
+      loadingMsg.textContent = greeting;
+      scrollToLatest(true);
+      return;
     }
-    chatContainer.scrollTop = chatContainer.scrollHeight;
+
+    const progressLabel = document.createElement('p');
+    progressLabel.className = 'eb-leona-progress';
+    progressLabel.textContent = 'Léona prépare sa réponse...';
+    const answerContent = document.createElement('div');
+    loadingMsg.append(progressLabel, answerContent);
+    let localVerses = [];
+    try {
+      if (/\d+\s*:\s*\d+/.test(question)) {
+        progressLabel.textContent = 'Recherche du passage dans la Bible...';
+        localVerses = await findLocalVerseReferences(question);
+      }
+
+      const isVerseLookup = /\b(verset|passage|lis|lire|que dit|texte|donne|montre|trouve|cherche|retrouve|citation)\b/i.test(question)
+        || /^\s*(?:[1-3]\s*)?[A-Za-zÀ-ÿ]+(?:\s+[A-Za-zÀ-ÿ]+){0,2}\s+\d+\s*:\s*\d+\s*[?.!]*\s*$/i.test(question);
+      const needsExplanation = /\b(explique|expliquer|sens|signification|interprète|interprétation|analyse|contexte)\b/i.test(question);
+
+      let answer;
+      if (localVerses.length && isVerseLookup && !needsExplanation) {
+        answer = localVerses.map(verse => `${verse.reference} — « ${verse.text} »`).join('\n\n');
+      } else {
+        if (!window.EBibliaAI?.askGemini) throw new Error('Le moteur Gemini n’est pas chargé.');
+        progressLabel.textContent = 'Léona prépare sa réponse...';
+        setLeonaOrbActive(true);
+        answer = await window.EBibliaAI.askGemini(question, streamedText => {
+          progressLabel.remove();
+          answerContent.textContent = streamedText;
+          scrollToLatest();
+        }, localVerses);
+      }
+
+      progressLabel.remove();
+      answerContent.innerHTML = window.EBibliaAI.renderAIResponse(answer);
+      if (localVerses.length) {
+        const verseLinks = document.createElement('div');
+        verseLinks.className = 'eb-leona-passage-links';
+        localVerses.forEach(verse => {
+          const openButton = document.createElement('button');
+          openButton.type = 'button';
+          openButton.className = 'eb-leona-passage-btn';
+          openButton.textContent = `Ouvrir ${verse.reference} dans la Bible`;
+          openButton.addEventListener('click', () => openBiblePassage(verse.bookId, verse.chapter, verse.verse));
+          verseLinks.appendChild(openButton);
+        });
+        loadingMsg.appendChild(verseLinks);
+      }
+
+      const speechButton = document.createElement('button');
+      speechButton.className = 'eb-leona-speak-btn';
+      speechButton.type = 'button';
+      speechButton.setAttribute('aria-label', 'Écouter la réponse de Léona');
+      speechButton.innerHTML = '<svg class="eb-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4.03v8.05A4.5 4.5 0 0 0 16.5 12zM14 3.23v2.06a7 7 0 0 1 0 13.42v2.06a9 9 0 0 0 0-17.54z"/></svg><span>Écouter</span>';
+      speechButton.addEventListener('click', () => speakLeonaResponse(speechButton, answer));
+      loadingMsg.appendChild(speechButton);
+    } catch (error) {
+      progressLabel.remove();
+      console.error('Erreur du serveur Léona:', error);
+      if (!answerContent.textContent && localVerses.length) {
+        answerContent.textContent = localVerses.map(verse => `${verse.reference} — « ${verse.text} »`).join('\n\n');
+      }
+      if (answerContent.textContent) answerContent.appendChild(document.createElement('br'));
+      const errorMessage = document.createElement('span');
+      errorMessage.textContent = 'Une erreur est survenue sur le serveur. Veuillez réessayer.';
+      answerContent.appendChild(errorMessage);
+      if (localVerses.length) {
+        localVerses.forEach(verse => {
+          const openButton = document.createElement('button');
+          openButton.type = 'button';
+          openButton.className = 'eb-leona-passage-btn';
+          openButton.textContent = `Ouvrir ${verse.reference} dans la Bible`;
+          openButton.addEventListener('click', () => openBiblePassage(verse.bookId, verse.chapter, verse.verse));
+          loadingMsg.appendChild(openButton);
+        });
+      }
+    } finally {
+      setLeonaOrbActive(false);
+    }
+    scrollToLatest();
   }
 
   // -------------------------------------------------------------
@@ -1806,11 +2275,17 @@
     openModal('modal-version-picker');
   }
 
-  function openNoteModal(ref = '', defaultText = '') {
+  let editingNoteId = null;
+  function openNoteModal(ref = '', defaultText = '', noteId = null) {
     const refInput = document.getElementById('note-modal-ref');
     const textInput = document.getElementById('note-modal-text');
+    const title = document.getElementById('note-modal-title');
+    const saveButton = document.getElementById('btn-save-note-modal');
+    editingNoteId = noteId;
     if (refInput) refInput.value = ref;
     if (textInput) textInput.value = defaultText;
+    if (title) title.textContent = noteId === null ? 'Ajouter une note' : 'Modifier la note';
+    if (saveButton) saveButton.textContent = noteId === null ? 'Enregistrer la note' : 'Enregistrer les modifications';
     openModal('modal-new-note');
   }
 
@@ -1823,10 +2298,22 @@
     }
 
     const today = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date());
-    APP.notes.unshift({ id: Date.now(), ref, date: today, text });
+    if (editingNoteId !== null) {
+      const note = APP.notes.find(item => String(item.id) === String(editingNoteId));
+      if (!note) {
+        showToast('Cette note est introuvable.');
+        return;
+      }
+      note.ref = ref;
+      note.text = text;
+      note.date = today;
+    } else {
+      APP.notes.unshift({ id: Date.now(), ref, date: today, text });
+    }
     setStored('ebiblia_notes_v3', APP.notes);
     closeModal('modal-new-note');
-    showToast('Note enregistrée avec succès');
+    showToast(editingNoteId === null ? 'Note enregistrée avec succès' : 'Modifications enregistrées');
+    editingNoteId = null;
     if (APP.currentView === 'notes') renderNotesView();
   }
 
@@ -2133,7 +2620,29 @@
       if (e.key === 'Enter') sendLeonaQuestion();
     });
 
-    // 11. Boutons de don
+    // 11. Calendrier : navigation mensuelle et gestion des événements.
+    document.getElementById('calendar-prev-month')?.addEventListener('click', () => {
+      calendarMonth = new Date(calendarMonth.getFullYear(), calendarMonth.getMonth() - 1, 1);
+      renderCalendarView();
+    });
+    document.getElementById('calendar-next-month')?.addEventListener('click', () => {
+      calendarMonth = new Date(calendarMonth.getFullYear(), calendarMonth.getMonth() + 1, 1);
+      renderCalendarView();
+    });
+    document.getElementById('calendar-save-event')?.addEventListener('click', saveCalendarEvent);
+    document.getElementById('calendar-add-event-shortcut')?.addEventListener('click', () => {
+      document.getElementById('calendar-event-title')?.focus();
+      document.querySelector('.eb-calendar-form')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+    document.getElementById('calendar-event-date')?.addEventListener('change', event => {
+      if (!event.target.value) return;
+      calendarSelectedDate = event.target.value;
+      const [year, month] = calendarSelectedDate.split('-').map(Number);
+      calendarMonth = new Date(year, month - 1, 1);
+      renderCalendarView();
+    });
+
+    // 12. Boutons de don
     document.querySelectorAll('.eb-amount-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.eb-amount-btn').forEach(b => b.classList.remove('is-active'));
@@ -2146,11 +2655,11 @@
       showToast(`Merci pour votre soutien de ${APP.activeDonationAmount} à E-BIBLIA !`);
     });
 
-    // 12. Sauvegardes de modales
+    // 13. Sauvegardes de modales
     document.getElementById('btn-save-note-modal')?.addEventListener('click', saveNewNote);
     document.getElementById('btn-save-prayer-modal')?.addEventListener('click', saveNewPrayer);
 
-    // 13. Fermeture des modales
+    // 14. Fermeture des modales
     document.querySelectorAll('.eb-modal-backdrop').forEach(modal => {
       modal.addEventListener('click', (e) => {
         if (e.target === modal) modal.classList.remove('is-open');
@@ -2163,7 +2672,7 @@
       });
     });
 
-    // 14. Démarrage de l'application selon l'ancre URL ou par défaut Accueil
+    // 15. Démarrage de l'application selon l'ancre URL ou par défaut Accueil
     const initialView = window.location.hash.replace('#', '') || 'home';
     showView(initialView);
     loadDailyVerse();
@@ -2173,6 +2682,8 @@
   });
 
   // Exportation globale pour compatibilité
+  APP.findLocalVerseReferences = findLocalVerseReferences;
+  APP.openBiblePassage = openBiblePassage;
   window.EBibliaApp = APP;
   window.EBiblia = {
     showView,

@@ -1,6 +1,17 @@
 /* E-BIBLIA — Service Worker hors connexion */
-const CACHE_NAME = "ebiblia-offline-v3";
+const CACHE_NAME = "ebiblia-offline-v5";
+const LSG_BOOKS = [
+  "1Chr", "1Cor", "1John", "1Kgs", "1Pet", "1Sam", "1Thess", "1Tim",
+  "2Chr", "2Cor", "2John", "2Kgs", "2Pet", "2Sam", "2Thess", "2Tim",
+  "3John", "Acts", "Amos", "Col", "Dan", "Deut", "Eccl", "Eph", "Esth",
+  "Exod", "Ezek", "Ezra", "Gal", "Gen", "Hab", "Hag", "Heb", "Hos",
+  "Isa", "Jas", "Jer", "Job", "Joel", "John", "Jonah", "Josh", "Jude",
+  "Judg", "Lam", "Lev", "Luke", "Mal", "Mark", "Matt", "Mic", "Nah",
+  "Neh", "Num", "Obad", "Phil", "Phlm", "Prov", "Ps", "Rev", "Rom",
+  "Ruth", "Song", "Titus", "Zech", "Zeph"
+];
 const CORE = [
+  ...LSG_BOOKS.map(book => `./bible-data/fr/LSG/books/${book}.json`),
   "./",
   "./index.html",
   "./accueil.html",
